@@ -3,9 +3,32 @@
    ========================================================================== */
 
 (async function initCatalogInjector() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const slug = urlParams.get('slug') || urlParams.get('c');
-  if (!slug) return; // Se não tem slug, mantém o modelo demonstrativo original
+  function getSlug() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let s = urlParams.get('slug') || urlParams.get('c') || urlParams.get('p') || urlParams.get('id');
+    if (s) return s.toLowerCase().trim();
+
+    const host = window.location.hostname;
+    const parts = host.split('.');
+    if (parts.length >= 3 && parts[0] !== 'www' && parts[0] !== 'lashmenu-vendas' && !parts[0].includes('localhost') && !parts[0].includes('vercel')) {
+      return parts[0].toLowerCase().trim();
+    }
+    return null;
+  }
+
+  const slug = getSlug();
+  if (!slug) {
+    document.documentElement.style.opacity = '1';
+    return; // Se não tem slug, mantém o modelo demonstrativo original
+  }
+
+  // Safety Timeout para evitar tela em branco por rede lenta
+  const safetyTimer = setTimeout(() => {
+    if (document.documentElement.style.opacity === '0') {
+      document.documentElement.style.transition = 'opacity 0.25s ease';
+      document.documentElement.style.opacity = '1';
+    }
+  }, 4000);
 
   const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmZmhwdHBzYWZsbHNtY3NvaWloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyODkyMTYsImV4cCI6MjEwMjg2NTIxNn0.nwpvIwl8V6_KGIp5e5oeraAcGyt3oo8Kdam2hp6ajSQ';
@@ -41,6 +64,7 @@
   } catch (err) {
     console.warn('Injeção de dados:', err);
   } finally {
+    clearTimeout(safetyTimer);
     // Garante que o documento fique visível após a injeção (com transição suave)
     setTimeout(() => {
       document.documentElement.style.transition = 'opacity 0.25s ease';

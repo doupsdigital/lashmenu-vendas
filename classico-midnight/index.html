@@ -4,9 +4,16 @@
 <head>
   <script>
     (function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const slug = urlParams.get('slug') || urlParams.get('c');
-      if (slug) {
+      const p = new URLSearchParams(window.location.search);
+      let s = p.get('slug') || p.get('c') || p.get('p') || p.get('id');
+      if (!s) {
+        const host = window.location.hostname;
+        const parts = host.split('.');
+        if (parts.length >= 3 && parts[0] !== 'www' && parts[0] !== 'lashmenu-vendas' && !parts[0].includes('localhost') && !parts[0].includes('vercel')) {
+          s = parts[0];
+        }
+      }
+      if (s) {
         document.documentElement.style.opacity = '0';
       }
     })();
