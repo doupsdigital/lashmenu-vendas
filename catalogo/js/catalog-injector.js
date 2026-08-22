@@ -48,8 +48,8 @@
 
     const order = orders[0];
 
-    // 2. Busca Procedimentos
-    const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${order.id}&order=order_index.asc`, {
+    // 2. Busca Procedimentos Ativos
+    const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${order.id}&order_index=gte.0&order=order_index.asc`, {
       headers: {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`

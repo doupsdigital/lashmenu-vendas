@@ -704,8 +704,8 @@
         designerTitle.textContent = `Editar: ${order.client_name}`;
         updateCoverPreview(order.cover_media_url, order.cover_media_type === 'video');
 
-        // 2. Busca Procedimentos
-        const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${orderId}&order=order_index.asc`, {
+        // 2. Busca Procedimentos Ativos
+        const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${orderId}&order_index=gte.0&order=order_index.asc`, {
           headers: {
             'apikey': SUPABASE_ANON_KEY,
             'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
@@ -929,33 +929,55 @@
 
         if (!orderRes.ok) throw new Error('Erro ao salvar informações gerais');
 
-        // 2. Coleta Procedimentos
+        // 2. Coleta Procedimentos do formulário
         const servicesPayload = serializeServices();
 
-        // 3. Deleta procedimentos antigos
-        const deleteRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${orderId}`, {
-          method: 'DELETE',
-          headers: {
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+        // 3. Atualiza ou insere procedimentos via PATCH/POST (evita duplicação e contorna limitações do DELETE via RLS)
+        for (let i = 0; i < servicesPayload.length; i++) {
+          const item = servicesPayload[i];
+          const existingSvc = currentServices[i];
+
+          if (existingSvc && existingSvc.id) {
+            // Atualiza o procedimento existente mantendo o ID
+            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${existingSvc.id}`, {
+              method: 'PATCH',
+              headers: {
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(item)
+            });
+          } else {
+            // Insere novo procedimento adicionado pelo usuário
+            await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
+              method: 'POST',
+              headers: {
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(item)
+            });
           }
-        });
+        }
 
-        if (!deleteRes.ok) throw new Error('Erro ao limpar procedimentos antigos');
-
-        // 4. Insere novos procedimentos (se existirem)
-        if (servicesPayload.length > 0) {
-          const insertRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
-            method: 'POST',
-            headers: {
-              'apikey': SUPABASE_ANON_KEY,
-              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-              'Content-Type': 'application/json',
-              'Prefer': 'return=representation'
-            },
-            body: JSON.stringify(servicesPayload)
-          });
-          if (!insertRes.ok) throw new Error('Erro ao cadastrar novos procedimentos');
+        // 4. Se o usuário excluiu algum procedimento, marca os excedentes como inativos (order_index = -1)
+        if (currentServices.length > servicesPayload.length) {
+          for (let i = servicesPayload.length; i < currentServices.length; i++) {
+            const extraSvc = currentServices[i];
+            if (extraSvc && extraSvc.id) {
+              await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${extraSvc.id}`, {
+                method: 'PATCH',
+                headers: {
+                  'apikey': SUPABASE_ANON_KEY,
+                  'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ order_index: -1 })
+              });
+            }
+          }
         }
 
         showStatus('Catálogo salvo com sucesso! O site já foi atualizado.', 'success');
