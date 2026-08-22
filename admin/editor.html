@@ -445,6 +445,109 @@
       color: var(--success);
       display: block;
     }
+
+    /* ── Modal de Sucesso Centrado ── */
+    .success-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .success-modal-card {
+      background: #181514;
+      border: 1px solid rgba(229, 169, 184, 0.3);
+      border-radius: 20px;
+      padding: 32px 28px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(37, 211, 102, 0.12);
+      animation: modalPopUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalPopUp {
+      from { opacity: 0; transform: scale(0.92) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .success-icon-badge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1.5px solid rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 0 24px rgba(37, 211, 102, 0.2);
+    }
+    .success-modal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .success-modal-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .success-modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-modal-view {
+      background: #25d366;
+      color: #000;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+      letter-spacing: 0.03em;
+    }
+    .btn-modal-view:hover {
+      background: #20bd5a;
+      transform: translateY(-1px);
+    }
+    .btn-modal-close {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-modal-close:hover {
+      border-color: #fff;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
   </style>
 </head>
 
@@ -571,6 +674,31 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
       <span>Salvar Alterações</span>
     </button>
+  </div>
+
+  <!-- MODAL DE SUCESSO CENTRADO -->
+  <div class="success-modal-overlay" id="success-modal" style="display: none;">
+    <div class="success-modal-card">
+      <div class="success-icon-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#25d366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h2 class="success-modal-title">Alterações Salvas! ✨</h2>
+      <p class="success-modal-text" id="success-modal-desc">
+        O catálogo digital foi atualizado com sucesso no Supabase e as alterações já estão ativas no site oficial.
+      </p>
+      <div class="success-modal-actions">
+        <a href="#" target="_blank" id="btn-view-live-catalog" class="btn-modal-view">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>Ver Catálogo Atualizado</span>
+        </a>
+        <button type="button" class="btn-modal-close" onclick="closeSuccessModal()">
+          <span>Continuar Editando</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Supabase Config & SDK -->
@@ -980,9 +1108,14 @@
           }
         }
 
-        showStatus('Catálogo salvo com sucesso! O site já foi atualizado.', 'success');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setTimeout(initEditor, 1000);
+        const clientName = inputName.value.trim();
+        const savedSlug = inputSlug.value.trim().toLowerCase();
+        const liveCatalogUrl = `/catalogo/?slug=${savedSlug}`;
+
+        document.getElementById('btn-view-live-catalog').href = liveCatalogUrl;
+        document.getElementById('success-modal-desc').textContent = `O catálogo digital de "${clientName}" foi atualizado com sucesso no banco de dados e as alterações já estão ativas no site oficial.`;
+
+        openSuccessModal();
       } catch (err) {
         showStatus('Erro ao salvar dados: ' + err.message, 'error');
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -995,7 +1128,15 @@
       }
     });
 
-    // Auxiliares de Status
+    // Auxiliares de Status e Modal de Sucesso
+    function openSuccessModal() {
+      document.getElementById('success-modal').style.display = 'flex';
+    }
+    window.closeSuccessModal = function() {
+      document.getElementById('success-modal').style.display = 'none';
+      initEditor();
+    };
+
     function showStatus(msg, type) {
       statusBox.textContent = msg;
       statusBox.className = 'status-msg ' + type;
