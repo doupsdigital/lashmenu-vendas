@@ -2198,6 +2198,70 @@ body {
   width: fit-content;
 }
 
+/* ── Faixa de Conclusão & Botão Entendido ── */
+.success-reassurance-box {
+  margin-top: 14px;
+  background: #faf4f6;
+  border: 1px dashed #e8b0c0;
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.reassurance-text {
+  font-size: 0.82rem;
+  color: #685750;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+}
+
+.reassurance-text svg {
+  color: #c86b8c;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.reassurance-text strong {
+  color: #2c221e;
+}
+
+.btn-confirm-done {
+  width: 100%;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e5a9b8 0%, #c86b8c 100%);
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(200, 107, 140, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btn-confirm-done:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(200, 107, 140, 0.4);
+}
+
+.btn-confirm-done.is-confirmed {
+  background: #16a34a;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
+  cursor: default;
+}
+
 .spin {
   animation: spinAround 1.2s linear infinite;
 }

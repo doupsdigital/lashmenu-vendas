@@ -1078,3 +1078,12 @@ function initFormSubmission() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+window.handleConfirmDone = function() {
+  const btn = document.getElementById('btn-confirm-done');
+  if (btn) {
+    btn.classList.add('is-confirmed');
+    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> <span>Perfeito! Pode fechar esta aba com tranquilidade ✨</span>`;
+    btn.disabled = true;
+  }
+};
