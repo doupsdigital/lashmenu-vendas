@@ -1050,9 +1050,14 @@ function initFormSubmission() {
       successLinkDisplay.textContent = `${slug}.lashmenu.com`;
     }
 
-    const liveCatalogBtn = document.getElementById('btn-view-live-catalog');
-    if (liveCatalogBtn) {
-      liveCatalogBtn.href = `../../catalogo/?slug=${slug}`;
+    const designerNameEl = document.getElementById('success-designer-name');
+    if (designerNameEl) {
+      designerNameEl.textContent = designerName;
+    }
+
+    const summaryModelEl = document.getElementById('success-summary-model');
+    if (summaryModelEl) {
+      summaryModelEl.textContent = `Layout ${selectedModel.toUpperCase()} · ${selectedColor.toUpperCase()}`;
     }
 
     // Restaura botão

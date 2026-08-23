@@ -443,34 +443,85 @@
 
         </form>
 
-        <!-- TELA DE SUCESSO PÓS-ENVIO -->
+        <!-- TELA DE SUCESSO PÓS-ENVIO (EXPERIÊNCIA LUXO & BUILDER ANIMADO) -->
         <div class="success-screen is-hidden" id="success-screen">
-          <div class="success-icon-wrap">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <h2 class="success-title">Informações Recebidas com Sucesso! 🎉</h2>
-          <p class="success-desc">
-            Perfeito! Seus dados foram recebidos e nossa equipe de design já iniciou a montagem do seu <strong>LashMenu oficial</strong>.
-          </p>
-          <div class="success-highlight-box">
-            <div class="sh-item">
-              <span class="sh-label">Prazo de Entrega:</span>
-              <strong class="sh-val">Até 48 horas úteis (entregamos antes 😉)</strong>
+          <div class="success-header">
+            <div class="success-badge-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
             </div>
-            <div class="sh-item">
-              <span class="sh-label">Seu Link Exclusivo:</span>
-              <strong class="sh-val" id="success-link-display">seunome.lashmenu.com</strong>
+            <h2 class="success-title">TUDO PRONTO! ✨</h2>
+            <p class="success-subtitle">
+              Sua solicitação foi gravada com sucesso! Nossa equipe VIP de design já iniciou o processo de montagem e calibração do seu <strong>LashMenu oficial</strong>.
+            </p>
+          </div>
+
+          <!-- WIDGET ANIMADO DO STATUS DO SITE -->
+          <div class="builder-status-card">
+            <div class="builder-status-header">
+              <span class="builder-pulse-dot"></span>
+              <span class="builder-status-title">STATUS DA MONTAGEM DO SEU SITE</span>
+            </div>
+            
+            <div class="builder-steps-list">
+              <div class="builder-step-item is-complete">
+                <div class="builder-step-icon">✓</div>
+                <div class="builder-step-text">
+                  <strong>Dados &amp; Procedimentos Recebidos</strong>
+                  <span>Formulário gravado com segurança no sistema</span>
+                </div>
+              </div>
+
+              <div class="builder-step-item is-complete">
+                <div class="builder-step-icon">✓</div>
+                <div class="builder-step-text">
+                  <strong>Modelo &amp; Paleta Aplicados</strong>
+                  <span id="success-summary-model">Layout Harmonia · Rosé</span>
+                </div>
+              </div>
+
+              <div class="builder-step-item is-complete">
+                <div class="builder-step-icon">⚡</div>
+                <div class="builder-step-text">
+                  <strong>Link Exclusivo Reservado</strong>
+                  <code id="success-link-display">sua-marca.lashmenu.com</code>
+                </div>
+              </div>
+
+              <div class="builder-step-item is-active">
+                <div class="builder-step-icon spinner-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                </div>
+                <div class="builder-step-text">
+                  <strong>Calibração Final da Equipe VIP</strong>
+                  <span>Em andamento · Você será notificada no WhatsApp</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="success-actions">
-            <a href="#" id="btn-whatsapp-confirm" target="_blank" class="btn btn--primary btn--whatsapp-direct">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.815 2.791.815 3.179 0 5.767-2.587 5.768-5.766.001-3.18-2.586-5.767-5.768-5.767zm9.969 5.766c-.002 5.519-4.49 9.998-10 9.998-1.758 0-3.414-.467-4.869-1.282l-5.131 1.346 1.374-5.011c-.91-1.503-1.374-3.238-1.374-5.051 0-5.52 4.488-10 10-10 5.514 0 10 4.48 10 10z"/></svg>
-              <span>Confirmar Recebimento no WhatsApp da Equipe</span>
-            </a>
-            <a href="#" id="btn-view-live-catalog" target="_blank" class="btn btn--outline" style="width: 100%; justify-content: center; margin-top: 10px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              <span>Ver Prévia do Meu Catálogo</span>
-            </a>
+
+          <!-- CARD RESUMO DO PEDIDO -->
+          <div class="success-vip-card">
+            <div class="vip-card-row">
+              <span class="vip-card-label">Lash Designer:</span>
+              <strong class="vip-card-val" id="success-designer-name">Julia Queiroz</strong>
+            </div>
+            <div class="vip-card-row">
+              <span class="vip-card-label">Prazo de Entrega:</span>
+              <strong class="vip-card-val highlight-gold">Até 24h a 48h úteis (entregamos antes 😉)</strong>
+            </div>
+            <div class="vip-card-row">
+              <span class="vip-card-label">Notificação Oficial:</span>
+              <strong class="vip-card-val">Direto no seu WhatsApp</strong>
+            </div>
+          </div>
+
+          <!-- MENSAGEM FINAL REASSSEGURADORA -->
+          <div class="success-reassurance-note">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Pode fechar esta página com tranquilidade. Cuidaremos de todos os detalhes para o lançamento do seu posicionamento de luxo! 👑</span>
           </div>
         </div>
 
