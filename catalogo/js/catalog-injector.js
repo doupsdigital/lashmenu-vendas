@@ -16,18 +16,28 @@
     return null;
   }
 
+  function revealCatalog() {
+    const foucStyle = document.getElementById('fouc-style');
+    if (foucStyle) {
+      foucStyle.remove();
+    }
+    document.documentElement.style.transition = 'opacity 0.25s ease';
+    document.documentElement.style.opacity = '1';
+    if (document.body) {
+      document.body.style.visibility = 'visible';
+      document.body.style.opacity = '1';
+    }
+  }
+
   const slug = getSlug();
   if (!slug) {
-    document.documentElement.style.opacity = '1';
+    revealCatalog();
     return; // Se não tem slug, mantém o modelo demonstrativo original
   }
 
   // Safety Timeout para evitar tela em branco por rede lenta
   const safetyTimer = setTimeout(() => {
-    if (document.documentElement.style.opacity === '0') {
-      document.documentElement.style.transition = 'opacity 0.25s ease';
-      document.documentElement.style.opacity = '1';
-    }
+    revealCatalog();
   }, 4000);
 
   const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';
@@ -65,11 +75,7 @@
     console.warn('Injeção de dados:', err);
   } finally {
     clearTimeout(safetyTimer);
-    // Garante que o documento fique visível após a injeção (com transição suave)
-    setTimeout(() => {
-      document.documentElement.style.transition = 'opacity 0.25s ease';
-      document.documentElement.style.opacity = '1';
-    }, 50);
+    setTimeout(revealCatalog, 30);
   }
 
   function applyCustomData(order, services) {
