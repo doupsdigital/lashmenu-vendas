@@ -17,9 +17,17 @@
   }
 
   function revealCatalog() {
+    const loader = document.getElementById('lashmenu-loader-overlay');
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.style.pointerEvents = 'none';
+      setTimeout(() => {
+        try { loader.remove(); } catch(e){}
+      }, 380);
+    }
     const foucStyle = document.getElementById('fouc-style');
     if (foucStyle) {
-      foucStyle.remove();
+      try { foucStyle.remove(); } catch(e){}
     }
     document.documentElement.style.transition = 'opacity 0.25s ease';
     document.documentElement.style.opacity = '1';
