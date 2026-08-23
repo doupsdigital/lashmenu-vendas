@@ -1024,26 +1024,38 @@ function initFormSubmission() {
       }
     }
 
-    // 4. Monta mensagem de notificação de WhatsApp
-    const message = `✨ *NOVO FORMULÁRIO DE PERSONALIZAÇÃO LASHMENU*\n\n` +
-      `👤 *Lash Designer:* ${designerName}\n` +
-      `📱 *WhatsApp:* ${whatsapp}\n` +
-      `📸 *Instagram:* @${instagram}\n` +
-      `📍 *Localização:* ${location || 'Não informado'}\n` +
-      `🌐 *Subdomínio:* ${slug}.lashmenu.com\n\n` +
-      `🎨 *Modelo Escolhido:* ${selectedModel.toUpperCase()}\n` +
-      `🎨 *Paleta Escolhida:* ${selectedColor.toUpperCase()}\n` +
-      `💬 *Frase da Capa:* ${heroPhrase}\n\n` +
-      `📋 *Procedimentos (${servicesPayload.length}):* \n${servicesListForMessage.join('\n')}\n\n` +
-      `📸 *Fotos Próprias Trocadas nos Cards:* ${customPhotosCount} de ${servicesPayload.length}` +
-      (orderId ? `\n\n🆔 *ID do Pedido no Supabase:* ${orderId}` : '');
+    // 4. Envia Notificação Automática no Telegram do Administrador
+    try {
+      const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
+      const TELEGRAM_CHAT_ID = '1874074109';
+      const nowStr = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 
-    const adminWhatsAppNumber = '5511999999999';
-    const encodedMsg = encodeURIComponent(message);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${adminWhatsAppNumber}&text=${encodedMsg}`;
+      const adminEditorUrl = orderId 
+        ? `https://lashmenu-vendas.vercel.app/admin/editor.html?id=${orderId}`
+        : `https://lashmenu-vendas.vercel.app/admin/`;
 
-    if (whatsappConfirmBtn) {
-      whatsappConfirmBtn.href = whatsappUrl;
+      const tgMessage = `🎉 *Nova profissional cadastrada!*\n\n` +
+        `👤 *${designerName}*\n` +
+        `✉️ ${clientEmail || 'Não informado'}\n` +
+        `📱 ${whatsapp || 'Não informado'}\n` +
+        `📸 @${instagram || 'Não informado'}\n` +
+        `🎨 Layout ${selectedModel.toUpperCase()} · ${selectedColor.toUpperCase()}\n` +
+        `🔗 /catalogo/${slug}\n` +
+        `🕒 ${nowStr}\n\n` +
+        `⚡ *Clique para Aprovar no Painel:* \n` +
+        `${adminEditorUrl}`;
+
+      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: tgMessage,
+          parse_mode: 'Markdown'
+        })
+      }).catch(tgErr => console.warn('Aviso no envio Telegram:', tgErr));
+    } catch (tgEx) {
+      console.warn('Erro ao disparar Telegram:', tgEx);
     }
 
     if (successLinkDisplay) {
