@@ -1052,7 +1052,7 @@ function initFormSubmission() {
 
     const designerNameEl = document.getElementById('success-designer-name');
     if (designerNameEl) {
-      designerNameEl.textContent = designerName;
+      designerNameEl.textContent = `Designer: ${designerName}`;
     }
 
     const summaryModelEl = document.getElementById('success-summary-model');
