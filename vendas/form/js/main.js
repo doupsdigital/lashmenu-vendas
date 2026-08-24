@@ -42,9 +42,33 @@ function initWelcomeScreen() {
     }, 150);
   });
 
+  const modalLater = document.getElementById('modal-later-preview');
+  const btnCloseModalLater = document.getElementById('btn-close-modal-later');
+  const btnOkModalLater = document.getElementById('btn-ok-modal-later');
+
+  function openCustomModalLater() {
+    if (!modalLater) return;
+    modalLater.classList.remove('is-hidden');
+    void modalLater.offsetWidth;
+    modalLater.classList.add('is-active');
+  }
+
+  function closeCustomModalLater() {
+    if (!modalLater) return;
+    modalLater.classList.remove('is-active');
+    setTimeout(() => {
+      modalLater.classList.add('is-hidden');
+    }, 300);
+  }
+
   if (btnLater) {
-    btnLater.addEventListener('click', () => {
-      alert('Tudo bem! Seu acesso continuará salvo no e-mail enviado pela Cakto. Quando estiver pronta com suas fotos e valores, basta acessar o mesmo link.');
+    btnLater.addEventListener('click', openCustomModalLater);
+  }
+  if (btnCloseModalLater) btnCloseModalLater.addEventListener('click', closeCustomModalLater);
+  if (btnOkModalLater) btnOkModalLater.addEventListener('click', closeCustomModalLater);
+  if (modalLater) {
+    modalLater.addEventListener('click', (e) => {
+      if (e.target === modalLater) closeCustomModalLater();
     });
   }
 }

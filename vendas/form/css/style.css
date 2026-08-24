@@ -2625,3 +2625,125 @@ body {
   color: var(--accent);
 }
 
+/* ── Modal Customizado: Apenas Espiando ───────────────────────────────── */
+.custom-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 14, 12, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.custom-modal-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.custom-modal-backdrop.is-hidden {
+  display: none !important;
+}
+
+.custom-modal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 440px;
+  padding: 36px 28px 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: center;
+  transform: scale(0.92);
+  transition: transform 0.3s var(--ease);
+}
+
+.custom-modal-backdrop.is-active .custom-modal-card {
+  transform: scale(1);
+}
+
+.custom-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-modal-close:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.custom-modal-badge {
+  display: inline-block;
+  background: rgba(192, 75, 107, 0.08);
+  border: 1px solid rgba(192, 75, 107, 0.2);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 14px;
+}
+
+.custom-modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.custom-modal-body {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-modal-body strong {
+  color: var(--text);
+}
+
+.btn--modal-ok {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #c04b6b 0%, #a33753 100%);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.98rem;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  box-shadow: 0 6px 20px var(--accent-glow);
+  transition: all 0.3s var(--ease);
+}
+
+.btn--modal-ok:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(192, 75, 107, 0.4);
+}
+
+
