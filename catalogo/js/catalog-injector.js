@@ -40,6 +40,22 @@
     const loader = document.getElementById('lashmenu-loader-overlay');
     const foucStyle = document.getElementById('fouc-style');
 
+    // Injeta folha de estilo para a animação suave de entrada dos textos
+    if (!document.getElementById('lashmenu-text-entrance-style')) {
+      const style = document.createElement('style');
+      style.id = 'lashmenu-text-entrance-style';
+      style.innerHTML = `
+        @keyframes lmTextEntrance {
+          0% { opacity: 0; transform: translateY(28px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .lm-entrance-anim {
+          animation: lmTextEntrance 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
     // Revela com 100% de clareza todos os elementos do catalogo
     const appEls = document.querySelectorAll('.mosaico-app, .vitrine, .studio-app, main, section, header, footer');
     appEls.forEach(el => {
@@ -54,6 +70,20 @@
       document.body.style.pointerEvents = 'auto';
     }
     document.documentElement.style.opacity = '1';
+
+    // Aplica a animação suave nos textos do Hero exatamente 100ms após abrir a tela
+    setTimeout(() => {
+      const heroTextEls = document.querySelectorAll(
+        '.hero__selo, .hero__badge, .hero__titulo, .hero__frase-cilios, .hero__filete, .hero__frase, ' +
+        '.vitrine__selo, .vitrine__titulo, .vitrine__sub, .vitrine__badge, ' +
+        '.hero-classico__selo, .hero-classico__titulo, .hero-classico__sub, .hero-cilios, ' +
+        '.hero h1, .hero h2, .vitrine h1, .vitrine h2, .mosaico-app h1'
+      );
+      heroTextEls.forEach((el, index) => {
+        el.style.animationDelay = `${0.12 + (index * 0.16)}s`;
+        el.classList.add('lm-entrance-anim');
+      });
+    }, 100);
 
     // Esmaece suavemente a tela de carregamento LashMenu
     if (loader) {
