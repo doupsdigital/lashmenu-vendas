@@ -40,11 +40,55 @@
     const loader = document.getElementById('lashmenu-loader-overlay');
     const foucStyle = document.getElementById('fouc-style');
 
+    // Injeta animações luxuosas para o Hero (Zoom Kenburns + Fade/SlideUp dos textos)
+    if (!document.getElementById('lashmenu-hero-anims')) {
+      const animStyle = document.createElement('style');
+      animStyle.id = 'lashmenu-hero-anims';
+      animStyle.innerHTML = `
+        @keyframes lmKenburnsHero {
+          0% { transform: scale(1.0); }
+          100% { transform: scale(1.08); }
+        }
+        @keyframes lmFadeSlideUp {
+          0% { opacity: 0; transform: translateY(24px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .hero__foto-wrap, .hero__bg, .vitrine__hero-bg {
+          transition: transform 3.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .hero.is-visible .hero__foto-wrap,
+        .hero.is-visible .hero__bg,
+        .vitrine.is-visible .vitrine__hero-bg {
+          animation: lmKenburnsHero 12s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+        }
+        .hero.is-visible .hero__selo,
+        .hero.is-visible .hero__badge,
+        .hero.is-visible .hero__titulo,
+        .hero.is-visible .hero__frase-cilios,
+        .hero.is-visible .hero__filete,
+        .hero.is-visible .hero__frase {
+          animation: lmFadeSlideUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+        }
+        .hero.is-visible .hero__titulo { animation-delay: 0.12s !important; }
+        .hero.is-visible .hero__frase-cilios { animation-delay: 0.25s !important; }
+        .hero.is-visible .hero__filete { animation-delay: 0.35s !important; }
+        .hero.is-visible .hero__frase { animation-delay: 0.42s !important; }
+      `;
+      document.head.appendChild(animStyle);
+    }
+
+    // Ativa classe is-visible nas seções principais
+    const heroEl = document.querySelector('.hero, header, .vitrine__hero, .studio-app');
+    if (heroEl) {
+      heroEl.classList.add('is-visible');
+    }
+
     const appEls = document.querySelectorAll('.mosaico-app, .vitrine, .studio-app, main, section, header, footer');
     appEls.forEach(el => {
+      el.classList.add('is-visible');
       el.style.visibility = 'visible';
       el.style.opacity = '1';
-      el.style.transition = 'opacity 0.35s ease';
+      el.style.transition = 'opacity 0.4s ease';
     });
 
     if (document.body) {
