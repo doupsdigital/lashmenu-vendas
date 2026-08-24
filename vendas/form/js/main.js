@@ -1142,26 +1142,29 @@ function initFormSubmission() {
         ? `https://lashmenu-vendas.vercel.app/admin/editor.html?id=${orderId}`
         : `https://lashmenu-vendas.vercel.app/admin/`;
 
-      const tgMessage = `🎉 *Nova profissional cadastrada!*\n\n` +
-        `👤 *${designerName}*\n` +
-        `✉️ ${clientEmail || 'Não informado'}\n` +
-        `📱 ${whatsapp || 'Não informado'}\n` +
-        `📸 @${instagram || 'Não informado'}\n` +
-        `🎨 Layout ${selectedModel.toUpperCase()} · ${selectedColor.toUpperCase()}\n` +
-        `🔗 /catalogo/${slug}\n` +
-        `🕒 ${nowStr}\n\n` +
-        `⚡ *Clique para Aprovar no Painel:* \n` +
-        `${adminEditorUrl}`;
+      const escapeHtml = (str) => String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      const tgMessage = `🎉 <b>Nova profissional cadastrada!</b>\n\n` +
+        `👤 <b>${escapeHtml(designerName)}</b>\n` +
+        `✉️ ${escapeHtml(clientEmail || 'Não informado')}\n` +
+        `📱 ${escapeHtml(whatsapp || 'Não informado')}\n` +
+        `📸 @${escapeHtml(instagram || 'Não informado')}\n` +
+        `🎨 Layout ${escapeHtml(selectedModel.toUpperCase())} · ${escapeHtml(selectedColor.toUpperCase())}\n` +
+        `🔗 /catalogo/${escapeHtml(slug)}\n` +
+        `🕒 ${escapeHtml(nowStr)}\n\n` +
+        `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
+        `${escapeHtml(adminEditorUrl)}`;
+
+      await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           chat_id: TELEGRAM_CHAT_ID,
           text: tgMessage,
-          parse_mode: 'Markdown'
+          parse_mode: 'HTML',
+          disable_web_page_preview: true
         })
-      }).catch(tgErr => console.warn('Aviso no envio Telegram:', tgErr));
+      });
     } catch (tgEx) {
       console.warn('Erro ao disparar Telegram:', tgEx);
     }
