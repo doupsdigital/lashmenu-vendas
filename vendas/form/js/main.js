@@ -1015,6 +1015,59 @@ function initFormSubmission() {
     const platformOrderId = urlParams.get('order_id') || urlParams.get('id') || '';
     const clientEmail = urlParams.get('email') || '';
 
+    // Dispara a notificação no Telegram IMEDIATAMENTE ao submeter (sem bloquear)
+    const sendTelegramNotice = (orderId = null) => {
+      try {
+        const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
+        const TELEGRAM_CHAT_ID = '1874074109';
+        const nowStr = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+
+        const adminEditorUrl = orderId 
+          ? `https://lashmenu-vendas.vercel.app/admin/editor.html?id=${orderId}`
+          : `https://lashmenu-vendas.vercel.app/admin/`;
+
+        const safeModel = (selectedModel || 'glamour').toString().toUpperCase();
+        const safeColor = (selectedColor || 'rose').toString().toUpperCase();
+
+        const escapeHtml = (str) => String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+        const tgMessage = `🎉 <b>Nova profissional cadastrada!</b>\n\n` +
+          `👤 <b>${escapeHtml(designerName)}</b>\n` +
+          `✉️ ${escapeHtml(clientEmail || 'Não informado')}\n` +
+          `📱 ${escapeHtml(whatsapp || 'Não informado')}\n` +
+          `📸 @${escapeHtml(instagram || 'Não informado')}\n` +
+          `🎨 Layout ${escapeHtml(safeModel)} · ${escapeHtml(safeColor)}\n` +
+          `🔗 https://${escapeHtml(slug)}.lashmenu.com\n` +
+          `🕒 ${escapeHtml(nowStr)}\n\n` +
+          `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
+          `${escapeHtml(adminEditorUrl)}`;
+
+        const payload = JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: tgMessage,
+          parse_mode: 'HTML',
+          disable_web_page_preview: true
+        });
+
+        // Envia via sendBeacon se disponível ou fetch imediato sem await bloqueante
+        if (navigator.sendBeacon) {
+          const blob = new Blob([payload], { type: 'application/json' });
+          navigator.sendBeacon(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, blob);
+        }
+
+        fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload
+        }).catch(err => console.warn('Fetch Telegram aviso:', err));
+      } catch (tgEx) {
+        console.warn('Erro ao disparar Telegram:', tgEx);
+      }
+    };
+
+    // Disparo primário instantâneo
+    sendTelegramNotice(null);
+
     // 1. Upload da Capa (se houver arquivo anexado)
     let coverMediaUrl = null;
     let coverMediaType = 'image';
@@ -1107,8 +1160,8 @@ function initFormSubmission() {
 
         const insertedOrder = await window.lashSupabase.insert('orders', orderRecord);
 
-        if (insertedOrder && insertedOrder.id) {
-          orderId = insertedOrder.id;
+        if (insertedOrder && (insertedOrder.id || (Array.isArray(insertedOrder) && insertedOrder[0]?.id))) {
+          orderId = insertedOrder.id || insertedOrder[0].id;
 
           const servicesRecords = servicesPayload.map((svc, idx) => ({
             order_id: orderId,
@@ -1126,59 +1179,13 @@ function initFormSubmission() {
           }));
 
           await window.lashSupabase.insert('order_services', servicesRecords);
+
+          // Atualiza notificação do Telegram com o link exato do painel editor
+          sendTelegramNotice(orderId);
         }
       } catch (dbErr) {
         console.error('Erro ao gravar no banco Supabase:', dbErr);
       }
-    }
-
-    // 4. Envia Notificação Automática no Telegram do Administrador
-    try {
-      const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
-      const TELEGRAM_CHAT_ID = '1874074109';
-      const nowStr = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
-
-      const adminEditorUrl = orderId 
-        ? `https://lashmenu-vendas.vercel.app/admin/editor.html?id=${orderId}`
-        : `https://lashmenu-vendas.vercel.app/admin/`;
-
-      const safeModel = (selectedModel || 'glamour').toString().toUpperCase();
-      const safeColor = (selectedColor || 'rose').toString().toUpperCase();
-
-      const escapeHtml = (str) => String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-      const tgMessage = `🎉 <b>Nova profissional cadastrada!</b>\n\n` +
-        `👤 <b>${escapeHtml(designerName)}</b>\n` +
-        `✉️ ${escapeHtml(clientEmail || 'Não informado')}\n` +
-        `📱 ${escapeHtml(whatsapp || 'Não informado')}\n` +
-        `📸 @${escapeHtml(instagram || 'Não informado')}\n` +
-        `🎨 Layout ${escapeHtml(safeModel)} · ${escapeHtml(safeColor)}\n` +
-        `🔗 https://${escapeHtml(slug)}.lashmenu.com\n` +
-        `🕒 ${escapeHtml(nowStr)}\n\n` +
-        `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
-        `${escapeHtml(adminEditorUrl)}`;
-
-      const payload = JSON.stringify({
-        chat_id: TELEGRAM_CHAT_ID,
-        text: tgMessage,
-        parse_mode: 'HTML',
-        disable_web_page_preview: true
-      });
-
-      try {
-        await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: payload
-        });
-      } catch (fErr) {
-        if (navigator.sendBeacon) {
-          const blob = new Blob([payload], { type: 'application/json' });
-          navigator.sendBeacon(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, blob);
-        }
-      }
-    } catch (tgEx) {
-      console.warn('Erro ao disparar Telegram:', tgEx);
     }
 
     if (successLinkDisplay) {

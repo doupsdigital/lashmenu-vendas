@@ -11,55 +11,71 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    html, body {
       background: #0d0b0a;
       color: #f5ede6;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
       height: 100vh;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #lashmenu-loader-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #0d0b0a;
+      color: #f5ede6;
+      z-index: 9999999;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 24px;
+      font-family: system-ui, -apple-system, sans-serif;
     }
-    .brand {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.4rem;
+    #lashmenu-loader-overlay .lm-brand {
+      font-family: Georgia, serif;
+      font-size: 2.2rem;
       letter-spacing: 0.15em;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       text-transform: uppercase;
     }
-    .brand em {
+    #lashmenu-loader-overlay .lm-brand em {
       font-style: italic;
       color: #e5a9b8;
     }
-    .spinner {
-      width: 34px;
-      height: 34px;
-      border: 2px solid rgba(229, 169, 184, 0.2);
+    #lashmenu-loader-overlay .lm-spinner {
+      width: 32px;
+      height: 32px;
+      border: 2px solid rgba(229,169,184,0.2);
       border-top-color: #e5a9b8;
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 16px;
+      animation: lmSpin 0.8s linear infinite;
+      margin-bottom: 14px;
     }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    .status-text {
+    @keyframes lmSpin { to { transform: rotate(360deg); } }
+    #lashmenu-loader-overlay .lm-status {
       color: #a3958c;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       letter-spacing: 0.05em;
     }
     .error-box {
       display: none;
       max-width: 400px;
+      position: relative;
+      z-index: 99999999;
+      text-align: center;
+      padding: 24px;
     }
     .error-box.is-active {
       display: block;
     }
     .error-box h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: Georgia, serif;
       font-size: 2.2rem;
       color: #e5a9b8;
       margin-bottom: 12px;
@@ -85,10 +101,10 @@
 
 <body>
 
-  <div id="loader-content">
-    <div class="brand">Lash<em>Menu</em></div>
-    <div class="spinner"></div>
-    <p class="status-text">Carregando catálogo exclusivo...</p>
+  <div id="lashmenu-loader-overlay">
+    <div class="lm-brand">Lash<em>Menu</em></div>
+    <div class="lm-spinner"></div>
+    <p class="lm-status">Carregando catálogo exclusivo...</p>
   </div>
 
   <div class="error-box" id="error-box">
