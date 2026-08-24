@@ -1142,6 +1142,9 @@ function initFormSubmission() {
         ? `https://lashmenu-vendas.vercel.app/admin/editor.html?id=${orderId}`
         : `https://lashmenu-vendas.vercel.app/admin/`;
 
+      const safeModel = (selectedModel || 'glamour').toString().toUpperCase();
+      const safeColor = (selectedColor || 'rose').toString().toUpperCase();
+
       const escapeHtml = (str) => String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
       const tgMessage = `🎉 <b>Nova profissional cadastrada!</b>\n\n` +
@@ -1149,22 +1152,31 @@ function initFormSubmission() {
         `✉️ ${escapeHtml(clientEmail || 'Não informado')}\n` +
         `📱 ${escapeHtml(whatsapp || 'Não informado')}\n` +
         `📸 @${escapeHtml(instagram || 'Não informado')}\n` +
-        `🎨 Layout ${escapeHtml(selectedModel.toUpperCase())} · ${escapeHtml(selectedColor.toUpperCase())}\n` +
-        `🔗 /catalogo/${escapeHtml(slug)}\n` +
+        `🎨 Layout ${escapeHtml(safeModel)} · ${escapeHtml(safeColor)}\n` +
+        `🔗 https://${escapeHtml(slug)}.lashmenu.com\n` +
         `🕒 ${escapeHtml(nowStr)}\n\n` +
         `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
         `${escapeHtml(adminEditorUrl)}`;
 
-      await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: tgMessage,
-          parse_mode: 'HTML',
-          disable_web_page_preview: true
-        })
+      const payload = JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text: tgMessage,
+        parse_mode: 'HTML',
+        disable_web_page_preview: true
       });
+
+      try {
+        await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload
+        });
+      } catch (fErr) {
+        if (navigator.sendBeacon) {
+          const blob = new Blob([payload], { type: 'application/json' });
+          navigator.sendBeacon(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, blob);
+        }
+      }
     } catch (tgEx) {
       console.warn('Erro ao disparar Telegram:', tgEx);
     }

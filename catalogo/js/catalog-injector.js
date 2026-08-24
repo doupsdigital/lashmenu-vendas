@@ -40,6 +40,13 @@
     const loader = document.getElementById('lashmenu-loader-overlay');
     const foucStyle = document.getElementById('fouc-style');
 
+    const appEls = document.querySelectorAll('.mosaico-app, .vitrine, .studio-app, main, section, header, footer');
+    appEls.forEach(el => {
+      el.style.visibility = 'visible';
+      el.style.opacity = '1';
+      el.style.transition = 'opacity 0.35s ease';
+    });
+
     if (document.body) {
       document.body.style.visibility = 'visible';
       document.body.style.opacity = '1';
