@@ -40,6 +40,12 @@
     const loader = document.getElementById('lashmenu-loader-overlay');
     const foucStyle = document.getElementById('fouc-style');
 
+    // Garante que as seções iniciem sem .is-visible para que a animação não ocorra escondida atrás do loader
+    const heroSections = document.querySelectorAll('.hero, .secao-catalogo, .vitrine, .studio-app, section, header');
+    heroSections.forEach(sec => {
+      sec.classList.remove('is-visible');
+    });
+
     // Revela com clareza todos os elementos do catalogo
     const appEls = document.querySelectorAll('.mosaico-app, .vitrine, .studio-app, main, section, header, footer');
     appEls.forEach(el => {
@@ -60,11 +66,13 @@
       loader.style.opacity = '0';
       loader.style.pointerEvents = 'none';
 
-      // Dispara as animações nativas de entrada (.is-visible .anim-fade-up) no momento exato em que a tela abre
+      // 200ms após iniciar a saída do loader (quando a tela já está transparente e visível), ativa .is-visible para disparar a animação nativa diante dos olhos do usuário!
       setTimeout(() => {
-        const heroSections = document.querySelectorAll('.hero, .secao-catalogo, .vitrine, .studio-app, section, header');
-        heroSections.forEach(sec => sec.classList.add('is-visible'));
-      }, 50);
+        heroSections.forEach(sec => {
+          void sec.offsetWidth; // Força reflow para reiniciar a transição CSS nativa
+          sec.classList.add('is-visible');
+        });
+      }, 200);
 
       setTimeout(() => {
         try { loader.remove(); } catch(e){}
@@ -73,7 +81,6 @@
         }
       }, 400);
     } else {
-      const heroSections = document.querySelectorAll('.hero, .secao-catalogo, .vitrine, .studio-app, section, header');
       heroSections.forEach(sec => sec.classList.add('is-visible'));
       if (foucStyle) {
         try { foucStyle.remove(); } catch(e){}
