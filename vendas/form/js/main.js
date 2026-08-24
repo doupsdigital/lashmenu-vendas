@@ -1062,8 +1062,12 @@ function initFormSubmission() {
       }
     }
 
-    // Dispara a notificação no Telegram IMEDIATAMENTE (Formato Texto Puro 100% infalível contra erros de entidade HTML)
+    // Dispara a notificação no Telegram EXATAMENTE UMA VEZ (1 única requisição limpa)
+    let hasSentTelegram = false;
     const sendTelegramNotice = (orderId = null, finalSlug = slug) => {
+      if (hasSentTelegram) return;
+      hasSentTelegram = true;
+
       try {
         const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
         const TELEGRAM_CHAT_ID = '1874074109';
@@ -1088,20 +1092,6 @@ function initFormSubmission() {
           `⚡ Clique para Aprovar no Painel:\n` +
           `${adminEditorUrl}`;
 
-        const getUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(tgMessage)}`;
-
-        // Method 1: Image Ping (100% livre de bloqueios CORS, adblockers ou preflight)
-        try {
-          const imgPing = new Image();
-          imgPing.src = getUrl;
-        } catch(e1){}
-
-        // Method 2: Fetch GET no-cors
-        try {
-          fetch(getUrl, { mode: 'no-cors', keepalive: true }).catch(() => {});
-        } catch(e2){}
-
-        // Method 3: Fetch POST fallback
         const params = new URLSearchParams();
         params.append('chat_id', TELEGRAM_CHAT_ID);
         params.append('text', tgMessage);
