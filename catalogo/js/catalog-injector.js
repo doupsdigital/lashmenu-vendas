@@ -25,20 +25,14 @@
         video.oncanplaythrough = resolve;
         video.onerror = resolve;
         video.src = url;
-        setTimeout(resolve, 800);
+        setTimeout(resolve, 3000);
         return;
       }
       const img = new Image();
-      img.onload = () => {
-        if (img.decode) {
-          img.decode().then(resolve).catch(resolve);
-        } else {
-          resolve();
-        }
-      };
+      img.onload = resolve;
       img.onerror = resolve;
       img.src = url;
-      setTimeout(resolve, 800);
+      setTimeout(resolve, 3500);
     });
   }
 
@@ -46,54 +40,12 @@
     const loader = document.getElementById('lashmenu-loader-overlay');
     const foucStyle = document.getElementById('fouc-style');
 
-    // Injeta estilo com animação visível escalonada para os textos do Hero
-    if (!document.getElementById('lashmenu-hero-anims')) {
-      const animStyle = document.createElement('style');
-      animStyle.id = 'lashmenu-hero-anims';
-      animStyle.innerHTML = `
-        @keyframes lmKenburnsHero {
-          0% { transform: scale(1.0); }
-          100% { transform: scale(1.08); }
-        }
-        @keyframes lmFadeSlideUp {
-          0% { opacity: 0; transform: translateY(36px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        .hero__selo, .hero__badge, .hero__titulo, .hero__frase-cilios, .hero__filete, .hero__frase {
-          opacity: 0;
-          will-change: transform, opacity;
-        }
-        .hero.is-visible-anims .hero__foto-wrap,
-        .hero.is-visible-anims .hero__bg,
-        .vitrine.is-visible-anims .vitrine__hero-bg {
-          animation: lmKenburnsHero 14s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-        }
-        .hero.is-visible-anims .hero__selo,
-        .hero.is-visible-anims .hero__badge {
-          animation: lmFadeSlideUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards !important;
-        }
-        .hero.is-visible-anims .hero__titulo {
-          animation: lmFadeSlideUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards !important;
-        }
-        .hero.is-visible-anims .hero__frase-cilios {
-          animation: lmFadeSlideUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.60s forwards !important;
-        }
-        .hero.is-visible-anims .hero__filete {
-          animation: lmFadeSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.80s forwards !important;
-        }
-        .hero.is-visible-anims .hero__frase {
-          animation: lmFadeSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.95s forwards !important;
-        }
-      `;
-      document.head.appendChild(animStyle);
-    }
-
-    // Revela containers do app
+    // Revela com 100% de clareza todos os elementos do catalogo
     const appEls = document.querySelectorAll('.mosaico-app, .vitrine, .studio-app, main, section, header, footer');
     appEls.forEach(el => {
       el.style.visibility = 'visible';
       el.style.opacity = '1';
-      el.style.transition = 'opacity 0.3s ease';
+      el.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
     });
 
     if (document.body) {
@@ -103,34 +55,20 @@
     }
     document.documentElement.style.opacity = '1';
 
-    // Inicia a saída do loader
+    // Esmaece suavemente a tela de carregamento LashMenu
     if (loader) {
-      loader.style.transition = 'opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease';
+      loader.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease';
       loader.style.opacity = '0';
       loader.style.pointerEvents = 'none';
-
-      // 120ms após iniciar a saída do loader, dispara a animação visível em cascata dos textos do Hero!
-      setTimeout(() => {
-        const heroEl = document.querySelector('.hero, header, .vitrine__hero, .studio-app');
-        if (heroEl) {
-          heroEl.classList.add('is-visible-anims');
-        }
-      }, 120);
 
       setTimeout(() => {
         try { loader.remove(); } catch(e){}
         if (foucStyle) {
           try { foucStyle.remove(); } catch(e){}
         }
-      }, 350);
-    } else {
-      const heroEl = document.querySelector('.hero, header, .vitrine__hero, .studio-app');
-      if (heroEl) {
-        heroEl.classList.add('is-visible-anims');
-      }
-      if (foucStyle) {
-        try { foucStyle.remove(); } catch(e){}
-      }
+      }, 400);
+    } else if (foucStyle) {
+      try { foucStyle.remove(); } catch(e){}
     }
   }
 

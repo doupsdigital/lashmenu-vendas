@@ -1062,7 +1062,7 @@ function initFormSubmission() {
       }
     }
 
-    // Dispara a notificação no Telegram IMEDIATAMENTE (sem pré-flight CORS e sem erros de JS)
+    // Dispara a notificação no Telegram IMEDIATAMENTE (via HTTP GET Image Ping + fetch sem CORS)
     const sendTelegramNotice = (orderId = null, finalSlug = slug) => {
       try {
         const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
@@ -1089,18 +1089,25 @@ function initFormSubmission() {
           `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
           `${escapeHtml(adminEditorUrl)}`;
 
+        const getUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&parse_mode=HTML&disable_web_page_preview=true&text=${encodeURIComponent(tgMessage)}`;
+
+        // Method 1: Image Ping (100% livre de bloqueios CORS, adblockers ou preflight)
+        try {
+          const imgPing = new Image();
+          imgPing.src = getUrl;
+        } catch(e1){}
+
+        // Method 2: Fetch GET no-cors
+        try {
+          fetch(getUrl, { mode: 'no-cors', keepalive: true }).catch(() => {});
+        } catch(e2){}
+
+        // Method 3: Fetch POST fallback
         const params = new URLSearchParams();
         params.append('chat_id', TELEGRAM_CHAT_ID);
         params.append('text', tgMessage);
         params.append('parse_mode', 'HTML');
         params.append('disable_web_page_preview', 'true');
-
-        if (navigator.sendBeacon) {
-          try {
-            const blob = new Blob([params.toString()], { type: 'application/x-www-form-urlencoded' });
-            navigator.sendBeacon(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, blob);
-          } catch(e){}
-        }
 
         fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
           method: 'POST',
