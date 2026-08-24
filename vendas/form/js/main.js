@@ -1002,9 +1002,7 @@ function initFormSubmission() {
     const instagram = document.getElementById('input-instagram')?.value || '';
     const location = document.getElementById('input-location')?.value || '';
     const rawSlug = document.getElementById('input-slug')?.value || 'catalogo';
-    
-    // Garante que o subdomínio seja único e não dê conflito
-    const slug = window.lashSupabase ? await window.lashSupabase.ensureUniqueSlug(rawSlug) : rawSlug;
+    const slug = rawSlug.toLowerCase().replace(/[^a-z0-9]/g, '') || 'catalogo';
 
     const selectedModel = document.getElementById('input-selected-model')?.value || selectedModelId;
     const selectedColor = document.getElementById('input-selected-color')?.value || selectedColorId;
@@ -1015,8 +1013,57 @@ function initFormSubmission() {
     const platformOrderId = urlParams.get('order_id') || urlParams.get('id') || '';
     const clientEmail = urlParams.get('email') || '';
 
-    // Dispara a notificação no Telegram IMEDIATAMENTE ao submeter (sem bloquear)
-    const sendTelegramNotice = (orderId = null) => {
+    // Preenche dados da tela de sucesso imediatamente
+    if (successLinkDisplay) {
+      successLinkDisplay.textContent = `${slug}.lashmenu.com`;
+    }
+
+    const designerNameEl = document.getElementById('success-designer-name');
+    if (designerNameEl) {
+      designerNameEl.textContent = `Designer: ${designerName}`;
+    }
+
+    const summaryModelEl = document.getElementById('success-summary-model');
+    if (summaryModelEl) {
+      summaryModelEl.textContent = `Layout ${selectedModel.toUpperCase()} · ${selectedColor.toUpperCase()}`;
+    }
+
+    // Coleta dados dos serviços antes da transição da UI
+    const serviceRows = document.querySelectorAll('.service-row-card');
+    const serviceRowsData = [];
+
+    for (let i = 0; i < serviceRows.length; i++) {
+      const row = serviceRows[i];
+      const name = row.querySelector('.service-name')?.value || '';
+      const price = row.querySelector('.service-price')?.value || '';
+      const duration = row.querySelector('.service-duration')?.value || '';
+      const maintenance = row.querySelector('.service-maintenance')?.value || '';
+      const cat = row.querySelector('.service-cat')?.value || 'Extensão de Cílios';
+      const desc = row.querySelector('.service-desc')?.value || '';
+      const effect = row.querySelector('.service-effect')?.value || '';
+      const recommendation = row.querySelector('.service-recommendation')?.value || '';
+      const isCustom = row.getAttribute('data-has-custom-photo') === 'true';
+      const defaultPhotoUrl = row.querySelector('.service-photo-thumb')?.src || '';
+
+      if (name.trim()) {
+        serviceRowsData.push({
+          name: name.trim(),
+          price: price.trim(),
+          duration: duration.trim(),
+          maintenance: maintenance.trim(),
+          category: cat.trim(),
+          description: desc.trim(),
+          effect: effect.trim(),
+          recommendation: recommendation.trim(),
+          defaultPhotoUrl: defaultPhotoUrl,
+          customFile: row._customPhotoFile || null,
+          isCustom: isCustom
+        });
+      }
+    }
+
+    // Dispara a notificação no Telegram IMEDIATAMENTE (sem bloquear a UI)
+    const sendTelegramNotice = (orderId = null, finalSlug = slug) => {
       try {
         const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
         const TELEGRAM_CHAT_ID = '1874074109';
@@ -1037,7 +1084,7 @@ function initFormSubmission() {
           `📱 ${escapeHtml(whatsapp || 'Não informado')}\n` +
           `📸 @${escapeHtml(instagram || 'Não informado')}\n` +
           `🎨 Layout ${escapeHtml(safeModel)} · ${escapeHtml(safeColor)}\n` +
-          `🔗 https://${escapeHtml(slug)}.lashmenu.com\n` +
+          `🔗 https://${escapeHtml(finalSlug)}.lashmenu.com\n` +
           `🕒 ${escapeHtml(nowStr)}\n\n` +
           `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
           `${escapeHtml(adminEditorUrl)}`;
@@ -1049,7 +1096,6 @@ function initFormSubmission() {
           disable_web_page_preview: true
         });
 
-        // Envia via sendBeacon se disponível ou fetch imediato sem await bloqueante
         if (navigator.sendBeacon) {
           const blob = new Blob([payload], { type: 'application/json' });
           navigator.sendBeacon(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, blob);
@@ -1065,106 +1111,73 @@ function initFormSubmission() {
       }
     };
 
-    // Disparo primário instantâneo
-    sendTelegramNotice(null);
+    // Disparo imediato do aviso para o administrador
+    sendTelegramNotice(null, slug);
 
-    // 1. Upload da Capa (se houver arquivo anexado)
-    let coverMediaUrl = null;
-    let coverMediaType = 'image';
-
-    if (uploadedCoverFile && window.lashSupabase) {
-      try {
-        const isVideo = uploadedCoverFile.type.startsWith('video/');
-        coverMediaType = isVideo ? 'video' : 'image';
-        const fileExt = uploadedCoverFile.name.split('.').pop() || (isVideo ? 'mp4' : 'jpg');
-        const coverPath = `covers/${slug}-cover-${Date.now()}.${fileExt}`;
-
-        coverMediaUrl = await window.lashSupabase.uploadFile('catalog-assets', coverPath, uploadedCoverFile);
-      } catch (errCover) {
-        console.warn('Aviso no upload da capa:', errCover);
+    // Transição Instantânea da UI em 1.2s para a Tela de Sucesso
+    setTimeout(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
       }
-    }
 
-    // 2. Coleta e Upload de Procedimentos
-    const serviceRows = document.querySelectorAll('.service-row-card');
-    const servicesPayload = [];
-    const servicesListForMessage = [];
-    let customPhotosCount = 0;
+      form.style.display = 'none';
+      const progressTrack = document.querySelector('.steps-progress');
+      if (progressTrack) progressTrack.style.display = 'none';
 
-    for (let i = 0; i < serviceRows.length; i++) {
-      const row = serviceRows[i];
-      const name = row.querySelector('.service-name')?.value || '';
-      const price = row.querySelector('.service-price')?.value || '';
-      const duration = row.querySelector('.service-duration')?.value || '';
-      const maintenance = row.querySelector('.service-maintenance')?.value || '';
-      const cat = row.querySelector('.service-cat')?.value || 'Extensão de Cílios';
-      const desc = row.querySelector('.service-desc')?.value || '';
-      const effect = row.querySelector('.service-effect')?.value || '';
-      const recommendation = row.querySelector('.service-recommendation')?.value || '';
-      const isCustom = row.getAttribute('data-has-custom-photo') === 'true';
+      if (successScreen) {
+        successScreen.classList.remove('is-hidden');
+      }
 
-      let finalPhotoUrl = row.querySelector('.service-photo-thumb')?.src || '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Se enviou foto personalizada neste card, faz upload
-      if (row._customPhotoFile && window.lashSupabase) {
-        try {
-          const fileExt = row._customPhotoFile.name.split('.').pop() || 'jpg';
-          const svcPath = `services/${slug}-proc-${i + 1}-${Date.now()}.${fileExt}`;
-
-          finalPhotoUrl = await window.lashSupabase.uploadFile('catalog-assets', svcPath, row._customPhotoFile);
-        } catch (errSvc) {
-          console.warn('Erro ao enviar foto do procedimento:', errSvc);
+      // Dispara os confetes de comemoração
+      try {
+        if (typeof launchCelebrationConfetti === 'function') {
+          launchCelebrationConfetti();
         }
-      }
+      } catch(e){}
+    }, 1200);
 
-      if (isCustom) customPhotosCount++;
-      const photoTag = isCustom ? '[📸 Foto Própria]' : '[🖼️ Foto Padrão]';
-
-      if (name.trim()) {
-        servicesListForMessage.push(`• ${name}: R$ ${price} (${duration}) | Manut: R$ ${maintenance} ${photoTag}`);
-        servicesPayload.push({
-          name: name.trim(),
-          price: price.trim(),
-          duration: duration.trim(),
-          maintenance: maintenance.trim(),
-          category: cat.trim(),
-          description: desc.trim(),
-          effect: effect.trim(),
-          recommendation: recommendation.trim(),
-          photo_url: finalPhotoUrl,
-          is_custom_photo: isCustom
-        });
-      }
-    }
-
-    // 3. Gravação no Banco de Dados Supabase
-    let orderId = null;
-    if (window.lashSupabase) {
+    // Processamento de Uploads e Banco de Dados em Background (Assíncrono em Paralelo)
+    (async function processBackgroundPersistence() {
       try {
-        const orderRecord = {
-          platform_order_id: platformOrderId || null,
-          client_email: clientEmail || null,
-          client_name: designerName,
-          whatsapp: whatsapp,
-          instagram: instagram,
-          location: location,
-          slug: slug,
-          model_id: selectedModel,
-          color_id: selectedColor,
-          hero_phrase: heroPhrase,
-          cover_media_url: coverMediaUrl,
-          cover_media_type: coverMediaType,
-          status: 'pendente_revisao',
-          published_url: `https://${slug}.lashmenu.com`
-        };
+        const finalSlug = window.lashSupabase ? await window.lashSupabase.ensureUniqueSlug(rawSlug) : slug;
 
-        const insertedOrder = await window.lashSupabase.insert('orders', orderRecord);
+        if (successLinkDisplay) {
+          successLinkDisplay.textContent = `${finalSlug}.lashmenu.com`;
+        }
 
-        if (insertedOrder && (insertedOrder.id || (Array.isArray(insertedOrder) && insertedOrder[0]?.id))) {
-          orderId = insertedOrder.id || insertedOrder[0].id;
+        // 1. Upload da Capa
+        let coverMediaUrl = null;
+        let coverMediaType = 'image';
 
-          const servicesRecords = servicesPayload.map((svc, idx) => ({
-            order_id: orderId,
+        if (uploadedCoverFile && window.lashSupabase) {
+          try {
+            const isVideo = uploadedCoverFile.type.startsWith('video/');
+            coverMediaType = isVideo ? 'video' : 'image';
+            const fileExt = uploadedCoverFile.name.split('.').pop() || (isVideo ? 'mp4' : 'jpg');
+            const coverPath = `covers/${finalSlug}-cover-${Date.now()}.${fileExt}`;
+
+            coverMediaUrl = await window.lashSupabase.uploadFile('catalog-assets', coverPath, uploadedCoverFile);
+          } catch (errCover) {
+            console.warn('Aviso no upload da capa:', errCover);
+          }
+        }
+
+        // 2. Upload de Fotos de Serviços em PARALELO (Promise.all)
+        const uploadPromises = serviceRowsData.map(async (svc, i) => {
+          let finalPhotoUrl = svc.defaultPhotoUrl;
+          if (svc.customFile && window.lashSupabase) {
+            try {
+              const fileExt = svc.customFile.name.split('.').pop() || 'jpg';
+              const svcPath = `services/${finalSlug}-proc-${i + 1}-${Date.now()}.${fileExt}`;
+              finalPhotoUrl = await window.lashSupabase.uploadFile('catalog-assets', svcPath, svc.customFile);
+            } catch (errSvc) {
+              console.warn('Erro no upload de foto de serviço:', errSvc);
+            }
+          }
+          return {
             name: svc.name,
             price: svc.price,
             duration: svc.duration,
@@ -1173,51 +1186,61 @@ function initFormSubmission() {
             description: svc.description,
             effect: svc.effect,
             recommendation: svc.recommendation,
-            photo_url: svc.photo_url,
-            is_custom_photo: svc.is_custom_photo,
-            order_index: idx + 1
-          }));
+            photo_url: finalPhotoUrl,
+            is_custom_photo: svc.isCustom
+          };
+        });
 
-          await window.lashSupabase.insert('order_services', servicesRecords);
+        const processedServices = await Promise.all(uploadPromises);
 
-          // Atualiza notificação do Telegram com o link exato do painel editor
-          sendTelegramNotice(orderId);
+        // 3. Persistência no Banco Supabase
+        if (window.lashSupabase) {
+          const orderRecord = {
+            platform_order_id: platformOrderId || null,
+            client_email: clientEmail || null,
+            client_name: designerName,
+            whatsapp: whatsapp,
+            instagram: instagram,
+            location: location,
+            slug: finalSlug,
+            model_id: selectedModel,
+            color_id: selectedColor,
+            hero_phrase: heroPhrase,
+            cover_media_url: coverMediaUrl,
+            cover_media_type: coverMediaType,
+            status: 'pendente_revisao',
+            published_url: `https://${finalSlug}.lashmenu.com`
+          };
+
+          const insertedOrder = await window.lashSupabase.insert('orders', orderRecord);
+          const orderId = insertedOrder ? (insertedOrder.id || (Array.isArray(insertedOrder) && insertedOrder[0]?.id)) : null;
+
+          if (orderId) {
+            const servicesRecords = processedServices.map((svc, idx) => ({
+              order_id: orderId,
+              name: svc.name,
+              price: svc.price,
+              duration: svc.duration,
+              maintenance: svc.maintenance,
+              category: svc.category,
+              description: svc.description,
+              effect: svc.effect,
+              recommendation: svc.recommendation,
+              photo_url: svc.photo_url,
+              is_custom_photo: svc.is_custom_photo,
+              order_index: idx + 1
+            }));
+
+            await window.lashSupabase.insert('order_services', servicesRecords);
+
+            // Notifica o admin no Telegram com o link exato do painel editor
+            sendTelegramNotice(orderId, finalSlug);
+          }
         }
-      } catch (dbErr) {
-        console.error('Erro ao gravar no banco Supabase:', dbErr);
+      } catch (bgErr) {
+        console.warn('Erro no processamento em background:', bgErr);
       }
-    }
-
-    if (successLinkDisplay) {
-      successLinkDisplay.textContent = `${slug}.lashmenu.com`;
-    }
-
-    const designerNameEl = document.getElementById('success-designer-name');
-    if (designerNameEl) {
-      designerNameEl.textContent = `Designer: ${designerName}`;
-    }
-
-    const summaryModelEl = document.getElementById('success-summary-model');
-    if (summaryModelEl) {
-      summaryModelEl.textContent = `Layout ${selectedModel.toUpperCase()} · ${selectedColor.toUpperCase()}`;
-    }
-
-    // Restaura botão
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnHtml;
-    }
-
-    // Exibe a tela de sucesso
-    form.style.display = 'none';
-    const progressTrack = document.querySelector('.steps-progress');
-    if (progressTrack) progressTrack.style.display = 'none';
-
-    if (successScreen) {
-      successScreen.classList.remove('is-hidden');
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    })();
   });
 }
 
