@@ -1062,7 +1062,7 @@ function initFormSubmission() {
       }
     }
 
-    // Dispara a notificação no Telegram IMEDIATAMENTE (via HTTP GET Image Ping + fetch sem CORS)
+    // Dispara a notificação no Telegram IMEDIATAMENTE (Formato Texto Puro 100% infalível contra erros de entidade HTML)
     const sendTelegramNotice = (orderId = null, finalSlug = slug) => {
       try {
         const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
@@ -1075,21 +1075,20 @@ function initFormSubmission() {
 
         const safeModel = (selectedModel || 'glamour').toString().toUpperCase();
         const safeColor = (selectedColor || 'rose').toString().toUpperCase();
+        const cleanInsta = instagram ? instagram.toString().replace(/^@/, '').trim() : 'Não informado';
 
-        const escapeHtml = (str) => String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const tgMessage = `🎉 Nova profissional cadastrada!\n\n` +
+          `👤 ${designerName}\n` +
+          `✉️ ${clientEmail || 'Não informado'}\n` +
+          `📱 ${whatsapp || 'Não informado'}\n` +
+          `📸 @${cleanInsta}\n` +
+          `🎨 Layout ${safeModel} · ${safeColor}\n` +
+          `🔗 https://${finalSlug}.lashmenu.com\n` +
+          `🕒 ${nowStr}\n\n` +
+          `⚡ Clique para Aprovar no Painel:\n` +
+          `${adminEditorUrl}`;
 
-        const tgMessage = `🎉 <b>Nova profissional cadastrada!</b>\n\n` +
-          `👤 <b>${escapeHtml(designerName)}</b>\n` +
-          `✉️ ${escapeHtml(clientEmail || 'Não informado')}\n` +
-          `📱 ${escapeHtml(whatsapp || 'Não informado')}\n` +
-          `📸 @${escapeHtml(instagram || 'Não informado')}\n` +
-          `🎨 Layout ${escapeHtml(safeModel)} · ${escapeHtml(safeColor)}\n` +
-          `🔗 https://${escapeHtml(finalSlug)}.lashmenu.com\n` +
-          `🕒 ${escapeHtml(nowStr)}\n\n` +
-          `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
-          `${escapeHtml(adminEditorUrl)}`;
-
-        const getUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&parse_mode=HTML&disable_web_page_preview=true&text=${encodeURIComponent(tgMessage)}`;
+        const getUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(tgMessage)}`;
 
         // Method 1: Image Ping (100% livre de bloqueios CORS, adblockers ou preflight)
         try {
@@ -1106,8 +1105,6 @@ function initFormSubmission() {
         const params = new URLSearchParams();
         params.append('chat_id', TELEGRAM_CHAT_ID);
         params.append('text', tgMessage);
-        params.append('parse_mode', 'HTML');
-        params.append('disable_web_page_preview', 'true');
 
         fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
           method: 'POST',
