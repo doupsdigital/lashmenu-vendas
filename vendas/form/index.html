@@ -54,7 +54,7 @@
     <div class="container container--form">
 
       <!-- PROGRESS BAR MULTI-STEP -->
-      <div class="steps-progress">
+      <div class="steps-progress is-hidden" id="steps-progress">
         <div class="progress-track">
           <div class="progress-bar-fill" id="progress-bar-fill" style="width: 25%;"></div>
         </div>
@@ -81,7 +81,67 @@
       <!-- FORM CARD CONTAINER -->
       <div class="form-card">
 
-        <form id="onboarding-form" novalidate>
+        <!-- ===================================================================
+             TELA DE BOAS-VINDAS / ONBOARDING (ETAPA 0)
+             =================================================================== -->
+        <div class="welcome-screen is-active" id="welcome-screen">
+          <div class="welcome-badge">
+            <span class="welcome-dot"></span>
+            <span>✨ Boas-vindas ao LashMenu</span>
+          </div>
+
+          <h1 class="welcome-title">Parabéns pela sua compra! <br><span class="welcome-highlight">Seu catálogo oficial está a poucos minutos de ir ao ar.</span></h1>
+          
+          <p class="welcome-subtitle">
+            Preparamos este assistente prático para você personalizar seu catálogo interativo com seu nome, modelo preferido, procedimentos e fotos em poucos cliques.
+          </p>
+
+          <div class="welcome-grid">
+            <div class="welcome-card">
+              <div class="welcome-card-icon">⏱️</div>
+              <div class="welcome-card-body">
+                <h3 class="welcome-card-title">Rápido & Prático</h3>
+                <p class="welcome-card-desc">Leva menos de 10 minutos para preencher todas as informações do seu estúdio.</p>
+              </div>
+            </div>
+
+            <div class="welcome-card">
+              <div class="welcome-card-icon">📋</div>
+              <div class="welcome-card-body">
+                <h3 class="welcome-card-title">4 Etapas Guiadas</h3>
+                <p class="welcome-card-desc">1. Identidade  •  2. Modelo & Cores  •  3. Serviços  •  4. Fotos & Envio.</p>
+              </div>
+            </div>
+
+            <div class="welcome-card">
+              <div class="welcome-card-icon">💎</div>
+              <div class="welcome-card-body">
+                <h3 class="welcome-card-title">Ativação VIP 1-Clique</h3>
+                <p class="welcome-card-desc">Após o envio, revisamos e ativamos seu link exclusivo para colocar na bio do Instagram.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="welcome-notice">
+            <div class="welcome-notice-icon">💡</div>
+            <div class="welcome-notice-content">
+              <strong>Não pode preencher tudo agora?</strong>
+              <p>Sem problemas! Você pode fechar esta página e voltar a este mesmo link quando tiver suas fotos e tabela de preços em mãos. O acesso continuará garantido no seu e-mail da Cakto.</p>
+            </div>
+          </div>
+
+          <div class="welcome-actions">
+            <button type="button" class="btn btn--welcome-start" id="btn-welcome-start">
+              <span>✨ Sim, quero personalizar meu catálogo agora!</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button type="button" class="btn-welcome-later" id="btn-welcome-later">
+              <span>Estou apenas espiando (posso preencher depois)</span>
+            </button>
+          </div>
+        </div>
+
+        <form id="onboarding-form" class="is-hidden" novalidate>
 
           <!-- ===================================================================
                ETAPA 1: IDENTIDADE & LINKS

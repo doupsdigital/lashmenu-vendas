@@ -4,6 +4,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initWelcomeScreen();
   initMultiStepNavigation();
   initModelCardsSelection();
   initServicesBuilder();
@@ -14,6 +15,34 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlugFormatter();
   initFormSubmission();
 });
+
+/* ── 0. Tela de Boas-Vindas / Onboarding Inicial ────────────────────────── */
+function initWelcomeScreen() {
+  const welcomeScreen = document.getElementById('welcome-screen');
+  const btnStart = document.getElementById('btn-welcome-start');
+  const btnLater = document.getElementById('btn-welcome-later');
+  const stepsProgress = document.getElementById('steps-progress');
+  const form = document.getElementById('onboarding-form');
+
+  if (!welcomeScreen || !btnStart) return;
+
+  btnStart.addEventListener('click', () => {
+    welcomeScreen.classList.remove('is-active');
+    setTimeout(() => {
+      welcomeScreen.style.display = 'none';
+      if (stepsProgress) stepsProgress.classList.remove('is-hidden');
+      if (form) form.classList.remove('is-hidden');
+      goToStep(1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 150);
+  });
+
+  if (btnLater) {
+    btnLater.addEventListener('click', () => {
+      alert('Tudo bem! Seu acesso continuará salvo no e-mail enviado pela Cakto. Quando estiver pronta com suas fotos e valores, basta acessar o mesmo link.');
+    });
+  }
+}
 
 /* ── 1. Navegação Multi-Step com Validação ───────────────────────────────── */
 let currentStep = 1;
