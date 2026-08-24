@@ -94,6 +94,10 @@
     const location = order.location || '';
     const heroPhrase = order.hero_phrase || '';
 
+    // Salva globalmente para os modais dinâmicos do catálogo
+    window.LASHMENU_CLIENT_PHONE = cleanPhone;
+    window.LASHMENU_DESIGNER_NAME = designerName;
+
     // Título da página
     document.title = `${designerName} — Catálogo Digital Oficial`;
 
@@ -295,4 +299,38 @@
       }
     }
   }
+
+  // Interceptador global de cliques para garantir número do WhatsApp cadastrado e mensagem por procedimento
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a.btn-whatsapp, a.btn-whatsapp-flutuante, a.contato__btn-whatsapp, a.detalhe-procedimento__cta, a.modal__cta, a[href*="wa.me"], a[href*="whatsapp.com"], a[href*="api.whatsapp.com"]');
+    if (!link) return;
+
+    const phone = (typeof window !== 'undefined' && window.LASHMENU_CLIENT_PHONE) ? window.LASHMENU_CLIENT_PHONE : null;
+    if (!phone) return;
+
+    const designerName = (typeof window !== 'undefined' && window.LASHMENU_DESIGNER_NAME) ? window.LASHMENU_DESIGNER_NAME : 'Lash Designer';
+    const firstName = designerName.split(' ')[0];
+
+    let procName = '';
+    const modalContainer = link.closest('.detalhe-procedimento, [data-detalhe], #modal-procedimento, .modal, .modal__corpo, .detalhe-procedimento__corpo');
+    if (modalContainer) {
+      const titleEl = modalContainer.querySelector('.detalhe-procedimento__titulo, .modal__titulo, .detalhe-procedimento__nome, h2, h3');
+      if (titleEl) {
+        procName = titleEl.textContent.trim();
+      }
+    }
+
+    if (!procName) {
+      const btnText = link.textContent.trim();
+      if (btnText.startsWith('Agendar ') && !btnText.includes('Agendar no WhatsApp')) {
+        procName = btnText.replace(/^Agendar\s+/, '').replace(/\s*→$/, '').trim();
+      }
+    }
+
+    const message = procName
+      ? `Olá, ${firstName}! Estava vendo seu catálogo digital e gostaria de agendar o procedimento: *${procName}*.`
+      : `Olá, ${firstName}! Estava vendo seu catálogo digital e gostaria de agendar um horário.`;
+
+    link.href = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+  }, true);
 })();

@@ -373,7 +373,10 @@ function abrirModal(id) {
   const idxAtual = lista.findIndex(p => p.id === id);
   const proxItem = lista[(idxAtual + 1) % lista.length];
 
-  const mensagemWa = encodeURIComponent(`Olá Bruna! Gostaria de agendar o procedimento de ${item.title}.`);
+  const targetPhone = (typeof window !== 'undefined' && window.LASHMENU_CLIENT_PHONE) ? window.LASHMENU_CLIENT_PHONE : '5511999999999';
+  const designerName = (typeof window !== 'undefined' && window.LASHMENU_DESIGNER_NAME) ? window.LASHMENU_DESIGNER_NAME : 'Bruna';
+  const firstName = designerName.split(' ')[0];
+  const mensagemWa = encodeURIComponent(`Olá, ${firstName}! Estava vendo seu catálogo digital e gostaria de agendar o procedimento: *${item.title}*.`);
 
   modalSheetEl.innerHTML = `
     <div class="modal__foto-wrap">
@@ -396,7 +399,7 @@ function abrirModal(id) {
       </div>
 
       <div class="modal__acoes">
-        <a href="https://wa.me/5511999999999?text=${mensagemWa}" target="_blank" rel="noopener" class="modal__cta">
+        <a href="https://api.whatsapp.com/send?phone=${targetPhone}&text=${mensagemWa}" target="_blank" rel="noopener" class="modal__cta">
           Agendar ${item.title} →
         </a>
         <button type="button" class="modal__proximo" title="Ver próximo serviço" onclick="abrirModal('${proxItem.id}')">

@@ -227,7 +227,10 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `).join('');
 
-    const mensagemWa = encodeURIComponent(`Olá Mariana! Gostaria de agendar o procedimento de ${item.nome}.`);
+    const targetPhone = (typeof window !== 'undefined' && window.LASHMENU_CLIENT_PHONE) ? window.LASHMENU_CLIENT_PHONE : '5511999999999';
+    const designerName = (typeof window !== 'undefined' && window.LASHMENU_DESIGNER_NAME) ? window.LASHMENU_DESIGNER_NAME : 'Mariana';
+    const firstName = designerName.split(' ')[0];
+    const mensagemWa = encodeURIComponent(`Olá, ${firstName}! Estava vendo seu catálogo digital e gostaria de agendar o procedimento: *${item.nome}*.`);
 
     sheet.innerHTML = `
       <div class="detalhe-procedimento__foto-wrap">
@@ -241,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="detalhe-procedimento__desc">${item.desc}</p>
         <div class="detalhe-procedimento__specs">${specsHtml}</div>
         <div class="detalhe-procedimento__acoes">
-          <a href="https://wa.me/5511999999999?text=${mensagemWa}" class="detalhe-procedimento__cta" target="_blank" rel="noopener">Quero esse</a>
+          <a href="https://api.whatsapp.com/send?phone=${targetPhone}&text=${mensagemWa}" class="detalhe-procedimento__cta" target="_blank" rel="noopener">Quero esse</a>
           <button type="button" class="detalhe-procedimento__proximo" data-proximo aria-label="Próximo procedimento">→</button>
         </div>
       </div>
