@@ -1062,7 +1062,7 @@ function initFormSubmission() {
       }
     }
 
-    // Dispara a notificação no Telegram EXATAMENTE UMA VEZ (Image Ping GET 100% imune a erros CORS)
+    // Dispara a notificação no Telegram (Backend Vercel Serverless + Image Ping com referência na window)
     let hasSentTelegram = false;
     const sendTelegramNotice = (orderId = null, finalSlug = slug) => {
       if (hasSentTelegram) return;
@@ -1081,6 +1081,26 @@ function initFormSubmission() {
         const safeColor = (selectedColor || 'rose').toString().toUpperCase();
         const cleanInsta = instagram ? instagram.toString().replace(/^@/, '').trim() : 'Não informado';
 
+        const payload = {
+          designerName,
+          clientEmail,
+          whatsapp,
+          instagram: cleanInsta,
+          selectedModel: safeModel,
+          selectedColor: safeColor,
+          slug: finalSlug,
+          orderId
+        };
+
+        // 1. Envio seguro via Backend Serverless Vercel (/api/telegram)
+        fetch('/api/telegram', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).catch(err => console.warn('Aviso API Backend Telegram:', err));
+
+        // 2. Disparo por Image Ping com ancoragem no objeto window para evitar Garbage Collection do JS
         const tgMessage = `🎉 Nova profissional cadastrada!\n\n` +
           `👤 ${designerName}\n` +
           `✉️ ${clientEmail || 'Não informado'}\n` +
@@ -1093,10 +1113,9 @@ function initFormSubmission() {
           `${adminEditorUrl}`;
 
         const getUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(tgMessage)}`;
-
-        // Disparo único via Image Ping (imune a pré-flight CORS e bloqueios de navegador)
-        const imgPing = new Image();
-        imgPing.src = getUrl;
+        
+        window._tgPing = new Image();
+        window._tgPing.src = getUrl;
       } catch (tgEx) {
         console.warn('Erro ao disparar Telegram:', tgEx);
       }

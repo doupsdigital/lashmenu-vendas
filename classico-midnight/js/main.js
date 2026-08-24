@@ -252,13 +252,6 @@ function initSectionObserver() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-      } else {
-        entry.target.classList.remove('is-visible');
-        if (entry.target.classList.contains('secao-menu')) {
-          document.querySelectorAll('.servico-card').forEach((card) => {
-            card.classList.remove('is-revealed');
-          });
-        }
       }
     });
   }, observerOptions);

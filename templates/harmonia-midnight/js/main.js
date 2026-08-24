@@ -251,13 +251,6 @@ function initSectionObserver() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-      } else {
-        entry.target.classList.remove('is-visible');
-        if (entry.target.classList.contains('secao-catalogo')) {
-          document.querySelectorAll('.tile').forEach((tile) => {
-            tile.classList.remove('is-revealed');
-          });
-        }
       }
     });
   }, observerOptions);
