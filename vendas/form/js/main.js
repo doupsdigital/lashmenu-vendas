@@ -1004,8 +1004,8 @@ function initFormSubmission() {
     const rawSlug = document.getElementById('input-slug')?.value || 'catalogo';
     const slug = rawSlug.toLowerCase().replace(/[^a-z0-9]/g, '') || 'catalogo';
 
-    const selectedModel = document.getElementById('input-selected-model')?.value || selectedModelId;
-    const selectedColor = document.getElementById('input-selected-color')?.value || selectedColorId;
+    const selectedModel = document.getElementById('input-selected-model')?.value || (typeof selectedModelId !== 'undefined' ? selectedModelId : 'glamour');
+    const selectedColor = document.getElementById('input-selected-color')?.value || (typeof selectedColorId !== 'undefined' ? selectedColorId : 'rose');
     const heroPhrase = document.getElementById('input-hero-phrase')?.value || '';
 
     // Captura parâmetros da URL do checkout (se houver)
@@ -1025,7 +1025,7 @@ function initFormSubmission() {
 
     const summaryModelEl = document.getElementById('success-summary-model');
     if (summaryModelEl) {
-      summaryModelEl.textContent = `Layout ${selectedModel.toUpperCase()} · ${selectedColor.toUpperCase()}`;
+      summaryModelEl.textContent = `Layout ${selectedModel.toString().toUpperCase()} · ${selectedColor.toString().toUpperCase()}`;
     }
 
     // Coleta dados dos serviços antes da transição da UI
@@ -1062,7 +1062,7 @@ function initFormSubmission() {
       }
     }
 
-    // Dispara a notificação no Telegram IMEDIATAMENTE (sem bloquear a UI)
+    // Dispara a notificação no Telegram IMEDIATAMENTE (sem pré-flight CORS e sem erros de JS)
     const sendTelegramNotice = (orderId = null, finalSlug = slug) => {
       try {
         const TELEGRAM_BOT_TOKEN = '8665382415:AAHI93Z9SppDujl-02jyDpPvZ7EEow0zJ8E';
@@ -1089,22 +1089,15 @@ function initFormSubmission() {
           `⚡ <b>Clique para Aprovar no Painel:</b>\n` +
           `${escapeHtml(adminEditorUrl)}`;
 
-        const payload = JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: tgMessage,
-          parse_mode: 'HTML',
-          disable_web_page_preview: true
-        });
-
-        if (navigator.sendBeacon) {
-          const blob = new Blob([payload], { type: 'application/json' });
-          navigator.sendBeacon(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, blob);
-        }
+        const params = new URLSearchParams();
+        params.append('chat_id', TELEGRAM_CHAT_ID);
+        params.append('text', tgMessage);
+        params.append('parse_mode', 'HTML');
+        params.append('disable_web_page_preview', 'true');
 
         fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: payload
+          body: params
         }).catch(err => console.warn('Fetch Telegram aviso:', err));
       } catch (tgEx) {
         console.warn('Erro ao disparar Telegram:', tgEx);
