@@ -94,23 +94,29 @@ Todos os criativos foram produzidos utilizando as **interfaces REAIS do produto 
 
 ---
 
-## ⚙️ 6. CONFIGURAÇÃO DO META PIXEL & EVENTOS DO FUNIL
+## ⚙️ 6. CONFIGURAÇÃO DO META PIXEL & EVENTOS DO FUNIL (ID ATIVO: 1042165951490026)
 
-Rastreamento configurado nas páginas de vendas (`vendas/lpb/index.html`) e formulário (`vendas/form/index.html`):
+Rastreamento 100% configurado e ativo nas páginas do funil:
+1. **Landing Page** (`vendas/lpb/index.html`):
+   * Evento `PageView` disparado no carregamento da página.
+   * Evento `InitiateCheckout` disparado no clique dos botões CTA do Plano Essencial (R$ 197) e Custom (R$ 297).
+2. **Formulário / Página de Obrigado** (`vendas/form/index.html`):
+   * Evento `PageView` disparado no carregamento.
+   * Evento `Purchase` (Valor: R$ 197,00 | Moeda: BRL) disparado automaticamente na chegada da cliente pós-pagamento.
 
 ```html
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code Oficial -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'SEU_PIXEL_ID_AQUI');
-fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1042165951490026');
+  fbq('track', 'PageView');
 </script>
 ```
 
