@@ -1062,7 +1062,7 @@ function initFormSubmission() {
       }
     }
 
-    // Dispara a notificação no Telegram EXATAMENTE UMA VEZ (1 única requisição limpa)
+    // Dispara a notificação no Telegram EXATAMENTE UMA VEZ (Image Ping GET 100% imune a erros CORS)
     let hasSentTelegram = false;
     const sendTelegramNotice = (orderId = null, finalSlug = slug) => {
       if (hasSentTelegram) return;
@@ -1092,16 +1092,11 @@ function initFormSubmission() {
           `⚡ Clique para Aprovar no Painel:\n` +
           `${adminEditorUrl}`;
 
-        const params = new URLSearchParams();
-        params.append('chat_id', TELEGRAM_CHAT_ID);
-        params.append('text', tgMessage);
+        const getUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(tgMessage)}`;
 
-        fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: params.toString(),
-          keepalive: true
-        }).catch(err => console.warn('Fetch Telegram aviso:', err));
+        // Disparo único via Image Ping (imune a pré-flight CORS e bloqueios de navegador)
+        const imgPing = new Image();
+        imgPing.src = getUrl;
       } catch (tgEx) {
         console.warn('Erro ao disparar Telegram:', tgEx);
       }
