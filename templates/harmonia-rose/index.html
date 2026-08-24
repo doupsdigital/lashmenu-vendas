@@ -2,6 +2,22 @@
 <html lang="pt-BR">
 
 <head>
+  <script>
+    (function() {
+      const p = new URLSearchParams(window.location.search);
+      let s = p.get('slug') || p.get('c') || p.get('p') || p.get('id');
+      if (!s) {
+        const host = window.location.hostname;
+        const parts = host.split('.');
+        if (parts.length >= 3 && parts[0] !== 'www' && parts[0] !== 'lashmenu-vendas' && !parts[0].includes('localhost') && !parts[0].includes('vercel')) {
+          s = parts[0];
+        }
+      }
+      if (s) {
+        document.write('<style id="fouc-style">#lashmenu-loader-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;background:#0d0b0a;color:#f5ede6;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:system-ui,-apple-system,sans-serif;transition:opacity 0.35s ease,visibility 0.35s ease}#lashmenu-loader-overlay .lm-brand{font-family:Georgia,serif;font-size:2.2rem;letter-spacing:0.15em;margin-bottom:20px;text-transform:uppercase}#lashmenu-loader-overlay .lm-brand em{font-style:italic;color:#e5a9b8}#lashmenu-loader-overlay .lm-spinner{width:32px;height:32px;border:2px solid rgba(229,169,184,0.2);border-top-color:#e5a9b8;border-radius:50%;animation:lmSpin 0.8s linear infinite;margin-bottom:14px}@keyframes lmSpin{to{transform:rotate(360deg)}}#lashmenu-loader-overlay .lm-status{color:#a3958c;font-size:0.82rem;letter-spacing:0.05em}html, body { visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }</style>');
+      }
+    })();
+  </script>
   <meta charset="utf-8">
   <title>Amanda Carvalho — Catálogo Harmonia Rosé</title>
   <meta name="description"
@@ -16,6 +32,13 @@
 </head>
 
 <body>
+
+  <!-- LOADER OVERLAY DE SEGURANÇA LASHMENU -->
+  <div id="lashmenu-loader-overlay">
+    <div class="lm-brand">Lash<em>Menu</em></div>
+    <div class="lm-spinner"></div>
+    <p class="lm-status">Carregando catálogo exclusivo...</p>
+  </div>
 
   <div class="mosaico-app">
 

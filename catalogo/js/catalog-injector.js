@@ -16,24 +16,49 @@
     return null;
   }
 
+  function preloadMedia(url) {
+    if (!url) return Promise.resolve();
+    return new Promise((resolve) => {
+      if (url.match(/\.(mp4|webm|mov)(\?.*)?$/i)) {
+        const video = document.createElement('video');
+        video.preload = 'auto';
+        video.oncanplaythrough = resolve;
+        video.onerror = resolve;
+        video.src = url;
+        setTimeout(resolve, 1500);
+        return;
+      }
+      const img = new Image();
+      img.onload = resolve;
+      img.onerror = resolve;
+      img.src = url;
+      setTimeout(resolve, 2000);
+    });
+  }
+
   function revealCatalog() {
     const loader = document.getElementById('lashmenu-loader-overlay');
+    const foucStyle = document.getElementById('fouc-style');
+
+    if (document.body) {
+      document.body.style.visibility = 'visible';
+      document.body.style.opacity = '1';
+      document.body.style.pointerEvents = 'auto';
+    }
+    document.documentElement.style.opacity = '1';
+
     if (loader) {
+      loader.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease';
       loader.style.opacity = '0';
       loader.style.pointerEvents = 'none';
       setTimeout(() => {
         try { loader.remove(); } catch(e){}
-      }, 380);
-    }
-    const foucStyle = document.getElementById('fouc-style');
-    if (foucStyle) {
+        if (foucStyle) {
+          try { foucStyle.remove(); } catch(e){}
+        }
+      }, 400);
+    } else if (foucStyle) {
       try { foucStyle.remove(); } catch(e){}
-    }
-    document.documentElement.style.transition = 'opacity 0.25s ease';
-    document.documentElement.style.opacity = '1';
-    if (document.body) {
-      document.body.style.visibility = 'visible';
-      document.body.style.opacity = '1';
     }
   }
 
@@ -46,44 +71,80 @@
   // Safety Timeout para evitar tela em branco por rede lenta
   const safetyTimer = setTimeout(() => {
     revealCatalog();
-  }, 4000);
+  }, 4500);
+
+  let order = null;
+  let services = [];
+
+  // Tenta carregar do cache instantâneo de sessão primeiro
+  try {
+    const cached = sessionStorage.getItem(`lash_cache_${slug}`);
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      if (parsed && parsed.order) {
+        order = parsed.order;
+        services = parsed.services || [];
+      }
+    }
+  } catch(e){}
 
   const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmZmhwdHBzYWZsbHNtY3NvaWloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyODkyMTYsImV4cCI6MjEwMjg2NTIxNn0.nwpvIwl8V6_KGIp5e5oeraAcGyt3oo8Kdam2hp6ajSQ';
 
   try {
-    // 1. Busca Pedido no Supabase
-    const orderRes = await fetch(`${SUPABASE_URL}/rest/v1/orders?slug=eq.${encodeURIComponent(slug)}&select=*`, {
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+    if (!order) {
+      // 1. Busca Pedido no Supabase
+      const orderRes = await fetch(`${SUPABASE_URL}/rest/v1/orders?slug=eq.${encodeURIComponent(slug)}&select=*`, {
+        headers: {
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+        }
+      });
+
+      if (orderRes.ok) {
+        const orders = await orderRes.json();
+        if (orders && orders.length > 0) {
+          order = orders[0];
+          const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${order.id}&order_index=gte.0&order=order_index.asc`, {
+            headers: {
+              'apikey': SUPABASE_ANON_KEY,
+              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+            }
+          });
+          services = servicesRes.ok ? await servicesRes.json() : [];
+          try {
+            sessionStorage.setItem(`lash_cache_${slug}`, JSON.stringify({ order, services }));
+          } catch(e){}
+        }
       }
-    });
+    }
 
-    if (!orderRes.ok) return;
-    const orders = await orderRes.json();
-    if (!orders || orders.length === 0) return;
+    if (order) {
+      // 2. Aplica os Dados no DOM do Modelo Oficial (atrás da cortina de carregamento)
+      applyCustomData(order, services);
 
-    const order = orders[0];
-
-    // 2. Busca Procedimentos Ativos
-    const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${order.id}&order_index=gte.0&order=order_index.asc`, {
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      // 3. Pré-carrega mídias essenciais na memória/GPU ANTES de revelar a página (Zero Flash)
+      const mediaPromises = [];
+      if (order.cover_media_url) {
+        mediaPromises.push(preloadMedia(order.cover_media_url));
       }
-    });
-
-    const services = servicesRes.ok ? await servicesRes.json() : [];
-
-    // 3. Aplica os Dados no DOM do Modelo Oficial
-    applyCustomData(order, services);
+      if (services && services.length > 0) {
+        services.slice(0, 3).forEach(svc => {
+          if (svc.photo_url) mediaPromises.push(preloadMedia(svc.photo_url));
+        });
+      }
+      await Promise.all(mediaPromises);
+    }
 
   } catch (err) {
     console.warn('Injeção de dados:', err);
   } finally {
     clearTimeout(safetyTimer);
-    setTimeout(revealCatalog, 30);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        revealCatalog();
+      });
+    });
   }
 
   function applyCustomData(order, services) {
@@ -117,6 +178,8 @@
     if (order.cover_media_url) {
       const heroWrap = document.querySelector('.hero__foto-wrap, .capa__foto-wrap');
       if (heroWrap) {
+        heroWrap.style.willChange = 'transform';
+        heroWrap.style.transform = 'translateZ(0)';
         if (order.cover_media_type === 'video') {
           heroWrap.innerHTML = `<video class="hero__foto hero__video" src="${order.cover_media_url}" autoplay muted loop playsinline preload="auto"></video>`;
         } else {
