@@ -56,7 +56,7 @@
           100% { transform: scale(1.08); }
         }
         @keyframes lmFadeSlideUp {
-          0% { opacity: 0; transform: translateY(32px); }
+          0% { opacity: 0; transform: translateY(36px); }
           100% { opacity: 1; transform: translateY(0); }
         }
         .hero__selo, .hero__badge, .hero__titulo, .hero__frase-cilios, .hero__filete, .hero__frase {
@@ -66,23 +66,23 @@
         .hero.is-visible-anims .hero__foto-wrap,
         .hero.is-visible-anims .hero__bg,
         .vitrine.is-visible-anims .vitrine__hero-bg {
-          animation: lmKenburnsHero 12s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+          animation: lmKenburnsHero 14s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
         }
         .hero.is-visible-anims .hero__selo,
         .hero.is-visible-anims .hero__badge {
-          animation: lmFadeSlideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards !important;
+          animation: lmFadeSlideUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards !important;
         }
         .hero.is-visible-anims .hero__titulo {
-          animation: lmFadeSlideUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.22s forwards !important;
+          animation: lmFadeSlideUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards !important;
         }
         .hero.is-visible-anims .hero__frase-cilios {
-          animation: lmFadeSlideUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.36s forwards !important;
+          animation: lmFadeSlideUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.60s forwards !important;
         }
         .hero.is-visible-anims .hero__filete {
-          animation: lmFadeSlideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.48s forwards !important;
+          animation: lmFadeSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.80s forwards !important;
         }
         .hero.is-visible-anims .hero__frase {
-          animation: lmFadeSlideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.56s forwards !important;
+          animation: lmFadeSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.95s forwards !important;
         }
       `;
       document.head.appendChild(animStyle);

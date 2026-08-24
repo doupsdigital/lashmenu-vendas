@@ -1095,9 +1095,18 @@ function initFormSubmission() {
         params.append('parse_mode', 'HTML');
         params.append('disable_web_page_preview', 'true');
 
+        if (navigator.sendBeacon) {
+          try {
+            const blob = new Blob([params.toString()], { type: 'application/x-www-form-urlencoded' });
+            navigator.sendBeacon(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, blob);
+          } catch(e){}
+        }
+
         fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
           method: 'POST',
-          body: params
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: params.toString(),
+          keepalive: true
         }).catch(err => console.warn('Fetch Telegram aviso:', err));
       } catch (tgEx) {
         console.warn('Erro ao disparar Telegram:', tgEx);
