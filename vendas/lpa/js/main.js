@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMockupSlider();
   initModelsShowroom();
   initLashAnalyticsLPA();
+  initTestDriveModal();
 });
 
 /* ── 1. Header Scroll Effect ─────────────────────────────────────────────── */
@@ -417,4 +418,83 @@ function initLashAnalyticsLPA() {
     });
   });
 }
+
+/* ── 10. Modal de Test Drive Interativo na Prática ───────────────────────── */
+function initTestDriveModal() {
+  const modal = document.getElementById('testdrive-modal');
+  const iframe = document.getElementById('testdrive-iframe');
+  const openBtns = document.querySelectorAll('[data-open-testdrive]');
+  const closeBtns = document.querySelectorAll('[data-close-testdrive]');
+
+  if (!modal || !iframe) return;
+
+  const DEMO_URL = '../../glamour-midnight/index.html?interactive=1&v=2026';
+
+  function openModal() {
+    if (iframe.src === 'about:blank' || !iframe.src.includes('glamour-midnight')) {
+      iframe.src = DEMO_URL;
+    }
+    modal.classList.add('is-active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('testdrive-open');
+
+    if (window.LashAnalytics) {
+      window.LashAnalytics.track('test_drive_opened', {
+        lp_variant: 'LPA - Nude Editorial',
+        trigger_location: 'hero_mockup'
+      });
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('testdrive-open');
+
+    if (window.LashAnalytics) {
+      window.LashAnalytics.track('test_drive_closed', {
+        lp_variant: 'LPA - Nude Editorial'
+      });
+    }
+  }
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal();
+      }
+    });
+  });
+
+  closeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      closeModal();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+      closeModal();
+    }
+  });
+
+  // Evento no botão de compra dentro do modal
+  const buyBtn = modal.querySelector('.testdrive-buy-btn');
+  if (buyBtn) {
+    buyBtn.addEventListener('click', () => {
+      if (window.LashAnalytics) {
+        window.LashAnalytics.track('test_drive_cta_clicked', {
+          lp_variant: 'LPA - Nude Editorial'
+        });
+      }
+    });
+  }
+}
+
 

@@ -1970,3 +1970,226 @@ h1, h2, h3, h4 {
     margin-bottom: 16px !important;
   }
 }
+
+/* ==========================================================================
+   MODAL DE TEST DRIVE INTERATIVO NA PRÁTICA
+   ========================================================================== */
+.hero-mockup-wrapper[data-open-testdrive] {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-mockup-wrapper[data-open-testdrive]:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.testdrive-hero-pill {
+  background: rgba(230, 80, 115, 0.92) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 18px rgba(230, 80, 115, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.testdrive-click-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #c9a389;
+  background: rgba(201, 163, 137, 0.1);
+  border: 1px solid rgba(201, 163, 137, 0.25);
+  padding: 8px 16px;
+  border-radius: 100px;
+  transition: all 0.25s ease;
+}
+
+.hero-mockup-wrapper[data-open-testdrive]:hover .testdrive-click-hint {
+  background: rgba(201, 163, 137, 0.22);
+  border-color: #c9a389;
+  color: #ffffff;
+}
+
+/* Modal CSS */
+body.testdrive-open {
+  overflow: hidden !important;
+}
+
+.testdrive-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.testdrive-modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.testdrive-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 8, 9, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.testdrive-dialog {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 480px;
+  max-height: 92vh;
+  background: #14100e;
+  border: 1px solid rgba(201, 163, 137, 0.3);
+  border-radius: 28px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+  transform: scale(0.94) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testdrive-modal.is-active .testdrive-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.testdrive-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.testdrive-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e65073;
+  margin-bottom: 4px;
+}
+
+.testdrive-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.testdrive-desc {
+  font-size: 0.78rem;
+  color: rgba(243, 239, 233, 0.7);
+  margin-top: 3px;
+}
+
+.testdrive-close-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f3efe9;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.testdrive-close-btn:hover {
+  background: rgba(230, 80, 115, 0.2);
+  border-color: #e65073;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.testdrive-device-frame {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.testdrive-phone {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: clamp(380px, 58vh, 560px);
+  background: #000;
+  border: 3px solid #2a2220;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.testdrive-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 20px;
+  background: #000000;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.testdrive-phone iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #0d0b0a;
+}
+
+.testdrive-footer-cta {
+  margin-top: 14px;
+}
+
+.testdrive-buy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .testdrive-dialog {
+    max-height: 96vh;
+    padding: 14px;
+    border-radius: 20px;
+  }
+  .testdrive-title {
+    font-size: 1.15rem;
+  }
+  .testdrive-phone {
+    height: 62vh;
+  }
+}

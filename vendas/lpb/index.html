@@ -122,8 +122,8 @@
             </div>
           </div>
 
-          <!-- Right — Phone Mockup (Produto Real Glamour-Midnight com Vídeo e Telas Oficiais) -->
-          <div class="hero-mockup-wrapper hero-animate-mockup">
+          <!-- Right — Phone Mockup Interativo (Test Drive na Prática) -->
+          <div class="hero-mockup-wrapper hero-animate-mockup" data-open-testdrive role="button" tabindex="0" title="Clique para testar na prática">
             <div class="phone-mockup">
               <div class="phone-notch"></div>
 
@@ -138,11 +138,16 @@
                 </div>
 
                 <!-- Overlay Pill -->
-                <div class="phone-overlay-badge">
+                <div class="phone-overlay-badge testdrive-hero-pill">
                   <span class="dot-pulse"></span>
-                  <span id="preview-screen-name">Catálogo ao vivo</span>
+                  <span id="preview-screen-name">✨ Clique p/ Testar na Prática</span>
                 </div>
               </div>
+            </div>
+
+            <div class="testdrive-click-hint">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              Toque no celular para testar na prática
             </div>
           </div>
 
@@ -750,7 +755,39 @@
       </div>
     </section>
 
-  </main>
+  <!-- MODAL DE TEST DRIVE INTERATIVO NA PRÁTICA -->
+  <div id="testdrive-modal" class="testdrive-modal" aria-hidden="true" role="dialog" aria-label="Test Drive do LashMenu">
+    <div class="testdrive-backdrop" data-close-testdrive></div>
+    
+    <div class="testdrive-dialog">
+      <div class="testdrive-header">
+        <div class="testdrive-title-area">
+          <span class="testdrive-badge">🧪 Test Drive na Prática</span>
+          <h3 class="testdrive-title">Experimente como sua cliente usará seu catálogo</h3>
+          <p class="testdrive-desc">Role a página, clique nos procedimentos e veja os detalhes.</p>
+        </div>
+        <button type="button" class="testdrive-close-btn" data-close-testdrive aria-label="Fechar prévia">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="testdrive-device-frame">
+        <div class="testdrive-phone">
+          <div class="testdrive-notch"></div>
+          <iframe id="testdrive-iframe" src="about:blank" title="Catálogo ao vivo interativo" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="testdrive-footer-cta">
+        <a href="#pacotes" class="btn btn--primary btn--full testdrive-buy-btn" data-close-testdrive>
+          <span>Garantir Meu LashMenu Agora →</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-mobile-cta">
