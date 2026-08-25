@@ -873,23 +873,18 @@
   <script src="js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var btnEssencial = document.getElementById('cta-essencial');
-      var btnCustom = document.getElementById('cta-custom');
-      
-      if (btnEssencial) {
-        btnEssencial.addEventListener('click', function() {
+      // Disparar InitiateCheckout ao clicar em QUALQUER link da Cakto
+      document.querySelectorAll('a[href*="cakto.com.br"]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
           if (typeof fbq === 'function') {
-            fbq('track', 'InitiateCheckout', { content_name: 'LashMenu Essencial', value: 197.00, currency: 'BRL' });
+            fbq('track', 'InitiateCheckout', {
+              content_name: 'LashMenu Completo',
+              value: 197.00,
+              currency: 'BRL'
+            });
           }
         });
-      }
-      if (btnCustom) {
-        btnCustom.addEventListener('click', function() {
-          if (typeof fbq === 'function') {
-            fbq('track', 'InitiateCheckout', { content_name: 'LashMenu Custom', value: 297.00, currency: 'BRL' });
-          }
-        });
-      }
+      });
     });
   </script>
 </body>
