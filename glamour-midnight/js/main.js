@@ -496,4 +496,42 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+/* ---------- Interceptador de Botões de Conversão no Modo Test Drive ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const isTestDrive = window.location.search.includes('interactive=1') || window.location.search.includes('preview') || window.self !== window.top;
+  if (!isTestDrive) return;
+
+  let toast = document.querySelector('.testdrive-demo-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'testdrive-demo-toast';
+    toast.innerHTML = `
+      <span class="toast-icon">💡</span>
+      <div class="toast-text">
+        <strong>No seu LashMenu oficial:</strong><br>
+        Ao clicar aqui, sua cliente é direcionada direto para o SEU WhatsApp!
+      </div>
+    `;
+    document.body.appendChild(toast);
+  }
+
+  let toastTimer = null;
+  function showToast() {
+    toast.classList.add('is-visible');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('is-visible');
+    }, 3800);
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.detalhe-procedimento__cta, .btn-whatsapp, .btn-instagram, a[href*="wa.me"], a[href*="whatsapp"], button[data-wsp]');
+    if (btn) {
+      e.preventDefault();
+      e.stopPropagation();
+      showToast();
+    }
+  }, true);
+});
+
 
