@@ -1855,3 +1855,177 @@ body.testdrive-open {
     border: 3.5px solid #1f1715;
   }
 }
+
+/* ==========================================================================
+   SEÇÃO PERSUASIVA WHATSAPP DE SEGURANÇA & PRÉVIA GRATUITA (LPA)
+   ========================================================================== */
+.whatsapp-safety-section {
+  padding: clamp(35px, 5vw, 65px) 0;
+  position: relative;
+  z-index: 5;
+}
+
+.whatsapp-safety-card {
+  background: linear-gradient(135deg, #16120e 0%, #0e0a07 100%);
+  border: 1.5px solid rgba(37, 211, 102, 0.45);
+  border-radius: 28px;
+  padding: clamp(28px, 4vw, 45px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 35px rgba(37, 211, 102, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-safety-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(37, 211, 102, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.whatsapp-safety-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #09140c;
+  border: 1px solid rgba(37, 211, 102, 0.55);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #25d366;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.pulse-dot-green {
+  width: 8px;
+  height: 8px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #25d366;
+  animation: testdrivePulseGreen 1.8s infinite;
+}
+
+@keyframes testdrivePulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-safety-header {
+  max-width: 680px;
+}
+
+.whatsapp-safety-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-safety-text {
+  font-family: 'Jost', system-ui, -apple-system, sans-serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.whatsapp-safety-text strong {
+  color: #25d366;
+  font-weight: 700;
+}
+
+.whatsapp-safety-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 24px;
+  margin: 6px 0;
+}
+
+.ws-benefit-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #f3efe9;
+}
+
+.ws-benefit-item .ws-icon {
+  font-size: 1rem;
+}
+
+.btn--whatsapp-safety {
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+  color: #ffffff !important;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 18px 36px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn--whatsapp-safety:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 45px rgba(37, 211, 102, 0.65);
+  background: linear-gradient(135deg, #28e16f 0%, #20b859 100%);
+}
+
+.btn--whatsapp-safety .btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.btn--whatsapp-safety:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-safety-card {
+    padding: 26px 18px;
+    gap: 18px;
+  }
+  .whatsapp-safety-benefits {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .ws-benefit-item {
+    justify-content: center;
+  }
+  .btn--whatsapp-safety {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 0.88rem;
+  }
+}
