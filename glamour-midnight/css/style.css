@@ -209,99 +209,106 @@ img, video { display: block; max-width: 100%; }
 .procedimentos__conteudo {
   position: relative;
   z-index: 3;
-  height: 100dvh;
+  min-height: 100dvh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 44px 0 44px;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 36px 0 44px;
 }
 .procedimentos__corpo {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 .procedimentos__frase {
   margin: 0;
-  padding: 0 26px;
+  padding: 0 20px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.15;
   font-weight: 300;
 }
 .procedimentos__frase em { font-style: italic; }
 .procedimentos__dica {
-  margin: -4px 0 0;
-  padding: 0 26px;
-  font-size: 12px;
+  margin: -6px 0 0;
+  padding: 0 20px;
+  font-size: 11.5px;
   font-style: italic;
-  opacity: .55;
+  opacity: .6;
 }
+
+/* ---------- Mosaico Grid (2 Colunas) ---------- */
 .procedimentos__lista {
-  display: flex;
-  gap: 14px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0 9% 8px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 18px;
+  width: 100%;
 }
-.procedimentos__lista::-webkit-scrollbar { display: none; }
 .card-procedimento {
   margin: 0;
-  flex: 0 0 82%;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+  flex: none;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 .card-procedimento__foto-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 5.0;
-  max-height: 600px;
+  aspect-ratio: 3 / 4;
+  max-height: none;
   overflow: hidden;
   background: #1d1917;
-  border-radius: 3px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
 }
 .card-procedimento__foto {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(.75) brightness(.92);
+  filter: saturate(.8) brightness(.92);
+  transition: transform 0.4s ease;
+}
+.card-procedimento:hover .card-procedimento__foto {
+  transform: scale(1.05);
 }
 .card-procedimento__foto--hibrido {
   object-position: 50% 42%;
-  filter: saturate(.45) brightness(.88);
+  filter: saturate(.55) brightness(.88);
 }
 .card-procedimento__nome {
   position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 16px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
+  font-size: 17.5px;
   font-style: italic;
   line-height: 1.08;
-  text-shadow: 0 2px 20px rgba(0,0,0,.85);
+  text-shadow: 0 2px 14px rgba(0,0,0,.95);
+  margin: 0;
 }
 .card-procedimento__info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 2px;
+  padding: 0 2px;
 }
 .card-procedimento__preco {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 16.5px;
+  font-weight: 600;
   letter-spacing: .01em;
   color: #e3c39f;
 }
 .card-procedimento__meta {
   margin: 0;
-  font-size: 12.5px;
-  letter-spacing: .12em;
+  font-size: 10px;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  opacity: .5;
+  opacity: .6;
 }
 
 /* ---------- Manutenção (sub-bloco dentro de Cuidados) ---------- */
