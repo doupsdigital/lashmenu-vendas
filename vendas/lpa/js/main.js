@@ -443,6 +443,12 @@ function initTestDriveModal() {
 
   window.addEventListener('resize', updateIframeScale);
 
+  function preventTouchScroll(e) {
+    if (!e.target.closest('#testdrive-iframe')) {
+      e.preventDefault();
+    }
+  }
+
   function openModal() {
     if (iframe.src === 'about:blank' || !iframe.src.includes('glamour-midnight')) {
       iframe.src = DEMO_URL;
@@ -450,6 +456,9 @@ function initTestDriveModal() {
     modal.classList.add('is-active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('testdrive-open');
+
+    // Bloqueio rigoroso de touch no fundo da página em dispositivos móveis
+    modal.addEventListener('touchmove', preventTouchScroll, { passive: false });
 
     setTimeout(updateIframeScale, 50);
     setTimeout(updateIframeScale, 300);
@@ -466,11 +475,20 @@ function initTestDriveModal() {
     modal.classList.remove('is-active');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('testdrive-open');
+    modal.removeEventListener('touchmove', preventTouchScroll);
 
     if (window.LashAnalytics) {
       window.LashAnalytics.track('test_drive_closed', {
         lp_variant: 'LPA - Nude Editorial'
       });
+    }
+
+    // Rolagem suave automática para a próxima seção ("A diferença na prática" - #comparativo)
+    const nextSection = document.getElementById('comparativo');
+    if (nextSection) {
+      setTimeout(() => {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
     }
   }
 
