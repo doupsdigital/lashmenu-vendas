@@ -138,5 +138,5 @@ Rastreamento 100% configurado e ativo nas páginas do funil:
 2. **Plano Custom (Fotos Próprias)**: R$ 297,00 (ou 3x de R$ 99,90)  
    👉 Link de Checkout: `https://pay.cakto.com.br/nnaav4y`
 3. **URL de Redirecionamento Pós-Pagamento (Obrigado / Form)**:  
-   👉 `https://lashmenu-vendas.vercel.app/vendas/form/`
+   👉 `https://lashmenu.com/vendas/form/`
 4. **Status**: Links de checkout integrados diretamente aos botões CTA da Landing Page (`vendas/lpb/index.html`).

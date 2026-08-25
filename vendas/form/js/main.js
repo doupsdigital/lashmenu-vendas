@@ -1074,8 +1074,8 @@ function initFormSubmission() {
         const nowStr = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 
         const adminEditorUrl = orderId 
-          ? `https://lashmenu-vendas.vercel.app/admin/editor.html?id=${orderId}`
-          : `https://lashmenu-vendas.vercel.app/admin/`;
+          ? `https://lashmenu.com/admin/editor.html?id=${orderId}`
+          : `https://lashmenu.com/admin/`;
 
         const safeModel = (selectedModel || 'glamour').toString().toUpperCase();
         const safeColor = (selectedColor || 'rose').toString().toUpperCase();
