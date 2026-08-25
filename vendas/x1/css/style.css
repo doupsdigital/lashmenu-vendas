@@ -1,0 +1,337 @@
+/* ==========================================================================
+   LASHMENU — PLAYBOOK DE VENDAS X1 WHATSAPP (DESIGN SYSTEM)
+   ========================================================================== */
+
+:root {
+  --bg: #0d0b0a;
+  --bg-card: #14100e;
+  --bg-card-hover: #1c1714;
+  --accent-gold: #c9a389;
+  --accent-pink: #ff4d73;
+  --whatsapp-green: #25d366;
+  --whatsapp-green-dark: #1da851;
+  --text-main: #ffffff;
+  --text-muted: rgba(243, 239, 233, 0.75);
+  --text-subtle: rgba(243, 239, 233, 0.5);
+  --border: rgba(201, 163, 137, 0.2);
+  --border-active: rgba(37, 211, 102, 0.5);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Jost', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ==========================================================================
+   TOP HEADER & SEARCH BAR
+   ========================================================================== */
+.playbook-header {
+  background: rgba(20, 16, 14, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 0;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.back-link {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.brand-badge {
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid var(--whatsapp-green);
+  color: var(--whatsapp-green);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.header-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.header-title em {
+  color: var(--whatsapp-green);
+  font-style: italic;
+}
+
+/* Search Input */
+.search-box {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.search-input {
+  width: 100%;
+  background: #090706;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px 14px 44px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--whatsapp-green);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+
+/* Category Filter Pills (Horizontal Scroll) */
+.filter-pills {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.filter-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.pill-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.pill-btn.is-active {
+  background: var(--whatsapp-green);
+  border-color: var(--whatsapp-green);
+  color: #000000;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* ==========================================================================
+   SCRIPTS GRID & CARDS
+   ========================================================================== */
+.scripts-section {
+  padding-top: 24px;
+}
+
+.section-counter {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+  margin-bottom: 16px;
+}
+
+.scripts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.script-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.script-card:hover {
+  border-color: rgba(201, 163, 137, 0.4);
+}
+
+.script-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.script-category-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-gold);
+  background: rgba(201, 163, 137, 0.1);
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(201, 163, 137, 0.2);
+}
+
+.script-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+/* Strategy Tip Box */
+.script-strategy-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 4px 8px 8px 4px;
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.45;
+}
+
+.script-strategy-box strong {
+  color: var(--accent-gold);
+}
+
+/* Script Content Box (The Ready Message) */
+.script-content-box {
+  background: #090706;
+  border: 1.5px dashed rgba(201, 163, 137, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #ffffff;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+/* Copy Button */
+.btn-copy {
+  width: 100%;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+  color: #000000 !important;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 12px 18px;
+  border-radius: 100px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-copy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  background: linear-gradient(135deg, #32e073 0%, #20b85b 100%);
+}
+
+.btn-copy:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION (COPIADO COM SUCESSO)
+   ========================================================================== */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #1da851;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 12px 24px;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.toast-notification.is-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-subtle);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
