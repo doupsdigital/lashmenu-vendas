@@ -2461,6 +2461,13 @@ body.testdrive-open {
   font-size: 1rem;
 }
 
+.btn-whatsapp-svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
 .btn--whatsapp-safety {
   background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
   color: #ffffff !important;
@@ -2476,8 +2483,42 @@ body.testdrive-open {
   gap: 10px;
   cursor: pointer;
   box-shadow: 0 12px 35px rgba(37, 211, 102, 0.45);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  animation: ctaWhatsappPulse 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes ctaWhatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65), 0 12px 35px rgba(37, 211, 102, 0.45);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0), 0 16px 45px rgba(37, 211, 102, 0.6);
+    transform: scale(1.025);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 12px 35px rgba(37, 211, 102, 0.45);
+    transform: scale(1);
+  }
+}
+
+/* Animação Pulsante Leve nos Demais Botões Principais da Página */
+.btn--primary,
+.btn--testdrive {
+  animation: ctaGeneralPulse 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes ctaGeneralPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .btn--whatsapp-safety:hover {
