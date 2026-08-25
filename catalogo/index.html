@@ -107,7 +107,8 @@
       font-weight: 700;
       font-size: 0.85rem;
     }
-  </style>
+  <!-- PostHog Analytics Code -->
+  <script src="../vendas/js/posthog-init.js"></script>
 </head>
 
 <body>
@@ -207,6 +208,15 @@
           const services = svcRes.ok ? await svcRes.json() : [];
           sessionStorage.setItem(`lash_cache_${slug}`, JSON.stringify({ order, services }));
         } catch (svcErr) {}
+
+        // Rastrear abertura do catálogo do cliente
+        if (window.LashAnalytics) {
+          window.LashAnalytics.track('catalog_viewed', {
+            slug: slug,
+            model_theme: targetFolder,
+            designer_name: order.designer_name || 'Desconhecida'
+          });
+        }
 
         // Redireciona para o modelo oficial intacto passando o slug
         window.location.replace(`../${targetFolder}/?slug=${encodeURIComponent(slug)}`);

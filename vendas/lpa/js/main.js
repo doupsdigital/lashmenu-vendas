@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initMockupSlider();
   initModelsShowroom();
+  initLashAnalyticsLPA();
 });
 
 /* ── 1. Header Scroll Effect ─────────────────────────────────────────────── */
@@ -336,3 +337,84 @@ function initModelsShowroom() {
     });
   });
 }
+
+/* ── 9. PostHog Analytics & Event Tracking (LPA - Nude Editorial) ─────────── */
+function initLashAnalyticsLPA() {
+  if (!window.LashAnalytics) return;
+
+  const VARIANT = 'LPA - Nude Editorial';
+
+  // Rastrear visualização com variante
+  window.LashAnalytics.track('lp_viewed', { lp_variant: VARIANT });
+
+  // Ativar Rastreamento de Scroll Depth (25%, 50%, 75%, 90%)
+  window.LashAnalytics.initScrollDepthTracking(VARIANT);
+
+  // Rastrear cliques nos CTAs de compra
+  const btnEssencial = document.getElementById('cta-essencial');
+  if (btnEssencial) {
+    btnEssencial.addEventListener('click', () => {
+      window.LashAnalytics.track('InitiateCheckout', {
+        plan: 'essencial',
+        price: 197.00,
+        currency: 'BRL',
+        lp_variant: VARIANT,
+        button_location: 'pricing_card'
+      });
+    });
+  }
+
+  const btnCustom = document.getElementById('cta-custom');
+  if (btnCustom) {
+    btnCustom.addEventListener('click', () => {
+      window.LashAnalytics.track('InitiateCheckout', {
+        plan: 'custom',
+        price: 297.00,
+        currency: 'BRL',
+        lp_variant: VARIANT,
+        button_location: 'pricing_card'
+      });
+    });
+  }
+
+  // CTAs adicionais (Hero, Sticky mobile, etc.)
+  document.querySelectorAll('a[href="#pacotes"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.LashAnalytics.track('cta_click', {
+        cta_label: btn.textContent.trim(),
+        target_section: '#pacotes',
+        lp_variant: VARIANT
+      });
+    });
+  });
+
+  // Interação com FAQ
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const questionBtn = item.querySelector('.faq-question-btn');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        setTimeout(() => {
+          if (item.classList.contains('is-open')) {
+            const questionText = questionBtn.textContent.trim();
+            window.LashAnalytics.track('faq_opened', {
+              question: questionText,
+              lp_variant: VARIANT
+            });
+          }
+        }, 50);
+      });
+    }
+  });
+
+  // Troca de cores / paleta no Showroom
+  document.querySelectorAll('.models-palette-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const color = btn.getAttribute('data-models-color');
+      window.LashAnalytics.track('palette_changed', {
+        selected_color: color,
+        lp_variant: VARIANT
+      });
+    });
+  });
+}
+

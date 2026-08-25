@@ -151,6 +151,7 @@ function initMultiStepNavigation() {
 function goToStep(stepNumber) {
   if (stepNumber < 1 || stepNumber > totalSteps) return;
 
+  const previousStep = currentStep;
   const currentStepEl = document.querySelector(`.form-step[data-step="${currentStep}"]`);
   const targetStepEl = document.querySelector(`.form-step[data-step="${stepNumber}"]`);
 
@@ -161,6 +162,13 @@ function goToStep(stepNumber) {
 
     updateProgressBar(currentStep);
     updateSummaryTags();
+
+    if (window.LashAnalytics) {
+      window.LashAnalytics.track('form_step_completed', {
+        from_step: previousStep,
+        to_step: stepNumber
+      });
+    }
 
     // Rola suavemente para o topo absoluto para exibir a barra de passos (1-2-3-4)
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -198,9 +206,15 @@ function validateStep(step) {
       input.style.borderColor = '#dc2626';
       setTimeout(() => {
         input.style.borderColor = '';
-      }, 2500);
+      }, 3000);
     }
   });
+
+  if (!isValid && window.LashAnalytics) {
+    window.LashAnalytics.track('form_validation_error', {
+      step: step
+    });
+  }
 
   return isValid;
 }
@@ -1123,6 +1137,29 @@ function initFormSubmission() {
 
     // Disparo imediato do aviso para o administrador
     sendTelegramNotice(null, slug);
+
+    // Rastrear conversão concluída e identificar usuário no PostHog
+    if (window.LashAnalytics) {
+      window.LashAnalytics.track('form_submitted', {
+        designer_name: designerName,
+        whatsapp: whatsapp,
+        instagram: instagram,
+        selected_model: selectedModel,
+        selected_color: selectedColor,
+        slug: slug,
+        services_count: serviceRowsData.length
+      });
+
+      const userIdentifier = clientEmail || whatsapp || slug;
+      window.LashAnalytics.identify(userIdentifier, {
+        name: designerName,
+        whatsapp: whatsapp,
+        instagram: instagram,
+        slug: slug,
+        model: selectedModel,
+        color: selectedColor
+      });
+    }
 
     // Transição Instantânea da UI em 1.2s para a Tela de Sucesso
     setTimeout(() => {
