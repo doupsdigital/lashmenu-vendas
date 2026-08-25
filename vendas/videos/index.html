@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>LashMenu — Estúdio de Vídeos de Anúncios (Mockup iPhone Realista)</title>
+  <title>LashMenu — Estúdio de Vídeos de Anúncios (Mockup iPhone)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +33,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 20px;
+      padding: 16px;
       overflow-x: hidden;
       transition: background 0.4s ease, color 0.4s ease;
     }
@@ -51,15 +51,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 18px;
+      gap: 12px;
+      margin-bottom: 14px;
       text-align: center;
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .studio-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
       font-weight: 600;
     }
 
@@ -72,7 +72,7 @@
     }
 
     .studio-subtitle {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       opacity: 0.8;
       max-width: 650px;
     }
@@ -82,10 +82,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       background: rgba(0, 0, 0, 0.05);
       border: 1px solid rgba(230, 80, 115, 0.2);
-      padding: 6px;
+      padding: 5px;
       border-radius: 100px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       flex-wrap: wrap;
@@ -101,14 +101,14 @@
       color: inherit;
       opacity: 0.7;
       font-family: inherit;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
-      padding: 10px 20px;
+      padding: 8px 16px;
       border-radius: 100px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       transition: all 0.25s ease;
     }
 
@@ -135,8 +135,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 16px;
       flex-wrap: wrap;
       transition: opacity 0.3s ease;
     }
@@ -146,14 +146,14 @@
       border: 1px solid rgba(0, 0, 0, 0.15);
       color: inherit;
       font-family: inherit;
-      font-size: 0.82rem;
+      font-size: 0.80rem;
       font-weight: 700;
-      padding: 10px 18px;
+      padding: 9px 16px;
       border-radius: 100px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       transition: all 0.2s ease;
     }
@@ -188,9 +188,9 @@
       background: #ffffff;
       color: #1a1412;
       border: 1px solid rgba(0, 0, 0, 0.15);
-      padding: 9px 14px;
+      padding: 8px 12px;
       border-radius: 100px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
       outline: none;
     }
@@ -207,26 +207,26 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px;
+      padding: 0;
       width: 100%;
-      max-width: 480px;
-      height: 840px;
+      height: min(844px, 82vh);
+      max-height: 844px;
     }
 
-    /* EXATO MOCKUP DE IPHONE DO MODAL DE TESTES DA LANDING PAGE (390px SCALER NATIVO) */
+    /* MOCKUP DO IPHONE 16 PRO (ENQUADRAMENTO PERFEITO PROPORCIONAL 390:844 SEM ESPAÇO PRETO SOBRANDO) */
     .testdrive-phone {
       position: relative;
       height: 100%;
-      max-height: 840px;
-      aspect-ratio: 9 / 19.2;
+      max-height: 844px;
+      aspect-ratio: 390 / 844;
       width: auto;
       background: #000000;
-      border: 5px solid #000000; /* Preto puro 100% de iPhone */
-      border-radius: 40px;
+      border: 6px solid #000000;
+      border-radius: 44px;
       overflow: hidden;
-      clip-path: inset(0 round 36px);
-      -webkit-clip-path: inset(0 round 36px);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      clip-path: inset(0 round 38px);
+      -webkit-clip-path: inset(0 round 38px);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
       margin: 0 auto;
     }
 
@@ -235,8 +235,8 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 100px;
-      height: 20px;
+      width: 96px;
+      height: 18px;
       background: #000000;
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
@@ -244,7 +244,7 @@
       pointer-events: none;
     }
 
-    /* Scaler container idêntico ao modal de testes que força resolução nativa de 390px sem quebrar fontes ou layouts */
+    /* Scaler container com scale(x, y) proporcional perfeito */
     .testdrive-screen-scaler {
       position: absolute;
       top: 0;
@@ -267,17 +267,18 @@
       overflow: hidden;
       clip-path: inset(0 round 34px);
       -webkit-clip-path: inset(0 round 34px);
+      display: block;
     }
 
-    /* ── CURSOR DE TOQUE SIMULADO DE ALTA CONVERSÃO ── */
+    /* ── CURSOR DE TOQUE SIMULADO DE ALTA PRECISAO ── */
     #simulated-touch {
       position: absolute;
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
-      background: rgba(230, 80, 115, 0.6);
+      background: rgba(230, 80, 115, 0.65);
       border: 2px solid #ffffff;
-      box-shadow: 0 0 20px rgba(230, 80, 115, 0.9);
+      box-shadow: 0 0 22px rgba(230, 80, 115, 0.95);
       pointer-events: none;
       z-index: 9999;
       transform: translate(-50%, -50%) scale(1);
@@ -290,11 +291,11 @@
     }
 
     #simulated-touch.is-tapping {
-      transform: translate(-50%, -50%) scale(0.7);
+      transform: translate(-50%, -50%) scale(0.68);
       background: rgba(230, 80, 115, 0.95);
     }
 
-    /* ── Modo Gravação Fullscreen ── */
+    /* ── Modo Gravação Fullscreen (BOTAO SAIR FORA DA TELA DO CELULAR) ── */
     body.recording-mode .studio-header,
     body.recording-mode .studio-controls {
       opacity: 0;
@@ -303,18 +304,19 @@
 
     .exit-rec-btn {
       position: fixed;
-      top: 20px;
-      right: 20px;
+      top: 16px;
+      right: 16px;
       background: rgba(0, 0, 0, 0.85);
-      border: 1px solid var(--accent-rose);
+      border: 1.5px solid var(--accent-rose);
       color: #ffffff;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 700;
+      font-size: 0.82rem;
+      font-weight: 800;
       cursor: pointer;
-      z-index: 10000;
+      z-index: 999999;
       display: none;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     }
 
     body.recording-mode .exit-rec-btn {
@@ -330,7 +332,7 @@
   <!-- Header -->
   <div class="studio-header">
     <h1 class="studio-title">Estúdio de <em>Vídeos de Anúncios</em></h1>
-    <p class="studio-subtitle">Simule a experiência real do LashMenu no mockup de iPhone com resolução nativa idêntica ao modal de testes da Landing Page.</p>
+    <p class="studio-subtitle">Simule a experiência real do LashMenu no mockup de iPhone para gravar vídeos de alta conversão.</p>
 
     <!-- Tabs de Modelos -->
     <div class="model-tabs">
@@ -368,10 +370,10 @@
     </select>
   </div>
 
-  <!-- Botão para Sair do Modo Gravação -->
+  <!-- Botão para Sair do Modo Gravação (Posicionado Fora do Celular no Canto da Tela) -->
   <button class="exit-rec-btn" id="btn-exit-rec">❌ Sair do Modo Gravação (ESC)</button>
 
-  <!-- Palco com o Mockup de iPhone -->
+  <!-- Palco com o Mockup de iPhone sem sobra preta em baixo -->
   <div class="studio-stage">
     <div class="testdrive-phone">
       <div class="testdrive-notch"></div>
@@ -385,7 +387,7 @@
     </div>
   </div>
 
-  <!-- Script de Dimensionamento Exato e Animação Automática -->
+  <!-- Script de Dimensionamento Exato e Sequência de Animação Acelerada -->
   <script>
     const iframe = document.getElementById('studio-iframe');
     const touch = document.getElementById('simulated-touch');
@@ -401,7 +403,7 @@
     let animStep = 0;
     let stepTimer = null;
 
-    // SCALER DINÂMICO IDÊNTICO AO MODAL DE TESTES DA LANDING PAGE
+    // SCALER NATIVO PERFEITO (AJUSTA LARGURA E ALTURA SEM DEIXAR SOBA PRETA EM BAIXO)
     function updateIframeScale() {
       const phone = document.querySelector('.testdrive-phone');
       const scaler = document.querySelector('.testdrive-screen-scaler');
@@ -458,7 +460,7 @@
       }
     });
 
-    // ── NAVEGAÇÃO E SCROLL AUTOMÁTICO REAIS DO CATÁLOGO ──
+    // ── FUNÇÕES AUXILIARES DE ROLAGEM E TOQUE ──
     function moveTouch(x, y, duration, callback) {
       touch.classList.add('is-active');
       touch.style.transition = `all ${duration}ms cubic-bezier(0.25, 1, 0.5, 1)`;
@@ -475,7 +477,7 @@
       stepTimer = setTimeout(() => {
         touch.classList.remove('is-tapping');
         if (callback && isRunning) callback();
-      }, 350);
+      }, 300);
     }
 
     function hideTouch() {
@@ -491,16 +493,14 @@
         
         if (sections.length > 0 && sections[index]) {
           sections[index].scrollIntoView({ behavior: 'smooth' });
-        } else if (win.LashMenuApp && typeof win.LashMenuApp.nextSection === 'function') {
-          win.LashMenuApp.nextSection();
         } else {
-          win.scrollBy({ top: 500, behavior: 'smooth' });
+          win.scrollBy({ top: 550, behavior: 'smooth' });
         }
       } catch(e) {}
 
       stepTimer = setTimeout(() => {
         if (callback && isRunning) callback();
-      }, 1600);
+      }, 1000);
     }
 
     function resetCatalogToTop(callback) {
@@ -511,77 +511,119 @@
 
       stepTimer = setTimeout(() => {
         if (callback && isRunning) callback();
-      }, 1200);
+      }, 1000);
     }
 
-    // MÁQUINA DE ESTADOS DA SIMULAÇÃO PERFEITA
+    // ── SEQUÊNCIA DE ANIMAÇÃO ACELERADA E COMPLETA (CONFORME SOLICITADO) ──
     function executeStep() {
       if (!isRunning) return;
 
       switch (animStep) {
         case 0:
-          // Passo 0: Capa do catálogo (Ex: Mariana Alves / Nome centralizado)
+          // 1. Tela Inicial (Capa): Fica 2.0 segundos na capa inicial
           resetCatalogToTop(() => {
-            moveTouch(195, 260, 700, () => {
-              stepTimer = setTimeout(() => {
-                if (isRunning) { animStep = 1; executeStep(); }
-              }, 1000);
-            });
+            hideTouch();
+            stepTimer = setTimeout(() => {
+              if (isRunning) { animStep = 1; executeStep(); }
+            }, 2000); // 2 segundos na capa
           });
           break;
 
         case 1:
-          // Passo 1: Avançar para a vitrine de serviços/procedimentos
+          // 2. Passa para a próxima tela que são os cards de serviços
           scrollCatalogToSection(1, () => {
-            moveTouch(195, 420, 800, () => {
+            // Mover o toque até o primeiro card de serviço (ex: Volume Brasileiro)
+            moveTouch(195, 340, 500, () => {
               tapTouch(() => {
-                // Tenta interagir ou abrir modal do serviço no iframe
+                // CLICA NO CARD PARA ABRIR O MODAL DO SERVIÇO
                 try {
                   const doc = iframe.contentWindow.document;
-                  const btnDetail = doc.querySelector('.procedimento__btn, .service-btn, .procedimentos__card');
-                  if (btnDetail) btnDetail.click();
+                  const card = doc.querySelector('.procedimentos__card, .procedimento__card, [data-open-modal], .service-card');
+                  if (card) card.click();
                 } catch(e){}
 
                 stepTimer = setTimeout(() => {
                   if (isRunning) { animStep = 2; executeStep(); }
-                }, 1400);
+                }, 400);
               });
             });
           });
           break;
 
         case 2:
-          // Passo 2: Avançar para os cuidados ou detalhes do cílio
-          scrollCatalogToSection(2, () => {
-            moveTouch(195, 380, 800, () => {
-              stepTimer = setTimeout(() => {
-                if (isRunning) { animStep = 3; executeStep(); }
-              }, 1200);
-            });
-          });
+          // 3. Fica 1.5 segundos com o modal do serviço aberto mostrando detalhes e fotos
+          hideTouch();
+          stepTimer = setTimeout(() => {
+            if (isRunning) { animStep = 3; executeStep(); }
+          }, 1500); // 1.5 segundos com o modal aberto
           break;
 
         case 3:
-          // Passo 3: Avançar para a tela de agendamento no WhatsApp
-          scrollCatalogToSection(3, () => {
-            moveTouch(195, 580, 800, () => {
-              tapTouch(() => {
-                stepTimer = setTimeout(() => {
-                  if (isRunning) { animStep = 4; executeStep(); }
-                }, 1600);
-              });
+          // 4. Fechar o modal do serviço
+          moveTouch(335, 125, 450, () => {
+            tapTouch(() => {
+              // Clica no botão X ou backdrop para fechar o modal
+              try {
+                const doc = iframe.contentWindow.document;
+                const btnClose = doc.querySelector('#modal-detalhe .modal-detalhe__close, .modal-detalhe__close, .modal-close');
+                if (btnClose) {
+                  btnClose.click();
+                } else {
+                  // Fallback: clica fora do modal
+                  const modal = doc.querySelector('#modal-detalhe, .modal-detalhe');
+                  if (modal) modal.classList.remove('is-active', 'is-open');
+                }
+              } catch(e){}
+
+              stepTimer = setTimeout(() => {
+                if (isRunning) { animStep = 4; executeStep(); }
+              }, 600);
             });
           });
           break;
 
         case 4:
-          // Passo 4: Retornar suavemente ao topo e repetir o ciclo de gravação
+          // 5. Navega mais um pouco pelos cards dos procedimentos
+          try {
+            const win = iframe.contentWindow;
+            win.scrollBy({ top: 220, behavior: 'smooth' });
+          } catch(e){}
+
+          stepTimer = setTimeout(() => {
+            if (isRunning) { animStep = 5; executeStep(); }
+          }, 1100);
+          break;
+
+        case 5:
+          // 6. Navega pelas próximas 2 telas do catálogo (Cuidados + Agendamento WhatsApp)
+          scrollCatalogToSection(2, () => {
+            stepTimer = setTimeout(() => {
+              if (isRunning) { animStep = 6; executeStep(); }
+            }, 1200);
+          });
+          break;
+
+        case 6:
+          // Tela de Agendamento WhatsApp + Toque no botão
+          scrollCatalogToSection(3, () => {
+            moveTouch(195, 620, 600, () => {
+              tapTouch(() => {
+                stepTimer = setTimeout(() => {
+                  if (isRunning) { animStep = 7; executeStep(); }
+                }, 1200);
+              });
+            });
+          });
+          break;
+
+        case 7:
+          // Retorno ao topo para reiniciar a gravação
           hideTouch();
           resetCatalogToTop(() => {
             animStep = 0;
             stepTimer = setTimeout(() => {
               if (isRunning) executeStep();
-            }, 1800);
+            }, 1500);
           });
           break;
       }
