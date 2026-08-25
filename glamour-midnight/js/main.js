@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isRunning) return;
     const currentSection = sections[currentIdx];
     const isHero = currentSection && currentSection.classList.contains('hero');
-    const delay = isHero ? 6000 : 4500;
+    const delay = isHero ? 2800 : 2400;
 
     timerId = setTimeout(() => {
       if (!isRunning) return;
