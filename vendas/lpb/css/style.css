@@ -2894,3 +2894,87 @@ body.testdrive-open {
     font-size: 0.88rem;
   }
 }
+
+/* ==========================================================================
+   MINI CARDS DE DEPOIMENTO NO MARQUEE SLIDANTE (LPB)
+   ========================================================================== */
+.marquee-review-card {
+  width: 290px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1.5px solid rgba(230, 80, 115, 0.18);
+  border-radius: 20px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marquee-review-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(230, 80, 115, 0.15);
+}
+
+.mrc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mrc-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(230, 80, 115, 0.25);
+}
+
+.mrc-user {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.mrc-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #1f1417;
+  line-height: 1.1;
+}
+
+.mrc-stars {
+  color: #ffb800;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+
+.mrc-quote {
+  font-size: 0.83rem;
+  line-height: 1.45;
+  color: #4a3e44;
+  margin: 0;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .marquee-review-card {
+    width: 250px;
+    padding: 14px 15px;
+    border-radius: 16px;
+  }
+  .mrc-avatar {
+    width: 34px;
+    height: 34px;
+  }
+  .mrc-name {
+    font-size: 0.82rem;
+  }
+  .mrc-quote {
+    font-size: 0.78rem;
+  }
+}
