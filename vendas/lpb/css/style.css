@@ -1981,15 +1981,15 @@ h1, h2, h3, h4 {
 }
 
 .testdrive-banner-card {
-  background: linear-gradient(135deg, rgba(28, 18, 23, 0.96), rgba(16, 10, 13, 0.98));
-  border: 1.5px solid rgba(230, 80, 115, 0.45);
+  background: linear-gradient(135deg, #e65073 0%, #a82e4b 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
   border-radius: 28px;
   padding: clamp(24px, 4vw, 40px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 35px rgba(230, 80, 115, 0.15);
+  box-shadow: 0 20px 60px rgba(230, 80, 115, 0.35), 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -1999,9 +1999,9 @@ h1, h2, h3, h4 {
   position: absolute;
   top: -50%;
   left: -20%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(230, 80, 115, 0.22) 0%, transparent 70%);
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -2014,46 +2014,46 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(230, 80, 115, 0.12);
-  border: 1px solid rgba(230, 80, 115, 0.35);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 6px 14px;
   border-radius: 100px;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #e65073;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background: #e65073;
+  background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 10px #e65073;
+  box-shadow: 0 0 10px #ffffff;
   animation: testdrivePulse 1.8s infinite;
 }
 
 @keyframes testdrivePulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(230, 80, 115, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(230, 80, 115, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(230, 80, 115, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 }
 
 .testdrive-banner-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .testdrive-banner-text {
   font-size: clamp(0.88rem, 1.5vw, 0.98rem);
-  color: #f3efe9;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1.55;
 }
 
@@ -2062,28 +2062,29 @@ h1, h2, h3, h4 {
 }
 
 .btn--testdrive {
-  background: linear-gradient(135deg, #e65073 0%, #c93b5d 100%);
-  color: #ffffff !important;
+  background: linear-gradient(135deg, #FAF6F0 0%, #F3ECE4 100%);
+  color: #1f1417 !important;
   font-size: clamp(0.88rem, 1.5vw, 0.98rem);
   font-weight: 800;
   letter-spacing: 0.04em;
   padding: 16px 32px;
   border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(230, 80, 115, 0.45);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28), 0 0 20px rgba(255, 255, 255, 0.3);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
 
 .btn--testdrive:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 14px 40px rgba(230, 80, 115, 0.6);
-  border-color: #ffffff;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.38);
+  background: #ffffff;
+  color: #e65073 !important;
 }
 
 .btn--testdrive .btn-icon {
