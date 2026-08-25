@@ -9,7 +9,7 @@
  */
 
 (function() {
-  const POSTHOG_API_KEY = window.POSTHOG_API_KEY || 'phc_quN9tH5AsE9pdf9WqMTYa9rxvrytiUC7ofTBsy9YSgX9';
+  const POSTHOG_API_KEY = window.POSTHOG_API_KEY || 'phc_kWcTT6VVMNQdU2gfvkcVzaYsPXWGYmBn6nsiMd6PKP7c';
   const POSTHOG_HOST = window.POSTHOG_HOST || 'https://us.i.posthog.com';
 
   // Snippet oficial assíncrono e resiliente do PostHog
