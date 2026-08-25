@@ -1221,105 +1221,235 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   ESTILOS DE OFERTA ÚNICA DA SEÇÃO DE PREÇO (SINGLE HERO OFFER)
+   REFORMULAÇÃO TOTAL UI/UX — HERO SINGLE OFFER CARD (LPB)
    ========================================================================== */
 .pricing-single-wrapper {
-  max-width: 650px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
-.pricing-single-wrapper .pricing-card--featured {
-  width: 100%;
+.pricing-hero-card {
+  background: linear-gradient(135deg, #1c1216 0%, #100a0d 100%);
+  border: 1.5px solid rgba(230, 80, 115, 0.5);
+  border-radius: 28px;
+  padding: clamp(28px, 5vw, 48px) clamp(20px, 4vw, 40px);
+  position: relative;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 40px rgba(230, 80, 115, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: clamp(32px, 5vw, 48px) clamp(24px, 4vw, 42px);
   gap: 20px;
+  overflow: hidden;
 }
 
-.pricing-header-single {
+.pricing-hero-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(230, 80, 115, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pricing-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #0f080b;
+  border: 1.5px solid #ff4d73;
+  color: #ff4d73;
+  font-size: clamp(0.68rem, 1.4vw, 0.78rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 18px;
+  border-radius: 100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 4px;
+}
+
+.pricing-hero-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
 }
 
-.pricing-old-price {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.55);
-  text-decoration: line-through;
-  font-weight: 600;
-  margin-bottom: 2px;
+.pricing-hero-tag {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ff4d73;
 }
 
-.pricing-promo-main {
+.pricing-hero-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-hero-price-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  margin: 6px 0;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 24px;
+  border-radius: 20px;
+  width: 100%;
+  margin: 4px 0;
 }
 
-.pricing-promo-label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.8);
+.pricing-hero-old-price {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
   font-weight: 600;
 }
 
-.pricing-installment-highlight {
-  font-size: clamp(2.1rem, 4.5vw, 2.8rem);
-  font-weight: 800;
+.pricing-hero-installment {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 900;
   color: #ffffff;
-  line-height: 1.1;
-  text-shadow: 0 4px 15px rgba(230, 80, 115, 0.4);
+  line-height: 1.05;
+  text-shadow: 0 0 25px rgba(230, 80, 115, 0.5);
 }
 
-.pricing-anchor-box {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px dashed rgba(255, 255, 255, 0.3);
+.pricing-hero-installment span {
+  color: #ff4d73;
+}
+
+.pricing-hero-cash {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.pricing-hero-anchor-box {
+  background: rgba(255, 77, 115, 0.08);
+  border: 1px dashed rgba(255, 77, 115, 0.4);
   border-radius: 16px;
-  padding: 14px 18px;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-align: left;
-  margin: 8px 0 12px;
+  width: 100%;
 }
 
-.pricing-anchor-box .anchor-icon {
-  font-size: 1.4rem;
+.pricing-hero-anchor-box .anchor-icon {
+  font-size: 1.5rem;
   flex-shrink: 0;
 }
 
-.pricing-anchor-box .anchor-text {
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: #f3efe9;
+.pricing-hero-anchor-box .anchor-text {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #ffffff !important;
   margin: 0;
 }
 
-.pricing-anchor-box .anchor-text strong {
-  color: #ffffff;
+.pricing-hero-anchor-box .anchor-text strong {
+  color: #ff4d73 !important;
+  font-weight: 700;
 }
 
-.pricing-single-wrapper .pricing-features {
+/* Lista de Benefícios Perfeitamente Alinhada */
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
   text-align: left;
-  margin: 10px 0 16px;
 }
 
-.pricing-footer-trust {
+.pf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.pf-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e65073 0%, #c93b5d 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-top: 1px;
+  box-shadow: 0 3px 10px rgba(230, 80, 115, 0.4);
+}
+
+.pf-text {
+  flex: 1;
+}
+
+.pf-text strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.btn--pricing-hero {
+  width: 100%;
+  background: linear-gradient(135deg, #e65073 0%, #c93b5d 100%);
+  color: #ffffff !important;
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 18px 28px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 14px 40px rgba(230, 80, 115, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  animation: ctaPrimaryPulse 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.btn--pricing-hero:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 50px rgba(230, 80, 115, 0.7);
+  background: linear-gradient(135deg, #ff5980 0%, #d84266 100%);
+}
+
+.pricing-hero-trust {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 12px 18px;
-  margin-top: 10px;
+  gap: 12px 20px;
+  margin-top: 4px;
 }
 
-.trust-pill {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 600;
+.pricing-hero-trust .trust-pill {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
 }
 
 /* ==========================================================================
