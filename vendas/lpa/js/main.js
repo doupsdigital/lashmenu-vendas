@@ -430,6 +430,19 @@ function initTestDriveModal() {
 
   const DEMO_URL = '../../glamour-midnight/index.html?interactive=1&v=2026';
 
+  function updateIframeScale() {
+    const phone = modal.querySelector('.testdrive-phone');
+    const scaler = modal.querySelector('.testdrive-screen-scaler');
+    if (!phone || !scaler) return;
+    const phoneWidth = phone.clientWidth;
+    if (phoneWidth > 0) {
+      const scale = phoneWidth / 390;
+      scaler.style.transform = `scale(${scale})`;
+    }
+  }
+
+  window.addEventListener('resize', updateIframeScale);
+
   function openModal() {
     if (iframe.src === 'about:blank' || !iframe.src.includes('glamour-midnight')) {
       iframe.src = DEMO_URL;
@@ -437,6 +450,9 @@ function initTestDriveModal() {
     modal.classList.add('is-active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('testdrive-open');
+
+    setTimeout(updateIframeScale, 50);
+    setTimeout(updateIframeScale, 300);
 
     if (window.LashAnalytics) {
       window.LashAnalytics.track('test_drive_opened', {
