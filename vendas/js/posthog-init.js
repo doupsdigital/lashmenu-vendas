@@ -22,11 +22,10 @@
   if (POSTHOG_API_KEY && POSTHOG_API_KEY !== 'YOUR_POSTHOG_API_KEY') {
     posthog.init(POSTHOG_API_KEY, {
       api_host: POSTHOG_HOST,
-      person_profiles: 'identified_only',
+      person_profiles: 'always',
       autocapture: true,
       capture_pageview: true,
-      capture_pageleave: true,
-      enable_recording_console_log: false
+      capture_pageleave: true
     });
 
     // Registra a propriedade 'product: lashmenu' em TODOS os eventos e sessões automaticamente
