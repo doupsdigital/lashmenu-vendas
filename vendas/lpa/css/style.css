@@ -1492,41 +1492,65 @@ h1, h2, h3, h4 {
    ========================================================================== */
 .hero-mockup-wrapper[data-open-testdrive] {
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-mockup-wrapper[data-open-testdrive]:hover {
-  transform: translateY(-4px) scale(1.01);
+  transform: translateY(-5px) scale(1.015);
 }
 
-.testdrive-hero-pill {
-  background: rgba(212, 175, 120, 0.92) !important;
-  color: #120e0c !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.02em;
-  box-shadow: 0 4px 18px rgba(212, 175, 120, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.testdrive-click-hint {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 14px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #d4af78;
-  background: rgba(212, 175, 120, 0.1);
-  border: 1px solid rgba(212, 175, 120, 0.25);
-  padding: 8px 16px;
+/* Glassmorphism Floating Trigger inside Phone Screen */
+.testdrive-hero-trigger {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 36px);
+  max-width: 280px;
+  padding: 12px 18px;
+  background: rgba(18, 13, 15, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 120, 0.5);
   border-radius: 100px;
-  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 120, 0.25);
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.hero-mockup-wrapper[data-open-testdrive]:hover .testdrive-click-hint {
-  background: rgba(212, 175, 120, 0.22);
-  border-color: #d4af78;
+.hero-mockup-wrapper[data-open-testdrive]:hover .testdrive-hero-trigger {
+  background: rgba(212, 175, 120, 0.95);
+  border-color: #ffffff;
+  box-shadow: 0 14px 35px rgba(212, 175, 120, 0.5), 0 0 25px rgba(212, 175, 120, 0.6);
+}
+
+.trigger-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.trigger-text {
+  font-size: 0.82rem;
+  font-weight: 700;
   color: #ffffff;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.trigger-arrow {
+  font-size: 0.95rem;
+  color: #d4af78;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hero-mockup-wrapper[data-open-testdrive]:hover .trigger-arrow {
+  color: #120e0c;
+  transform: translateX(3px);
 }
 
 /* Modal CSS */
@@ -1544,7 +1568,7 @@ body.testdrive-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 12px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -1558,24 +1582,24 @@ body.testdrive-open {
 .testdrive-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(10, 8, 9, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(8, 6, 7, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .testdrive-dialog {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 480px;
-  max-height: 92vh;
+  max-width: 440px;
+  max-height: 94vh;
   background: #14100e;
   border: 1px solid rgba(212, 175, 120, 0.3);
   border-radius: 28px;
-  padding: 20px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9);
   transform: scale(0.94) translateY(10px);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1589,31 +1613,31 @@ body.testdrive-open {
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .testdrive-badge {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #d4af78;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .testdrive-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #ffffff;
   line-height: 1.2;
 }
 
 .testdrive-desc {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: rgba(243, 239, 233, 0.7);
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .testdrive-close-btn {
@@ -1632,7 +1656,7 @@ body.testdrive-open {
 }
 
 .testdrive-close-btn:hover {
-  background: rgba(212, 175, 120, 0.2);
+  background: rgba(212, 175, 120, 0.25);
   border-color: #d4af78;
   color: #ffffff;
   transform: rotate(90deg);
@@ -1644,19 +1668,21 @@ body.testdrive-open {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
+/* Authentic Smartphone 19.5:9 Aspect Ratio Frame */
 .testdrive-phone {
   position: relative;
-  width: 100%;
-  max-width: 380px;
-  height: clamp(380px, 58vh, 560px);
-  background: #000;
-  border: 3px solid #2a2220;
+  width: min(320px, 84vw);
+  aspect-ratio: 9 / 18.8;
+  max-height: clamp(380px, 62vh, 560px);
+  background: #0d0b0a;
+  border: 4px solid #2a2220;
   border-radius: 36px;
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
 }
 
 .testdrive-notch {
@@ -1664,8 +1690,8 @@ body.testdrive-open {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 110px;
-  height: 20px;
+  width: 95px;
+  height: 18px;
   background: #000000;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -1681,7 +1707,7 @@ body.testdrive-open {
 }
 
 .testdrive-footer-cta {
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
 .testdrive-buy-btn {
@@ -1690,22 +1716,29 @@ body.testdrive-open {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 14px 20px;
+  padding: 13px 20px;
   border-radius: 100px;
   font-weight: 700;
+  font-size: 0.92rem;
   text-decoration: none;
 }
 
 @media (max-width: 480px) {
   .testdrive-dialog {
     max-height: 96vh;
-    padding: 14px;
-    border-radius: 20px;
+    padding: 14px 12px;
+    border-radius: 22px;
   }
   .testdrive-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
   .testdrive-phone {
-    height: 62vh;
+    width: min(300px, 86vw);
+    aspect-ratio: 9 / 18.8;
+    max-height: 60vh;
+  }
+  .testdrive-buy-btn {
+    padding: 12px 16px;
+    font-size: 0.85rem;
   }
 }
