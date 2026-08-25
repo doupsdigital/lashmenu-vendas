@@ -199,15 +199,14 @@
       justify-content: center;
       padding: 0;
       width: 100%;
-      height: min(844px, 84vh);
     }
 
-    /* MOCKUP DO IPHONE PRETO REAL — ENQUADRAMENTO E PREENCHIMENTO 100% NATIVO SEM SOBRA EM BAIXO */
+    /* MOCKUP DO IPHONE NATIVO DE 390px COM SCALER MATEMÁTICO PERFEITO (ZERO TEXTOS QUEBRADOS E ZERO BARRAS PRETAS) */
     .testdrive-phone {
       position: relative;
-      height: 100%;
-      aspect-ratio: 390 / 844;
-      width: auto;
+      width: 390px;
+      max-width: 90vw;
+      height: 844px;
       background: #000000;
       border: 5px solid #000000;
       border-radius: 46px;
@@ -216,6 +215,7 @@
       -webkit-clip-path: inset(0 round 40px);
       box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
       margin: 0 auto;
+      transform-origin: top center;
     }
 
     .testdrive-notch {
@@ -232,27 +232,33 @@
       pointer-events: none;
     }
 
-    /* Scaler container preenchendo 100% a área do iPhone sem sobramar barras pretas */
+    /* Scaler container forçado a 390px x 844px nativo com transform: scale(...) */
     .testdrive-screen-scaler {
       position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 40px;
+      top: 0;
+      left: 0;
+      width: 390px;
+      height: 844px;
+      transform-origin: top left;
+      border-radius: 34px;
       overflow: hidden;
-      clip-path: inset(0 round 40px);
-      -webkit-clip-path: inset(0 round 40px);
+      clip-path: inset(0 round 34px);
+      -webkit-clip-path: inset(0 round 34px);
     }
 
     .testdrive-screen-scaler iframe {
-      width: 100% !important;
-      height: 100% !important;
+      width: 390px !important;
+      height: 844px !important;
       border: none;
       display: block;
       background: #0d0b0a;
+      border-radius: 34px;
+      overflow: hidden;
+      clip-path: inset(0 round 34px);
+      -webkit-clip-path: inset(0 round 34px);
     }
 
-    /* ── Modo Gravação Fullscreen (BOTAO SAIR NO TOPO SUPERIOR DIREITO FORA DO CELULAR) ── */
+    /* ── Modo Gravação Fullscreen ── */
     body.recording-mode .studio-header,
     body.recording-mode .studio-controls {
       opacity: 0;
@@ -321,7 +327,7 @@
   <!-- Botão para Sair do Modo Gravação (Fora da Tela do Celular) -->
   <button class="exit-rec-btn" id="btn-exit-rec">❌ Sair do Modo Gravação (ESC)</button>
 
-  <!-- Palco com o Mockup de iPhone Interativo (Sem barra preta em baixo) -->
+  <!-- Palco com o Mockup de iPhone Interativo -->
   <div class="studio-stage">
     <div class="testdrive-phone">
       <div class="testdrive-notch"></div>
@@ -332,13 +338,35 @@
     </div>
   </div>
 
-  <!-- Script Interativo e de Modos -->
+  <!-- Script de Scaler Resolução Nativa 390px x 844px -->
   <script>
     const iframe = document.getElementById('studio-iframe');
     const tabBtns = document.querySelectorAll('.tab-btn');
     const btnRec = document.getElementById('btn-toggle-rec');
     const btnExitRec = document.getElementById('btn-exit-rec');
     const bgSelector = document.getElementById('bg-selector');
+    const phone = document.querySelector('.testdrive-phone');
+    const scaler = document.querySelector('.testdrive-screen-scaler');
+
+    // SCALER NATIVO PERFEITO IDÊNTICO AO MODAL DE TESTES DA LANDING PAGE
+    function updateIframeScale() {
+      if (!phone || !scaler) return;
+      
+      // Largura da tela disponível no celular/desktop do usuário
+      const maxW = Math.min(window.innerWidth * 0.9, 390);
+      const scale = maxW / 390;
+      
+      // Aplica scale nas dimensões reais do iframe para não quebrar tipografias
+      scaler.style.transform = `scale(${scale})`;
+      
+      // Ajusta a altura da moldura externa do celular para bater com a altura exata calculada (SEM BARRA PRETA SOBRANDO)
+      phone.style.width = `${390 * scale}px`;
+      phone.style.height = `${844 * scale}px`;
+    }
+
+    window.addEventListener('resize', updateIframeScale);
+    setTimeout(updateIframeScale, 30);
+    setTimeout(updateIframeScale, 200);
 
     // Seleção de Modelos
     tabBtns.forEach(btn => {
@@ -349,6 +377,7 @@
           btn.classList.add('tab-btn--midnight');
         }
         iframe.src = btn.dataset.url;
+        setTimeout(updateIframeScale, 100);
       });
     });
 
@@ -363,15 +392,18 @@
     // Modo Gravação Fullscreen
     btnRec.addEventListener('click', () => {
       document.body.classList.add('recording-mode');
+      setTimeout(updateIframeScale, 50);
     });
 
     btnExitRec.addEventListener('click', () => {
       document.body.classList.remove('recording-mode');
+      setTimeout(updateIframeScale, 50);
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.body.classList.remove('recording-mode');
+        setTimeout(updateIframeScale, 50);
       }
     });
   </script>
