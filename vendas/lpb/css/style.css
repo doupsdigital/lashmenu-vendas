@@ -2152,16 +2152,16 @@ body.testdrive-open {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 440px;
-  max-height: 95vh;
-  height: 95vh;
+  max-width: 420px;
+  max-height: 88vh;
+  height: auto;
   background: #FAF6F0;
   border: 1.5px solid rgba(201, 163, 137, 0.45);
   border-radius: 28px;
-  padding: 18px 18px 16px;
+  padding: 18px 18px 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 25px 70px rgba(50, 30, 40, 0.16);
+  box-shadow: 0 25px 70px rgba(50, 30, 40, 0.18);
   transform: scale(0.94) translateY(10px);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -2175,7 +2175,7 @@ body.testdrive-open {
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   flex-shrink: 0;
 }
 
@@ -2235,11 +2235,11 @@ body.testdrive-open {
   width: 100%;
 }
 
-/* Authentic Smartphone 19.5:9 Aspect Ratio Frame */
+/* Authentic Smartphone 19.5:9 Aspect Ratio Frame - Slightly more compact & floating */
 .testdrive-phone {
   position: relative;
-  height: 100%;
-  max-height: 100%;
+  height: clamp(340px, 58vh, 540px);
+  max-height: 58vh;
   aspect-ratio: 9 / 19.2;
   width: auto;
   background: #0d0b0a;
@@ -2281,38 +2281,19 @@ body.testdrive-open {
   background: #0d0b0a;
 }
 
-.testdrive-footer-cta {
-  margin-top: 10px;
-  flex-shrink: 0;
-}
-
-.testdrive-buy-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 13px 20px;
-  border-radius: 100px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(230, 80, 115, 0.35);
-}
-
 @media (max-width: 480px) {
   .testdrive-modal {
-    padding: 6px;
+    padding: 16px 12px;
   }
   .testdrive-dialog {
-    max-height: 98vh;
-    height: 98vh;
-    padding: 10px 10px 12px;
-    border-radius: 20px;
-    justify-content: space-between;
+    max-height: 86vh;
+    height: auto;
+    padding: 14px 14px 16px;
+    border-radius: 24px;
+    margin: auto;
   }
   .testdrive-header {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .testdrive-badge {
     font-size: 0.62rem;
@@ -2328,24 +2309,17 @@ body.testdrive-open {
   .testdrive-device-frame {
     flex: 1;
     min-height: 0;
-    padding: 4px 0;
+    padding: 6px 0;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .testdrive-phone {
     width: auto;
-    height: 100%;
-    max-height: 100%;
+    height: clamp(320px, 54vh, 500px);
+    max-height: 54vh;
     aspect-ratio: 9 / 19.2;
-    border-radius: 34px;
+    border-radius: 32px;
     border: 3px solid #1f1715;
-  }
-  .testdrive-footer-cta {
-    margin-top: 6px;
-  }
-  .testdrive-buy-btn {
-    padding: 11px 16px;
-    font-size: 0.85rem;
   }
 }
