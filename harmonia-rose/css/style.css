@@ -39,10 +39,6 @@ button {
   cursor: pointer;
 }
 
-#lashmenu-loader-overlay {
-  display: none !important;
-}
-
 /* ---------- Container Mobile App Container (Snap Wrapper) ---------- */
 .mosaico-app {
   width: 100%;
@@ -81,7 +77,6 @@ button {
   will-change: opacity, transform;
 }
 
-.hero .anim-fade-up,
 .is-visible .anim-fade-up {
   opacity: 1;
   transform: translateY(0);
@@ -95,16 +90,14 @@ button {
 .delay-6 { transition-delay: 0.70s; }
 
 /* Background Photo Subtle Zoom Effect */
-.hero__foto-wrap {
-  transform: scale(1.06);
-}
-
+.hero__foto-wrap,
 .secao-orientacoes__foto-wrap,
 .secao-contato__foto-wrap {
   transition: transform 10s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
 }
 
+.hero.is-visible .hero__foto-wrap,
 .secao-orientacoes.is-visible .secao-orientacoes__foto-wrap,
 .secao-contato.is-visible .secao-contato__foto-wrap {
   transform: scale(1.06);
