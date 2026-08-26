@@ -3136,6 +3136,104 @@ body.testdrive-open {
   }
 }
 
+/* ── CONTAINER INTERATIVO & MÃOZINHA INDICADORA DE SCROLL ── */
+.phone-interactive-container {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.phone-scroll-indicator {
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  transform: translateY(-50%);
+  z-index: 120;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-indicator-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(200, 75, 114, 0.35);
+  box-shadow: 0 8px 24px rgba(200, 75, 114, 0.28), 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: floatHandSwipe 2.4s infinite cubic-bezier(0.45, 0, 0.25, 1);
+}
+
+.scroll-hand-svg {
+  width: 21px;
+  height: 21px;
+  stroke: #c84b72;
+  transform: rotate(180deg);
+}
+
+.scroll-cue-arrow {
+  position: absolute;
+  bottom: -8px;
+  font-size: 11px;
+  font-weight: 900;
+  color: #c84b72;
+  line-height: 1;
+  animation: pulseArrow 1.2s infinite ease-in-out;
+}
+
+@keyframes floatHandSwipe {
+  0% {
+    transform: translateY(-16px);
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(16px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(22px);
+    opacity: 0.15;
+  }
+}
+
+@keyframes pulseArrow {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-scroll-indicator {
+    right: -16px;
+  }
+  .scroll-indicator-bubble {
+    width: 38px;
+    height: 38px;
+  }
+  .scroll-hand-svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 /* Seção Comparativa Refinada (Sem Emojis Duplicados) */
 .comparison-section {
   padding: 60px 0;
