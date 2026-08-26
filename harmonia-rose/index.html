@@ -28,6 +28,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="preload" href="assets/img/Hero.jpg" as="image" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -45,7 +46,7 @@
     <!-- 1. HERO SECTION (PADRÃO UNIFICADO) -->
     <section class="hero" id="hero" data-screen-label="Capa">
       <div class="hero__foto-wrap">
-        <img src="assets/img/Hero.png" alt="Amanda Carvalho Lash Designer" class="hero__foto">
+        <img src="assets/img/Hero.jpg" alt="Amanda Carvalho Lash Designer" class="hero__foto" fetchpriority="high" loading="eager">
       </div>
       <div class="hero__scrim"></div>
       <div class="hero__conteudo">

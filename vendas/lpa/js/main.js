@@ -540,8 +540,6 @@ function initHeroPhoneScaler() {
 
   function updateScale() {
     const isMobile = window.innerWidth <= 480;
-    // No celular: 62% da tela (máximo 245px) para deixar amplas laterais para rolar a landing page
-    // No desktop: 310px
     const targetW = isMobile ? Math.min(window.innerWidth * 0.62, 245) : 310;
     const scale = targetW / 390;
 
@@ -550,10 +548,7 @@ function initHeroPhoneScaler() {
     phone.style.height = `${Math.round(844 * scale)}px`;
   }
 
-  window.addEventListener('resize', updateScale);
-  window.addEventListener('orientationchange', updateScale);
+  window.addEventListener('resize', updateScale, { passive: true });
+  window.addEventListener('orientationchange', updateScale, { passive: true });
   updateScale();
-  setTimeout(updateScale, 30);
-  setTimeout(updateScale, 150);
-  setTimeout(updateScale, 500);
 }

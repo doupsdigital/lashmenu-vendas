@@ -349,33 +349,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=3.0"></script>
-  <script>
-    (function() {
-      function scalePhone() {
-        var phone = document.querySelector('.testdrive-phone');
-        var scaler = document.querySelector('.testdrive-screen-scaler');
-        if (!phone || !scaler) return;
-        var isMobile = window.innerWidth <= 480;
-        var targetW = isMobile ? Math.min(window.innerWidth * 0.62, 245) : 310;
-        var scale = targetW / 390;
-        scaler.style.transform = 'scale(' + scale + ')';
-        scaler.style.transformOrigin = '0 0';
-        phone.style.width = Math.round(390 * scale) + 'px';
-        phone.style.height = Math.round(844 * scale) + 'px';
-      }
-      window.addEventListener('resize', scalePhone);
-      window.addEventListener('orientationchange', scalePhone);
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', scalePhone);
-      } else {
-        scalePhone();
-      }
-      setTimeout(scalePhone, 30);
-      setTimeout(scalePhone, 150);
-      setTimeout(scalePhone, 500);
-    })();
-  </script>
+  <script src="js/main.js?v=3.1"></script>
 </body>
 
 </html>
