@@ -3245,21 +3245,24 @@ body.testdrive-open {
   line-height: 1.35;
 }
 
-/* Cápsula de Preço VIP Acetinada */
+/* Cápsula de Preço VIP Berry (Contraste Máximo com o Botão) */
 .pricing-price-box {
-  background: linear-gradient(180deg, #fff7f9 0%, #faedf1 100%);
-  border: 1px solid rgba(200, 75, 114, 0.22);
-  border-radius: 18px;
-  padding: 16px 14px 14px;
+  background: linear-gradient(135deg, #c84b72 0%, #b03a60 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 16px 14px 15px;
   margin: 14px auto 16px;
   max-width: 330px;
-  box-shadow: inset 0 1px 0 #ffffff, 0 4px 16px rgba(200, 75, 114, 0.06);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(200, 75, 114, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  text-align: center;
 }
 
 .price-discount-tag {
   display: inline-block;
-  background: #c84b72;
+  background: rgba(255, 255, 255, 0.22);
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.40);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -3267,7 +3270,7 @@ body.testdrive-open {
   padding: 3px 10px;
   border-radius: 100px;
   margin-bottom: 6px;
-  box-shadow: 0 2px 8px rgba(200, 75, 114, 0.25);
+  backdrop-filter: blur(4px);
 }
 
 .price-anchor-row {
@@ -3276,9 +3279,9 @@ body.testdrive-open {
 
 .price-old {
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: line-through;
-  color: #8c5d6e;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .price-main {
@@ -3291,36 +3294,40 @@ body.testdrive-open {
 
 .price-installment {
   font-size: 1.15rem;
-  font-weight: 800;
-  color: #c84b72;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.90);
 }
 
 .price-currency {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  color: #c84b72;
+  color: #ffffff;
 }
 
 .price-val {
-  font-size: 2.7rem;
-  font-weight: 800;
-  color: #1a0f13;
+  font-size: 2.85rem;
+  font-weight: 900;
+  color: #ffffff;
   line-height: 1;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
 .price-cash-row {
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .price-cash {
   font-size: 0.84rem;
-  color: #553d46;
+  color: rgba(255, 255, 255, 0.90);
 }
 
 .price-cash strong {
-  color: #1a0f13;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
 .pricing-reframe-pill {
