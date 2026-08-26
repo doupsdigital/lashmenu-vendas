@@ -107,6 +107,7 @@
       font-weight: 700;
       font-size: 0.85rem;
     }
+  </style>
   <!-- PostHog Analytics Code -->
   <script src="../vendas/js/posthog-init.js"></script>
 </head>
@@ -127,7 +128,7 @@
 
   <script>
     (async function routeToModel() {
-      const loader = document.getElementById('loader-content');
+      const loader = document.getElementById('lashmenu-loader-overlay');
       const errorBox = document.getElementById('error-box');
 
       function getSlug() {

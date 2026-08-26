@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
 
   if (reqPath === '/') {
     targetFilePath = '/vendas/lpb/index.html';
-  } else if (reqPath === '/admin') {
+  } else if (reqPath === '/admin' || reqPath === '/admin/') {
     targetFilePath = '/admin/index.html';
   } else if (reqPath.startsWith('/admin/')) {
     targetFilePath = reqPath;
@@ -54,15 +54,22 @@ const server = http.createServer((req, res) => {
     targetFilePath = '/vendas/form/index.html';
   } else {
     const fullDirectPath = path.join(ROOT, reqPath);
+    if (fs.existsSync(fullDirectPath) && fs.statSync(fullDirectPath).isDirectory() && !reqPath.endsWith('/')) {
+      res.writeHead(301, { 'Location': reqPath + '/' + (parsedUrl.search || '') });
+      res.end();
+      return;
+    }
     if (fs.existsSync(fullDirectPath) && fs.statSync(fullDirectPath).isFile()) {
       targetFilePath = reqPath;
     } else if (fs.existsSync(path.join(fullDirectPath, 'index.html'))) {
       targetFilePath = path.join(reqPath, 'index.html');
     } else {
       const slug = reqPath.split('/')[1];
-      const clientPath = path.join(ROOT, 'clientes', slug, 'index.html');
-      if (fs.existsSync(clientPath)) {
-        targetFilePath = `/clientes/${slug}/index.html`;
+      const clientDir = path.join(ROOT, 'clientes', slug);
+      if (fs.existsSync(path.join(clientDir, 'index.html'))) {
+        res.writeHead(301, { 'Location': `/clientes/${slug}/` + (parsedUrl.search || '') });
+        res.end();
+        return;
       } else {
         targetFilePath = reqPath;
       }
