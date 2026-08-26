@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Personalize seu LashMenu — Formulário de Coleta</title>
+  <title>Personalize seu LashMenu — Formulário Oficial</title>
   <meta name="description"
     content="Preencha as informações do seu estúdio para personalizarmos o seu catálogo digital exclusivo LashMenu.">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -25,6 +25,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1042165951490026');
     fbq('track', 'PageView');
+    fbq('track', 'Purchase', { currency: 'BRL', value: 197.00 });
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1042165951490026&ev=PageView&noscript=1"
@@ -53,8 +54,8 @@
   <main class="form-main">
     <div class="container container--form">
 
-      <!-- PROGRESS BAR MULTI-STEP (VISÍVEL DIRETO NA ETAPA 1) -->
-      <div class="steps-progress" id="steps-progress">
+      <!-- PROGRESS BAR MULTI-STEP -->
+      <div class="steps-progress is-hidden" id="steps-progress">
         <div class="progress-track">
           <div class="progress-bar-fill" id="progress-bar-fill" style="width: 25%;"></div>
         </div>
@@ -81,7 +82,67 @@
       <!-- FORM CARD CONTAINER -->
       <div class="form-card">
 
-        <form id="onboarding-form" novalidate>
+        <!-- ===================================================================
+             TELA DE BOAS-VINDAS / ONBOARDING (ETAPA 0)
+             =================================================================== -->
+        <div class="welcome-screen is-active" id="welcome-screen">
+          <div class="welcome-badge">
+            <span class="welcome-dot"></span>
+            <span>✨ Boas-vindas ao LashMenu</span>
+          </div>
+
+          <h1 class="welcome-title">Parabéns pela sua compra! <br><span class="welcome-highlight">Seu catálogo oficial está a poucos minutos de ir ao ar.</span></h1>
+          
+          <p class="welcome-subtitle">
+            Preparamos este assistente prático para você personalizar seu catálogo interativo com seu nome, modelo preferido, procedimentos e fotos em poucos cliques.
+          </p>
+
+          <div class="welcome-grid">
+            <div class="welcome-card">
+              <div class="welcome-card-icon">⏱️</div>
+              <div class="welcome-card-body">
+                <h3 class="welcome-card-title">Rápido & Prático</h3>
+                <p class="welcome-card-desc">Leva menos de 10 minutos para preencher todas as informações do seu estúdio.</p>
+              </div>
+            </div>
+
+            <div class="welcome-card">
+              <div class="welcome-card-icon">📋</div>
+              <div class="welcome-card-body">
+                <h3 class="welcome-card-title">4 Etapas Guiadas</h3>
+                <p class="welcome-card-desc">1. Identidade  •  2. Modelo & Cores  •  3. Serviços  •  4. Fotos & Envio.</p>
+              </div>
+            </div>
+
+            <div class="welcome-card">
+              <div class="welcome-card-icon">💎</div>
+              <div class="welcome-card-body">
+                <h3 class="welcome-card-title">Ativação VIP 1-Clique</h3>
+                <p class="welcome-card-desc">Após o envio, revisamos e ativamos seu link exclusivo para colocar na bio do Instagram.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="welcome-notice">
+            <div class="welcome-notice-icon">💡</div>
+            <div class="welcome-notice-content">
+              <strong>Não pode preencher tudo agora?</strong>
+              <p>Sem problemas! Você pode fechar esta página e voltar a este mesmo link quando tiver suas fotos e tabela de preços em mãos. O acesso continuará garantido no seu e-mail da Cakto.</p>
+            </div>
+          </div>
+
+          <div class="welcome-actions">
+            <button type="button" class="btn btn--welcome-start" id="btn-welcome-start">
+              <span>✨ Sim, quero personalizar meu catálogo agora!</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button type="button" class="btn-welcome-later" id="btn-welcome-later">
+              <span>Estou apenas espiando (posso preencher depois)</span>
+            </button>
+          </div>
+        </div>
+
+        <form id="onboarding-form" class="is-hidden" novalidate>
 
           <!-- ===================================================================
                ETAPA 1: IDENTIDADE & LINKS
@@ -120,224 +181,322 @@
               </div>
 
               <div class="field-group field-group--full">
-                <label for="input-slug" class="field-label">Seu Link Exclusivo LashMenu <span class="req">*</span></label>
-                <div class="input-slug-wrap">
-                  <span class="slug-domain">lashmenu.com/</span>
-                  <input type="text" id="input-slug" name="slug" class="field-input field-input--slug" placeholder="mariana-alves" required>
+                <label for="input-slug" class="field-label">Subdomínio Exclusivo Desejado <span class="req">*</span></label>
+                <div class="input-domain-wrap">
+                  <input type="text" id="input-slug" name="slug" class="field-input field-input--domain" placeholder="mariana" required>
+                  <span class="input-domain-suffix">.lashmenu.com</span>
                 </div>
-                <span class="field-hint" id="slug-feedback">Este será o seu link oficial para colocar na bio do Instagram e mandar no WhatsApp.</span>
+                <span class="field-hint">Este será o link oficial que você colocará na sua bio do Instagram.</span>
               </div>
             </div>
 
             <div class="step-footer">
               <div></div>
-              <button type="button" class="btn btn--primary btn-capsule btn-next-step" data-next="2">
-                <span>Avançar para Modelo & Cores</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <button type="button" class="btn btn--primary btn-next-step" data-next="2">
+                <span>Continuar para Modelo</span>
               </button>
             </div>
           </div>
 
           <!-- ===================================================================
-               ETAPA 2: ESCOLHA DO MODELO & COR
+               ETAPA 2: ESCOLHA DO MODELO & COR (OPÇÃO 2: CARDS COM SELETOR DIRETO)
                =================================================================== -->
           <div class="form-step" data-step="2">
             <div class="step-header">
               <span class="step-kicker">Etapa 2 de 4</span>
-              <h2 class="step-title">Escolha seu Modelo & Paleta</h2>
-              <p class="step-subtitle">Selecione o layout que melhor reflete o estilo do seu estúdio e a paleta de cores.</p>
+              <h2 class="step-title">Escolha o Modelo &amp; Cor do seu LashMenu</h2>
+              <p class="step-subtitle">Veja a demonstração de cada modelo em tempo real, teste as cores e selecione o design oficial para o seu estúdio.</p>
             </div>
 
-            <!-- OPÇÃO 2: 3 CARDS DE MODELOS COM SELETOR DE COR DIRETO -->
-            <div class="models-grid-direct">
+            <!-- Grid com os 3 Cards de Modelos -->
+            <div class="opt2-cards-grid">
               
-              <!-- MODELO 01: GLAMOUR -->
-              <div class="model-card-direct is-selected" data-model="glamour">
-                <div class="mcd-header">
-                  <span class="mcd-badge">Modelo 01</span>
-                  <h3 class="mcd-title">Glamour</h3>
-                  <p class="mcd-desc">Visual imponente, tipografia alta costura e atmosfera marcante.</p>
-                </div>
-                <div class="mcd-color-row">
-                  <span class="mcd-color-label">Selecione a cor:</span>
-                  <div class="mcd-color-options">
-                    <button type="button" class="btn-color-pick is-active" data-color="midnight" data-preview-img="/glamour-midnight/assets/img/hero-video-poster.jpg">
-                      <span class="color-swatch swatch-midnight"></span>
-                      <span>Midnight (Escuro)</span>
-                    </button>
-                    <button type="button" class="btn-color-pick" data-color="rose" data-preview-img="/glamour-rose/assets/img/hero-video-poster.jpg">
-                      <span class="color-swatch swatch-rose"></span>
-                      <span>Rosé (Claro)</span>
-                    </button>
+              <!-- Card 1: Modelo Glamour -->
+              <article class="opt2-card is-selected" data-model="glamour">
+                <div class="opt2-card-media">
+                  
+                  <!-- Seletor de Cor no Topo do Celular -->
+                  <div class="opt2-color-selector opt2-color-selector--top">
+                    <span class="opt2-color-title">Coleção:</span>
+                    <div class="opt2-color-pills">
+                      <button type="button" class="opt2-pill is-active" data-color="midnight" data-label="Glamour Midnight" data-url="/glamour-midnight/index.html">
+                        <span class="color-dot color-dot--midnight"></span>
+                        <span>Midnight</span>
+                      </button>
+                      <button type="button" class="opt2-pill" data-color="rose" data-label="Glamour Rosé" data-url="/glamour-rose/index.html">
+                        <span class="color-dot color-dot--rose"></span>
+                        <span>Rosé</span>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- MODELO 02: HARMONIA -->
-              <div class="model-card-direct" data-model="harmonia">
-                <div class="mcd-header">
-                  <span class="mcd-badge">Modelo 02</span>
-                  <h3 class="mcd-title">Harmonia</h3>
-                  <p class="mcd-desc">Elegância suave, equilíbrio orgânico e estética acolhedora.</p>
-                </div>
-                <div class="mcd-color-row">
-                  <span class="mcd-color-label">Selecione a cor:</span>
-                  <div class="mcd-color-options">
-                    <button type="button" class="btn-color-pick is-active" data-color="rose" data-preview-img="/harmonia-rose/assets/img/hero-video-poster.jpg">
-                      <span class="color-swatch swatch-rose"></span>
-                      <span>Rosé (Claro)</span>
-                    </button>
-                    <button type="button" class="btn-color-pick" data-color="midnight" data-preview-img="/harmonia-midnight/assets/img/hero-video-poster.jpg">
-                      <span class="color-swatch swatch-midnight"></span>
-                      <span>Midnight (Escuro)</span>
-                    </button>
+                  <div class="card-mini-phone">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                      <div class="phone-screen-scaler">
+                        <iframe class="opt2-iframe" src="/glamour-midnight/index.html?preview=catalog" data-src-midnight="/glamour-midnight/index.html?preview=catalog" data-src-rose="/glamour-rose/index.html?preview=catalog" title="Prévia Modelo Glamour" loading="eager" allow="autoplay"></iframe>
+                      </div>
+                      <div class="phone-overlay-badge">
+                        <span class="dot-pulse"></span>
+                        <span class="opt2-phone-badge">Glamour Midnight</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- MODELO 03: CLÁSSICO -->
-              <div class="model-card-direct" data-model="classico">
-                <div class="mcd-header">
-                  <span class="mcd-badge">Modelo 03</span>
-                  <h3 class="mcd-title">Clássico</h3>
-                  <p class="mcd-desc">Design atemporal, minimalismo refinado e clareza absoluta.</p>
+                <div class="opt2-card-body">
+                  <div class="opt2-model-header">
+                    <h3 class="opt2-model-title">✨ Modelo 01 · Glamour</h3>
+                  </div>
+                  <p class="opt2-model-desc">Capa com vídeo e carrossel de fotos em&nbsp;tela&nbsp;cheia.</p>
+                  
+                  <!-- Link para Testar em Tempo Real -->
+                  <a href="/glamour-midnight/index.html" target="_blank" rel="noopener" class="opt2-test-link">
+                    <span class="opt2-test-text">Testar em tela cheia</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+                  </a>
+
+                  <button type="button" class="btn-select-model-card">
+                    <span class="btn-select-text">✓ Modelo Selecionado</span>
+                  </button>
                 </div>
-                <div class="mcd-color-row">
-                  <span class="mcd-color-label">Selecione a cor:</span>
-                  <div class="mcd-color-options">
-                    <button type="button" class="btn-color-pick is-active" data-color="rose" data-preview-img="/classico-rose/assets/img/hero-video-poster.jpg">
-                      <span class="color-swatch swatch-rose"></span>
-                      <span>Rosé (Claro)</span>
-                    </button>
-                    <button type="button" class="btn-color-pick" data-color="midnight" data-preview-img="/classico-midnight/assets/img/hero-video-poster.jpg">
-                      <span class="color-swatch swatch-midnight"></span>
-                      <span>Midnight (Escuro)</span>
-                    </button>
+              </article>
+
+              <!-- Card 2: Modelo Harmonia -->
+              <article class="opt2-card" data-model="harmonia">
+                <div class="opt2-card-media">
+                  
+                  <!-- Seletor de Cor no Topo do Celular -->
+                  <div class="opt2-color-selector opt2-color-selector--top">
+                    <span class="opt2-color-title">Coleção:</span>
+                    <div class="opt2-color-pills">
+                      <button type="button" class="opt2-pill" data-color="midnight" data-label="Harmonia Midnight" data-url="/harmonia-midnight/index.html">
+                        <span class="color-dot color-dot--midnight"></span>
+                        <span>Midnight</span>
+                      </button>
+                      <button type="button" class="opt2-pill is-active" data-color="rose" data-label="Harmonia Rosé" data-url="/harmonia-rose/index.html">
+                        <span class="color-dot color-dot--rose"></span>
+                        <span>Rosé</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="card-mini-phone">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                      <div class="phone-screen-scaler">
+                        <iframe class="opt2-iframe" src="/harmonia-rose/index.html?preview=catalog" data-src-midnight="/harmonia-midnight/index.html?preview=catalog" data-src-rose="/harmonia-rose/index.html?preview=catalog" title="Prévia Modelo Harmonia" loading="lazy"></iframe>
+                      </div>
+                      <div class="phone-overlay-badge">
+                        <span class="dot-pulse"></span>
+                        <span class="opt2-phone-badge">Harmonia Rosé</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+
+                <div class="opt2-card-body">
+                  <div class="opt2-model-header">
+                    <h3 class="opt2-model-title">🌸 Modelo 02 · Harmonia</h3>
+                  </div>
+                  <p class="opt2-model-desc">Mosaico com filtros visuais e destaque&nbsp;ao&nbsp;olhar.</p>
+                  
+                  <!-- Link para Testar em Tempo Real -->
+                  <a href="/harmonia-rose/index.html" target="_blank" rel="noopener" class="opt2-test-link">
+                    <span class="opt2-test-text">Testar em tela cheia</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+                  </a>
+
+                  <button type="button" class="btn-select-model-card">
+                    <span class="btn-select-text">Escolher Harmonia</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 3: Modelo Clássico -->
+              <article class="opt2-card" data-model="classico">
+                <div class="opt2-card-media">
+                  
+                  <!-- Seletor de Cor no Topo do Celular -->
+                  <div class="opt2-color-selector opt2-color-selector--top">
+                    <span class="opt2-color-title">Coleção:</span>
+                    <div class="opt2-color-pills">
+                      <button type="button" class="opt2-pill is-active" data-color="midnight" data-label="Clássico Midnight" data-url="/classico-midnight/index.html">
+                        <span class="color-dot color-dot--midnight"></span>
+                        <span>Midnight</span>
+                      </button>
+                      <button type="button" class="opt2-pill" data-color="rose" data-label="Clássico Rosé" data-url="/classico-rose/index.html">
+                        <span class="color-dot color-dot--rose"></span>
+                        <span>Rosé</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="card-mini-phone">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                      <div class="phone-screen-scaler">
+                        <iframe class="opt2-iframe" src="/classico-midnight/index.html?preview=catalog" data-src-midnight="/classico-midnight/index.html?preview=catalog" data-src-rose="/classico-rose/index.html?preview=catalog" title="Prévia Modelo Clássico" loading="lazy"></iframe>
+                      </div>
+                      <div class="phone-overlay-badge">
+                        <span class="dot-pulse"></span>
+                        <span class="opt2-phone-badge">Clássico Midnight</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="opt2-card-body">
+                  <div class="opt2-model-header">
+                    <h3 class="opt2-model-title">👑 Modelo 03 · Clássico</h3>
+                  </div>
+                  <p class="opt2-model-desc">Cardápio editorial categorizado para leitura&nbsp;rápida.</p>
+                  
+                  <!-- Link para Testar em Tempo Real -->
+                  <a href="/classico-midnight/index.html" target="_blank" rel="noopener" class="opt2-test-link">
+                    <span class="opt2-test-text">Testar em tela cheia</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+                  </a>
+
+                  <button type="button" class="btn-select-model-card">
+                    <span class="btn-select-text">Escolher Clássico</span>
+                  </button>
+                </div>
+              </article>
 
             </div>
 
+            <!-- Inputs ocultos sincronizados com a escolha -->
             <input type="hidden" name="selected_model" id="input-selected-model" value="glamour">
             <input type="hidden" name="selected_color" id="input-selected-color" value="midnight">
 
-            <!-- Capa do Catálogo: Frases & Título -->
-            <div class="cover-settings-box">
-              <div class="cover-settings-head">
-                <h4 class="cover-settings-title">✨ Personalização da Capa do Catálogo</h4>
-                <p class="cover-settings-sub">Edite a frase de impacto e o selo de boas-vindas que aparecem na tela inicial.</p>
-              </div>
-
-              <div class="fields-grid">
-                <div class="field-group">
-                  <label for="input-cover-selo" class="field-label">Selo Superior da Capa</label>
-                  <input type="text" id="input-cover-selo" name="cover_selo" class="field-input" placeholder="Ex: Seja Bem Vinda" value="Seja Bem Vinda">
-                </div>
-
-                <div class="field-group">
-                  <label for="input-cover-role" class="field-label">Subtítulo / Especialidade</label>
-                  <input type="text" id="input-cover-role" name="cover_role" class="field-input" placeholder="Ex: Lash Designer VIP" value="Lash Designer">
-                </div>
-
-                <div class="field-group field-group--full">
-                  <label for="input-cover-phrase" class="field-label">Frase de Apresentação da Capa</label>
-                  <input type="text" id="input-cover-phrase" name="cover_phrase" class="field-input" placeholder="Ex: Realçando a beleza única do seu olhar com técnica e sofisticação." value="Especialista em extensão de cílios e visagismo do olhar.">
-                </div>
-              </div>
-
-              <div class="cover-preview-trigger-wrap">
-                <button type="button" class="btn-cover-preview" id="btn-open-cover-preview">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  <span>Ver Prévia da Capa no Celular</span>
-                </button>
-              </div>
-            </div>
-
             <div class="step-footer">
-              <button type="button" class="btn btn--outline btn-capsule btn-prev-step" data-prev="1">
+              <button type="button" class="btn btn--outline btn-prev-step" data-prev="1">
                 Voltar
               </button>
-              <button type="button" class="btn btn--primary btn-capsule btn-next-step" data-next="3">
-                <span>Avançar para Procedimentos</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <button type="button" class="btn btn--primary btn-next-step" data-next="3">
+                <span>Continuar para Procedimentos</span>
               </button>
             </div>
           </div>
 
           <!-- ===================================================================
-               ETAPA 3: PROCEDIMENTOS & TABELA DE PREÇOS
+               ETAPA 3: PROCEDIMENTOS, VALORES & FOTOS
                =================================================================== -->
           <div class="form-step" data-step="3">
             <div class="step-header">
               <span class="step-kicker">Etapa 3 de 4</span>
-              <h2 class="step-title">Tabela de Procedimentos</h2>
-              <p class="step-subtitle">Já preenchemos os 10 serviços mais pedidos com fotos profissionais. Basta ajustar os seus valores ou adicionar novas técnicas!</p>
+              <div class="step-header-with-badge">
+                <h2 class="step-title">Seus Procedimentos</h2>
+                <div class="services-count-badge" id="services-count-badge">
+                  <span class="count-badge-dot"></span>
+                  <span id="services-count-number">10</span> Procedimentos Inclusos
+                </div>
+              </div>
+              <p class="step-subtitle">Preencha valores e durações. As fotos padrão já vêm aplicadas, mas você pode <strong>tocar em qualquer foto</strong> para substituir pelo seu trabalho real.</p>
             </div>
 
-            <div class="services-builder">
-              <div class="services-list" id="services-list">
-                <!-- Injetado dinamicamente pelo JavaScript com os 10 serviços padrão -->
-              </div>
+            <div class="services-builder" id="services-builder">
+              <!-- Cards Dinâmicos de Procedimentos serão gerados aqui -->
+            </div>
 
-              <div class="services-actions">
-                <button type="button" class="btn btn--outline btn--sm" id="btn-add-custom-service">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
-                  <span>Adicionar Outro Procedimento</span>
-                </button>
-              </div>
+            <div class="add-service-action">
+              <button type="button" class="btn btn--outline btn--sm" id="btn-add-service">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <span>Adicionar Mais um Procedimento</span>
+              </button>
             </div>
 
             <div class="step-footer">
-              <button type="button" class="btn btn--outline btn-capsule btn-prev-step" data-prev="2">
+              <button type="button" class="btn btn--outline btn-prev-step" data-prev="2">
                 Voltar
               </button>
-              <button type="button" class="btn btn--primary btn-capsule btn-next-step" data-next="4">
-                <span>Avançar para Fotos & Envio</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <button type="button" class="btn btn--primary btn-next-step" data-next="4">
+                <span>Continuar para Capa</span>
               </button>
             </div>
           </div>
 
           <!-- ===================================================================
-               ETAPA 4: FOTOS & ENVIO FINAL
+               ETAPA 4: CAPA DE DESTAQUE & FINALIZAÇÃO
                =================================================================== -->
           <div class="form-step" data-step="4">
             <div class="step-header">
-              <span class="step-kicker">Etapa 4 de 4</span>
-              <h2 class="step-title">Suas Fotos & Finalização</h2>
-              <p class="step-subtitle">Envie sua foto de perfil para a capa ou logotipo (opcional). Se preferir, utilizaremos nosso banco de imagens de luxo.</p>
+              <span class="step-kicker">Etapa 4 de 4 · Toque Final</span>
+              <h2 class="step-title">Sua Capa de Destaque &amp; Finalização</h2>
+              <p class="step-subtitle">A capa é o seu cartão de visitas oficial. Escolha uma foto sua profissional e bem iluminada (ou um vídeo vertical de até 6s) para você aparecer na abertura do seu catálogo e transmitir máxima credibilidade.</p>
             </div>
 
-            <!-- Upload de Foto de Capa / Perfil -->
-            <div class="photo-upload-section">
-              <label class="field-label">Foto de Perfil ou Capa do Estúdio</label>
-              
-              <div class="dropzone" id="avatar-dropzone">
-                <input type="file" id="input-avatar-file" accept="image/*" class="dropzone-input">
-                <div class="dropzone-content" id="dropzone-content">
-                  <div class="dropzone-icon">📸</div>
-                  <p class="dropzone-text"><strong>Clique para enviar</strong> ou arraste sua foto aqui</p>
-                  <span class="dropzone-hint">Formatos JPG, PNG ou WEBP (até 15MB)</span>
+            <!-- Box Destaque: Foto ou Vídeo de Capa -->
+            <div class="cover-highlight-card">
+              <div class="cover-card-header">
+                <div class="cover-badge">
+                  <span class="cover-badge-icon">⭐</span>
+                  <span>Sua Foto ou Vídeo de Perfil</span>
                 </div>
-                <div class="dropzone-preview is-hidden" id="dropzone-preview">
-                  <img id="avatar-preview-img" src="" alt="Prévia da foto">
-                  <button type="button" class="btn-remove-photo" id="btn-remove-photo">✕ Remover foto</button>
+                <span class="cover-req-label">Capa Oficial</span>
+              </div>
+
+              <div class="upload-box-wrapper">
+                <div class="upload-dropzone" id="avatar-dropzone">
+                  <input type="file" id="input-avatar-file" accept="image/*,video/mp4,video/quicktime,video/*" class="file-input-hidden">
+                  <div class="dropzone-content" id="dropzone-empty">
+                    <div class="dropzone-icon">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="dropzone-text">
+                      <strong>Toque para escolher sua foto ou vídeo</strong> ou arraste aqui
+                    </div>
+                    <span class="dropzone-sub">Foto sua bem iluminada (JPG, PNG) ou pequeno vídeo vertical 9:16 de até 6 segundos (MP4)</span>
+                  </div>
+                  <div class="dropzone-preview is-hidden" id="dropzone-preview">
+                    <img id="avatar-preview-img" src="" alt="Prévia da foto" class="is-hidden">
+                    <video id="avatar-preview-video" src="" autoplay muted loop playsinline class="is-hidden"></video>
+                    <button type="button" class="btn-remove-photo" id="btn-remove-avatar">✕ Trocar arquivo de capa</button>
+                  </div>
                 </div>
               </div>
-              <input type="hidden" name="avatar_url" id="input-avatar-url">
+
+              <!-- Botão de Prévia da Capa -->
+              <div class="cover-preview-btn-wrap">
+                <button type="button" class="btn-cover-preview" id="btn-open-cover-preview">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span>Ver Prévia da Capa</span>
+                </button>
+              </div>
             </div>
 
-            <!-- Orientações e Cuidados Pós -->
-            <div class="post-care-box">
-              <h4 class="post-care-title">💡 Orientações de Cuidados Pós (Inclusas no Catálogo)</h4>
-              <p class="post-care-desc">Seu catálogo já virá com uma aba exclusiva orientando suas clientes sobre lavar diariamente, não usar rímel e pentear os fios, aumentando a retenção das extensões.</p>
+            <!-- Frase de Efeito da Capa (Slogan / Especialidade em Textarea) -->
+            <div class="field-group" style="margin-top: 20px;">
+              <label for="input-hero-phrase" class="field-label">Frase de Efeito da Capa (Slogan / Especialidade)</label>
+              <textarea id="input-hero-phrase" name="hero_phrase" rows="2" class="field-input field-textarea" placeholder="Ex: Especialista em extensão de cílios e visagismo do olhar.">Especialista em extensão de cílios e visagismo do olhar.</textarea>
+              <span class="field-hint">Esta frase aparece em destaque logo abaixo do seu nome na abertura do catálogo digital.</span>
             </div>
 
-            <!-- Observações Extras -->
-            <div class="field-group field-group--full" style="margin-top: 24px;">
-              <label for="input-notes" class="field-label">Observações Especiais para a Equipe de Montagem (Opcional)</label>
-              <textarea id="input-notes" name="notes" class="field-input field-input--textarea" rows="3" placeholder="Algum aviso especial, chave PIX para pagamentos, regras de tolerância de atraso, etc."></textarea>
+            <!-- Card de Expectativa de Entrega VIP -->
+            <div class="delivery-expectation-card">
+              <div class="dec-header">
+                <span class="dec-speed">⚡ Criação Express</span>
+              </div>
+              <div class="dec-body">
+                <h4 class="dec-title">Seu Catálogo Oficial Pronto em até 48 horas</h4>
+                <p class="dec-text">
+                  Nossa equipe de designers vai montar, calibrar as cores e configurar seu link exclusivo com todo o cuidado. 
+                  <em>(Prazo oficial de até 48h, mas costumamos entregar em bem menos tempo 😉✨)</em>
+                </p>
+              </div>
+            </div>
+
+            <!-- Box Suporte VIP / Personalização no WhatsApp -->
+            <div class="custom-request-box">
+              <div class="crb-text">
+                <strong>Deseja alterar alguma coisa ou outro tipo de personalização?</strong>
+                <span>Fale diretamente com nossa equipe de designers no WhatsApp.</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Ol%C3%A1%2C%20estou%20preenchendo%20o%20formul%C3%A1rio%20do%20LashMenu%20e%20gostaria%20de%20solicitar%20uma%20personaliza%C3%A7%C3%A3o%20especial." target="_blank" class="btn-support-whatsapp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.815 2.791.815 3.179 0 5.767-2.587 5.768-5.766.001-3.18-2.586-5.767-5.768-5.767zm9.969 5.766c-.002 5.519-4.49 9.998-10 9.998-1.758 0-3.414-.467-4.869-1.282l-5.131 1.346 1.374-5.011c-.91-1.503-1.374-3.238-1.374-5.051 0-5.52 4.488-10 10-10 5.514 0 10 4.48 10 10z"/></svg>
+                <span>Falar no WhatsApp</span>
+              </a>
             </div>
 
             <!-- Resumo Rápido -->
@@ -355,7 +514,7 @@
               <button type="button" class="btn btn--outline btn-capsule btn-prev-step" data-prev="3">
                 Voltar
               </button>
-              <button type="submit" class="btn btn--primary btn-capsule btn-submit-final" id="btn-submit-final">
+              <button type="submit" class="btn btn--primary btn-capsule btn--submit-final" id="btn-submit-final">
                 <span>Concluir e Gerar Catálogo</span>
               </button>
             </div>
@@ -513,6 +672,30 @@
 
       </div>
 
+    </div>
+
+    <!-- MODAL CUSTOMIZADO: APENAS ESPIANDO (PREVIEW LATER) -->
+    <div class="custom-modal-backdrop is-hidden" id="modal-later-preview">
+      <div class="custom-modal-card">
+        <button type="button" class="custom-modal-close" id="btn-close-modal-later" aria-label="Fechar modal">✕</button>
+        
+        <div class="custom-modal-badge">
+          <span>💡 Acesso Garantido</span>
+        </div>
+        
+        <h3 class="custom-modal-title">Sem problemas!</h3>
+        
+        <div class="custom-modal-body">
+          <p>Seu link de acesso exclusivo continuará <strong>100% salvo</strong> no seu e-mail de compra enviado pela <strong>Cakto</strong>.</p>
+          <p>Quando você estiver pronta com as informações do seu estúdio, fotos e tabela de preços, basta clicar no mesmo link para personalizar seu catálogo oficial!</p>
+        </div>
+        
+        <div class="custom-modal-footer">
+          <button type="button" class="btn btn--modal-ok" id="btn-ok-modal-later">
+            <span>Entendi, fechar</span>
+          </button>
+        </div>
+      </div>
     </div>
   </main>
 
