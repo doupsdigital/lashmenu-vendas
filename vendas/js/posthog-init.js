@@ -25,7 +25,21 @@
       person_profiles: 'always',
       autocapture: true,
       capture_pageview: true,
-      capture_pageleave: true
+      capture_pageleave: true,
+      disable_session_recording: false,
+      session_recording: {
+        recordCrossOriginIframes: true,
+        maskAllInputs: false,
+        maskInputOptions: {
+          password: true
+        }
+      },
+      loaded: function(ph) {
+        // Força o início da gravação de sessão imediatamente
+        if (ph.sessionRecording && typeof ph.sessionRecording.startRecording === 'function') {
+          ph.sessionRecording.startRecording();
+        }
+      }
     });
 
     // Registra a propriedade 'product: lashmenu' em TODOS os eventos e sessões automaticamente
