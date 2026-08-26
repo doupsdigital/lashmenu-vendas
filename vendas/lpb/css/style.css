@@ -3299,18 +3299,19 @@ body.testdrive-open {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
   text-align: left;
-  margin: 0 auto 18px;
+  margin: 0 auto 20px;
   max-width: 325px;
 }
 
 .pricing-bullets-short li {
-  font-size: 0.84rem;
-  color: #332429;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1a0f13;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   line-height: 1.3;
 }
 
