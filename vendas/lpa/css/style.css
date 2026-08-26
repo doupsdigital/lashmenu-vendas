@@ -2650,7 +2650,7 @@ body.testdrive-open {
   }
 }
 
-/* ── CONTAINER INTERATIVO & CURSOR POINTER DE TOQUE NO ESPAÇO LATERAL ── */
+/* ── CONTAINER INTERATIVO & INDICADOR DE DESLIZE (TAG + MÃOZINHA + SETA) ── */
 .phone-interactive-container {
   position: relative;
   display: inline-flex;
@@ -2669,86 +2669,81 @@ body.testdrive-open {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4px;
+}
+
+.scroll-cue-tag {
+  font-family: var(--font-main);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #c84b72;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 75, 114, 0.35);
+  box-shadow: 0 4px 12px rgba(200, 75, 114, 0.18);
+  line-height: 1;
+  text-transform: uppercase;
+  animation: tagSoftPulse 2.4s infinite ease-in-out;
 }
 
 .scroll-cursor-wrap {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: pointerTapSwipe 2.4s infinite ease-in-out;
+  gap: 3px;
+  animation: pointerSwipeDown 2.4s infinite cubic-bezier(0.45, 0, 0.25, 1);
 }
 
 .touch-pointer-hand-svg {
-  filter: drop-shadow(0 4px 12px rgba(200, 75, 114, 0.45));
+  filter: drop-shadow(0 4px 10px rgba(200, 75, 114, 0.35));
 }
 
-.touch-ripple-circle {
-  position: absolute;
-  top: -2px;
-  left: 3px;
-  border-radius: 50%;
-  border: 2px solid #c84b72;
-  pointer-events: none;
-  animation: touchRipplePulse 2.4s infinite ease-out;
+.scroll-cue-arrow-svg {
+  filter: drop-shadow(0 2px 6px rgba(200, 75, 114, 0.3));
+  animation: arrowBounce 1.2s infinite ease-in-out;
 }
 
-.touch-ripple-circle.ripple-1 {
-  width: 18px;
-  height: 18px;
-  animation-delay: 0.1s;
-}
-
-.touch-ripple-circle.ripple-2 {
-  width: 28px;
-  height: 28px;
-  top: -7px;
-  left: -2px;
-  animation-delay: 0.35s;
-}
-
-@keyframes pointerTapSwipe {
+@keyframes pointerSwipeDown {
   0% {
-    transform: translate(0, -18px) scale(0.92);
-    opacity: 0.3;
+    transform: translateY(-12px);
+    opacity: 0.2;
   }
   20% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-  30% {
-    transform: translate(0, 0) scale(0.88);
-    opacity: 1;
-  }
-  45% {
-    transform: translate(0, 0) scale(1);
     opacity: 1;
   }
   75% {
-    transform: translate(0, 20px) scale(1);
+    transform: translateY(18px);
     opacity: 1;
   }
   100% {
-    transform: translate(0, 28px) scale(0.95);
-    opacity: 0.2;
+    transform: translateY(24px);
+    opacity: 0.15;
   }
 }
 
-@keyframes touchRipplePulse {
-  0%, 15% {
-    transform: scale(0.4);
-    opacity: 0;
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  30% {
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes tagSoftPulse {
+  0%, 100% {
     transform: scale(1);
-    opacity: 0.95;
+    box-shadow: 0 4px 12px rgba(200, 75, 114, 0.18);
   }
-  55% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 6px 16px rgba(200, 75, 114, 0.3);
   }
 }
 
@@ -2756,9 +2751,17 @@ body.testdrive-open {
   .phone-scroll-indicator {
     right: -44px;
   }
+  .scroll-cue-tag {
+    font-size: 0.60rem;
+    padding: 2.5px 6.5px;
+  }
   .touch-pointer-hand-svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
+  }
+  .scroll-cue-arrow-svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
