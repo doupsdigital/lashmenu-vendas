@@ -8,7 +8,7 @@
   <meta name="description" content="Substitua o PDF do Canva por um Catálogo Digital Interativo que valoriza seu estúdio. 100% personalizado com seu nome, fotos e preços em até 24h.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- PostHog Analytics -->
   <script src="../js/posthog-init.js"></script>
@@ -28,7 +28,7 @@
   </div>
 
   <main>
-    <!-- 1. HERO SECTION COM IPHONE INTERATIVO AO VIVO -->
+    <!-- 1. HERO SECTION COM MOCKUP REAL DO LASHMENU -->
     <section class="hero-section" id="hero">
       <div class="container">
         <div class="hero-grid">
@@ -55,22 +55,23 @@
             </div>
 
             <div class="hero-swipe-hint">
-              <span>👇 Teste o catálogo ao vivo rolando com o dedo abaixo:</span>
+              <span>👇 Teste a experiência real do catálogo rolando a tela do celular abaixo:</span>
             </div>
           </div>
 
-          <!-- Right: Interactive Live Phone Container (0.1s load time, ZERO black screens) -->
+          <!-- Right: Interactive Real LashMenu Catalog Mockup -->
           <div class="hero-phone-wrap">
             <div class="iphone-device">
               <div class="iphone-notch"></div>
               <div class="iphone-screen">
                 <div class="live-catalog-container">
-                  <!-- Header Studio -->
-                  <div class="lcs-top-bar">
-                    <img src="../assets/img/avatar-lash-1.jpg" alt="Mariana Alves" class="lcs-avatar">
-                    <div class="lcs-studio-info">
-                      <span class="lcs-studio-name">Estúdio Mariana Alves</span>
-                      <span class="lcs-studio-sub">Lash Designer VIP &amp; Visagismo</span>
+                  
+                  <!-- Real LashMenu Catalog Header (Glamour Rosé Style) -->
+                  <div class="lcs-header-real">
+                    <img src="../assets/img/avatar-lash-1.jpg" alt="Mariana Alves" class="lcs-avatar-real">
+                    <div class="lcs-header-text">
+                      <h3 class="lcs-studio-title">Mariana Alves</h3>
+                      <p class="lcs-studio-sub">Lash Designer VIP &amp; Visagismo</p>
                     </div>
                   </div>
 
@@ -78,66 +79,81 @@
                     <span class="lcs-badge-online">🟢 Catálogo Oficial 2026</span>
                   </div>
 
-                  <!-- Category Pills -->
+                  <!-- Real LashMenu Category Filter Pills -->
                   <div class="lcs-cat-pills">
                     <span class="lcs-pill active">Extensão de Cílios</span>
                     <span class="lcs-pill">Lash Lifting</span>
                     <span class="lcs-pill">Cuidados Pós</span>
                   </div>
 
-                  <!-- Services Cards -->
+                  <!-- Real LashMenu Service Cards -->
                   <div class="lcs-service-list">
-                    <div class="lcs-card">
-                      <div class="lcs-card-img-box">
-                        <img src="../assets/img/avatar-lash-1.jpg" alt="Volume Brasileiro" class="lcs-img">
-                        <span class="lcs-card-tag">Mais Pedido 🔥</span>
+                    
+                    <!-- Card 1: Volume Brasileiro -->
+                    <div class="lcs-real-card">
+                      <div class="lcs-real-card-img-wrap">
+                        <img src="../assets/img/avatar-lash-1.jpg" alt="Volume Brasileiro" class="lcs-real-img">
+                        <span class="lcs-real-badge">Mais Pedido 🔥</span>
                       </div>
-                      <div class="lcs-card-content">
-                        <div class="lcs-title-row">
-                          <h3>Volume Brasileiro</h3>
-                          <span class="lcs-price">R$ 160</span>
+                      <div class="lcs-real-card-body">
+                        <div class="lcs-real-head">
+                          <h4 class="lcs-real-title">Volume Brasileiro</h4>
+                          <span class="lcs-real-price">R$ 160</span>
                         </div>
-                        <p>Fios em Y leves e marcantes com alta retenção.</p>
-                        <div class="lcs-card-foot">
-                          <span>⏱️ 1h 40min</span>
-                          <a href="#oferta" class="lcs-btn">Agendar</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="lcs-card">
-                      <div class="lcs-card-img-box">
-                        <img src="../assets/img/avatar-lash-2.jpg" alt="Lash Lifting" class="lcs-img">
-                      </div>
-                      <div class="lcs-card-content">
-                        <div class="lcs-title-row">
-                          <h3>Lash Lifting + Nutrição</h3>
-                          <span class="lcs-price">R$ 140</span>
-                        </div>
-                        <p>Curvatura natural dos seus próprios cílios com hidratação.</p>
-                        <div class="lcs-card-foot">
-                          <span>⏱️ 1h 10min</span>
-                          <a href="#oferta" class="lcs-btn">Agendar</a>
+                        <p class="lcs-real-desc">Fios em Y leves e marcantes com retenção prolongada.</p>
+                        <div class="lcs-real-meta">
+                          <span class="lcs-time">⏱️ 1h 40min</span>
+                          <a href="#oferta" class="lcs-real-btn">Agendar Horário</a>
                         </div>
                       </div>
                     </div>
 
-                    <div class="lcs-card">
-                      <div class="lcs-card-img-box">
-                        <img src="../assets/img/avatar-lash-3.jpg" alt="Volume Russo" class="lcs-img">
+                    <!-- Card 2: Lash Lifting -->
+                    <div class="lcs-real-card">
+                      <div class="lcs-real-card-img-wrap">
+                        <img src="../assets/img/avatar-lash-2.jpg" alt="Lash Lifting" class="lcs-real-img">
                       </div>
-                      <div class="lcs-card-content">
-                        <div class="lcs-title-row">
-                          <h3>Volume Russo Luxo</h3>
-                          <span class="lcs-price">R$ 220</span>
+                      <div class="lcs-real-card-body">
+                        <div class="lcs-real-head">
+                          <h4 class="lcs-real-title">Lash Lifting + Nutrição</h4>
+                          <span class="lcs-real-price">R$ 140</span>
                         </div>
-                        <p>Preenchimento denso e marcante com fans artesanais.</p>
-                        <div class="lcs-card-foot">
-                          <span>⏱️ 2h 15min</span>
-                          <a href="#oferta" class="lcs-btn">Agendar</a>
+                        <p class="lcs-real-desc">Curvatura natural dos seus próprios cílios com hidratação.</p>
+                        <div class="lcs-real-meta">
+                          <span class="lcs-time">⏱️ 1h 10min</span>
+                          <a href="#oferta" class="lcs-real-btn">Agendar Horário</a>
                         </div>
                       </div>
                     </div>
+
+                    <!-- Card 3: Volume Russo -->
+                    <div class="lcs-real-card">
+                      <div class="lcs-real-card-img-wrap">
+                        <img src="../assets/img/avatar-lash-3.jpg" alt="Volume Russo" class="lcs-real-img">
+                      </div>
+                      <div class="lcs-real-card-body">
+                        <div class="lcs-real-head">
+                          <h4 class="lcs-real-title">Volume Russo Luxo</h4>
+                          <span class="lcs-real-price">R$ 220</span>
+                        </div>
+                        <p class="lcs-real-desc">Preenchimento denso e marcante com fans artesanais.</p>
+                        <div class="lcs-real-meta">
+                          <span class="lcs-time">⏱️ 2h 15min</span>
+                          <a href="#oferta" class="lcs-real-btn">Agendar Horário</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 4: Cuidados Pós -->
+                    <div class="lcs-real-card lcs-real-card--info">
+                      <div class="lcs-real-card-body">
+                        <div class="lcs-real-head">
+                          <h4 class="lcs-real-title">💡 Cuidados Pós-Procedimento</h4>
+                        </div>
+                        <p class="lcs-real-desc">Lavar diariamente com shampoo neutro, não usar rímel e pentear todos os dias.</p>
+                      </div>
+                    </div>
+
                   </div>
 
                 </div>
@@ -269,7 +285,7 @@
       </div>
     </section>
 
-    <!-- 3. SEÇÃO COMPARATIVA VISUAL "ANTES X DEPOIS" (PDF VS LASHMENU) -->
+    <!-- 3. SEÇÃO COMPARATIVA REFINADA "ANTES X DEPOIS" (SEM EMOJIS DUPLICADOS) -->
     <section class="comparison-section">
       <div class="container">
         <div class="section-header text-center">
@@ -281,35 +297,57 @@
           <!-- Card Antes -->
           <div class="vs-box vs-box--bad">
             <div class="vs-box-head">
-              <span class="vs-icon-bad">❌</span>
-              <h3>Antes: PDF do Canva / Texto Solto</h3>
+              <h3>Antes: PDF do Canva / Mensagens Soltas</h3>
             </div>
             <ul class="vs-bullet-list">
-              <li>❌ PDF pesado que demora para carregar no celular</li>
-              <li>❌ Letras pequenas que obrigam a cliente a dar zoom</li>
-              <li>❌ Mensagens longas e repetitivas de preços no WhatsApp</li>
-              <li>❌ Visual amador que abre margem para pedidos de desconto</li>
+              <li>
+                <svg class="vs-svg-bad" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                <span>PDF pesado que demora para carregar no 4G do celular</span>
+              </li>
+              <li>
+                <svg class="vs-svg-bad" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                <span>Letras pequenas que obrigam a cliente a ficar dando zoom</span>
+              </li>
+              <li>
+                <svg class="vs-svg-bad" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mensagens longas e repetitivas de preços no WhatsApp</span>
+              </li>
+              <li>
+                <svg class="vs-svg-bad" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <span>Visual amador que abre margem para pedidos de desconto</span>
+              </li>
             </ul>
           </div>
 
           <!-- Card Depois -->
           <div class="vs-box vs-box--good">
             <div class="vs-box-head">
-              <span class="vs-icon-good">✅</span>
               <h3>Depois: Seu LashMenu Profissional</h3>
             </div>
             <ul class="vs-bullet-list">
-              <li>✅ Abre instantaneamente igual um aplicativo de luxo</li>
-              <li>✅ Fotos grandes dos seus procedimentos em alta definição</li>
-              <li>✅ Cliente escolhe a técnica e agenda em 1 segundo no WhatsApp</li>
-              <li>✅ Transmite autoridade imediata e valoriza o seu preço</li>
+              <li>
+                <svg class="vs-svg-good" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Abre instantaneamente igual um aplicativo de luxo</span>
+              </li>
+              <li>
+                <svg class="vs-svg-good" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Fotos grandes dos seus procedimentos em alta definição</span>
+              </li>
+              <li>
+                <svg class="vs-svg-good" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Cliente escolhe a técnica e agenda em 1 segundo no WhatsApp</span>
+              </li>
+              <li>
+                <svg class="vs-svg-good" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Transmite autoridade imediata e valoriza o seu preço</span>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. SEÇÃO DE OFERTA DIRETA, PREÇO & REDE DE SEGURANÇA WHATSAPP -->
+    <!-- 4. SEÇÃO DE OFERTA DIRETA & CARD DE PREÇO RESUMIDO (5 BULLETS CURTOS) -->
     <section class="pricing-section" id="oferta">
       <div class="container container--sm">
         
@@ -331,10 +369,13 @@
             💡 <span>O valor de apenas 1 procedimento de cílios no mês para ter seu catálogo profissional o ano todo.</span>
           </div>
 
-          <ul class="pricing-bullets">
-            <li><span class="p-check">✓</span> <strong>100% Personalizado:</strong> Com seu nome, logo, fotos reais e sua tabela oficial.</li>
-            <li><span class="p-check">✓</span> <strong>Entrega Rápida em 24h:</strong> Nós criamos tudo para você. Sem trabalho no Canva.</li>
-            <li><span class="p-check">✓</span> <strong>Pagamento Único:</strong> Sem mensalidades e sem taxas escondidas.</li>
+          <!-- 5 Frases Curtas de Benefícios em 1 Linha -->
+          <ul class="pricing-bullets-short">
+            <li><span class="p-check">✓</span> <strong>100% Personalizado:</strong> com seu nome, fotos e preços oficiais</li>
+            <li><span class="p-check">✓</span> <strong>Entrega Super Rápida:</strong> pronto no seu WhatsApp em até 24 horas</li>
+            <li><span class="p-check">✓</span> <strong>Pagamento Único:</strong> sem mensalidades e sem taxas recorrentes</li>
+            <li><span class="p-check">✓</span> <strong>Orientações Pós-Procedimento:</strong> aba exclusiva de cuidados inclusa</li>
+            <li><span class="p-check">✓</span> <strong>Link Exclusivo:</strong> para colocar na bio do Instagram e no WhatsApp</li>
           </ul>
 
           <a href="https://pay.cakto.com.br/r76ceej_1060004" target="_blank" rel="noopener" class="btn btn--primary btn--block btn--pulsing">
@@ -342,9 +383,9 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           </a>
 
-          <!-- WhatsApp Safety Box -->
+          <!-- WhatsApp Safety Box (Sem menção ao valor de R$ 149!) -->
           <div class="whatsapp-safety-box">
-            <p>Dúvidas antes de comprar ou prefere pagar <strong>R$ 149,00 à vista no PIX</strong>?</p>
+            <p>Dúvidas antes de comprar ou quer consultar uma <strong>condição especial no PIX</strong>?</p>
             <a href="https://wa.me/5562991083435?text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20sobre%20o%20LashMenu%20e%20quero%20saber%20sobre%20o%20PIX" target="_blank" rel="noopener" class="btn-wa-safety">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l.278.444-1.157 4.226 4.326-1.134.42.259z"/></svg>
               <span>Falar no WhatsApp &amp; Tirar Dúvidas</span>
