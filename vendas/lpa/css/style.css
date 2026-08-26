@@ -3007,11 +3007,11 @@ body.testdrive-open {
   }
 }
 
-/* ── RODAPÉ CLARO MINIMALISTA (COMPACTO SEM ESPAÇO SOBRANDO) ── */
+/* ── RODAPÉ CLARO MINIMALISTA (ULTRA COMPACTO SEM ESPAÇO SOBRANDO) ── */
 .site-footer {
   background: #fcf8f9;
   border-top: 1px solid rgba(200, 75, 114, 0.12);
-  padding: 22px 16px 20px;
+  padding: 16px 15px 14px;
   margin: 0;
   color: #553d46;
 }
@@ -3020,15 +3020,16 @@ body.testdrive-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
 }
 
 .footer-logo {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: #24141a;
   letter-spacing: -0.01em;
+  line-height: 1.1;
 }
 
 .footer-logo em {
@@ -3037,9 +3038,10 @@ body.testdrive-open {
 }
 
 .footer-tagline {
-  font-size: 0.80rem;
+  font-size: 0.78rem;
   color: #7a5c67;
   letter-spacing: 0.02em;
   font-weight: 500;
   margin: 0;
+  line-height: 1.2;
 }
