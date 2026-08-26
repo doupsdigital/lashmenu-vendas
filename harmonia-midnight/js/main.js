@@ -2,7 +2,7 @@
    LASHMENU — MODELO MOSAICO DARK (JS COM GRID, ANIMAÇÕES E MODAL)
    ========================================================================== */
 
-const PROCEDIMENTOS = [
+var PROCEDIMENTOS = [
   // --- 1. EXTENSÕES & VOLUMES ---
   {
     id: 'brasileiro',
@@ -309,6 +309,10 @@ function atualizarContador() {
     contadorEl.textContent = `Mostrando ${total} procedimento${total !== 1 ? 's' : ''}`;
   }
 }
+
+// Exposição Global para o Injetor Dinâmico Supabase
+window.PROCEDIMENTOS = PROCEDIMENTOS;
+window.renderGrid = renderGrid;
 
 // Renderizar Mosaico
 function renderGrid() {

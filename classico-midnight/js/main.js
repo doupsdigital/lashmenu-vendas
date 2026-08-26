@@ -2,7 +2,7 @@
    LASHMENU — MODELO STUDIO DARK (JS COM FILTROS, ANIMAÇÕES E MODAL)
    ========================================================================== */
 
-const PROCEDIMENTOS = [
+var PROCEDIMENTOS = [
   // --- 1. EXTENSÕES & VOLUMES ---
   {
     id: 'classico',
@@ -303,6 +303,10 @@ function getItensVisiveis() {
   if (filtroAtivo === 'todos') return PROCEDIMENTOS;
   return PROCEDIMENTOS.filter(item => item.cat === filtroAtivo);
 }
+
+// Exposição Global para o Injetor Dinâmico Supabase
+window.PROCEDIMENTOS = PROCEDIMENTOS;
+window.renderLista = renderLista;
 
 // Renderizar Lista Editorial
 function renderLista() {

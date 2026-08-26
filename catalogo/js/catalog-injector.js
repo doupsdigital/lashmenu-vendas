@@ -221,24 +221,36 @@
 
     // 4. Injeta Procedimentos nos Cards Oficiais e Atualiza Array de Modais
     if (services.length > 0) {
-      // Se houver variável global PROCEDIMENTOS no template, atualiza os dados
-      if (typeof PROCEDIMENTOS !== 'undefined' && Array.isArray(PROCEDIMENTOS)) {
-        PROCEDIMENTOS.length = 0; // Limpa o array padrão
+      // Tenta localizar a variável de procedimentos no escopo global
+      let targetArray = null;
+      if (typeof window.PROCEDIMENTOS !== 'undefined' && Array.isArray(window.PROCEDIMENTOS)) {
+        targetArray = window.PROCEDIMENTOS;
+      } else if (typeof PROCEDIMENTOS !== 'undefined' && Array.isArray(PROCEDIMENTOS)) {
+        targetArray = PROCEDIMENTOS;
+      }
+
+      if (targetArray) {
+        targetArray.length = 0; // Limpa o array padrão
         services.forEach((svc, i) => {
-          PROCEDIMENTOS.push({
+          const rawPrice = svc.price ? svc.price.toString().trim() : '';
+          const formattedPrice = rawPrice ? (rawPrice.startsWith('R$') ? rawPrice : `R$ ${rawPrice}`) : 'Consulte';
+          const rawMaint = svc.maintenance ? svc.maintenance.toString().trim() : '';
+          const formattedMaint = rawMaint ? (rawMaint.startsWith('R$') ? rawMaint : `R$ ${rawMaint}`) : 'Sob consulta';
+
+          targetArray.push({
             id: `proc_${i}`,
             img: svc.photo_url || 'assets/img/hero.jpg',
             alt: svc.name,
-            cat: svc.category || 'Extensão de Cílios',
-            catLabel: svc.category || 'Extensão de Cílios',
+            cat: 'todos',
+            catLabel: svc.category || 'Procedimento',
             nome: svc.name,
             title: svc.name,
-            preco: svc.price ? `R$ ${svc.price}` : 'Consulte',
+            preco: formattedPrice,
             duracao: svc.duration || '1h30',
             desc: svc.description || 'Aplicação minuciosa com fios de alta tecnologia para um acabamento marcante e duradouro.',
             specs: [
-              ['Investimento', svc.price ? `R$ ${svc.price}` : 'Consulte'],
-              ['Manutenção Pontual', svc.maintenance ? `R$ ${svc.maintenance}` : 'Sob consulta'],
+              ['Investimento', formattedPrice],
+              ['Manutenção Pontual', formattedMaint],
               ['Duração em Cabine', svc.duration || '1h30'],
               ['Efeito', svc.effect || 'Preenchimento e realce do olhar'],
               ['Recomendação', svc.recommendation || 'Manutenção recomendada a cada 15-20 dias']
@@ -247,12 +259,22 @@
         });
       }
 
+      // Atualiza botões de filtro no modelo Harmonia, se existirem
+      const todosBtn = document.querySelector('.filtro-chip[data-filter="todos"]');
+      if (todosBtn) {
+        todosBtn.textContent = `Todos (${services.length})`;
+      }
+
       // Se existir a função renderGrid (harmonia templates), re-renderiza o grid com os novos dados
-      if (typeof renderGrid === 'function') {
+      if (typeof window.renderGrid === 'function') {
+        window.renderGrid();
+      } else if (typeof renderGrid === 'function') {
         renderGrid();
       }
       // Se existir a função renderLista (clássico templates), re-renderiza a lista com os novos dados
-      else if (typeof renderLista === 'function') {
+      else if (typeof window.renderLista === 'function') {
+        window.renderLista();
+      } else if (typeof renderLista === 'function') {
         renderLista();
       }
       // Caso contrário (glamour templates), atualiza os cards estáticos no HTML
