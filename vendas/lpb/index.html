@@ -10,6 +10,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function() {
+      var vw = window.innerWidth || document.documentElement.clientWidth || 390;
+      var isMobile = vw <= 480;
+      var targetW = isMobile ? Math.min(vw * 0.62, 245) : 310;
+      var scale = targetW / 390;
+      var css = '.testdrive-phone{width:' + Math.round(390 * scale) + 'px !important;height:' + Math.round(844 * scale) + 'px !important;}.testdrive-screen-scaler{transform:scale(' + scale + ') !important;transform-origin:0 0 !important;}';
+      var style = document.createElement('style');
+      style.id = 'hero-scale-early';
+      style.textContent = css;
+      document.head.appendChild(style);
+    })();
+  </script>
   <!-- PostHog Analytics -->
   <script src="../js/posthog-init.js"></script>
 </head>

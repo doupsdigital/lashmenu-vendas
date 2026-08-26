@@ -2596,7 +2596,7 @@ body.testdrive-open {
   width: 245px;
   max-width: 65vw;
   height: 530px;
-  background: #000000;
+  background: #110e10;
   border-radius: 36px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
@@ -2624,8 +2624,10 @@ body.testdrive-open {
   width: 390px;
   height: 844px;
   transform-origin: 0 0;
+  transform: scale(0.6282);
   border-radius: 36px;
   overflow: hidden;
+  background: #f2cad5;
 }
 
 .testdrive-screen-scaler iframe {
@@ -2635,7 +2637,17 @@ body.testdrive-open {
   margin: 0 !important;
   padding: 0 !important;
   display: block;
-  background: #0d0b0a;
+  background: #f2cad5;
+}
+
+@media (min-width: 600px) {
+  .testdrive-phone {
+    width: 310px;
+    height: 671px;
+  }
+  .testdrive-screen-scaler {
+    transform: scale(0.7948);
+  }
 }
 
 /* Seção Comparativa Refinada (Sem Emojis Duplicados) */
