@@ -39,6 +39,10 @@ button {
   cursor: pointer;
 }
 
+#lashmenu-loader-overlay {
+  display: none !important;
+}
+
 /* ---------- Container Mobile App Container (Snap Wrapper) ---------- */
 .mosaico-app {
   width: 100%;
