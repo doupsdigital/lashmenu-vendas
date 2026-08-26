@@ -3,6 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHeroPhoneScaler();
   initHeaderScroll();
   initScrollReveal();
   initCounters();
@@ -535,6 +536,23 @@ function initTestDriveModal() {
   }
 }
 
+/* ── 11. Hero Phone Scaler (Modelo 02 Harmonia Rosé) ────────────────────── */
+function initHeroPhoneScaler() {
+  const phone = document.querySelector('.testdrive-phone');
+  const scaler = document.querySelector('.testdrive-screen-scaler');
+  if (!phone || !scaler) return;
 
+  function updateScale() {
+    const maxW = Math.min(window.innerWidth * 0.88, 350);
+    const scale = maxW / 390;
+    scaler.style.transform = `scale(${scale})`;
+    phone.style.width = `${390 * scale}px`;
+    phone.style.height = `${844 * scale}px`;
+  }
 
-
+  window.addEventListener('resize', updateScale);
+  updateScale();
+  setTimeout(updateScale, 50);
+  setTimeout(updateScale, 250);
+  setTimeout(updateScale, 800);
+}
