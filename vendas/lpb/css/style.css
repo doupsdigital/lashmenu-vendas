@@ -3066,31 +3066,27 @@ body.testdrive-open {
   margin-top: 14px;
 }
 
-/* ── MOCKUP DO IPHONE NATIVO DE 390px COM SCALER MATEMÁTICO (MODELO 02 HARMONIA ROSÉ) ── */
+/* ── MOCKUP DO IPHONE NATIVO DE 390px COM SCALER MATEMÁTICO ── */
 .hero-phone-wrap {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 10px 0;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .testdrive-phone {
   position: relative;
-  width: 390px;
-  max-width: 90vw;
-  height: 844px;
+  width: 245px;
+  max-width: 65vw;
+  height: 530px;
   background: #000000;
-  border: 5px solid #000000;
-  border-radius: 46px;
+  border-radius: 36px;
   overflow: hidden;
-  clip-path: inset(0 round 40px);
-  -webkit-clip-path: inset(0 round 40px);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   margin: 0 auto;
-  transform-origin: top center;
 }
 
 .testdrive-notch {
@@ -3098,11 +3094,11 @@ body.testdrive-open {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 90px;
-  height: 16px;
+  width: 75px;
+  height: 13px;
   background: #000000;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   z-index: 100;
   pointer-events: none;
 }
@@ -3113,23 +3109,19 @@ body.testdrive-open {
   left: 0;
   width: 390px;
   height: 844px;
-  transform-origin: top left;
-  border-radius: 34px;
+  transform-origin: 0 0;
+  border-radius: 36px;
   overflow: hidden;
-  clip-path: inset(0 round 34px);
-  -webkit-clip-path: inset(0 round 34px);
 }
 
 .testdrive-screen-scaler iframe {
   width: 390px !important;
   height: 844px !important;
-  border: none;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
   display: block;
   background: #0d0b0a;
-  border-radius: 34px;
-  overflow: hidden;
-  clip-path: inset(0 round 34px);
-  -webkit-clip-path: inset(0 round 34px);
 }
 
 /* Seção Comparativa Refinada (Sem Emojis Duplicados) */
