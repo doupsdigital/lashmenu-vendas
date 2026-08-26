@@ -2983,33 +2983,81 @@ body.testdrive-open {
    NOVA ESTRUTURA ENXUTA & MOCKUP REAL DO LASHMENU (LPB REFINADO)
    ========================================================================== */
 
-/* Top Bar */
+/* Top Bar (Barra em Linha Única) */
 .top-announcement-bar {
   background: var(--accent);
   color: #ffffff;
-  padding: 8px 16px;
-  font-size: 0.82rem;
-  text-align: center;
+  padding: 8px 0;
+  box-shadow: 0 3px 14px rgba(192, 75, 107, 0.22);
 }
-.flex-center {
+
+.announcement-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  line-height: 1.2;
 }
-.social-proof-avatars {
-  display: flex;
+
+.topbar-avatars {
+  display: inline-flex;
   align-items: center;
 }
-.spa-avatar {
+
+.topbar-avatar {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  object-fit: cover;
   border: 1.5px solid #ffffff;
-  margin-left: -8px;
+  margin-left: -7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.spa-avatar:first-child { margin-left: 0; }
+
+.topbar-avatar:first-child {
+  margin-left: 0;
+}
+
+.topbar-stars {
+  color: #fcd34d;
+  font-size: 0.76rem;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.announcement-text {
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.announcement-text strong {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .top-announcement-bar {
+    padding: 7px 0;
+  }
+  .announcement-content {
+    gap: 6px;
+  }
+  .topbar-avatar {
+    width: 20px;
+    height: 20px;
+  }
+  .topbar-stars {
+    font-size: 0.7rem;
+  }
+  .announcement-text {
+    font-size: 0.72rem;
+  }
+}
 
 .hero-swipe-hint {
   font-size: 0.83rem;
