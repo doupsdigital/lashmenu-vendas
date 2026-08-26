@@ -536,23 +536,28 @@ function initTestDriveModal() {
   }
 }
 
-/* ── 11. Hero Phone Scaler (Modelo 02 Harmonia Rosé) ────────────────────── */
+/* ── 11. Hero Phone Scaler (Modelo 02 Harmonia Rosé - Calibração Fina) ──── */
 function initHeroPhoneScaler() {
   const phone = document.querySelector('.testdrive-phone');
   const scaler = document.querySelector('.testdrive-screen-scaler');
   if (!phone || !scaler) return;
 
   function updateScale() {
-    const maxW = Math.min(window.innerWidth * 0.88, 350);
-    const scale = maxW / 390;
+    const isMobile = window.innerWidth <= 480;
+    // No celular: 72% da largura da tela (máximo 280px) para ter margens laterais confortáveis
+    // No desktop: 330px
+    const targetW = isMobile ? Math.min(window.innerWidth * 0.72, 280) : 330;
+    const scale = targetW / 390;
+
     scaler.style.transform = `scale(${scale})`;
-    phone.style.width = `${390 * scale}px`;
-    phone.style.height = `${844 * scale}px`;
+    phone.style.width = `${Math.round(390 * scale)}px`;
+    phone.style.height = `${Math.round(844 * scale)}px`;
   }
 
   window.addEventListener('resize', updateScale);
+  window.addEventListener('orientationchange', updateScale);
   updateScale();
   setTimeout(updateScale, 50);
-  setTimeout(updateScale, 250);
-  setTimeout(updateScale, 800);
+  setTimeout(updateScale, 200);
+  setTimeout(updateScale, 600);
 }
