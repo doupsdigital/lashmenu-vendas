@@ -7,12 +7,12 @@
     { "source": "/catalogo", "destination": "/catalogo/index.html" },
     { "source": "/form", "destination": "/vendas/form/index.html" },
     { "source": "/form/:path*", "destination": "/vendas/form/:path*" },
-    { "source": "/formulario", "destination": "/vendas/formulario/index.html" },
-    { "source": "/formulario/:path*", "destination": "/vendas/formulario/:path*" },
+    { "source": "/formulario", "destination": "/formulario/index.html" },
+    { "source": "/formulario/:path*", "destination": "/formulario/:path*" },
     { "source": "/vendas/form", "destination": "/vendas/form/index.html" },
     { "source": "/vendas/form/:path*", "destination": "/vendas/form/:path*" },
-    { "source": "/vendas/formulario", "destination": "/vendas/formulario/index.html" },
-    { "source": "/vendas/formulario/:path*", "destination": "/vendas/formulario/:path*" },
+    { "source": "/vendas/formulario", "destination": "/formulario/index.html" },
+    { "source": "/vendas/formulario/:path*", "destination": "/formulario/:path*" },
     { "source": "/", "destination": "/vendas/lpb/index.html" },
     { "source": "/:slug", "destination": "/clientes/:slug/index.html" }
   ]
