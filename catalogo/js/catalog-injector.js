@@ -205,7 +205,6 @@
       const heroWrap = document.querySelector('.hero__foto-wrap, .capa__foto-wrap');
       if (heroWrap) {
         heroWrap.style.willChange = 'transform';
-        heroWrap.style.transform = 'translateZ(0)';
         if (order.cover_media_type === 'video') {
           heroWrap.innerHTML = `<video class="hero__foto hero__video" src="${order.cover_media_url}" autoplay muted loop playsinline preload="auto"></video>`;
         } else {

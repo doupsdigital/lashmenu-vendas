@@ -67,10 +67,10 @@ catalogModels.forEach(model => {
 
     // Trava de animação de zoom da capa
     if (model.startsWith('harmonia') || model.startsWith('classico')) {
-      if (!css.includes('.hero.is-visible .hero__foto-wrap')) {
-        logErr(`${model}/css/style.css não possui '.hero.is-visible .hero__foto-wrap', o que quebra o zoom Kenburns da Capa!`);
+      if (!css.includes('heroKenBurns')) {
+        logErr(`${model}/css/style.css não possui a animação 'heroKenBurns', o que quebra o zoom suave contínuo da Capa!`);
       } else {
-        logOk(`${model}: Efeito suave de zoom na capa configurado.`);
+        logOk(`${model}: Animação contínua de zoom Ken Burns na capa configurada.`);
       }
     } else {
       logOk(`${model}: Estrutura de animação Glamour verificada.`);

@@ -90,14 +90,37 @@ button {
 .delay-6 { transition-delay: 0.70s; }
 
 /* Background Photo Subtle Zoom Effect */
-.hero__foto-wrap,
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.hero__foto-wrap {
+  position: absolute;
+  inset: -6%;
+  overflow: hidden;
+}
+
+.hero__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 6% 18%;
+  filter: saturate(1.08) contrast(1.06) brightness(0.97);
+  animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  will-change: transform;
+}
+
 .secao-orientacoes__foto-wrap,
 .secao-contato__foto-wrap {
   transition: transform 10s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
 }
 
-.hero.is-visible .hero__foto-wrap,
 .secao-orientacoes.is-visible .secao-orientacoes__foto-wrap,
 .secao-contato.is-visible .secao-contato__foto-wrap {
   transform: scale(1.06);
