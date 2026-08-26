@@ -6,13 +6,13 @@
     { "source": "/catalogo/:slug", "destination": "/catalogo/index.html?slug=:slug" },
     { "source": "/catalogo", "destination": "/catalogo/index.html" },
     { "source": "/form", "destination": "/vendas/form/index.html" },
-    { "source": "/form/:path*", "destination": "/vendas/form/:path*" },
+    { "source": "/form/:path*", "destination": "/vendas/form/index.html" },
     { "source": "/formulario", "destination": "/formulario/index.html" },
-    { "source": "/formulario/:path*", "destination": "/formulario/:path*" },
+    { "source": "/formulario/:path*", "destination": "/formulario/index.html" },
     { "source": "/vendas/form", "destination": "/vendas/form/index.html" },
-    { "source": "/vendas/form/:path*", "destination": "/vendas/form/:path*" },
+    { "source": "/vendas/form/:path*", "destination": "/vendas/form/index.html" },
     { "source": "/vendas/formulario", "destination": "/formulario/index.html" },
-    { "source": "/vendas/formulario/:path*", "destination": "/formulario/:path*" },
+    { "source": "/vendas/formulario/:path*", "destination": "/formulario/index.html" },
     { "source": "/", "destination": "/vendas/lpb/index.html" },
     { "source": "/:slug", "destination": "/clientes/:slug/index.html" }
   ]
