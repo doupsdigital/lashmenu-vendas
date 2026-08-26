@@ -532,7 +532,7 @@ function initTestDriveModal() {
   }
 }
 
-/* ── 11. Hero Phone Scaler (Modelo 02 Harmonia Rosé - Calibração Fina) ──── */
+/* ── 11. Hero Phone Scaler (Modelo 02 Harmonia Rosé - Calibração Compacta) ── */
 function initHeroPhoneScaler() {
   const phone = document.querySelector('.testdrive-phone');
   const scaler = document.querySelector('.testdrive-screen-scaler');
@@ -540,9 +540,9 @@ function initHeroPhoneScaler() {
 
   function updateScale() {
     const isMobile = window.innerWidth <= 480;
-    // No celular: 72% da largura da tela (máximo 280px) para ter margens laterais confortáveis
-    // No desktop: 330px
-    const targetW = isMobile ? Math.min(window.innerWidth * 0.72, 280) : 330;
+    // No celular: 62% da tela (máximo 245px) para deixar amplas laterais para rolar a landing page
+    // No desktop: 310px
+    const targetW = isMobile ? Math.min(window.innerWidth * 0.62, 245) : 310;
     const scale = targetW / 390;
 
     scaler.style.transform = `scale(${scale})`;
@@ -553,7 +553,7 @@ function initHeroPhoneScaler() {
   window.addEventListener('resize', updateScale);
   window.addEventListener('orientationchange', updateScale);
   updateScale();
-  setTimeout(updateScale, 50);
-  setTimeout(updateScale, 200);
-  setTimeout(updateScale, 600);
+  setTimeout(updateScale, 30);
+  setTimeout(updateScale, 150);
+  setTimeout(updateScale, 500);
 }

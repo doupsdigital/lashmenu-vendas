@@ -855,6 +855,8 @@ button {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .modal-detalhe[hidden] {
@@ -873,9 +875,10 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 480px;
+  max-width: 100%;
   max-height: 88vh;
   overflow-y: auto;
+  overflow-x: hidden;
   background: #f2cad5;
   border-radius: 22px 22px 0 0;
   box-shadow: 0 -10px 40px rgba(70, 25, 40, 0.25);
