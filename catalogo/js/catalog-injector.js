@@ -237,17 +237,13 @@
           const rawMaint = svc.maintenance ? svc.maintenance.toString().trim() : '';
           const formattedMaint = rawMaint ? (rawMaint.startsWith('R$') ? rawMaint : `R$ ${rawMaint}`) : 'Sob consulta';
 
-          // Categorização inteligente do procedimento para os filtros do modelo Harmonia
+          // Categorização inteligente do procedimento para os filtros do modelo Harmonia (Apenas Cílios e Sobrancelhas)
           let catSlug = 'volumes';
           const catLower = (svc.category || '').toLowerCase();
           const nameLower = (svc.name || '').toLowerCase();
 
-          if (catLower.includes('sobrancelha') || nameLower.includes('sobrancelha') || nameLower.includes('henna') || nameLower.includes('rena')) {
+          if (catLower.includes('sobrancelha') || nameLower.includes('sobrancelha') || nameLower.includes('henna') || nameLower.includes('rena') || nameLower.includes('brow')) {
             catSlug = 'sobrancelhas';
-          } else if (catLower.includes('mapping') || nameLower.includes('mapping') || nameLower.includes('fox eyes')) {
-            catSlug = 'mapping';
-          } else if (catLower.includes('especial') || catLower.includes('cuidado') || nameLower.includes('lifting') || nameLower.includes('remocao') || nameLower.includes('remoção')) {
-            catSlug = 'especiais';
           } else {
             catSlug = 'volumes';
           }
@@ -298,14 +294,12 @@
         const labelsMap = {
           todos: 'Todos',
           volumes: 'Extensões & Volumes',
-          sobrancelhas: 'Design de Sobrancelhas',
-          mapping: 'Mappings de Olhar',
-          especiais: 'Especiais & Cuidados'
+          sobrancelhas: 'Design de Sobrancelhas'
         };
 
         let navHtml = `<button type="button" class="filtro-chip is-ativo" data-filter="todos">Todos (${counts.todos})</button>`;
         
-        ['volumes', 'sobrancelhas', 'mapping', 'especiais'].forEach(catKey => {
+        ['volumes', 'sobrancelhas'].forEach(catKey => {
           if (counts[catKey] > 0) {
             navHtml += `<button type="button" class="filtro-chip" data-filter="${catKey}">${labelsMap[catKey]} (${counts[catKey]})</button>`;
           }
