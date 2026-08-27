@@ -2,6 +2,9 @@
 
 Bem-vindo à base de conhecimento e diretrizes operacionais do ecossistema **LashMenu**.
 
+## 🧭 Guia Geral de Estrutura
+- 🌳 [**Organização & Estrutura Visual do Projeto**](file:///docs/ORGANIZACAO_DO_PROJETO.md) — Mapa visual completo das pastas, hierarquia e responsabilidades.
+
 ---
 
 ## 🏛️ 1. Arquitetura & Engenharia (`docs/arquitetura/`)
