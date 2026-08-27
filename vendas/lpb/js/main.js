@@ -433,7 +433,7 @@ function initTestDriveModal() {
 
   if (!modal || !iframe) return;
 
-  const DEMO_URL = '../../glamour-midnight/index.html?interactive=1&v=2026';
+  const DEMO_URL = '../../modelos/glamour-midnight/index.html?interactive=1&v=2026';
 
   function updateIframeScale() {
     const phone = modal.querySelector('.testdrive-phone');

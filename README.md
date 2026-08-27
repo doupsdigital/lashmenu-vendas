@@ -14,13 +14,15 @@
 │   ├── 📁 marketing/          # Planos comerciais, automação de anúncios e funis
 │   └── 📁 estrategia/         # Visão geral de produto e carreira
 │
+├── 📁 modelos/                # Modelos Oficiais de Catálogo (Classico, Harmonia, Glamour)
+│   ├── 📁 classico-rose/
+│   ├── 📁 classico-midnight/
+│   ├── 📁 harmonia-rose/
+│   ├── 📁 harmonia-midnight/
+│   ├── 📁 glamour-rose/
+│   └── 📁 glamour-midnight/
+│
 ├── 📁 catalogo/               # Motor de roteamento por subdomínio e catalog-injector.js
-├── 📁 classico-rose/          # Modelo Oficial: Clássico Rosé
-├── 📁 classico-midnight/      # Modelo Oficial: Clássico Midnight
-├── 📁 harmonia-rose/          # Modelo Oficial: Harmonia Rosé
-├── 📁 harmonia-midnight/      # Modelo Oficial: Harmonia Midnight
-├── 📁 glamour-rose/           # Modelo Oficial: Glamour Rosé
-├── 📁 glamour-midnight/       # Modelo Oficial: Glamour Midnight
 ├── 📁 clientes/               # Catálogos estáticos / Ejeção VIP Concierge
 ├── 📁 admin/                  # Painel administrativo e editor de procedimentos
 ├── 📁 formulario/             # Formulário de onboarding e personalização do catálogo

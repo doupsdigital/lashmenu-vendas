@@ -1,19 +1,116 @@
 {
   "rewrites": [
-    { "source": "/admin", "destination": "/admin/index.html" },
-    { "source": "/admin/:path*", "destination": "/admin/:path*" },
-    { "source": "/c/:slug", "destination": "/catalogo/index.html?slug=:slug" },
-    { "source": "/catalogo/:slug", "destination": "/catalogo/index.html?slug=:slug" },
-    { "source": "/catalogo", "destination": "/catalogo/index.html" },
-    { "source": "/form", "destination": "/vendas/form/index.html" },
-    { "source": "/form/:path*", "destination": "/vendas/form/index.html" },
-    { "source": "/formulario", "destination": "/formulario/index.html" },
-    { "source": "/formulario/:path*", "destination": "/formulario/index.html" },
-    { "source": "/vendas/form", "destination": "/vendas/form/index.html" },
-    { "source": "/vendas/form/:path*", "destination": "/vendas/form/index.html" },
-    { "source": "/vendas/formulario", "destination": "/formulario/index.html" },
-    { "source": "/vendas/formulario/:path*", "destination": "/formulario/index.html" },
-    { "source": "/", "destination": "/vendas/lpb/index.html" },
-    { "source": "/:slug", "destination": "/clientes/:slug/index.html" }
+    {
+      "source": "/admin",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/admin/:path*"
+    },
+    {
+      "source": "/c/:slug",
+      "destination": "/catalogo/index.html?slug=:slug"
+    },
+    {
+      "source": "/catalogo/:slug",
+      "destination": "/catalogo/index.html?slug=:slug"
+    },
+    {
+      "source": "/catalogo",
+      "destination": "/catalogo/index.html"
+    },
+    {
+      "source": "/form",
+      "destination": "/vendas/form/index.html"
+    },
+    {
+      "source": "/form/:path*",
+      "destination": "/vendas/form/index.html"
+    },
+    {
+      "source": "/formulario",
+      "destination": "/formulario/index.html"
+    },
+    {
+      "source": "/formulario/:path*",
+      "destination": "/formulario/index.html"
+    },
+    {
+      "source": "/vendas/form",
+      "destination": "/vendas/form/index.html"
+    },
+    {
+      "source": "/vendas/form/:path*",
+      "destination": "/vendas/form/index.html"
+    },
+    {
+      "source": "/vendas/formulario",
+      "destination": "/formulario/index.html"
+    },
+    {
+      "source": "/vendas/formulario/:path*",
+      "destination": "/formulario/index.html"
+    },
+    {
+      "source": "/harmonia-rose/:path*",
+      "destination": "/modelos/harmonia-rose/:path*"
+    },
+    {
+      "source": "/harmonia-rose",
+      "destination": "/modelos/harmonia-rose/index.html"
+    },
+    {
+      "source": "/harmonia-midnight/:path*",
+      "destination": "/modelos/harmonia-midnight/:path*"
+    },
+    {
+      "source": "/harmonia-midnight",
+      "destination": "/modelos/harmonia-midnight/index.html"
+    },
+    {
+      "source": "/glamour-rose/:path*",
+      "destination": "/modelos/glamour-rose/:path*"
+    },
+    {
+      "source": "/glamour-rose",
+      "destination": "/modelos/glamour-rose/index.html"
+    },
+    {
+      "source": "/glamour-midnight/:path*",
+      "destination": "/modelos/glamour-midnight/:path*"
+    },
+    {
+      "source": "/glamour-midnight",
+      "destination": "/modelos/glamour-midnight/index.html"
+    },
+    {
+      "source": "/classico-rose/:path*",
+      "destination": "/modelos/classico-rose/:path*"
+    },
+    {
+      "source": "/classico-rose",
+      "destination": "/modelos/classico-rose/index.html"
+    },
+    {
+      "source": "/classico-midnight/:path*",
+      "destination": "/modelos/classico-midnight/:path*"
+    },
+    {
+      "source": "/classico-midnight",
+      "destination": "/modelos/classico-midnight/index.html"
+    },
+    {
+      "source": "/modelos/:path*",
+      "destination": "/modelos/:path*"
+    },
+    {
+      "source": "/",
+      "destination": "/vendas/lpb/index.html"
+    },
+    {
+      "source": "/:slug",
+      "destination": "/clientes/:slug/index.html"
+    }
   ]
 }

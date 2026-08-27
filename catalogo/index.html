@@ -220,7 +220,7 @@
         }
 
         // Redireciona para o modelo oficial intacto passando o slug
-        window.location.replace(`../${targetFolder}/?slug=${encodeURIComponent(slug)}`);
+        window.location.replace(`../modelos/${targetFolder}/?slug=${encodeURIComponent(slug)}`);
 
       } catch (e) {
         const foundManual = await checkManualClientAndRedirect(slug);

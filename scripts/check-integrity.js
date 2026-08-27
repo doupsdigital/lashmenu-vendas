@@ -54,32 +54,32 @@ htmlFiles.forEach(file => {
 // 2. Verificar integridade das animações nos modelos de catálogo
 const catalogModels = ['harmonia-rose', 'harmonia-midnight', 'glamour-rose', 'glamour-midnight', 'classico-rose', 'classico-midnight'];
 catalogModels.forEach(model => {
-  const cssPath = path.join(ROOT, model, 'css', 'style.css');
+  const cssPath = path.join(ROOT, 'modelos', model, 'css', 'style.css');
   if (fs.existsSync(cssPath)) {
     const css = fs.readFileSync(cssPath, 'utf8');
     
     // Trava de animação de texto no Hero
     if (css.includes('.hero .anim-fade-up,')) {
-      logErr(`${model}/css/style.css contém '.hero .anim-fade-up,', o que quebra a animação de entrada escalonada dos textos da capa!`);
+      logErr(`modelos/${model}/css/style.css contém '.hero .anim-fade-up,', o que quebra a animação de entrada escalonada dos textos da capa!`);
     } else {
-      logOk(`${model}: Animações de fade escalonado dos textos intactas.`);
+      logOk(`modelos/${model}: Animações de fade escalonado dos textos intactas.`);
     }
 
     // Trava de animação de zoom da capa
     if (model.startsWith('harmonia') || model.startsWith('classico')) {
       if (!css.includes('heroKenBurns')) {
-        logErr(`${model}/css/style.css não possui a animação 'heroKenBurns', o que quebra o zoom suave contínuo da Capa!`);
+        logErr(`modelos/${model}/css/style.css não possui a animação 'heroKenBurns', o que quebra o zoom suave contínuo da Capa!`);
       } else {
-        logOk(`${model}: Animação contínua de zoom Ken Burns na capa configurada.`);
+        logOk(`modelos/${model}: Animação contínua de zoom Ken Burns na capa configurada.`);
       }
     } else {
-      logOk(`${model}: Estrutura de animação Glamour verificada.`);
+      logOk(`modelos/${model}: Estrutura de animação Glamour verificada.`);
     }
   }
 
   // 3. Verificar imagens fundamentais de catálogo
-  const heroJpg = path.join(ROOT, model, 'assets', 'img', 'hero.jpg');
-  const heroPng = path.join(ROOT, model, 'assets', 'img', 'Hero.png');
+  const heroJpg = path.join(ROOT, 'modelos', model, 'assets', 'img', 'hero.jpg');
+  const heroPng = path.join(ROOT, 'modelos', model, 'assets', 'img', 'Hero.png');
   if (fs.existsSync(heroJpg)) {
     const size = fs.statSync(heroJpg).size;
     if (size < 150000) {

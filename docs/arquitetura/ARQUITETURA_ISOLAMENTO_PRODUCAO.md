@@ -7,7 +7,7 @@ Este documento estabelece as **Regras Rígidas de Isolamento** no repositório u
 ## 🏛️ As Camadas do Repositório
 
 ### 🔴 Camada 1: Modelos & Produção das Clientes (Área Sagrada / Imutável)
-- **Caminhos:** `catalogo/`, `classico-rose/`, `classico-midnight/`, `harmonia-rose/`, `harmonia-midnight/`, `glamour-rose/`, `glamour-midnight/`.
+- **Caminhos:** `catalogo/`, `modelos/classico-rose/`, `modelos/classico-midnight/`, `modelos/harmonia-rose/`, `modelos/harmonia-midnight/`, `modelos/glamour-rose/`, `modelos/glamour-midnight/`.
 - **Clientes Estáticos (Ejeção VIP):** `clientes/*`.
 - **Regra:** NENHUM código de teste, mockup, auto-tour, bloqueio de clique ou script experimental pode ser inserido nesta camada.
 - **Injetor:** `catalogo/js/catalog-injector.js` é o motor oficial e opera exclusivamente preenchendo os dados vindos do Supabase de forma cirúrgica e segura.
