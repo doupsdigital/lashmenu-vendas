@@ -252,6 +252,29 @@
             catSlug = 'volumes';
           }
 
+          const specs = [];
+          if (formattedPrice && formattedPrice !== 'Consulte') {
+            specs.push(['Investimento', formattedPrice]);
+          } else if (svc.price && svc.price.toString().trim()) {
+            specs.push(['Investimento', formattedPrice]);
+          }
+
+          if (svc.maintenance && svc.maintenance.toString().trim()) {
+            specs.push(['Manutenção', formattedMaint]);
+          }
+
+          if (svc.duration && svc.duration.toString().trim()) {
+            specs.push(['Duração', svc.duration.toString().trim()]);
+          }
+
+          if (svc.effect && svc.effect.toString().trim()) {
+            specs.push(['Efeito', svc.effect.toString().trim()]);
+          }
+
+          if (svc.recommendation && svc.recommendation.toString().trim()) {
+            specs.push(['Recomendação', svc.recommendation.toString().trim()]);
+          }
+
           targetArray.push({
             id: `proc_${i}`,
             img: svc.photo_url || 'assets/img/hero.jpg',
@@ -263,13 +286,7 @@
             preco: formattedPrice,
             duracao: svc.duration || '1h30',
             desc: svc.description || 'Aplicação minuciosa com fios de alta tecnologia para um acabamento marcante e duradouro.',
-            specs: [
-              ['Investimento', formattedPrice],
-              ['Manutenção Pontual', formattedMaint],
-              ['Duração em Cabine', svc.duration || '1h30'],
-              ['Efeito', svc.effect || 'Preenchimento e realce do olhar'],
-              ['Recomendação', svc.recommendation || 'Manutenção recomendada a cada 15-20 dias']
-            ]
+            specs: specs
           });
         });
       }

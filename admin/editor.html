@@ -446,6 +446,65 @@
       display: block;
     }
 
+    /* Estilos de remoção e adição de campos de especificações */
+    .field-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .field-header-row label {
+      margin-bottom: 0;
+    }
+    .btn-remove-field {
+      background: none;
+      border: none;
+      color: #ff6b6b;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .btn-remove-field:hover {
+      opacity: 1;
+      background: rgba(255, 107, 107, 0.12);
+    }
+    .add-fields-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+      margin-top: 6px;
+    }
+    .add-fields-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      width: 100%;
+      margin-bottom: 2px;
+    }
+    .btn-add-spec-chip {
+      background: rgba(229, 169, 184, 0.08);
+      border: 1px dashed var(--accent);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-add-spec-chip:hover {
+      background: var(--accent);
+      color: #0d0b0a;
+      border-style: solid;
+    }
+
     /* ── Modal de Sucesso Centrado ── */
     .success-modal-overlay {
       position: fixed;
@@ -862,6 +921,26 @@
       }
     }
 
+    // Função global para ocultar/limpar ou exibir campos opcionais
+    window.toggleField = function(el, fgClass, inputClass, show) {
+      const card = el.closest('.service-item-card');
+      if (!card) return;
+      const fg = card.querySelector('.' + fgClass);
+      const input = card.querySelector('.' + inputClass);
+      const chipClass = fgClass.replace('fg-', 'btn-chip-');
+      const chip = card.querySelector('.' + chipClass);
+
+      if (show) {
+        if (fg) fg.style.display = '';
+        if (chip) chip.style.display = 'none';
+        if (input) input.focus();
+      } else {
+        if (fg) fg.style.display = 'none';
+        if (input) input.value = '';
+        if (chip) chip.style.display = '';
+      }
+    };
+
     // Renderiza a lista de serviços do formulário
     function renderServicesList() {
       servicesListContainer.innerHTML = '';
@@ -870,11 +949,16 @@
         row.className = 'service-item-card';
         const photoUrl = svc.photo_url || '';
 
+        const hasDuration = Boolean(svc.duration && svc.duration.trim());
+        const hasMaintenance = Boolean(svc.maintenance && svc.maintenance.trim());
+        const hasEffect = Boolean(svc.effect && svc.effect.trim());
+        const hasRecommendation = Boolean(svc.recommendation && svc.recommendation.trim());
+
         row.innerHTML = `
           <div class="service-card-header">
             <span class="service-index-label">PROCEDIMENTO #${index + 1}</span>
             <button type="button" class="btn-delete-service" onclick="removeServiceRow(${index})">
-              ✕ Excluir
+              ✕ Excluir Procedimento
             </button>
           </div>
           <div class="form-grid">
@@ -884,22 +968,37 @@
             </div>
             <div class="form-group">
               <label>Categoria (Subtítulo)</label>
-              <input type="text" class="svc-category" value="${svc.category || ''}" placeholder="Ex: Fio a Fio" required>
+              <input type="text" class="svc-category" value="${svc.category || ''}" placeholder="Ex: Fio a Fio ou Design de Sobrancelhas" required>
             </div>
             <div class="form-group">
               <label>Investimento (Preço)</label>
               <input type="text" class="svc-price" value="${svc.price || ''}" placeholder="Ex: 190,00" required>
             </div>
-            <div class="form-group">
-              <label>Duração em Cabine</label>
-              <input type="text" class="svc-duration" value="${svc.duration || ''}" placeholder="Ex: 1h45" required>
+
+            <!-- DURAÇÃO -->
+            <div class="form-group fg-duration" ${!hasDuration ? 'style="display:none;"' : ''}>
+              <div class="field-header-row">
+                <label>Duração</label>
+                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-duration', 'svc-duration', false)">✕ Remover</button>
+              </div>
+              <input type="text" class="svc-duration" value="${svc.duration || ''}" placeholder="Ex: 1h45">
             </div>
-            <div class="form-group">
-              <label>Manutenção (Preço)</label>
+
+            <!-- MANUTENÇÃO -->
+            <div class="form-group fg-maintenance" ${!hasMaintenance ? 'style="display:none;"' : ''}>
+              <div class="field-header-row">
+                <label>Manutenção</label>
+                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', false)">✕ Remover</button>
+              </div>
               <input type="text" class="svc-maintenance" value="${svc.maintenance || ''}" placeholder="Ex: 110,00 (até 20 dias)">
             </div>
-            <div class="form-group">
-              <label>Efeito Visual</label>
+
+            <!-- EFEITO VISUAL -->
+            <div class="form-group fg-effect" ${!hasEffect ? 'style="display:none;"' : ''}>
+              <div class="field-header-row">
+                <label>Efeito Visual</label>
+                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-effect', 'svc-effect', false)">✕ Remover</button>
+              </div>
               <input type="text" class="svc-effect" value="${svc.effect || ''}" placeholder="Ex: Volume marcante e alongado">
             </div>
 
@@ -922,13 +1021,27 @@
               </div>
             </div>
 
-            <div class="form-group full-width">
-              <label>Recomendação pós-aplicação</label>
+            <!-- RECOMENDAÇÃO -->
+            <div class="form-group full-width fg-recommendation" ${!hasRecommendation ? 'style="display:none;"' : ''}>
+              <div class="field-header-row">
+                <label>Recomendação pós-aplicação</label>
+                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-recommendation', 'svc-recommendation', false)">✕ Remover</button>
+              </div>
               <input type="text" class="svc-recommendation" value="${svc.recommendation || ''}" placeholder="Ex: Evitar demaquilantes à base de óleo">
             </div>
+
             <div class="form-group full-width">
               <label>Descrição do Procedimento</label>
-              <textarea class="svc-description" placeholder="Ex: Aplicação minuciosa com fios de alta tecnologia para um acabamento sofiscitado.">${svc.description || ''}</textarea>
+              <textarea class="svc-description" placeholder="Ex: Aplicação minuciosa com fios de alta tecnologia para um acabamento sofisticado.">${svc.description || ''}</textarea>
+            </div>
+
+            <!-- BARRA PARA RE-ADICIONAR CAMPOS OPCIONAIS -->
+            <div class="form-group full-width add-fields-bar">
+              <span class="add-fields-label">+ Adicionar/Ativar Campos Opcionais deste Procedimento:</span>
+              <button type="button" class="btn-add-spec-chip btn-chip-duration" onclick="toggleField(this, 'fg-duration', 'svc-duration', true)" ${hasDuration ? 'style="display:none;"' : ''}>+ Duração</button>
+              <button type="button" class="btn-add-spec-chip btn-chip-maintenance" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', true)" ${hasMaintenance ? 'style="display:none;"' : ''}>+ Manutenção</button>
+              <button type="button" class="btn-add-spec-chip btn-chip-effect" onclick="toggleField(this, 'fg-effect', 'svc-effect', true)" ${hasEffect ? 'style="display:none;"' : ''}>+ Efeito Visual</button>
+              <button type="button" class="btn-add-spec-chip btn-chip-recommendation" onclick="toggleField(this, 'fg-recommendation', 'svc-recommendation', true)" ${hasRecommendation ? 'style="display:none;"' : ''}>+ Recomendação</button>
             </div>
           </div>
         `;

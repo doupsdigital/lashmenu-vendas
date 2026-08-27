@@ -15,8 +15,8 @@ const PROCEDIMENTOS = [
     desc: 'Um fio sintético ultrafino acoplado a cada cílio natural saudável. O resultado mais elegante e discreto: olhar iluminado com efeito de rímel perfeito.',
     specs: [
       ['Investimento', 'R$ 120'],
-      ['Manutenção Pontual', 'R$ 70 (até 18 dias)'],
-      ['Duração em Cabine', '1h30'],
+      ['Manutenção', 'R$ 70 (até 18 dias)'],
+      ['Duração', '1h30'],
       ['Efeito', 'Natural, Discreto & Elegante'],
       ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
     ]
@@ -33,8 +33,8 @@ const PROCEDIMENTOS = [
     desc: 'Fios tecnológicos com formato Y que preenchem as falhas naturais com leveza incomparável, alta durabilidade e acabamento marcante.',
     specs: [
       ['Investimento', 'R$ 150'],
-      ['Manutenção Pontual', 'R$ 90 (até 20 dias)'],
-      ['Duração em Cabine', '1h30'],
+      ['Manutenção', 'R$ 90 (até 20 dias)'],
+      ['Duração', '1h30'],
       ['Efeito', 'Preenchimento, Textura & Leveza'],
       ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
     ]
@@ -50,8 +50,8 @@ const PROCEDIMENTOS = [
     desc: 'Fios especiais em formato W (3D tecnológico) que proporcionam densidade homogênea, efeito aveludado e volume equilibrado sem pesar nos olhos.',
     specs: [
       ['Investimento', 'R$ 160'],
-      ['Manutenção Pontual', 'R$ 95 (até 20 dias)'],
-      ['Duração em Cabine', '1h30'],
+      ['Manutenção', 'R$ 95 (até 20 dias)'],
+      ['Duração', '1h30'],
       ['Efeito', 'Densidade Aveludada & Uniforme'],
       ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
     ]
@@ -67,8 +67,8 @@ const PROCEDIMENTOS = [
     desc: 'A combinação artesanal entre a delicadeza do fio a fio clássico e leques de volume, criando textura multidimensional, profundidade e brilho no olhar.',
     specs: [
       ['Investimento', 'R$ 160'],
-      ['Manutenção Pontual', 'R$ 95 (até 20 dias)'],
-      ['Duração em Cabine', '1h45'],
+      ['Manutenção', 'R$ 95 (até 20 dias)'],
+      ['Duração', '1h45'],
       ['Efeito', 'Textura Desconstruída & Volume Sob Medida'],
       ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
     ]
@@ -85,8 +85,8 @@ const PROCEDIMENTOS = [
     desc: 'Técnica de alta precisão com fans ultrafinos (3 a 6 fios de seda) montados à mão na hora. Cria um volume expressivo, extremamente macio, denso e sofisticado.',
     specs: [
       ['Investimento', 'R$ 190'],
-      ['Manutenção Pontual', 'R$ 110 (até 20 dias)'],
-      ['Duração em Cabine', '2h00'],
+      ['Manutenção', 'R$ 110 (até 20 dias)'],
+      ['Duração', '2h00'],
       ['Efeito', 'Glamour, Densidade & Toque de Pluma'],
       ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
     ]
@@ -103,8 +103,8 @@ const PROCEDIMENTOS = [
     desc: 'O ápice da densidade e do impacto visual: leques artesanais com fios ultrafinos de 0.03mm. Proporciona um olhar super pretinho, aveludado e hipnotizante.',
     specs: [
       ['Investimento', 'R$ 240'],
-      ['Manutenção Pontual', 'R$ 140 (até 18 dias)'],
-      ['Duração em Cabine', '2h30'],
+      ['Manutenção', 'R$ 140 (até 18 dias)'],
+      ['Duração', '2h30'],
       ['Efeito', 'Impacto Máximo, Densidade Total & Preto Profundo'],
       ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
     ]
@@ -171,8 +171,8 @@ const PROCEDIMENTOS = [
     desc: 'O desenho de maior sucesso do estúdio: extremidade externa esticada e alinhada com mapping milimétrico para um visual sensual, moderno e marcante.',
     specs: [
       ['Investimento', 'R$ 170'],
-      ['Manutenção Pontual', 'R$ 100 (até 20 dias)'],
-      ['Duração em Cabine', '1h45'],
+      ['Manutenção', 'R$ 100 (até 20 dias)'],
+      ['Duração', '1h45'],
       ['Efeito', 'Lifting, Puxado & Olhar Felino Marcante'],
       ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
     ]
@@ -191,7 +191,7 @@ const PROCEDIMENTOS = [
     desc: 'Tratamento de curvatura, nutrição profunda com queratina e tintura preta nos seus próprios cílios naturais. Zero manutenção e durabilidade de 6 a 8 semanas.',
     specs: [
       ['Investimento', 'R$ 130'],
-      ['Duração em Cabine', '1h00'],
+      ['Duração', '1h00'],
       ['Durabilidade do Efeito', '6 a 8 semanas (acompanha o ciclo natural)'],
       ['Manutenção Diária', 'Zero manutenção — livre para usar rímel']
     ]
@@ -207,7 +207,7 @@ const PROCEDIMENTOS = [
     desc: 'Remoção química indolor realizada com gel removedor profissional específico que dissolve o adesivo sem tracionar ou danificar nenhum fio natural.',
     specs: [
       ['Investimento', 'R$ 50'],
-      ['Duração em Cabine', '30 minutos'],
+      ['Duração', '30 minutos'],
       ['Segurança', 'Preservação de 100% da integridade dos fios naturais'],
       ['Indicação', 'Remoção de extensões anteriores ou pausa']
     ]
