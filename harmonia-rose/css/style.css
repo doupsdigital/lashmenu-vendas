@@ -89,7 +89,7 @@ button {
 .delay-5 { transition-delay: 0.58s; }
 .delay-6 { transition-delay: 0.70s; }
 
-/* Background Photo Subtle Zoom Effect */
+/* Background Photo Subtle Zoom Effect (Todas as Telas com Foto) */
 @keyframes heroKenBurns {
   0% {
     transform: scale(1);
@@ -99,31 +99,36 @@ button {
   }
 }
 
-.hero__foto-wrap {
+.hero__foto-wrap,
+.secao-orientacoes__foto-wrap,
+.secao-contato__foto-wrap {
   position: absolute;
   inset: -6%;
   overflow: hidden;
+  will-change: transform;
 }
 
-.hero__foto {
+.hero__foto,
+.secao-orientacoes__foto,
+.secao-contato__foto {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 6% 18%;
   filter: saturate(1.08) contrast(1.06) brightness(0.97);
   animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
   will-change: transform;
 }
 
-.secao-orientacoes__foto-wrap,
-.secao-contato__foto-wrap {
-  transition: transform 10s cubic-bezier(0.25, 1, 0.5, 1);
-  will-change: transform;
+.hero__foto {
+  object-position: 6% 18%;
 }
 
-.secao-orientacoes.is-visible .secao-orientacoes__foto-wrap,
-.secao-contato.is-visible .secao-contato__foto-wrap {
-  transform: scale(1.06);
+.secao-orientacoes__foto {
+  object-position: 50% 30%;
+}
+
+.secao-contato__foto {
+  object-position: center 20%;
 }
 
 /* ==========================================================================
@@ -580,12 +585,10 @@ button {
   inset: -10%;
   overflow: hidden;
   will-change: transform;
-  transition: transform 10s cubic-bezier(0.25, 1, 0.5, 1);
+  
 }
 
-.secao-orientacoes.is-visible .secao-orientacoes__foto-wrap {
-  transform: scale(1.06);
-}
+
 
 .secao-orientacoes__foto {
   width: 100%;
@@ -720,7 +723,7 @@ button {
 
 .secao-contato__foto-wrap {
   position: absolute;
-  inset: 0;
+  inset: -6%;
   overflow: hidden;
 }
 

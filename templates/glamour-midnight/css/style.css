@@ -93,12 +93,27 @@ img, video { display: block; max-width: 100%; }
 .hero {
   background: #1a1614;
 }
-.hero__foto-wrap {
+/* Background Photo Subtle Zoom Effect (Todas as Telas com Foto) */
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.hero__foto-wrap,
+.procedimentos__foto-wrap,
+.agendamento__foto-wrap,
+.cuidados__foto-wrap,
+.contato__foto-wrap {
   position: absolute;
-  inset: -10%;
+  inset: -6%;
   overflow: hidden;
   will-change: transform;
 }
+
 .hero__foto,
 .procedimentos__foto,
 .agendamento__foto,
@@ -112,8 +127,17 @@ img, video { display: block; max-width: 100%; }
   max-width: none !important;
   max-height: none !important;
   object-fit: cover !important;
-  object-position: 50% 28%;
   filter: saturate(.7) contrast(1.05) brightness(.78);
+  animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  will-change: transform;
+}
+
+.hero__foto {
+  object-position: 50% 28%;
+}
+
+.contato__foto {
+  object-position: center 20%;
 }
 .hero__scrim {
   position: absolute;

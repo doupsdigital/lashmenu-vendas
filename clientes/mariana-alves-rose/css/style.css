@@ -89,15 +89,24 @@ img, video {
 }
 
 /* ==========================================================================
-   FOTOS DE FUNDO
+   FOTOS DE FUNDO & EFEITO KEN BURNS (ZOOM CONTÍNUO E SUAVE EM TODAS AS TELAS)
    ========================================================================== */
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
 .hero__foto-wrap,
 .procedimentos__foto-wrap,
 .agendamento__foto-wrap,
 .cuidados__foto-wrap,
 .contato__foto-wrap {
   position: absolute;
-  inset: -10%;
+  inset: -6%;
   overflow: hidden;
   will-change: transform;
 }
@@ -112,6 +121,8 @@ img, video {
   height: 100%;
   object-fit: cover;
   filter: saturate(1.08) contrast(1.06) brightness(0.97);
+  animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  will-change: transform;
 }
 
 .hero__foto {
