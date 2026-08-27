@@ -128,7 +128,7 @@ img, video { display: block; max-width: 100%; }
   max-height: none !important;
   object-fit: cover !important;
   filter: saturate(.7) contrast(1.05) brightness(.78);
-  animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  animation: heroKenBurns 7s ease-in-out infinite alternate;
   will-change: transform;
 }
 
@@ -865,7 +865,7 @@ img, video { display: block; max-width: 100%; }
 
 
 /* ==========================================================================
-   EFEITO KEN BURNS — ZOOM SUAVE, CONTÍNUO E VIVO (TODAS AS TELAS COM FOTO)
+   EFEITO KEN BURNS — ZOOM SUAVE, CONTÍNUO E PERCEPTÍVEL (TODAS AS TELAS COM FOTO)
    ========================================================================== */
 @keyframes heroKenBurns {
   0% {
@@ -873,8 +873,8 @@ img, video { display: block; max-width: 100%; }
     -webkit-transform: scale(1) translate3d(0, 0, 0);
   }
   100% {
-    transform: scale(1.08) translate3d(0, 0, 0);
-    -webkit-transform: scale(1.08) translate3d(0, 0, 0);
+    transform: scale(1.12) translate3d(0, 0, 0);
+    -webkit-transform: scale(1.12) translate3d(0, 0, 0);
   }
 }
 
@@ -883,7 +883,7 @@ img, video { display: block; max-width: 100%; }
     -webkit-transform: scale(1) translate3d(0, 0, 0);
   }
   100% {
-    -webkit-transform: scale(1.08) translate3d(0, 0, 0);
+    -webkit-transform: scale(1.12) translate3d(0, 0, 0);
   }
 }
 
@@ -895,7 +895,7 @@ img, video { display: block; max-width: 100%; }
 .cuidados__foto-wrap,
 .contato__foto-wrap {
   position: absolute !important;
-  inset: -6% !important;
+  inset: -8% !important;
   overflow: hidden !important;
   will-change: transform !important;
   transform: translate3d(0, 0, 0) !important;
@@ -913,8 +913,8 @@ img, video { display: block; max-width: 100%; }
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate !important;
-  -webkit-animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate !important;
+  animation: heroKenBurns 7s ease-in-out infinite alternate !important;
+  -webkit-animation: heroKenBurns 7s ease-in-out infinite alternate !important;
   transform-origin: center center !important;
   -webkit-transform-origin: center center !important;
   will-change: transform !important;
