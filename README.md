@@ -15,8 +15,13 @@
 │   └── 📁 estrategia/         # Visão geral de produto e carreira
 │
 ├── 📁 catalogo/               # Motor de roteamento por subdomínio e catalog-injector.js
-├── 📁 templates/              # Modelos oficiais estáticos de demonstração (Classico, Harmonia, Glamour)
-├── 📁 clientes/               # Catálogos estáticos de clientes de teste
+├── 📁 classico-rose/          # Modelo Oficial: Clássico Rosé
+├── 📁 classico-midnight/      # Modelo Oficial: Clássico Midnight
+├── 📁 harmonia-rose/          # Modelo Oficial: Harmonia Rosé
+├── 📁 harmonia-midnight/      # Modelo Oficial: Harmonia Midnight
+├── 📁 glamour-rose/           # Modelo Oficial: Glamour Rosé
+├── 📁 glamour-midnight/       # Modelo Oficial: Glamour Midnight
+├── 📁 clientes/               # Catálogos estáticos / Ejeção VIP Concierge
 ├── 📁 admin/                  # Painel administrativo e editor de procedimentos
 ├── 📁 formulario/             # Formulário de onboarding e personalização do catálogo
 ├── 📁 vendas/                 # Landing pages oficiais (LPA, LPB, V0, vídeos e funis)
@@ -24,7 +29,7 @@
 ├── 📁 criativos/              # Mídias e criativos de marketing (ChatGPT, Claude, Vídeos)
 ├── 📁 scripts/                # Scripts Python de automação de campanhas Meta Ads
 │
-├── 📄 index.html              # Página principal / Roteador client-side
+├── 📄 index.html              # Hub Operacional & Roteador Global
 ├── 📄 server.js               # Servidor local de desenvolvimento
 ├── 📄 vercel.json             # Regras de roteamento de produção
 └── 📄 .gitignore
