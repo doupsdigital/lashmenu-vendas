@@ -1155,6 +1155,10 @@
       statusBox.textContent = msg;
       statusBox.className = 'status-msg ' + type;
     }
+    function clearStatus() {
+      statusBox.textContent = '';
+      statusBox.className = 'status-msg';
+    }
     // Exclusão Total do Catálogo
     const btnDelete = document.getElementById('btn-delete-order');
     if (btnDelete) {
