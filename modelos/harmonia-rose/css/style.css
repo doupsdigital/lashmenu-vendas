@@ -45,8 +45,10 @@ button {
   max-width: 480px;
   margin: 0 auto;
   height: 100%;
-  background: #f2cad5; /* Rosa Claro perceptível, delicado e acetinado */
-  color: #24141a;     /* Ameixa escura / Café profundo para altíssimo contraste */
+  background: #f2cad5;
+  /* Rosa Claro perceptível, delicado e acetinado */
+  color: #24141a;
+  /* Ameixa escura / Café profundo para altíssimo contraste */
   position: relative;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
   overflow-y: auto;
@@ -66,7 +68,8 @@ button {
   font-weight: 600;
   letter-spacing: .38em;
   text-transform: uppercase;
-  color: #a93259; /* Rosa Berry */
+  color: #a93259;
+  /* Rosa Berry */
 }
 
 /* ---------- Entrance Animations & Stagger (Lento, Fluido & Sofisticado) ---------- */
@@ -82,18 +85,36 @@ button {
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.10s; }
-.delay-2 { transition-delay: 0.22s; }
-.delay-3 { transition-delay: 0.34s; }
-.delay-4 { transition-delay: 0.46s; }
-.delay-5 { transition-delay: 0.58s; }
-.delay-6 { transition-delay: 0.70s; }
+.delay-1 {
+  transition-delay: 0.10s;
+}
+
+.delay-2 {
+  transition-delay: 0.22s;
+}
+
+.delay-3 {
+  transition-delay: 0.34s;
+}
+
+.delay-4 {
+  transition-delay: 0.46s;
+}
+
+.delay-5 {
+  transition-delay: 0.58s;
+}
+
+.delay-6 {
+  transition-delay: 0.70s;
+}
 
 /* Background Photo Subtle Zoom Effect (Todas as Telas com Foto) */
 @keyframes heroKenBurns {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.08);
   }
@@ -163,14 +184,12 @@ button {
   position: absolute;
   inset: 0;
   /* Camada esfumaçada em tom rosa claro real (rgb: 242, 202, 213) */
-  background: linear-gradient(
-    180deg,
-    rgba(242, 202, 213, 0.45) 0%,
-    rgba(242, 202, 213, 0.15) 28%,
-    rgba(242, 202, 213, 0.75) 58%,
-    rgba(242, 202, 213, 0.96) 84%,
-    #f2cad5 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(242, 202, 213, 0.45) 0%,
+      rgba(242, 202, 213, 0.15) 28%,
+      rgba(242, 202, 213, 0.75) 58%,
+      rgba(242, 202, 213, 0.96) 84%,
+      #f2cad5 100%);
 }
 
 .hero__conteudo {
@@ -279,11 +298,14 @@ button {
 }
 
 @keyframes heroPulseLinha {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scaleY(0.4);
     opacity: 0.3;
     transform-origin: top;
   }
+
   50% {
     transform: scaleY(1);
     opacity: 1;
@@ -398,10 +420,12 @@ button {
     transform: translateY(45px) scale(0.93);
     filter: blur(8px);
   }
+
   50% {
     opacity: 0.85;
     filter: blur(2px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -415,9 +439,11 @@ button {
     transform: translateX(-100%) rotate(25deg);
     opacity: 0;
   }
+
   35% {
     opacity: 0.45;
   }
+
   100% {
     transform: translateX(220%) rotate(25deg);
     opacity: 0;
@@ -436,9 +462,9 @@ button {
   box-shadow: 0 8px 24px rgba(70, 25, 40, 0.12);
   aspect-ratio: 3 / 5.2;
   cursor: pointer;
-  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), 
-              border-color 0.4s ease, 
-              box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    border-color 0.4s ease,
+    box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   text-align: left;
   opacity: 0;
   transform: translateY(45px) scale(0.93);
@@ -456,12 +482,10 @@ button {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    60deg,
-    transparent 35%,
-    rgba(229, 130, 157, 0.25) 50%,
-    transparent 65%
-  );
+  background: linear-gradient(60deg,
+      transparent 35%,
+      rgba(229, 130, 157, 0.25) 50%,
+      transparent 65%);
   pointer-events: none;
   z-index: 4;
 }
@@ -503,12 +527,10 @@ button {
 .tile__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 35%,
-    rgba(36, 20, 26, 0.65) 65%,
-    rgba(36, 20, 26, 0.95) 100%
-  );
+  background: linear-gradient(180deg,
+      transparent 35%,
+      rgba(36, 20, 26, 0.65) 65%,
+      rgba(36, 20, 26, 0.95) 100%);
   pointer-events: none;
 }
 
@@ -585,7 +607,7 @@ button {
   inset: -10%;
   overflow: hidden;
   will-change: transform;
-  
+
 }
 
 
@@ -601,13 +623,11 @@ button {
 .secao-orientacoes__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(242, 202, 213, 0.92) 0%,
-    rgba(242, 202, 213, 0.48) 35%,
-    rgba(242, 202, 213, 0.96) 75%,
-    #f2cad5 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(242, 202, 213, 0.92) 0%,
+      rgba(242, 202, 213, 0.48) 35%,
+      rgba(242, 202, 213, 0.96) 75%,
+      #f2cad5 100%);
 }
 
 .secao-orientacoes__conteudo {
@@ -763,13 +783,11 @@ button {
 .secao-contato__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(242, 202, 213, 0.40) 0%,
-    rgba(242, 202, 213, 0.15) 25%,
-    rgba(242, 202, 213, 0.90) 58%,
-    #f2cad5 92%
-  );
+  background: linear-gradient(180deg,
+      rgba(242, 202, 213, 0.40) 0%,
+      rgba(242, 202, 213, 0.15) 25%,
+      rgba(242, 202, 213, 0.90) 58%,
+      #f2cad5 92%);
 }
 
 .secao-contato__conteudo {
@@ -869,9 +887,22 @@ button {
   letter-spacing: .18em;
 }
 
-.btn__left span { font-size: 11.5px; }
-.btn__icon { width: 17px; height: 17px; flex-shrink: 0; display: block; }
-.btn__arrow { font-size: 16px; line-height: 1; opacity: .85; }
+.btn__left span {
+  font-size: 11.5px;
+}
+
+.btn__icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.btn__arrow {
+  font-size: 16px;
+  line-height: 1;
+  opacity: .85;
+}
 
 .secao-contato__rodape {
   border-top: 1px solid rgba(169, 50, 89, 0.20);
@@ -1082,6 +1113,7 @@ button {
    RESPONSIVIDADE DO MODAL DE DETALHES (EVITAR ROLAGEM NO MOBILE)
    ========================================================================== */
 @media (max-width: 480px) {
+
   /* Ajuste no container do modal */
   .modal-detalhe__sheet,
   .detalhe-procedimento__sheet {
@@ -1139,6 +1171,7 @@ button {
     transform: scale(1) translate3d(0, 0, 0);
     -webkit-transform: scale(1) translate3d(0, 0, 0);
   }
+
   100% {
     transform: scale(1.12) translate3d(0, 0, 0);
     -webkit-transform: scale(1.12) translate3d(0, 0, 0);
@@ -1149,6 +1182,7 @@ button {
   0% {
     -webkit-transform: scale(1) translate3d(0, 0, 0);
   }
+
   100% {
     -webkit-transform: scale(1.12) translate3d(0, 0, 0);
   }
