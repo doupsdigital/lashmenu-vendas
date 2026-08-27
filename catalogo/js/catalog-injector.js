@@ -237,12 +237,27 @@
           const rawMaint = svc.maintenance ? svc.maintenance.toString().trim() : '';
           const formattedMaint = rawMaint ? (rawMaint.startsWith('R$') ? rawMaint : `R$ ${rawMaint}`) : 'Sob consulta';
 
+          // Categorização inteligente do procedimento para os filtros do modelo Harmonia
+          let catSlug = 'volumes';
+          const catLower = (svc.category || '').toLowerCase();
+          const nameLower = (svc.name || '').toLowerCase();
+
+          if (catLower.includes('sobrancelha') || nameLower.includes('sobrancelha') || nameLower.includes('henna') || nameLower.includes('rena')) {
+            catSlug = 'sobrancelhas';
+          } else if (catLower.includes('mapping') || nameLower.includes('mapping') || nameLower.includes('fox eyes')) {
+            catSlug = 'mapping';
+          } else if (catLower.includes('especial') || catLower.includes('cuidado') || nameLower.includes('lifting') || nameLower.includes('remocao') || nameLower.includes('remoção')) {
+            catSlug = 'especiais';
+          } else {
+            catSlug = 'volumes';
+          }
+
           targetArray.push({
             id: `proc_${i}`,
             img: svc.photo_url || 'assets/img/hero.jpg',
             alt: svc.name,
-            cat: 'todos',
-            catLabel: svc.category || 'Procedimento',
+            cat: catSlug,
+            catLabel: svc.category || (catSlug === 'sobrancelhas' ? 'Design de Sobrancelhas' : 'Extensão de Cílios'),
             nome: svc.name,
             title: svc.name,
             preco: formattedPrice,
@@ -259,10 +274,47 @@
         });
       }
 
-      // Atualiza botões de filtro no modelo Harmonia, se existirem
-      const todosBtn = document.querySelector('.filtro-chip[data-filter="todos"]');
-      if (todosBtn) {
-        todosBtn.textContent = `Todos (${services.length})`;
+      // Reconstrói dinamicamente os chips de filtro no modelo Harmonia conforme os procedimentos do cliente
+      const filterNav = document.querySelector('.mosaico__filtros');
+      if (filterNav && targetArray) {
+        const counts = { todos: targetArray.length };
+        targetArray.forEach(p => {
+          counts[p.cat] = (counts[p.cat] || 0) + 1;
+        });
+
+        const labelsMap = {
+          todos: 'Todos',
+          volumes: 'Extensões & Volumes',
+          sobrancelhas: 'Design de Sobrancelhas',
+          mapping: 'Mappings de Olhar',
+          especiais: 'Especiais & Cuidados'
+        };
+
+        let navHtml = `<button type="button" class="filtro-chip is-ativo" data-filter="todos">Todos (${counts.todos})</button>`;
+        
+        ['volumes', 'sobrancelhas', 'mapping', 'especiais'].forEach(catKey => {
+          if (counts[catKey] > 0) {
+            navHtml += `<button type="button" class="filtro-chip" data-filter="${catKey}">${labelsMap[catKey]} (${counts[catKey]})</button>`;
+          }
+        });
+
+        filterNav.innerHTML = navHtml;
+
+        // Re-atribui ouvintes de clique nos novos chips de filtro
+        const filtroBtns = filterNav.querySelectorAll('.filtro-chip');
+        filtroBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filtroBtns.forEach(b => b.classList.remove('is-ativo'));
+            btn.classList.add('is-ativo');
+            const filterVal = btn.getAttribute('data-filter');
+            window.filtroAtivo = filterVal;
+            if (typeof window.renderGrid === 'function') {
+              window.renderGrid();
+            } else if (typeof renderGrid === 'function') {
+              renderGrid();
+            }
+          });
+        });
       }
 
       // Se existir a função renderGrid (harmonia templates), re-renderiza o grid com os novos dados

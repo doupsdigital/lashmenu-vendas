@@ -238,7 +238,8 @@ const modalEl = document.querySelector('[data-modal]');
 const modalSheetEl = document.querySelector('[data-modal-sheet]');
 const modalFecharEl = document.querySelector('[data-modal-fechar]');
 
-let filtroAtivo = 'todos';
+var filtroAtivo = 'todos';
+window.filtroAtivo = filtroAtivo;
 
 // IntersectionObserver para Disparar Animações por Seção
 function initSectionObserver() {
@@ -299,8 +300,9 @@ function initTileObserver() {
 
 // Filtragem
 function getItensVisiveis() {
-  if (filtroAtivo === 'todos') return PROCEDIMENTOS;
-  return PROCEDIMENTOS.filter(item => item.cat === filtroAtivo);
+  const f = (typeof window.filtroAtivo !== 'undefined') ? window.filtroAtivo : filtroAtivo;
+  if (!f || f === 'todos') return PROCEDIMENTOS;
+  return PROCEDIMENTOS.filter(item => item.cat === f);
 }
 
 function atualizarContador() {
