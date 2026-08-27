@@ -26,6 +26,18 @@ function initWelcomeScreen() {
 
   if (!welcomeScreen || !btnStart) return;
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const isDirect = urlParams.get('direct') === '1' || urlParams.get('step') === '1' || window.location.pathname.startsWith('/formulario') || document.body.classList.contains('direct-form') || !welcomeScreen.classList.contains('is-active') || welcomeScreen.style.display === 'none';
+
+  if (isDirect) {
+    welcomeScreen.classList.remove('is-active');
+    welcomeScreen.style.display = 'none';
+    if (stepsProgress) stepsProgress.classList.remove('is-hidden');
+    if (form) form.classList.remove('is-hidden');
+    goToStep(1);
+    return;
+  }
+
   // Dispara a chuva de confetes de celebração ao abrir a tela de boas-vindas
   setTimeout(() => {
     launchCelebrationConfetti();
