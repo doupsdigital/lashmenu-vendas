@@ -952,7 +952,6 @@
         const hasDuration = Boolean(svc.duration && svc.duration.trim());
         const hasMaintenance = Boolean(svc.maintenance && svc.maintenance.trim());
         const hasEffect = Boolean(svc.effect && svc.effect.trim());
-        const hasRecommendation = Boolean(svc.recommendation && svc.recommendation.trim());
 
         row.innerHTML = `
           <div class="service-card-header">
@@ -1021,15 +1020,6 @@
               </div>
             </div>
 
-            <!-- RECOMENDAÇÃO -->
-            <div class="form-group full-width fg-recommendation" ${!hasRecommendation ? 'style="display:none;"' : ''}>
-              <div class="field-header-row">
-                <label>Recomendação pós-aplicação</label>
-                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-recommendation', 'svc-recommendation', false)">✕ Remover</button>
-              </div>
-              <input type="text" class="svc-recommendation" value="${svc.recommendation || ''}" placeholder="Ex: Evitar demaquilantes à base de óleo">
-            </div>
-
             <div class="form-group full-width">
               <label>Descrição do Procedimento</label>
               <textarea class="svc-description" placeholder="Ex: Aplicação minuciosa com fios de alta tecnologia para um acabamento sofisticado.">${svc.description || ''}</textarea>
@@ -1041,7 +1031,6 @@
               <button type="button" class="btn-add-spec-chip btn-chip-duration" onclick="toggleField(this, 'fg-duration', 'svc-duration', true)" ${hasDuration ? 'style="display:none;"' : ''}>+ Duração</button>
               <button type="button" class="btn-add-spec-chip btn-chip-maintenance" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', true)" ${hasMaintenance ? 'style="display:none;"' : ''}>+ Manutenção</button>
               <button type="button" class="btn-add-spec-chip btn-chip-effect" onclick="toggleField(this, 'fg-effect', 'svc-effect', true)" ${hasEffect ? 'style="display:none;"' : ''}>+ Efeito Visual</button>
-              <button type="button" class="btn-add-spec-chip btn-chip-recommendation" onclick="toggleField(this, 'fg-recommendation', 'svc-recommendation', true)" ${hasRecommendation ? 'style="display:none;"' : ''}>+ Recomendação</button>
             </div>
           </div>
         `;
@@ -1140,7 +1129,7 @@
           maintenance: card.querySelector('.svc-maintenance').value,
           effect: card.querySelector('.svc-effect').value,
           photo_url: card.querySelector('.svc-photo').value,
-          recommendation: card.querySelector('.svc-recommendation').value,
+          recommendation: card.querySelector('.svc-recommendation')?.value || '',
           description: card.querySelector('.svc-description').value,
           order_index: idx
         });

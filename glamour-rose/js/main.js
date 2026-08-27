@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Manutenção', 'R$ 90 (até 20 dias)'],
         ['Duração', '1h30'],
         ['Efeito', 'Preenchimento, Textura & Leveza'],
-        ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
       ],
     },
     {
@@ -80,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Manutenção', 'R$ 70 (até 18 dias)'],
         ['Duração', '1h30'],
         ['Efeito', 'Natural, Discreto & Elegante'],
-        ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
       ],
     },
     {
@@ -92,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Manutenção', 'R$ 95 (até 20 dias)'],
         ['Duração', '1h30'],
         ['Efeito', 'Densidade Aveludada & Uniforme'],
-        ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
       ],
     },
     {
@@ -104,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Manutenção', 'R$ 95 (até 20 dias)'],
         ['Duração', '1h45'],
         ['Efeito', 'Textura Desconstruída & Volume Sob Medida'],
-        ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
       ],
     },
     {
@@ -116,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Manutenção', 'R$ 110 (até 20 dias)'],
         ['Duração', '2h00'],
         ['Efeito', 'Glamour, Densidade & Toque de Pluma'],
-        ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
       ],
     },
     {
@@ -128,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Manutenção', 'R$ 140 (até 18 dias)'],
         ['Duração', '2h30'],
         ['Efeito', 'Impacto Máximo, Densidade Total & Preto Profundo'],
-        ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
       ],
     },
     {
@@ -173,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Manutenção', 'R$ 100 (até 20 dias)'],
         ['Duração', '1h45'],
         ['Efeito', 'Lifting, Puxado & Olhar Felino Marcante'],
-        ['Recomendação', 'Mínimo de 40% dos fios para manutenção']
       ],
     },
     {

@@ -326,7 +326,6 @@ const defaultServices = [
     cat: 'Extensão em Y',
     desc: 'Fios tecnológicos com formato Y que preenchem as falhas naturais com leveza incomparável, alta durabilidade e acabamento marcante.',
     effect: 'Preenchimento, Textura & Leveza',
-    recommendation: 'Mínimo de 40% dos fios para manutenção',
     photo: '/glamour-midnight/assets/img/volume-brasileiro.png'
   },
   {
@@ -337,7 +336,6 @@ const defaultServices = [
     cat: 'Fio a Fio Clássico',
     desc: 'Um fio sintético ultrafino acoplado a cada cílio natural saudável. O resultado mais elegante e discreto: olhar iluminado com efeito de rímel perfeito.',
     effect: 'Natural, Discreto & Elegante',
-    recommendation: 'Mínimo de 40% dos fios para manutenção',
     photo: '/glamour-midnight/assets/img/classico-fio-a-fio.png'
   },
   {
@@ -348,7 +346,6 @@ const defaultServices = [
     cat: 'Extensão em W',
     desc: 'Fios especiais em formato W (3D tecnológico) que proporcionam densidade homogênea, efeito aveludado e volume equilibrado sem pesar nos olhos.',
     effect: 'Densidade Aveludada & Uniforme',
-    recommendation: 'Mínimo de 40% dos fios para manutenção',
     photo: '/glamour-midnight/assets/img/volume-egipcio.png'
   },
   {
@@ -359,7 +356,6 @@ const defaultServices = [
     cat: 'Clássico + Volume',
     desc: 'A combinação artesanal entre a delicadeza do fio a fio clássico e leques de volume, criando textura multidimensional, profundidade e brilho no olhar.',
     effect: 'Textura Desconstruída & Volume Sob Medida',
-    recommendation: 'Mínimo de 40% dos fios para manutenção',
     photo: '/glamour-midnight/assets/img/volume-hibrido.png'
   },
   {
@@ -370,7 +366,6 @@ const defaultServices = [
     cat: 'Fans Artesanais 3D–6D',
     desc: 'Técnica de alta precisão com fans ultrafinos (3 a 6 fios de seda) montados à mão na hora. Cria um volume expressivo, extremamente macio, denso e sofisticado.',
     effect: 'Glamour, Densidade & Toque de Pluma',
-    recommendation: 'Mínimo de 40% dos fios para manutenção',
     photo: '/glamour-midnight/assets/img/volume-russo.png'
   },
   {
@@ -381,7 +376,6 @@ const defaultServices = [
     cat: 'Densidade Máxima 8D–12D',
     desc: 'O ápice da densidade e do impacto visual: leques artesanais com fios ultrafinos de 0.03mm. Proporciona um olhar super pretinho, aveludado e hipnotizante.',
     effect: 'Impacto Máximo, Densidade Total & Preto Profundo',
-    recommendation: 'Mínimo de 40% dos fios para manutenção',
     photo: '/glamour-midnight/assets/img/mega-volume.png'
   },
   {
@@ -392,7 +386,6 @@ const defaultServices = [
     cat: 'Mapping Estilizado',
     desc: 'Alongamento estratégico com curvaturas graduais no canto externo. Cria um efeito delineado sofisticado que eleva o olhar sem necessidade de maquiagem.',
     effect: 'Olhar Delineado, Marcante & Elevação',
-    recommendation: 'Mínimo de 40% dos fios para manutenção',
     photo: '/glamour-midnight/assets/img/fox-eyes.png'
   },
   {
@@ -403,7 +396,6 @@ const defaultServices = [
     cat: 'Tratamento Natural',
     desc: 'Curvatura e hidratação profunda dos próprios cílios naturais com tintura e queratina botox. Sem fios artificiais, durabilidade de até 6 a 8 semanas.',
     effect: 'Cílios Curvados, Pretos e Nutridos',
-    recommendation: 'Repetição recomendada a cada 45–60 dias',
     photo: '/glamour-midnight/assets/img/lash-lifting.png'
   },
   {
@@ -414,7 +406,6 @@ const defaultServices = [
     cat: 'Personalização de Olhar',
     desc: 'Consultoria de visagismo personalizada para definir o desenho ideal dos fios de acordo com o formato e proporção única dos olhos da cliente.',
     effect: 'Harmonização do Olhar',
-    recommendation: 'Definido na avaliação inicial',
     photo: '/glamour-midnight/assets/img/mapping-boneca.png'
   },
   {
@@ -425,7 +416,6 @@ const defaultServices = [
     cat: 'Remoção Segura',
     desc: 'Remoção com produto profissional dermatologicamente testado em creme/gel, preservando 100% da integridade e saúde dos cílios naturais.',
     effect: 'Desacoplamento Suave Sem Danos',
-    recommendation: 'Nunca tente remover puxando em casa',
     photo: '/glamour-midnight/assets/img/remocao.png'
   }
 ];
@@ -457,7 +447,6 @@ function initServicesBuilder() {
       cat: 'Procedimento Personalizado',
       desc: '',
       effect: '',
-      recommendation: '',
       photo: '/glamour-midnight/assets/img/volume-brasileiro.png'
     });
   });
@@ -515,10 +504,6 @@ function renderServiceRow(container, data) {
         <div class="service-mini-field">
           <label class="sm-label">Efeito Visual</label>
           <input type="text" class="sm-input service-effect" placeholder="Ex: Preenchimento, Textura & Leveza" value="${data.effect || ''}">
-        </div>
-        <div class="service-mini-field">
-          <label class="sm-label">Recomendação</label>
-          <input type="text" class="sm-input service-recommendation" placeholder="Ex: Mínimo de 40% dos fios" value="${data.recommendation || ''}">
         </div>
       </div>
       <div class="service-mini-field">
@@ -706,7 +691,6 @@ function openProcedureModal(row) {
   const catVal = row.querySelector('.service-cat')?.value || 'Extensão de Cílios';
   const descVal = row.querySelector('.service-desc')?.value || 'Procedimento profissional de embelezamento e realce do olhar.';
   const effectVal = row.querySelector('.service-effect')?.value || 'Realce e Sofisticação do Olhar';
-  const recVal = row.querySelector('.service-recommendation')?.value || 'Manutenção recomendada a cada 15 a 20 dias';
   const photoSrc = row.querySelector('.service-photo-thumb')?.src || '';
 
   const modalImg = document.getElementById('proc-modal-img');
@@ -717,7 +701,6 @@ function openProcedureModal(row) {
   const modalMaintenance = document.getElementById('proc-modal-maintenance');
   const modalDuration = document.getElementById('proc-modal-duration');
   const modalEffect = document.getElementById('proc-modal-effect');
-  const modalRec = document.getElementById('proc-modal-recommendation');
 
   if (modalImg) modalImg.src = photoSrc;
   if (modalCat) modalCat.textContent = catVal.toUpperCase();
@@ -727,7 +710,6 @@ function openProcedureModal(row) {
   if (modalMaintenance) modalMaintenance.textContent = maintenanceVal ? (maintenanceVal.startsWith('R$') || maintenanceVal === '-' || maintenanceVal === 'Incluso' ? maintenanceVal : `R$ ${maintenanceVal}`) : '-';
   if (modalDuration) modalDuration.textContent = durationVal || '1h30';
   if (modalEffect) modalEffect.textContent = effectVal;
-  if (modalRec) modalRec.textContent = recVal;
 
   modal.classList.remove('is-hidden');
   modal.setAttribute('aria-hidden', 'false');

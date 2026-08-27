@@ -271,10 +271,6 @@
             specs.push(['Efeito', svc.effect.toString().trim()]);
           }
 
-          if (svc.recommendation && svc.recommendation.toString().trim()) {
-            specs.push(['Recomendação', svc.recommendation.toString().trim()]);
-          }
-
           targetArray.push({
             id: `proc_${i}`,
             img: svc.photo_url || 'assets/img/hero.jpg',

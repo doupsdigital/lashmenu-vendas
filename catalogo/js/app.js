@@ -300,7 +300,6 @@
         const category = svc.category || 'Extensão de Cílios';
         const description = svc.description || 'Aplicação minuciosa com fios de alta tecnologia para um acabamento marcante e duradouro.';
         const effect = svc.effect || 'Preenchimento, volume e realce do olhar';
-        const recommendation = svc.recommendation || 'Manutenção recomendada de 15 a 20 dias para preservar o preenchimento perfeito.';
 
         const whatsappMsg = `Olá, ${designerName.split(' ')[0]}! Estava vendo seu catálogo digital e quero agendar: *${svc.name}* (${price}).`;
         const whatsappUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(whatsappMsg)}`;
@@ -331,8 +330,7 @@
 
             <div style="margin-bottom: 24px; line-height: 1.6; color: #d4c7bd; font-size: 0.92rem;">
               <p style="margin-bottom: 12px;"><strong>Sobre:</strong> ${description}</p>
-              <p style="margin-bottom: 12px;"><strong>Efeito:</strong> ${effect}</p>
-              <p><strong>Recomendação:</strong> ${recommendation}</p>
+              <p><strong>Efeito:</strong> ${effect}</p>
             </div>
 
             <a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn-whatsapp" style="display: flex; align-items: center; justify-content: center; width: 100%; padding: 14px; background: #25d366; color: #fff; border-radius: 100px; text-decoration: none; font-weight: 700; font-size: 0.95rem; gap: 8px;">
