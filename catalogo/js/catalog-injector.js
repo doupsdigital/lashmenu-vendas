@@ -419,8 +419,13 @@
       const instaLinks = document.querySelectorAll('a.btn-instagram, a.link-instagram, a[href*="instagram.com"]');
       instaLinks.forEach(link => {
         link.href = `https://instagram.com/${instagram}`;
-        const label = link.querySelector('span:not(.btn__arrow), p');
-        if (label) label.textContent = `@${instagram}`;
+        const textSpan = link.querySelector('.btn__left span, span > span') || Array.from(link.querySelectorAll('span')).find(s => !s.classList.contains('btn__arrow') && !s.classList.contains('btn__left') && !s.querySelector('svg'));
+        if (textSpan) {
+          textSpan.textContent = `@${instagram}`;
+        } else {
+          const fallback = link.querySelector('span:not(.btn__arrow):not(.btn__left), p');
+          if (fallback) fallback.textContent = `@${instagram}`;
+        }
       });
     }
 
