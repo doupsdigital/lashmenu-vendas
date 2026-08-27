@@ -1,30 +1,26 @@
 /* ==========================================================================
-   LASHMENU — MODELO MOSAICO ROSE (CSS PREMIUM COM EFEITO FUMAÇA ROSA CLARO)
+   LASHMENU — MODELO MOSAICO DARK (LUXURY DARK & SNAP SCROLL ANIMATIONS)
    ========================================================================== */
 
-/* ---------- Reset & Box-Sizing ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ---------- Reset & Base ---------- */
+html, body {
   margin: 0;
   padding: 0;
-}
-
-html,
-body {
-  width: 100%;
   height: 100%;
+  width: 100%;
   overflow: hidden;
-  background: #f2cad5;
-  font-family: 'Jost', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0a0807;
+  color: #24141a;
+  font-family: 'Jost', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+*, *::before, *::after {
+  box-sizing: border-box;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
 a {
@@ -32,23 +28,33 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 button {
-  font: inherit;
+  font-family: inherit;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-/* ---------- Container Mobile App Container (Snap Wrapper) ---------- */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* ---------- Shell / Scroll Snap Container ---------- */
 .mosaico-app {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
   height: 100%;
-  background: #f2cad5; /* Rosa Claro perceptível, delicado e acetinado */
-  color: #24141a;     /* Ameixa escura / Café profundo para altíssimo contraste */
+  background: #f2cad5;
   position: relative;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
   overflow-y: auto;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
@@ -62,11 +68,11 @@ button {
 
 .etiqueta {
   display: block;
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: .38em;
   text-transform: uppercase;
-  color: #a93259; /* Rosa Berry */
+  color: #a93259;
 }
 
 /* ---------- Entrance Animations & Stagger (Lento, Fluido & Sofisticado) ---------- */
@@ -114,7 +120,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(1.08) contrast(1.06) brightness(0.97);
+  filter: saturate(1.02) contrast(1.08) brightness(0.96);
   animation: heroKenBurns 7s ease-in-out infinite alternate;
   will-change: transform;
 }
@@ -132,15 +138,15 @@ button {
 }
 
 /* ==========================================================================
-   1. HERO SECTION (SNAP SCREEN 1 - FUMAÇA ROSA CLARO REAL)
+   1. HERO SECTION (SNAP SCREEN 1)
    ========================================================================== */
 .hero {
-  min-height: 100%;
-  height: 100%;
+  min-height: 100dvh;
+  height: 100dvh;
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: #f2cad5;
+  background: #14100e;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -156,20 +162,18 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: 6% 18%;
-  filter: saturate(1.08) contrast(1.06) brightness(0.97);
+  filter: saturate(1.02) contrast(1.08) brightness(0.96);
 }
 
 .hero__scrim {
   position: absolute;
   inset: 0;
-  /* Camada esfumaçada em tom rosa claro real (rgb: 242, 202, 213) */
   background: linear-gradient(
     180deg,
-    rgba(242, 202, 213, 0.45) 0%,
-    rgba(242, 202, 213, 0.15) 28%,
-    rgba(242, 202, 213, 0.75) 58%,
-    rgba(242, 202, 213, 0.96) 84%,
-    #f2cad5 100%
+    rgba(12, 10, 9, 0.35) 0%,
+    rgba(12, 10, 9, 0.15) 30%,
+    rgba(12, 10, 9, 0.72) 62%,
+    rgba(12, 10, 9, 0.94) 100%
   );
 }
 
@@ -193,14 +197,13 @@ button {
   font-weight: 600;
   letter-spacing: .38em;
   text-transform: uppercase;
-  color: #a93259;
-  background: rgba(255, 255, 255, 0.90);
+  color: #24141a;
+  background: rgba(25, 20, 17, 0.45);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: 4px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(169, 50, 89, 0.30);
-  box-shadow: 0 2px 8px rgba(70, 25, 40, 0.08);
+  border: 1px solid rgba(169, 50, 89, 0.35);
 }
 
 .hero__titulo {
@@ -208,61 +211,61 @@ button {
   flex-direction: column;
   gap: 16px;
   margin-top: auto;
-  margin-bottom: 24px;
 }
 
 .hero__titulo h1 {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 40px;
-  line-height: 1.05;
   font-weight: 400;
-  color: #24141a;
+  font-size: 44px;
+  line-height: 1.06;
   letter-spacing: -.02em;
+  color: #24141a;
 }
 
 .hero__titulo h1 em {
-  font-style: italic;
   font-weight: 400;
+  font-style: italic;
   color: #a93259;
 }
 
 .hero__filete {
-  width: 44px;
-  height: 2px;
+  width: 38px;
+  height: 1.5px;
   background: #a93259;
 }
 
 .hero__frase {
   margin: 0;
-  font-size: 13.5px;
-  line-height: 1.45;
-  color: #553d46;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #381f28;
   max-width: 320px;
 }
 
 .hero__frase-cilios {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 30px;
+  line-height: 1.16;
   font-weight: 400;
   color: #24141a;
   text-wrap: pretty;
 }
 
 .hero__frase-cilios em {
+  font-weight: 400;
   font-style: italic;
   color: #a93259;
 }
 
 .hero__scroll-cue {
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: #6e5a62;
-  text-decoration: none;
+  color: rgba(243, 239, 233, 0.65);
 }
 
 .hero__scroll-cue span {
@@ -273,48 +276,38 @@ button {
 
 .hero__scroll-linha {
   width: 1px;
-  height: 36px;
+  height: 32px;
   background: linear-gradient(180deg, #a93259, transparent);
-  animation: heroPulseLinha 2.2s infinite ease-in-out;
+  animation: cue 2.6s ease-in-out infinite;
 }
 
-@keyframes heroPulseLinha {
-  0%, 100% {
-    transform: scaleY(0.4);
-    opacity: 0.3;
-    transform-origin: top;
-  }
-  50% {
-    transform: scaleY(1);
-    opacity: 1;
-    transform-origin: top;
-  }
+@keyframes cue {
+  0%, 100% { transform: translateY(0); opacity: .55; }
+  50% { transform: translateY(9px); opacity: 1; }
 }
 
 /* ==========================================================================
-   2. SEÇÃO CATÁLOGO MOSAICO (SNAP SCREEN 2 - ROLAGEM LIVRE DENTRO DA SEÇÃO)
+   2. SEÇÃO CATÁLOGO / MOSAICO (SNAP SCREEN 2 - ROLAGEM LIVRE NO GRID)
    ========================================================================== */
 .secao-catalogo {
-  padding: 50px 0 60px;
+  min-height: 100dvh;
+  padding: 44px 0 60px;
   background: #f2cad5;
-  color: #24141a;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  position: relative;
 }
 
 .secao-catalogo__header {
+  text-align: center;
   margin-bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
 
 .secao-catalogo__titulo {
-  margin: 0;
+  margin: 8px 0 6px;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 400;
-  line-height: 1.1;
   color: #24141a;
 }
 
@@ -324,13 +317,11 @@ button {
 }
 
 .secao-catalogo__sub {
-  margin: 0;
-  font-size: 13.5px;
-  color: #553d46;
-  line-height: 1.45;
+  font-size: 13px;
+  color: rgba(36, 20, 26, 0.65);
 }
 
-/* ---------- Filtros em Chips Horizontais ---------- */
+/* ---------- Filtros de Categorias (Chips) ---------- */
 .mosaico__filtros {
   display: flex;
   gap: 8px;
@@ -351,17 +342,16 @@ button {
   font-weight: 600;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: #6e5a62;
-  background: #ffffff;
+  color: rgba(243, 239, 233, 0.7);
+  background: rgba(25, 20, 17, 0.85);
   border: 1px solid rgba(169, 50, 89, 0.20);
   border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(70, 25, 40, 0.04);
   transition: all 0.25s ease;
 }
 
 .filtro-chip.is-ativo,
 .filtro-chip:hover {
-  color: #ffffff;
+  color: #f2cad5;
   background: #a93259;
   border-color: #a93259;
   box-shadow: 0 4px 14px rgba(169, 50, 89, 0.35);
@@ -379,11 +369,10 @@ button {
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #a93259;
-  font-weight: 600;
+  color: rgba(201, 163, 137, 0.85);
 }
 
-/* ---------- Grid Mosaico Rose ---------- */
+/* ---------- Grid Mosaico ---------- */
 .mosaico__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -429,11 +418,11 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: #24141a;
+  background: #191411;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 8px 24px rgba(70, 25, 40, 0.12);
+  border: 1px solid rgba(201, 163, 137, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
   aspect-ratio: 3 / 5.2;
   cursor: pointer;
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), 
@@ -459,7 +448,7 @@ button {
   background: linear-gradient(
     60deg,
     transparent 35%,
-    rgba(229, 130, 157, 0.25) 50%,
+    rgba(201, 163, 137, 0.22) 50%,
     transparent 65%
   );
   pointer-events: none;
@@ -474,7 +463,7 @@ button {
 .tile:hover {
   transform: translateY(-4px) scale(1.01);
   border-color: #a93259;
-  box-shadow: 0 16px 36px rgba(169, 50, 89, 0.28);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(169, 50, 89, 0.25);
 }
 
 .tile--destaque {
@@ -492,7 +481,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(1.08) contrast(1.04);
+  filter: saturate(0.95) contrast(1.04);
   transition: transform 0.4s ease;
 }
 
@@ -506,8 +495,8 @@ button {
   background: linear-gradient(
     180deg,
     transparent 35%,
-    rgba(36, 20, 26, 0.65) 65%,
-    rgba(36, 20, 26, 0.95) 100%
+    rgba(15, 12, 11, 0.65) 65%,
+    rgba(15, 12, 11, 0.95) 100%
   );
   pointer-events: none;
 }
@@ -526,7 +515,7 @@ button {
   font-weight: 600;
   letter-spacing: .25em;
   text-transform: uppercase;
-  color: #f6cfdb;
+  color: #a93259;
 }
 
 .tile__titulo {
@@ -535,14 +524,14 @@ button {
   font-weight: 500;
   font-style: italic;
   line-height: 1.12;
-  color: #ffffff;
+  color: #24141a;
 }
 
 .tile--destaque .tile__titulo {
   font-size: 24px;
 }
 
-.tile__meta {
+.tile__rodape-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -552,18 +541,14 @@ button {
 
 .tile__preco {
   font-weight: 700;
-  color: #f6cfdb;
+  color: #a93259;
 }
 
 .tile__duracao {
   font-size: 10px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(36, 20, 26, 0.65);
   text-transform: uppercase;
   letter-spacing: .06em;
-}
-
-.tile__toque-cue {
-  display: none;
 }
 
 /* ==========================================================================
@@ -585,202 +570,6 @@ button {
   inset: -10%;
   overflow: hidden;
   will-change: transform;
-  
-}
-
-
-
-.secao-orientacoes__foto {
-  width: 100%;
-  height: 100%;
-  50% {
-    opacity: 0.85;
-    filter: blur(2px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-/* Shimmer shine effect overlay on entrance */
-@keyframes tileShine {
-  0% {
-    transform: translateX(-100%) rotate(25deg);
-    opacity: 0;
-  }
-  35% {
-    opacity: 0.45;
-  }
-  100% {
-    transform: translateX(220%) rotate(25deg);
-    opacity: 0;
-  }
-}
-
-.tile {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: #24141a;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 8px 24px rgba(70, 25, 40, 0.12);
-  aspect-ratio: 3 / 5.2;
-  cursor: pointer;
-  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), 
-              border-color 0.4s ease, 
-              box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  text-align: left;
-  opacity: 0;
-  transform: translateY(45px) scale(0.93);
-  will-change: transform, opacity, filter;
-}
-
-.tile.is-revealed {
-  animation: tileRevealLuxury 1.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.tile::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    60deg,
-    transparent 35%,
-    rgba(229, 130, 157, 0.25) 50%,
-    transparent 65%
-  );
-  pointer-events: none;
-  z-index: 4;
-}
-
-.tile.is-revealed::after {
-  animation: tileShine 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: inherit;
-}
-
-.tile:hover {
-  transform: translateY(-4px) scale(1.01);
-  border-color: #a93259;
-  box-shadow: 0 16px 36px rgba(169, 50, 89, 0.28);
-}
-
-.tile--destaque {
-  grid-column: span 2;
-  aspect-ratio: 16 / 10;
-}
-
-.tile--tall {
-  aspect-ratio: 3 / 5.2;
-}
-
-.tile__foto {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(1.08) contrast(1.04);
-  transition: transform 0.4s ease;
-}
-
-.tile:hover .tile__foto {
-  transform: scale(1.04);
-}
-
-.tile__scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 35%,
-    rgba(36, 20, 26, 0.65) 65%,
-    rgba(36, 20, 26, 0.95) 100%
-  );
-  pointer-events: none;
-}
-
-.tile__conteudo {
-  position: relative;
-  z-index: 2;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.tile__cat {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  color: #f6cfdb;
-}
-
-.tile__titulo {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 18px;
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1.12;
-  color: #ffffff;
-}
-
-.tile--destaque .tile__titulo {
-  font-size: 24px;
-}
-
-.tile__meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 4px;
-  font-size: 11px;
-}
-
-.tile__preco {
-  font-weight: 700;
-  color: #f6cfdb;
-}
-
-.tile__duracao {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.85);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-.tile__toque-cue {
-  display: none;
-}
-
-/* ==========================================================================
-   3. SEÇÃO ORIENTAÇÕES (SNAP SCREEN 3 - TELA CHEIA PADRÃO VITRINE)
-   ========================================================================== */
-.secao-orientacoes {
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background: #f2cad5;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.secao-orientacoes__foto-wrap {
-  position: absolute;
-  inset: -10%;
-  overflow: hidden;
-  will-change: transform;
-  
 }
 
 .secao-orientacoes__foto {
@@ -925,16 +714,15 @@ button {
 }
 
 /* ==========================================================================
-   4. SEÇÃO CONTATO & RODAPÉ (SNAP SCREEN 4 - TELA CHEIA 100DVH COM FUMAÇA ROSA)
+   4. SEÇÃO CONTATO & RODAPÉ (SNAP SCREEN 4 - TELA CHEIA 100DVH COM NITIDEZ TOTAL)
    ========================================================================== */
 .secao-contato {
-  min-height: 100%;
-  height: 100%;
+  min-height: 100dvh;
+  height: 100dvh;
   width: 100%;
   position: relative;
   overflow: hidden;
   background: #f2cad5;
-  color: #24141a;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -943,12 +731,14 @@ button {
   position: absolute;
   inset: -6%;
   overflow: hidden;
+}
+
 .secao-contato__foto {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
-  filter: saturate(1.08) contrast(1.06) brightness(0.97);
+  filter: saturate(0.95) contrast(1.08) brightness(0.95);
 }
 
 .secao-contato__scrim {
@@ -956,10 +746,10 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(242, 202, 213, 0.40) 0%,
-    rgba(242, 202, 213, 0.15) 25%,
-    rgba(242, 202, 213, 0.90) 58%,
-    #f2cad5 92%
+    rgba(12, 10, 9, 0.15) 0%,
+    rgba(12, 10, 9, 0.25) 35%,
+    rgba(12, 10, 9, 0.90) 65%,
+    #0d0b0a 100%
   );
 }
 
@@ -988,7 +778,7 @@ button {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 38px;
-  line-height: 1.08;
+  line-height: 1.1;
   font-weight: 400;
   color: #24141a;
 }
@@ -1001,7 +791,7 @@ button {
 .secao-contato__desc {
   margin: 0;
   font-size: 14px;
-  color: #553d46;
+  color: #381f28;
   max-width: 320px;
   line-height: 1.45;
 }
@@ -1024,26 +814,27 @@ button {
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: all 0.25s ease;
 }
 
 .btn-whatsapp {
   background: #24141a;
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(36, 20, 26, 0.25);
+  color: #12100e;
+  box-shadow: 0 4px 14px rgba(243, 239, 233, 0.15);
 }
 
 .btn-whatsapp:hover {
-  background: #381f28;
+  background: #a93259;
+  color: #12100e;
   transform: translateY(-2px);
 }
 
 .btn-instagram {
-  background: #ffffff;
+  background: rgba(25, 20, 17, 0.85);
+  border: 1px solid rgba(243, 239, 233, 0.3);
   color: #24141a;
-  border: 1px solid rgba(169, 50, 89, 0.25);
-  box-shadow: 0 4px 14px rgba(70, 25, 40, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 .btn-instagram:hover {
@@ -1064,27 +855,16 @@ button {
 .btn__icon { width: 17px; height: 17px; flex-shrink: 0; display: block; }
 .btn__arrow { font-size: 16px; line-height: 1; opacity: .85; }
 
-.secao-contato__rodape {
-  border-top: 1px solid rgba(169, 50, 89, 0.20);
-  padding-top: 16px;
+.secao-contato__info {
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-
-.secao-contato__copy {
-  margin: 0;
-  font-size: 10px;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: #7a5c67;
-}
-
-.secao-contato__endereco {
-  margin: 0;
   font-size: 10.5px;
   letter-spacing: .12em;
-  color: #7a5c67;
+  text-transform: uppercase;
+  color: rgba(243, 239, 233, 0.5);
+  padding-top: 16px;
+  border-top: 1px solid rgba(201, 163, 137, 0.15);
 }
 
 /* ==========================================================================
@@ -1097,8 +877,6 @@ button {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
-  max-width: 100%;
 }
 
 .modal-detalhe[hidden] {
@@ -1108,7 +886,7 @@ button {
 .modal-detalhe__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(36, 20, 26, 0.60);
+  background: rgba(10, 8, 7, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -1117,13 +895,12 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 100%;
+  max-width: 480px;
   max-height: 88vh;
   overflow-y: auto;
-  overflow-x: hidden;
-  background: #f2cad5;
-  border-radius: 22px 22px 0 0;
-  box-shadow: 0 -10px 40px rgba(70, 25, 40, 0.25);
+  background: #14100e;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(169, 50, 89, 0.25);
   border-bottom: none;
   -webkit-overflow-scrolling: touch;
@@ -1140,13 +917,13 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(1.08) contrast(1.04);
+  filter: saturate(1.02) contrast(1.04);
 }
 
 .modal__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 30%, #f2cad5 98%);
+  background: linear-gradient(180deg, transparent 30%, #14100e 98%);
 }
 
 .modal__fechar {
@@ -1156,8 +933,8 @@ button {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(169, 50, 89, 0.25);
-  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(169, 50, 89, 0.30);
+  background: rgba(20, 16, 14, 0.85);
   backdrop-filter: blur(6px);
   color: #24141a;
   font-size: 18px;
@@ -1194,7 +971,7 @@ button {
   margin: 0 0 20px;
   font-size: 13.5px;
   line-height: 1.6;
-  color: #553d46;
+  color: rgba(243, 239, 233, 0.8);
 }
 
 .modal__specs {
@@ -1209,14 +986,14 @@ button {
   justify-content: space-between;
   gap: 16px;
   padding: 11px 0;
-  border-top: 1px solid rgba(169, 50, 89, 0.15);
+  border-top: 1px solid rgba(201, 163, 137, 0.15);
 }
 
 .modal__spec-k {
   font-size: 10.5px;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: #7a5c67;
+  color: rgba(243, 239, 233, 0.5);
 }
 
 .modal__spec-v {
@@ -1237,36 +1014,36 @@ button {
   align-items: center;
   justify-content: center;
   height: 48px;
-  background: #24141a;
-  color: #ffffff;
+  background: #a93259;
+  color: #f2cad5;
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
-  border-radius: 12px;
+  border-radius: 10px;
   transition: background-color .25s ease;
 }
 
 .modal__cta:hover {
-  background: #381f28;
+  background: #a93259;
 }
 
 .modal__proximo {
   flex: none;
   width: 48px;
   height: 48px;
-  border: 1.5px solid rgba(169, 50, 89, 0.30);
-  background: #ffffff;
-  color: #a93259;
+  border: 1.5px solid rgba(169, 50, 89, 0.35);
+  background: transparent;
+  color: #24141a;
   font-size: 16px;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: border-color .25s ease;
 }
 
 .modal__proximo:hover {
   border-color: #a93259;
-  background: rgba(169, 50, 89, 0.08);
+  color: #a93259;
 }
 
 /* ==========================================================================
