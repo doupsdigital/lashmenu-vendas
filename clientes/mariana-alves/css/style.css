@@ -841,3 +841,62 @@ img, video { display: block; max-width: 100%; }
     margin-bottom: 16px !important;
   }
 }
+
+
+/* ==========================================================================
+   EFEITO KEN BURNS — ZOOM SUAVE, CONTÍNUO E VIVO (TODAS AS TELAS COM FOTO)
+   ========================================================================== */
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+    -webkit-transform: scale(1.08) translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes heroKenBurns {
+  0% {
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1.08) translate3d(0, 0, 0);
+  }
+}
+
+.hero__foto-wrap,
+.secao-orientacoes__foto-wrap,
+.secao-contato__foto-wrap,
+.procedimentos__foto-wrap,
+.agendamento__foto-wrap,
+.cuidados__foto-wrap,
+.contato__foto-wrap {
+  position: absolute !important;
+  inset: -6% !important;
+  overflow: hidden !important;
+  will-change: transform !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+}
+
+.hero__foto,
+.secao-orientacoes__foto,
+.secao-contato__foto,
+.procedimentos__foto,
+.agendamento__foto,
+.cuidados__foto,
+.contato__foto {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate !important;
+  -webkit-animation: heroKenBurns 14s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate !important;
+  transform-origin: center center !important;
+  -webkit-transform-origin: center center !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+}
