@@ -407,51 +407,74 @@ img, video { display: block; max-width: 100%; }
 }
 .agendamento__frase em { font-style: italic; color: #c9a389; }
 .agendamento__lista {
-  display: flex;
-  flex-direction: column;
-  background: rgba(26, 22, 19, 0.65);
-  border: 1px solid rgba(243, 239, 233, 0.1);
-  border-radius: 8px;
-  padding: 6px 18px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(25, 20, 17, 0.90);
+  border: 1px solid rgba(201, 163, 137, 0.25);
+  border-radius: 24px;
+  padding: 10px 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
-.agendamento__item {
+
+.orientacao__item {
   display: grid;
-  grid-template-columns: 28px 1fr;
-  gap: 14px;
+  grid-template-columns: 46px 1fr;
+  gap: 15px;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(243, 239, 233, 0.07);
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(201, 163, 137, 0.12);
 }
-.agendamento__item--ultimo {
+
+.orientacao__item--ultimo {
   border-bottom: none;
 }
-.agendamento__numeral {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  font-style: italic;
-  color: #c9a389;
-  font-weight: 400;
-  opacity: .95;
-}
-.agendamento__texto {
+
+.orientacao__icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(45, 34, 28, 0.9), rgba(30, 22, 18, 0.95));
+  border: 1px solid rgba(201, 163, 137, 0.28);
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  color: #c9a389;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
-.agendamento__texto strong {
-  font-size: 13.5px;
-  font-weight: 500;
-  letter-spacing: .02em;
+
+.orientacao__icon-box svg {
+  width: 20px;
+  height: 20px;
+  stroke: #c9a389;
+}
+
+.orientacao__num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 10px;
+  font-style: italic;
+  color: #c9a389;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+
+.orientacao__info strong {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 600;
   color: #f3efe9;
+  margin-bottom: 3px;
+  letter-spacing: -0.01em;
 }
-.agendamento__texto p {
+
+.orientacao__info p {
   margin: 0;
-  font-size: 12px;
-  line-height: 1.45;
-  opacity: .75;
-  color: #d8d2ca;
+  font-size: 13px;
+  color: rgba(243, 239, 233, 0.75);
+  line-height: 1.4;
 }
 
 /* ---------- Manutenção & Cuidados ---------- */
