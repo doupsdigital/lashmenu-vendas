@@ -694,18 +694,7 @@ img, video { display: block; max-width: 100%; }
   -webkit-clip-path: inset(0 round 34px);
 }
 
-/* Desabilitar cliques e estados de foco nos botões de conversão no modo Test Drive */
-body.is-testdrive .detalhe-procedimento__cta,
-body.is-testdrive .btn-whatsapp,
-body.is-testdrive .btn-instagram {
-  pointer-events: none !important;
-  cursor: default !important;
-  opacity: 0.92 !important;
-  user-select: none !important;
-  box-shadow: none !important;
-  background: #f3efe9 !important;
-  color: #12100e !important;
-}
+
 
 body.is-testdrive .detalhe-procedimento__cta:hover,
 body.is-testdrive .detalhe-procedimento__cta:focus,
