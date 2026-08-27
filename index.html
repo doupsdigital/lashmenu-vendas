@@ -122,6 +122,84 @@
     .nav-item:hover .item-arrow {
       transform:translateX(4px);
     }
+
+    /* ── Showroom Grid de Modelos ── */
+    .showroom-section {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(201, 163, 137, 0.35);
+      border-radius: 20px;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+    .showroom-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(243, 239, 233, 0.08);
+    }
+    .showroom-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .showroom-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(201, 163, 137, 0.2);
+      color: #c9a389;
+      padding: 3px 8px;
+      border-radius: 20px;
+    }
+    .showroom-desc {
+      font-size: 0.78rem;
+      color: rgba(243, 239, 233, 0.6);
+      margin-bottom: 14px;
+    }
+    .showroom-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .model-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(243, 239, 233, 0.1);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .model-card:hover {
+      background: rgba(201, 163, 137, 0.15);
+      border-color: #c9a389;
+      transform: translateY(-2px);
+    }
+    .model-card-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #c9a389;
+    }
+    .model-card-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .model-card-theme {
+      font-size: 0.72rem;
+      color: rgba(243, 239, 233, 0.5);
+    }
     
     .footer {
       text-align:center;
@@ -304,6 +382,61 @@
         <span class="item-arrow">→</span>
       </a>
 
+    </div>
+
+    <!-- Central de Testes de Modelos (Showroom) -->
+    <div class="showroom-section">
+      <div class="showroom-header">
+        <div class="showroom-title">
+          <span>🎨</span>
+          <span>Showroom &amp; Modelos Oficiais</span>
+        </div>
+        <span class="showroom-badge">Ambiente de Testes</span>
+      </div>
+      <p class="showroom-desc">Abra diretamente em 1 clique no celular para testar e aprovar melhorias de UI/UX:</p>
+      <div class="showroom-grid">
+        <!-- Harmonia Rosé -->
+        <a href="/modelos/harmonia-rose/" target="_blank" rel="noopener" class="model-card">
+          <span class="model-card-tag">🌸 Mosaico Rosé</span>
+          <span class="model-card-name">Harmonia Rosé</span>
+          <span class="model-card-theme">Laboratório de Teste</span>
+        </a>
+
+        <!-- Harmonia Midnight -->
+        <a href="/modelos/harmonia-midnight/" target="_blank" rel="noopener" class="model-card">
+          <span class="model-card-tag">🌙 Mosaico Dark</span>
+          <span class="model-card-name">Harmonia Midnight</span>
+          <span class="model-card-theme">Tema Noturno</span>
+        </a>
+
+        <!-- Glamour Rosé -->
+        <a href="/modelos/glamour-rose/" target="_blank" rel="noopener" class="model-card">
+          <span class="model-card-tag">🌸 Editorial Rosé</span>
+          <span class="model-card-name">Glamour Rosé</span>
+          <span class="model-card-theme">Vídeo de Capa</span>
+        </a>
+
+        <!-- Glamour Midnight -->
+        <a href="/modelos/glamour-midnight/" target="_blank" rel="noopener" class="model-card">
+          <span class="model-card-tag">🌙 Editorial Dark</span>
+          <span class="model-card-name">Glamour Midnight</span>
+          <span class="model-card-theme">Vídeo de Capa</span>
+        </a>
+
+        <!-- Clássico Rosé -->
+        <a href="/modelos/classico-rose/" target="_blank" rel="noopener" class="model-card">
+          <span class="model-card-tag">🌸 Clean Rosé</span>
+          <span class="model-card-name">Clássico Rosé</span>
+          <span class="model-card-theme">Lista Minimalista</span>
+        </a>
+
+        <!-- Clássico Midnight -->
+        <a href="/modelos/classico-midnight/" target="_blank" rel="noopener" class="model-card">
+          <span class="model-card-tag">🌙 Clean Dark</span>
+          <span class="model-card-name">Clássico Midnight</span>
+          <span class="model-card-theme">Lista Noturna</span>
+        </a>
+      </div>
     </div>
 
     <div class="footer">LashMenu © 2026 · Todos os direitos reservados</div>
