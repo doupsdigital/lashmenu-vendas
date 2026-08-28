@@ -38,7 +38,20 @@
     return;
   }
 
+  // Redireciona modelos estáticos oficiais diretamente para /modelos/:slug/index.html
+  const staticModels = [
+    'harmonia-rose', 'harmonia-midnight',
+    'classico-rose', 'classico-midnight',
+    'glamour-rose', 'glamour-midnight'
+  ];
+
+  if (staticModels.includes(slug)) {
+    window.location.replace(`/modelos/${slug}/index.html`);
+    return;
+  }
+
   // 2. Busca os Dados no Supabase
+
   try {
     const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmZmhwdHBzYWZsbHNtY3NvaWloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyODkyMTYsImV4cCI6MjEwMjg2NTIxNn0.nwpvIwl8V6_KGIp5e5oeraAcGyt3oo8Kdam2hp6ajSQ';

@@ -36,8 +36,15 @@ const server = http.createServer((req, res) => {
   } else if (reqPath.startsWith('/admin/')) {
     targetFilePath = reqPath;
   } else if (reqPath.startsWith('/c/')) {
-    targetFilePath = '/catalogo/index.html';
+    const slug = reqPath.substring('/c/'.length).replace(/\/$/, '');
+    const staticModelPath = path.join(ROOT, 'modelos', slug, 'index.html');
+    if (fs.existsSync(staticModelPath)) {
+      targetFilePath = `/modelos/${slug}/index.html`;
+    } else {
+      targetFilePath = '/catalogo/index.html';
+    }
   } else if (reqPath.startsWith('/catalogo/')) {
+
     const rest = reqPath.substring('/catalogo/'.length);
     if (rest.includes('.')) {
       targetFilePath = reqPath;

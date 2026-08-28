@@ -26,9 +26,34 @@
       "destination": "/admin/editor.html"
     },
     {
+      "source": "/c/harmonia-rose",
+      "destination": "/modelos/harmonia-rose/index.html"
+    },
+    {
+      "source": "/c/harmonia-midnight",
+      "destination": "/modelos/harmonia-midnight/index.html"
+    },
+    {
+      "source": "/c/classico-rose",
+      "destination": "/modelos/classico-rose/index.html"
+    },
+    {
+      "source": "/c/classico-midnight",
+      "destination": "/modelos/classico-midnight/index.html"
+    },
+    {
+      "source": "/c/glamour-rose",
+      "destination": "/modelos/glamour-rose/index.html"
+    },
+    {
+      "source": "/c/glamour-midnight",
+      "destination": "/modelos/glamour-midnight/index.html"
+    },
+    {
       "source": "/c/:slug",
       "destination": "/catalogo/index.html?slug=:slug"
     },
+
     {
       "source": "/catalogo/:slug",
       "destination": "/catalogo/index.html?slug=:slug"
