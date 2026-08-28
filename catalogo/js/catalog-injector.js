@@ -199,7 +199,8 @@
       if (heroWrap) {
         heroWrap.style.willChange = 'transform';
         if (order.cover_media_type === 'video') {
-          heroWrap.innerHTML = `<video class="hero__foto hero__video" src="${order.cover_media_url}" autoplay muted loop playsinline preload="auto"></video>`;
+          const posterAttr = order.cover_poster_url ? `poster="${order.cover_poster_url}"` : '';
+          heroWrap.innerHTML = `<video class="hero__foto hero__video" src="${order.cover_media_url}" ${posterAttr} autoplay muted loop playsinline preload="metadata"></video>`;
         } else {
           const heroImg = heroWrap.querySelector('img, video');
           if (heroImg) {
