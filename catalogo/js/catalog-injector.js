@@ -21,18 +21,18 @@
     return new Promise((resolve) => {
       if (url.match(/\.(mp4|webm|mov)(\?.*)?$/i)) {
         const video = document.createElement('video');
-        video.preload = 'auto';
+        video.preload = 'metadata';
         video.oncanplaythrough = resolve;
         video.onerror = resolve;
         video.src = url;
-        setTimeout(resolve, 3000);
+        setTimeout(resolve, 250);
         return;
       }
       const img = new Image();
       img.onload = resolve;
       img.onerror = resolve;
       img.src = url;
-      setTimeout(resolve, 3500);
+      setTimeout(resolve, 250);
     });
   }
 
@@ -94,10 +94,10 @@
     return; // Se não tem slug, mantém o modelo demonstrativo original
   }
 
-  // Safety Timeout para evitar tela em branco por rede lenta
+  // Safety Timeout para evitar tela em branco por rede lenta (máx. 800ms)
   const safetyTimer = setTimeout(() => {
     revealCatalog();
-  }, 4500);
+  }, 800);
 
   let order = null;
   let services = [];
@@ -149,17 +149,10 @@
       // 2. Aplica os Dados no DOM do Modelo Oficial (atrás da cortina de carregamento)
       applyCustomData(order, services);
 
-      // 3. Pré-carrega mídias essenciais na memória/GPU ANTES de revelar a página (Zero Flash)
-      const mediaPromises = [];
-      if (order.cover_media_url) {
-        mediaPromises.push(preloadMedia(order.cover_media_url));
+      // 3. Pré-carregamento ultrarrápido não-bloqueante da mídia principal
+      if (order.cover_media_url && order.cover_media_type !== 'video') {
+        preloadMedia(order.cover_media_url).catch(() => {});
       }
-      if (services && services.length > 0) {
-        services.slice(0, 3).forEach(svc => {
-          if (svc.photo_url) mediaPromises.push(preloadMedia(svc.photo_url));
-        });
-      }
-      await Promise.all(mediaPromises);
     }
 
   } catch (err) {
@@ -211,8 +204,10 @@
           const heroImg = heroWrap.querySelector('img, video');
           if (heroImg) {
             heroImg.src = order.cover_media_url;
-            if (heroImg.tagName === 'VIDEO') {
-              heroWrap.innerHTML = `<img src="${order.cover_media_url}" alt="${designerName}" class="hero__foto">`;
+            if (heroImg.tagName === 'IMG') {
+              heroImg.setAttribute('decoding', 'async');
+            } else if (heroImg.tagName === 'VIDEO') {
+              heroWrap.innerHTML = `<img src="${order.cover_media_url}" alt="${designerName}" class="hero__foto" decoding="async">`;
             }
           }
         }
@@ -354,10 +349,12 @@
 
           newCard.setAttribute('data-proc', `proc_${idx}`);
 
-          // Foto do Card
+          // Foto do Card com Lazy Loading
           const cardImg = newCard.querySelector('.card-procedimento__foto, .mosaico__foto, img');
           if (cardImg && svc.photo_url) {
             cardImg.src = svc.photo_url;
+            cardImg.setAttribute('loading', 'lazy');
+            cardImg.setAttribute('decoding', 'async');
           }
 
           // Nome

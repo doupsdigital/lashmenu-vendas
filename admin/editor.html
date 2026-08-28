@@ -777,6 +777,7 @@
   <!-- Supabase Config & SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../vendas/form/js/supabase-config.js?v=4.0"></script>
+  <script src="../vendas/form/js/image-compressor.js?v=1.0"></script>
 
   <script>
     // Recupera ID do pedido da Query URL
@@ -854,12 +855,17 @@
 
       showStatus('Enviando foto/vídeo de capa para o Supabase Storage...', 'success');
       try {
-        const ext = file.name.split('.').pop() || (isVideo ? 'mp4' : 'jpg');
+        let fileToUpload = file;
+        if (!isVideo && typeof window.compressImageFile === 'function') {
+          fileToUpload = await window.compressImageFile(file, { maxDimension: 1200, quality: 0.82 });
+        }
+
+        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : (isVideo ? 'mp4' : 'webp');
         const path = `covers/cover_${orderId}_${Date.now()}.${ext}`;
 
         let publicUrl = null;
         if (window.lashSupabase && window.lashSupabase.uploadFile) {
-          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, file);
+          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
         } else {
           throw new Error('Supabase client não inicializado');
         }
@@ -1071,12 +1077,17 @@
 
       showStatus(`Enviando foto do procedimento #${index + 1} para o Supabase...`, 'success');
       try {
-        const ext = file.name.split('.').pop() || 'jpg';
+        let fileToUpload = file;
+        if (typeof window.compressImageFile === 'function') {
+          fileToUpload = await window.compressImageFile(file, { maxDimension: 800, quality: 0.82 });
+        }
+
+        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : 'webp';
         const path = `services/svc_${orderId}_${index}_${Date.now()}.${ext}`;
 
         let publicUrl = null;
         if (window.lashSupabase && window.lashSupabase.uploadFile) {
-          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, file);
+          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
         } else {
           throw new Error('Supabase client não inicializado');
         }

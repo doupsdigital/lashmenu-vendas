@@ -24,7 +24,10 @@ window.lashSupabase = {
     // Tenta via SDK primeiro
     if (_supabaseSdk && _supabaseSdk.storage) {
       try {
-        const { data, error } = await _supabaseSdk.storage.from(bucket).upload(path, file, { upsert: true });
+        const { data, error } = await _supabaseSdk.storage.from(bucket).upload(path, file, {
+          upsert: true,
+          cacheControl: '31536000'
+        });
         if (!error) {
           const { data: pubData } = _supabaseSdk.storage.from(bucket).getPublicUrl(path);
           return pubData.publicUrl;
@@ -42,6 +45,7 @@ window.lashSupabase = {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
         'Content-Type': file.type || 'application/octet-stream',
+        'cache-control': 'max-age=31536000',
         'x-upsert': 'true'
       },
       body: file

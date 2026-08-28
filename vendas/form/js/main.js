@@ -1189,7 +1189,7 @@ function initFormSubmission() {
           successLinkDisplay.textContent = `${finalSlug}.lashmenu.com`;
         }
 
-        // 1. Upload da Capa
+        // 1. Upload da Capa com Otimização Automática
         let coverMediaUrl = null;
         let coverMediaType = 'image';
 
@@ -1197,23 +1197,33 @@ function initFormSubmission() {
           try {
             const isVideo = uploadedCoverFile.type.startsWith('video/');
             coverMediaType = isVideo ? 'video' : 'image';
-            const fileExt = uploadedCoverFile.name.split('.').pop() || (isVideo ? 'mp4' : 'jpg');
+
+            let fileToUpload = uploadedCoverFile;
+            if (!isVideo && typeof window.compressImageFile === 'function') {
+              fileToUpload = await window.compressImageFile(uploadedCoverFile, { maxDimension: 1200, quality: 0.82 });
+            }
+
+            const fileExt = fileToUpload.name ? fileToUpload.name.split('.').pop() : (isVideo ? 'mp4' : 'webp');
             const coverPath = `covers/${finalSlug}-cover-${Date.now()}.${fileExt}`;
 
-            coverMediaUrl = await window.lashSupabase.uploadFile('catalog-assets', coverPath, uploadedCoverFile);
+            coverMediaUrl = await window.lashSupabase.uploadFile('catalog-assets', coverPath, fileToUpload);
           } catch (errCover) {
             console.warn('Aviso no upload da capa:', errCover);
           }
         }
 
-        // 2. Upload de Fotos de Serviços em PARALELO (Promise.all)
+        // 2. Upload de Fotos de Serviços em PARALELO com Compressão Automática
         const uploadPromises = serviceRowsData.map(async (svc, i) => {
           let finalPhotoUrl = svc.defaultPhotoUrl;
           if (svc.customFile && window.lashSupabase) {
             try {
-              const fileExt = svc.customFile.name.split('.').pop() || 'jpg';
+              let fileToUpload = svc.customFile;
+              if (typeof window.compressImageFile === 'function') {
+                fileToUpload = await window.compressImageFile(svc.customFile, { maxDimension: 800, quality: 0.82 });
+              }
+              const fileExt = fileToUpload.name ? fileToUpload.name.split('.').pop() : 'webp';
               const svcPath = `services/${finalSlug}-proc-${i + 1}-${Date.now()}.${fileExt}`;
-              finalPhotoUrl = await window.lashSupabase.uploadFile('catalog-assets', svcPath, svc.customFile);
+              finalPhotoUrl = await window.lashSupabase.uploadFile('catalog-assets', svcPath, fileToUpload);
             } catch (errSvc) {
               console.warn('Erro no upload de foto de serviço:', errSvc);
             }
