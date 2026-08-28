@@ -789,93 +789,42 @@
       border-radius: 12px !important;
     }
 
-    /* Ocultar obrigatoriamente campos admin no modo cliente */
+    /* Ocultar obrigatoriamente campos de URL bruta no modo cliente */
+    html.is-client-mode .input-url-fallback,
+    body.is-client-mode .input-url-fallback,
+    html.is-client-mode .svc-photo,
+    body.is-client-mode .svc-photo,
     html.is-client-mode .admin-only-field,
     body.is-client-mode .admin-only-field {
       display: none !important;
     }
 
-    /* ── CARDS COLAPSÁVEIS ORGÂNICOS (SEM SOMBRAS QUADRADAS INTERNAS) ── */
-    .accordion-card {
-      background: #ffffff !important;
-      border: 1.5px solid #e6dcd3 !important;
-      border-radius: 20px !important;
-      margin-bottom: 18px !important;
-      overflow: hidden !important;
-      box-shadow: 0 10px 30px rgba(192, 75, 107, 0.04) !important;
-      transition: box-shadow 0.25s ease, border-color 0.25s ease !important;
-    }
-    .accordion-header {
-      padding: 18px 24px !important;
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
+    /* Botão de Remover Campo Opcional em Pílula Rosé */
+    .btn-remove-field {
+      background: #fdf5f7 !important;
+      border: 1.5px solid #f0c2cd !important;
+      color: #c04b6b !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      padding: 4px 12px !important;
+      border-radius: 100px !important;
       cursor: pointer !important;
-      user-select: none !important;
-      background: #ffffff !important; /* Fundo contínuo limpo sem retângulos internos */
-      transition: background 0.2s ease !important;
+      transition: all 0.2s ease !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
     }
-    .accordion-header:hover {
-      background: #fdfaf7 !important;
-    }
-    .accordion-header-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .accordion-header-icon {
-      font-size: 1.4rem;
-    }
-    .accordion-header-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.18rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-    .accordion-header-sub {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-    .accordion-arrow {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: #fdf5f7;
-      border: 1px solid #e5b8c4;
-      color: #c04b6b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 800;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s, color 0.2s;
-      flex-shrink: 0;
-    }
-    .accordion-card.is-open .accordion-arrow {
-      transform: rotate(180deg);
-      background: #c04b6b;
-      border-color: #c04b6b;
-      color: #ffffff;
-    }
-    .accordion-content {
-      display: none;
-      padding: 24px;
-      border-top: 1px solid #f0e6df;
-    }
-    .accordion-card.is-open .accordion-content {
-      display: block;
-      animation: accordionFade 0.25s ease;
-    }
-    @keyframes accordionFade {
-      from { opacity: 0; transform: translateY(-4px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-remove-field:hover {
+      background: #c04b6b !important;
+      color: #ffffff !important;
+      border-color: #c04b6b !important;
     }
 
-    /* ── MINI-SANFONA DE PROCEDIMENTOS (LARGURA TOTAL E ALTO CONSTRASTE) ── */
+    /* ── MINI-SANFONA DE PROCEDIMENTOS (LARGURA TOTAL, FUNDO BRANCO E ALTO CONSTRASTE) ── */
     .svc-accordion-item {
       border: 1.5px solid #e6dcd3 !important;
-      border-radius: 16px !important;
-      margin-bottom: 14px !important;
+      border-radius: 18px !important;
+      margin-bottom: 16px !important;
       overflow: hidden !important;
       background: #ffffff !important;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
@@ -940,9 +889,9 @@
     }
     .svc-accordion-content {
       display: none;
-      padding: 20px;
-      border-top: 1.5px solid #f0e6df;
-      background: #faf6f4; /* Fundo suave para dar destaque aos inputs brancos */
+      padding: 20px 18px 16px 18px !important;
+      border-top: 1.5px solid #f0e6df !important;
+      background: #ffffff !important; /* Fundo limpo Warm White idêntico a Meus Dados */
     }
     .svc-accordion-item.is-open .svc-accordion-content {
       display: block;
@@ -1623,6 +1572,20 @@
       }
     };
 
+    window.updateAddFieldsBarVisibility = function(card) {
+      if (!card) return;
+      const bar = card.querySelector('.add-fields-bar');
+      if (!bar) return;
+      const chips = bar.querySelectorAll('.btn-add-spec-chip');
+      let hasVisibleChip = false;
+      chips.forEach(chip => {
+        if (chip.style.display !== 'none') {
+          hasVisibleChip = true;
+        }
+      });
+      bar.style.display = hasVisibleChip ? '' : 'none';
+    };
+
     // Função global para ocultar/limpar ou exibir campos opcionais
     window.toggleField = function(el, fgClass, inputClass, show) {
       const card = el.closest('.service-item-card');
@@ -1641,6 +1604,7 @@
         if (input) input.value = '';
         if (chip) chip.style.display = '';
       }
+      updateAddFieldsBarVisibility(card);
     };
 
     // Renderiza a lista de serviços do formulário com mini-cards Accordion
@@ -1752,6 +1716,7 @@
           </div>
         `;
         servicesListContainer.appendChild(row);
+        updateAddFieldsBarVisibility(row);
       });
     }
 
