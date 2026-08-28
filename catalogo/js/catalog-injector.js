@@ -22,17 +22,18 @@
       if (url.match(/\.(mp4|webm|mov)(\?.*)?$/i)) {
         const video = document.createElement('video');
         video.preload = 'metadata';
-        video.oncanplaythrough = resolve;
+        video.onloadeddata = resolve;
+        video.oncanplay = resolve;
         video.onerror = resolve;
         video.src = url;
-        setTimeout(resolve, 250);
+        setTimeout(resolve, 1500);
         return;
       }
       const img = new Image();
       img.onload = resolve;
       img.onerror = resolve;
       img.src = url;
-      setTimeout(resolve, 250);
+      setTimeout(resolve, 1500);
     });
   }
 
@@ -94,10 +95,17 @@
     return; // Se não tem slug, mantém o modelo demonstrativo original
   }
 
-  // Safety Timeout para evitar tela em branco por rede lenta (máx. 800ms)
+  // 🛡️ BLINDAGEM FRAME 0: Oculta mídias demonstrativas do template imediatamente
+  const templateMediaEls = document.querySelectorAll('.hero__foto-wrap img, .hero__foto-wrap video, .capa__foto-wrap img, .capa__foto-wrap video');
+  templateMediaEls.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transition = 'opacity 0.4s ease';
+  });
+
+  // Safety Timeout de emergência para conexões extremamente fracas
   const safetyTimer = setTimeout(() => {
     revealCatalog();
-  }, 800);
+  }, 3500);
 
   let order = null;
   let services = [];
@@ -146,12 +154,16 @@
     }
 
     if (order) {
-      // 2. Aplica os Dados no DOM do Modelo Oficial (atrás da cortina de carregamento)
+      // 2. Aplica os Dados no DOM do Modelo Oficial
       applyCustomData(order, services);
 
-      // 3. Pré-carregamento ultrarrápido não-bloqueante da mídia principal
-      if (order.cover_media_url && order.cover_media_type !== 'video') {
-        preloadMedia(order.cover_media_url).catch(() => {});
+      // 3. 🛡️ PLANO A: Trava prévia da capa/poster antes de retirar a cortina de carregamento
+      const mediaToPreload = (order.cover_media_type === 'video' && order.cover_poster_url)
+        ? order.cover_poster_url
+        : order.cover_media_url;
+
+      if (mediaToPreload) {
+        await preloadMedia(mediaToPreload);
       }
     }
 
@@ -200,16 +212,30 @@
         heroWrap.style.willChange = 'transform';
         if (order.cover_media_type === 'video') {
           const posterAttr = order.cover_poster_url ? `poster="${order.cover_poster_url}"` : '';
-          heroWrap.innerHTML = `<video class="hero__foto hero__video" src="${order.cover_media_url}" ${posterAttr} autoplay muted loop playsinline preload="metadata"></video>`;
+          heroWrap.innerHTML = `<video class="hero__foto hero__video" src="${order.cover_media_url}" ${posterAttr} autoplay muted loop playsinline preload="metadata" style="opacity: 0; transition: opacity 0.4s ease;"></video>`;
+          const vid = heroWrap.querySelector('video');
+          if (vid) {
+            const revealVid = () => { vid.style.opacity = '1'; };
+            vid.onloadeddata = revealVid;
+            vid.oncanplay = revealVid;
+            vid.onplay = revealVid;
+            setTimeout(revealVid, 800);
+          }
         } else {
-          const heroImg = heroWrap.querySelector('img, video');
-          if (heroImg) {
+          let heroImg = heroWrap.querySelector('img');
+          if (!heroImg) {
+            heroWrap.innerHTML = `<img src="${order.cover_media_url}" alt="${designerName}" class="hero__foto" decoding="async" style="opacity: 0; transition: opacity 0.4s ease;">`;
+            heroImg = heroWrap.querySelector('img');
+          } else {
             heroImg.src = order.cover_media_url;
-            if (heroImg.tagName === 'IMG') {
-              heroImg.setAttribute('decoding', 'async');
-            } else if (heroImg.tagName === 'VIDEO') {
-              heroWrap.innerHTML = `<img src="${order.cover_media_url}" alt="${designerName}" class="hero__foto" decoding="async">`;
-            }
+            heroImg.style.opacity = '0';
+            heroImg.style.transition = 'opacity 0.4s ease';
+          }
+          if (heroImg) {
+            const revealImg = () => { heroImg.style.opacity = '1'; };
+            heroImg.onload = revealImg;
+            if (heroImg.complete) revealImg();
+            setTimeout(revealImg, 800);
           }
         }
       }
