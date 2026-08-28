@@ -9,6 +9,14 @@
       "destination": "/admin/:path*"
     },
     {
+      "source": "/editar",
+      "destination": "/admin/editor.html"
+    },
+    {
+      "source": "/editar/:path*",
+      "destination": "/admin/editor.html"
+    },
+    {
       "source": "/c/:slug",
       "destination": "/catalogo/index.html?slug=:slug"
     },

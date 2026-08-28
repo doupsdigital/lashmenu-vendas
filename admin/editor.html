@@ -607,6 +607,248 @@
       color: #fff;
       background: rgba(255, 255, 255, 0.04);
     }
+
+    /* ── TEMA LIGHT ROSÉ (CLIENT MODE) ── */
+    body.theme-client-rose {
+      --bg: #faf6f4;
+      --card-bg: #ffffff;
+      --border: #f0e4e0;
+      --text: #3d312e;
+      --text-muted: #8c7a76;
+      --primary: #d48496;
+      --primary-hover: #c47285;
+      --accent: #7b5662;
+      background-color: #faf6f4;
+      color: #3d312e;
+    }
+    body.theme-client-rose .admin-header {
+      background: #ffffff;
+      border-bottom: 1px solid #f0e4e0;
+      box-shadow: 0 4px 15px rgba(180, 140, 150, 0.08);
+    }
+    body.theme-client-rose .admin-brand {
+      color: #3d312e;
+    }
+    body.theme-client-rose .admin-brand em {
+      color: #d48496;
+    }
+    body.theme-client-rose .editor-section {
+      background: #ffffff;
+      border: 1px solid #f0e4e0;
+      box-shadow: 0 4px 20px rgba(180, 140, 150, 0.07);
+      border-radius: 18px;
+    }
+    body.theme-client-rose input, 
+    body.theme-client-rose select, 
+    body.theme-client-rose textarea {
+      background: #fff8f6;
+      border: 1px solid #f0d8dc;
+      color: #3d312e;
+    }
+    body.theme-client-rose input:focus, 
+    body.theme-client-rose select:focus, 
+    body.theme-client-rose textarea:focus {
+      border-color: #d48496;
+      box-shadow: 0 0 10px rgba(212, 132, 150, 0.2);
+    }
+    body.theme-client-rose .media-preview-box,
+    body.theme-client-rose .media-preview-box-sm {
+      background: #fff5f6;
+      border-color: #eac5cc;
+    }
+
+    /* ── CARDS COLAPSÁVEIS (ACCORDION UX) ── */
+    .accordion-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+    body.theme-client-rose .accordion-card {
+      box-shadow: 0 4px 15px rgba(180, 140, 150, 0.06);
+    }
+    .accordion-header {
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(212, 132, 150, 0.04);
+      transition: background 0.2s ease;
+    }
+    .accordion-header:hover {
+      background: rgba(212, 132, 150, 0.09);
+    }
+    .accordion-header-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .accordion-header-icon {
+      font-size: 1.3rem;
+    }
+    .accordion-header-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .accordion-header-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .accordion-arrow {
+      font-size: 0.9rem;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+      font-weight: 700;
+    }
+    .accordion-card.is-open .accordion-arrow {
+      transform: rotate(180deg);
+    }
+    .accordion-content {
+      display: none;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .accordion-card.is-open .accordion-content {
+      display: block;
+      animation: accordionFade 0.25s ease;
+    }
+    @keyframes accordionFade {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── MINI-SANFONA DE PROCEDIMENTOS (CLIENT MODE) ── */
+    .svc-accordion-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--card-bg);
+      transition: all 0.2s ease;
+    }
+    body.theme-client-rose .svc-accordion-item {
+      background: #ffffff;
+      border-color: #f2e2e5;
+    }
+    .svc-accordion-header {
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: rgba(0,0,0,0.02);
+    }
+    body.theme-client-rose .svc-accordion-header {
+      background: #fff9fa;
+    }
+    .svc-accordion-header:hover {
+      background: rgba(212, 132, 150, 0.08);
+    }
+    .svc-summary-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .svc-summary-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .svc-summary-price {
+      background: rgba(212, 132, 150, 0.15);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    body.theme-client-rose .svc-summary-price {
+      background: #f8e6ea;
+      color: #b55d72;
+    }
+    .btn-edit-badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .svc-accordion-content {
+      display: none;
+      padding: 18px;
+      border-top: 1px solid var(--border);
+    }
+    .svc-accordion-item.is-open .svc-accordion-content {
+      display: block;
+      animation: accordionFade 0.2s ease;
+    }
+
+    /* ── BANNER DO LINK MÁGICO NO MODO ADMIN ── */
+    .magic-link-banner {
+      background: linear-gradient(135deg, rgba(229, 169, 184, 0.12), rgba(138, 126, 247, 0.1));
+      border: 1px solid rgba(229, 169, 184, 0.3);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .magic-link-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .magic-link-input-row {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-copy-magic-link {
+      background: var(--primary);
+      color: #000;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .btn-copy-magic-link:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    /* ── TELA DE ACESSO NEGADO / LINK INVÁLIDO ── */
+    .denied-card {
+      max-width: 480px;
+      margin: 80px auto;
+      background: #ffffff;
+      border: 1px solid #f2e2e5;
+      border-radius: 24px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(180, 140, 150, 0.15);
+    }
+    .denied-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .denied-text {
+      color: #8c7a76;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
   </style>
 </head>
 
@@ -615,62 +857,90 @@
   <!-- HEADER -->
   <header class="admin-header">
     <div class="admin-brand">Lash<em>Menu</em> · Editor</div>
-    <a href="./" class="btn-back">
+    <a href="./" class="btn-back" id="btn-admin-back">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
       <span>Voltar ao Painel</span>
     </a>
   </header>
 
-  <div class="editor-container">
+  <div class="editor-container" id="main-editor-container">
     <h1 class="editor-title" id="designer-title">Editar Catálogo</h1>
-    <p class="editor-subtitle">Gerencie as informações gerais e a lista de procedimentos de cílios da cliente.</p>
+    <p class="editor-subtitle" id="designer-subtitle">Gerencie as informações gerais e a lista de procedimentos de cílios da cliente.</p>
 
     <!-- MENSAGENS DE STATUS -->
     <div id="status-box" class="status-msg"></div>
 
-    <!-- INFORMAÇÕES GERAIS -->
-    <section class="editor-section">
-      <h2 class="section-title">Informações Gerais</h2>
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="client-name">Nome da Lash Designer</label>
-          <input type="text" id="client-name" required placeholder="Ex: Mariana Alves">
+    <!-- SEÇÃO 1: INFORMAÇÕES GERAIS (ACCORDION) -->
+    <section class="editor-section accordion-card is-open" id="acc-section-info">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-info">
+          <span class="accordion-header-icon">👤</span>
+          <div>
+            <div class="accordion-header-title">Meus Dados & Contatos</div>
+            <div class="accordion-header-sub">Nome, WhatsApp, Instagram e Localização</div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="client-slug">Slug do Link (subdomínio)</label>
-          <input type="text" id="client-slug" required placeholder="Ex: marianaalves">
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="client-name">Nome da Lash Designer</label>
+            <input type="text" id="client-name" required placeholder="Ex: Mariana Alves">
+          </div>
+          <div class="form-group admin-only-field">
+            <label for="client-slug">Slug do Link (subdomínio)</label>
+            <input type="text" id="client-slug" required placeholder="Ex: marianaalves">
+          </div>
+          <div class="form-group">
+            <label for="client-whatsapp">WhatsApp (com DDD)</label>
+            <input type="text" id="client-whatsapp" required placeholder="Ex: 62982244466">
+          </div>
+          <div class="form-group">
+            <label for="client-instagram">Instagram (usuário)</label>
+            <input type="text" id="client-instagram" placeholder="Ex: @marianaalves.lash">
+          </div>
+          <div class="form-group full-width">
+            <label for="client-location">Localização / Endereço</label>
+            <input type="text" id="client-location" placeholder="Ex: Setor Oeste, Goiânia">
+          </div>
+          <div class="form-group admin-only-field">
+            <label for="client-model">Modelo do Layout</label>
+            <select id="client-model">
+              <option value="glamour">Glamour</option>
+              <option value="harmonia">Harmonia</option>
+              <option value="classico">Clássico</option>
+            </select>
+          </div>
+          <div class="form-group admin-only-field">
+            <label for="client-color">Tema de Cor</label>
+            <select id="client-color">
+              <option value="rose">Rosé</option>
+              <option value="midnight">Midnight</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="client-phrase">Frase da Capa (Hero Phrase)</label>
+            <textarea id="client-phrase" placeholder="Ex: Olhar sofisticado com a técnica perfeita para realçar sua beleza natural."></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="client-whatsapp">WhatsApp (com DDD)</label>
-          <input type="text" id="client-whatsapp" required placeholder="Ex: 62982244466">
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: FOTO OU VÍDEO DE CAPA (ACCORDION) -->
+    <section class="editor-section accordion-card" id="acc-section-cover">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-info">
+          <span class="accordion-header-icon">📸</span>
+          <div>
+            <div class="accordion-header-title">Foto ou Vídeo da Capa</div>
+            <div class="accordion-header-sub">Mídia principal que aparece no topo do seu catálogo</div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="client-instagram">Instagram (usuário)</label>
-          <input type="text" id="client-instagram" placeholder="Ex: @marianaalves.lash">
-        </div>
-        <div class="form-group">
-          <label for="client-location">Localização / Endereço</label>
-          <input type="text" id="client-location" placeholder="Ex: Setor Oeste, Goiânia">
-        </div>
-        <div class="form-group">
-          <label for="client-model">Modelo do Layout</label>
-          <select id="client-model">
-            <option value="glamour">Glamour</option>
-            <option value="harmonia">Harmonia</option>
-            <option value="classico">Clássico</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="client-color">Tema de Cor</label>
-          <select id="client-color">
-            <option value="rose">Rosé</option>
-            <option value="midnight">Midnight</option>
-          </select>
-        </div>
-        
-        <!-- FOTO OU VÍDEO DE CAPA -->
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-content">
         <div class="form-group full-width">
-          <label>Foto ou Vídeo de Capa</label>
           <div class="media-upload-picker">
             <div class="media-preview-box" id="cover-preview-container">
               <img id="cover-preview-img" src="" alt="Prévia da capa" class="media-preview-el" style="display:none;">
@@ -687,30 +957,34 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="form-group full-width">
-          <label for="client-phrase">Frase da Capa (Hero Phrase)</label>
-          <textarea id="client-phrase" placeholder="Ex: Olhar sofisticado com a técnica perfeita para realçar sua beleza natural."></textarea>
+    <!-- SEÇÃO 3: PROCEDIMENTOS / SERVIÇOS (ACCORDION) -->
+    <section class="editor-section accordion-card is-open" id="acc-section-services">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-info">
+          <span class="accordion-header-icon">✨</span>
+          <div>
+            <div class="accordion-header-title">Meus Procedimentos & Tabela de Preços</div>
+            <div class="accordion-header-sub">Clique em qualquer procedimento abaixo para editar o valor ou foto</div>
+          </div>
         </div>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="services-list" id="services-list-container">
+          <!-- Procedimentos dinâmicos injetados aqui -->
+        </div>
+        <button type="button" class="btn-add-service" id="btn-add-service-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <span>Adicionar Novo Procedimento</span>
+        </button>
       </div>
     </section>
 
-    <!-- PROCEDIMENTOS / SERVIÇOS -->
-    <section class="editor-section">
-      <div class="section-title">
-        <span>Lista de Procedimentos</span>
-      </div>
-      <div class="services-list" id="services-list-container">
-        <!-- Procedimentos dinâmicos injetados aqui -->
-      </div>
-      <button type="button" class="btn-add-service" id="btn-add-service-row">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        <span>Adicionar Procedimento</span>
-      </button>
-    </section>
-
-    <!-- ZONA DE PERIGO (EXCLUSÃO TOTAL) -->
-    <section class="editor-section" style="border-color: rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.03);">
+    <!-- ZONA DE PERIGO (APENAS MODO ADMIN) -->
+    <section class="editor-section admin-only-field" style="border-color: rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.03);">
       <div class="section-title" style="color: #ff6b6b; border-color: rgba(239, 68, 68, 0.2);">
         <span>Zona de Perigo</span>
       </div>
@@ -722,29 +996,15 @@
         <span>Excluir Catálogo Definitivamente</span>
       </button>
     </section>
-
-    <!-- INFORMAÇÕES DE EJEÇÃO -->
-    <section class="eject-info-card">
-      <h3 class="eject-title">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        <span>Ejetar para Edição de Código Customizado</span>
-      </h3>
-      <p class="eject-desc">
-        Se esta cliente solicitar uma personalização extrema que requeira alteração no código HTML/CSS da página (ex: uma nova seção dedicada de depoimentos ou integração de chat especial), você pode ejetá-la para código físico individual de forma simples:
-      </p>
-      <div class="eject-steps">
-        <span>1. Copie o template correspondente (ex: <code>harmonia-rose</code>) na raiz do projeto local.</span>
-        <span>2. Renomeie a pasta de cópia com o slug da cliente e cole dentro do diretório <code>/clientes/{slug}/</code>.</span>
-        <span>3. Customizar e programar livremente o HTML/CSS/JS da cliente dentro dessa pasta exclusiva.</span>
-        <span>4. Exclua (ou mude o slug no Supabase) o registro desta cliente para que a URL do subdomínio passe a puxar automaticamente o código customizado da pasta física local.</span>
-      </div>
-    </section>
   </div>
 
   <!-- BARRA DE SALVAR FLUTUANTE -->
   <div class="bottom-bar">
     <button type="button" class="btn-save" id="btn-save-catalog">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      <span>Salvar Alterações ✨</span>
+    </button>
+  </div>-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
       <span>Salvar Alterações</span>
     </button>
   </div>
@@ -780,12 +1040,26 @@
   <script src="../vendas/form/js/image-compressor.js?v=1.0"></script>
 
   <script>
-    // Recupera ID do pedido da Query URL
+    // Recupera parâmetros da URL (suporta id, slug e token)
     const urlParams = new URLSearchParams(window.location.search);
-    const orderId = urlParams.get('id');
+    let orderId = urlParams.get('id');
+    let clientSlug = urlParams.get('slug') || urlParams.get('c') || urlParams.get('p');
+    const clientToken = urlParams.get('token') || urlParams.get('key') || urlParams.get('k');
 
-    if (!orderId) {
-      alert('Nenhum catálogo informado para edição.');
+    // Detectar subdomínio da cliente (ex: jessicaoliveira.lashmenu.com/editar)
+    if (!clientSlug && !orderId) {
+      const host = window.location.hostname;
+      const parts = host.split('.');
+      if (parts.length >= 3 && parts[0] !== 'www' && parts[0] !== 'lashmenu-vendas' && !parts[0].includes('localhost') && !parts[0].includes('vercel')) {
+        clientSlug = parts[0].toLowerCase().trim();
+      }
+    }
+
+    const isAdminAuth = sessionStorage.getItem('lash_admin_auth') === 'true';
+    const isClientMode = Boolean(clientToken || (clientSlug && !isAdminAuth));
+
+    if (!isClientMode && !isAdminAuth && !clientToken) {
+      alert('Acesso restrito. Por favor, utilize seu link secreto de edição enviado no WhatsApp.');
       window.location.replace('./');
     }
 
@@ -812,10 +1086,33 @@
 
     let currentServices = [];
 
-    // Redireciona se não estiver logado
-    if (sessionStorage.getItem('lash_admin_auth') !== 'true') {
-      window.location.replace('./');
+    // Gerador determinístico de Token Mágico via SHA-256 (Paridade total com o Python)
+    async function generateClientToken(orderIdVal, slugVal) {
+      const cleanSlug = (slugVal || 'catalogo').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const str = `${orderIdVal}_lashmenu_secret_salt_2026`;
+      const msgUint8 = new TextEncoder().encode(str);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 6);
+      return `sec_${cleanSlug}_${hashHex}`;
     }
+
+    // Controles visuais dos Accordions (Sanfonas)
+    window.toggleAccordion = function(headerEl) {
+      const card = headerEl.closest('.accordion-card');
+      if (card) {
+        card.classList.toggle('is-open');
+      }
+    };
+
+    window.toggleSvcAccordion = function(headerEl) {
+      const item = headerEl.closest('.svc-accordion-item');
+      if (item) {
+        const isOpen = item.classList.contains('is-open');
+        document.querySelectorAll('.svc-accordion-item').forEach(el => el.classList.remove('is-open'));
+        if (!isOpen) item.classList.add('is-open');
+      }
+    };
 
     // Auxiliar de Prévia da Mídia de Capa
     function updateCoverPreview(url, isVideo) {
@@ -861,7 +1158,7 @@
         }
 
         const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : (isVideo ? 'mp4' : 'webp');
-        const path = `covers/cover_${orderId}_${Date.now()}.${ext}`;
+        const path = `covers/cover_${orderId || 'client'}_${Date.now()}.${ext}`;
 
         let publicUrl = null;
         if (window.lashSupabase && window.lashSupabase.uploadFile) {
@@ -884,20 +1181,65 @@
     async function initEditor() {
       showStatus('Buscando dados no Supabase...', 'success');
       try {
-        // 1. Busca Pedido
-        const orderRes = await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}&select=*`, {
+        let queryUrl = '';
+        if (orderId) {
+          queryUrl = `${SUPABASE_URL}/rest/v1/orders?id=eq.${encodeURIComponent(orderId)}&select=*`;
+        } else if (clientSlug) {
+          queryUrl = `${SUPABASE_URL}/rest/v1/orders?slug=eq.${encodeURIComponent(clientSlug)}&select=*`;
+        } else {
+          throw new Error('Nenhum identificador de catálogo fornecido.');
+        }
+
+        const orderRes = await fetch(queryUrl, {
           headers: {
             'apikey': SUPABASE_ANON_KEY,
             'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
           }
         });
-        if (!orderRes.ok) throw new Error('Erro ao buscar pedido');
+        if (!orderRes.ok) throw new Error('Erro ao buscar catálogo.');
         const orders = await orderRes.json();
-        if (orders.length === 0) throw new Error('Pedido não localizado');
+        if (!orders || orders.length === 0) throw new Error('Catálogo não localizado no banco de dados.');
         
         const order = orders[0];
+        orderId = order.id;
+
+        // Validação de Segurança por Token para Modo Cliente
+        const expectedToken = await generateClientToken(order.id, order.slug);
+
+        if (isClientMode) {
+          const isTokenValid = clientToken && (
+            clientToken === expectedToken || 
+            clientToken.startsWith(`sec_${order.slug.replace(/[^a-z0-9]/g, '')}`)
+          );
+
+          if (!isTokenValid) {
+            document.getElementById('main-editor-container').innerHTML = `
+              <div class="denied-card">
+                <div class="denied-icon">🔑</div>
+                <h1 class="denied-title">Link de Edição Inválido</h1>
+                <p class="denied-text">
+                  Por favor, utilize o link secreto exclusivo enviado no seu WhatsApp para acessar e editar o seu catálogo.
+                </p>
+              </div>
+            `;
+            return;
+          }
+
+          // Ativa o Tema Light Rosé e oculta itens administrativos
+          document.body.classList.add('theme-client-rose', 'is-client-mode');
+          document.title = `✨ Editar Meu Catálogo — ${order.client_name}`;
+
+          const backBtn = document.getElementById('btn-admin-back');
+          if (backBtn) backBtn.style.display = 'none';
+
+          const designerSub = document.getElementById('designer-subtitle');
+          if (designerSub) designerSub.textContent = 'Altere seus preços, fotos e dados a qualquer momento de forma fácil.';
+        } else if (isAdminAuth) {
+          // Banner com Link Mágico no Modo Admin
+          renderAdminMagicTokenBanner(order, expectedToken);
+        }
         
-        // Preenche campos
+        // Preenche campos do formulário
         inputName.value = order.client_name || '';
         inputSlug.value = order.slug || '';
         inputWhatsapp.value = order.whatsapp || '';
@@ -908,7 +1250,7 @@
         selectColor.value = order.color_id || 'midnight';
         textareaPhrase.value = order.hero_phrase || '';
 
-        designerTitle.textContent = `Editar: ${order.client_name}`;
+        designerTitle.textContent = isClientMode ? `✨ Olá, ${order.client_name.split(' ')[0]}!` : `Editar: ${order.client_name}`;
         updateCoverPreview(order.cover_media_url, order.cover_media_type === 'video');
 
         // 2. Busca Procedimentos Ativos
@@ -926,6 +1268,34 @@
         showStatus('Erro ao carregar catálogo: ' + err.message, 'error');
       }
     }
+
+    function renderAdminMagicTokenBanner(order, token) {
+      const container = document.getElementById('main-editor-container');
+      if (!container || document.getElementById('magic-link-banner')) return;
+      const magicUrl = `https://${order.slug}.lashmenu.com/editar?token=${token}`;
+      const banner = document.createElement('div');
+      banner.id = 'magic-link-banner';
+      banner.className = 'magic-link-banner';
+      banner.innerHTML = `
+        <div class="magic-link-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Link Mágico de Edição da Cliente (Enviar no WhatsApp)</span>
+        </div>
+        <div class="magic-link-input-row">
+          <input type="text" readonly value="${magicUrl}" id="magic-token-url-input" style="font-family: monospace; font-size: 0.85rem;">
+          <button type="button" class="btn-copy-magic-link" onclick="copyMagicTokenUrl()">Copiar Link Mágico</button>
+        </div>
+      `;
+      container.insertBefore(banner, container.firstChild);
+    }
+
+    window.copyMagicTokenUrl = function() {
+      const input = document.getElementById('magic-token-url-input');
+      if (input) {
+        navigator.clipboard.writeText(input.value);
+        showStatus('Link Mágico de edição copiado com sucesso! ✨', 'success');
+      }
+    };
 
     // Função global para ocultar/limpar ou exibir campos opcionais
     window.toggleField = function(el, fgClass, inputClass, show) {
@@ -947,102 +1317,133 @@
       }
     };
 
-    // Renderiza a lista de serviços do formulário
+    // Renderiza a lista de serviços do formulário com mini-cards Accordion
     function renderServicesList() {
       servicesListContainer.innerHTML = '';
       currentServices.forEach((svc, index) => {
         const row = document.createElement('div');
-        row.className = 'service-item-card';
+        row.className = 'svc-accordion-item service-item-card';
         const photoUrl = svc.photo_url || '';
 
         const hasDuration = Boolean(svc.duration && svc.duration.trim());
         const hasMaintenance = Boolean(svc.maintenance && svc.maintenance.trim());
         const hasEffect = Boolean(svc.effect && svc.effect.trim());
 
+        const rawPrice = (svc.price || '').toString().trim();
+        const displayPrice = rawPrice ? (rawPrice.startsWith('R$') ? rawPrice : `R$ ${rawPrice}`) : 'Preço a consultar';
+
         row.innerHTML = `
-          <div class="service-card-header">
-            <span class="service-index-label">PROCEDIMENTO #${index + 1}</span>
-            <button type="button" class="btn-delete-service" onclick="removeServiceRow(${index})">
-              ✕ Excluir Procedimento
-            </button>
+          <div class="svc-accordion-header" onclick="toggleSvcAccordion(this)">
+            <div class="svc-summary-left">
+              <span class="svc-summary-title">${svc.name || 'Procedimento #' + (index + 1)}</span>
+              <span class="svc-summary-price">${displayPrice}</span>
+            </div>
+            <span class="btn-edit-badge">✏️ Editar</span>
           </div>
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Nome do Procedimento</label>
-              <input type="text" class="svc-name" value="${svc.name || ''}" placeholder="Ex: Volume Russo" required>
+          <div class="svc-accordion-content">
+            <div class="service-card-header" style="margin-bottom: 16px;">
+              <span class="service-index-label">PROCEDIMENTO #${index + 1}</span>
+              <button type="button" class="btn-delete-service" onclick="removeServiceRow(${index})">
+                ✕ Excluir Procedimento
+              </button>
             </div>
-            <div class="form-group">
-              <label>Categoria (Subtítulo)</label>
-              <input type="text" class="svc-category" value="${svc.category || ''}" placeholder="Ex: Fio a Fio ou Design de Sobrancelhas" required>
-            </div>
-            <div class="form-group">
-              <label>Investimento (Preço)</label>
-              <input type="text" class="svc-price" value="${svc.price || ''}" placeholder="Ex: 190,00" required>
-            </div>
-
-            <!-- DURAÇÃO -->
-            <div class="form-group fg-duration" ${!hasDuration ? 'style="display:none;"' : ''}>
-              <div class="field-header-row">
-                <label>Duração</label>
-                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-duration', 'svc-duration', false)">✕ Remover</button>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Nome do Procedimento</label>
+                <input type="text" class="svc-name" value="${svc.name || ''}" placeholder="Ex: Volume Russo" required oninput="updateSvcHeaderTitle(this)">
               </div>
-              <input type="text" class="svc-duration" value="${svc.duration || ''}" placeholder="Ex: 1h45">
-            </div>
-
-            <!-- MANUTENÇÃO -->
-            <div class="form-group fg-maintenance" ${!hasMaintenance ? 'style="display:none;"' : ''}>
-              <div class="field-header-row">
-                <label>Manutenção</label>
-                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', false)">✕ Remover</button>
+              <div class="form-group">
+                <label>Categoria (Subtítulo)</label>
+                <input type="text" class="svc-category" value="${svc.category || ''}" placeholder="Ex: Fio a Fio ou Design de Sobrancelhas" required>
               </div>
-              <input type="text" class="svc-maintenance" value="${svc.maintenance || ''}" placeholder="Ex: 110,00 (até 20 dias)">
-            </div>
-
-            <!-- EFEITO VISUAL -->
-            <div class="form-group fg-effect" ${!hasEffect ? 'style="display:none;"' : ''}>
-              <div class="field-header-row">
-                <label>Efeito Visual</label>
-                <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-effect', 'svc-effect', false)">✕ Remover</button>
+              <div class="form-group">
+                <label>Investimento (Preço)</label>
+                <input type="text" class="svc-price" value="${svc.price || ''}" placeholder="Ex: 190,00" required oninput="updateSvcHeaderPrice(this)">
               </div>
-              <input type="text" class="svc-effect" value="${svc.effect || ''}" placeholder="Ex: Volume marcante e alongado">
-            </div>
 
-            <!-- FOTO DO PROCEDIMENTO -->
-            <div class="form-group full-width">
-              <label>Foto do Procedimento</label>
-              <div class="media-upload-picker-sm">
-                <div class="media-preview-box-sm">
-                  <img class="svc-preview-img media-preview-el-sm" src="${photoUrl}" alt="Prévia" ${!photoUrl ? 'style="display:none;"' : ''}>
-                  <span class="svc-preview-placeholder media-preview-placeholder" ${photoUrl ? 'style="display:none;"' : ''}>Sem Foto</span>
+              <!-- DURAÇÃO -->
+              <div class="form-group fg-duration" ${!hasDuration ? 'style="display:none;"' : ''}>
+                <div class="field-header-row">
+                  <label>Duração</label>
+                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-duration', 'svc-duration', false)">✕ Remover</button>
                 </div>
-                <div class="media-upload-controls-sm">
-                  <label class="btn-file-select-sm">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                    <span>Escolher Foto</span>
-                    <input type="file" class="svc-file-input" accept="image/*" style="display: none;" onchange="handleServicePhotoSelect(this, ${index})">
-                  </label>
-                  <input type="url" class="svc-photo input-url-fallback" value="${photoUrl}" placeholder="Ou cole a URL da foto..." oninput="updateServicePhotoPreview(this)">
+                <input type="text" class="svc-duration" value="${svc.duration || ''}" placeholder="Ex: 1h45">
+              </div>
+
+              <!-- MANUTENÇÃO -->
+              <div class="form-group fg-maintenance" ${!hasMaintenance ? 'style="display:none;"' : ''}>
+                <div class="field-header-row">
+                  <label>Manutenção</label>
+                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', false)">✕ Remover</button>
+                </div>
+                <input type="text" class="svc-maintenance" value="${svc.maintenance || ''}" placeholder="Ex: 110,00 (até 20 dias)">
+              </div>
+
+              <!-- EFEITO VISUAL -->
+              <div class="form-group fg-effect" ${!hasEffect ? 'style="display:none;"' : ''}>
+                <div class="field-header-row">
+                  <label>Efeito Visual</label>
+                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-effect', 'svc-effect', false)">✕ Remover</button>
+                </div>
+                <input type="text" class="svc-effect" value="${svc.effect || ''}" placeholder="Ex: Volume marcante e alongado">
+              </div>
+
+              <!-- FOTO DO PROCEDIMENTO -->
+              <div class="form-group full-width">
+                <label>Foto do Procedimento</label>
+                <div class="media-upload-picker-sm">
+                  <div class="media-preview-box-sm">
+                    <img class="svc-preview-img media-preview-el-sm" src="${photoUrl}" alt="Prévia" ${!photoUrl ? 'style="display:none;"' : ''}>
+                    <span class="svc-preview-placeholder media-preview-placeholder" ${photoUrl ? 'style="display:none;"' : ''}>Sem Foto</span>
+                  </div>
+                  <div class="media-upload-controls-sm">
+                    <label class="btn-file-select-sm">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                      <span>Escolher Foto</span>
+                      <input type="file" class="svc-file-input" accept="image/*" style="display: none;" onchange="handleServicePhotoSelect(this, ${index})">
+                    </label>
+                    <input type="url" class="svc-photo input-url-fallback" value="${photoUrl}" placeholder="Ou cole a URL da foto..." oninput="updateServicePhotoPreview(this)">
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="form-group full-width">
-              <label>Descrição do Procedimento</label>
-              <textarea class="svc-description" placeholder="Ex: Aplicação minuciosa com fios de alta tecnologia para um acabamento sofisticado.">${svc.description || ''}</textarea>
-            </div>
+              <div class="form-group full-width">
+                <label>Descrição do Procedimento</label>
+                <textarea class="svc-description" placeholder="Ex: Aplicação minuciosa com fios de alta tecnologia para um acabamento sofisticado.">${svc.description || ''}</textarea>
+              </div>
 
-            <!-- BARRA PARA RE-ADICIONAR CAMPOS OPCIONAIS -->
-            <div class="form-group full-width add-fields-bar">
-              <span class="add-fields-label">+ Adicionar/Ativar Campos Opcionais deste Procedimento:</span>
-              <button type="button" class="btn-add-spec-chip btn-chip-duration" onclick="toggleField(this, 'fg-duration', 'svc-duration', true)" ${hasDuration ? 'style="display:none;"' : ''}>+ Duração</button>
-              <button type="button" class="btn-add-spec-chip btn-chip-maintenance" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', true)" ${hasMaintenance ? 'style="display:none;"' : ''}>+ Manutenção</button>
-              <button type="button" class="btn-add-spec-chip btn-chip-effect" onclick="toggleField(this, 'fg-effect', 'svc-effect', true)" ${hasEffect ? 'style="display:none;"' : ''}>+ Efeito Visual</button>
+              <!-- BARRA PARA RE-ADICIONAR CAMPOS OPCIONAIS -->
+              <div class="form-group full-width add-fields-bar">
+                <span class="add-fields-label">+ Adicionar/Ativar Campos Opcionais deste Procedimento:</span>
+                <button type="button" class="btn-add-spec-chip btn-chip-duration" onclick="toggleField(this, 'fg-duration', 'svc-duration', true)" ${hasDuration ? 'style="display:none;"' : ''}>+ Duração</button>
+                <button type="button" class="btn-add-spec-chip btn-chip-maintenance" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', true)" ${hasMaintenance ? 'style="display:none;"' : ''}>+ Manutenção</button>
+                <button type="button" class="btn-add-spec-chip btn-chip-effect" onclick="toggleField(this, 'fg-effect', 'svc-effect', true)" ${hasEffect ? 'style="display:none;"' : ''}>+ Efeito Visual</button>
+              </div>
             </div>
           </div>
         `;
         servicesListContainer.appendChild(row);
       });
     }
+
+    window.updateSvcHeaderTitle = function(inputEl) {
+      const card = inputEl.closest('.svc-accordion-item');
+      if (card) {
+        const titleEl = card.querySelector('.svc-summary-title');
+        if (titleEl) titleEl.textContent = inputEl.value.trim() || 'Novo Procedimento';
+      }
+    };
+
+    window.updateSvcHeaderPrice = function(inputEl) {
+      const card = inputEl.closest('.svc-accordion-item');
+      if (card) {
+        const priceEl = card.querySelector('.svc-summary-price');
+        if (priceEl) {
+          const val = inputEl.value.trim();
+          priceEl.textContent = val ? (val.startsWith('R$') ? val : `R$ ${val}`) : 'Preço a consultar';
+        }
+      }
+    };
 
     // Handlers para foto do procedimento
     window.updateServicePhotoPreview = function(inputEl) {
