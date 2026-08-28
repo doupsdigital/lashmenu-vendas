@@ -8,6 +8,50 @@ from apify_service import get_apify_client
 
 load_dotenv()
 
+# Mapeamento 100% verificado e humano para os leads de Goiânia
+EXACT_NAME_MAP = {
+    1: "Edivania",
+    2: "Layfer",
+    3: "Larissa",
+    4: "Leticia",
+    5: "Poliana",
+    6: "Tanielly",
+    7: "Serena",
+    8: "Cinthya",
+    9: "Milenne",
+    10: "Brunna",
+    11: "Bella",
+    12: "Maria Eugênia",
+    13: "Mariane",
+    14: "Isabela",
+    15: "Déborah",
+    16: "Yara",
+    17: "Kathellem",
+    18: "Lollys",
+    19: "Ariana",
+    20: "", # Sobrancelhas Design -> Oii, tudo bem?
+    21: "Elaíne",
+    22: "Nayara",
+    23: "Joana",
+    24: "", # Cílios Showroom -> Oii, tudo bem?
+    25: "Katyane",
+    26: "Priscila",
+    27: "Crys",
+    28: "Aliany",
+    29: "D'Isanto",
+    30: "Ynnaá",
+    31: "Tiffany",
+    32: "Luana",
+    33: "Maiza",
+    34: "Kássia",
+    35: "Jéssica",
+    36: "Carvalho",
+    37: "Lanna",
+    38: "Faby",
+    39: "Sara",
+    40: "Ana Beatriz"
+}
+
 def clean_phone(phone_str):
     if not phone_str:
         return "", ""
@@ -33,14 +77,17 @@ def extract_instagram(website_url):
                 return f"@{handle}"
     return ""
 
-def get_name_only(title):
+def get_name_only(title, rank=None):
     """
-    Extrai o primeiro nome limpo ou a marca de forma natural.
+    Retorna o nome exato refinado.
     """
-    clean = re.sub(r'(?i)(extensão de cílios|estética|sobrancelhas|curso|goiania|goiânia|lash design|lashes|studio|st\.|setor|by|-|,|\.)', ' ', title)
+    if rank and rank in EXACT_NAME_MAP:
+        return EXACT_NAME_MAP[rank]
+    
+    clean = re.sub(r'(?i)(extensão de cílios|estética|sobrancelhas|curso|goiania|goiânia|lash design|lashes|studio|st\.|setor|by|-|,|\.|designer|design|cílios|cilios)', ' ', title)
     clean = ' '.join(clean.split())
     
-    ignore_words = {'curso', 'especializado', 'em', 'da', 'de', 'do', 'e', 'showroom', 'beauty', 'espaço', 'espaco', 'centro'}
+    ignore_words = {'curso', 'especializado', 'em', 'da', 'de', 'do', 'e', 'showroom', 'beauty', 'espaço', 'espaco', 'centro', 'design', 'designer'}
     words = [w for w in clean.split() if w.lower() not in ignore_words and len(w) > 2]
     
     if words:
@@ -86,11 +133,11 @@ def calculate_score(item):
 
     return score
 
-def generate_pitch_1(title):
+def generate_pitch_1(title, rank=None):
     """
-    1ª Mensagem: Abordagem fria persuasiva com emojis e quebra de linha após 'tabelas soltas...'.
+    1ª Mensagem: Abordagem fria persuasiva com emojis e nome 100% correto.
     """
-    name = get_name_only(title)
+    name = get_name_only(title, rank)
     greeting = f"Oii {name}" if name else "Oii, tudo bem?"
     
     pitch = (
@@ -101,11 +148,11 @@ def generate_pitch_1(title):
     )
     return pitch
 
-def generate_pitch_2(title):
+def generate_pitch_2(title, rank=None):
     """
     2ª Mensagem: Envio do modelo Harmonia Rose e pedido da tabela de preços.
     """
-    name = get_name_only(title)
+    name = get_name_only(title, rank)
     salutation = f" {name}" if name else ""
     
     script = (
@@ -115,11 +162,11 @@ def generate_pitch_2(title):
     )
     return script
 
-def generate_pitch_3(title):
+def generate_pitch_3(title, rank=None):
     """
     3ª Mensagem: Envio do catálogo pronto + Apresentação da Oferta & Desconto Pix (R$ 167).
     """
-    name = get_name_only(title)
+    name = get_name_only(title, rank)
     salutation = f" {name}" if name else ""
     
     script = (
@@ -150,9 +197,6 @@ def process():
         category = item.get("categoryName") or "Lash Designer"
         
         potential_score = calculate_score(item)
-        p1 = generate_pitch_1(title)
-        p2 = generate_pitch_2(title)
-        p3 = generate_pitch_3(title)
         
         records.append({
             "Score_Potencial": potential_score,
@@ -164,9 +208,6 @@ def process():
             "Link_WhatsApp": wa_link,
             "Instagram": instagram,
             "Website": website,
-            "Abordagem_1_Inicial": p1,
-            "Resposta_2_Demonstracao_SIM": p2,
-            "Fechamento_3_Oferta_Preco_Pix": p3,
             "Endereço": address,
             "Link_GoogleMaps": google_maps_url,
             "Categoria": category
@@ -177,6 +218,19 @@ def process():
     df = df.sort_values(by=["Score_Potencial", "Total_Avaliações", "Avaliação_Google"], ascending=[False, False, False])
     df.reset_index(drop=True, inplace=True)
     df["Rank"] = df.index + 1
+
+    # Adiciona as abordagens agora que já temos o Rank correto
+    p1_list, p2_list, p3_list = [], [], []
+    for idx, row in df.iterrows():
+        rank = row['Rank']
+        title = row['Nome_Estudio']
+        p1_list.append(generate_pitch_1(title, rank))
+        p2_list.append(generate_pitch_2(title, rank))
+        p3_list.append(generate_pitch_3(title, rank))
+
+    df['Abordagem_1_Inicial'] = p1_list
+    df['Resposta_2_Demonstracao_SIM'] = p2_list
+    df['Fechamento_3_Oferta_Preco_Pix'] = p3_list
     
     cols = [
         "Rank", "Score_Potencial", "Nome_Estudio", "Bairro", "Avaliação_Google", 
