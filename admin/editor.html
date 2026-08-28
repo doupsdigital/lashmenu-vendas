@@ -641,6 +641,59 @@
       color: #16110e !important;
     }
 
+    /* ── LOADING OVERLAY ROSÉ DE TELA CHEIA ── */
+    .client-editor-loader {
+      position: fixed;
+      inset: 0;
+      background: #faf6f4;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
+    }
+    .client-editor-loader.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .loader-inner-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+    .loader-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #16110e;
+      letter-spacing: 0.02em;
+    }
+    .loader-logo em {
+      font-style: italic;
+      color: #c04b6b;
+    }
+    .loader-spinner {
+      width: 42px;
+      height: 42px;
+      border: 3px solid rgba(192, 75, 107, 0.15);
+      border-top-color: #c04b6b;
+      border-radius: 50%;
+      animation: spinLoader 0.8s linear infinite;
+    }
+    @keyframes spinLoader {
+      to { transform: rotate(360deg); }
+    }
+    .loader-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #5c4e46;
+    }
+
     /* Topo Header na Paleta Oficial */
     body.theme-client-rose .admin-header,
     html.is-client-mode .admin-header {
@@ -671,34 +724,36 @@
       border: 1px solid #d4c4b7;
     }
 
-    /* Cards e Seções */
+    /* Cards e Seções de Alto Contraste */
     body.theme-client-rose .editor-section {
       background: #ffffff !important;
-      border: 1px solid #d4c4b7 !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+      border: 1.5px solid #e6dcd3 !important;
+      box-shadow: 0 10px 30px rgba(192, 75, 107, 0.04) !important;
       border-radius: 20px !important;
     }
     body.theme-client-rose label {
-      color: #483c35 !important;
-      font-size: 0.8rem !important;
+      color: #16110e !important;
+      font-size: 0.82rem !important;
       font-weight: 700 !important;
-      letter-spacing: 0.05em !important;
+      letter-spacing: 0.04em !important;
     }
     body.theme-client-rose input, 
     body.theme-client-rose select, 
     body.theme-client-rose textarea {
-      background: #ffffff !important;
-      border: 1px solid #d4c4b7 !important;
+      background: #fffcf9 !important;
+      border: 1.5px solid #d4c4b7 !important;
       color: #16110e !important;
       font-size: 16px !important; /* Previne auto-zoom no iOS/Android */
+      font-weight: 500 !important;
       border-radius: 12px !important;
       padding: 14px 16px !important;
     }
     body.theme-client-rose input:focus, 
     body.theme-client-rose select:focus, 
     body.theme-client-rose textarea:focus {
+      background: #ffffff !important;
       border-color: #c04b6b !important;
-      box-shadow: 0 0 0 4px rgba(192, 75, 107, 0.12) !important;
+      box-shadow: 0 0 0 4px rgba(192, 75, 107, 0.15) !important;
     }
 
     /* Envio de Arquivos / Fotos Rosé */
@@ -728,7 +783,7 @@
     body.theme-client-rose .input-url-fallback,
     body.theme-client-rose .svc-photo {
       background: #ffffff !important;
-      border: 1px solid #d4c4b7 !important;
+      border: 1.5px solid #d4c4b7 !important;
       color: #16110e !important;
       font-size: 0.85rem !important;
       border-radius: 12px !important;
@@ -740,30 +795,28 @@
       display: none !important;
     }
 
-    /* ── CARDS COLAPSÁVEIS (ACCORDION UX) ── */
+    /* ── CARDS COLAPSÁVEIS ORGÂNICOS (SEM SOMBRAS QUADRADAS INTERNAS) ── */
     .accordion-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      margin-bottom: 20px;
-      overflow: hidden;
-      transition: all 0.25s ease;
-    }
-    body.theme-client-rose .accordion-card {
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      background: #ffffff !important;
+      border: 1.5px solid #e6dcd3 !important;
+      border-radius: 20px !important;
+      margin-bottom: 18px !important;
+      overflow: hidden !important;
+      box-shadow: 0 10px 30px rgba(192, 75, 107, 0.04) !important;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease !important;
     }
     .accordion-header {
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-      background: #fcf9f6;
-      transition: background 0.2s ease;
+      padding: 18px 24px !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      cursor: pointer !important;
+      user-select: none !important;
+      background: #ffffff !important; /* Fundo contínuo limpo sem retângulos internos */
+      transition: background 0.2s ease !important;
     }
     .accordion-header:hover {
-      background: #f5ede6;
+      background: #fdfaf7 !important;
     }
     .accordion-header-info {
       display: flex;
@@ -775,7 +828,7 @@
     }
     .accordion-header-title {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 700;
       color: var(--text);
     }
@@ -807,7 +860,7 @@
     .accordion-content {
       display: none;
       padding: 24px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid #f0e6df;
     }
     .accordion-card.is-open .accordion-content {
       display: block;
@@ -818,31 +871,27 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── MINI-SANFONA DE PROCEDIMENTOS (CLIENT MODE) ── */
+    /* ── MINI-SANFONA DE PROCEDIMENTOS (LARGURA TOTAL E ALTO CONSTRASTE) ── */
     .svc-accordion-item {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      margin-bottom: 14px;
-      overflow: hidden;
-      background: var(--card-bg);
-      transition: all 0.2s ease;
-    }
-    body.theme-client-rose .svc-accordion-item {
-      background: #ffffff;
-      border-color: #e6dcd3;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      border: 1.5px solid #e6dcd3 !important;
+      border-radius: 16px !important;
+      margin-bottom: 14px !important;
+      overflow: hidden !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+      transition: all 0.2s ease !important;
     }
     .svc-accordion-header {
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      background: #fdfbf9;
-      transition: background 0.2s ease;
+      padding: 16px 20px !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      cursor: pointer !important;
+      background: #ffffff !important;
+      transition: background 0.2s ease !important;
     }
     .svc-accordion-header:hover {
-      background: #fdf5f7;
+      background: #fdf5f7 !important;
     }
     .svc-summary-left {
       display: flex;
@@ -853,7 +902,7 @@
     .svc-summary-title {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       color: var(--text);
     }
     .svc-summary-price {
@@ -892,7 +941,12 @@
     .svc-accordion-content {
       display: none;
       padding: 20px;
-      border-top: 1px solid var(--border);
+      border-top: 1.5px solid #f0e6df;
+      background: #faf6f4; /* Fundo suave para dar destaque aos inputs brancos */
+    }
+    .svc-accordion-item.is-open .svc-accordion-content {
+      display: block;
+      animation: accordionFade 0.2s ease;
     }
     .svc-accordion-item.is-open .svc-accordion-content {
       display: block;
@@ -1103,6 +1157,15 @@
 </head>
 
 <body>
+
+  <!-- TELA DE CARREGAMENTO INICIAL (LOADING OVERLAY ROSÉ) -->
+  <div id="client-editor-loader" class="client-editor-loader">
+    <div class="loader-inner-box">
+      <div class="loader-logo">Lash<em>Menu</em></div>
+      <div class="loader-spinner"></div>
+      <span class="loader-text">Carregando seu catálogo...</span>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="admin-header">
@@ -1427,9 +1490,19 @@
       }
     });
 
+    function hideEditorLoader() {
+      const loader = document.getElementById('client-editor-loader');
+      if (loader) {
+        loader.classList.add('is-hidden');
+        setTimeout(() => { loader.style.display = 'none'; }, 400);
+      }
+    }
+
     // Carrega dados iniciais do Supabase
     async function initEditor() {
-      showStatus('Buscando dados no Supabase...', 'success');
+      if (!isClientMode) {
+        showStatus('Buscando dados no Supabase...', 'success');
+      }
       try {
         let queryUrl = '';
         if (orderId) {
@@ -1463,6 +1536,7 @@
           );
 
           if (!isTokenValid) {
+            hideEditorLoader();
             document.getElementById('main-editor-container').innerHTML = `
               <div class="denied-card">
                 <div class="denied-icon">🔑</div>
@@ -1516,6 +1590,8 @@
         clearStatus();
       } catch (err) {
         showStatus('Erro ao carregar catálogo: ' + err.message, 'error');
+      } finally {
+        hideEditorLoader();
       }
     }
 
@@ -1594,7 +1670,7 @@
             </div>
           </div>
           <div class="svc-accordion-content">
-            <div class="service-card-header" style="margin-bottom: 16px;">
+            <div class="service-card-header admin-only-field" style="margin-bottom: 16px;">
               <span class="service-index-label">PROCEDIMENTO #${index + 1}</span>
               <button type="button" class="btn-delete-service" onclick="removeServiceRow(${index})">
                 ✕ Excluir Procedimento
