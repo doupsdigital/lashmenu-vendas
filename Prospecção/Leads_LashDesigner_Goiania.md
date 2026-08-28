@@ -34,15 +34,22 @@ A pontuação de cada lead foi calculada com base na probabilidade de conversão
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Curso%20Extens%C3%A3o%20de%20c%C3%ADlios%20-%20Studio%20Edivania%20Paiva%20Extens%C3%A3o%20de%20c%C3%ADlios%20Goi%C3%A2nia&query_place_id=ChIJNcJRVe7xXpMRegJRirWTQ3Q)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Edivania, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Central no Google (265 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Edivania, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Edivania! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -58,15 +65,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Layfer%2C%20C%C3%ADlios%2C%20Micropigmenta%C3%A7%C3%A3o%20e%20Est%C3%A9tica%20-%20St.%20Alto%20da%20Gl%C3%B3ria&query_place_id=ChIJzxi2-6PxXpMRk_q1l5AoAD4)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Layfer, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Alto da Glória no Google (228 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Layfer, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Layfer! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -81,15 +95,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Larissa%20Lobo.%20Especializado%20em%20sobrancelhas%2C%20c%C3%ADlios%20e%20est%C3%A9tica.&query_place_id=ChIJjchOyjzxXpMRxFD2HiV89GI)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Larissa, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Bueno no Google (117 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Larissa, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Larissa! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -104,15 +125,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20c%C3%ADlios%20Goiania%20-%20Studio%20Leticia%20Santana%20Lash%20Design&query_place_id=ChIJG9x9B23xXpMRznt7moxKXfw)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Leticia, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Bueno no Google (83 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Leticia, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Leticia! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -127,15 +155,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20c%C3%ADlios%20By%20Poliana%20Souza&query_place_id=ChIJl_ZyRl_xXpMRoMv8tRv3jHo)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Poliana, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Marista no Google (57 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Poliana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Poliana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -151,15 +186,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Tanielly%20Duarte%20Studio%20Beauty&query_place_id=ChIJw-k52L7xXpMRSfLrH3GEy1E)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Tanielly, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Alto da Glória no Google (53 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Tanielly, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Tanielly! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -174,15 +216,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Serena%20Beauty&query_place_id=ChIJ30V_nJLzXpMRZxr4KhUVXi8)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Serena, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Jardim Goiás no Google (55 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Serena, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Serena! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -198,15 +247,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Cinthya%20Montanini%20Goi%C3%A2nia%2C%20Extens%C3%A3o%20de%20C%C3%ADlios%2C%20Micropigmenta%C3%A7%C3%A3o%20de%20Sobrancelha%2C%20Labial%20e%20alongamento%20de%20unha&query_place_id=ChIJGzUau7jxXpMRuco3wD_9oYU)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Cinthya, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Bela Vista no Google (74 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Cinthya, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Cinthya! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -222,15 +278,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Design%20de%20Sobrancelhas%20e%20brow%20lamination%20Goi%C3%A2nia%20-%20Milenne%20Beauty%20Organiq&query_place_id=ChIJKSdJ9xXxXpMR2i-K-1q6l5w)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Design, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Sul no Google (73 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Design, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Design! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -246,15 +309,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20C%C3%ADlios%20e%20Design%20de%20Sobrancelhas%20%7C%20Studio%20Brunna%20Lima%20Beauty%20Goi%C3%A2nia&query_place_id=ChIJr9nEaLHzXpMR93NBR10NBeY)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Design, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Leste Universitário no Google (68 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Design, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Design! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -270,15 +340,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Bella%20C%C3%ADlios%20e%20sobrancelhas&query_place_id=ChIJqcYJEjXyXpMRtnQQ3biylr4)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Bella, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Negrão de Lima no Google (52 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Bella, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Bella! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -294,15 +371,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Maria%20Eug%C3%AAnia%20Sobrancelhas&query_place_id=ChIJU43d51L1XpMRs5E5kKLMxX0)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Maria, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Parque Atheneu no Google (48 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Maria, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Maria! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -318,15 +402,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Mariane%20Moreno%20Sobrancelhas&query_place_id=ChIJX1H2g17lXpMRgNeUw_-gzZw)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Mariane, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Parque Atheneu no Google (43 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Mariane, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Mariane! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -342,15 +433,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Isabela%20Souza%20%7C%20C%C3%ADlios%20e%20Sobrancelhas%20em%20Goi%C3%A2nia&query_place_id=ChIJ6_FUKYnxXpMRZl7o8vNiDJE)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Isabela, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Vila Redencao no Google (31 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Isabela, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Isabela! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -366,15 +464,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=D%C3%A9borah%20Alvarenga%20Beauty%20-%20C%C3%ADlios%20Goi%C3%A2nia%20%2F%20Sobrancelha%20Natural%20%2F%20C%C3%ADlios&query_place_id=ChIJl9chJ-nxXpMRqLdSKfOsPEI)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Déborah, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Nova Suiça no Google (27 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Déborah, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Déborah! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -390,15 +495,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Yara%20Ferreira%20Lash%20Designer%20-%20Extens%C3%A3o%20de%20C%C3%ADlios&query_place_id=ChIJyxTL8p7vXpMR1pVLBLcrUEg)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Yara, tudo bem? 👋 Vi o perfil de excelência do seu estúdio em Goiânia no Google (23 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Yara, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Yara! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -413,15 +525,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Kathellem%20lima%20-%20Lash%20Designer%20(Extens%C3%A3o%20de%20c%C3%ADlios)-%20Designer%20de%20sobrancelha%20-%20maquiagem-Depila%C3%A7%C3%A3o&query_place_id=ChIJlQQGMQzxXpMRzMyTFfdm_pU)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Kathellem, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Leste Universitário no Google (22 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Kathellem, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Kathellem! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -436,15 +555,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Lollys%20Cilios&query_place_id=ChIJGye0ibH2XpMRF8fxewDzYv4)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Lollys, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Nova Suiça no Google (41 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Lollys, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Lollys! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -458,15 +584,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=EXTENS%C3%83O%20DE%20C%C3%8DLIOS%20GOI%C3%82NIA-%20ARIANA&query_place_id=ChIJOU-jj6jzXpMROoQLtO7YqUw)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Ariana, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Leste Vila Nova no Google (32 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Ariana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Ariana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -480,15 +613,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Sobrancelhas%20Design&query_place_id=ChIJv6BTMnPxXpMRSTgLft6uVY4)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Design, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Sul no Google (245 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Design, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Design! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -504,15 +644,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Ela%C3%ADne%20Nascimento%20Lashdesigner%20-%20Extens%C3%A3o%20de%20c%C3%ADlios%20e%20Designer%20de%20Sobrancelha%20em%20Goi%C3%A2nia&query_place_id=ChIJB0t6XAztXpMRfyugbg31EHw)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Elaíne, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Parque das Amendoeiras no Google (19 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Elaíne, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Elaíne! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -527,15 +674,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20C%C3%ADlios%20-%20Studio%20de%20C%C3%ADlios%20Nayara&query_place_id=ChIJG8ux-Ov3XpMRWf58BW9LZ5c)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Cílios, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Bairro Santa Rita no Google (16 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Cílios, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Cílios! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -551,15 +705,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Joana%20Paiva%20studio&query_place_id=ChIJJ3J5bgntXpMRud_xJ4tempE)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Joana, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Residencial Paulo estrela no Google (16 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Joana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Joana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -574,15 +735,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=C%C3%ADlios%20Showroom&query_place_id=ChIJu0BGTGvzXpMRocxq8JKc-Sw)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Cílios, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Crimeia Leste no Google (15 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Cílios, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Cílios! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -597,15 +765,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Katyane%20Mendes&query_place_id=ChIJDWwGdzblXpMRd3FPc_MqTIE)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Katyane, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Parque Atheneu no Google (11 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Katyane, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Katyane! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -619,15 +794,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Vidal%20Priscila&query_place_id=ChIJy5B_VJv7XpMRvSe-I9ZXO6M)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Vidal, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Parque Atheneu no Google (61 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Vidal, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Vidal! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -641,15 +823,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Crys%20Lohany%20Lashes&query_place_id=ChIJE3PPbB7xXpMR8fpw2IcHaEo)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Crys, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Água Branca no Google (25 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Crys, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Crys! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -663,15 +852,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Aliany%20Mendes%20-%20Nail%20Designer&query_place_id=ChIJkUJBKqrxXpMR6xxIrqyhBBg)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Aliany, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Jardim Bela Vista no Google (24 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Aliany, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Aliany! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -686,15 +882,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=D'Isanto%20Brows%20%7C%20Design%20de%20Sobrancelhas%20%7C%20Brow%20Lamination%20%7C%20Lash%20Lifting&query_place_id=ChIJURiAgEv7XpMRzE1r8meSquY)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii D'isanto, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Jardim Mariliza no Google ⭐ e achei seu trabalho impecável.
+Oii D'isanto, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo D'isanto! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -710,15 +913,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Ynna%C3%AA%20Uch%C3%B4a%20Lash%20Design%20Micropigmentadora&query_place_id=ChIJiTtbqZfvXpMRIO3w6gfFvF8)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Ynnaê, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Jardim das Aroeiras no Google ⭐ e achei seu trabalho impecável.
+Oii Ynnaê, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Ynnaê! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -734,15 +944,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Tiffany%20Araujo%20Lash%20Designer&query_place_id=ChIJPyOILwDtXpMRWQI8aKon9xs)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Tiffany, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Dom Fernando II no Google ⭐ e achei seu trabalho impecável.
+Oii Tiffany, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Tiffany! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -756,15 +973,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Luana%20Alves%20-%20EXTENS%C3%83O%20DE%20C%C3%8DLIOS&query_place_id=ChIJTZAvan_7XpMR2Jg80sZtYfE)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Luana, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Jardim Vitoria 2 no Google (19 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Luana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Luana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -778,15 +1002,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Maiza%20Gualberto%20-%20Designer&query_place_id=ChIJTbGrc4_tXpMRh9cp08Blirw)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Maiza, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Recanto das Minas Gerais no Google (16 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Maiza, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Maiza! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -800,15 +1031,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=St%C3%BAdio%20K%C3%A1ssia%20Bianca&query_place_id=ChIJKcBlqBbxXpMRU98OCKiLOG8)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Stúdio, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Jardim da Luz no Google (12 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Stúdio, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Stúdio! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -822,15 +1060,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20J%C3%A9ssica%20Oliveira&query_place_id=ChIJtxsg20btXpMR27Z_7BfJEeE)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Jéssica, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Parque das Amendoeiras no Google (23 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Jéssica, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Jéssica! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -844,15 +1089,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Carvalho&query_place_id=ChIJRdU9x2XxXpMRzCGYU9op7jo)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Carvalho, tudo bem? 👋 Vi o perfil de excelência do seu estúdio em Goiânia no Google (17 avaliações no Google! ⭐) e achei seu trabalho impecável.
+Oii Carvalho, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Carvalho! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -866,15 +1118,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Lanna%20Lobo&query_place_id=ChIJVyyXJwDlXpMRWTqlnY4xGBI)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Lanna, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Parque Atheneu no Google ⭐ e achei seu trabalho impecável.
+Oii Lanna, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Lanna! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -888,15 +1147,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Faby%20Marques%20Lash%20Designer&query_place_id=ChIJb_Gnc9_tXpMRNJOyzmjiiLo)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Marques, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Santo Hilario no Google ⭐ e achei seu trabalho impecável.
+Oii Marques, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Marques! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -910,15 +1176,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Sara%20de%20Paula%20Lash%20Design&query_place_id=ChIJeXQZdhvtXpMRzNvNw6fbKUI)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Sara, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Setor Recanto das Minas Gerais no Google ⭐ e achei seu trabalho impecável.
+Oii Sara, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Sara! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---
@@ -932,15 +1205,22 @@ Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar
 - **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Ana%20Beatriz%20Lash%20Designer&query_place_id=ChIJJRDbBQDvXpMRiKtXEQ_j6_Q)
 
 ```text
-💬 ROTEIRO DE ABORDAGEM WHATSAPP:
+💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Ana, tudo bem? 👋 Vi o perfil de excelência do seu estúdio no Vila Pedroso no Google ⭐ e achei seu trabalho impecável.
+Oii Ana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
 
-Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
 
-Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.
+Posso te mandar um modelo de demonstração para você ver como fica na prática?
+```
 
-Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?
+```text
+✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:
+
+Que ótimo Ana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]
+
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
 ```
 
 ---

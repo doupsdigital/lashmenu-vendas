@@ -33,34 +33,23 @@ def extract_instagram(website_url):
                 return f"@{handle}"
     return ""
 
-def get_greeting_name(title):
+def get_name_only(title):
     """
-    Gera uma saudação natural para o WhatsApp com base no nome do estúdio ou da especialista.
-    Exemplos:
-    - "Extensão de cílios Goiania - Studio Leticia Santana Lash Design" -> "Letícia"
-    - "Extensão de cílios By Poliana Souza" -> "Poliana"
-    - "Studio Larissa Lobo" -> "Larissa"
-    - "Serena Beauty" -> "equipe da Serena Beauty"
+    Extrai o primeiro nome limpo ou o nome do estúdio de forma natural.
     """
-    # Remove ruídos e termos genéricos
     clean = re.sub(r'(?i)(extensão de cílios|estética|sobrancelhas|curso|goiania|goiânia|lash design|lashes|studio|st\.|setor|by|-|,|\.)', ' ', title)
     clean = ' '.join(clean.split())
     
-    # Palavras a ignorar na primeira palavra
     ignore_words = {'curso', 'especializado', 'em', 'da', 'de', 'do', 'e', 'showroom', 'beauty', 'espaço', 'espaco', 'centro'}
     words = [w for w in clean.split() if w.lower() not in ignore_words and len(w) > 2]
     
     if words:
-        first_word = words[0].capitalize()
-        # Se for um nome próprio comum
-        return f"Oii {first_word}"
-    
-    # Fallback genérico e profissional
-    return "Oii, tudo bem?"
+        return words[0].capitalize()
+    return ""
 
 def calculate_score(item):
     """
-    Calcula pontuação de 0 a 100 de potencial de fechamento do LashMenu.
+    Calcula a pontuação de potencial de fechamento do LashMenu (0 a 100).
     """
     score = 0
     
@@ -97,22 +86,34 @@ def calculate_score(item):
 
     return score
 
-def generate_pitch(title, neighborhood, website, instagram, reviews):
+def generate_pitch(title):
     """
-    Gera o roteiro personalizado de abordagem direta pelo WhatsApp.
+    Gera abordagem fria objetiva em 3 parágrafos curtos e altamente persuasivos.
     """
-    greeting = get_greeting_name(title)
-    bairro_str = f" no {neighborhood}" if neighborhood and neighborhood != "Goiânia" else " em Goiânia"
+    name = get_name_only(title)
+    greeting = f"Oii {name}" if name else "Oii, tudo bem?"
     
     pitch = (
-        f"{greeting}, tudo bem? 👋 Vi o perfil de excelência do seu estúdio{bairro_str} no Google"
-        f"{f' ({reviews} avaliações no Google! ⭐)' if reviews >= 5 else ' ⭐'} e achei seu trabalho impecável.\n\n"
-        f"Percebi que muitas clientes aí em Goiânia ficam em dúvida sobre qual técnica escolher (Fio a Fio, Volume Russo, Brasileiro, Lash Lifting) ou sobre manutenções e valores antes de agendar.\n\n"
-        f"Desenvolvemos o *LashMenu*, um catálogo digital interativo feito sob medida para Lash Designers enviar pelo WhatsApp e colocar na Bio do Instagram. "
-        f"Ele organiza seus procedimentos, tabela de preços e orientações pós-procedimento em um só link profissional, acelerando o agendamento de clientes.\n\n"
-        f"Posso te enviar uma demonstração gratuita que montamos para o seu estúdio dar uma olhada rápida?"
+        f"{greeting}, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!\n\n"
+        f"Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... "
+        f"Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.\n\n"
+        f"Posso te mandar um modelo de demonstração para você ver como fica na prática?"
     )
     return pitch
+
+def generate_followup_yes(title):
+    """
+    Roteiro para quando o lead responde SIM / demonstra interesse.
+    """
+    name = get_name_only(title)
+    salutation = f" {name}" if name else ""
+    
+    script = (
+        f"Que ótimo{salutation}! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:\n"
+        f"👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]\n\n"
+        f"Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!"
+    )
+    return script
 
 def process():
     dataset_id = "mFQN8LEZBwAalybcv"
@@ -133,7 +134,8 @@ def process():
         category = item.get("categoryName") or "Lash Designer"
         
         potential_score = calculate_score(item)
-        pitch = generate_pitch(title, neighborhood, website, instagram, reviews)
+        pitch = generate_pitch(title)
+        followup_yes = generate_followup_yes(title)
         
         records.append({
             "Score_Potencial": potential_score,
@@ -145,7 +147,8 @@ def process():
             "Link_WhatsApp": wa_link,
             "Instagram": instagram,
             "Website": website,
-            "Abordagem_WhatsApp": pitch,
+            "Abordagem_Inicial_WhatsApp": pitch,
+            "Resposta_Se_Responder_SIM": followup_yes,
             "Endereço": address,
             "Link_GoogleMaps": google_maps_url,
             "Categoria": category
@@ -160,7 +163,7 @@ def process():
     cols = [
         "Rank", "Score_Potencial", "Nome_Estudio", "Bairro", "Avaliação_Google", 
         "Total_Avaliações", "Telefone", "Link_WhatsApp", "Instagram", "Website", 
-        "Abordagem_WhatsApp", "Endereço", "Link_GoogleMaps"
+        "Abordagem_Inicial_WhatsApp", "Resposta_Se_Responder_SIM", "Endereço", "Link_GoogleMaps"
     ]
     df = df[cols]
     
@@ -208,8 +211,11 @@ def process():
         if row['Website']:
             md_content += f"- **Website:** {row['Website']}\n"
         md_content += f"- **Endereço:** {row['Endereço']}\n"
-        md_content += f"- **Link no Google Maps:** [Ver no Maps]({row['Link_GoogleMaps']})\n"
-        md_content += f"\n```text\n💬 ROTEIRO DE ABORDAGEM WHATSAPP:\n\n{row['Abordagem_WhatsApp']}\n```\n\n---\n\n"
+        md_content += f"- **Link no Google Maps:** [Ver no Maps]({row['Link_GoogleMaps']})\n\n"
+        
+        md_content += f"```text\n💬 1. ABORDAGEM INICIAL (WHATSAPP):\n\n{row['Abordagem_Inicial_WhatsApp']}\n```\n\n"
+        md_content += f"```text\n✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:\n\n{row['Resposta_Se_Responder_SIM']}\n```\n\n"
+        md_content += "---\n\n"
         
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(md_content)
