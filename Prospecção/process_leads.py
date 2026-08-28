@@ -35,7 +35,7 @@ def extract_instagram(website_url):
 
 def get_name_only(title):
     """
-    Extrai o primeiro nome limpo ou o nome do estúdio de forma natural.
+    Extrai o primeiro nome limpo ou a marca de forma natural.
     """
     clean = re.sub(r'(?i)(extensão de cílios|estética|sobrancelhas|curso|goiania|goiânia|lash design|lashes|studio|st\.|setor|by|-|,|\.)', ' ', title)
     clean = ' '.join(clean.split())
@@ -49,7 +49,7 @@ def get_name_only(title):
 
 def calculate_score(item):
     """
-    Calcula a pontuação de potencial de fechamento do LashMenu (0 a 100).
+    Calcula pontuação de potencial de fechamento do LashMenu (0 a 100).
     """
     score = 0
     
@@ -86,9 +86,9 @@ def calculate_score(item):
 
     return score
 
-def generate_pitch(title):
+def generate_pitch_1(title):
     """
-    Gera abordagem fria objetiva em 3 parágrafos curtos e altamente persuasivos.
+    1ª Mensagem: Abordagem fria em 3 parágrafos objetivos.
     """
     name = get_name_only(title)
     greeting = f"Oii {name}" if name else "Oii, tudo bem?"
@@ -101,17 +101,33 @@ def generate_pitch(title):
     )
     return pitch
 
-def generate_followup_yes(title):
+def generate_pitch_2(title):
     """
-    Roteiro para quando o lead responde SIM / demonstra interesse.
+    2ª Mensagem: Envio do modelo Harmonia Rose e pedido da tabela de preços.
     """
     name = get_name_only(title)
     salutation = f" {name}" if name else ""
     
     script = (
         f"Que ótimo{salutation}! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:\n"
-        f"👉 [INSERIR LINK DO DEMO AQUI - Ex: modelo Harmonia Rose]\n\n"
+        f"👉 https://lashmenu.com/c/harmonia-rose\n\n"
         f"Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!"
+    )
+    return script
+
+def generate_pitch_3(title):
+    """
+    3ª Mensagem: Envio do catálogo pronto + Apresentação da Oferta & Desconto Pix (R$ 167).
+    """
+    name = get_name_only(title)
+    salutation = f" {name}" if name else ""
+    
+    script = (
+        f"Prontinho{salutation}! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:\n"
+        f"👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]\n\n"
+        f"A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).\n\n"
+        f"Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!\n\n"
+        f"Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?"
     )
     return script
 
@@ -134,8 +150,9 @@ def process():
         category = item.get("categoryName") or "Lash Designer"
         
         potential_score = calculate_score(item)
-        pitch = generate_pitch(title)
-        followup_yes = generate_followup_yes(title)
+        p1 = generate_pitch_1(title)
+        p2 = generate_pitch_2(title)
+        p3 = generate_pitch_3(title)
         
         records.append({
             "Score_Potencial": potential_score,
@@ -147,8 +164,9 @@ def process():
             "Link_WhatsApp": wa_link,
             "Instagram": instagram,
             "Website": website,
-            "Abordagem_Inicial_WhatsApp": pitch,
-            "Resposta_Se_Responder_SIM": followup_yes,
+            "Abordagem_1_Inicial": p1,
+            "Resposta_2_Demonstracao_SIM": p2,
+            "Fechamento_3_Oferta_Preco_Pix": p3,
             "Endereço": address,
             "Link_GoogleMaps": google_maps_url,
             "Categoria": category
@@ -163,7 +181,8 @@ def process():
     cols = [
         "Rank", "Score_Potencial", "Nome_Estudio", "Bairro", "Avaliação_Google", 
         "Total_Avaliações", "Telefone", "Link_WhatsApp", "Instagram", "Website", 
-        "Abordagem_Inicial_WhatsApp", "Resposta_Se_Responder_SIM", "Endereço", "Link_GoogleMaps"
+        "Abordagem_1_Inicial", "Resposta_2_Demonstracao_SIM", "Fechamento_3_Oferta_Preco_Pix", 
+        "Endereço", "Link_GoogleMaps"
     ]
     df = df[cols]
     
@@ -198,6 +217,11 @@ def process():
     md_content += "| **Canal Direto** | Telefone / WhatsApp direto cadastrado | **+15 pts** | Permite prospecção e abordagem imediata via WhatsApp. |\n"
     md_content += "| **Presença Digital** | Website ou Instagram ativo | **+15 pts** | Negócio no digital que precisa de um link profissional de catálogo (LashMenu) na Bio. |\n\n"
     md_content += "---\n\n"
+    md_content += "## 📋 Funil de 3 Passos de Abordagem\n\n"
+    md_content += "1. **1ª Mensagem**: Abordagem fria rápida em 3 parágrafos.\n"
+    md_content += "2. **2ª Mensagem**: Envio do link oficial do modelo Harmonia Rosé e pedido dos preços dela.\n"
+    md_content += "3. **3ª Mensagem**: Envio do catálogo pronto + Oferta do site (R$ 197) vs Desconto Pix (R$ 167).\n\n"
+    md_content += "---\n\n"
     md_content += "## 📋 Lista de Leads Ordenados por Potencial\n\n"
     
     for idx, row in df.iterrows():
@@ -213,8 +237,9 @@ def process():
         md_content += f"- **Endereço:** {row['Endereço']}\n"
         md_content += f"- **Link no Google Maps:** [Ver no Maps]({row['Link_GoogleMaps']})\n\n"
         
-        md_content += f"```text\n💬 1. ABORDAGEM INICIAL (WHATSAPP):\n\n{row['Abordagem_Inicial_WhatsApp']}\n```\n\n"
-        md_content += f"```text\n✅ 2. RESPOSTA SE ELA DISSER 'SIM' / DEMONSTRAR INTERESSE:\n\n{row['Resposta_Se_Responder_SIM']}\n```\n\n"
+        md_content += f"```text\n💬 1. ABORDAGEM INICIAL (WHATSAPP):\n\n{row['Abordagem_1_Inicial']}\n```\n\n"
+        md_content += f"```text\n✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):\n\n{row['Resposta_2_Demonstracao_SIM']}\n```\n\n"
+        md_content += f"```text\n💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):\n\n{row['Fechamento_3_Oferta_Preco_Pix']}\n```\n\n"
         md_content += "---\n\n"
         
     with open(md_path, "w", encoding="utf-8") as f:
