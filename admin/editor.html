@@ -5,6 +5,21 @@
   <meta charset="utf-8">
   <title>Editar Catálogo — LashMenu Admin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>
+    (function() {
+      var p = new URLSearchParams(window.location.search);
+      var isClient = p.has('token') || p.has('key') || p.has('k') || window.location.pathname.indexOf('/editar') !== -1;
+      if (!isClient) {
+        var h = window.location.hostname.split('.');
+        if (h.length >= 3 && h[0] !== 'www' && h[0] !== 'lashmenu-vendas' && h[0].indexOf('localhost') === -1 && h[0].indexOf('vercel') === -1) {
+          isClient = true;
+        }
+      }
+      if (isClient) {
+        document.documentElement.className += ' theme-client-rose is-client-mode';
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -608,7 +623,8 @@
       background: rgba(255, 255, 255, 0.04);
     }
 
-    /* ── TEMA LIGHT ROSÉ (CLIENT MODE) ── */
+    /* ── TEMA LIGHT ROSÉ (CLIENT MODE ZERO-FLASH) ── */
+    html.theme-client-rose,
     body.theme-client-rose {
       --bg: #faf6f4;
       --card-bg: #ffffff;
@@ -618,8 +634,8 @@
       --primary: #d48496;
       --primary-hover: #c47285;
       --accent: #7b5662;
-      background-color: #faf6f4;
-      color: #3d312e;
+      background-color: #faf6f4 !important;
+      color: #3d312e !important;
     }
     body.theme-client-rose .admin-header {
       background: #ffffff;
@@ -657,11 +673,17 @@
       border-color: #eac5cc;
     }
 
+    /* Ocultar obrigatoriamente campos admin no modo cliente */
+    html.is-client-mode .admin-only-field,
+    body.is-client-mode .admin-only-field {
+      display: none !important;
+    }
+
     /* ── CARDS COLAPSÁVEIS (ACCORDION UX) ── */
     .accordion-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 18px;
       margin-bottom: 20px;
       overflow: hidden;
       transition: all 0.25s ease;
@@ -688,25 +710,35 @@
       gap: 12px;
     }
     .accordion-header-icon {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
     }
     .accordion-header-title {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 700;
       color: var(--text);
     }
     .accordion-header-sub {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
     }
     .accordion-arrow {
-      font-size: 0.9rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(212, 132, 150, 0.12);
       color: var(--primary);
-      transition: transform 0.3s ease;
-      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s, color 0.2s;
+      flex-shrink: 0;
     }
     .accordion-card.is-open .accordion-arrow {
       transform: rotate(180deg);
+      background: var(--primary);
+      color: #ffffff;
     }
     .accordion-content {
       display: none;
@@ -725,8 +757,8 @@
     /* ── MINI-SANFONA DE PROCEDIMENTOS (CLIENT MODE) ── */
     .svc-accordion-item {
       border: 1px solid var(--border);
-      border-radius: 12px;
-      margin-bottom: 12px;
+      border-radius: 14px;
+      margin-bottom: 14px;
       overflow: hidden;
       background: var(--card-bg);
       transition: all 0.2s ease;
@@ -734,59 +766,135 @@
     body.theme-client-rose .svc-accordion-item {
       background: #ffffff;
       border-color: #f2e2e5;
+      box-shadow: 0 2px 10px rgba(180, 140, 150, 0.05);
     }
     .svc-accordion-header {
-      padding: 14px 18px;
+      padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      background: rgba(0,0,0,0.02);
-    }
-    body.theme-client-rose .svc-accordion-header {
-      background: #fff9fa;
+      background: #fff8f9;
+      transition: background 0.2s ease;
     }
     .svc-accordion-header:hover {
-      background: rgba(212, 132, 150, 0.08);
+      background: #fceef1;
     }
     .svc-summary-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
     .svc-summary-title {
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--text);
     }
     .svc-summary-price {
-      background: rgba(212, 132, 150, 0.15);
-      color: var(--primary);
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-    body.theme-client-rose .svc-summary-price {
       background: #f8e6ea;
       color: #b55d72;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
     }
-    .btn-edit-badge {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--primary);
+    .btn-edit-badge-wrap {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #d48496;
+      background: #fceef1;
+      padding: 6px 14px;
+      border-radius: 100px;
+      transition: all 0.25s ease;
+    }
+    .svc-accordion-item.is-open .btn-edit-badge-wrap {
+      background: #d48496;
+      color: #ffffff;
+    }
+    .svc-chevron-icon {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .svc-accordion-item.is-open .svc-chevron-icon {
+      transform: rotate(180deg);
     }
     .svc-accordion-content {
       display: none;
-      padding: 18px;
+      padding: 20px;
       border-top: 1px solid var(--border);
     }
     .svc-accordion-item.is-open .svc-accordion-content {
       display: block;
       animation: accordionFade 0.2s ease;
+    }
+
+    /* ── RESPONSIVIDADE MOBILE FULL (< 680px) ── */
+    @media (max-width: 680px) {
+      .editor-container {
+        padding: 0 12px !important;
+        margin: 16px auto !important;
+        max-width: 100% !important;
+      }
+      .editor-title {
+        font-size: 1.6rem !important;
+      }
+      .editor-subtitle {
+        font-size: 0.85rem !important;
+        margin-bottom: 20px !important;
+      }
+      .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .form-group.full-width {
+        grid-column: span 1 !important;
+      }
+      input, select, textarea {
+        font-size: 16px !important; /* Previne auto-zoom no iOS/Android */
+        padding: 14px 14px !important;
+        border-radius: 12px !important;
+      }
+      .accordion-card {
+        border-radius: 16px !important;
+        margin-bottom: 14px !important;
+      }
+      .accordion-header {
+        padding: 16px 14px !important;
+      }
+      .accordion-header-title {
+        font-size: 0.98rem !important;
+      }
+      .accordion-header-sub {
+        font-size: 0.78rem !important;
+      }
+      .accordion-content {
+        padding: 16px 12px !important;
+      }
+      .svc-accordion-item {
+        border-radius: 14px !important;
+        margin-bottom: 12px !important;
+      }
+      .svc-accordion-header {
+        padding: 14px 12px !important;
+        gap: 8px !important;
+      }
+      .svc-summary-left {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+        flex: 1 !important;
+      }
+      .svc-summary-title {
+        font-size: 0.95rem !important;
+        word-break: break-word !important;
+      }
+      .svc-summary-price {
+        font-size: 0.82rem !important;
+        padding: 3px 8px !important;
+      }
     }
 
     /* ── BANNER DO LINK MÁGICO NO MODO ADMIN ── */
@@ -1003,9 +1111,6 @@
     <button type="button" class="btn-save" id="btn-save-catalog">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
       <span>Salvar Alterações ✨</span>
-    </button>
-  </div>-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-      <span>Salvar Alterações</span>
     </button>
   </div>
 
@@ -1338,7 +1443,10 @@
               <span class="svc-summary-title">${svc.name || 'Procedimento #' + (index + 1)}</span>
               <span class="svc-summary-price">${displayPrice}</span>
             </div>
-            <span class="btn-edit-badge">✏️ Editar</span>
+            <div class="btn-edit-badge-wrap">
+              <span>✏️ Editar</span>
+              <svg class="svc-chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
           </div>
           <div class="svc-accordion-content">
             <div class="service-card-header" style="margin-bottom: 16px;">

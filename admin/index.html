@@ -348,10 +348,41 @@
       border-color: #ef4444;
       color: #ff8585;
     }
+
+    /* ── Toast Customizado ── */
+    .admin-toast {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e1916;
+      border: 1px solid rgba(229, 169, 184, 0.4);
+      color: #f5ede6;
+      padding: 14px 24px;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(229, 169, 184, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 10000;
+      animation: toastSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes toastSlideDown {
+      from { opacity: 0; transform: translate(-50%, -20px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- TOAST NOTIFICAÇÃO -->
+  <div id="admin-toast" class="admin-toast" style="display:none;">
+    <span class="toast-icon">✨</span>
+    <span id="toast-message">Link Mágico da cliente copiado com sucesso!</span>
+  </div>
 
   <!-- AUTENTICAÇÃO SIMPLES COM PIN -->
   <div id="auth-screen">
@@ -519,6 +550,19 @@
       }
     }
 
+    function showToast(msg) {
+      const toast = document.getElementById('admin-toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.style.display = 'flex';
+        clearTimeout(window.toastTimer);
+        window.toastTimer = setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3500);
+      }
+    }
+
     async function copyMagicEditLink(orderId, slug) {
       try {
         const cleanSlug = (slug || 'catalogo').toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -531,9 +575,9 @@
         const magicUrl = `https://${slug}.lashmenu.com/editar?token=${token}`;
 
         await navigator.clipboard.writeText(magicUrl);
-        alert(`✨ Link Mágico da Cliente Copiado!\n\nLink: ${magicUrl}\n\nEnvie este link para a cliente alterar preços e fotos no próprio celular.`);
+        showToast('✨ Link Mágico da cliente copiado com sucesso!');
       } catch (err) {
-        alert('Erro ao copiar link: ' + err.message);
+        showToast('Erro ao copiar link: ' + err.message);
       }
     }
 
