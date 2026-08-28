@@ -44,33 +44,35 @@ A pontuação de cada lead foi calculada com base na probabilidade de conversão
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Edivania, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Edivania, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Edivania! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Edivania! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Edivania! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Edivania! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -88,33 +90,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Layfer, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Layfer, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Layfer! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Layfer! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Layfer! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Layfer! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -131,33 +135,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Larissa, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Larissa, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Larissa! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Larissa! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Larissa! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Larissa! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -174,33 +180,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Leticia, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Leticia, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Leticia! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Leticia! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Leticia! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Leticia! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -217,33 +225,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Poliana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Poliana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Poliana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Poliana! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Poliana! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Poliana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -261,33 +271,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Tanielly, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Tanielly, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Tanielly! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Tanielly! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Tanielly! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Tanielly! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -304,33 +316,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Serena, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Serena, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Serena! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Serena! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Serena! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Serena! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -348,33 +362,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Cinthya, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Cinthya, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Cinthya! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Cinthya! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Cinthya! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Cinthya! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -392,33 +408,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Design, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Design, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Design! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Design! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Design! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Design! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -436,33 +454,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Design, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Design, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Design! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Design! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Design! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Design! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -480,33 +500,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Bella, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Bella, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Bella! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Bella! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Bella! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Bella! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -524,33 +546,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Maria, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Maria, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Maria! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Maria! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Maria! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Maria! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -568,33 +592,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Mariane, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Mariane, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Mariane! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Mariane! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Mariane! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Mariane! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -612,33 +638,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Isabela, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Isabela, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Isabela! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Isabela! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Isabela! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Isabela! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -656,33 +684,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Déborah, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Déborah, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Déborah! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Déborah! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Déborah! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Déborah! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -700,33 +730,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Yara, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Yara, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Yara! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Yara! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Yara! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Yara! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -743,33 +775,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Kathellem, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Kathellem, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Kathellem! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Kathellem! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Kathellem! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Kathellem! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -786,33 +820,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Lollys, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Lollys, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Lollys! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Lollys! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Lollys! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Lollys! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -828,33 +864,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Ariana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Ariana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Ariana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Ariana! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Ariana! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Ariana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -870,33 +908,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Design, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Design, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Design! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Design! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Design! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Design! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -914,33 +954,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Elaíne, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Elaíne, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Elaíne! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Elaíne! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Elaíne! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Elaíne! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -957,33 +999,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Cílios, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Cílios, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Cílios! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Cílios! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Cílios! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Cílios! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1001,33 +1045,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Joana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Joana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Joana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Joana! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Joana! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Joana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1044,33 +1090,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Cílios, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Cílios, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Cílios! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Cílios! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Cílios! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Cílios! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1087,33 +1135,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Katyane, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Katyane, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Katyane! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Katyane! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Katyane! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Katyane! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1129,33 +1179,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Vidal, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Vidal, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Vidal! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Vidal! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Vidal! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Vidal! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1171,33 +1223,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Crys, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Crys, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Crys! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Crys! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Crys! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Crys! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1213,33 +1267,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Aliany, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Aliany, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Aliany! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Aliany! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Aliany! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Aliany! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1256,33 +1312,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii D'isanto, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii D'isanto, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo D'isanto! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo D'isanto! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho D'isanto! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho D'isanto! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1300,33 +1358,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Ynnaê, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Ynnaê, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Ynnaê! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Ynnaê! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Ynnaê! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Ynnaê! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1344,33 +1404,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Tiffany, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Tiffany, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Tiffany! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Tiffany! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Tiffany! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Tiffany! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1386,33 +1448,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Luana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Luana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Luana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Luana! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Luana! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Luana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1428,33 +1492,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Maiza, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Maiza, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Maiza! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Maiza! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Maiza! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Maiza! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1470,33 +1536,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Stúdio, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Stúdio, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Stúdio! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Stúdio! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Stúdio! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Stúdio! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1512,33 +1580,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Jéssica, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Jéssica, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Jéssica! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Jéssica! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Jéssica! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Jéssica! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1554,33 +1624,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Carvalho, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Carvalho, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Carvalho! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Carvalho! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Carvalho! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Carvalho! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1596,33 +1668,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Lanna, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Lanna, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Lanna! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Lanna! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Lanna! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Lanna! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1638,33 +1712,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Marques, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Marques, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Marques! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Marques! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Marques! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Marques! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1680,33 +1756,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Sara, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Sara, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Sara! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Sara! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Sara! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Sara! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---
@@ -1722,33 +1800,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 ```text
 💬 1. ABORDAGEM INICIAL (WHATSAPP):
 
-Oii Ana, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!
+Oii Ana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
 
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.
+Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
 
-Posso te mandar um modelo de demonstração para você ver como fica na prática?
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
 ```
 
 ```text
 ✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):
 
-Que ótimo Ana! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
-👉 https://lashmenu.com/c/harmonia-rose
+Que ótimo Ana! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:
+👉 https://lashmenu.com/c/harmonia-rose ✨
 
-Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!
+Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲
 ```
 
 ```text
 💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
 
-Prontinho Ana! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
-👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]
+Prontinho Ana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
 A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
 
-Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!
+Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
 
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
 ```
 
 ---

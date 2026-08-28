@@ -88,16 +88,16 @@ def calculate_score(item):
 
 def generate_pitch_1(title):
     """
-    1ª Mensagem: Abordagem fria em 3 parágrafos objetivos.
+    1ª Mensagem: Abordagem fria persuasiva com emojis e quebra de linha após 'tabelas soltas...'.
     """
     name = get_name_only(title)
     greeting = f"Oii {name}" if name else "Oii, tudo bem?"
     
     pitch = (
-        f"{greeting}, tudo bem? 👋 Vi o seu perfil no Google e achei os seus trabalhos de cílios incríveis!\n\n"
-        f"Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... "
-        f"Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os agendamentos.\n\n"
-        f"Posso te mandar um modelo de demonstração para você ver como fica na prática?"
+        f"{greeting}, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨\n\n"
+        f"Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲\n\n"
+        f"Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸\n\n"
+        f"Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨"
     )
     return pitch
 
@@ -109,9 +109,9 @@ def generate_pitch_2(title):
     salutation = f" {name}" if name else ""
     
     script = (
-        f"Que ótimo{salutation}! 💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:\n"
-        f"👉 https://lashmenu.com/c/harmonia-rose\n\n"
-        f"Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática!"
+        f"Que ótimo{salutation}! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:\n"
+        f"👉 https://lashmenu.com/c/harmonia-rose ✨\n\n"
+        f"Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲"
     )
     return script
 
@@ -123,11 +123,11 @@ def generate_pitch_3(title):
     salutation = f" {name}" if name else ""
     
     script = (
-        f"Prontinho{salutation}! 🌸 Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:\n"
-        f"👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA]\n\n"
+        f"Prontinho{salutation}! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:\n"
+        f"👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖\n\n"
         f"A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).\n\n"
-        f"Mas como estamos falando diretamente por aqui no WhatsApp, conseguimos uma condição especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único)*!\n\n"
-        f"Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo?"
+        f"Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎\n\n"
+        f"Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕"
     )
     return script
 
@@ -196,6 +196,11 @@ def process():
     csv_path = "Prospecção/Leads_LashDesigner_Goiania.csv"
     df.to_csv(csv_path, index=False, encoding="utf-8-sig")
     print(f" CSV salvo em: {csv_path}")
+
+    # Exporta para JSON no app de prospecção
+    os.makedirs('prospeccao', exist_ok=True)
+    df.to_json('prospeccao/leads.json', orient='records', force_ascii=False, indent=2)
+    print(f" JSON gerado para CRM em: prospeccao/leads.json")
     
     # Exporta para Markdown (.md)
     md_path = "Prospecção/Leads_LashDesigner_Goiania.md"
