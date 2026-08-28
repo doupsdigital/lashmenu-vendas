@@ -135,7 +135,7 @@ def calculate_score(item):
 
 def generate_pitch_1(title, rank=None):
     """
-    1ª Mensagem: Abordagem fria persuasiva com emojis e nome 100% correto.
+    1ª Mensagem: Abordagem fria persuasiva em 3 parágrafos curtos.
     """
     name = get_name_only(title, rank)
     greeting = f"Oii {name}" if name else "Oii, tudo bem?"
@@ -150,15 +150,21 @@ def generate_pitch_1(title, rank=None):
 
 def generate_pitch_2(title, rank=None):
     """
-    2ª Mensagem: Envio do modelo Harmonia Rose e pedido da tabela de preços.
+    2ª Mensagem: Apresentação dos 3 modelos (Harmonia Rosé em destaque, Clássico Rosé e Glamour Midnight) + Pedido da tabela de preços.
     """
     name = get_name_only(title, rank)
     salutation = f" {name}" if name else ""
     
     script = (
-        f"Que ótimo{salutation}! 😍💖 Segue o link de um modelo pronto para você testar a experiência como se fosse sua cliente:\n"
+        f"Que ótimo{salutation}! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:\n\n"
+        f"⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):\n"
         f"👉 https://lashmenu.com/c/harmonia-rose ✨\n\n"
-        f"Se você gostar da estrutura, me envia aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu já monto a versão exclusiva do seu estúdio para você ver na prática! 🌸📲"
+        f"🌸 2. Modelo Clássico Rosé:\n"
+        f"👉 https://lashmenu.com/c/classico-rose ✨\n\n"
+        f"✨ 3. Modelo Glamour Midnight (Dark Luxo):\n"
+        f"👉 https://lashmenu.com/c/glamour-midnight ✨\n\n"
+        f"Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰\n\n"
+        f"Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲"
     )
     return script
 
@@ -219,7 +225,7 @@ def process():
     df.reset_index(drop=True, inplace=True)
     df["Rank"] = df.index + 1
 
-    # Adiciona as abordagens agora que já temos o Rank correto
+    # Adiciona as abordagens
     p1_list, p2_list, p3_list = [], [], []
     for idx, row in df.iterrows():
         rank = row['Rank']
@@ -278,7 +284,7 @@ def process():
     md_content += "---\n\n"
     md_content += "## 📋 Funil de 3 Passos de Abordagem\n\n"
     md_content += "1. **1ª Mensagem**: Abordagem fria rápida em 3 parágrafos.\n"
-    md_content += "2. **2ª Mensagem**: Envio do link oficial do modelo Harmonia Rosé e pedido dos preços dela.\n"
+    md_content += "2. **2ª Mensagem**: Opção de 3 Modelos de Demonstração (Harmonia Rosé em Destaque, Clássico Rosé e Glamour Midnight) + pedido dos preços dela.\n"
     md_content += "3. **3ª Mensagem**: Envio do catálogo pronto + Oferta do site (R$ 197) vs Desconto Pix (R$ 167).\n\n"
     md_content += "---\n\n"
     md_content += "## 📋 Lista de Leads Ordenados por Potencial\n\n"
@@ -297,7 +303,7 @@ def process():
         md_content += f"- **Link no Google Maps:** [Ver no Maps]({row['Link_GoogleMaps']})\n\n"
         
         md_content += f"```text\n💬 1. ABORDAGEM INICIAL (WHATSAPP):\n\n{row['Abordagem_1_Inicial']}\n```\n\n"
-        md_content += f"```text\n✅ 2. RESPOSTA COM LINK DEMO HARMONIA ROSÉ (SE ELA DISSER 'SIM'):\n\n{row['Resposta_2_Demonstracao_SIM']}\n```\n\n"
+        md_content += f"```text\n✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):\n\n{row['Resposta_2_Demonstracao_SIM']}\n```\n\n"
         md_content += f"```text\n💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):\n\n{row['Fechamento_3_Oferta_Preco_Pix']}\n```\n\n"
         md_content += "---\n\n"
         
