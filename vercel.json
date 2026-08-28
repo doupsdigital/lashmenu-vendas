@@ -1,9 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/prospeccao",
+      "destination": "/prospeccao/index.html"
+    },
+    {
+      "source": "/prospeccao/:path*",
+      "destination": "/prospeccao/:path*"
+    },
+    {
       "source": "/admin",
       "destination": "/admin/index.html"
     },
+
     {
       "source": "/admin/:path*",
       "destination": "/admin/:path*"

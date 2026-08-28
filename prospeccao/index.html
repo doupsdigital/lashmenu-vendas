@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎯 Painel de Prospecção & CRM — LashMenu</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0A0A0E;
+      --card-bg: #14141D;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: #1D1D2B;
+      --accent-rose: #FF4D8D;
+      --accent-rose-hover: #E03E79;
+      --accent-gold: #D4AF37;
+      --accent-green: #22C55E;
+      --accent-yellow: #EAB308;
+      --accent-purple: #A855F7;
+      --accent-red: #EF4444;
+      --text-main: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --text-dim: #6B7280;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    /* Header Navbar */
+    header {
+      background: rgba(20, 20, 29, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 24px;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent-rose), var(--accent-gold));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .brand-title h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #FFFFFF, #FFD1E3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-title p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Layout Main */
+    main {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    /* KPI Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-rose);
+    }
+
+    .metric-card.gold::before { background: var(--accent-gold); }
+    .metric-card.green::before { background: var(--accent-green); }
+    .metric-card.yellow::before { background: var(--accent-yellow); }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .metric-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .metric-sub {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    /* Controls Bar: Filters & Search */
+    .controls-bar {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-box {
+      width: 100%;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-rose);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .pill:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+    }
+
+    .pill.active {
+      background: var(--accent-rose);
+      border-color: var(--accent-rose);
+      color: #fff;
+    }
+
+    /* Lead Accordion List */
+    .lead-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .lead-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .lead-card:hover {
+      border-color: rgba(255, 77, 141, 0.3);
+    }
+
+    .lead-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .lead-header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .rank-badge {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--accent-gold);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      min-width: 38px;
+      text-align: center;
+    }
+
+    .lead-info-main {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .lead-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .lead-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .score-badge {
+      background: rgba(255, 77, 141, 0.15);
+      color: var(--accent-rose);
+      border: 1px solid rgba(255, 77, 141, 0.3);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .lead-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .lead-header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Status Badge Select */
+    .status-select {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--card-border);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .status-select[data-status="pendente"] { border-color: var(--text-dim); color: var(--text-muted); }
+    .status-select[data-status="abordado"] { border-color: var(--accent-yellow); color: var(--accent-yellow); }
+    .status-select[data-status="negociacao"] { border-color: var(--accent-purple); color: var(--accent-purple); }
+    .status-select[data-status="fechado"] { border-color: var(--accent-green); color: var(--accent-green); background: rgba(34, 197, 94, 0.15); }
+    .status-select[data-status="recusado"] { border-color: var(--accent-red); color: var(--accent-red); }
+
+    .toggle-icon {
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
+    }
+
+    .lead-card.expanded .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Expanded Content Drawer */
+    .lead-body {
+      display: none;
+      padding: 20px;
+      border-top: 1px solid var(--card-border);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .lead-card.expanded .lead-body {
+      display: block;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .detail-item {
+      font-size: 13px;
+      color: var(--text-muted);
+
+      b { color: var(--text-main); }
+    }
+
+    .detail-item a {
+      color: var(--accent-rose);
+      text-decoration: none;
+
+      &:hover { text-decoration: underline; }
+    }
+
+    /* Notes Area */
+    .notes-box {
+      margin-bottom: 20px;
+    }
+
+    .notes-box label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .notes-input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .notes-input:focus {
+      border-color: var(--accent-gold);
+    }
+
+    /* Action Scripts Box */
+    .scripts-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .script-card {
+      background: rgba(10, 10, 14, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .script-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .script-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-copy {
+      background: linear-gradient(135deg, var(--accent-rose), var(--accent-rose-hover));
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.1s, opacity 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-copy:active {
+      transform: scale(0.96);
+    }
+
+    .btn-wa-direct {
+      background: #25D366;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: filter 0.2s;
+      margin-top: 10px;
+    }
+
+    .btn-wa-direct:hover {
+      filter: brightness(1.1);
+    }
+
+    .script-content {
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #D1D5DB;
+      white-space: pre-wrap;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent-rose);
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent-green);
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: 1000;
+    }
+
+    #toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 640px) {
+      .header-container { flex-direction: column; align-items: flex-start; }
+      .lead-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .lead-header-right { width: 100%; justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">💎</div>
+        <div class="brand-title">
+          <h1>CRM de Prospecção — LashMenu</h1>
+          <p>Gestão Inteligente de Abordagens | Goiânia</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="/admin" class="btn-secondary">⚙️ Painel Admin</a>
+        <button class="btn-secondary" onclick="exportCRMReport()">📥 Exportar Relatório</button>
+        <button class="btn-secondary" onclick="resetProgress()">🔄 Resetar Progresso</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- KPI Metrics -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <span class="metric-label">TOTAL DE LEADS</span>
+        <span class="metric-value" id="kpi-total">40</span>
+        <span class="metric-sub">Leads qualificados no Google</span>
+      </div>
+      <div class="metric-card yellow">
+        <span class="metric-label">ABORDAGENS ENVIADAS</span>
+        <span class="metric-value" id="kpi-contacted">0</span>
+        <span class="metric-sub" id="kpi-contacted-pct">0% da base</span>
+      </div>
+      <div class="metric-card gold">
+        <span class="metric-label">EM NEGOCIAÇÃO</span>
+        <span class="metric-value" id="kpi-negotiating">0</span>
+        <span class="metric-sub">Aguardando/Demonstrando</span>
+      </div>
+      <div class="metric-card green">
+        <span class="metric-label">VENDAS FECHADAS</span>
+        <span class="metric-value" id="kpi-closed">0</span>
+        <span class="metric-sub" id="kpi-revenue">R$ 0 acumulados</span>
+      </div>
+    </div>
+
+    <!-- Controls: Search & Filters -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <input type="text" id="search-input" class="search-input" placeholder="🔍 Buscar por Estúdio, Nome da Lash ou Bairro..." oninput="filterLeads()">
+      </div>
+      <div class="filter-pills">
+        <div class="pill active" onclick="setFilter('todos', this)">Todos (<span id="cnt-todos">40</span>)</div>
+        <div class="pill" onclick="setFilter('pendente', this)">⚪ Pendentes (<span id="cnt-pendente">40</span>)</div>
+        <div class="pill" onclick="setFilter('abordado', this)">🟡 Abordados (<span id="cnt-abordado">0</span>)</div>
+        <div class="pill" onclick="setFilter('negociacao', this)">🟣 Em Negociação (<span id="cnt-negociacao">0</span>)</div>
+        <div class="pill" onclick="setFilter('fechado', this)">💎 Vendas Fechadas (<span id="cnt-fechado">0</span>)</div>
+        <div class="pill" onclick="setFilter('recusado', this)">🔴 Sem Resposta (<span id="cnt-recusado">0</span>)</div>
+      </div>
+    </div>
+
+    <!-- Lead Cards Container -->
+    <div class="lead-list" id="lead-list-container">
+      <!-- Inserido dinamicamente via JS -->
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast">
+    <span>📋</span>
+    <span id="toast-text">Mensagem copiada para a área de transferência!</span>
+  </div>
+
+  <script>
+    let leadsData = [];
+    let currentFilter = 'todos';
+
+    // Carrega dados e localStorage ao iniciar
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await fetch('/prospeccao/leads.json');
+        if (res.ok) {
+          leadsData = await res.json();
+        } else {
+          console.warn("Nao foi possivel carregar leads.json, tentando rota local.");
+        }
+      } catch (err) {
+        console.error("Erro ao carregar leads:", err);
+      }
+
+      // Carrega estado salvo no localStorage
+      loadSavedState();
+      updateMetrics();
+      renderLeads();
+    });
+
+    function getStorageKey(rank) {
+      return `lashmenu_crm_lead_${rank}`;
+    }
+
+    function loadSavedState() {
+      leadsData.forEach(lead => {
+        const saved = localStorage.getItem(getStorageKey(lead.Rank));
+        if (saved) {
+          try {
+            const parsed = JSON.parse(saved);
+            lead.status = parsed.status || 'pendente';
+            lead.notes = parsed.notes || '';
+          } catch (e) {
+            lead.status = 'pendente';
+            lead.notes = '';
+          }
+        } else {
+          lead.status = 'pendente';
+          lead.notes = '';
+        }
+      });
+    }
+
+    function saveLeadState(rank, status, notes) {
+      const lead = leadsData.find(l => l.Rank === rank);
+      if (lead) {
+        lead.status = status;
+        if (notes !== undefined) lead.notes = notes;
+        localStorage.setItem(getStorageKey(rank), JSON.stringify({
+          status: lead.status,
+          notes: lead.notes
+        }));
+      }
+      updateMetrics();
+      renderLeads();
+    }
+
+    function updateMetrics() {
+      const total = leadsData.length;
+      const contacted = leadsData.filter(l => l.status === 'abordado').length;
+      const negotiating = leadsData.filter(l => l.status === 'negociacao').length;
+      const closed = leadsData.filter(l => l.status === 'fechado').length;
+      const refused = leadsData.filter(l => l.status === 'recusado').length;
+      const pending = leadsData.filter(l => l.status === 'pendente').length;
+
+      document.getElementById('kpi-total').innerText = total;
+      document.getElementById('kpi-contacted').innerText = contacted;
+      document.getElementById('kpi-contacted-pct').innerText = `${total ? Math.round((contacted/total)*100) : 0}% da base`;
+      document.getElementById('kpi-negotiating').innerText = negotiating;
+      document.getElementById('kpi-closed').innerText = closed;
+      document.getElementById('kpi-revenue').innerText = `R$ ${closed * 167} acumulados`;
+
+      document.getElementById('cnt-todos').innerText = total;
+      document.getElementById('cnt-pendente').innerText = pending;
+      document.getElementById('cnt-abordado').innerText = contacted;
+      document.getElementById('cnt-negociacao').innerText = negotiating;
+      document.getElementById('cnt-fechado').innerText = closed;
+      document.getElementById('cnt-recusado').innerText = refused;
+    }
+
+    function setFilter(filter, el) {
+      currentFilter = filter;
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      renderLeads();
+    }
+
+    function filterLeads() {
+      renderLeads();
+    }
+
+    function renderLeads() {
+      const container = document.getElementById('lead-list-container');
+      const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+
+      const filtered = leadsData.filter(lead => {
+        const matchesFilter = (currentFilter === 'todos') || (lead.status === currentFilter);
+        const matchesSearch = !searchTerm || 
+          (lead.Nome_Estudio && lead.Nome_Estudio.toLowerCase().includes(searchTerm)) ||
+          (lead.Bairro && lead.Bairro.toLowerCase().includes(searchTerm)) ||
+          (lead.Telefone && lead.Telefone.toLowerCase().includes(searchTerm));
+        
+        return matchesFilter && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted);">Nenhum lead encontrado com o filtro selecionado.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(lead => `
+        <div class="lead-card" id="card-${lead.Rank}">
+          <div class="lead-header" onclick="toggleCard(${lead.Rank})">
+            <div class="lead-header-left">
+              <div class="rank-badge">#${lead.Rank}</div>
+              <div class="lead-info-main">
+                <div class="lead-title-row">
+                  <span class="lead-name">${escapeHtml(lead.Nome_Estudio)}</span>
+                  <span class="score-badge">⭐ ${lead.Score_Potencial} pts</span>
+                </div>
+                <div class="lead-meta-row">
+                  <span>📍 ${escapeHtml(lead.Bairro)}</span>
+                  <span>⭐ ${lead.Avaliação_Google} (${lead.Total_Avaliações} avaliações)</span>
+                  <span>📞 ${escapeHtml(lead.Telefone || 'Sem tel')}</span>
+                </div>
+              </div>
+            </div>
+            <div class="lead-header-right">
+              <select class="status-select" data-status="${lead.status}" onclick="event.stopPropagation()" onchange="onStatusChange(${lead.Rank}, this.value)">
+                <option value="pendente" ${lead.status === 'pendente' ? 'selected' : ''}>⚪ Pendente</option>
+                <option value="abordado" ${lead.status === 'abordado' ? 'selected' : ''}>🟡 Abordado</option>
+                <option value="negociacao" ${lead.status === 'negociacao' ? 'selected' : ''}>🟣 Em Negociação</option>
+                <option value="fechado" ${lead.status === 'fechado' ? 'selected' : ''}>💎 Venda Fechada (R$167)</option>
+                <option value="recusado" ${lead.status === 'recusado' ? 'selected' : ''}>🔴 Sem Resposta</option>
+              </select>
+              <span class="toggle-icon">▼</span>
+            </div>
+          </div>
+
+          <div class="lead-body">
+            <div class="details-grid">
+              <div class="detail-item"><b>Endereço:</b> ${escapeHtml(lead.Endereço || 'N/A')}</div>
+              <div class="detail-item"><b>Instagram:</b> ${lead.Instagram ? `<a href="https://instagram.com/${lead.Instagram.replace('@','')}" target="_blank">${escapeHtml(lead.Instagram)}</a>` : 'Não informado'}</div>
+              <div class="detail-item"><b>Website/Link:</b> ${lead.Website ? `<a href="${escapeHtml(lead.Website)}" target="_blank">Acessar Site</a>` : 'Não possui'}</div>
+              <div class="detail-item"><b>Google Maps:</b> <a href="${escapeHtml(lead.Link_GoogleMaps)}" target="_blank">Ver Perfil no Maps</a></div>
+            </div>
+
+            <div class="notes-box">
+              <label>📝 Anotações Rápidas do Lead:</label>
+              <textarea class="notes-input" placeholder="Ex: Pediu para ligar amanha as 14h..." onchange="onNotesChange(${lead.Rank}, this.value)">${escapeHtml(lead.notes || '')}</textarea>
+            </div>
+
+            <div class="scripts-container">
+              <div class="script-card">
+                <div class="script-header">
+                  <span class="script-title">💬 1. Abordagem Inicial (WhatsApp)</span>
+                  <button class="btn-copy" onclick="copyText(\`${escapeJsString(lead.Abordagem_1_Inicial)}\`)">📋 Copiar Mensagem 1</button>
+                </div>
+                <div class="script-content">${escapeHtml(lead.Abordagem_1_Inicial)}</div>
+                ${lead.Link_WhatsApp ? `<a href="${lead.Link_WhatsApp}" target="_blank" class="btn-wa-direct">📲 Abrir no WhatsApp Direct</a>` : ''}
+              </div>
+
+              <div class="script-card">
+                <div class="script-header">
+                  <span class="script-title">✅ 2. Resposta com Demo Harmonia Rosé (Se responder SIM)</span>
+                  <button class="btn-copy" onclick="copyText(\`${escapeJsString(lead.Resposta_2_Demonstracao_SIM)}\`)">📋 Copiar Mensagem 2</button>
+                </div>
+                <div class="script-content">${escapeHtml(lead.Resposta_2_Demonstracao_SIM)}</div>
+              </div>
+
+              <div class="script-card">
+                <div class="script-header">
+                  <span class="script-title">💰 3. Fechamento & Oferta Pix R$ 167 (Após montar catálogo)</span>
+                  <button class="btn-copy" onclick="copyText(\`${escapeJsString(lead.Fechamento_3_Oferta_Preco_Pix)}\`)">📋 Copiar Oferta Pix</button>
+                </div>
+                <div class="script-content">${escapeHtml(lead.Fechamento_3_Oferta_Preco_Pix)}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleCard(rank) {
+      const card = document.getElementById(`card-${rank}`);
+      if (card) {
+        card.classList.toggle('expanded');
+      }
+    }
+
+    function onStatusChange(rank, status) {
+      saveLeadState(rank, status);
+    }
+
+    function onNotesChange(rank, notes) {
+      const lead = leadsData.find(l => l.Rank === rank);
+      if (lead) {
+        lead.notes = notes;
+        saveLeadState(rank, lead.status, notes);
+      }
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("✅ Mensagem copiada com sucesso!");
+      }).catch(err => {
+        console.error("Erro ao copiar:", err);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-text').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    function resetProgress() {
+      if (confirm("Tem certeza que deseja resetar todo o status e progresso dos leads?")) {
+        leadsData.forEach(lead => {
+          localStorage.removeItem(getStorageKey(lead.Rank));
+          lead.status = 'pendente';
+          lead.notes = '';
+        });
+        updateMetrics();
+        renderLeads();
+        showToast("🔄 Progresso resetado com sucesso!");
+      }
+    }
+
+    function exportCRMReport() {
+      const report = leadsData.map(l => ({
+        Rank: l.Rank,
+        Estudio: l.Nome_Estudio,
+        Bairro: l.Bairro,
+        Telefone: l.Telefone,
+        Status: l.status,
+        Anotacoes: l.notes || ''
+      }));
+      
+      const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Relatorio_CRM_LashMenu_${new Date().toISOString().slice(0,10)}.json`;
+      a.click();
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function escapeJsString(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/\\/g, "\\\\")
+        .replace(/`/g, "\\`")
+        .replace(/\$/g, "\\$");
+    }
+  </script>
+</body>
+</html>
