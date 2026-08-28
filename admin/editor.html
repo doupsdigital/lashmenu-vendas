@@ -1572,6 +1572,24 @@
       }
     };
 
+    // Controles visuais dos Accordions (Sanfonas das 3 Seções Principais)
+    window.toggleAccordion = function(headerEl) {
+      const card = headerEl.closest('.accordion-card');
+      if (card) {
+        card.classList.toggle('is-open');
+      }
+    };
+
+    // Controles visuais dos Accordions (Mini-Sanfonas dos Procedimentos)
+    window.toggleSvcAccordion = function(headerEl) {
+      const item = headerEl.closest('.svc-accordion-item');
+      if (item) {
+        const isOpen = item.classList.contains('is-open');
+        document.querySelectorAll('.svc-accordion-item').forEach(el => el.classList.remove('is-open'));
+        if (!isOpen) item.classList.add('is-open');
+      }
+    };
+
     window.updateAddFieldsBarVisibility = function(card) {
       if (!card) return;
       const bar = card.querySelector('.add-fields-bar');
