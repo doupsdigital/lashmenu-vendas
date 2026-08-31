@@ -2,34 +2,13 @@
 
 > **Classificação de Potencial para Venda do LashMenu** (Ordenado do maior potencial ao menor).
 
-## 📐 Metodologia e Critérios da Pontuação de Potencial (0 a 100 pontos)
+## 📋 Funil Anti-Ban de 3 Passos de Abordagem com 3 Variações
 
-A pontuação de cada lead foi calculada com base na probabilidade de conversão para a venda do **LashMenu**:
-
-| Categoria | Critério | Pontuação | Justificativa de Vendas |
-| :--- | :--- | :---: | :--- |
-| **Localização Premium** | Bairros nobres (Setor Bueno, Marista, Jardim Goiás, Alto da Glória, Central, Oeste, Leste Vila Nova, Alphaville) | **+25 pts** | Estúdios com maior ticket médio e alta disposição a investir em imagem e tecnologia. |
-| **Outros Bairros Mapeados** | Demais bairros com localização física identificada | **+15 pts** | Estabelecimento físico com estrutura para atendimento de clientes. |
-| **Volume de Avaliações** | ≥ 100 avaliações no Google | **+30 pts** | Altíssimo fluxo diário de mensagens no WhatsApp perguntando valores e procedimentos. |
-| | 50 a 99 avaliações | **+25 pts** | Alto fluxo de clientes e necessidade de automatizar/profissionalizar o cardápio. |
-| | 20 a 49 avaliações | **+20 pts** | Estúdio em expansão constante. |
-| | 5 a 19 avaliações | **+10 pts** | Estúdio ativo com clientes validados. |
-| **Reputação / Nota** | Nota 4.9 a 5.0 estrelas | **+15 pts** | Serviço de excelência técnica (clientes muito satisfeitos). |
-| | Nota 4.5 a 4.8 estrelas | **+10 pts** | Ótima aceitação no mercado local. |
-| **Canal Direto** | Telefone / WhatsApp direto cadastrado | **+15 pts** | Permite prospecção e abordagem imediata via WhatsApp. |
-| **Presença Digital** | Website ou Instagram ativo | **+15 pts** | Negócio no digital que precisa de um link profissional de catálogo (LashMenu) na Bio. |
+1. **1ª Mensagem (Gancho Curto Anti-Ban)**: 1 a 2 linhas curtas, sem links, focada em gerar curiosidade e resposta.
+2. **2ª Mensagem (Qualificação / Oferta de Vídeo 15s)**: Apresentação leve + pedido para enviar vídeo curto do LashMenu.
+3. **3ª Mensagem (Fechamento / Desconto Pix R$ 167)**: Link do catálogo personalizado dela + Oferta Pix R$ 167.
 
 ---
-
-## 📋 Funil de 3 Passos de Abordagem
-
-1. **1ª Mensagem**: Abordagem fria rápida em 3 parágrafos.
-2. **2ª Mensagem**: Opção de 3 Modelos de Demonstração (Harmonia Rosé em Destaque, Clássico Rosé e Glamour Midnight) + pedido dos preços dela.
-3. **3ª Mensagem**: Envio do catálogo pronto + Oferta do site (R$ 197) vs Desconto Pix (R$ 167).
-
----
-
-## 📋 Lista de Leads Ordenados por Potencial
 
 ### #1 - Curso Extensão de cílios - Studio Edivania Paiva Extensão de cílios Goiânia
 - **Potencial LashMenu:** ⭐ `100 pts`
@@ -37,52 +16,36 @@ A pontuação de cada lead foi calculada com base na probabilidade de conversão
 - **Avaliação:** 5.0 ⭐ (265 avaliações)
 - **Telefone:** +55 62 99394-5144 | [Abrir no WhatsApp](https://wa.me/5562993945144)
 - **Instagram:** @edivaniapaivaacademy
-- **Website:** https://www.instagram.com/edivaniapaivaacademy/
 - **Endereço:** Av. Anhanguera, 5389 - St. Central, Goiânia - GO, 74043-010, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Curso%20Extens%C3%A3o%20de%20c%C3%ADlios%20-%20Studio%20Edivania%20Paiva%20Extens%C3%A3o%20de%20c%C3%ADlios%20Goi%C3%A2nia&query_place_id=ChIJNcJRVe7xXpMRegJRirWTQ3Q)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Edivania, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Edivania, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Edivania! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Edivania, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Edivania que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Edivania, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Edivania! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Edivania! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -93,52 +56,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (228 avaliações)
 - **Telefone:** +55 62 98450-3988 | [Abrir no WhatsApp](https://wa.me/5562984503988)
 - **Instagram:** @studio.layfer
-- **Website:** https://www.instagram.com/studio.layfer/
 - **Endereço:** Av. São João esq. c/ Rua Vitoria, Qd. 9, Lt. 11, Alto da Glória Sala 301., 3º Andar - Alto da Glória, Goiânia - GO, 74815-745, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Layfer%2C%20C%C3%ADlios%2C%20Micropigmenta%C3%A7%C3%A3o%20e%20Est%C3%A9tica%20-%20St.%20Alto%20da%20Gl%C3%B3ria&query_place_id=ChIJzxi2-6PxXpMRk_q1l5AoAD4)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Layfer, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Layfer, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Layfer! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Layfer, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Layfer que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Layfer, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Layfer! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Layfer! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -148,52 +95,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Setor Bueno
 - **Avaliação:** 4.8 ⭐ (117 avaliações)
 - **Telefone:** +55 62 3088-6622 | [Abrir no WhatsApp](https://wa.me/556230886622)
-- **Website:** http://larissalobobeauty.com.br/
 - **Endereço:** R. T 1-A, 63 - St. Bueno, Goiânia - GO, 74210-330, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Larissa%20Lobo.%20Especializado%20em%20sobrancelhas%2C%20c%C3%ADlios%20e%20est%C3%A9tica.&query_place_id=ChIJjchOyjzxXpMRxFD2HiV89GI)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Larissa, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Larissa, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Larissa! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Larissa, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Larissa que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Larissa, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Larissa! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Larissa! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -203,52 +134,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Setor Bueno
 - **Avaliação:** 5.0 ⭐ (83 avaliações)
 - **Telefone:** +55 62 99361-5571 | [Abrir no WhatsApp](https://wa.me/5562993615571)
-- **Website:** https://studioleticiasantana.com.br/
 - **Endereço:** Av. T-15, 1380 - St. Bueno, Goiânia - GO, 74230-010, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20c%C3%ADlios%20Goiania%20-%20Studio%20Leticia%20Santana%20Lash%20Design&query_place_id=ChIJG9x9B23xXpMRznt7moxKXfw)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Leticia, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Leticia, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Leticia! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Leticia, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Leticia que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Leticia, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Leticia! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Leticia! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -258,52 +173,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Setor Marista
 - **Avaliação:** 4.9 ⭐ (57 avaliações)
 - **Telefone:** +55 62 99118-9134 | [Abrir no WhatsApp](https://wa.me/5562991189134)
-- **Website:** https://wa.me/message/LLEUM6GZ7Y7DM1
 - **Endereço:** R. 1137, 225 - QD; 243 LOTE 2 - St. Marista, Goiânia - GO, 74180-160, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20c%C3%ADlios%20By%20Poliana%20Souza&query_place_id=ChIJl_ZyRl_xXpMRoMv8tRv3jHo)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Poliana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Poliana, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Poliana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Poliana, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Poliana que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Poliana, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Poliana! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Poliana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -314,52 +213,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (53 avaliações)
 - **Telefone:** +55 62 98494-6565 | [Abrir no WhatsApp](https://wa.me/5562984946565)
 - **Instagram:** @taniellyduartemakeup
-- **Website:** https://www.instagram.com/taniellyduartemakeup/
 - **Endereço:** R. São Luís, 364 - Alto da Glória, Goiânia - GO, 74815-755, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Tanielly%20Duarte%20Studio%20Beauty&query_place_id=ChIJw-k52L7xXpMRSfLrH3GEy1E)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Tanielly, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Tanielly, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Tanielly! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Tanielly, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Tanielly que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Tanielly, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Tanielly! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Tanielly! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -369,52 +252,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Jardim Goiás
 - **Avaliação:** 4.7 ⭐ (55 avaliações)
 - **Telefone:** +55 62 98130-8053 | [Abrir no WhatsApp](https://wa.me/5562981308053)
-- **Website:** https://www.annajulialashes.com.br/
 - **Endereço:** Edifício Trend Office - R. 72, 325 - Sl 1101 - Jardim Goiás, Goiânia - GO, 74805-480, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Serena%20Beauty&query_place_id=ChIJ30V_nJLzXpMRZxr4KhUVXi8)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Serena, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Serena, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Serena! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Serena, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Serena que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Serena, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Serena! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Serena! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -425,52 +292,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (74 avaliações)
 - **Telefone:** +55 62 98595-0994 | [Abrir no WhatsApp](https://wa.me/5562985950994)
 - **Instagram:** @cinthyamontanini
-- **Website:** https://www.instagram.com/cinthyamontanini/
 - **Endereço:** Comercial das acácias - Alameda Couto Magalhães, 755 - qd S-28 lt 4 sala 201 - St. Bela Vista, Goiânia - GO, 74823-410, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Cinthya%20Montanini%20Goi%C3%A2nia%2C%20Extens%C3%A3o%20de%20C%C3%ADlios%2C%20Micropigmenta%C3%A7%C3%A3o%20de%20Sobrancelha%2C%20Labial%20e%20alongamento%20de%20unha&query_place_id=ChIJGzUau7jxXpMRuco3wD_9oYU)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Cinthya, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Cinthya, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Cinthya! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Cinthya, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Cinthya que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Cinthya, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Cinthya! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Cinthya! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -481,52 +332,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (73 avaliações)
 - **Telefone:** +55 62 98111-2183 | [Abrir no WhatsApp](https://wa.me/5562981112183)
 - **Instagram:** @milennebeauty
-- **Website:** https://www.instagram.com/milennebeauty/
 - **Endereço:** Rua 131 Q Area, 342 - St. Sul, Goiânia - GO, 74093-200, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Design%20de%20Sobrancelhas%20e%20brow%20lamination%20Goi%C3%A2nia%20-%20Milenne%20Beauty%20Organiq&query_place_id=ChIJKSdJ9xXxXpMR2i-K-1q6l5w)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Milenne, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Milenne, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Milenne! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Milenne, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Milenne que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Milenne, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Milenne! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Milenne! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -537,52 +372,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (68 avaliações)
 - **Telefone:** +55 62 98275-9174 | [Abrir no WhatsApp](https://wa.me/5562982759174)
 - **Instagram:** @brunnalimabeauty
-- **Website:** https://www.instagram.com/brunnalimabeauty?igsh=MXd0eWlxY3MxcjRnYw==
 - **Endereço:** R. 217, 930 - Setor Leste Universitário, Goiânia - GO, 74603-090, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20C%C3%ADlios%20e%20Design%20de%20Sobrancelhas%20%7C%20Studio%20Brunna%20Lima%20Beauty%20Goi%C3%A2nia&query_place_id=ChIJr9nEaLHzXpMR93NBR10NBeY)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Brunna, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Brunna, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Brunna! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Brunna, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Brunna que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Brunna, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Brunna! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Brunna! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -593,52 +412,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 4.9 ⭐ (52 avaliações)
 - **Telefone:** +55 62 98473-3800 | [Abrir no WhatsApp](https://wa.me/5562984733800)
 - **Instagram:** @bellaciliosesobrancelhasgo
-- **Website:** https://www.instagram.com/bellaciliosesobrancelhasgo
 - **Endereço:** R. Dona Mariquinha, Qd 21 - Lt 26 sala 01 - Setor Negrão de Lima, Goiânia - GO, 74650-130, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Bella%20C%C3%ADlios%20e%20sobrancelhas&query_place_id=ChIJqcYJEjXyXpMRtnQQ3biylr4)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Bella, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Bella, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Bella! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Bella, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Bella que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Bella, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Bella! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Bella! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -649,52 +452,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (48 avaliações)
 - **Telefone:** +55 62 98447-9988 | [Abrir no WhatsApp](https://wa.me/5562984479988)
 - **Instagram:** @mariaeugeniasobrancelhas
-- **Website:** https://instagram.com/mariaeugeniasobrancelhas?utm_medium=copy_link
 - **Endereço:** R. 3, lote 8 - unidade 103 - Parque Atheneu, Goiânia - GO, 74893-130, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Maria%20Eug%C3%AAnia%20Sobrancelhas&query_place_id=ChIJU43d51L1XpMRs5E5kKLMxX0)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Maria Eugênia, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Maria Eugênia, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Maria Eugênia! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Maria Eugênia, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Maria Eugênia que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Maria Eugênia, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Maria Eugênia! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Maria Eugênia! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -705,52 +492,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (43 avaliações)
 - **Telefone:** +55 62 99996-1107 | [Abrir no WhatsApp](https://wa.me/5562999961107)
 - **Instagram:** @marianemoreno.sobrancelhas
-- **Website:** https://www.instagram.com/marianemoreno.sobrancelhas?r=nametag
 - **Endereço:** R. Quinze, 47 - Und 201 - Parque Atheneu, Goiânia - GO, 74890-230, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Mariane%20Moreno%20Sobrancelhas&query_place_id=ChIJX1H2g17lXpMRgNeUw_-gzZw)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Mariane, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Mariane, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Mariane! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Mariane, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Mariane que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Mariane, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Mariane! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Mariane! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -761,52 +532,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (31 avaliações)
 - **Telefone:** +55 62 99304-1775 | [Abrir no WhatsApp](https://wa.me/5562993041775)
 - **Instagram:** @studioisabelasouza
-- **Website:** https://www.instagram.com/studioisabelasouza
 - **Endereço:** Av. 2ª Radial, Qd. 70 - Lt. 06 Sala 2 - Vila Redencao, Goiânia - GO, 74850-040, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Isabela%20Souza%20%7C%20C%C3%ADlios%20e%20Sobrancelhas%20em%20Goi%C3%A2nia&query_place_id=ChIJ6_FUKYnxXpMRZl7o8vNiDJE)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Isabela, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Isabela, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Isabela! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Isabela, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Isabela que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Isabela, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Isabela! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Isabela! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -817,52 +572,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (27 avaliações)
 - **Telefone:** +55 62 98583-6759 | [Abrir no WhatsApp](https://wa.me/5562985836759)
 - **Instagram:** @deborahalvarengabeauty
-- **Website:** https://instagram.com/deborahalvarengabeauty?igshid=psiw92bajlso
 - **Endereço:** Sobrancelha Natural, Cílios, Design, Henna Cílios em - R. C-252, N° 1141 - QD 604, LT 11 - Nova Suiça, Goiânia - GO, 74280-160, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=D%C3%A9borah%20Alvarenga%20Beauty%20-%20C%C3%ADlios%20Goi%C3%A2nia%20%2F%20Sobrancelha%20Natural%20%2F%20C%C3%ADlios&query_place_id=ChIJl9chJ-nxXpMRqLdSKfOsPEI)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Déborah, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Déborah, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Déborah! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Déborah, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Déborah que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Déborah, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Déborah! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Déborah! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -873,52 +612,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (23 avaliações)
 - **Telefone:** +55 62 98314-2423 | [Abrir no WhatsApp](https://wa.me/5562983142423)
 - **Instagram:** @ylashdesign
-- **Website:** https://instagram.com/ylashdesign?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr
 - **Endereço:** R. Poe. Joaquim Bonifácio - Goiânia, GO, 74770-410, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Yara%20Ferreira%20Lash%20Designer%20-%20Extens%C3%A3o%20de%20C%C3%ADlios&query_place_id=ChIJyxTL8p7vXpMR1pVLBLcrUEg)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Yara, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Yara, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Yara! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Yara, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Yara que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Yara, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Yara! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Yara! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -928,52 +651,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Setor Leste Universitário
 - **Avaliação:** 5.0 ⭐ (22 avaliações)
 - **Telefone:** +55 62 98629-9681 | [Abrir no WhatsApp](https://wa.me/5562986299681)
-- **Website:** https://linktr.ee/Arthdpn?utm_source=linktree_profile_share&ltsid=3a1ec49b-91d4-48a4-a5ba-e39405d37af9
 - **Endereço:** R. 233, 1483 - Qd 78 Lt 12 - Setor Leste Universitário, Goiânia - GO, 74605-120, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Kathellem%20lima%20-%20Lash%20Designer%20(Extens%C3%A3o%20de%20c%C3%ADlios)-%20Designer%20de%20sobrancelha%20-%20maquiagem-Depila%C3%A7%C3%A3o&query_place_id=ChIJlQQGMQzxXpMRzMyTFfdm_pU)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Kathellem, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Kathellem, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Kathellem! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Kathellem, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Kathellem que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Kathellem, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Kathellem! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Kathellem! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -983,52 +690,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Nova Suiça
 - **Avaliação:** 4.5 ⭐ (41 avaliações)
 - **Telefone:** +55 62 99669-6659 | [Abrir no WhatsApp](https://wa.me/5562996696659)
-- **Website:** https://www.lollyscilios.com/
 - **Endereço:** Av. C-255, 271 - Nova Suiça, Goiânia - GO, 74280-010, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Lollys%20Cilios&query_place_id=ChIJGye0ibH2XpMRF8fxewDzYv4)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Lollys, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Lollys, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Lollys! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Lollys, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Lollys que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Lollys, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Lollys! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Lollys! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1039,50 +730,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (32 avaliações)
 - **Telefone:** +55 62 99307-4555 | [Abrir no WhatsApp](https://wa.me/5562993074555)
 - **Endereço:** R. 209-A, 1405 - Leste Vila Nova, Goiânia - GO, 74645-210, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=EXTENS%C3%83O%20DE%20C%C3%8DLIOS%20GOI%C3%82NIA-%20ARIANA&query_place_id=ChIJOU-jj6jzXpMROoQLtO7YqUw)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Ariana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Ariana, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Ariana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Ariana, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Ariana que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Ariana, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Ariana! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Ariana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1093,50 +769,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 4.6 ⭐ (245 avaliações)
 - **Telefone:** +55 62 97400-1431 | [Abrir no WhatsApp](https://wa.me/5562974001431)
 - **Endereço:** Qd F37 28, R. 88-D, 286 - St. Sul, Goiânia - GO, 74085-115, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Sobrancelhas%20Design&query_place_id=ChIJv6BTMnPxXpMRSTgLft6uVY4)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii, tudo bem?, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii, tudo bem?, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá, tudo bem?, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria você que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii, tudo bem?, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1147,52 +808,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (19 avaliações)
 - **Telefone:** +55 62 98261-4105 | [Abrir no WhatsApp](https://wa.me/5562982614105)
 - **Instagram:** @en_saladecilios
-- **Website:** https://instagram.com/en_saladecilios?utm_medium=copy_link
 - **Endereço:** Av. Francisco Ludovíco de Almeida, qd35 lote17 - Parque das Amendoeiras, Goiânia - GO, 74780-440, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Ela%C3%ADne%20Nascimento%20Lashdesigner%20-%20Extens%C3%A3o%20de%20c%C3%ADlios%20e%20Designer%20de%20Sobrancelha%20em%20Goi%C3%A2nia&query_place_id=ChIJB0t6XAztXpMRfyugbg31EHw)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Elaíne, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Elaíne, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Elaíne! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Elaíne, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Elaíne que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Elaíne, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Elaíne! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Elaíne! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1202,52 +847,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Bairro Santa Rita
 - **Avaliação:** 5.0 ⭐ (16 avaliações)
 - **Telefone:** +55 62 98157-6772 | [Abrir no WhatsApp](https://wa.me/5562981576772)
-- **Website:** https://www.studionayara.com.br/
 - **Endereço:** R. João Luís, qd 07 - LT 07 - Bairro Santa Rita, Goiânia - GO, 74370-580, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Extens%C3%A3o%20de%20C%C3%ADlios%20-%20Studio%20de%20C%C3%ADlios%20Nayara&query_place_id=ChIJG8ux-Ov3XpMRWf58BW9LZ5c)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Nayara, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Nayara, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Nayara! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Nayara, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Nayara que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Nayara, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Nayara! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Nayara! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1258,52 +887,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (16 avaliações)
 - **Telefone:** +55 62 98511-9914 | [Abrir no WhatsApp](https://wa.me/5562985119914)
 - **Instagram:** @joanapaivastudio
-- **Website:** https://instagram.com/joanapaivastudio?igshid=OGQ5ZDc2ODk2ZA==&utm_source=qr
 - **Endereço:** R. 9, qd 09 lt 02 casa 1 - Residencial Paulo estrela, Goiânia - GO, 74786-444, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Joana%20Paiva%20studio&query_place_id=ChIJJ3J5bgntXpMRud_xJ4tempE)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Joana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Joana, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Joana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Joana, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Joana que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Joana, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Joana! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Joana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1313,52 +926,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Crimeia Leste
 - **Avaliação:** 5.0 ⭐ (15 avaliações)
 - **Telefone:** +55 62 99956-2065 | [Abrir no WhatsApp](https://wa.me/5562999562065)
-- **Website:** https://www.ciliosshowroom.com.br/
 - **Endereço:** R. Gen. Braz Arantes, 129 - qd09 lt11 - Crimeia Leste, Goiânia - GO, 74660-210, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=C%C3%ADlios%20Showroom&query_place_id=ChIJu0BGTGvzXpMRocxq8JKc-Sw)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii, tudo bem?, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii, tudo bem?, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá, tudo bem?, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria você que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii, tudo bem?, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1368,52 +965,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Parque Atheneu
 - **Avaliação:** 5.0 ⭐ (11 avaliações)
 - **Telefone:** +55 62 98507-2342 | [Abrir no WhatsApp](https://wa.me/5562985072342)
-- **Website:** https://api.whatsapp.com/send?phone=5562985072342&text=Oie,+tenho+interesse+em+agendar+um+hor%C3%A1rio.+%ED%A0%BD%ED%B2%93+%ED%A0%BD%ED%B2%93
 - **Endereço:** Rua 2031, R. 1 Unidade 203 - Parque Atheneu, Goiânia - GO, 74890-700, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Katyane%20Mendes&query_place_id=ChIJDWwGdzblXpMRd3FPc_MqTIE)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Katyane, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Katyane, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Katyane! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Katyane, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Katyane que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Katyane, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Katyane! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Katyane! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1424,50 +1005,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 4.8 ⭐ (61 avaliações)
 - **Telefone:** +55 62 98444-9118 | [Abrir no WhatsApp](https://wa.me/5562984449118)
 - **Endereço:** Rua 101 unid101, lote 2, Goiânia - GO, 74893-530, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Vidal%20Priscila&query_place_id=ChIJy5B_VJv7XpMRvSe-I9ZXO6M)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Priscila, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Priscila, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Priscila! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Priscila, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Priscila que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Priscila, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Priscila! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Priscila! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1478,50 +1044,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (25 avaliações)
 - **Telefone:** +55 62 99116-0845 | [Abrir no WhatsApp](https://wa.me/5562991160845)
 - **Endereço:** Av. F, quadra A - lote 04 - Setor - Água Branca, Goiânia - GO, 74730-320, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Crys%20Lohany%20Lashes&query_place_id=ChIJE3PPbB7xXpMR8fpw2IcHaEo)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Crys, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Crys, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Crys! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Crys, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Crys que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Crys, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Crys! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Crys! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1532,50 +1083,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (24 avaliações)
 - **Telefone:** +55 62 99632-5778 | [Abrir no WhatsApp](https://wa.me/5562996325778)
 - **Endereço:** Av. Bela Vista, qd i lt1 - Jardim Bela Vista, Goiânia - GO, 74863-050, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Aliany%20Mendes%20-%20Nail%20Designer&query_place_id=ChIJkUJBKqrxXpMR6xxIrqyhBBg)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Aliany, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Aliany, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Aliany! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Aliany, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Aliany que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Aliany, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Aliany! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Aliany! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1585,52 +1121,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Bairro:** Jardim Mariliza
 - **Avaliação:** 5.0 ⭐ (1 avaliações)
 - **Telefone:** +55 62 98295-0091 | [Abrir no WhatsApp](https://wa.me/5562982950091)
-- **Website:** https://disantobrows.com.br/
 - **Endereço:** R. Caraíba - Jardim Mariliza, Goiânia - GO, 74885-090, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=D'Isanto%20Brows%20%7C%20Design%20de%20Sobrancelhas%20%7C%20Brow%20Lamination%20%7C%20Lash%20Lifting&query_place_id=ChIJURiAgEv7XpMRzE1r8meSquY)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii D'Isanto, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii D'Isanto, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo D'Isanto! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá D'Isanto, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria D'Isanto que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii D'Isanto, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo D'Isanto! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho D'Isanto! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1641,52 +1161,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (1 avaliações)
 - **Telefone:** +55 62 99252-5106 | [Abrir no WhatsApp](https://wa.me/5562992525106)
 - **Instagram:** @ynnaeuchoa
-- **Website:** https://instagram.com/ynnaeuchoa?igshid=MTIyMzRjYmRlZg==
 - **Endereço:** R. JDA Dez, Quadra 07 lote 14 sala 01 - Jardim das Aroeiras, Goiânia - GO, 74770-550, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Ynna%C3%AA%20Uch%C3%B4a%20Lash%20Design%20Micropigmentadora&query_place_id=ChIJiTtbqZfvXpMRIO3w6gfFvF8)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Ynnaá, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Ynnaá, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Ynnaá! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Ynnaá, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Ynnaá que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Ynnaá, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Ynnaá! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Ynnaá! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1697,52 +1201,36 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (1 avaliações)
 - **Telefone:** +55 62 99839-1336 | [Abrir no WhatsApp](https://wa.me/5562998391336)
 - **Instagram:** @perfect.silver_oficial
-- **Website:** https://www.instagram.com/perfect.silver_oficial?igsh=MWlubGNjZmFvNTh6bA%3D%3D&utm_source=qr
 - **Endereço:** Rua Jdf 216 quadra 31 lote 8, interfone 2 - Dom Fernando II, Goiânia - GO, 74765-250, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Tiffany%20Araujo%20Lash%20Designer&query_place_id=ChIJPyOILwDtXpMRWQI8aKon9xs)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Tiffany, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Tiffany, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Tiffany! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Tiffany, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Tiffany que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Tiffany, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Tiffany! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Tiffany! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1753,50 +1241,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (19 avaliações)
 - **Telefone:** +55 62 99437-6568 | [Abrir no WhatsApp](https://wa.me/5562994376568)
 - **Endereço:** Av. Sr. do Bonfim - Jardim Vitoria 2, Goiânia - GO, 74865-390, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Luana%20Alves%20-%20EXTENS%C3%83O%20DE%20C%C3%8DLIOS&query_place_id=ChIJTZAvan_7XpMR2Jg80sZtYfE)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Luana, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Luana, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Luana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Luana, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Luana que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Luana, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Luana! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Luana! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1807,50 +1280,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (16 avaliações)
 - **Telefone:** +55 62 3921-1932 | [Abrir no WhatsApp](https://wa.me/556239211932)
 - **Endereço:** R. SR - 65, 30 - St. Recanto das Minas Gerais, Goiânia - GO, 74785-490, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Maiza%20Gualberto%20-%20Designer&query_place_id=ChIJTbGrc4_tXpMRh9cp08Blirw)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Maiza, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Maiza, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Maiza! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Maiza, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Maiza que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Maiza, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Maiza! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Maiza! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1861,50 +1319,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (12 avaliações)
 - **Telefone:** +55 62 98582-5267 | [Abrir no WhatsApp](https://wa.me/5562985825267)
 - **Endereço:** L.20 (Esquina com a - Avenida Leonardo da Vinci, R. Gen. Rondon - Jardim da Luz, Goiânia - GO, 74000-000, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=St%C3%BAdio%20K%C3%A1ssia%20Bianca&query_place_id=ChIJKcBlqBbxXpMRU98OCKiLOG8)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Kássia, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Kássia, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Kássia! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Kássia, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Kássia que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Kássia, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Kássia! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Kássia! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1915,50 +1358,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (23 avaliações)
 - **Telefone:**  | [Abrir no WhatsApp]()
 - **Endereço:** Av. Paulo Alves da Costa, 320 - Parque das Amendoeiras, Goiânia - GO, 74780-500, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20J%C3%A9ssica%20Oliveira&query_place_id=ChIJtxsg20btXpMR27Z_7BfJEeE)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Jéssica, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Jéssica, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Jéssica! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Jéssica, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Jéssica que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Jéssica, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Jéssica! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Jéssica! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -1969,50 +1397,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 4.8 ⭐ (17 avaliações)
 - **Telefone:** +55 62 93512-2875 | [Abrir no WhatsApp](https://wa.me/5562935122875)
 - **Endereço:** Av. Aristóteles, Qd 36 - Lt 01 - Goiânia, GO, 74885-030, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Carvalho&query_place_id=ChIJRdU9x2XxXpMRzCGYU9op7jo)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Carvalho, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Carvalho, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Carvalho! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Carvalho, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Carvalho que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Carvalho, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Carvalho! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Carvalho! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -2023,50 +1436,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (3 avaliações)
 - **Telefone:** +55 62 98427-2890 | [Abrir no WhatsApp](https://wa.me/5562984272890)
 - **Endereço:** R. Quatro - Parque Atheneu, Goiânia - GO, 74890-710, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Studio%20Lanna%20Lobo&query_place_id=ChIJVyyXJwDlXpMRWTqlnY4xGBI)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Lanna, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Lanna, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Lanna! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Lanna, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Lanna que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Lanna, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Lanna! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Lanna! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -2077,50 +1475,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (3 avaliações)
 - **Telefone:** +55 62 99543-4682 | [Abrir no WhatsApp](https://wa.me/5562995434682)
 - **Endereço:** Av. Dom Serafim Gomes Jardim, Qd. 45 - Lt.20 - Santo Hilario, Goiânia - GO, 74780-190, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Faby%20Marques%20Lash%20Designer&query_place_id=ChIJb_Gnc9_tXpMRNJOyzmjiiLo)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Faby, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Faby, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Faby! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Faby, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Faby que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Faby, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Faby! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Faby! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -2131,50 +1514,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 5.0 ⭐ (1 avaliações)
 - **Telefone:** +55 62 99452-6494 | [Abrir no WhatsApp](https://wa.me/5562994526494)
 - **Endereço:** R. SR - 65, 63 - Q90, L41 - St. Recanto das Minas Gerais, Goiânia - GO, 74785-330, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Sara%20de%20Paula%20Lash%20Design&query_place_id=ChIJeXQZdhvtXpMRzNvNw6fbKUI)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Sara, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Sara, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Sara! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Sara, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Sara que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Sara, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Sara! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Sara! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---
@@ -2185,50 +1553,35 @@ Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje 
 - **Avaliação:** 0.0 ⭐ (0 avaliações)
 - **Telefone:**  | [Abrir no WhatsApp]()
 - **Endereço:** R. 2 - Vila Pedroso, Goiânia - GO, 74770-140, Brasil
-- **Link no Google Maps:** [Ver no Maps](https://www.google.com/maps/search/?api=1&query=Ana%20Beatriz%20Lash%20Designer&query_place_id=ChIJJRDbBQDvXpMRiKtXEQ_j6_Q)
 
 ```text
-💬 1. ABORDAGEM INICIAL (WHATSAPP):
-
-Oii Ana Beatriz, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨
-
-Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
-
-Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
-
-Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨
+💬 1. ABORDAGEM INICIAL (GANCHO ANTI-BAN - VAR 01):
+Oii Ana Beatriz, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?
 ```
 
 ```text
-✅ 2. RESPOSTA COM 3 MODELOS (SE ELA DISSER 'SIM'):
-
-Que ótimo Ana Beatriz! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
-
-⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
-
-🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
-
-✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
-
-Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
-
-Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲
+💬 1. ABORDAGEM INICIAL (VAR 02):
+Olá Ana Beatriz, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria Ana Beatriz que atende no estúdio? 👁️
 ```
 
 ```text
-💰 3. FECHAMENTO & OFERTA PIX (APÓS MONTAR O CATÁLOGO DELA):
+💬 1. ABORDAGEM INICIAL (VAR 03):
+Oii Ana Beatriz, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨
+```
 
+```text
+✅ 2. QUALIFICAÇÃO / OFERTA VÍDEO DEMO (VAR 01):
+Que ótimo Ana Beatriz! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕
+```
+
+```text
+💰 3. FECHAMENTO & OFERTA PIX (VAR 01):
 Prontinho Ana Beatriz! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
 👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖
 
-A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).
+O valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎
 
-Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎
-
-Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕
+Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕
 ```
 
 ---

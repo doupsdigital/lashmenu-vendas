@@ -133,89 +133,64 @@ def calculate_score(item):
 
     return score
 
-def generate_pitch_1_v1(title, rank=None):
-    """
-    1ª Mensagem (Variação 01): Elogio Google + Foco em Praticidade no WhatsApp.
-    """
+def get_lead_greetings(title, rank=None):
     name = get_name_only(title, rank)
-    greeting = f"Oii {name}" if name else "Oii, tudo bem?"
-    
-    pitch = (
-        f"{greeting}, tudo bem? 💕 Vi o seu perfil no Google e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨\n\n"
-        f"Sei como é corrido o dia a dia e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲\n\n"
-        f"Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸\n\n"
-        f"Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨"
-    )
-    return pitch
+    if name:
+        g1 = f"Oii {name}"
+        g2 = f"Olá {name}"
+        salutation = f" {name}"
+        name_or_estudio = name
+    else:
+        g1 = "Oii, tudo bem?"
+        g2 = "Olá, tudo bem?"
+        salutation = ""
+        name_or_estudio = "você"
+    return name, g1, g2, salutation, name_or_estudio
+
+def generate_pitch_1_v1(title, rank=None):
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"{g1}, tudo bem? 💕 Vi o seu perfil e achei os seus trabalhos de cílios simplesmente perfeitos! 😍✨ Você mesma quem cuida do agendamento por aqui?"
 
 def generate_pitch_1_v2(title, rank=None):
-    """
-    1ª Mensagem (Variação 02): Foco em Agilidade no Atendimento & Destaque dos Trabalhos.
-    """
-    name = get_name_only(title, rank)
-    greeting = f"Olá {name}" if name else "Olá, tudo bem?"
-    
-    pitch = (
-        f"{greeting}, como você está? 🌸✨ Estava pesquisando estúdios de cílios de excelência em Goiânia e fiquei encantada com a qualidade do seu trabalho! 👁️💖\n\n"
-        f"A gente sabe que passar o dia inteiro tirando dúvidas sobre procedimentos e mandando foto por foto de tabela no WhatsApp consome muito tempo do atendimento... 📲⏳\n\n"
-        f"Pensando nisso, desenvolvemos o *LashMenu*: um catálogo digital interativo para Lash Designers, pronto para colocar no link do Instagram ou mandar nas conversas, apresentando seus serviços com valores e fotos em alto padrão! 💎🌸\n\n"
-        f"Posso te enviar um modelo de demonstração bem rapidinho para você dar uma olhada de como funciona? 💕"
-    )
-    return pitch
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"{g2}, como você está? 🌸 Tive uma dúvida rápida olhando o seu perfil e resolvi te mandar mensagem por aqui. Você é a própria {name_or_estudio} que atende no estúdio? 👁️"
 
 def generate_pitch_1_v3(title, rank=None):
-    """
-    1ª Mensagem (Variação 03): Foco em Perfil Profissional & Aumento de Agendamentos.
-    """
-    name = get_name_only(title, rank)
-    greeting = f"Oii {name}" if name else "Oii, tudo bem?"
-    
-    pitch = (
-        f"{greeting}, tudo joia? 💖 Entrei em contato porque encontrei seu estúdio no Google e achei seu trabalho com extensão de cílios incrível! 😍✨\n\n"
-        f"Muitas lashes amigas me contavam o quanto é cansativo ter que responder manualmente cada cliente explicando valores, manutenções e técnicas no WhatsApp... 📝💬\n\n"
-        f"Para resolver isso, criamos o *LashMenu*, um catálogo interativo elegante feito sob medida para seu estúdio. Ele organiza todos os seus procedimentos, fotos e valores em um link exclusivo e super prático! ✨📱\n\n"
-        f"Te mandando um exemplo de demonstração agora, o que acha de dar uma olhadinha sem compromisso? 🌸👁️"
-    )
-    return pitch
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"{g1}, tudo joia? 💖 Estava olhando os seus atendimentos de cílios e fiquei encantada com a qualidade! Me tira uma dúvida rápida sobre o estúdio? ✨"
 
 def generate_pitch_1(title, rank=None):
     return generate_pitch_1_v1(title, rank)
 
+def generate_pitch_2_v1(title, rank=None):
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"Que ótimo{salutation}! 😍 É que eu ajudo Lash Designers a valorizarem o trabalho e economizarem tempo no WhatsApp. Em vez de ficar mandando foto por foto de tabela solta ou explicando técnica por técnica, criamos o LashMenu: um catálogo digital interativo e lindo pro link do Insta e Whats! 🌸✨ Posso te mandar 15 segundinhos de um vídeo curto pra você ver como fica na prática? 💕"
+
+def generate_pitch_2_v2(title, rank=None):
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"Ah perfeita{salutation}! 🥰 É que a gente desenvolveu o LashMenu, que transforma aquela tabela de preços tradicional num catálogo digital super interativo e elegante para o seu estúdio. Fica incrível no link da bio e facilita muito o atendimento no Whats! 💎✨ Gravei uma demonstração rápida de 15s. Posso te mandar aqui pra você dar uma olhada? 👁️💖"
+
+def generate_pitch_2_v3(title, rank=None):
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"Maravilha{salutation}! 💕 Vários estúdios sofrem perdendo tempo no Whats passando valores e tirando dúvidas de procedimentos soltos. Com o LashMenu, o seu estúdio ganha um catálogo digital interativo de alto padrão que agiliza seus agendamentos! 🚀🌸 Posso te enviar uma demonstração super rápida pra você ver como funciona? ✨"
+
 def generate_pitch_2(title, rank=None):
-    """
-    2ª Mensagem: Apresentação dos 3 modelos (Harmonia Rosé em destaque, Clássico Rosé e Glamour Midnight) + Pedido da tabela de preços.
-    """
-    name = get_name_only(title, rank)
-    salutation = f" {name}" if name else ""
-    
-    script = (
-        f"Que ótimo{salutation}! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:\n\n"
-        f"⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):\n"
-        f"👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨\n\n"
-        f"🌸 2. Modelo Clássico Rosé:\n"
-        f"👉 https://lashmenu.com/modelos/classico-rose/index.html ✨\n\n"
-        f"✨ 3. Modelo Glamour Midnight (Dark Luxo):\n"
-        f"👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨\n\n"
-        f"Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰\n\n"
-        f"Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲"
-    )
-    return script
+    return generate_pitch_2_v1(title, rank)
+
+def generate_pitch_3_v1(title, rank=None):
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"Prontinho{salutation}! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:\n👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖\n\nO valor de criação completa do LashMenu é R$ 197 no cartão. Mas fechando hoje por aqui no Pix, temos a condição especial por apenas *R$ 167 à vista (pagamento único sem mensalidades!)*. 🚀💎\n\nQuer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 💕"
+
+def generate_pitch_3_v2(title, rank=None):
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"Prontinho{salutation}! 🥰 Olha como ficou elegante a apresentação dos seus procedimentos:\n👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] ✨🌸\n\nMe conta o que achou! A taxa de configuração completa com suporte e hospedagem é R$ 197. Mas fechando via Pix hoje, liberamos por *R$ 167 à vista* (sem mensalidade nenhuma). 👑💎\n\nPosso gerar a chave Pix para ativar o seu catálogo oficial agora? 🚀"
+
+def generate_pitch_3_v3(title, rank=None):
+    name, g1, g2, salutation, name_or_estudio = get_lead_greetings(title, rank)
+    return f"Ficou pronto{salutation}! 💖 Dá uma olhadinha em como o seu estúdio vai se destacar com o LashMenu:\n👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 👁️✨\n\nConsigo te garantir a condição exclusiva por Pix: de R$ 197 por apenas *R$ 167 à vista* (taxa única, seu catálogo fica ativo sem cobranças mensais!). 🎉🌸\n\nQuer que eu te passe a chave Pix para finalizarmos? 💕"
 
 def generate_pitch_3(title, rank=None):
-    """
-    3ª Mensagem: Envio do catálogo pronto + Apresentação da Oferta & Desconto Pix (R$ 167).
-    """
-    name = get_name_only(title, rank)
-    salutation = f" {name}" if name else ""
-    
-    script = (
-        f"Prontinho{salutation}! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:\n"
-        f"👉 [LINK_DO_CATALOGO_PERSONALIZADO_DELA] 😍💖\n\n"
-        f"A assinatura da plataforma com suporte completo e hospedagem fica por R$ 197 no site oficial (https://lashmenu.com).\n\n"
-        f"Mas como estamos conversando diretamente por aqui no WhatsApp, conseguimos uma condição super especial de 15% de desconto via Pix: fica por apenas *R$ 167 (pagamento único sem mensalidades)*! 🎉💎\n\n"
-        f"Quer que eu já te envie a chave Pix para liberarmos o seu link definitivo hoje mesmo? 🚀💕"
-    )
-    return script
+    return generate_pitch_3_v1(title, rank)
 
 def process():
     dataset_id = "mFQN8LEZBwAalybcv"
@@ -259,28 +234,46 @@ def process():
     df["Rank"] = df.index + 1
 
     # Adiciona as abordagens
-    p1_v1_list, p1_v2_list, p1_v3_list, p2_list, p3_list = [], [], [], [], []
+    p1_v1_list, p1_v2_list, p1_v3_list = [], [], []
+    p2_v1_list, p2_v2_list, p2_v3_list = [], [], []
+    p3_v1_list, p3_v2_list, p3_v3_list = [], [], []
+
     for idx, row in df.iterrows():
         rank = row['Rank']
         title = row['Nome_Estudio']
         p1_v1_list.append(generate_pitch_1_v1(title, rank))
         p1_v2_list.append(generate_pitch_1_v2(title, rank))
         p1_v3_list.append(generate_pitch_1_v3(title, rank))
-        p2_list.append(generate_pitch_2(title, rank))
-        p3_list.append(generate_pitch_3(title, rank))
+        
+        p2_v1_list.append(generate_pitch_2_v1(title, rank))
+        p2_v2_list.append(generate_pitch_2_v2(title, rank))
+        p2_v3_list.append(generate_pitch_2_v3(title, rank))
+        
+        p3_v1_list.append(generate_pitch_3_v1(title, rank))
+        p3_v2_list.append(generate_pitch_3_v2(title, rank))
+        p3_v3_list.append(generate_pitch_3_v3(title, rank))
 
     df['Abordagem_1_Inicial'] = p1_v1_list
     df['Abordagem_1_Variação_1'] = p1_v1_list
     df['Abordagem_1_Variação_2'] = p1_v2_list
     df['Abordagem_1_Variação_3'] = p1_v3_list
-    df['Resposta_2_Demonstracao_SIM'] = p2_list
-    df['Fechamento_3_Oferta_Preco_Pix'] = p3_list
     
+    df['Resposta_2_Demonstracao_SIM'] = p2_v1_list
+    df['Resposta_2_Variação_1'] = p2_v1_list
+    df['Resposta_2_Variação_2'] = p2_v2_list
+    df['Resposta_2_Variação_3'] = p2_v3_list
+
+    df['Fechamento_3_Oferta_Preco_Pix'] = p3_v1_list
+    df['Fechamento_3_Variação_1'] = p3_v1_list
+    df['Fechamento_3_Variação_2'] = p3_v2_list
+    df['Fechamento_3_Variação_3'] = p3_v3_list
+
     cols = [
         "Rank", "Score_Potencial", "Nome_Estudio", "Bairro", "Avaliação_Google", 
         "Total_Avaliações", "Telefone", "Link_WhatsApp", "Instagram", "Website", 
         "Abordagem_1_Inicial", "Abordagem_1_Variação_1", "Abordagem_1_Variação_2", "Abordagem_1_Variação_3",
-        "Resposta_2_Demonstracao_SIM", "Fechamento_3_Oferta_Preco_Pix", 
+        "Resposta_2_Demonstracao_SIM", "Resposta_2_Variação_1", "Resposta_2_Variação_2", "Resposta_2_Variação_3",
+        "Fechamento_3_Oferta_Preco_Pix", "Fechamento_3_Variação_1", "Fechamento_3_Variação_2", "Fechamento_3_Variação_3",
         "Endereço", "Link_GoogleMaps"
     ]
     df = df[cols]
