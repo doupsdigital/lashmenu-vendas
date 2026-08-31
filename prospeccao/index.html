@@ -546,6 +546,154 @@
       .lead-header { flex-direction: column; align-items: flex-start; gap: 10px; }
       .lead-header-right { width: 100%; justify-content: space-between; }
     }
+
+    /* Meta Ads Scripts Section */
+    .meta-ads-box {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 77, 141, 0.35);
+      box-shadow: 0 8px 32px rgba(255, 77, 141, 0.08);
+      border-radius: 14px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .meta-ads-header {
+      padding: 16px 20px;
+      background: linear-gradient(90deg, rgba(255, 77, 141, 0.12), rgba(212, 175, 55, 0.08));
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .meta-ads-header:hover {
+      background: linear-gradient(90deg, rgba(255, 77, 141, 0.18), rgba(212, 175, 55, 0.14));
+    }
+
+    .meta-ads-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .meta-ads-badge {
+      background: linear-gradient(135deg, var(--accent-rose), var(--accent-gold));
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .meta-ads-title h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .meta-ads-header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .meta-ads-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .btn-toggle-meta {
+      background: rgba(255, 77, 141, 0.15);
+      border: 1px solid rgba(255, 77, 141, 0.3);
+      color: #FFD1E3;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle-meta:hover {
+      background: rgba(255, 77, 141, 0.25);
+    }
+
+    .meta-ads-body {
+      padding: 20px;
+      display: block;
+    }
+
+    .meta-ads-body.is-hidden {
+      display: none;
+    }
+
+    .meta-ads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .meta-script-card {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .meta-script-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .meta-script-tag {
+      font-weight: 700;
+      font-size: 13px;
+      color: #FFD1E3;
+    }
+
+    .btn-copy-meta {
+      background: linear-gradient(135deg, var(--accent-rose), var(--accent-rose-hover));
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-copy-meta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 77, 141, 0.3);
+    }
+
+    .meta-script-content {
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #E5E7EB;
+      white-space: pre-wrap;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-rose);
+      max-height: 220px;
+      overflow-y: auto;
+    }
   </style>
 </head>
 <body>
@@ -590,6 +738,80 @@
         <span class="metric-label">VENDAS FECHADAS</span>
         <span class="metric-value" id="kpi-closed">0</span>
         <span class="metric-sub" id="kpi-revenue">R$ 0 acumulados</span>
+      </div>
+    </div>
+
+    <!-- Meta Ads / WhatsApp Inbound Scripts Box -->
+    <div class="meta-ads-box" id="meta-ads-scripts-container">
+      <div class="meta-ads-header" onclick="toggleMetaAdsSection()">
+        <div class="meta-ads-title">
+          <span class="meta-ads-badge">📢 META ADS / INBOUND</span>
+          <h2>Scripts de Atendimento Rápido (Leads dos Anúncios)</h2>
+        </div>
+        <div class="meta-ads-header-right">
+          <span class="meta-ads-sub">Copie com 1 clique para responder quem vem do anúncio</span>
+          <button class="btn-toggle-meta" id="btn-toggle-meta-ads">▼ Recolher Scripts</button>
+        </div>
+      </div>
+      <div class="meta-ads-body" id="meta-ads-body">
+        <div class="meta-ads-grid">
+          
+          <!-- Script 1 -->
+          <div class="meta-script-card">
+            <div class="meta-script-header">
+              <span class="meta-script-tag">💬 1. Boas-Vindas & Apresentação</span>
+              <button class="btn-copy-meta" onclick="copyMetaScript(1)">📋 Copiar Mensagem 1</button>
+            </div>
+            <div class="meta-script-content" id="meta-script-text-1">Oii, seja muito bem-vinda! 🥰💖 Fico muito feliz pelo seu interesse no LashMenu! ✨
+
+Sei como é corrido o dia a dia no estúdio e quanto tempo a gente perde no WhatsApp explicando técnicas (Fio a Fio, Volume Russo, Brasileiro) e enviando tabelas soltas... 📝📲
+
+Criamos o *LashMenu*, um catálogo digital interativo e super elegante para você colocar no link da bio do Instagram e mandar nas conversas, deixando seu atendimento muito mais profissional e acelerando os seus agendamentos! 💖🌸
+
+Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨</div>
+          </div>
+
+          <!-- Script 2 -->
+          <div class="meta-script-card">
+            <div class="meta-script-header">
+              <span class="meta-script-tag">✅ 2. Demo 3 Modelos (Se responder SIM)</span>
+              <button class="btn-copy-meta" onclick="copyMetaScript(2)">📋 Copiar Mensagem 2</button>
+            </div>
+            <div class="meta-script-content" id="meta-script-text-2">Que ótimo! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
+
+⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
+
+🌸 2. Modelo Clássico Rosé:
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
+
+✨ 3. Modelo Glamour Midnight (Dark Luxo):
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
+
+Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
+
+Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲</div>
+          </div>
+
+          <!-- Script 3 -->
+          <div class="meta-script-card">
+            <div class="meta-script-header">
+              <span class="meta-script-tag">💰 3. Fechamento & Oferta Pix R$ 167</span>
+              <button class="btn-copy-meta" onclick="copyMetaScript(3)">📋 Copiar Oferta Pix</button>
+            </div>
+            <div class="meta-script-content" id="meta-script-text-3">Prontinho! 🌸✨ Montei o catálogo exclusivo do seu estúdio para você dar uma olhada:
+👉 [Cole aqui o link do catálogo personalizado dela] 😍💖
+
+Me conta o que achou! Gostou da apresentação dos seus procedimentos? 🥰
+
+O valor normal para a criação completa do LashMenu (com seus procedimentos, preços, fotos, botão de WhatsApp e link exclusivo) é R$ 197 no cartão.
+
+Mas fechando hoje no Pix, consigo uma condição especial por apenas *R$ 167 à vista* (pagamento único, sem mensalidades!). 🚀💎
+
+Quer que eu já garanta a sua chave Pix para liberar o seu catálogo oficial hoje mesmo? 🌸📲</div>
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -889,6 +1111,30 @@
         .replace(/\\/g, "\\\\")
         .replace(/`/g, "\\`")
         .replace(/\$/g, "\\$");
+    }
+
+    function toggleMetaAdsSection() {
+      const body = document.getElementById('meta-ads-body');
+      const btn = document.getElementById('btn-toggle-meta-ads');
+      if (body) {
+        body.classList.toggle('is-hidden');
+        if (body.classList.contains('is-hidden')) {
+          btn.innerText = '► Expandir Scripts';
+        } else {
+          btn.innerText = '▼ Recolher Scripts';
+        }
+      }
+    }
+
+    function copyMetaScript(num) {
+      const scriptEl = document.getElementById(`meta-script-text-${num}`);
+      if (!scriptEl) return;
+      const text = scriptEl.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`✅ Mensagem Meta Ads ${num} copiada com sucesso!`);
+      }).catch(err => {
+        console.error("Erro ao copiar:", err);
+      });
     }
   </script>
 </body>
