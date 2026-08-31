@@ -59,13 +59,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Edivania! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -115,13 +115,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Layfer! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -170,13 +170,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Larissa! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -225,13 +225,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Leticia! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -280,13 +280,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Poliana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -336,13 +336,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Tanielly! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -391,13 +391,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Serena! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -447,13 +447,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Cinthya! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -503,13 +503,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Milenne! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -559,13 +559,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Brunna! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -615,13 +615,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Bella! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -671,13 +671,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Maria Eugênia! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -727,13 +727,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Mariane! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -783,13 +783,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Isabela! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -839,13 +839,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Déborah! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -895,13 +895,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Yara! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -950,13 +950,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Kathellem! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1005,13 +1005,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Lollys! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1059,13 +1059,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Ariana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1113,13 +1113,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1169,13 +1169,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Elaíne! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1224,13 +1224,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Nayara! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1280,13 +1280,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Joana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1335,13 +1335,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1390,13 +1390,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Katyane! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1444,13 +1444,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Priscila! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1498,13 +1498,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Crys! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1552,13 +1552,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Aliany! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1607,13 +1607,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo D'Isanto! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1663,13 +1663,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Ynnaá! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1719,13 +1719,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Tiffany! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1773,13 +1773,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Luana! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1827,13 +1827,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Maiza! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1881,13 +1881,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Kássia! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1935,13 +1935,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Jéssica! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -1989,13 +1989,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Carvalho! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -2043,13 +2043,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Lanna! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -2097,13 +2097,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Faby! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -2151,13 +2151,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Sara! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 
@@ -2205,13 +2205,13 @@ Posso te mandar um modelo de demonstração para você ver como fica lindo na pr
 Que ótimo Ana Beatriz! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
 ⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
-👉 https://lashmenu.com/c/harmonia-rose ✨
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
 🌸 2. Modelo Clássico Rosé:
-👉 https://lashmenu.com/c/classico-rose ✨
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
 ✨ 3. Modelo Glamour Midnight (Dark Luxo):
-👉 https://lashmenu.com/c/glamour-midnight ✨
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
 

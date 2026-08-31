@@ -158,11 +158,11 @@ def generate_pitch_2(title, rank=None):
     script = (
         f"Que ótimo{salutation}! 😍💖 Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:\n\n"
         f"⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):\n"
-        f"👉 https://lashmenu.com/c/harmonia-rose ✨\n\n"
+        f"👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨\n\n"
         f"🌸 2. Modelo Clássico Rosé:\n"
-        f"👉 https://lashmenu.com/c/classico-rose ✨\n\n"
+        f"👉 https://lashmenu.com/modelos/classico-rose/index.html ✨\n\n"
         f"✨ 3. Modelo Glamour Midnight (Dark Luxo):\n"
-        f"👉 https://lashmenu.com/c/glamour-midnight ✨\n\n"
+        f"👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨\n\n"
         f"Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰\n\n"
         f"Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲"
     )
