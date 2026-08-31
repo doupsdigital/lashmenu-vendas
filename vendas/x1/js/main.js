@@ -237,12 +237,12 @@ Assim que fizer a transferência, me envia o comprovante aqui para eu já te lib
     id: "fechamento-2",
     category: "fechamento",
     categoryName: "Fechamento & PIX",
-    title: "2. Envio do Link de Checkout Cakto (R$ 197 - Cartão/Parcelado)",
+    title: "2. Envio do Link de Checkout Kiwify (R$ 197 - Cartão/Parcelado)",
     tip: "Envie quando a cliente preferir pagar parcelado no cartão de crédito.",
-    content: `Maravilha! Você pode parcelar em até 12x no cartão pelo nosso checkout 100% seguro da Cakto:
+    content: `Maravilha! Você pode parcelar em até 12x no cartão pelo nosso checkout 100% seguro da Kiwify:
 
 💳 **Link de Pagamento Seguro:**
-https://pay.cakto.com.br/r76ceej_1060004
+https://pay.kiwify.com.br/K31Kqng
 
 Assim que concluir a compra, o sistema libera automaticamente o formulário de onboarding para você enviar suas fotos e informações. Me avisa assim que finalizar! 🥰`
   },

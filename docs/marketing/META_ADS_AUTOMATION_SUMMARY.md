@@ -21,9 +21,8 @@ Este documento registra detalhadamente todas as configurações, scripts, integr
 * **LP Alternativa (LPA)**: `https://lashmenu.com/vendas/lpa/`
 * **Formulário de Onboarding (Pós-Venda)**: `https://lashmenu.com/vendas/form/`
 
-### Checkouts da Cakto:
-* **Plano Essencial (R$ 197,00)**: `https://pay.cakto.com.br/r76ceej_1060004`
-* **Plano Custom (R$ 297,00)**: `https://pay.cakto.com.br/nnaav4y`
+### Checkout da Kiwify:
+* **Plano LashMenu (R$ 197,00)**: `https://pay.kiwify.com.br/K31Kqng`
 
 ---
 

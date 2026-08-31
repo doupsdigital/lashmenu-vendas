@@ -131,12 +131,10 @@ Rastreamento 100% configurado e ativo nas páginas do funil:
 
 ---
 
-## 🚀 8. OFERTAS E CHECKOUTS CAKTO (100% CONFIGURADOS)
+## 🚀 8. OFERTAS E CHECKOUTS KIWIFY (100% CONFIGURADOS)
 
-1. **Plano Essencial**: R$ 197,00 (ou 3x de R$ 69,90)  
-   👉 Link de Checkout: `https://pay.cakto.com.br/r76ceej_1060004`
-2. **Plano Custom (Fotos Próprias)**: R$ 297,00 (ou 3x de R$ 99,90)  
-   👉 Link de Checkout: `https://pay.cakto.com.br/nnaav4y`
-3. **URL de Redirecionamento Pós-Pagamento (Obrigado / Form)**:  
+1. **Plano LashMenu**: R$ 197,00 (ou parcelado no cartão)  
+   👉 Link de Checkout: `https://pay.kiwify.com.br/K31Kqng`
+2. **URL de Redirecionamento Pós-Pagamento (Obrigado / Form)**:  
    👉 `https://lashmenu.com/vendas/form/`
-4. **Status**: Links de checkout integrados diretamente aos botões CTA da Landing Page (`vendas/lpb/index.html`).
+3. **Status**: Link de checkout integrado diretamente aos botões CTA das Landing Pages (`vendas/lpb/index.html`, `vendas/lpa/index.html`, etc.).
