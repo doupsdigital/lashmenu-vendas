@@ -515,6 +515,29 @@
       border-left: 3px solid var(--accent-rose);
     }
 
+    .var-tab {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .var-tab:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+    }
+
+    .var-tab.active {
+      background: rgba(255, 77, 141, 0.2);
+      border-color: rgba(255, 77, 141, 0.6);
+      color: #FFD1E3;
+    }
+
     /* Toast Notification */
     #toast {
       position: fixed;
@@ -999,11 +1022,16 @@ Quer que eu já garanta a sua chave Pix para liberar o seu catálogo oficial hoj
 
             <div class="scripts-container">
               <div class="script-card">
-                <div class="script-header">
+                <div class="script-header" style="flex-wrap: wrap; gap: 8px;">
                   <span class="script-title">💬 1. Abordagem Inicial (WhatsApp)</span>
-                  <button class="btn-copy" onclick="copyText(\`${escapeJsString(lead.Abordagem_1_Inicial)}\`)">📋 Copiar Mensagem 1</button>
+                  <div class="var-tabs-wrap" style="display: flex; align-items: center; gap: 6px;">
+                    <button type="button" class="var-tab active" onclick="switchLeadVar(${lead.Rank}, 1, this)">Variação 01</button>
+                    <button type="button" class="var-tab" onclick="switchLeadVar(${lead.Rank}, 2, this)">Variação 02</button>
+                    <button type="button" class="var-tab" onclick="switchLeadVar(${lead.Rank}, 3, this)">Variação 03</button>
+                  </div>
+                  <button class="btn-copy" id="btn-copy-var-${lead.Rank}" onclick="copyText(\`${escapeJsString(lead.Abordagem_1_Variação_1 || lead.Abordagem_1_Inicial)}\`)">📋 Copiar Mensagem 1</button>
                 </div>
-                <div class="script-content">${escapeHtml(lead.Abordagem_1_Inicial)}</div>
+                <div class="script-content" id="lead-var-text-${lead.Rank}">${escapeHtml(lead.Abordagem_1_Variação_1 || lead.Abordagem_1_Inicial)}</div>
                 ${lead.Link_WhatsApp ? `<a href="${lead.Link_WhatsApp}" target="_blank" class="btn-wa-direct">📲 Abrir no WhatsApp Direct</a>` : ''}
               </div>
 
@@ -1135,6 +1163,24 @@ Quer que eu já garanta a sua chave Pix para liberar o seu catálogo oficial hoj
       }).catch(err => {
         console.error("Erro ao copiar:", err);
       });
+    }
+
+    function switchLeadVar(rank, varNum, el) {
+      const lead = leadsData.find(l => l.Rank === rank);
+      if (!lead) return;
+      
+      const varText = lead[`Abordagem_1_Variação_${varNum}`] || lead.Abordagem_1_Inicial;
+      const contentEl = document.getElementById(`lead-var-text-${rank}`);
+      const btnCopy = document.getElementById(`btn-copy-var-${rank}`);
+      
+      if (contentEl) contentEl.innerText = varText;
+      if (btnCopy) btnCopy.setAttribute('onclick', `copyText(\`${escapeJsString(varText)}\`)`);
+      
+      const parent = el.parentElement;
+      if (parent) {
+        parent.querySelectorAll('.var-tab').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+      }
     }
   </script>
 </body>

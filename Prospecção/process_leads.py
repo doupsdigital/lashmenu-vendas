@@ -133,9 +133,9 @@ def calculate_score(item):
 
     return score
 
-def generate_pitch_1(title, rank=None):
+def generate_pitch_1_v1(title, rank=None):
     """
-    1ª Mensagem: Abordagem fria persuasiva em 3 parágrafos curtos.
+    1ª Mensagem (Variação 01): Elogio Google + Foco em Praticidade no WhatsApp.
     """
     name = get_name_only(title, rank)
     greeting = f"Oii {name}" if name else "Oii, tudo bem?"
@@ -147,6 +147,39 @@ def generate_pitch_1(title, rank=None):
         f"Posso te mandar um modelo de demonstração para você ver como fica lindo na prática? 👁️✨"
     )
     return pitch
+
+def generate_pitch_1_v2(title, rank=None):
+    """
+    1ª Mensagem (Variação 02): Foco em Agilidade no Atendimento & Destaque dos Trabalhos.
+    """
+    name = get_name_only(title, rank)
+    greeting = f"Olá {name}" if name else "Olá, tudo bem?"
+    
+    pitch = (
+        f"{greeting}, como você está? 🌸✨ Estava pesquisando estúdios de cílios de excelência em Goiânia e fiquei encantada com a qualidade do seu trabalho! 👁️💖\n\n"
+        f"A gente sabe que passar o dia inteiro tirando dúvidas sobre procedimentos e mandando foto por foto de tabela no WhatsApp consome muito tempo do atendimento... 📲⏳\n\n"
+        f"Pensando nisso, desenvolvemos o *LashMenu*: um catálogo digital interativo para Lash Designers, pronto para colocar no link do Instagram ou mandar nas conversas, apresentando seus serviços com valores e fotos em alto padrão! 💎🌸\n\n"
+        f"Posso te enviar um modelo de demonstração bem rapidinho para você dar uma olhada de como funciona? 💕"
+    )
+    return pitch
+
+def generate_pitch_1_v3(title, rank=None):
+    """
+    1ª Mensagem (Variação 03): Foco em Perfil Profissional & Aumento de Agendamentos.
+    """
+    name = get_name_only(title, rank)
+    greeting = f"Oii {name}" if name else "Oii, tudo bem?"
+    
+    pitch = (
+        f"{greeting}, tudo joia? 💖 Entrei em contato porque encontrei seu estúdio no Google e achei seu trabalho com extensão de cílios incrível! 😍✨\n\n"
+        f"Muitas lashes amigas me contavam o quanto é cansativo ter que responder manualmente cada cliente explicando valores, manutenções e técnicas no WhatsApp... 📝💬\n\n"
+        f"Para resolver isso, criamos o *LashMenu*, um catálogo interativo elegante feito sob medida para seu estúdio. Ele organiza todos os seus procedimentos, fotos e valores em um link exclusivo e super prático! ✨📱\n\n"
+        f"Te mandando um exemplo de demonstração agora, o que acha de dar uma olhadinha sem compromisso? 🌸👁️"
+    )
+    return pitch
+
+def generate_pitch_1(title, rank=None):
+    return generate_pitch_1_v1(title, rank)
 
 def generate_pitch_2(title, rank=None):
     """
@@ -226,22 +259,28 @@ def process():
     df["Rank"] = df.index + 1
 
     # Adiciona as abordagens
-    p1_list, p2_list, p3_list = [], [], []
+    p1_v1_list, p1_v2_list, p1_v3_list, p2_list, p3_list = [], [], [], [], []
     for idx, row in df.iterrows():
         rank = row['Rank']
         title = row['Nome_Estudio']
-        p1_list.append(generate_pitch_1(title, rank))
+        p1_v1_list.append(generate_pitch_1_v1(title, rank))
+        p1_v2_list.append(generate_pitch_1_v2(title, rank))
+        p1_v3_list.append(generate_pitch_1_v3(title, rank))
         p2_list.append(generate_pitch_2(title, rank))
         p3_list.append(generate_pitch_3(title, rank))
 
-    df['Abordagem_1_Inicial'] = p1_list
+    df['Abordagem_1_Inicial'] = p1_v1_list
+    df['Abordagem_1_Variação_1'] = p1_v1_list
+    df['Abordagem_1_Variação_2'] = p1_v2_list
+    df['Abordagem_1_Variação_3'] = p1_v3_list
     df['Resposta_2_Demonstracao_SIM'] = p2_list
     df['Fechamento_3_Oferta_Preco_Pix'] = p3_list
     
     cols = [
         "Rank", "Score_Potencial", "Nome_Estudio", "Bairro", "Avaliação_Google", 
         "Total_Avaliações", "Telefone", "Link_WhatsApp", "Instagram", "Website", 
-        "Abordagem_1_Inicial", "Resposta_2_Demonstracao_SIM", "Fechamento_3_Oferta_Preco_Pix", 
+        "Abordagem_1_Inicial", "Abordagem_1_Variação_1", "Abordagem_1_Variação_2", "Abordagem_1_Variação_3",
+        "Resposta_2_Demonstracao_SIM", "Fechamento_3_Oferta_Preco_Pix", 
         "Endereço", "Link_GoogleMaps"
     ]
     df = df[cols]
