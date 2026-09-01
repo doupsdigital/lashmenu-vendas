@@ -37,25 +37,25 @@ Eu formato pra você ver na prática como vai valorizar o seu trabalho! Pode ser
     id: "funnel-step-2-direct",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
-    title: "2️⃣ Passo 2 (Opção B): Encaminhamento Direto para Oferta R$ 149 + Formulário 3min",
+    title: "2️⃣ Passo 2 (Opção B): Encaminhamento Direto para Oferta R$ 89 + Formulário 3min",
     tip: "Use se você não quiser fazer prévia e preferir fechar a venda direto explicando que entregamos tudo pronto via formulário simples.",
     content: `Fica perfeito no celular! 😍
 
 Nós entregamos o seu catálogo 100% pronto em até 24h! Você só preenche um formulário super rápido de 3 minutos no celular com seus preços e fotos.
 
-Estamos com a **Promoção de Lançamento por R$ 149,00 à vista no PIX** (pagamento único, sem mensalidade). Podemos garantir o seu hoje? 🥰💳`
+Estamos com a **Promoção de Lançamento por apenas R$ 89,00 à vista no PIX** (pagamento único, sem mensalidade). Podemos garantir o seu hoje? 🥰💳`
   },
   {
     id: "funnel-step-3",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
-    title: "3️⃣ Passo 3: Apresentação da Prévia + Gancho do PIX R$ 149",
+    title: "3️⃣ Passo 3: Apresentação da Prévia + Gancho do PIX R$ 89",
     tip: "Envie quando tiver o link da prévia de demonstração pronto (ou foto/exemplo personalizado). Apresenta a oferta promocional sem enrolação.",
     content: `Priscila, olha que perfeição ficou o seu catálogo! 😍✨
 
 👉 **Seu Link de Demonstração:** [Cole o Link Aqui]
 
-Estamos com a nossa **Oferta Promocional de Lançamento por R$ 149,00 à vista no PIX** (pagamento único, sem nenhuma mensalidade!).
+Estamos com a nossa **Oferta Promocional por apenas R$ 89,00 à vista no PIX** (de R$ 197 por R$ 89, pagamento único sem mensalidade!).
 
 Consigo colocar o seu catálogo oficial no ar hoje ainda! Podemos garantir o seu na promoção? 🥰💳`
   },
@@ -63,11 +63,11 @@ Consigo colocar o seu catálogo oficial no ar hoje ainda! Podemos garantir o seu
     id: "funnel-step-4",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
-    title: "4️⃣ Passo 4: Envio da Chave PIX R$ 149 (Fechamento)",
+    title: "4️⃣ Passo 4: Envio da Chave PIX R$ 89 (Fechamento)",
     tip: "Envie quando ela disser 'Pode sim', 'Quero', 'Como faço para pagar?'.",
     content: `Maravilha! Segue a chave PIX com desconto promocional:
 
-💰 **Valor:** R$ 149,00
+💰 **Valor:** R$ 89,00
 🔑 **Chave PIX (Telefone):** +5562991083435
 👤 **Nome:** Donizete / LashMenu
 
@@ -85,7 +85,7 @@ Me envia o comprovante aqui assim que fizer que eu já coloco seu catálogo na p
     tip: "Use quando a lead chegar dizendo 'Tenho dúvidas e quero saber sobre o PIX'.",
     content: `Oii! Seja super bem-vinda! 🌸✨
 
-O LashMenu está com **Desconto Especial no PIX por apenas R$ 149,00** (pagamento único, você usa o ano todo sem mensalidade!).
+O LashMenu está com **Desconto Especial por apenas R$ 89,00 à vista no PIX** (de R$ 197 por R$ 89, pagamento único sem mensalidade!).
 
 Dá uma olhadinha em como fica lindo no celular:
 👑 https://lashmenu.com/modelos/glamour-midnight/index.html
@@ -156,9 +156,9 @@ Posso te mandar 2 modelos pra você dar uma olhadinha sem compromisso? 🥰`
     tip: "Compara o valor do LashMenu com apenas 1 procedimento de cílios.",
     content: `Te entendo super! Orçamento de estúdio é importante cuidar mesmo... ❤️
 
-Mas pensa comigo: com apenas **1 procedimento** que você fizer no mês (R$ 150 a R$ 197), o LashMenu já se pagou 100%!
+Mas pensa comigo: por **apenas R$ 89,00** à vista (o valor de meio procedimento que você faz no mês), o LashMenu já se pagou 100%!
 
-E você usa o ano todo sem NENHUMA mensalidade. Consigo fazer **R$ 149 no PIX** pra fecharmos hoje. Podemos garantir a sua vaga? 🚀`
+E você usa o ano todo sem NENHUMA mensalidade. Consigo garantir esse valor no PIX hoje pra fecharmos. Podemos garantir a sua vaga? 🚀`
   },
   {
     id: "objecao-2",
@@ -168,7 +168,7 @@ E você usa o ano todo sem NENHUMA mensalidade. Consigo fazer **R$ 149 no PIX** 
     tip: "Mostre o contraste entre amadorismo no PDF do Canva e um aplicativo de luxo.",
     content: `O Canva é legal, mas o PDF fica com letras minúsculas no celular e muitas clientes não abrem porque consome dados...
 
-O LashMenu abre como um aplicativo de luxo em 1 segundo. Quem passa imagem profissional cobra mais caro e não perde cliente pro concorrente! ✨`
+O LashMenu abre como um aplicativo de luxo em 1 segundo por apenas R$ 89,00. Quem passa imagem profissional cobra mais caro e não perde cliente! ✨`
   },
   {
     id: "objecao-3",
@@ -178,7 +178,7 @@ O LashMenu abre como um aplicativo de luxo em 1 segundo. Quem passa imagem profi
     tip: "Zera o trabalho da cliente oferecendo para pegar tudo pelo Instagram dela.",
     content: `Relaxa, você não vai ter trabalho nenhum! 🥰
 
-Me passa só o **@ do seu Instagram** que a nossa equipe pega suas fotos e seus preços por lá e te entrega o link 100% pronto em menos de 24 horas!
+Me envia só um print da sua tabela atual no Whats que a nossa equipe formata tudo e te entrega o link 100% pronto em menos de 24 horas!
 
 Bora deixar pronto essa semana? 🚀`
   },
@@ -192,7 +192,7 @@ Bora deixar pronto essa semana? 🚀`
 
 Faz o seguinte: mostra os modelos ao vivo no celular pra ele(a), as pessoas adoram quando veem o link funcionando!
 
-Vou segurar a sua vaga com desconto no PIX (R$ 149) reservada pra você até o final do dia, tá bom? Me avisa! 😊`
+Vou segurar a sua vaga com desconto no PIX por apenas R$ 89,00 reservada pra você até o final do dia, tá bom? Me avisa! 😊`
   },
 
   // -------------------------------------------------------------------------
@@ -202,11 +202,11 @@ Vou segurar a sua vaga com desconto no PIX (R$ 149) reservada pra você até o f
     id: "fechamento-pix",
     category: "fechamento",
     categoryName: "Fechamento & PIX",
-    title: "1. Envio da Chave PIX Promocional (R$ 149,00)",
-    tip: "Envie quando a cliente aceitar pagar via PIX com desconto.",
-    content: `Perfeito! Segue os dados para pagamento via PIX no valor promocional de R$ 149,00:
+    title: "1. Envio da Chave PIX Promocional (R$ 89,00)",
+    tip: "Envie quando a cliente aceitar pagar via PIX no valor de lançamento.",
+    content: `Perfeito! Segue os dados para pagamento via PIX no valor promocional de R$ 89,00:
 
-💰 **Valor:** R$ 149,00
+💰 **Valor:** R$ 89,00
 🔑 **Chave PIX (Telefone):** +5562991083435
 👤 **Nome:** Donizete / LashMenu
 
