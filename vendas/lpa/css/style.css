@@ -3401,24 +3401,26 @@ body.testdrive-open {
 }
 
 .tier-price-box {
-  background: #fcf6f8;
-  border-radius: 16px;
+  background: linear-gradient(135deg, #36222b 0%, #24141b 100%);
+  border-radius: 18px;
   padding: 18px 16px;
   text-align: center;
   margin-bottom: 22px;
-  border: 1px solid rgba(200, 75, 114, 0.15);
+  border: 1px solid rgba(200, 75, 114, 0.25);
+  box-shadow: 0 8px 24px rgba(36, 34, 43, 0.2);
+  color: #ffffff;
 }
 
 .pricing-tier-card--vip .tier-price-box {
   background: linear-gradient(135deg, #c84b72 0%, #b03a60 100%);
   color: #ffffff;
   border: none;
-  box-shadow: 0 8px 24px rgba(200, 75, 114, 0.25);
+  box-shadow: 0 8px 24px rgba(200, 75, 114, 0.35);
 }
 
 .tier-price-old {
   font-size: 0.82rem;
-  color: #88787c;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: line-through;
   margin-bottom: 2px;
 }
@@ -3432,7 +3434,7 @@ body.testdrive-open {
   align-items: baseline;
   justify-content: center;
   gap: 2px;
-  color: #1a1412;
+  color: #ffffff;
   line-height: 1;
 }
 
