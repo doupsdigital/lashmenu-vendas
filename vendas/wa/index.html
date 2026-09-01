@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>Redirecionando para o WhatsApp Oficial LashMenu...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1042165951490026');
+    fbq('track', 'PageView');
+    fbq('track', 'Contact');
+  </script>
+  <!-- PostHog Analytics -->
+  <script src="../js/posthog-init.js"></script>
+  <style>
+    body {
+      background: #faf6f0;
+      color: #1a1412;
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .loader-box {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border: 1px solid rgba(230, 80, 115, 0.2);
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(230, 80, 115, 0.2);
+      border-top-color: #e65073;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .wa-btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: #25d366;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 100px;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+    }
+  </style>
+  <script>
+    const WA_URL = "https://wa.me/5562991083435?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20do%20LashMenu%20e%20quero%20ver%20como%20funciona%20para%20o%20meu%20est%C3%BAdio";
+    
+    // Redirecionamento automático imediato
+    setTimeout(function() {
+      window.location.replace(WA_URL);
+    }, 300);
+  </script>
+</head>
+
+<body>
+  <div class="loader-box">
+    <div class="spinner"></div>
+    <h2>Abrindo conversa no WhatsApp...</h2>
+    <p>Caso o aplicativo não abra automaticamente, clique no botão abaixo:</p>
+    <a id="manual-wa-btn" href="https://wa.me/5562991083435?text=Ol%C3%A1!%20Vim%20pelo%20an%C3%BAncio%20do%20LashMenu%20e%20quero%20ver%20como%20funciona%20para%20o%20meu%20est%C3%BAdio" class="wa-btn">
+      💬 Abrir WhatsApp Agora
+    </a>
+  </div>
+</body>
+
+</html>
