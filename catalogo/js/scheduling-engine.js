@@ -100,13 +100,14 @@ const SchedulingEngine = (function() {
     );
     const agendamentosAll = agendamentosRes.ok ? await agendamentosRes.json() : [];
 
-    // Filtrar agendamentos do dia específico
+    // Filtrar agendamentos do dia específico (comparação limpa de string ISO YYYY-MM-DD)
     const agendamentosOcupados = agendamentosAll.filter(a => {
-      const aDateISO = formatDateISO(new Date(a.data_hora));
-      return aDateISO === dataSelecionadaISO;
+      if (!a.data_hora) return false;
+      const aDateStr = a.data_hora.substring(0, 10);
+      return aDateStr === dataSelecionadaISO;
     }).map(a => {
-      const dt = new Date(a.data_hora);
-      const startMin = dt.getHours() * 60 + dt.getMinutes();
+      const timeStr = a.data_hora.substring(11, 16);
+      const startMin = timeToMinutes(timeStr);
       return {
         startMin,
         endMin: startMin + (a.duracao_minutos || 60)
@@ -215,7 +216,10 @@ const SchedulingEngine = (function() {
   };
 })();
 
-// Exporta globalmente para uso no browser
+// Exporta globalmente para uso no browser ou Node.js
 if (typeof window !== 'undefined') {
   window.SchedulingEngine = SchedulingEngine;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { SchedulingEngine };
 }
