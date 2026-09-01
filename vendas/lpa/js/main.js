@@ -105,18 +105,62 @@ function initMockupSlider() {
   const iframe = document.getElementById('vitrine-preview-frame');
   const mockupWrapper = document.querySelector('.hero-mockup-wrapper');
 
+  // Função auxiliar para trocar dinamicamente o badge educativo do lado esquerdo do mockup
+  function updateLeftIndicator(label, sectionId) {
+    const leftIndicator = document.getElementById('phone-left-indicator');
+    const leftTag = document.getElementById('left-cue-tag');
+    const arrowIcon = document.querySelector('.left-arrow-icon');
+    const tapIcon = document.querySelector('.left-tap-icon');
+    if (!leftIndicator || !leftTag) return;
+
+    const currentLabel = (label || sectionId || '').toLowerCase();
+
+    const isHeroScreen = currentLabel.includes('hero') || currentLabel.includes('capa');
+    const isCatalogScreen = currentLabel.includes('procedimento') || currentLabel.includes('mosaico') || currentLabel.includes('catalogo');
+
+    if (isHeroScreen) {
+      leftIndicator.classList.remove('is-hidden');
+      if (leftTag.textContent !== 'Sua foto aqui') {
+        leftTag.style.opacity = '0';
+        setTimeout(() => {
+          leftTag.textContent = 'Sua foto aqui';
+          leftTag.style.opacity = '1';
+        }, 150);
+      }
+      if (arrowIcon) arrowIcon.style.display = 'block';
+      if (tapIcon) tapIcon.style.display = 'none';
+    } else if (isCatalogScreen) {
+      leftIndicator.classList.remove('is-hidden');
+      if (leftTag.textContent !== 'Clique nos cards') {
+        leftTag.style.opacity = '0';
+        setTimeout(() => {
+          leftTag.textContent = 'Clique nos cards';
+          leftTag.style.opacity = '1';
+        }, 150);
+      }
+      if (arrowIcon) arrowIcon.style.display = 'none';
+      if (tapIcon) tapIcon.style.display = 'block';
+    } else {
+      leftIndicator.classList.add('is-hidden');
+    }
+  }
+
   window.addEventListener('message', (event) => {
     if (event.data && event.data.type === 'VITRINE_SCREEN_CHANGE') {
       const labelMap = {
         'Hero': 'Capa Oficial',
+        'Capa': 'Capa Oficial',
         'Procedimentos': 'Procedimentos & Valores',
+        'Mosaico': 'Procedimentos & Valores',
         'Manutenção e Cuidados': 'Manutenção & Cuidados',
         'Agendamento': 'Orientações & Agendamento',
+        'Orientações': 'Orientações & Agendamento',
         'Contato': 'Contato & WhatsApp'
       };
       if (nameLabel) {
         nameLabel.textContent = labelMap[event.data.label] || event.data.label || 'Catálogo ao vivo';
       }
+      updateLeftIndicator(event.data.label, event.data.sectionId);
     }
   });
 

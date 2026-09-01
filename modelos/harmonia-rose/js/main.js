@@ -238,13 +238,24 @@ window.filtroAtivo = filtroAtivo;
 function initSectionObserver() {
   const observerOptions = {
     root: mosaicoApp,
-    threshold: 0.2
+    threshold: 0.25
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
+        try {
+          if (window.parent && window.parent !== window) {
+            const label = entry.target.getAttribute('data-screen-label') || entry.target.id;
+            const sectionId = entry.target.id;
+            window.parent.postMessage({
+              type: 'VITRINE_SCREEN_CHANGE',
+              label: label,
+              sectionId: sectionId
+            }, '*');
+          }
+        } catch (e) {}
       }
     });
   }, observerOptions);
