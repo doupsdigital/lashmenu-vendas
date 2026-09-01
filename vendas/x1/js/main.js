@@ -418,6 +418,38 @@ Vi que caiu a mensagem automática por aí! Como não queria tomar seu tempo de 
 A gente cria um link exclusivo com a sua foto e seus procedimentos para valorizar o seu trabalho no WhatsApp e no Instagram.
 
 Qual modelo você achou mais bonito? 🥰`
+  },
+  {
+    id: "followup-autoreply-4",
+    category: "followup",
+    categoryName: "Follow-up / Resgate",
+    title: "6. Follow-up pós Mensagem Automática (Opção 4: Ultra Curta — Pausa na Maca)",
+    tip: "Ultra resumida. Focada em incentivar a Lash a dar uma olhadinha no intervalo entre atendimentos.",
+    content: `Oii! Vi que entrou a mensagem automática do estúdio! 😊
+
+Para não atrapalhar seu atendimento na maca, te mandei aqui direto os nossos 3 modelos de catálogo digital pra você dar uma olhada rápida:
+
+⭐ Harmonia Rosé: https://lashmenu.com/modelos/harmonia-rose/index.html
+🌸 Clássico Rosé: https://lashmenu.com/modelos/classico-rose/index.html
+✨ Glamour Midnight: https://lashmenu.com/modelos/glamour-midnight/index.html
+
+Dá uma olhadinha quando der uma pausinha! Qual deles faz mais o seu estilo? 🥰`
+  },
+  {
+    id: "followup-autoreply-5",
+    category: "followup",
+    categoryName: "Follow-up / Resgate",
+    title: "7. Follow-up pós Mensagem Automática (Opção 5: Ultra Curta — Foco em Substituir Canva)",
+    tip: "Curta e casual. Foca em substituir o PDF do Canva por link interativo com oferta de prévia rápida.",
+    content: `Oii! Tudo joia? 💕
+
+Vi que respondeu automático! Passando só pra te mostrar o catálogo digital que criamos pra Lashs substituírem a tabela do Canva por um link profissional:
+
+💕 Harmonia Rosé: https://lashmenu.com/modelos/harmonia-rose/index.html
+🌸 Clássico Rosé: https://lashmenu.com/modelos/classico-rose/index.html
+✨ Glamour Midnight: https://lashmenu.com/modelos/glamour-midnight/index.html
+
+Se quiser ver uma prévia com o seu nome e sua tabela de preços, é só me avisar aqui! 😉📲`
   }
 ];
 
