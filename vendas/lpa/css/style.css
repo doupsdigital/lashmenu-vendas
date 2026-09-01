@@ -3300,16 +3300,26 @@ body.testdrive-open {
 }
 
 /* ==========================================================================
-   PRICING 2-TIER GRID SYSTEM (R$ 89 VS R$ 129)
+   PRICING 2-TIER GRID SYSTEM (SOFT LUXURY ROSE & WHITE PALETTE)
    ========================================================================== */
 .pricing-header-title {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.pricing-header-title .section-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 6px;
 }
 
 .pricing-header-title .section-subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
-  margin-top: 6px;
+  font-weight: 400;
 }
 
 .pricing-tier-grid {
@@ -3322,30 +3332,32 @@ body.testdrive-open {
 @media (max-width: 768px) {
   .pricing-tier-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 22px;
   }
 }
 
 .pricing-tier-card {
-  background: var(--bg-card, #14100e);
-  border: 1px solid var(--border, rgba(201, 163, 137, 0.2));
-  border-radius: 20px;
-  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(200, 75, 114, 0.2);
+  border-radius: 24px;
+  padding: 32px 26px;
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+  color: #1a1412;
 }
 
 .pricing-tier-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(201, 163, 137, 0.4);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
 }
 
 .pricing-tier-card--vip {
-  background: linear-gradient(180deg, #1c1512 0%, #120e0c 100%);
-  border: 2px solid #c9a389;
-  box-shadow: 0 12px 40px rgba(201, 163, 137, 0.15);
+  background: #ffffff;
+  border: 2.5px solid #c84b72;
+  box-shadow: 0 16px 50px rgba(200, 75, 114, 0.28);
 }
 
 .tier-badge {
@@ -3354,53 +3366,65 @@ body.testdrive-open {
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 100px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
 .tier-badge--basic {
-  background: rgba(255, 255, 255, 0.08);
-  color: #d1d5db;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #fdf2f5;
+  color: #c84b72;
+  border: 1px solid rgba(200, 75, 114, 0.25);
 }
 
 .tier-badge--vip {
-  background: linear-gradient(135deg, #c9a389 0%, #a67c52 100%);
-  color: #000000;
+  background: linear-gradient(135deg, #c84b72 0%, #a82b54 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(200, 75, 114, 0.3);
 }
 
 .tier-title {
-  font-family: var(--font-heading, serif);
-  font-size: 1.6rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.85rem;
   font-weight: 700;
   margin-bottom: 6px;
-  color: #ffffff;
+  color: #1a1412;
 }
 
 .tier-desc {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.45;
+  color: #665a5e;
+  line-height: 1.48;
   margin-bottom: 20px;
   min-height: 48px;
 }
 
 .tier-price-box {
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 14px;
-  padding: 16px;
+  background: #fcf6f8;
+  border-radius: 16px;
+  padding: 18px 16px;
   text-align: center;
-  margin-bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 22px;
+  border: 1px solid rgba(200, 75, 114, 0.15);
+}
+
+.pricing-tier-card--vip .tier-price-box {
+  background: linear-gradient(135deg, #c84b72 0%, #b03a60 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(200, 75, 114, 0.25);
 }
 
 .tier-price-old {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82rem;
+  color: #88787c;
   text-decoration: line-through;
   margin-bottom: 2px;
+}
+
+.pricing-tier-card--vip .tier-price-old {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .tier-price-main {
@@ -3408,34 +3432,43 @@ body.testdrive-open {
   align-items: baseline;
   justify-content: center;
   gap: 2px;
-  color: #ffffff;
+  color: #1a1412;
   line-height: 1;
 }
 
+.pricing-tier-card--vip .tier-price-main {
+  color: #ffffff;
+}
+
 .tier-currency {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
 .tier-val {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 900;
 }
 
 .tier-cents {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
 .tier-price-sub {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #77686c;
   margin-top: 6px;
+  font-weight: 500;
+}
+
+.pricing-tier-card--vip .tier-price-sub {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .tier-bullets {
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -3447,10 +3480,11 @@ body.testdrive-open {
   align-items: center;
   gap: 10px;
   font-size: 0.88rem;
-  color: #e5e7eb;
+  color: #383033;
+  line-height: 1.35;
 }
 
 .tier-bullets li svg {
-  color: #25d366;
+  color: #c84b72;
   flex-shrink: 0;
 }
