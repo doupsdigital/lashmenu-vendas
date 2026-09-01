@@ -58,6 +58,14 @@
       "destination": "/admin/editor.html"
     },
     {
+      "source": "/catalogo/js/:path*",
+      "destination": "/catalogo/js/:path*"
+    },
+    {
+      "source": "/catalogo/css/:path*",
+      "destination": "/catalogo/css/:path*"
+    },
+    {
       "source": "/c/:slug",
       "destination": "/catalogo/index.html?slug=:slug"
     },
