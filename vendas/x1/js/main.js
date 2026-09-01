@@ -350,11 +350,11 @@ Se você quiser aproveitar essa oportunidade para deixar seu catálogo profissio
 Abraço! 💕`
   },
   {
-    id: "followup-autoreply",
+    id: "followup-autoreply-1",
     category: "followup",
     categoryName: "Follow-up / Resgate",
-    title: "3. Follow-up pós Mensagem Automática do Estúdio (Envio dos 3 Modelos ao Vivo)",
-    tip: "Ideal para quando você fez a primeira abordagem e recebeu apenas a resposta automática do WhatsApp do estúdio da Lash Designer.",
+    title: "3. Follow-up pós Mensagem Automática (Opção 1: Empática & Direta)",
+    tip: "Ideal quando você fez a primeira abordagem e recebeu a resposta automática do WhatsApp do estúdio. Reconhece o bot com gentileza e apresenta os 3 modelos ao vivo.",
     content: `Oii! Vi que caiu a mensagem automática do estúdio! 😊✨
 
 Imaginando que o seu dia a dia aí seja super corrido entre um procedimento e outro na maca, já quis te mandar os nossos modelos para você ver como funciona!
@@ -373,6 +373,51 @@ Dá uma olhadinha nesses 3 modelos ao vivo:
 👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
 
 Qual desses estilos você acha que combina mais com a identidade do seu estúdio? 🥰`
+  },
+  {
+    id: "followup-autoreply-2",
+    category: "followup",
+    categoryName: "Follow-up / Resgate",
+    title: "4. Follow-up pós Mensagem Automática (Opção 2: Oferta de Prévia Gratuita)",
+    tip: "Além de mandar os 3 modelos ao vivo, oferece para montar a prévia com o nome e preços do estúdio dela sem custo.",
+    content: `Oii! Tudo bem? 💕
+
+Vi que respondeu com a mensagem automática de agendamentos! 
+
+Como sei o quanto é chato perder tempo digitando preços ou mandando tabelas pesadas do Canva quando a cliente chama no WhatsApp, quis te mostrar o LashMenu!
+
+Nós montamos um catálogo digital interativo exclusivo para o seu estúdio (tipo seunome.lashmenu.com) com suas fotos, preços e orientações pós-procedimento.
+
+Dá uma olhada nos 3 modelos ao vivo no celular:
+
+⭐ 1. Modelo Harmonia Rosé (Mais amado 💕):
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
+
+🌸 2. Modelo Clássico Rosé:
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
+
+✨ 3. Modelo Glamour Midnight (Dark Luxo):
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
+
+Se você quiser, posso montar uma prévia gratuita do seu catálogo hoje com o seu nome e seus preços para você ver como fica! Quer que eu monte pra você? 🥰📲`
+  },
+  {
+    id: "followup-autoreply-3",
+    category: "followup",
+    categoryName: "Follow-up / Resgate",
+    title: "5. Follow-up pós Mensagem Automática (Opção 3: Curta & Rápida)",
+    tip: "Versão resumida e super objetiva para visualização rápida no celular.",
+    content: `Oii! Tudo bem? ✨
+
+Vi que caiu a mensagem automática por aí! Como não queria tomar seu tempo de atendimento na maca, já te mandei o link dos nossos catálogos digitais para você dar uma olhadinha rápida:
+
+💕 Harmonia Rosé: https://lashmenu.com/modelos/harmonia-rose/index.html
+🌸 Clássico Rosé: https://lashmenu.com/modelos/classico-rose/index.html
+✨ Glamour Midnight: https://lashmenu.com/modelos/glamour-midnight/index.html
+
+A gente cria um link exclusivo com a sua foto e seus procedimentos para valorizar o seu trabalho no WhatsApp e no Instagram.
+
+Qual modelo você achou mais bonito? 🥰`
   }
 ];
 
