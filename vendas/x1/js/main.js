@@ -5,14 +5,13 @@
 const SCRIPTS_DATA = [
   // -------------------------------------------------------------------------
   // 1. FUNIL PASSO A PASSO (LEAD DO ANÚNCIO / WHATSAPP X1)
-  // -------------------------------------------------------------------------
-  {
+  // -----------------------------------------------------------------------  {
     id: "funnel-step-1",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
     title: "1️⃣ Passo 1: Boas-vindas + Envio dos 2 Melhores Modelos (Super Curto)",
-    tip: "Envie IMEDIATAMENTE quando o lead mandar 'Vim pelo anúncio do LashMenu'. Apenas 2 modelos ao vivo para não gerar dúvida ou sobrecarga.",
-    content: `Oii, maravilhosa! Seja muito bem-vinda ao LashMenu! 😍✨
+    tip: "Envie IMEDIATAMENTE quando o lead mandar 'Vim pelo anúncio do LashMenu'. Apenas 2 modelos ao vivo para não gerar dúvida.",
+    content: `Oii! Seja muito bem-vinda ao LashMenu! 😍✨
 
 Dá uma olhadinha nesses 2 modelos ao vivo no celular:
 
@@ -26,50 +25,55 @@ Qual desses 2 estilos combina mais com a identidade do seu estúdio? 🥰`
     category: "funnel",
     categoryName: "Funil Passo a Passo",
     title: "2️⃣ Passo 2: Solicitar Print/Foto da Tabela Atual (Meio Termo Prático)",
-    tip: "Envie assim que ela escolher o modelo 1 ou 2. Pede um print simples da tabela atual dela no Whats sem você precisar garimpar no Instagram.",
+    tip: "Envie assim que ela escolher o modelo 1 ou 2. Pede um print simples da tabela atual dela no Whats.",
     content: `Fica um espetáculo no celular! 😍
 
-Pra você ver como fica lindo com a sua marca, me manda aqui no Whats mesmo só um **print ou foto da sua tabela de preços atual** (e uma foto do seu estúdio)!
+Pra você ver como fica lindo com a sua marca, me manda aqui no Whats mesmo só um **print ou foto da sua tabela de preços atual**!
 
 Eu formato pra você ver na prática como vai valorizar o seu trabalho! Pode ser? ✨`
   },
   {
-    id: "funnel-step-2-direct",
+    id: "funnel-step-3-tiers",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
-    title: "2️⃣ Passo 2 (Opção B): Encaminhamento Direto para Oferta R$ 89 + Formulário 3min",
-    tip: "Use se você não quiser fazer prévia e preferir fechar a venda direto explicando que entregamos tudo pronto via formulário simples.",
-    content: `Fica perfeito no celular! 😍
+    title: "3️⃣ Passo 3: Apresentação dos 2 Planos (Essencial R$ 89 vs VIP R$ 129)",
+    tip: "Envie ao apresentar os valores. Oferece a escolha entre ela mesma preencher (R$ 89) ou nossa equipe fazer 100% tudo (R$ 129).",
+    content: `Ficou perfeito! Para o seu catálogo, nós temos **2 opções super práticas** na promoção de lançamento:
 
-Nós entregamos o seu catálogo 100% pronto em até 24h! Você só preenche um formulário super rápido de 3 minutos no celular com seus preços e fotos.
+📲 **1. Plano Essencial (R$ 89,00 no PIX):** Você recebe o gerador no celular para cadastrar e alterar seus preços quando quiser no seu tempo!
 
-Estamos com a **Promoção de Lançamento por apenas R$ 89,00 à vista no PIX** (pagamento único, sem mensalidade). Podemos garantir o seu hoje? 🥰💳`
+👑 **2. Plano VIP Feito por Nós (R$ 129,00 no PIX):** Zero trabalho pra você! A nossa equipe cadastra e entrega seu catálogo 100% pronto em 24h! (E você ainda pode editar depois se quiser).
+
+Qual das 2 opções fica melhor pro seu estúdio hoje? 🥰💳`
   },
   {
-    id: "funnel-step-3",
+    id: "funnel-step-4-pix-89",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
-    title: "3️⃣ Passo 3: Apresentação da Prévia + Gancho do PIX R$ 89",
-    tip: "Envie quando tiver o link da prévia de demonstração pronto (ou foto/exemplo personalizado). Apresenta a oferta promocional sem enrolação.",
-    content: `Priscila, olha que perfeição ficou o seu catálogo! 😍✨
-
-👉 **Seu Link de Demonstração:** [Cole o Link Aqui]
-
-Estamos com a nossa **Oferta Promocional por apenas R$ 89,00 à vista no PIX** (de R$ 197 por R$ 89, pagamento único sem mensalidade!).
-
-Consigo colocar o seu catálogo oficial no ar hoje ainda! Podemos garantir o seu na promoção? 🥰💳`
-  },
-  {
-    id: "funnel-step-4",
-    category: "funnel",
-    categoryName: "Funil Passo a Passo",
-    title: "4️⃣ Passo 4: Envio da Chave PIX R$ 89 (Fechamento)",
-    tip: "Envie quando ela disser 'Pode sim', 'Quero', 'Como faço para pagar?'.",
-    content: `Maravilha! Segue a chave PIX com desconto promocional:
+    title: "4️⃣ Passo 4 (Chave PIX R$ 89 — Plano Essencial)",
+    tip: "Envie quando ela escolher o Plano Essencial de R$ 89,00.",
+    content: `Perfeito! Segue a chave PIX do Plano Essencial (R$ 89,00):
 
 💰 **Valor:** R$ 89,00
 🔑 **Chave PIX (Telefone):** +5562991083435
 👤 **Nome:** Donizete / LashMenu
+
+Me envia o comprovante aqui que já te libero o link do gerador no celular! 🚀✨`
+  },
+  {
+    id: "funnel-step-4-pix-129",
+    category: "funnel",
+    categoryName: "Funil Passo a Passo",
+    title: "4️⃣ Passo 4 (Chave PIX R$ 129 — Plano VIP Feito por Nós)",
+    tip: "Envie quando ela escolher o Plano VIP Feito por Nós de R$ 129,00.",
+    content: `Maravilha! Segue a chave PIX do Plano VIP Feito por Nós (R$ 129,00):
+
+💰 **Valor:** R$ 129,00
+🔑 **Chave PIX (Telefone):** +5562991083435
+👤 **Nome:** Donizete / LashMenu
+
+Me envia o comprovante aqui que nossa equipe já coloca seu catálogo na produção expressa de 24h! 🚀✨`
+  },ete / LashMenu
 
 Me envia o comprovante aqui assim que fizer que eu já coloco seu catálogo na produção expressa de 24h! 🚀✨`
   },
