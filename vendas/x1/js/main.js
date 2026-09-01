@@ -86,57 +86,89 @@ Posso te mandar uma prévia demonstrativa gratuita sem compromisso? 🥰`
   },
 
   // -------------------------------------------------------------------------
-  // 2. RECEPÇÃO DE LEADS (INBOUND LANDING PAGE)
+  // 2. RECEPÇÃO DE LEADS DO ANÚNCIO / SITE (INBOUND AQUECIDO)
   // -------------------------------------------------------------------------
   {
     id: "inbound-1",
     category: "inbound",
     categoryName: "Recepção de Lead",
-    title: "1. Resposta Imediata ao Lead da Landing Page (VIP)",
-    tip: "Use imediatamente quando a cliente clica no botão do WhatsApp da Landing Page solicitando a prévia gratuita.",
-    content: `Oii! Seja muito bem-vinda ao LashMenu! 🌸✨
+    title: "1. Resposta Principal para Lead do Anúncio (Envio dos 3 Modelos ao Vivo)",
+    tip: "Use para responder leads que vieram dos Anúncios ou da Página de Vendas. Mostra o valor na hora com os 3 links ao vivo sem perguntas desnecessárias.",
+    content: `Que ótimo que você se interessou pelo LashMenu! 😍💕
 
-Que bom ter você por aqui! Vi que você acessou nosso site e quer ver como fica o seu catálogo personalizado.
+Temos 3 modelos de catálogos incríveis para você escolher o que mais combina com a identidade do seu estúdio:
 
-Para eu montar a prévia do seu estúdio em primeira mão, me conta aqui:
+⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
 
-1️⃣ Qual é o nome da sua marca/estúdio?
-2. 2️⃣ Qual o seu nome?
+🌸 2. Modelo Clássico Rosé:
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
 
-Já vou organizar aqui para te mandar o link de teste agora mesmo! 😊`
+✨ 3. Modelo Glamour Midnight (Dark Luxo):
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
+
+Dá uma olhada nesses exemplos e me fala qual estilo você mais gostou! 🥰
+
+Se quiser, já pode me enviar aqui uma foto ou lista dos seus procedimentos com os preços atuais que eu monto a versão personalizada do seu estúdio para você ver na prática! 🌸📲`
   },
   {
     id: "inbound-2",
     category: "inbound",
     categoryName: "Recepção de Lead",
-    title: "2. Explicando a Oferta Especial de Lançamento",
-    tip: "Envie logo após mandar a prévia ou quando a cliente perguntar quanto custa ter o catálogo.",
-    content: `O valor do LashMenu é um investimento único, você não paga mensalidade! ✨
+    title: "2. Resposta Curta & Direta (Envio Rápido para Atendimento em Volume)",
+    tip: "Versão resumida e ultra direta para quando tiver muitas mensagens entrando de uma vez no WhatsApp.",
+    content: `Oii! Que maravilhosa você por aqui! 😍✨
 
-Hoje estamos com a nossa **Oferta Especial de Lançamento**:
+Aqui estão os nossos 3 modelos de catálogos digitais para você ver como fica lindo no celular:
 
-De ~R$ 297,00~ por apenas **12x de R$ 19,70** (ou **R$ 197,00 à vista** no PIX ou Cartão).
+💕 Harmonia Rosé: https://lashmenu.com/modelos/harmonia-rose/index.html
+🌸 Clássico Rosé: https://lashmenu.com/modelos/classico-rose/index.html
+✨ Glamour Midnight: https://lashmenu.com/modelos/glamour-midnight/index.html
 
-💡 *Pense nisso:* É o valor de **apenas 1 procedimento de cílios** que você faz no mês para ter um catálogo profissional de altíssimo nível trabalhando pelo seu estúdio 24 horas por dia!
+Qual desses 3 combina mais com o estilo do seu estúdio? 
 
-Nós entregamos tudo 100% pronto em até 24 horas. Você não precisa criar nada no Canva!
-
-Podemos dar início ao seu catálogo hoje mesmo? 🥰`
+Se quiser ver a prévia com a sua marca, me manda aqui o seu nome e sua lista de preços que eu monto para você! 🥰📲`
   },
   {
     id: "inbound-3",
     category: "inbound",
     categoryName: "Recepção de Lead",
-    title: "3. Pergunta sobre o Modelo Escolhido (Glamour vs Harmonia vs Clássico)",
-    tip: "Ajuda a engajar a cliente pedindo a preferência de estilo dela.",
-    content: `Além de tudo, você pode escolher o estilo visual que mais combina com a sua marca! 😍
+    title: "3. Resposta Focada em Dúvidas do PIX & Desconto Especial",
+    tip: "Use quando a lead chegar do anúncio dizendo 'Tenho dúvidas sobre o LashMenu e quero saber sobre o PIX'.",
+    content: `Oii! Seja super bem-vinda! 🌸✨
 
-Temos 3 coleções exclusivas:
-✨ **Modelo Glamour:** Fotos ampliadas em tela cheia com detalhes dos serviços.
-🌸 **Modelo Harmonia:** Visual fotográfico moderno com filtros por técnica.
-👑 **Modelo Clássico:** Cardápio editorial limpo, elegante e direto ao ponto.
+O LashMenu está com **Preço Promocional de Lançamento por R$ 149,00 à vista no PIX** (pagamento único, sem nenhuma mensalidade!).
 
-Qual desses modelos tem mais a cara do seu estúdio? Me avisa que já configuro pra você! ❤️`
+Dá uma olhadinha em como os catálogos ficam perfeitos no celular:
+
+⭐ Harmonia Rosé: https://lashmenu.com/modelos/harmonia-rose/index.html
+🌸 Clássico Rosé: https://lashmenu.com/modelos/classico-rose/index.html
+✨ Glamour Midnight: https://lashmenu.com/modelos/glamour-midnight/index.html
+
+Nós entregamos o seu catálogo 100% pronto e personalizado em até 24h!
+
+Qual modelo você mais gostou? Se quiser o link direto com desconto no PIX me avisa aqui! 😍💳`
+  },
+  {
+    id: "inbound-4",
+    category: "inbound",
+    categoryName: "Recepção de Lead",
+    title: "4. Resposta Focada em Solicitar a Tabela de Preços (Amostra Grátis)",
+    tip: "Incentiva a cliente a enviar a foto ou texto do cardápio atual dela imediatamente.",
+    content: `Oii, tudo bem? Fico muito feliz pelo seu interesse no LashMenu! 😍💖
+
+Nós criamos o catálogo 100% pronto com as suas fotos, valores e orientações pós-procedimento!
+
+Confere os nossos 3 modelos ao vivo:
+✨ https://lashmenu.com/modelos/harmonia-rose/index.html
+✨ https://lashmenu.com/modelos/classico-rose/index.html
+✨ https://lashmenu.com/modelos/glamour-midnight/index.html
+
+Para eu montar um exemplo com o NOME e as FOTOS do seu estúdio sem custo nenhum, me manda aqui:
+1️⃣ Nome da sua marca
+2️⃣ Uma foto ou lista dos seus preços atuais
+
+Já monto para você ver como vai valorizar o seu trabalho! 📲👑`
   },
 
   // -------------------------------------------------------------------------
