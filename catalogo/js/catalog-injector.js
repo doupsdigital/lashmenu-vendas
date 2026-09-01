@@ -199,18 +199,18 @@
     window.LASHMENU_ORDER = order;
     window.LASHMENU_SERVICES = services;
 
-    // Se agendamento estiver ativo para a cliente, carrega os scripts do motor de agendamento
+    // Se agendamento estiver ativo para a cliente, carrega os scripts do motor de agendamento com caminho absoluto seguro
     if (order.agendamento_ativo) {
       if (!document.getElementById('lm-script-sched-engine')) {
         const s1 = document.createElement('script');
         s1.id = 'lm-script-sched-engine';
-        s1.src = '../../catalogo/js/scheduling-engine.js?v=1.0';
+        s1.src = '/catalogo/js/scheduling-engine.js?v=1.2';
         document.head.appendChild(s1);
       }
       if (!document.getElementById('lm-script-sched-modal')) {
         const s2 = document.createElement('script');
         s2.id = 'lm-script-sched-modal';
-        s2.src = '../../catalogo/js/scheduling-modal.js?v=1.0';
+        s2.src = '/catalogo/js/scheduling-modal.js?v=1.2';
         document.head.appendChild(s2);
       }
     }
