@@ -2,8 +2,8 @@
    SUPABASE CLIENT & REST API ENGINE — LASHMENU
    ========================================================================== */
 
-const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmZmhwdHBzYWZsbHNtY3NvaWloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyODkyMTYsImV4cCI6MjEwMjg2NTIxNn0.nwpvIwl8V6_KGIp5e5oeraAcGyt3oo8Kdam2hp6ajSQ';
+const SUPABASE_URL = 'https://qmaugeipttwvxnfkzsed.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtYXVnZWlwdHR3dnhuZmt6c2VkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgyNzczMzgsImV4cCI6MjEwMzg1MzMzOH0.6P2veiuqjaxBOj6eMZ7BDO7wqdUVTMWxOKC76R1AHLA';
 
 // Inicializa cliente SDK oficial se disponível
 let _supabaseSdk = null;

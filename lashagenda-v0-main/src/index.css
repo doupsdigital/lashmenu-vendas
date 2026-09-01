@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rose-50: #FDF5F5;
+  --rose-100: #FAE8E8;
+  --rose-200: #F5CECE;
+  --rose-400: #D4848A;
+  --rose-600: #A85560;
+  --rose-800: #7A2E38;
+  --gold: #C9A96E;
+  --gold-light: #F0E6D3;
+  --bg: #F7F3EE;          /* fundo geral bege/creme */
+  --surface: #FFFFFF;     /* fundo dos cards */
+  --text-primary: #2C1810;
+  --text-secondary: #7A6A62;
+  --text-muted: #B0A097;
+  --border: rgba(180,150,130,0.18);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   DARK MODE OVERRIDES (Aplica-se quando a classe .dark está no <html> ou <body>)
+   ========================================================================== */
+
+/* Overrides de fundos e containers */
+.dark .bg-white {
+  background-color: var(--surface) !important;
+}
+
+.dark .bg-bg\/15 {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark .bg-gray-50,
+.dark .bg-rose-50\/10,
+.dark .bg-rose-50\/20 {
+  background-color: var(--rose-50) !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: var(--rose-100) !important;
+}
+
+.dark .bg-rose-50,
+.dark .bg-rose-100 {
+  background-color: var(--rose-100) !important;
+  color: var(--rose-800) !important;
+}
+
+/* Overrides de textos */
+.dark .text-text-primary,
+.dark .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.dark .text-text-secondary,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+
+.dark .text-text-muted,
+.dark .text-gray-400 {
+  color: var(--text-muted) !important;
+}
+
+/* Overrides de bordas e divisores */
+.dark .border,
+.dark .border-border,
+.dark .border-gray-100,
+.dark .border-gray-200,
+.dark .divide-border > * + * {
+  border-color: var(--border) !important;
+}
+
+.dark hr {
+  border-color: var(--border) !important;
+}
+
+/* Inputs, Textareas e Selects */
+.dark input, 
+.dark select, 
+.dark textarea {
+  background-color: var(--bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+.dark input::placeholder, 
+.dark textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+.dark input:disabled, 
+.dark textarea:disabled, 
+.dark select:disabled {
+  background-color: var(--rose-50) !important;
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+}
+
+/* Modal and Overlays */
+.dark .bg-black\/45 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Custom list items timeline */
+.dark .border-rose-100 {
+  border-color: var(--rose-200) !important;
+}
+
+/* ==========================================================================
+   AGENDAMENTOS & CALENDÁRIO CONTRASTE (MODO ESCURO)
+   ========================================================================== */
+
+/* 1. Confirmados (Rose / Custom Palette) */
+.dark .bg-rose-50\/95,
+.dark .bg-rose-50\/90,
+.dark .bg-rose-50 {
+  background-color: var(--rose-100) !important;
+  color: var(--rose-800) !important;
+  opacity: 1 !important;
+}
+.dark .border-rose-300 {
+  border-color: var(--rose-200) !important;
+}
+.dark .hover\:bg-rose-100:hover {
+  background-color: var(--rose-200) !important;
+}
+.dark .hover\:bg-rose-800:hover {
+  background-color: var(--rose-400) !important;
+}
+
+/* 2. Pendentes (Amber) */
+.dark .bg-amber-50\/95,
+.dark .bg-amber-50\/90,
+.dark .bg-amber-50 {
+  background-color: #2F210F !important;
+  border-color: #5E3D16 !important;
+  opacity: 1 !important;
+}
+.dark .hover\:bg-amber-100:hover {
+  background-color: #453016 !important;
+}
+.dark .bg-amber-50\/95 *,
+.dark .bg-amber-50\/90 *,
+.dark .bg-amber-50 * {
+  color: #FCD34D !important;
+}
+
+/* 3. Concluídos (Emerald) */
+.dark .bg-emerald-50\/95,
+.dark .bg-emerald-50\/90,
+.dark .bg-emerald-50 {
+  background-color: #0C231E !important;
+  border-color: #144035 !important;
+  opacity: 1 !important;
+}
+.dark .hover\:bg-emerald-100\/90:hover {
+  background-color: #14352D !important;
+}
+.dark .bg-emerald-50\/95 *,
+.dark .bg-emerald-50\/90 *,
+.dark .bg-emerald-50 * {
+  color: #34D399 !important;
+}
+
+/* 4. Cancelados (Gray) */
+.dark .bg-gray-100\/50,
+.dark .bg-gray-200\/50,
+.dark .bg-gray-100,
+.dark .bg-gray-200 {
+  background-color: #241D1E !important;
+  border-color: #373132 !important;
+  opacity: 1 !important;
+}
+.dark .hover\:bg-gray-200\/50:hover {
+  background-color: #2D2526 !important;
+}
+.dark .bg-gray-100\/50 *,
+.dark .bg-gray-200\/50 *,
+.dark .bg-gray-100 *,
+.dark .bg-gray-200 * {
+  color: var(--text-muted) !important;
+}
+
+/* Evita transparência em blocos absolutos do calendário */
+.dark .absolute.rounded-lg.border {
+  opacity: 1 !important;
+}
+.dark .absolute.rounded-lg.border.bg-gray-100\/50 {
+  background-color: #241D1E !important;
+}
+
+/* Horários indisponíveis na grade de fundo */
+.dark .bg-gray-100\/55 {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Badges e Origem (Portal / Manual) */
+.dark .bg-rose-200, 
+.dark .bg-amber-200, 
+.dark .bg-emerald-200, 
+.dark .bg-gray-200 {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--text-primary) !important;
+}
+.dark .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  color: #93C5FD !important;
+}
+.dark .text-blue-700 {
+  color: #93C5FD !important;
+}
+.dark .text-rose-800,
+.dark .text-rose-900 {
+  color: var(--rose-800) !important;
+}
+.dark .text-amber-800,
+.dark .text-amber-900 {
+  color: #FCD34D !important;
+}
+.dark .text-emerald-800,
+.dark .text-emerald-900 {
+  color: #34D399 !important;
+}
+.dark .text-gray-400,
+.dark .text-gray-500,
+.dark .text-gray-600 {
+  color: var(--text-muted) !important;
+}
+
+/* Status Badges no Portal */
+.dark .bg-amber-50 {
+  background-color: #2F210F !important;
+}
+.dark .border-amber-200\/60 {
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+}
+.dark .border-blue-200\/60 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .bg-green-50 {
+  background-color: #0C231E !important;
+}
+.dark .border-green-200 {
+  border-color: rgba(52, 211, 153, 0.25) !important;
+}
+.dark .border-green-200\/60 {
+  border-color: rgba(52, 211, 153, 0.3) !important;
+}
+.dark .text-green-900 {
+  color: #6EE7B7 !important;
+}
+.dark .text-green-800 {
+  color: #34D399 !important;
+}
+
+/* 5. Falta (Red) */
+.dark .bg-red-50\/30 {
+  background-color: #2A0A0A !important;
+  opacity: 1 !important;
+}
+.dark .hover\:bg-red-50\/60:hover {
+  background-color: #3A1010 !important;
+}
+.dark .bg-red-50 {
+  background-color: #2A0A0A !important;
+}
+.dark .border-red-200 {
+  border-color: rgba(248, 113, 113, 0.3) !important;
+}
+.dark .bg-red-100 {
+  background-color: rgba(248, 113, 113, 0.15) !important;
+}
+.dark .text-red-800 {
+  color: #F87171 !important;
+}
+.dark .text-red-700 {
+  color: #FCA5A5 !important;
+}
+.dark .text-red-600 {
+  color: #FC8080 !important;
+}
+.dark .border-red-400 {
+  border-color: rgba(248, 113, 113, 0.6) !important;
+}
+
+/* Dias de outro mês no calendário mensal (vagos) no modo escuro */
+.dark .bg-gray-50\/40 {
+  background-color: var(--bg) !important;
+  opacity: 0.45 !important;
+}
+/* Botão outline de pagamento — fundo tintado para diferenciar do card */
+.btn-outline-payment {
+  background-color: var(--rose-50) !important;
+  border-color: var(--rose-200) !important;
+}
+.btn-outline-payment:hover {
+  background-color: var(--rose-100) !important;
+}
+.dark .btn-outline-payment {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.20) !important;
+}
+.dark .btn-outline-payment:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Remove as setas de aumentar/diminuir de campos de número globalmente */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ── Driver.js Onboarding — identidade visual do Lash Agenda ── */
+.lashhub-onboarding-popover {
+  background: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  max-width: 320px !important;
+}
+.lashhub-onboarding-popover .driver-popover-title {
+  font-family: 'Crimson Pro', serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #3A2E2A !important;
+}
+.lashhub-onboarding-popover .driver-popover-description {
+  font-size: 0.85rem !important;
+  color: #6B5E58 !important;
+  line-height: 1.55 !important;
+}
+.lashhub-onboarding-popover .driver-popover-footer {
+  margin-top: 14px !important;
+}
+.lashhub-onboarding-popover .driver-popover-next-btn,
+.lashhub-onboarding-popover .driver-popover-done-btn {
+  background-color: var(--rose-600) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+.lashhub-onboarding-popover .driver-popover-prev-btn {
+  background: transparent !important;
+  color: var(--rose-600) !important;
+  border: 1px solid var(--rose-600) !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+.lashhub-onboarding-popover .driver-popover-close-btn {
+  color: var(--rose-600) !important;
+  font-size: 1.4rem !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 6px !important;
+  transition: background 0.15s !important;
+}
+.lashhub-onboarding-popover .driver-popover-close-btn:hover {
+  background: var(--rose-50) !important;
+}
+.driver-popover-progress-text {
+  color: var(--rose-600) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+/* iOS: impede o auto-zoom da viewport ao focar inputs com font-size < 16px.
+   Sem isso, o iOS reescala o viewport ao focar qualquer campo de texto,
+   corrompendo o layout até o app ser reiniciado. */
+@supports (-webkit-touch-callout: none) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
