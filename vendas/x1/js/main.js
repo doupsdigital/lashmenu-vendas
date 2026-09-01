@@ -317,25 +317,23 @@ document.addEventListener("DOMContentLoaded", () => {
       card.className = "script-card";
       
       card.innerHTML = `
-        <div class="card-header">
-          <div class="card-title-group">
-            <span class="card-category-badge">${script.categoryName}</span>
-            <h3 class="card-title">${script.title}</h3>
-          </div>
-          <button class="copy-btn" data-id="${script.id}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            <span>Copiar Script</span>
-          </button>
+        <div class="script-card-header">
+          <span class="script-category-tag">${script.categoryName}</span>
         </div>
-        ${script.tip ? `<div class="card-tip">💡 <strong>Dica de Uso:</strong> ${script.tip}</div>` : ""}
-        <div class="card-content-box"><pre class="script-text">${escapeHtml(script.content)}</pre></div>
+        <h3 class="script-title">${script.title}</h3>
+        ${script.tip ? `<div class="script-strategy-box">💡 <strong>Dica de Uso:</strong> ${script.tip}</div>` : ""}
+        <div class="script-content-box">${escapeHtml(script.content)}</div>
+        <button class="btn-copy" data-id="${script.id}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+          <span>Copiar Script</span>
+        </button>
       `;
 
       scriptsList.appendChild(card);
     });
 
     // Attach copy click handlers
-    document.querySelectorAll(".copy-btn").forEach(btn => {
+    document.querySelectorAll(".btn-copy").forEach(btn => {
       btn.addEventListener("click", (e) => {
         const id = btn.getAttribute("data-id");
         const found = SCRIPTS_DATA.find(s => s.id === id);
