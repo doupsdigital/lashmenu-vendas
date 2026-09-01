@@ -348,6 +348,31 @@ Vim te dar uma notícia boa! Consegui liberar mais 1 vaga daquela **Condição E
 Se você quiser aproveitar essa oportunidade para deixar seu catálogo profissional no ar ainda hoje, me avisa aqui que já gero a sua chave PIX com desconto!
 
 Abraço! 💕`
+  },
+  {
+    id: "followup-autoreply",
+    category: "followup",
+    categoryName: "Follow-up / Resgate",
+    title: "3. Follow-up pós Mensagem Automática do Estúdio (Envio dos 3 Modelos ao Vivo)",
+    tip: "Ideal para quando você fez a primeira abordagem e recebeu apenas a resposta automática do WhatsApp do estúdio da Lash Designer.",
+    content: `Oii! Vi que caiu a mensagem automática do estúdio! 😊✨
+
+Imaginando que o seu dia a dia aí seja super corrido entre um procedimento e outro na maca, já quis te mandar os nossos modelos para você ver como funciona!
+
+Nós criamos catálogos digitais interativos para Lash Designers trocarem aquela tabela em imagem/PDF do Canva por um link profissional e lindo no WhatsApp e na bio.
+
+Dá uma olhadinha nesses 3 modelos ao vivo:
+
+⭐ 1. Modelo Harmonia Rosé (Nosso mais amado! 💕):
+👉 https://lashmenu.com/modelos/harmonia-rose/index.html ✨
+
+🌸 2. Modelo Clássico Rosé:
+👉 https://lashmenu.com/modelos/classico-rose/index.html ✨
+
+✨ 3. Modelo Glamour Midnight (Dark Luxo):
+👉 https://lashmenu.com/modelos/glamour-midnight/index.html ✨
+
+Qual desses estilos você acha que combina mais com a identidade do seu estúdio? 🥰`
   }
 ];
 
