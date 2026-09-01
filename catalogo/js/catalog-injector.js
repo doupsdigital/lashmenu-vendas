@@ -427,11 +427,15 @@
             cardMeta.textContent = `${svc.duration || '1h30'} · ${svc.category || 'fios selecionados'}`;
           }
 
-          // Atribui novo evento de clique para abrir o modal com o ID correto (proc_idx)
+          // Atribui novo evento de clique para abrir agendamento em tempo real (ou modal de detalhes)
           newCard.addEventListener('click', (e) => {
             e.preventDefault();
-            if (typeof abrirModal === 'function') {
-              abrirModal(`proc_${idx}`);
+            e.stopPropagation();
+
+            if (order.agendamento_ativo && window.SchedulingModal) {
+              window.SchedulingModal.openModal(order, svc, SUPABASE_URL, SUPABASE_ANON_KEY);
+            } else if (typeof window.abrirModal === 'function') {
+              window.abrirModal(`proc_${idx}`);
             }
           });
 
@@ -439,8 +443,10 @@
           newCard.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
-              if (typeof abrirModal === 'function') {
-                abrirModal(`proc_${idx}`);
+              if (order.agendamento_ativo && window.SchedulingModal) {
+                window.SchedulingModal.openModal(order, svc, SUPABASE_URL, SUPABASE_ANON_KEY);
+              } else if (typeof window.abrirModal === 'function') {
+                window.abrirModal(`proc_${idx}`);
               }
             }
           });
