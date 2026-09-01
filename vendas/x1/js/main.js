@@ -25,13 +25,25 @@ Qual desses 2 estilos combina mais com a identidade do seu estúdio? 🥰`
     id: "funnel-step-2",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
-    title: "2️⃣ Passo 2: Pedir o Instagram (Zero Esforço para a Cliente)",
-    tip: "Envie ASSIM QUE ELA RESPONDER qual modelo mais gostou (ex: 'Gostei do Glamour' ou 'Gostei do 1'). NUNCA peça pra ela digitar preços!",
+    title: "2️⃣ Passo 2: Solicitar Print/Foto da Tabela Atual (Meio Termo Prático)",
+    tip: "Envie assim que ela escolher o modelo 1 ou 2. Pede um print simples da tabela atual dela no Whats sem você precisar garimpar no Instagram.",
     content: `Fica um espetáculo no celular! 😍
 
-Para você não ter trabalho nenhum procurando fotos ou digitando listas, me passa o **@ do seu Instagram**! 
+Pra você ver como fica lindo com a sua marca, me manda aqui no Whats mesmo só um **print ou foto da sua tabela de preços atual** (e uma foto do seu estúdio)!
 
-Eu mesma pego sua foto de capa e seus procedimentos por lá e monto uma prévia demonstrativa com a sua marca pra você ver na prática! Pode ser? ✨`
+Eu formato pra você ver na prática como vai valorizar o seu trabalho! Pode ser? ✨`
+  },
+  {
+    id: "funnel-step-2-direct",
+    category: "funnel",
+    categoryName: "Funil Passo a Passo",
+    title: "2️⃣ Passo 2 (Opção B): Encaminhamento Direto para Oferta R$ 149 + Formulário 3min",
+    tip: "Use se você não quiser fazer prévia e preferir fechar a venda direto explicando que entregamos tudo pronto via formulário simples.",
+    content: `Fica perfeito no celular! 😍
+
+Nós entregamos o seu catálogo 100% pronto em até 24h! Você só preenche um formulário super rápido de 3 minutos no celular com seus preços e fotos.
+
+Estamos com a **Promoção de Lançamento por R$ 149,00 à vista no PIX** (pagamento único, sem mensalidade). Podemos garantir o seu hoje? 🥰💳`
   },
   {
     id: "funnel-step-3",
