@@ -1324,6 +1324,73 @@
       </div>
     </section>
 
+    <!-- SEÇÃO 4: CONFIGURAÇÕES DE AGENDAMENTO AUTOMÁTICO -->
+    <section class="editor-section accordion-card" id="acc-section-scheduling-config">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-info">
+          <span class="accordion-header-icon">⚡</span>
+          <div>
+            <div class="accordion-header-title">Agendamento Online em Tempo Real</div>
+            <div class="accordion-header-sub">Ative a reserva de horários direto pelo catálogo</div>
+          </div>
+        </div>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="form-grid">
+          <div class="form-group full-width" style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.03); padding: 16px; border-radius: 12px; border: 1px solid var(--border);">
+            <div>
+              <strong style="color: #fff; font-size: 1rem; display: block; margin-bottom: 4px;">Ativar Agendamento Direto no Catálogo</strong>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Quando ativado, o botão "Agendar" abre o modal de seleção de horários em tempo real em vez de apenas ir pro WhatsApp.</span>
+            </div>
+            <label class="switch-toggle" style="position: relative; display: inline-block; width: 50px; height: 26px;">
+              <input type="checkbox" id="client-agendamento-ativo">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="client-antecedencia">Antecedência mínima p/ cancelamento (Horas)</label>
+            <input type="number" id="client-antecedencia" value="24" min="1" max="72">
+          </div>
+
+          <div class="form-group full-width">
+            <label for="client-mensagem-pos">Mensagem Pós-Agendamento</label>
+            <textarea id="client-mensagem-pos" placeholder="Ex: Seu agendamento foi recebido! Em breve entraremos em contato."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: MINHA AGENDA & HORÁRIOS DE ATENDIMENTO -->
+    <section class="editor-section accordion-card" id="acc-section-agenda">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-header-info">
+          <span class="accordion-header-icon">📅</span>
+          <div>
+            <div class="accordion-header-title">Minha Agenda & Horários de Atendimento</div>
+            <div class="accordion-header-sub">Configure seus dias de trabalho, folgas e consulte reservas recebidas</div>
+          </div>
+        </div>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-content">
+        <h4 style="color: var(--primary); margin-bottom: 12px; font-size: 0.95rem;">Grade Semanal de Trabalho</h4>
+        <div id="weekly-hours-container" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;">
+          <!-- Dias da semana injetados via JS -->
+        </div>
+
+        <h4 style="color: var(--primary); margin: 24px 0 12px 0; font-size: 0.95rem; display: flex; justify-content: space-between; align-items: center;">
+          <span>Agendamentos Recebidos</span>
+          <button type="button" id="btn-refresh-agendamentos" style="background: transparent; border: 1px solid var(--border); color: var(--text-muted); padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; cursor: pointer;">🔄 Atualizar</button>
+        </h4>
+
+        <div id="agendamentos-list-container" style="max-height: 300px; overflow-y: auto; background: rgba(0,0,0,0.2); border-radius: 12px; border: 1px solid var(--border); padding: 12px;">
+          <p style="text-align: center; color: var(--text-muted); padding: 20px;">Carregando agendamentos...</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ZONA DE PERIGO (APENAS MODO ADMIN) -->
     <section class="editor-section admin-only-field" style="border-color: rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.03);">
       <div class="section-title" style="color: #ff6b6b; border-color: rgba(239, 68, 68, 0.2);">
@@ -1599,6 +1666,13 @@
         selectColor.value = order.color_id || 'midnight';
         textareaPhrase.value = order.hero_phrase || '';
 
+        const toggleAgendamento = document.getElementById('client-agendamento-ativo');
+        const inputAntecedencia = document.getElementById('client-antecedencia');
+        const textareaMensagemPos = document.getElementById('client-mensagem-pos');
+        if (toggleAgendamento) toggleAgendamento.checked = !!order.agendamento_ativo;
+        if (inputAntecedencia) inputAntecedencia.value = order.antecedencia_cancelamento_horas || 24;
+        if (textareaMensagemPos) textareaMensagemPos.value = order.mensagem_pos_agendamento || 'Seu agendamento foi recebido! Em breve entraremos em contato.';
+
         designerTitle.textContent = isClientMode ? `✨ Olá, ${order.client_name.split(' ')[0]}!` : `Editar: ${order.client_name}`;
         updateCoverPreview(order.cover_media_url, order.cover_media_type === 'video');
 
@@ -1612,6 +1686,9 @@
         
         currentServices = servicesRes.ok ? await servicesRes.json() : [];
         renderServicesList();
+
+        // 3. Carrega Horários de Atendimento e Agendamentos
+        loadWeeklyHoursAndAgendamentos(orderId);
         clearStatus();
       } catch (err) {
         showStatus('Erro ao carregar catálogo: ' + err.message, 'error');
@@ -1958,7 +2035,10 @@
           cover_media_type: coverMediaType,
           model_id: selectModel.value,
           color_id: selectColor.value,
-          hero_phrase: textareaPhrase.value.trim()
+          hero_phrase: textareaPhrase.value.trim(),
+          agendamento_ativo: document.getElementById('client-agendamento-ativo')?.checked || false,
+          antecedencia_cancelamento_horas: parseInt(document.getElementById('client-antecedencia')?.value || '24', 10),
+          mensagem_pos_agendamento: document.getElementById('client-mensagem-pos')?.value || ''
         };
 
         const orderRes = await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
@@ -2110,6 +2190,192 @@
           `;
         }
       });
+    }
+
+    async function loadWeeklyHoursAndAgendamentos(targetOrderId) {
+      const hoursContainer = document.getElementById('weekly-hours-container');
+      const agendamentosContainer = document.getElementById('agendamentos-list-container');
+      const btnRefresh = document.getElementById('btn-refresh-agendamentos');
+
+      if (!targetOrderId) return;
+
+      // 1. Carrega Horários de Atendimento da Semana
+      try {
+        const hRes = await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${targetOrderId}&order=dia_semana.asc`, {
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        });
+        const hoursData = hRes.ok ? await hRes.json() : [];
+
+        const weekNames = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+        let hoursHtml = '';
+
+        for (let i = 0; i < 7; i++) {
+          const found = hoursData.find(h => h.dia_semana === i);
+          const isChecked = !!found;
+          const startVal = found ? found.hora_inicio.substring(0, 5) : '08:00';
+          const endVal = found ? found.hora_fim.substring(0, 5) : '18:00';
+
+          hoursHtml += `
+            <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.02); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);">
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: #fff; width: 140px; cursor: pointer;">
+                <input type="checkbox" class="chk-day" data-day="${i}" ${isChecked ? 'checked' : ''}>
+                <span>${weekNames[i]}</span>
+              </label>
+              <div style="display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--text-muted);">
+                <input type="time" class="time-start" data-day="${i}" value="${startVal}" style="background: #0d0b0a; border: 1px solid var(--border); color: #fff; padding: 4px 6px; border-radius: 6px; outline: none;">
+                <span>até</span>
+                <input type="time" class="time-end" data-day="${i}" value="${endVal}" style="background: #0d0b0a; border: 1px solid var(--border); color: #fff; padding: 4px 6px; border-radius: 6px; outline: none;">
+              </div>
+            </div>
+          `;
+        }
+
+        hoursHtml += `
+          <button type="button" id="btn-save-weekly-hours" style="margin-top: 8px; background: var(--primary); color: #0d0b0a; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 700; font-size: 0.82rem; cursor: pointer; align-self: flex-start;">
+            Salvar Grade de Horários
+          </button>
+        `;
+
+        if (hoursContainer) hoursContainer.innerHTML = hoursHtml;
+
+        document.getElementById('btn-save-weekly-hours')?.addEventListener('click', async () => {
+          showStatus('Gravando grade de horários de atendimento...', 'success');
+          try {
+            await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${targetOrderId}`, {
+              method: 'DELETE',
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+            });
+
+            const newHours = [];
+            document.querySelectorAll('.chk-day').forEach(chk => {
+              if (chk.checked) {
+                const day = parseInt(chk.getAttribute('data-day'), 10);
+                const startEl = document.querySelector(`.time-start[data-day="${day}"]`);
+                const endEl = document.querySelector(`.time-end[data-day="${day}"]`);
+                newHours.push({
+                  order_id: targetOrderId,
+                  dia_semana: day,
+                  hora_inicio: startEl ? startEl.value : '08:00',
+                  hora_fim: endEl ? endEl.value : '18:00'
+                });
+              }
+            });
+
+            if (newHours.length > 0) {
+              await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento`, {
+                method: 'POST',
+                headers: {
+                  'apikey': SUPABASE_ANON_KEY,
+                  'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newHours)
+              });
+            }
+
+            showStatus('Grade de horários atualizada com sucesso! ✨', 'success');
+          } catch (err) {
+            showStatus('Erro ao salvar horários: ' + err.message, 'error');
+          }
+        });
+
+      } catch (err) {
+        if (hoursContainer) hoursContainer.innerHTML = '<p style="color: var(--danger);">Erro ao carregar horários.</p>';
+      }
+
+      // 2. Carrega Lista de Agendamentos
+      const loadAgendamentosList = async () => {
+        if (!agendamentosContainer) return;
+        agendamentosContainer.innerHTML = '<p style="text-align: center; color: var(--text-muted); padding: 16px;">Buscando reservas no banco...</p>';
+
+        try {
+          const aRes = await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?order_id=eq.${targetOrderId}&order=data_hora.desc&limit=25`, {
+            headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+          });
+
+          const agendamentos = aRes.ok ? await aRes.json() : [];
+
+          if (agendamentos.length === 0) {
+            agendamentosContainer.innerHTML = `
+              <div style="text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.88rem;">
+                Nenhum agendamento recebido até o momento.<br>
+                <small style="opacity: 0.7;">Os agendamentos das suas clientes aparecerão aqui automaticamente.</small>
+              </div>
+            `;
+            return;
+          }
+
+          let listHtml = '<div style="display: flex; flex-direction: column; gap: 8px;">';
+
+          agendamentos.forEach(a => {
+            const dt = new Date(a.data_hora);
+            const dateFormatted = `${String(dt.getDate()).padStart(2,'0')}/${String(dt.getMonth()+1).padStart(2,'0')} às ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
+            const cleanWa = (a.whatsapp_cliente || '').replace(/\D/g, '');
+
+            let badgeBg = 'rgba(234, 179, 8, 0.15)';
+            let badgeColor = '#eab308';
+            if (a.status === 'confirmado') { badgeBg = 'rgba(37, 211, 102, 0.15)'; badgeColor = '#25d366'; }
+            else if (a.status === 'concluido') { badgeBg = 'rgba(59, 130, 246, 0.15)'; badgeColor = '#3b82f6'; }
+            else if (a.status === 'cancelado' || a.status === 'falta') { badgeBg = 'rgba(239, 68, 68, 0.15)'; badgeColor = '#ef4444'; }
+
+            listHtml += `
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; border: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+                <div>
+                  <div style="font-weight: 700; color: #fff; font-size: 0.9rem;">${a.nome_cliente}</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">
+                    📅 <strong>${dateFormatted}</strong> · 📱 <a href="https://wa.me/${cleanWa}" target="_blank" style="color: var(--primary); text-decoration: none;">${a.whatsapp_cliente}</a>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; padding: 4px 8px; border-radius: 100px; background: ${badgeBg}; color: ${badgeColor};">
+                    ${a.status}
+                  </span>
+                  <select class="select-status-change" data-id="${a.id}" style="background: #0d0b0a; border: 1px solid var(--border); color: #fff; padding: 4px; border-radius: 6px; font-size: 0.78rem;">
+                    <option value="pendente" ${a.status==='pendente'?'selected':''}>Pendente</option>
+                    <option value="confirmado" ${a.status==='confirmado'?'selected':''}>Confirmado</option>
+                    <option value="concluido" ${a.status==='concluido'?'selected':''}>Concluído</option>
+                    <option value="falta" ${a.status==='falta'?'selected':''}>Falta (No-show)</option>
+                    <option value="cancelado" ${a.status==='cancelado'?'selected':''}>Cancelado</option>
+                  </select>
+                </div>
+              </div>
+            `;
+          });
+
+          listHtml += '</div>';
+          agendamentosContainer.innerHTML = listHtml;
+
+          agendamentosContainer.querySelectorAll('.select-status-change').forEach(sel => {
+            sel.addEventListener('change', async () => {
+              const bookingId = sel.getAttribute('data-id');
+              const newStatus = sel.value;
+              try {
+                await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?id=eq.${bookingId}`, {
+                  method: 'PATCH',
+                  headers: {
+                    'apikey': SUPABASE_ANON_KEY,
+                    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({ status: newStatus })
+                });
+                showStatus(`Status do agendamento alterado para "${newStatus}"! ✨`, 'success');
+              } catch (err) {
+                showStatus('Erro ao alterar status: ' + err.message, 'error');
+              }
+            });
+          });
+
+        } catch (err) {
+          agendamentosContainer.innerHTML = '<p style="color: var(--danger);">Erro ao consultar agendamentos.</p>';
+        }
+      };
+
+      await loadAgendamentosList();
+
+      if (btnRefresh) {
+        btnRefresh.addEventListener('click', loadAgendamentosList);
+      }
     }
 
     // Inicializa a página
