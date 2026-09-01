@@ -122,8 +122,12 @@
     }
   } catch(e){}
 
-  const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmZmhwdHBzYWZsbHNtY3NvaWloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyODkyMTYsImV4cCI6MjEwMjg2NTIxNn0.nwpvIwl8V6_KGIp5e5oeraAcGyt3oo8Kdam2hp6ajSQ';
+  const SUPABASE_URL = (typeof window !== 'undefined' && window.LASHMENU_SUPABASE_URL)
+    ? window.LASHMENU_SUPABASE_URL
+    : 'https://wffhptpsafllsmcsoiih.supabase.co';
+  const SUPABASE_ANON_KEY = (typeof window !== 'undefined' && window.LASHMENU_SUPABASE_ANON_KEY)
+    ? window.LASHMENU_SUPABASE_ANON_KEY
+    : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmZmhwdHBzYWZsbHNtY3NvaWloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyODkyMTYsImV4cCI6MjEwMjg2NTIxNn0.nwpvIwl8V6_KGIp5e5oeraAcGyt3oo8Kdam2hp6ajSQ';
 
   try {
     if (!order) {
@@ -189,6 +193,24 @@
     // Salva globalmente para os modais dinâmicos do catálogo
     window.LASHMENU_CLIENT_PHONE = cleanPhone;
     window.LASHMENU_DESIGNER_NAME = designerName;
+    window.LASHMENU_ORDER = order;
+    window.LASHMENU_SERVICES = services;
+
+    // Se agendamento estiver ativo para a cliente, carrega os scripts do motor de agendamento
+    if (order.agendamento_ativo) {
+      if (!document.getElementById('lm-script-sched-engine')) {
+        const s1 = document.createElement('script');
+        s1.id = 'lm-script-sched-engine';
+        s1.src = '../../catalogo/js/scheduling-engine.js?v=1.0';
+        document.head.appendChild(s1);
+      }
+      if (!document.getElementById('lm-script-sched-modal')) {
+        const s2 = document.createElement('script');
+        s2.id = 'lm-script-sched-modal';
+        s2.src = '../../catalogo/js/scheduling-modal.js?v=1.0';
+        document.head.appendChild(s2);
+      }
+    }
 
     // Título da página
     document.title = `${designerName} — Catálogo Digital Oficial`;
@@ -498,10 +520,50 @@
     }
   }
 
-  // Interceptador global de cliques para garantir número do WhatsApp cadastrado e mensagem por procedimento
+  // Interceptador global de cliques para garantir número do WhatsApp cadastrado e mensagem por procedimento (ou abrir agendamento em tempo real)
   document.addEventListener('click', function(e) {
     const link = e.target.closest('a.btn-whatsapp, a.btn-whatsapp-flutuante, a.contato__btn-whatsapp, a.detalhe-procedimento__cta, a.modal__cta, a[href*="wa.me"], a[href*="whatsapp.com"], a[href*="api.whatsapp.com"]');
     if (!link) return;
+
+    // Se o agendamento em tempo real estiver ATIVO para este catálogo
+    if (window.LASHMENU_ORDER && window.LASHMENU_ORDER.agendamento_ativo && window.SchedulingModal) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      let procName = '';
+      const modalContainer = link.closest('.detalhe-procedimento, [data-detalhe], #modal-procedimento, .modal, .modal__corpo, .detalhe-procedimento__corpo');
+      if (modalContainer) {
+        const titleEl = modalContainer.querySelector('.detalhe-procedimento__titulo, .modal__titulo, .detalhe-procedimento__nome, h2, h3');
+        if (titleEl) {
+          procName = titleEl.textContent.trim();
+        }
+      }
+
+      const services = window.LASHMENU_SERVICES || [];
+      let targetService = services.find(s => s.name && procName && s.name.toLowerCase() === procName.toLowerCase());
+
+      if (!targetService && services.length > 0) {
+        targetService = services[0];
+      }
+
+      if (!targetService) {
+        targetService = {
+          id: null,
+          name: procName || 'Procedimento Selecionado',
+          price: null,
+          duration: '1h30',
+          duracao_minutos: 90
+        };
+      }
+
+      window.SchedulingModal.openModal(
+        window.LASHMENU_ORDER,
+        targetService,
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+      );
+      return;
+    }
 
     const phone = (typeof window !== 'undefined' && window.LASHMENU_CLIENT_PHONE) ? window.LASHMENU_CLIENT_PHONE : null;
     if (!phone) return;
