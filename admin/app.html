@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>Meu Estúdio — LashMenu App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#be123c">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Supabase Config -->
+  <script src="../vendas/form/js/supabase-config.js"></script>
+
+  <style>
+    :root {
+      --primary: #be123c;
+      --primary-light: #e11d48;
+      --primary-subtle: #fff1f2;
+      --bg: #fdf2f8;
+      --card: #ffffff;
+      --border: #fbcfe8;
+      --text: #331825;
+      --text-muted: #886375;
+      --success: #16a34a;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.4;
+      padding-bottom: calc(85px + var(--safe-bottom));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HEADER SUPERIOR APP ── */
+    .app-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      box-shadow: 0 2px 10px rgba(190, 18, 60, 0.04);
+    }
+
+    .app-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .app-brand span {
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .btn-icon-top {
+      background: var(--primary-subtle);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    /* ── CONTAINER DE ABAS (VIEWS) ── */
+    .app-content {
+      flex: 1;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .tab-view {
+      display: none;
+      animation: fadeIn 0.25s ease-out forwards;
+    }
+
+    .tab-view.is-active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── BANNER HERO SAUDAÇÃO ── */
+    .hero-greeting-card {
+      background: linear-gradient(135deg, #be123c 0%, #e11d48 100%);
+      border-radius: 20px;
+      padding: 20px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px -5px rgba(190, 18, 60, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-greeting-card::after {
+      content: '✨';
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 2.2rem;
+      opacity: 0.3;
+    }
+
+    .hero-greeting-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .hero-greeting-sub {
+      font-size: 0.88rem;
+      opacity: 0.9;
+    }
+
+    /* ── BARRA DE SELEÇÃO DE DATA ── */
+    .date-navigator {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .btn-date-nav {
+      background: var(--primary-subtle);
+      border: none;
+      color: var(--primary);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .current-date-label {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+      text-transform: capitalize;
+    }
+
+    /* ── BOTOES DE AÇÃO RÁPIDA ── */
+    .quick-actions-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn-action-primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(190, 18, 60, 0.2);
+    }
+
+    .btn-action-secondary {
+      background: var(--card);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    /* ── CHIPS DE FILTRO DE STATUS ── */
+    .status-chips-container {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      scrollbar-width: none;
+    }
+    .status-chips-container::-webkit-scrollbar { display: none; }
+
+    .chip-filter {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .chip-filter.is-active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* ── LISTA DE AGENDAMENTOS (CARDS LUXO LASHAGENDA) ── */
+    .booking-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 14px rgba(190, 18, 60, 0.03);
+    }
+
+    .booking-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .client-name-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .booking-time-badge {
+      background: var(--primary-subtle);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    .booking-card-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #fce7f3;
+      padding-top: 12px;
+      margin-top: 8px;
+    }
+
+    .badge-status {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+    .badge-status.pendente { background: #fef3c7; color: #b45309; }
+    .badge-status.confirmado { background: #dcfce7; color: #15803d; }
+    .badge-status.concluido { background: #dbeafe; color: #1d4ed8; }
+    .badge-status.cancelado, .badge-status.falta { background: #fee2e2; color: #b91c1c; }
+
+    .select-status-pwa {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      outline: none;
+    }
+
+    /* ── CARDS DO CATÁLOGO & SERVIÇOS ── */
+    .section-card-pwa {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    }
+
+    .section-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .service-item-pwa {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 10px;
+      background: #ffffff;
+    }
+
+    .service-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .service-thumb {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+
+    .service-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .service-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .service-item-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-icon-action {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn-icon-edit { background: #dcfce7; color: #15803d; }
+    .btn-icon-delete { background: #fee2e2; color: #b91c1c; }
+
+    /* ── FORM INPUTS PWA ── */
+    .form-group-pwa {
+      margin-bottom: 14px;
+    }
+
+    .form-label-pwa {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .form-input-pwa, .form-select-pwa, .form-textarea-pwa {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--text);
+      outline: none;
+    }
+
+    .btn-submit-pwa {
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(190, 18, 60, 0.25);
+      margin-top: 10px;
+    }
+
+    /* ── BARRA FLUTUANTE INFERIOR (TABBAR NATIVA LASHAGENDA) ── */
+    .tabbar-pwa {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 50;
+      padding-bottom: var(--safe-bottom);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .tab-item-pwa {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      height: 100%;
+    }
+
+    .tab-item-pwa.is-active {
+      color: var(--primary);
+    }
+
+    .tab-icon {
+      font-size: 1.3rem;
+    }
+
+    /* Botão Central Flutuante — Agenda */
+    .tab-item-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -24px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(190, 18, 60, 0.4);
+      border: 4px solid #ffffff;
+      cursor: pointer;
+    }
+
+    .tab-item-center.is-active {
+      background: #be123c;
+    }
+
+    /* ── MODAIS GERAIS (BOTTOM SHEET) ── */
+    .modal-overlay-pwa {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    .modal-overlay-pwa.is-open {
+      display: flex;
+    }
+
+    .bottom-sheet-pwa {
+      background: #ffffff;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 24px 24px 0 0;
+      padding: 24px;
+      max-height: 85vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .modal-title-pwa {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="app-brand">
+      Lash<em>Menu</em>
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <a id="btn-view-live-pwa" href="#" target="_blank" class="btn-icon-top" title="Ver Catálogo Vivo">👁️</a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL (3 ABAS) -->
+  <main class="app-content">
+
+    <!-- ==================== ABA 1: AGENDA (CENTRAL - TELA INICIAL) ==================== -->
+    <div id="tab-view-agenda" class="tab-view is-active">
+
+      <!-- GREETING HERO -->
+      <div class="hero-greeting-card">
+        <div class="hero-greeting-title" id="greeting-name">Olá, Lash Designer!</div>
+        <div class="hero-greeting-sub" id="greeting-summary">Carregando seus agendamentos...</div>
+      </div>
+
+      <!-- SELETOR DE DATA -->
+      <div class="date-navigator">
+        <button type="button" class="btn-date-nav" id="btn-prev-date">‹</button>
+        <div class="current-date-label" id="current-date-text">Hoje</div>
+        <button type="button" class="btn-date-nav" id="btn-next-date">›</button>
+      </div>
+
+      <!-- AÇÕES RÁPIDAS -->
+      <div class="quick-actions-row">
+        <button type="button" class="btn-action-primary" id="btn-open-modal-novo-agendamento">
+          <span>+ Novo Agendamento</span>
+        </button>
+        <button type="button" class="btn-action-secondary" id="btn-open-modal-trancar">
+          <span>🔒 Trancar Horário</span>
+        </button>
+      </div>
+
+      <!-- FILTRO DE STATUS -->
+      <div class="status-chips-container">
+        <button type="button" class="chip-filter is-active" data-filter="todos">Todos</button>
+        <button type="button" class="chip-filter" data-filter="pendente">Pendentes</button>
+        <button type="button" class="chip-filter" data-filter="confirmado">Confirmados</button>
+        <button type="button" class="chip-filter" data-filter="concluido">Concluídos</button>
+      </div>
+
+      <!-- LISTA DE AGENDAMENTOS -->
+      <div id="pwa-agendamentos-list">
+        <p style="text-align: center; color: var(--text-muted); padding: 30px;">Buscando agendamentos no banco...</p>
+      </div>
+
+    </div>
+
+
+    <!-- ==================== ABA 2: CATÁLOGO & SERVIÇOS (ESQUERDA) ==================== -->
+    <div id="tab-view-catalogo" class="tab-view">
+
+      <!-- BLOCO 1: PERSONALIZAÇÃO DO CATÁLOGO -->
+      <div class="section-card-pwa">
+        <div class="section-card-title">
+          <span>✨ Meu Catálogo Digital</span>
+        </div>
+
+        <form id="form-pwa-branding">
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Nome do Estúdio / Lash Designer</label>
+            <input type="text" id="pwa-input-name" class="form-input-pwa" required>
+          </div>
+
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">WhatsApp (Com DDD)</label>
+            <input type="tel" id="pwa-input-whatsapp" class="form-input-pwa" required>
+          </div>
+
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Frase de Apresentação (Hero)</label>
+            <input type="text" id="pwa-input-hero" class="form-input-pwa">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-group-pwa">
+              <label class="form-label-pwa">Modelo Layout</label>
+              <select id="pwa-select-model" class="form-select-pwa">
+                <option value="glamour">Glamour</option>
+                <option value="harmonia">Harmonia</option>
+                <option value="classico">Clássico</option>
+              </select>
+            </div>
+            <div class="form-group-pwa">
+              <label class="form-label-pwa">Tema de Cores</label>
+              <select id="pwa-select-color" class="form-select-pwa">
+                <option value="midnight">Midnight (Dark)</option>
+                <option value="rose">Rosé (Light)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-pwa">Salvar Alterações do Catálogo</button>
+        </form>
+      </div>
+
+      <!-- BLOCO 2: MEUS SERVIÇOS -->
+      <div class="section-card-pwa">
+        <div class="section-card-title">
+          <span>🪄 Meus Procedimentos</span>
+          <button type="button" id="btn-open-modal-servico" style="background: var(--primary-subtle); color: var(--primary); border: none; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; cursor: pointer;">+ Adicionar</button>
+        </div>
+
+        <div id="pwa-services-list">
+          <p style="text-align: center; color: var(--text-muted); padding: 20px;">Carregando procedimentos...</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ==================== ABA 3: CONFIGURAÇÕES (DIREITA) ==================== -->
+    <div id="tab-view-config" class="tab-view">
+
+      <div class="section-card-pwa">
+        <div class="section-card-title">
+          <span>⚡ Agendamento Automático</span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; background: var(--primary-subtle); padding: 14px; border-radius: 12px; margin-bottom: 16px; border: 1px solid var(--border);">
+          <div>
+            <strong style="font-size: 0.92rem; color: var(--primary); display: block;">Ativar no Catálogo</strong>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">Clientes escolhem o horário livre e agendam pelo catálogo</span>
+          </div>
+          <input type="checkbox" id="pwa-chk-agendamento-ativo" style="width: 22px; height: 22px; accent-color: var(--primary); cursor: pointer;">
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Antecedência Mínima p/ Cancelamento (Horas)</label>
+          <input type="number" id="pwa-input-antecedencia" class="form-input-pwa" value="24" min="1" max="72">
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Mensagem Pós-Agendamento</label>
+          <textarea id="pwa-textarea-mensagem-pos" class="form-textarea-pwa" rows="3" placeholder="Seu agendamento foi recebido! Em breve entraremos em contato."></textarea>
+        </div>
+
+        <button type="button" id="btn-save-config-general" class="btn-submit-pwa">Salvar Regras de Agendamento</button>
+      </div>
+
+      <!-- GRADE SEMANAL -->
+      <div class="section-card-pwa">
+        <div class="section-card-title">
+          <span>📅 Grade Semanal de Atendimento</span>
+        </div>
+
+        <div id="pwa-weekly-hours-container" style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
+          <!-- Injetado via JS -->
+        </div>
+
+        <button type="button" id="btn-save-weekly-hours-pwa" class="btn-submit-pwa">Salvar Grade de Horários</button>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ==================== BARRA FLUTUANTE INFERIOR (TABBAR NATIVA) ==================== -->
+  <nav class="tabbar-pwa">
+    <!-- ABA ESQUERDA: CATÁLOGO & SERVIÇOS -->
+    <button type="button" class="tab-item-pwa" data-target="tab-view-catalogo">
+      <span class="tab-icon">🎨</span>
+      <span>Catálogo</span>
+    </button>
+
+    <!-- ABA CENTRAL DESTAQUE: AGENDA -->
+    <button type="button" class="tab-item-center is-active" data-target="tab-view-agenda">
+      <span style="font-size: 1.6rem;">📅</span>
+    </button>
+
+    <!-- ABA DIREITA: CONFIGURAÇÕES -->
+    <button type="button" class="tab-item-pwa" data-target="tab-view-config">
+      <span class="tab-icon">⚙️</span>
+      <span>Config</span>
+    </button>
+  </nav>
+
+
+  <!-- ==================== MODAL: NOVO AGENDAMENTO MANUAL ==================== -->
+  <div id="modal-novo-agendamento" class="modal-overlay-pwa">
+    <div class="bottom-sheet-pwa">
+      <div class="modal-title-pwa">
+        <span>+ Novo Agendamento</span>
+        <button type="button" style="background:none; border:none; font-size:1.4rem; cursor:pointer;" onclick="closeModals()">×</button>
+      </div>
+
+      <form id="form-novo-agendamento-pwa">
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Nome da Cliente</label>
+          <input type="text" id="manual-client-name" class="form-input-pwa" placeholder="Ex: Camila Silva" required>
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">WhatsApp da Cliente</label>
+          <input type="tel" id="manual-client-phone" class="form-input-pwa" placeholder="(11) 99999-9999" required>
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Procedimento</label>
+          <select id="manual-select-service" class="form-select-pwa" required></select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Data</label>
+            <input type="date" id="manual-date" class="form-input-pwa" required>
+          </div>
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Horário</label>
+            <input type="time" id="manual-time" class="form-input-pwa" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit-pwa">Confirmar Agendamento</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ==================== MODAL: ADICIONAR / EDITAR SERVIÇO ==================== -->
+  <div id="modal-servico-pwa" class="modal-overlay-pwa">
+    <div class="bottom-sheet-pwa">
+      <div class="modal-title-pwa">
+        <span id="modal-svc-title-text">+ Novo Procedimento</span>
+        <button type="button" style="background:none; border:none; font-size:1.4rem; cursor:pointer;" onclick="closeModals()">×</button>
+      </div>
+
+      <form id="form-servico-pwa">
+        <input type="hidden" id="svc-edit-id">
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Nome do Procedimento</label>
+          <input type="text" id="svc-input-name" class="form-input-pwa" placeholder="Ex: Volume Brasileiro" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Preço (R$)</label>
+            <input type="text" id="svc-input-price" class="form-input-pwa" placeholder="150,00" required>
+          </div>
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Duração (Minutos)</label>
+            <input type="number" id="svc-input-duration" class="form-input-pwa" value="90" step="15" required>
+          </div>
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">URL da Foto do Procedimento</label>
+          <input type="url" id="svc-input-photo" class="form-input-pwa" placeholder="https://...">
+        </div>
+
+        <button type="submit" class="btn-submit-pwa">Salvar Procedimento</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ==================== SCRIPT DE LÓGICA DO PWA APP ==================== -->
+  <script>
+    let currentOrderId = null;
+    let currentOrderSlug = 'estudio-demo';
+    let selectedDateISO = new Date().toISOString().substring(0, 10);
+    let allAgendamentos = [];
+    let allServices = [];
+
+    // Parse URL Params
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('slug')) currentOrderSlug = urlParams.get('slug');
+
+    // Troca de Abas no TabBar
+    document.querySelectorAll('.tab-item-pwa, .tab-item-center').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('is-active'));
+        document.querySelectorAll('.tab-item-pwa, .tab-item-center').forEach(b => b.classList.remove('is-active'));
+        
+        document.getElementById(targetId)?.classList.add('is-active');
+        btn.classList.add('is-active');
+      });
+    });
+
+    // Fechar Modais
+    function closeModals() {
+      document.querySelectorAll('.modal-overlay-pwa').forEach(m => m.classList.remove('is-open'));
+    }
+
+    // Inicialização do App PWA
+    async function initApp() {
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/orders?slug=eq.${encodeURIComponent(currentOrderSlug)}&select=*`, {
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        });
+        const orders = await res.json();
+        if (!orders || orders.length === 0) throw new Error('Catálogo não localizado.');
+        
+        const order = orders[0];
+        currentOrderId = order.id;
+
+        // Preenche Branding
+        document.getElementById('greeting-name').textContent = `Olá, ${order.client_name.split(' ')[0]}! ✨`;
+        document.getElementById('pwa-input-name').value = order.client_name || '';
+        document.getElementById('pwa-input-whatsapp').value = order.whatsapp || '';
+        document.getElementById('pwa-input-hero').value = order.hero_phrase || '';
+        document.getElementById('pwa-select-model').value = order.model_id || 'glamour';
+        document.getElementById('pwa-select-color').value = order.color_id || 'midnight';
+        document.getElementById('btn-view-live-pwa').href = `/catalogo/?slug=${order.slug}`;
+
+        // Preenche Configurações
+        document.getElementById('pwa-chk-agendamento-ativo').checked = !!order.agendamento_ativo;
+        document.getElementById('pwa-input-antecedencia').value = order.antecedencia_cancelamento_horas || 24;
+        document.getElementById('pwa-textarea-mensagem-pos').value = order.mensagem_pos_agendamento || '';
+
+        // Carrega Serviços, Horários e Agendamentos
+        await Promise.all([
+          loadServices(),
+          loadWeeklyHours(),
+          loadAgendamentos()
+        ]);
+
+      } catch (err) {
+        alert('Erro ao carregar App: ' + err.message);
+      }
+    }
+
+    // 1. Carrega Serviços
+    async function loadServices() {
+      const container = document.getElementById('pwa-services-list');
+      const selectManual = document.getElementById('manual-select-service');
+
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${currentOrderId}&order_index=gte.0&order=order_index.asc`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      });
+      allServices = res.ok ? await res.json() : [];
+
+      let html = '';
+      let optionsHtml = '';
+
+      allServices.forEach(s => {
+        const thumb = s.photo_url || 'https://via.placeholder.com/100';
+        html += `
+          <div class="service-item-pwa">
+            <div class="service-item-left">
+              <img src="${thumb}" class="service-thumb" alt="${s.name}">
+              <div>
+                <div class="service-title">${s.name}</div>
+                <div class="service-meta">R$ ${s.price} · ${s.duracao_minutos || 90} min</div>
+              </div>
+            </div>
+            <div class="service-item-actions">
+              <button type="button" class="btn-icon-action btn-icon-edit" onclick="editService('${s.id}')">✏️</button>
+            </div>
+          </div>
+        `;
+
+        optionsHtml += `<option value="${s.id}">${s.name} (R$ ${s.price})</option>`;
+      });
+
+      if (container) container.innerHTML = html || '<p style="text-align:center; color:var(--text-muted);">Nenhum serviço cadastrado.</p>';
+      if (selectManual) selectManual.innerHTML = optionsHtml;
+    }
+
+    // 2. Carrega Horários da Semana
+    async function loadWeeklyHours() {
+      const container = document.getElementById('pwa-weekly-hours-container');
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${currentOrderId}&order=dia_semana.asc`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      });
+      const hours = res.ok ? await res.json() : [];
+
+      const weekNames = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+      let html = '';
+
+      for (let i = 0; i < 7; i++) {
+        const found = hours.find(h => h.dia_semana === i);
+        const isChecked = !!found;
+        const start = found ? found.hora_inicio.substring(0, 5) : '08:00';
+        const end = found ? found.hora_fim.substring(0, 5) : '18:00';
+
+        html += `
+          <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:10px 12px; border-radius:10px; border:1px solid var(--border);">
+            <label style="display:flex; align-items:center; gap:8px; font-weight:700; font-size:0.85rem; width:120px;">
+              <input type="checkbox" class="chk-week-day" data-day="${i}" ${isChecked ? 'checked' : ''}>
+              <span>${weekNames[i]}</span>
+            </label>
+            <div style="display:flex; align-items:center; gap:6px; font-size:0.8rem;">
+              <input type="time" class="time-week-start" data-day="${i}" value="${start}" style="border:1px solid var(--border); border-radius:6px; padding:4px;">
+              <span>até</span>
+              <input type="time" class="time-week-end" data-day="${i}" value="${end}" style="border:1px solid var(--border); border-radius:6px; padding:4px;">
+            </div>
+          </div>
+        `;
+      }
+
+      if (container) container.innerHTML = html;
+    }
+
+    // 3. Carrega Agendamentos Recebidos
+    async function loadAgendamentos() {
+      const container = document.getElementById('pwa-agendamentos-list');
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?order_id=eq.${currentOrderId}&order=data_hora.desc&limit=30`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      });
+      allAgendamentos = res.ok ? await res.json() : [];
+
+      const todayAgendamentos = allAgendamentos.filter(a => a.data_hora && a.data_hora.substring(0, 10) === selectedDateISO);
+      document.getElementById('greeting-summary').textContent = `Você tem ${todayAgendamentos.length} agendamento(s) para este dia.`;
+
+      renderAgendamentosList(allAgendamentos);
+    }
+
+    function renderAgendamentosList(list) {
+      const container = document.getElementById('pwa-agendamentos-list');
+      if (!container) return;
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div style="text-align:center; padding:30px; color:var(--text-muted); font-size:0.88rem;">
+            Nenhum agendamento encontrado para este filtro.
+          </div>
+        `;
+        return;
+      }
+
+      let html = '';
+      list.forEach(a => {
+        const dt = new Date(a.data_hora);
+        const timeFormatted = `${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
+        const dateFormatted = `${String(dt.getDate()).padStart(2,'0')}/${String(dt.getMonth()+1).padStart(2,'0')}`;
+        const cleanWa = (a.whatsapp_cliente || '').replace(/\D/g, '');
+
+        html += `
+          <div class="booking-card">
+            <div class="booking-card-header">
+              <div>
+                <div class="client-name-title">${a.nome_cliente}</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">📱 <a href="https://wa.me/${cleanWa}" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">${a.whatsapp_cliente}</a></div>
+              </div>
+              <div class="booking-time-badge">📅 ${dateFormatted} às ${timeFormatted}</div>
+            </div>
+
+            <div class="booking-card-actions">
+              <span class="badge-status ${a.status}">${a.status}</span>
+              <select class="select-status-pwa" data-id="${a.id}">
+                <option value="pendente" ${a.status==='pendente'?'selected':''}>Pendente</option>
+                <option value="confirmado" ${a.status==='confirmado'?'selected':''}>Confirmado</option>
+                <option value="concluido" ${a.status==='concluido'?'selected':''}>Concluído</option>
+                <option value="falta" ${a.status==='falta'?'selected':''}>Falta (No-show)</option>
+                <option value="cancelado" ${a.status==='cancelado'?'selected':''}>Cancelado</option>
+              </select>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+
+      // Listeners de Status
+      container.querySelectorAll('.select-status-pwa').forEach(sel => {
+        sel.addEventListener('change', async () => {
+          const id = sel.getAttribute('data-id');
+          const newStatus = sel.value;
+          await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?id=eq.${id}`, {
+            method: 'PATCH',
+            headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: newStatus })
+          });
+          loadAgendamentos();
+        });
+      });
+    }
+
+    // Modal Novo Agendamento
+    document.getElementById('btn-open-modal-novo-agendamento')?.addEventListener('click', () => {
+      document.getElementById('modal-novo-agendamento').classList.add('is-open');
+    });
+
+    document.getElementById('form-novo-agendamento-pwa')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('manual-client-name').value.trim();
+      const phone = document.getElementById('manual-client-phone').value.trim();
+      const svcId = document.getElementById('manual-select-service').value;
+      const date = document.getElementById('manual-date').value;
+      const time = document.getElementById('manual-time').value;
+
+      const svc = allServices.find(s => s.id === svcId);
+
+      await fetch(`${SUPABASE_URL}/rest/v1/agendamentos`, {
+        method: 'POST',
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          order_id: currentOrderId,
+          service_id: svcId,
+          nome_cliente: name,
+          whatsapp_cliente: phone,
+          data_hora: `${date}T${time}:00`,
+          duracao_minutos: svc ? (svc.duracao_minutos || 90) : 90,
+          status: 'confirmado'
+        })
+      });
+
+      closeModals();
+      loadAgendamentos();
+      alert('Agendamento cadastrado com sucesso! ✨');
+    });
+
+    // Salvar Branding
+    document.getElementById('form-pwa-branding')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
+        method: 'PATCH',
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          client_name: document.getElementById('pwa-input-name').value.trim(),
+          whatsapp: document.getElementById('pwa-input-whatsapp').value.trim(),
+          hero_phrase: document.getElementById('pwa-input-hero').value.trim(),
+          model_id: document.getElementById('pwa-select-model').value,
+          color_id: document.getElementById('pwa-select-color').value
+        })
+      });
+      alert('Informações do catálogo salvas! ✨');
+    });
+
+    // Salvar Configurações Gerais
+    document.getElementById('btn-save-config-general')?.addEventListener('click', async () => {
+      await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
+        method: 'PATCH',
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          agendamento_ativo: document.getElementById('pwa-chk-agendamento-ativo').checked,
+          antecedencia_cancelamento_horas: parseInt(document.getElementById('pwa-input-antecedencia').value, 10),
+          mensagem_pos_agendamento: document.getElementById('pwa-textarea-mensagem-pos').value.trim()
+        })
+      });
+      alert('Regras de agendamento salvas com sucesso! ✨');
+    });
+
+    // Salvar Grade Semanal
+    document.getElementById('btn-save-weekly-hours-pwa')?.addEventListener('click', async () => {
+      await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${currentOrderId}`, {
+        method: 'DELETE',
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      });
+
+      const newHours = [];
+      document.querySelectorAll('.chk-week-day').forEach(chk => {
+        if (chk.checked) {
+          const day = parseInt(chk.getAttribute('data-day'), 10);
+          const startEl = document.querySelector(`.time-week-start[data-day="${day}"]`);
+          const endEl = document.querySelector(`.time-week-end[data-day="${day}"]`);
+          newHours.push({
+            order_id: currentOrderId,
+            dia_semana: day,
+            hora_inicio: startEl ? startEl.value : '08:00',
+            hora_fim: endEl ? endEl.value : '18:00'
+          });
+        }
+      });
+
+      if (newHours.length > 0) {
+        await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento`, {
+          method: 'POST',
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify(newHours)
+        });
+      }
+
+      alert('Grade de horários semanal atualizada! ✨');
+    });
+
+    // Inicializa
+    initApp();
+  </script>
+</body>
+
+</html>
