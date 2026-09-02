@@ -614,6 +614,111 @@
       cursor: pointer;
       user-select: none;
     }
+
+    /* ── MODAL DE SUCESSO ELEGANTE ── */
+    .success-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .success-modal-card {
+      background: #ffffff;
+      border: 1px solid #d4c4b7;
+      border-radius: 24px;
+      padding: 32px 28px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      animation: modalPopUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalPopUp {
+      from { opacity: 0; transform: scale(0.92) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .success-icon-badge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #fdf5f7;
+      border: 1.5px solid #e5b8c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 0 20px rgba(192, 75, 107, 0.15);
+    }
+    .success-icon-badge svg {
+      stroke: #c04b6b;
+    }
+    .success-modal-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.9rem;
+      color: #16110e;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .success-modal-text {
+      color: #5c4e46;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .success-modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-modal-view {
+      background: linear-gradient(135deg, #c04b6b, #a33753);
+      color: #ffffff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 6px 20px rgba(192, 75, 107, 0.3);
+    }
+    .btn-modal-view:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(192, 75, 107, 0.4);
+    }
+    .btn-modal-close {
+      background: transparent;
+      border: 1px solid #d4c4b7;
+      color: #5c4e46;
+      padding: 12px 20px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-modal-close:hover {
+      background: #f5ede6;
+      color: #16110e;
+    }
   </style>
 </head>
 
@@ -864,6 +969,31 @@
     </button>
   </div>
 
+  <!-- MODAL DE SUCESSO ELEGANTE -->
+  <div class="success-modal-overlay" id="v2-success-modal" style="display: none;">
+    <div class="success-modal-card">
+      <div class="success-icon-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c04b6b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h2 class="success-modal-title">Alterações Salvas! ✨</h2>
+      <p class="success-modal-text" id="v2-success-modal-desc">
+        Seu catálogo digital foi atualizado com sucesso e as alterações já estão ativas no seu site oficial.
+      </p>
+      <div class="success-modal-actions">
+        <a href="#" target="_blank" id="v2-btn-view-live-catalog" class="btn-modal-view">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>Ver Catálogo Atualizado</span>
+        </a>
+        <button type="button" class="btn-modal-close" onclick="closeV2SuccessModal()">
+          <span>Continuar Editando</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Supabase Config & SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../vendas/form/js/supabase-config.js?v=4.0"></script>
@@ -912,6 +1042,7 @@
 
         const order = orders[0];
         orderId = order.id;
+        window.currentOrderSlug = order.slug;
 
         const isAdminAuth = sessionStorage.getItem('lash_admin_auth') === 'true';
         const isClientMode = Boolean(clientToken || (clientSlug && !isAdminAuth));
@@ -1253,10 +1384,23 @@
           }
         }
 
-        alert('✅ Sucesso! Todas as alterações do V2 foram salvas no Supabase!');
+        openV2SuccessModal(clientSlug || (window.currentOrderSlug));
       } catch (err) {
         alert('Erro ao salvar no Supabase: ' + err.message);
       }
+    }
+
+    function openV2SuccessModal(slug) {
+      const liveUrl = slug ? `https://${slug}.lashmenu.com` : '#';
+      const btnLive = document.getElementById('v2-btn-view-live-catalog');
+      if (btnLive) btnLive.href = liveUrl;
+      const modal = document.getElementById('v2-success-modal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeV2SuccessModal() {
+      const modal = document.getElementById('v2-success-modal');
+      if (modal) modal.style.display = 'none';
     }
 
     function toggleV2Accordion(cardId) {
