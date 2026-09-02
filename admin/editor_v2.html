@@ -941,24 +941,6 @@
             <input type="text" id="v2-client-phrase" class="v2-input" placeholder="Ex: ✨ Seu olhar, minha Arte!">
           </div>
 
-          <div class="v2-form-row">
-            <div class="v2-form-group">
-              <label class="v2-label">Modelo de Catálogo</label>
-              <select id="v2-select-model" class="v2-select">
-                <option value="glamour">Glamour (Destaque Visual)</option>
-                <option value="harmonia">Harmonia (Cards Elegantes)</option>
-                <option value="classico">Clássico (Lista Clean)</option>
-              </select>
-            </div>
-            <div class="v2-form-group">
-              <label class="v2-label">Tema de Cores</label>
-              <select id="v2-select-color" class="v2-select">
-                <option value="rose">Rosé Nude Soft</option>
-                <option value="midnight">Midnight Dark Premium</option>
-              </select>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -1154,8 +1136,8 @@
         document.getElementById('v2-client-instagram').value = order.instagram || '';
         document.getElementById('v2-client-location').value = order.location || '';
         document.getElementById('v2-client-phrase').value = order.hero_phrase || '';
-        document.getElementById('v2-select-model').value = order.model_id || 'glamour';
-        document.getElementById('v2-select-color').value = order.color_id || 'rose';
+        if (document.getElementById('v2-select-model')) document.getElementById('v2-select-model').value = order.model_id || 'glamour';
+        if (document.getElementById('v2-select-color')) document.getElementById('v2-select-color').value = order.color_id || 'rose';
 
         const coverUrl = order.cover_media_url || '';
         document.getElementById('v2-client-cover-url').value = coverUrl;
@@ -1509,10 +1491,15 @@
           instagram: document.getElementById('v2-client-instagram').value.trim(),
           location: document.getElementById('v2-client-location').value.trim(),
           hero_phrase: document.getElementById('v2-client-phrase').value.trim(),
-          model_id: document.getElementById('v2-select-model').value,
-          color_id: document.getElementById('v2-select-color').value,
           cover_media_url: document.getElementById('v2-client-cover-url').value.trim()
         };
+
+        if (document.getElementById('v2-select-model')) {
+          orderPayload.model_id = document.getElementById('v2-select-model').value;
+        }
+        if (document.getElementById('v2-select-color')) {
+          orderPayload.color_id = document.getElementById('v2-select-color').value;
+        }
 
         if (orderId) {
           await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
