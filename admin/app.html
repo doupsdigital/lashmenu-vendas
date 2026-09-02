@@ -301,18 +301,32 @@
     }
 
     .app-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.65rem;
       font-weight: 700;
-      color: var(--primary);
+      color: #16110e;
+      letter-spacing: 0.01em;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 2px;
+      user-select: none;
     }
 
-    .app-brand span {
+    .app-brand em {
       font-style: italic;
-      color: var(--text);
+      color: #be123c;
+    }
+
+    .app-brand-plus {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 900;
+      font-size: 1.55rem;
+      margin-left: 2px;
+      line-height: 1;
+      background: linear-gradient(135deg, #be123c 0%, #fb7185 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(190, 18, 60, 0.45));
     }
 
     .btn-icon-top {
@@ -869,7 +883,7 @@
   <!-- HEADER -->
   <header class="app-header">
     <div class="app-brand">
-      Lash<em>Menu</em>
+      Lash<em>Menu</em><span class="app-brand-plus">+</span>
     </div>
     <div style="display: flex; gap: 8px;">
       <a id="btn-view-live-pwa" href="#" target="_blank" class="btn-icon-top" title="Ver Catálogo Vivo">👁️</a>
