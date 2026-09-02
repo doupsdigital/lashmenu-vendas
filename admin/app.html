@@ -14,8 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Supabase Config -->
+  <!-- Supabase Config & Image Compressor -->
   <script src="../vendas/form/js/supabase-config.js"></script>
+  <script src="../vendas/form/js/image-compressor.js?v=1.0"></script>
 
   <style>
     :root {
@@ -711,29 +712,29 @@
     </div>
 
 
-    <!-- ==================== ABA 2: CATÁLOGO & SERVIÇOS (ESQUERDA) ==================== -->
+    <!-- ==================== ABA 2: CATÁLOGO & SERVIÇOS (ESTRUTURA DO EDITOR.HTML) ==================== -->
     <div id="tab-view-catalogo" class="tab-view">
 
-      <!-- BLOCO 1: PERSONALIZAÇÃO DO CATÁLOGO -->
+      <!-- BLOCO 1: PERSONALIZAÇÃO & DADOS DO CATÁLOGO -->
       <div class="section-card-pwa">
         <div class="section-card-title">
-          <span>✨ Meu Catálogo Digital</span>
+          <span>👤 Meus Dados & Apresentação</span>
         </div>
 
         <form id="form-pwa-branding">
           <div class="form-group-pwa">
             <label class="form-label-pwa">Nome do Estúdio / Lash Designer</label>
-            <input type="text" id="pwa-input-name" class="form-input-pwa" required>
+            <input type="text" id="pwa-input-name" class="form-input-pwa" placeholder="Ex: Mariana Alves Lash" required>
           </div>
 
           <div class="form-group-pwa">
             <label class="form-label-pwa">WhatsApp (Com DDD)</label>
-            <input type="tel" id="pwa-input-whatsapp" class="form-input-pwa" required>
+            <input type="tel" id="pwa-input-whatsapp" class="form-input-pwa" placeholder="Ex: 62982244466" required>
           </div>
 
           <div class="form-group-pwa">
             <label class="form-label-pwa">Frase de Apresentação (Hero)</label>
-            <input type="text" id="pwa-input-hero" class="form-input-pwa">
+            <input type="text" id="pwa-input-hero" class="form-input-pwa" placeholder="Ex: Olhar sofisticado e marcante no seu dia a dia.">
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
@@ -754,17 +755,41 @@
             </div>
           </div>
 
-          <button type="submit" class="btn-submit-pwa">Salvar Alterações do Catálogo</button>
+          <!-- MÍDIA DE CAPA (FOTO OU VÍDEO) -->
+          <div class="form-group-pwa" style="margin-top: 10px;">
+            <label class="form-label-pwa">Foto ou Vídeo da Capa</label>
+            <div style="display: flex; gap: 12px; align-items: center; background: var(--bg); padding: 10px; border-radius: 12px; border: 1px solid var(--border);">
+              <div id="pwa-cover-preview-box" style="width: 54px; height: 54px; border-radius: 10px; background: #fff; border: 1px dashed var(--border); overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <img id="pwa-cover-preview-img" src="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+                <span id="pwa-cover-placeholder" style="font-size: 0.65rem; color: var(--text-muted); text-align: center;">Sem Mídia</span>
+              </div>
+              <div style="flex: 1;">
+                <label style="background: var(--primary-subtle); color: var(--primary); border: 1px dashed var(--border); padding: 8px 12px; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; display: inline-block;">
+                  <span>Escolher Foto/Vídeo</span>
+                  <input type="file" id="pwa-cover-file-input" accept="image/*,video/*" style="display: none;">
+                </label>
+                <input type="url" id="pwa-input-cover-url" class="form-input-pwa" placeholder="Ou URL da mídia..." style="margin-top: 6px; font-size: 0.78rem;">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-pwa">Salvar Dados do Estúdio</button>
         </form>
       </div>
 
-      <!-- BLOCO 2: MEUS SERVIÇOS -->
+      <!-- BLOCO 2: MEUS PROCEDIMENTOS & TABELA DE PREÇOS (DESIGN EDITOR.HTML) -->
       <div class="section-card-pwa">
         <div class="section-card-title">
-          <span>🪄 Meus Procedimentos</span>
+          <span>✨ Meus Procedimentos</span>
           <button type="button" id="btn-open-modal-servico" style="background: var(--primary-subtle); color: var(--primary); border: none; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; cursor: pointer;">+ Adicionar</button>
         </div>
 
+        <!-- BUSCA -->
+        <div class="form-group-pwa">
+          <input type="text" id="pwa-search-services" class="form-input-pwa" placeholder="🔍 Buscar procedimento por nome..." oninput="filterPwaServices(this.value)">
+        </div>
+
+        <!-- LISTA DE PROCEDIMENTOS -->
         <div id="pwa-services-list">
           <p style="text-align: center; color: var(--text-muted); padding: 20px;">Carregando procedimentos...</p>
         </div>
@@ -912,7 +937,72 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-submit-pwa">Salvar Bloqueio</button>
+  <!-- ==================== MODAL: ADICIONAR / EDITAR SERVIÇO (COMPLETO) ==================== -->
+  <div id="modal-servico-pwa" class="modal-overlay-pwa">
+    <div class="bottom-sheet-pwa">
+      <div class="modal-title-pwa">
+        <span id="modal-svc-title-text">+ Novo Procedimento</span>
+        <button type="button" style="background:none; border:none; font-size:1.4rem; cursor:pointer;" onclick="closeModals()">×</button>
+      </div>
+
+      <form id="form-servico-pwa">
+        <input type="hidden" id="svc-edit-id">
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Nome do Procedimento *</label>
+          <input type="text" id="svc-input-name" class="form-input-pwa" placeholder="Ex: Volume Russo, Efeito Boneca..." required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Preço (R$) *</label>
+            <input type="text" id="svc-input-price" class="form-input-pwa" placeholder="Ex: 150,00" required>
+          </div>
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Duração (Minutos) *</label>
+            <input type="number" id="svc-input-duration" class="form-input-pwa" value="90" step="15" required>
+          </div>
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Categoria (Subtítulo)</label>
+          <input type="text" id="svc-input-category" class="form-input-pwa" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Efeito Visual</label>
+            <input type="text" id="svc-input-effect" class="form-input-pwa" placeholder="Ex: Marcante e Alongado">
+          </div>
+          <div class="form-group-pwa">
+            <label class="form-label-pwa">Manutenção (R$)</label>
+            <input type="text" id="svc-input-maintenance" class="form-input-pwa" placeholder="Ex: 80,00">
+          </div>
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Foto do Procedimento</label>
+          <div style="display: flex; gap: 10px; align-items: center; background: var(--bg); padding: 8px; border-radius: 10px; border: 1px solid var(--border);">
+            <div style="width: 46px; height: 46px; border-radius: 8px; background: #fff; border: 1px dashed var(--border); overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <img id="svc-preview-img" src="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+              <span id="svc-preview-placeholder" style="font-size: 0.65rem; color: var(--text-muted);">Sem Foto</span>
+            </div>
+            <div style="flex: 1;">
+              <label style="background: var(--primary-subtle); color: var(--primary); border: 1px dashed var(--border); padding: 6px 10px; border-radius: 6px; font-weight: 700; font-size: 0.75rem; cursor: pointer; display: inline-block;">
+                <span>Escolher Foto</span>
+                <input type="file" id="svc-file-input" accept="image/*" style="display: none;">
+              </label>
+              <input type="url" id="svc-input-photo-url" class="form-input-pwa" placeholder="Ou URL da foto..." style="margin-top: 4px; font-size: 0.75rem;">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Descrição Detalhada</label>
+          <textarea id="svc-input-desc" class="form-textarea-pwa" rows="2" placeholder="Aplicação minuciosa com fios de alta qualidade..."></textarea>
+        </div>
+
+        <button type="submit" id="btn-submit-svc-form" class="btn-submit-pwa">Salvar Procedimento</button>
       </form>
     </div>
   </div>
@@ -1032,6 +1122,18 @@
         document.getElementById('pwa-select-color').value = order.color_id || 'midnight';
         document.getElementById('btn-view-live-pwa').href = `/catalogo/?slug=${order.slug}`;
 
+        const coverMedia = order.cover_media_url || order.cover_url || '';
+        if (coverMedia) {
+          document.getElementById('pwa-input-cover-url').value = coverMedia;
+          const coverImg = document.getElementById('pwa-cover-preview-img');
+          const coverPlaceholder = document.getElementById('pwa-cover-placeholder');
+          if (coverImg) {
+            coverImg.src = coverMedia;
+            coverImg.style.display = 'block';
+          }
+          if (coverPlaceholder) coverPlaceholder.style.display = 'none';
+        }
+
         // Configurações
         document.getElementById('pwa-chk-agendamento-ativo').checked = !!order.agendamento_ativo;
         document.getElementById('pwa-input-antecedencia').value = order.antecedencia_cancelamento_horas || 24;
@@ -1055,7 +1157,6 @@
 
     // 1. Carrega Serviços
     async function loadServices() {
-      const container = document.getElementById('pwa-services-list');
       const selectManual = document.getElementById('manual-select-service');
 
       const res = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${currentOrderId}&order_index=gte.0&order=order_index.asc`, {
@@ -1063,28 +1164,265 @@
       });
       allServices = res.ok ? await res.json() : [];
 
-      let html = '';
-      let optionsHtml = '';
+      renderServicesList(allServices);
 
-      allServices.forEach(s => {
-        const thumb = s.photo_url || 'https://via.placeholder.com/100';
+      if (selectManual) {
+        selectManual.innerHTML = allServices.map(s => `<option value="${s.id}">${s.name} (R$ ${s.price})</option>`).join('');
+      }
+    }
+
+    // Renderiza a lista de procedimentos no estilo LashAgenda / editor.html
+    function renderServicesList(servicesToRender) {
+      const container = document.getElementById('pwa-services-list');
+      if (!container) return;
+
+      if (!servicesToRender || servicesToRender.length === 0) {
+        container.innerHTML = '<p style="text-align:center; color:var(--text-muted); padding:20px; font-size:0.85rem;">Nenhum procedimento cadastrado.</p>';
+        return;
+      }
+
+      let html = '';
+      servicesToRender.forEach(s => {
+        const thumb = s.photo_url || '';
+        const dur = s.duracao_minutos || 90;
+        const catLabel = s.category ? `<span style="background:var(--primary-subtle); color:var(--primary); font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:100px; margin-left:6px;">${s.category}</span>` : '';
+
         html += `
-          <div class="service-item-pwa">
-            <div class="service-item-left">
-              <img src="${thumb}" class="service-thumb" alt="${s.name}">
-              <div>
-                <div class="service-title">${s.name}</div>
-                <div class="service-meta">R$ ${s.price} · ${s.duracao_minutos || 90} min</div>
+          <div class="service-item-pwa" style="display:flex; align-items:center; justify-content:space-between; padding:12px; border-bottom:1px solid var(--border); background:#fff; border-radius:12px; margin-bottom:8px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
+            <div style="display:flex; align-items:center; gap:12px; flex:1; min-width:0;">
+              ${thumb 
+                ? `<img src="${thumb}" style="width:44px; height:44px; border-radius:10px; object-fit:cover; border:1px solid var(--border); flex-shrink:0;">` 
+                : `<div style="width:44px; height:44px; border-radius:10px; background:var(--primary-subtle); border:1px dashed var(--border); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">✨</div>`
+              }
+              <div style="min-width:0; flex:1;">
+                <div style="font-weight:700; font-size:0.92rem; color:#16110e; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                  ${s.name} ${catLabel}
+                </div>
+                <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
+                  R$ ${s.price} · ${dur} min
+                </div>
               </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:6px; flex-shrink:0; margin-left:8px;">
+              <button type="button" class="btn-edit-svc-item" data-id="${s.id}" title="Editar Procedimento" style="width:34px; height:34px; border-radius:8px; background:#dcfce7; color:#15803d; border:1px solid #86efac; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.9rem;">✏️</button>
+              <button type="button" class="btn-delete-svc-item" data-id="${s.id}" title="Excluir Procedimento" style="width:34px; height:34px; border-radius:8px; background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.9rem;">🗑️</button>
             </div>
           </div>
         `;
-        optionsHtml += `<option value="${s.id}">${s.name} (R$ ${s.price})</option>`;
       });
 
-      if (container) container.innerHTML = html || '<p style="text-align:center; color:var(--text-muted);">Nenhum serviço cadastrado.</p>';
-      if (selectManual) selectManual.innerHTML = optionsHtml;
+      container.innerHTML = html;
+
+      // Listeners nos botões de editar e excluir
+      container.querySelectorAll('.btn-edit-svc-item').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openEditServiceModal(btn.getAttribute('data-id'));
+        });
+      });
+
+      container.querySelectorAll('.btn-delete-svc-item').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          deleteService(btn.getAttribute('data-id'));
+        });
+      });
     }
+
+    // Filtra serviços em tempo real
+    window.filterPwaServices = function(query) {
+      if (!query || !query.trim()) {
+        renderServicesList(allServices);
+        return;
+      }
+      const q = query.toLowerCase().trim();
+      const filtered = allServices.filter(s => 
+        (s.name && s.name.toLowerCase().includes(q)) || 
+        (s.category && s.category.toLowerCase().includes(q))
+      );
+      renderServicesList(filtered);
+    };
+
+    // Abre Modal para NOVO Serviço
+    function openNewServiceModal() {
+      document.getElementById('svc-edit-id').value = '';
+      document.getElementById('svc-input-name').value = '';
+      document.getElementById('svc-input-price').value = '';
+      document.getElementById('svc-input-duration').value = '90';
+      document.getElementById('svc-input-category').value = '';
+      document.getElementById('svc-input-effect').value = '';
+      document.getElementById('svc-input-maintenance').value = '';
+      document.getElementById('svc-input-photo-url').value = '';
+      document.getElementById('svc-input-desc').value = '';
+      document.getElementById('svc-preview-img').style.display = 'none';
+      document.getElementById('svc-preview-placeholder').style.display = 'block';
+      document.getElementById('modal-svc-title-text').textContent = '+ Novo Procedimento';
+      document.getElementById('modal-servico-pwa').classList.add('is-open');
+    }
+
+    // Abre Modal para EDITAR Serviço
+    function openEditServiceModal(id) {
+      const svc = allServices.find(s => s.id === id);
+      if (!svc) return;
+
+      document.getElementById('svc-edit-id').value = svc.id;
+      document.getElementById('svc-input-name').value = svc.name || '';
+      document.getElementById('svc-input-price').value = svc.price || '';
+      document.getElementById('svc-input-duration').value = svc.duracao_minutos || 90;
+      document.getElementById('svc-input-category').value = svc.category || '';
+      document.getElementById('svc-input-effect').value = svc.effect || '';
+      document.getElementById('svc-input-maintenance').value = svc.maintenance_price || '';
+      document.getElementById('svc-input-photo-url').value = svc.photo_url || '';
+      document.getElementById('svc-input-desc').value = svc.description || '';
+
+      const previewImg = document.getElementById('svc-preview-img');
+      const placeholder = document.getElementById('svc-preview-placeholder');
+      if (svc.photo_url) {
+        previewImg.src = svc.photo_url;
+        previewImg.style.display = 'block';
+        placeholder.style.display = 'none';
+      } else {
+        previewImg.style.display = 'none';
+        placeholder.style.display = 'block';
+      }
+
+      document.getElementById('modal-svc-title-text').textContent = '✏️ Editar Procedimento';
+      document.getElementById('modal-servico-pwa').classList.add('is-open');
+    }
+
+    // Excluir Serviço
+    async function deleteService(id) {
+      const svc = allServices.find(s => s.id === id);
+      const name = svc ? svc.name : 'este procedimento';
+      if (!confirm(`Tem certeza que deseja excluir "${name}"?`)) return;
+
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${id}`, {
+          method: 'DELETE',
+          headers: adminHeaders
+        });
+        if (!res.ok) throw new Error('Erro ao excluir serviço.');
+        await loadServices();
+        alert('Procedimento removido com sucesso! ✨');
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao excluir: ' + err.message);
+      }
+    }
+
+    // Listener do Botão "+ Adicionar" Procedimento
+    document.getElementById('btn-open-modal-servico')?.addEventListener('click', () => {
+      openNewServiceModal();
+    });
+
+    // Form Submissão de Procedimento (Criar ou Editar)
+    document.getElementById('form-servico-pwa')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const editId = document.getElementById('svc-edit-id').value;
+      const name = document.getElementById('svc-input-name').value.trim();
+      const price = document.getElementById('svc-input-price').value.trim();
+      const duration = parseInt(document.getElementById('svc-input-duration').value, 10) || 90;
+      const category = document.getElementById('svc-input-category').value.trim();
+      const effect = document.getElementById('svc-input-effect').value.trim();
+      const maintenance = document.getElementById('svc-input-maintenance').value.trim();
+      const photoUrl = document.getElementById('svc-input-photo-url').value.trim();
+      const desc = document.getElementById('svc-input-desc').value.trim();
+
+      const payload = {
+        order_id: currentOrderId,
+        name,
+        price,
+        duracao_minutos: duration,
+        category,
+        effect,
+        maintenance_price: maintenance,
+        photo_url: photoUrl,
+        description: desc
+      };
+
+      try {
+        if (editId) {
+          // Atualiza existente
+          const res = await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${editId}`, {
+            method: 'PATCH',
+            headers: adminHeaders,
+            body: JSON.stringify(payload)
+          });
+          if (!res.ok) throw new Error('Erro ao atualizar procedimento.');
+        } else {
+          // Cria novo
+          payload.order_index = allServices.length;
+          const res = await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
+            method: 'POST',
+            headers: adminHeaders,
+            body: JSON.stringify(payload)
+          });
+          if (!res.ok) throw new Error('Erro ao cadastrar novo procedimento.');
+        }
+
+        closeModals();
+        await loadServices();
+        alert('Procedimento salvo com sucesso! ✨');
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao salvar procedimento: ' + err.message);
+      }
+    });
+
+    // Upload de Foto do Serviço no Modal
+    document.getElementById('svc-file-input')?.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      try {
+        let uploadBlob = file;
+        if (typeof window.compressImage === 'function' && file.type.startsWith('image/')) {
+          uploadBlob = await window.compressImage(file, 0.8, 1200);
+        }
+
+        const path = `services/svc_${Date.now()}_${Math.random().toString(36).substring(2, 6)}.jpg`;
+        const pubUrl = await window.lashSupabase.uploadFile('catalogo-midias', path, uploadBlob);
+
+        if (pubUrl) {
+          document.getElementById('svc-input-photo-url').value = pubUrl;
+          const previewImg = document.getElementById('svc-preview-img');
+          previewImg.src = pubUrl;
+          previewImg.style.display = 'block';
+          document.getElementById('svc-preview-placeholder').style.display = 'none';
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao enviar imagem: ' + err.message);
+      }
+    });
+
+    // Upload de Mídia de Capa do Estúdio
+    document.getElementById('pwa-cover-file-input')?.addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      try {
+        let uploadBlob = file;
+        if (typeof window.compressImage === 'function' && file.type.startsWith('image/')) {
+          uploadBlob = await window.compressImage(file, 0.85, 1600);
+        }
+
+        const ext = file.name.split('.').pop() || 'jpg';
+        const path = `covers/cover_${Date.now()}_${Math.random().toString(36).substring(2, 6)}.${ext}`;
+        const pubUrl = await window.lashSupabase.uploadFile('catalogo-midias', path, uploadBlob);
+
+        if (pubUrl) {
+          document.getElementById('pwa-input-cover-url').value = pubUrl;
+          const img = document.getElementById('pwa-cover-preview-img');
+          img.src = pubUrl;
+          img.style.display = 'block';
+          document.getElementById('pwa-cover-placeholder').style.display = 'none';
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao enviar capa: ' + err.message);
+      }
+    });
 
     // 2. Carrega Horários Semanais
     async function loadWeeklyHours() {
@@ -1356,7 +1694,8 @@
           whatsapp: document.getElementById('pwa-input-whatsapp').value.trim(),
           hero_phrase: document.getElementById('pwa-input-hero').value.trim(),
           model_id: document.getElementById('pwa-select-model').value,
-          color_id: document.getElementById('pwa-select-color').value
+          color_id: document.getElementById('pwa-select-color').value,
+          cover_media_url: document.getElementById('pwa-input-cover-url').value.trim()
         })
       });
       alert('Alterações salvas no catálogo! ✨');
