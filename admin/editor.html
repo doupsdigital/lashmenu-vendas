@@ -8,16 +8,16 @@
   <script>
     (function() {
       var p = new URLSearchParams(window.location.search);
-      var isClient = p.has('token') || p.has('key') || p.has('k') || window.location.pathname.indexOf('/editar') !== -1;
+      var isClient = p.has('token') || p.has('key') || p.has('k') || window.location.pathname.indexOf('/editar') !== -1 || p.has('id');
       if (!isClient) {
         var h = window.location.hostname.split('.');
         if (h.length >= 3 && h[0] !== 'www' && h[0] !== 'lashmenu-vendas' && h[0].indexOf('localhost') === -1 && h[0].indexOf('vercel') === -1) {
           isClient = true;
         }
       }
-      var cls = ' theme-client-rose';
-      if (isClient) cls += ' is-client-mode';
-      document.documentElement.className += cls;
+      if (isClient) {
+        document.documentElement.className += ' theme-client-rose is-client-mode';
+      }
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1574,11 +1574,8 @@
             return;
           }
 
-        // Ativa o Tema Light Rosé oficial para máxima clareza visual
-        document.body.classList.add('theme-client-rose');
-
-        if (isClientMode) {
-          document.body.classList.add('is-client-mode');
+          // Ativa o Tema Light Rosé e oculta itens administrativos
+          document.body.classList.add('theme-client-rose', 'is-client-mode');
           document.title = `✨ Editar Meu Catálogo — ${order.client_name}`;
 
           const backBtn = document.getElementById('btn-admin-back');
