@@ -249,7 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function open(id) {
     openId = id;
-    const item = PROCEDIMENTOS.find((p) => p.id === id);
+    const list = (window.PROCEDIMENTOS && window.PROCEDIMENTOS.length > 0) ? window.PROCEDIMENTOS : PROCEDIMENTOS;
+    const item = list.find((p) => p.id === id || p.id === `proc_${id}` || p.id === id.toString().replace('proc_', ''));
     if (!item) return;
     render(item);
     modal.hidden = false;
@@ -272,8 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function next() {
-    const idx = PROCEDIMENTOS.findIndex((p) => p.id === openId);
-    const nextItem = PROCEDIMENTOS[(idx + 1) % PROCEDIMENTOS.length];
+    const list = (window.PROCEDIMENTOS && window.PROCEDIMENTOS.length > 0) ? window.PROCEDIMENTOS : PROCEDIMENTOS;
+    const idx = list.findIndex((p) => p.id === openId);
+    if (idx === -1) return;
+    const nextItem = list[(idx + 1) % list.length];
     openId = nextItem.id;
     if (reduceMotion || typeof gsap === 'undefined') { render(nextItem); return; }
     gsap.to(sheet, {

@@ -402,21 +402,22 @@
             cardMeta.textContent = `${svc.duration || '1h30'} · ${svc.category || 'fios selecionados'}`;
           }
 
-          // Atribui novo evento de clique para abrir o modal com o ID correto (proc_idx)
-          newCard.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (typeof abrirModal === 'function') {
+          // Atribui manipulador universal de clique e toque para abrir o modal com o procedimento correto
+          const openProcModal = (e) => {
+            if (e && e.cancelable) e.preventDefault();
+            if (typeof window.abrirModal === 'function') {
+              window.abrirModal(`proc_${idx}`);
+            } else if (typeof abrirModal === 'function') {
               abrirModal(`proc_${idx}`);
             }
-          });
+          };
 
-          // Suporte a navegação por teclado
+          newCard.style.cursor = 'pointer';
+          newCard.onclick = openProcModal;
+          newCard.addEventListener('click', openProcModal);
           newCard.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              if (typeof abrirModal === 'function') {
-                abrirModal(`proc_${idx}`);
-              }
+              openProcModal(e);
             }
           });
         });

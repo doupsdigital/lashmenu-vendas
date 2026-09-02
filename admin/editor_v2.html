@@ -1374,26 +1374,31 @@
     }
 
     function updateV2Preview() {
-      const name = document.getElementById('v2-svc-name').value.trim() || 'Nome do Serviço';
-      const price = document.getElementById('v2-svc-price').value.trim() || '100,00';
-      const dur = document.getElementById('v2-svc-duration').value.trim() || '60 min';
-      const photo = document.getElementById('v2-svc-photo').value.trim();
+      const elTitle1 = document.getElementById('v2-prev-title-1');
+      if (!elTitle1) return;
 
-      document.getElementById('v2-prev-title-1').textContent = name;
-      document.getElementById('v2-prev-title-2').textContent = name;
-      document.getElementById('v2-prev-dur-1').textContent = `⏱️ ${dur}`;
-      document.getElementById('v2-prev-dur-2').textContent = `⏱️ ${dur}`;
-      document.getElementById('v2-prev-price-1').textContent = `💰 R$ ${price}`;
-      document.getElementById('v2-prev-price-2').textContent = `💰 R$ ${price}`;
+      const name = (document.getElementById('v2-svc-name')?.value || '').trim() || 'Nome do Serviço';
+      const price = (document.getElementById('v2-svc-price')?.value || '').trim() || '100,00';
+      const dur = (document.getElementById('v2-svc-duration')?.value || '').trim() || '60 min';
+      const photo = (document.getElementById('v2-svc-photo')?.value || '').trim();
+
+      if (document.getElementById('v2-prev-title-1')) document.getElementById('v2-prev-title-1').textContent = name;
+      if (document.getElementById('v2-prev-title-2')) document.getElementById('v2-prev-title-2').textContent = name;
+      if (document.getElementById('v2-prev-dur-1')) document.getElementById('v2-prev-dur-1').textContent = `⏱️ ${dur}`;
+      if (document.getElementById('v2-prev-dur-2')) document.getElementById('v2-prev-dur-2').textContent = `⏱️ ${dur}`;
+      if (document.getElementById('v2-prev-price-1')) document.getElementById('v2-prev-price-1').textContent = `💰 R$ ${price}`;
+      if (document.getElementById('v2-prev-price-2')) document.getElementById('v2-prev-price-2').textContent = `💰 R$ ${price}`;
 
       const imgBox = document.getElementById('v2-prev-img-box');
-      if (photo) {
-        imgBox.style.backgroundImage = `url('${photo}')`;
-        imgBox.style.backgroundSize = 'cover';
-        document.getElementById('v2-prev-img-tag').style.display = 'none';
-      } else {
-        imgBox.style.backgroundImage = 'none';
-        document.getElementById('v2-prev-img-tag').style.display = 'block';
+      if (imgBox) {
+        if (photo) {
+          imgBox.style.backgroundImage = `url('${photo}')`;
+          imgBox.style.backgroundSize = 'cover';
+          if (document.getElementById('v2-prev-img-tag')) document.getElementById('v2-prev-img-tag').style.display = 'none';
+        } else {
+          imgBox.style.backgroundImage = 'none';
+          if (document.getElementById('v2-prev-img-tag')) document.getElementById('v2-prev-img-tag').style.display = 'block';
+        }
       }
     }
 
