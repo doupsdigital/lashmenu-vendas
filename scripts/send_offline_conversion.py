@@ -14,8 +14,7 @@ def hash_data(value):
     val_clean = str(value).strip().lower()
     return hashlib.sha256(val_clean.encode('utf-8')).hexdigest()
 
-def send_capi_event(phone_number, first_name="Gabriele", event_name="Purchase", value=89.0):
-    # Format phone to E.164 without plus: 554188651722
+def send_capi_event(phone_number, first_name="Gabriele", event_name="Purchase", value=149.0):
     phone_clean = ''.join(filter(str.isdigit, phone_number))
     
     payload = {
@@ -54,6 +53,5 @@ def send_capi_event(phone_number, first_name="Gabriele", event_name="Purchase", 
         return json.loads(err_body)
 
 if __name__ == "__main__":
-    # Test sending conversion for Gabriele Buginski (554188651722)
-    print("Enviando evento de conversao CAPI para o Meta Ads...")
-    send_capi_event("554188651722", first_name="gabriele", event_name="Purchase", value=89.0)
+    print("Enviando evento de conversao CAPI corrigido (R$ 149,00) para o Meta Ads...")
+    send_capi_event("554188651722", first_name="gabriele", event_name="Purchase", value=149.0)
