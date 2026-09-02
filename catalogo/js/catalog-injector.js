@@ -199,10 +199,26 @@
       heroTitle.innerHTML = `${designerName}<br><em>Lash Designer</em>`;
     }
 
-    // 2. Frase da Capa
-    if (heroPhrase) {
-      const heroFraseEl = document.querySelector('.hero__frase, .capa__frase');
-      if (heroFraseEl) heroFraseEl.textContent = heroPhrase;
+    // 2. Frases da Capa (Impacto & Apresentação)
+    const heroFraseEl = document.querySelector('.hero__frase, .capa__frase');
+    if (heroFraseEl) {
+      if (heroPhrase) {
+        heroFraseEl.textContent = heroPhrase;
+        heroFraseEl.style.display = '';
+      } else {
+        heroFraseEl.style.display = 'none';
+      }
+    }
+
+    const heroSubFraseEl = document.querySelector('.hero__frase-cilios, .capa__frase-cilios');
+    if (heroSubFraseEl) {
+      const subPhrase = order.hero_sub_phrase || order.sub_phrase || '';
+      if (subPhrase) {
+        heroSubFraseEl.innerHTML = subPhrase;
+        heroSubFraseEl.style.display = '';
+      } else {
+        heroSubFraseEl.style.display = 'none';
+      }
     }
 
     // 3. Foto / Vídeo da Capa
