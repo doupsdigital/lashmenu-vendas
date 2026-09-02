@@ -118,203 +118,298 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── BANNER HERO SAUDAÇÃO ── */
-    .hero-greeting-card {
+    /* ── HERO BANNER AGENDA LASHAGENDA ── */
+    .agenda-hero-banner {
       background: linear-gradient(135deg, #be123c 0%, #e11d48 100%);
       border-radius: 20px;
-      padding: 20px;
+      padding: 18px 20px;
       color: #ffffff;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       box-shadow: 0 10px 25px -5px rgba(190, 18, 60, 0.3);
-      position: relative;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .hero-greeting-card::after {
-      content: '✨';
-      position: absolute;
-      right: 16px;
-      top: 16px;
-      font-size: 2.2rem;
-      opacity: 0.3;
-    }
-
-    .hero-greeting-title {
+    .agenda-hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
       font-weight: 700;
-      margin-bottom: 4px;
+      line-height: 1.1;
     }
 
-    .hero-greeting-sub {
-      font-size: 0.88rem;
+    .agenda-hero-date-sub {
+      font-size: 0.85rem;
       opacity: 0.9;
-    }
-
-    /* ── BARRA DE SELEÇÃO DE DATA ── */
-    .date-navigator {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-    }
-
-    .btn-date-nav {
-      background: var(--primary-subtle);
-      border: none;
-      color: var(--primary);
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .current-date-label {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--text);
+      margin-top: 4px;
       text-transform: capitalize;
     }
 
-    /* ── BOTOES DE AÇÃO RÁPIDA ── */
-    .quick-actions-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .btn-action-primary {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 12px;
-      border-radius: 14px;
-      font-weight: 700;
-      font-size: 0.88rem;
+    .date-nav-pills {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(190, 18, 60, 0.2);
-    }
-
-    .btn-action-secondary {
-      background: var(--card);
-      color: var(--primary);
-      border: 1px solid var(--border);
-      padding: 12px;
-      border-radius: 14px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      cursor: pointer;
-    }
-
-    /* ── CHIPS DE FILTRO DE STATUS ── */
-    .status-chips-container {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 8px;
-      margin-bottom: 16px;
-      scrollbar-width: none;
-    }
-    .status-chips-container::-webkit-scrollbar { display: none; }
-
-    .chip-filter {
-      background: var(--card);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
       border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      white-space: nowrap;
+      padding: 4px 10px;
+      gap: 8px;
+    }
+
+    .btn-date-arrow {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 2px 6px;
+    }
+
+    .btn-date-today-text {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      background: transparent;
+      border: none;
       cursor: pointer;
     }
 
-    .chip-filter.is-active {
+    /* ── TRES BOTOES SUPERIORES (LASHAGENDA) ── */
+    .agenda-actions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .btn-agenda-action {
       background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-
-    /* ── LISTA DE AGENDAMENTOS (CARDS LUXO LASHAGENDA) ── */
-    .booking-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 12px;
-      box-shadow: 0 4px 14px rgba(190, 18, 60, 0.03);
-    }
-
-    .booking-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 10px;
-    }
-
-    .client-name-title {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--text);
-    }
-
-    .booking-time-badge {
-      background: var(--primary-subtle);
-      color: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 12px 8px;
+      border-radius: 14px;
       font-weight: 700;
       font-size: 0.82rem;
-      padding: 4px 10px;
-      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(190, 18, 60, 0.15);
+      white-space: nowrap;
     }
 
-    .booking-card-actions {
+    .btn-agenda-action.secondary {
+      background: #ffffff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+
+    /* ── CARD EXPANDÍVEL AGUARDANDO CONFIRMAÇÃO ── */
+    .pending-expandable-card {
+      background: #fefce8;
+      border: 1px solid #fef08a;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
+    }
+
+    .pending-card-header {
+      padding: 14px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px solid #fce7f3;
-      padding-top: 12px;
-      margin-top: 8px;
+      cursor: pointer;
+      user-select: none;
     }
 
-    .badge-status {
-      font-size: 0.72rem;
-      text-transform: uppercase;
+    .pending-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 700;
-      padding: 4px 10px;
+      font-size: 0.9rem;
+      color: #854d0e;
+    }
+
+    .pending-pill-count {
+      background: #fef08a;
+      color: #854d0e;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 2px 10px;
       border-radius: 100px;
     }
-    .badge-status.pendente { background: #fef3c7; color: #b45309; }
-    .badge-status.confirmado { background: #dcfce7; color: #15803d; }
-    .badge-status.concluido { background: #dbeafe; color: #1d4ed8; }
-    .badge-status.cancelado, .badge-status.falta { background: #fee2e2; color: #b91c1c; }
 
-    .select-status-pwa {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 6px 10px;
+    .pending-expand-body {
+      display: none;
+      border-top: 1px solid #fef08a;
+      padding: 12px 16px;
+      background: #ffffff;
+    }
+
+    .pending-expand-body.is-open {
+      display: block;
+    }
+
+    .pending-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed #fef08a;
+    }
+
+    .pending-item-row:last-child {
+      border-bottom: none;
+    }
+
+    .btn-confirm-mini {
+      background: #dcfce7;
+      color: #15803d;
+      border: none;
+      padding: 6px 12px;
       border-radius: 8px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      outline: none;
+      font-weight: 700;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    .btn-reject-mini {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    /* ── GRADE VISUAL DE HORÁRIOS (TIMELINE LASHAGENDA) ── */
+    .timeline-container-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .timeline-header-day {
+      background: #fff5f7;
+      border-bottom: 1px solid var(--border);
+      padding: 14px;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+
+    .timeline-grid-wrapper {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      position: relative;
+      background: #ffffff;
+      min-height: 500px;
+    }
+
+    .timeline-hours-column {
+      border-right: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .time-slot-label {
+      height: 44px;
+      border-bottom: 1px dashed #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .timeline-slots-column {
+      position: relative;
+    }
+
+    .time-slot-cell {
+      height: 44px;
+      border-bottom: 1px dashed #f1f5f9;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .time-slot-cell:hover {
+      background: var(--primary-subtle);
+    }
+
+    .time-slot-cell.is-locked {
+      background: #f1f5f9;
+      cursor: not-allowed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+    }
+
+    /* Evento Posicionado na Timeline */
+    .timeline-event-block {
+      position: absolute;
+      left: 6px;
+      right: 6px;
+      border-radius: 10px;
+      padding: 6px 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+      z-index: 10;
+      border-left: 4px solid var(--primary);
+      background: var(--primary-subtle);
+      color: var(--primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .timeline-event-block.confirmado {
+      border-left-color: #16a34a;
+      background: #f0fdf4;
+      color: #15803d;
+    }
+
+    .timeline-event-block.concluido {
+      border-left-color: #2563eb;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    .timeline-event-block.trancado {
+      border-left-color: #64748b;
+      background: #f8fafc;
+      color: #475569;
+    }
+
+    .timeline-event-name {
+      font-weight: 700;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .timeline-event-service {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     /* ── CARDS DO CATÁLOGO & SERVIÇOS ── */
@@ -374,11 +469,6 @@
       color: var(--text-muted);
     }
 
-    .service-item-actions {
-      display: flex;
-      gap: 6px;
-    }
-
     .btn-icon-action {
       width: 34px;
       height: 34px;
@@ -433,7 +523,7 @@
       margin-top: 10px;
     }
 
-    /* ── BARRA FLUTUANTE INFERIOR (TABBAR NATIVA LASHAGENDA) ── */
+    /* ── BARRA FLUTUANTE INFERIOR (TABBAR NATIVA) ── */
     .tabbar-pwa {
       position: fixed;
       bottom: 0;
@@ -492,10 +582,6 @@
       box-shadow: 0 6px 18px rgba(190, 18, 60, 0.4);
       border: 4px solid #ffffff;
       cursor: pointer;
-    }
-
-    .tab-item-center.is-active {
-      background: #be123c;
     }
 
     /* ── MODAIS GERAIS (BOTTOM SHEET) ── */
@@ -558,43 +644,68 @@
   <!-- CONTEÚDO PRINCIPAL (3 ABAS) -->
   <main class="app-content">
 
-    <!-- ==================== ABA 1: AGENDA (CENTRAL - TELA INICIAL) ==================== -->
+    <!-- ==================== ABA 1: AGENDA (CENTRAL - TELA INICIAL LASHAGENDA) ==================== -->
     <div id="tab-view-agenda" class="tab-view is-active">
 
-      <!-- GREETING HERO -->
-      <div class="hero-greeting-card">
-        <div class="hero-greeting-title" id="greeting-name">Olá, Lash Designer!</div>
-        <div class="hero-greeting-sub" id="greeting-summary">Carregando seus agendamentos...</div>
+      <!-- HERO BANNER AGENDA -->
+      <div class="agenda-hero-banner">
+        <div>
+          <div class="agenda-hero-title">Agendamentos</div>
+          <div class="agenda-hero-date-sub" id="hero-date-full-text">Carregando data...</div>
+        </div>
+        <div class="date-nav-pills">
+          <button type="button" class="btn-date-arrow" id="btn-prev-day">‹</button>
+          <button type="button" class="btn-date-today-text" id="btn-today">Hoje</button>
+          <button type="button" class="btn-date-arrow" id="btn-next-day">›</button>
+        </div>
       </div>
 
-      <!-- SELETOR DE DATA -->
-      <div class="date-navigator">
-        <button type="button" class="btn-date-nav" id="btn-prev-date">‹</button>
-        <div class="current-date-label" id="current-date-text">Hoje</div>
-        <button type="button" class="btn-date-nav" id="btn-next-date">›</button>
-      </div>
-
-      <!-- AÇÕES RÁPIDAS -->
-      <div class="quick-actions-row">
-        <button type="button" class="btn-action-primary" id="btn-open-modal-novo-agendamento">
-          <span>+ Novo Agendamento</span>
+      <!-- TRES BOTOES SUPERIORES -->
+      <div class="agenda-actions-grid">
+        <button type="button" class="btn-agenda-action" id="btn-open-modal-novo-agendamento">
+          <span>+ Novo</span>
         </button>
-        <button type="button" class="btn-action-secondary" id="btn-open-modal-trancar">
-          <span>🔒 Trancar Horário</span>
+        <button type="button" class="btn-agenda-action secondary" id="btn-open-modal-trancar">
+          <span>🔒 Trancar</span>
+        </button>
+        <button type="button" class="btn-agenda-action secondary" id="btn-today-quick">
+          <span>Dia ∨</span>
         </button>
       </div>
 
-      <!-- FILTRO DE STATUS -->
-      <div class="status-chips-container">
-        <button type="button" class="chip-filter is-active" data-filter="todos">Todos</button>
-        <button type="button" class="chip-filter" data-filter="pendente">Pendentes</button>
-        <button type="button" class="chip-filter" data-filter="confirmado">Confirmados</button>
-        <button type="button" class="chip-filter" data-filter="concluido">Concluídos</button>
+      <!-- CARD EXPANDÍVEL: AGUARDANDO CONFIRMAÇÃO -->
+      <div class="pending-expandable-card">
+        <div class="pending-card-header" id="toggle-pending-card">
+          <div class="pending-header-left">
+            <span>🕒 Aguardando confirmação</span>
+            <span class="pending-pill-count" id="pending-count-pill">0</span>
+          </div>
+          <span id="pending-arrow-icon" style="color:#854d0e; font-weight:700;">▼</span>
+        </div>
+        <div class="pending-expand-body" id="pending-expand-body">
+          <div id="pending-items-container">
+            <p style="font-size:0.8rem; color:var(--text-muted);">Nenhuma solicitação pendente.</p>
+          </div>
+        </div>
       </div>
 
-      <!-- LISTA DE AGENDAMENTOS -->
-      <div id="pwa-agendamentos-list">
-        <p style="text-align: center; color: var(--text-muted); padding: 30px;">Buscando agendamentos no banco...</p>
+      <!-- GRADE VISUAL DE HORÁRIOS (TIMELINE DIÁRIA) -->
+      <div class="timeline-container-card">
+        <div class="timeline-header-day" id="timeline-day-title">
+          📅 QUARTA-FEIRA, 02 DE SETEMBRO
+        </div>
+
+        <div class="timeline-grid-wrapper">
+          <!-- Coluna de Horas -->
+          <div class="timeline-hours-column" id="timeline-hours-labels">
+            <!-- 08:00 a 20:00 injetados via JS -->
+          </div>
+
+          <!-- Coluna da Grade de Horários -->
+          <div class="timeline-slots-column" id="timeline-slots-column">
+            <!-- Grid Slots + Absolute Event Cards Injetados via JS -->
+          </div>
+        </div>
       </div>
 
     </div>
@@ -709,7 +820,7 @@
   </main>
 
 
-  <!-- ==================== BARRA FLUTUANTE INFERIOR (TABBAR NATIVA) ==================== -->
+  <!-- ==================== BARRA FLUTUANTE INFERIOR (TABBAR NATIVA LASHAGENDA) ==================== -->
   <nav class="tabbar-pwa">
     <!-- ABA ESQUERDA: CATÁLOGO & SERVIÇOS -->
     <button type="button" class="tab-item-pwa" data-target="tab-view-catalogo">
@@ -771,39 +882,37 @@
   </div>
 
 
-  <!-- ==================== MODAL: ADICIONAR / EDITAR SERVIÇO ==================== -->
-  <div id="modal-servico-pwa" class="modal-overlay-pwa">
+  <!-- ==================== MODAL: TRANCAR HORÁRIO / BLOQUEIO ==================== -->
+  <div id="modal-trancar-horario" class="modal-overlay-pwa">
     <div class="bottom-sheet-pwa">
       <div class="modal-title-pwa">
-        <span id="modal-svc-title-text">+ Novo Procedimento</span>
+        <span>🔒 Trancar Horário / Folga</span>
         <button type="button" style="background:none; border:none; font-size:1.4rem; cursor:pointer;" onclick="closeModals()">×</button>
       </div>
 
-      <form id="form-servico-pwa">
-        <input type="hidden" id="svc-edit-id">
+      <form id="form-trancar-pwa">
+        <div class="form-group-pwa">
+          <label class="form-label-pwa">Motivo do Bloqueio</label>
+          <input type="text" id="lock-reason" class="form-input-pwa" placeholder="Ex: Horário de Almoço, Folga, Médico" required>
+        </div>
 
         <div class="form-group-pwa">
-          <label class="form-label-pwa">Nome do Procedimento</label>
-          <input type="text" id="svc-input-name" class="form-input-pwa" placeholder="Ex: Volume Brasileiro" required>
+          <label class="form-label-pwa">Data do Bloqueio</label>
+          <input type="date" id="lock-date" class="form-input-pwa" required>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
           <div class="form-group-pwa">
-            <label class="form-label-pwa">Preço (R$)</label>
-            <input type="text" id="svc-input-price" class="form-input-pwa" placeholder="150,00" required>
+            <label class="form-label-pwa">Horário Início</label>
+            <input type="time" id="lock-start-time" class="form-input-pwa" value="12:00" required>
           </div>
           <div class="form-group-pwa">
-            <label class="form-label-pwa">Duração (Minutos)</label>
-            <input type="number" id="svc-input-duration" class="form-input-pwa" value="90" step="15" required>
+            <label class="form-label-pwa">Horário Fim</label>
+            <input type="time" id="lock-end-time" class="form-input-pwa" value="13:00" required>
           </div>
         </div>
 
-        <div class="form-group-pwa">
-          <label class="form-label-pwa">URL da Foto do Procedimento</label>
-          <input type="url" id="svc-input-photo" class="form-input-pwa" placeholder="https://...">
-        </div>
-
-        <button type="submit" class="btn-submit-pwa">Salvar Procedimento</button>
+        <button type="submit" class="btn-submit-pwa">Salvar Bloqueio</button>
       </form>
     </div>
   </div>
@@ -813,15 +922,19 @@
   <script>
     let currentOrderId = null;
     let currentOrderSlug = 'estudio-demo';
-    let selectedDateISO = new Date().toISOString().substring(0, 10);
+    let selectedDate = new Date();
+    selectedDate.setHours(12, 0, 0, 0);
+
     let allAgendamentos = [];
     let allServices = [];
+    let weeklyHoursConfig = [];
+    let bloqueiosConfig = [];
 
     // Parse URL Params
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('slug')) currentOrderSlug = urlParams.get('slug');
 
-    // Troca de Abas no TabBar
+    // Navegação entre Abas
     document.querySelectorAll('.tab-item-pwa, .tab-item-center').forEach(btn => {
       btn.addEventListener('click', () => {
         const targetId = btn.getAttribute('data-target');
@@ -833,13 +946,74 @@
       });
     });
 
+    // Toggle Card de Pendentes
+    const pendingCardHeader = document.getElementById('toggle-pending-card');
+    const pendingExpandBody = document.getElementById('pending-expand-body');
+    const pendingArrow = document.getElementById('pending-arrow-icon');
+    
+    if (pendingCardHeader) {
+      pendingCardHeader.addEventListener('click', () => {
+        const isOpen = pendingExpandBody.classList.toggle('is-open');
+        pendingArrow.textContent = isOpen ? '▲' : '▼';
+      });
+    }
+
     // Fechar Modais
     function closeModals() {
       document.querySelectorAll('.modal-overlay-pwa').forEach(m => m.classList.remove('is-open'));
     }
 
-    // Inicialização do App PWA
+    // Formatação de Data
+    function getSelectedDateISO() {
+      return selectedDate.toISOString().substring(0, 10);
+    }
+
+    function updateDateUI() {
+      const dateISO = getSelectedDateISO();
+      document.getElementById('manual-date').value = dateISO;
+      document.getElementById('lock-date').value = dateISO;
+
+      const dayNames = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+      const monthNames = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+      
+      const dayName = dayNames[selectedDate.getDay()];
+      const dayNum = String(selectedDate.getDate()).padStart(2, '0');
+      const monthName = monthNames[selectedDate.getMonth()];
+
+      document.getElementById('hero-date-full-text').textContent = `${dayName}, ${dayNum} de ${monthName}`;
+      document.getElementById('timeline-day-title').textContent = `📅 ${dayName.toUpperCase()}, ${dayNum} DE ${monthName.toUpperCase()}`;
+    }
+
+    // Navegação de Dias
+    document.getElementById('btn-prev-day')?.addEventListener('click', () => {
+      selectedDate.setDate(selectedDate.getDate() - 1);
+      updateDateUI();
+      renderTimeline();
+    });
+
+    document.getElementById('btn-next-day')?.addEventListener('click', () => {
+      selectedDate.setDate(selectedDate.getDate() + 1);
+      updateDateUI();
+      renderTimeline();
+    });
+
+    document.getElementById('btn-today')?.addEventListener('click', () => {
+      selectedDate = new Date();
+      selectedDate.setHours(12, 0, 0, 0);
+      updateDateUI();
+      renderTimeline();
+    });
+
+    document.getElementById('btn-today-quick')?.addEventListener('click', () => {
+      selectedDate = new Date();
+      selectedDate.setHours(12, 0, 0, 0);
+      updateDateUI();
+      renderTimeline();
+    });
+
+    // Inicialização
     async function initApp() {
+      updateDateUI();
       try {
         const res = await fetch(`${SUPABASE_URL}/rest/v1/orders?slug=eq.${encodeURIComponent(currentOrderSlug)}&select=*`, {
           headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
@@ -850,8 +1024,7 @@
         const order = orders[0];
         currentOrderId = order.id;
 
-        // Preenche Branding
-        document.getElementById('greeting-name').textContent = `Olá, ${order.client_name.split(' ')[0]}! ✨`;
+        // Branding
         document.getElementById('pwa-input-name').value = order.client_name || '';
         document.getElementById('pwa-input-whatsapp').value = order.whatsapp || '';
         document.getElementById('pwa-input-hero').value = order.hero_phrase || '';
@@ -859,20 +1032,20 @@
         document.getElementById('pwa-select-color').value = order.color_id || 'midnight';
         document.getElementById('btn-view-live-pwa').href = `/catalogo/?slug=${order.slug}`;
 
-        // Preenche Configurações
+        // Configurações
         document.getElementById('pwa-chk-agendamento-ativo').checked = !!order.agendamento_ativo;
         document.getElementById('pwa-input-antecedencia').value = order.antecedencia_cancelamento_horas || 24;
         document.getElementById('pwa-textarea-mensagem-pos').value = order.mensagem_pos_agendamento || '';
 
-        // Carrega Serviços, Horários e Agendamentos
         await Promise.all([
           loadServices(),
           loadWeeklyHours(),
-          loadAgendamentos()
+          loadAgendamentos(),
+          loadBloqueios()
         ]);
 
       } catch (err) {
-        alert('Erro ao carregar App: ' + err.message);
+        console.error(err);
       }
     }
 
@@ -900,12 +1073,8 @@
                 <div class="service-meta">R$ ${s.price} · ${s.duracao_minutos || 90} min</div>
               </div>
             </div>
-            <div class="service-item-actions">
-              <button type="button" class="btn-icon-action btn-icon-edit" onclick="editService('${s.id}')">✏️</button>
-            </div>
           </div>
         `;
-
         optionsHtml += `<option value="${s.id}">${s.name} (R$ ${s.price})</option>`;
       });
 
@@ -913,19 +1082,19 @@
       if (selectManual) selectManual.innerHTML = optionsHtml;
     }
 
-    // 2. Carrega Horários da Semana
+    // 2. Carrega Horários Semanais
     async function loadWeeklyHours() {
       const container = document.getElementById('pwa-weekly-hours-container');
       const res = await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${currentOrderId}&order=dia_semana.asc`, {
         headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
       });
-      const hours = res.ok ? await res.json() : [];
+      weeklyHoursConfig = res.ok ? await res.json() : [];
 
       const weekNames = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
       let html = '';
 
       for (let i = 0; i < 7; i++) {
-        const found = hours.find(h => h.dia_semana === i);
+        const found = weeklyHoursConfig.find(h => h.dia_semana === i);
         const isChecked = !!found;
         const start = found ? found.hora_inicio.substring(0, 5) : '08:00';
         const end = found ? found.hora_fim.substring(0, 5) : '18:00';
@@ -937,9 +1106,9 @@
               <span>${weekNames[i]}</span>
             </label>
             <div style="display:flex; align-items:center; gap:6px; font-size:0.8rem;">
-              <input type="time" class="time-week-start" data-day="${i}" value="${start}" style="border:1px solid var(--border); border-radius:6px; padding:4px;">
+              <input type="time" class="time-week-start" data-day="${i}" value="${start}">
               <span>até</span>
-              <input type="time" class="time-week-end" data-day="${i}" value="${end}" style="border:1px solid var(--border); border-radius:6px; padding:4px;">
+              <input type="time" class="time-week-end" data-day="${i}" value="${end}">
             </div>
           </div>
         `;
@@ -948,86 +1117,146 @@
       if (container) container.innerHTML = html;
     }
 
-    // 3. Carrega Agendamentos Recebidos
+    // 3. Carrega Bloqueios
+    async function loadBloqueios() {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/bloqueios_agenda?order_id=eq.${currentOrderId}`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      });
+      bloqueiosConfig = res.ok ? await res.json() : [];
+    }
+
+    // 4. Carrega Agendamentos e Renderiza Timeline
     async function loadAgendamentos() {
-      const container = document.getElementById('pwa-agendamentos-list');
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?order_id=eq.${currentOrderId}&order=data_hora.desc&limit=30`, {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?order_id=eq.${currentOrderId}&order=data_hora.asc`, {
         headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
       });
       allAgendamentos = res.ok ? await res.json() : [];
-
-      const todayAgendamentos = allAgendamentos.filter(a => a.data_hora && a.data_hora.substring(0, 10) === selectedDateISO);
-      document.getElementById('greeting-summary').textContent = `Você tem ${todayAgendamentos.length} agendamento(s) para este dia.`;
-
-      renderAgendamentosList(allAgendamentos);
+      renderTimeline();
     }
 
-    function renderAgendamentosList(list) {
-      const container = document.getElementById('pwa-agendamentos-list');
-      if (!container) return;
+    // RENDERIZAÇÃO DA GRADE VISUAL DE HORÁRIOS (TIMELINE LASHAGENDA)
+    function renderTimeline() {
+      const dateISO = getSelectedDateISO();
 
-      if (list.length === 0) {
-        container.innerHTML = `
-          <div style="text-align:center; padding:30px; color:var(--text-muted); font-size:0.88rem;">
-            Nenhum agendamento encontrado para este filtro.
-          </div>
-        `;
-        return;
+      // Agendamentos Pendentes (para o Card Expandível)
+      const pendentes = allAgendamentos.filter(a => a.status === 'pendente');
+      document.getElementById('pending-count-pill').textContent = pendentes.length;
+
+      const pendingContainer = document.getElementById('pending-items-container');
+      if (pendentes.length === 0) {
+        pendingContainer.innerHTML = '<p style="font-size:0.82rem; color:var(--text-muted);">Nenhuma solicitação pendente.</p>';
+      } else {
+        let phtml = '';
+        pendentes.forEach(p => {
+          const timeStr = p.data_hora ? p.data_hora.substring(11, 16) : '00:00';
+          const dt = new Date(p.data_hora);
+          const dateStr = `${String(dt.getDate()).padStart(2,'0')}/${String(dt.getMonth()+1).padStart(2,'0')}`;
+
+          phtml += `
+            <div class="pending-item-row">
+              <div>
+                <strong style="color:var(--text); font-size:0.88rem; display:block;">${p.nome_cliente}</strong>
+                <span style="font-size:0.78rem; color:var(--text-muted);">📅 ${dateStr} às ${timeStr} · 📱 ${p.whatsapp_cliente}</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" class="btn-confirm-mini" onclick="updateStatus('${p.id}', 'confirmado')">Confirmar</button>
+                <button type="button" class="btn-reject-mini" onclick="updateStatus('${p.id}', 'cancelado')">Recusar</button>
+              </div>
+            </div>
+          `;
+        });
+        pendingContainer.innerHTML = phtml;
       }
 
-      let html = '';
-      list.forEach(a => {
-        const dt = new Date(a.data_hora);
-        const timeFormatted = `${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
-        const dateFormatted = `${String(dt.getDate()).padStart(2,'0')}/${String(dt.getMonth()+1).padStart(2,'0')}`;
-        const cleanWa = (a.whatsapp_cliente || '').replace(/\D/g, '');
+      // Renderiza Grade de Horários (08:00 às 20:00 em slots de 30 min)
+      const hoursContainer = document.getElementById('timeline-hours-labels');
+      const slotsContainer = document.getElementById('timeline-slots-column');
 
-        html += `
-          <div class="booking-card">
-            <div class="booking-card-header">
-              <div>
-                <div class="client-name-title">${a.nome_cliente}</div>
-                <div style="font-size:0.8rem; color:var(--text-muted);">📱 <a href="https://wa.me/${cleanWa}" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">${a.whatsapp_cliente}</a></div>
-              </div>
-              <div class="booking-time-badge">📅 ${dateFormatted} às ${timeFormatted}</div>
-            </div>
+      let hoursHtml = '';
+      let slotsHtml = '';
+      const slots = [];
 
-            <div class="booking-card-actions">
-              <span class="badge-status ${a.status}">${a.status}</span>
-              <select class="select-status-pwa" data-id="${a.id}">
-                <option value="pendente" ${a.status==='pendente'?'selected':''}>Pendente</option>
-                <option value="confirmado" ${a.status==='confirmado'?'selected':''}>Confirmado</option>
-                <option value="concluido" ${a.status==='concluido'?'selected':''}>Concluído</option>
-                <option value="falta" ${a.status==='falta'?'selected':''}>Falta (No-show)</option>
-                <option value="cancelado" ${a.status==='cancelado'?'selected':''}>Cancelado</option>
-              </select>
-            </div>
-          </div>
-        `;
+      for (let h = 8; h <= 20; h++) {
+        const hStr = String(h).padStart(2, '0');
+        slots.push(`${hStr}:00`);
+        slots.push(`${hStr}:30`);
+
+        hoursHtml += `<div class="time-slot-label">${hStr}:00</div>`;
+        hoursHtml += `<div class="time-slot-label" style="font-size:0.68rem; opacity:0.6;">${hStr}:30</div>`;
+      }
+
+      hoursContainer.innerHTML = hoursHtml;
+
+      // Grade de Slots Clicáveis
+      slots.forEach((timeStr, idx) => {
+        slotsHtml += `<div class="time-slot-cell" onclick="openFormWithTime('${timeStr}')" title="Clique para agendar às ${timeStr}"></div>`;
       });
 
-      container.innerHTML = html;
-
-      // Listeners de Status
-      container.querySelectorAll('.select-status-pwa').forEach(sel => {
-        sel.addEventListener('change', async () => {
-          const id = sel.getAttribute('data-id');
-          const newStatus = sel.value;
-          await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?id=eq.${id}`, {
-            method: 'PATCH',
-            headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
-            body: JSON.stringify({ status: newStatus })
-          });
-          loadAgendamentos();
-        });
+      // Filtra agendamentos confirmados/concluídos do dia selecionado
+      const dayAgendamentos = allAgendamentos.filter(a => {
+        if (!a.data_hora) return false;
+        const aDateISO = a.data_hora.substring(0, 10);
+        return aDateISO === dateISO && (a.status === 'confirmado' || a.status === 'concluido');
       });
+
+      // Renderiza Cards Posicionados Absolutos
+      dayAgendamentos.forEach(a => {
+        const timeStr = a.data_hora.substring(11, 16);
+        const [hh, mm] = timeStr.split(':').map(Number);
+        const startMinutes = (hh - 8) * 60 + mm;
+        
+        if (startMinutes >= 0) {
+          const topPx = (startMinutes / 30) * 44;
+          const duration = a.duracao_minutos || 90;
+          const heightPx = (duration / 30) * 44 - 4;
+
+          const svc = allServices.find(s => s.id === a.service_id);
+          const svcName = svc ? svc.name : 'Procedimento';
+
+          slotsHtml += `
+            <div class="timeline-event-block ${a.status}" style="top:${topPx}px; height:${heightPx}px;" onclick="event.stopPropagation(); changeBookingStatus('${a.id}', '${a.status}')">
+              <div class="timeline-event-name">${a.nome_cliente}</div>
+              <div class="timeline-event-service">${timeStr} · ${svcName} (${duration}m)</div>
+            </div>
+          `;
+        }
+      });
+
+      slotsContainer.innerHTML = slotsHtml;
     }
 
-    // Modal Novo Agendamento
+    // Auxiliares
+    window.updateStatus = async function(id, status) {
+      await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?id=eq.${id}`, {
+        method: 'PATCH',
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status })
+      });
+      loadAgendamentos();
+    };
+
+    window.changeBookingStatus = function(id, currentStatus) {
+      const nextStatus = currentStatus === 'confirmado' ? 'concluido' : 'confirmado';
+      if (confirm(`Alterar agendamento para "${nextStatus.toUpperCase()}"?`)) {
+        window.updateStatus(id, nextStatus);
+      }
+    };
+
+    window.openFormWithTime = function(timeStr) {
+      document.getElementById('manual-time').value = timeStr;
+      document.getElementById('modal-novo-agendamento').classList.add('is-open');
+    };
+
+    // Abre Modais
     document.getElementById('btn-open-modal-novo-agendamento')?.addEventListener('click', () => {
       document.getElementById('modal-novo-agendamento').classList.add('is-open');
     });
 
+    document.getElementById('btn-open-modal-trancar')?.addEventListener('click', () => {
+      document.getElementById('modal-trancar-horario').classList.add('is-open');
+    });
+
+    // Form Novo Agendamento
     document.getElementById('form-novo-agendamento-pwa')?.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('manual-client-name').value.trim();
@@ -1054,10 +1283,35 @@
 
       closeModals();
       loadAgendamentos();
-      alert('Agendamento cadastrado com sucesso! ✨');
+      alert('Agendamento confirmado na agenda! ✨');
     });
 
-    // Salvar Branding
+    // Form Trancar Horário
+    document.getElementById('form-trancar-pwa')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const reason = document.getElementById('lock-reason').value.trim();
+      const date = document.getElementById('lock-date').value;
+      const startTime = document.getElementById('lock-start-time').value;
+      const endTime = document.getElementById('lock-end-time').value;
+
+      await fetch(`${SUPABASE_URL}/rest/v1/bloqueios_agenda`, {
+        method: 'POST',
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          order_id: currentOrderId,
+          data_inicio: `${date}T${startTime}:00`,
+          data_fim: `${date}T${endTime}:00`,
+          motivo: reason,
+          dia_inteiro: false
+        })
+      });
+
+      closeModals();
+      loadAgendamentos();
+      alert(`Horário trancado para: ${reason}! 🔒`);
+    });
+
+    // Branding
     document.getElementById('form-pwa-branding')?.addEventListener('submit', async (e) => {
       e.preventDefault();
       await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
@@ -1071,10 +1325,10 @@
           color_id: document.getElementById('pwa-select-color').value
         })
       });
-      alert('Informações do catálogo salvas! ✨');
+      alert('Alterações salvas no catálogo! ✨');
     });
 
-    // Salvar Configurações Gerais
+    // Configurações Gerais
     document.getElementById('btn-save-config-general')?.addEventListener('click', async () => {
       await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
         method: 'PATCH',
@@ -1085,10 +1339,10 @@
           mensagem_pos_agendamento: document.getElementById('pwa-textarea-mensagem-pos').value.trim()
         })
       });
-      alert('Regras de agendamento salvas com sucesso! ✨');
+      alert('Regras de agendamento salvas! ✨');
     });
 
-    // Salvar Grade Semanal
+    // Grade Semanal
     document.getElementById('btn-save-weekly-hours-pwa')?.addEventListener('click', async () => {
       await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${currentOrderId}`, {
         method: 'DELETE',
@@ -1118,7 +1372,7 @@
         });
       }
 
-      alert('Grade de horários semanal atualizada! ✨');
+      alert('Grade semanal salva! ✨');
     });
 
     // Inicializa
