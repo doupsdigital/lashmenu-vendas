@@ -237,10 +237,10 @@ button {
 
 .hero__frase {
   margin: 0;
-  font-size: 14.5px;
+  font-size: 19px;
   line-height: 1.55;
   color: rgba(243, 239, 233, 0.85);
-  max-width: 320px;
+  max-width: 340px;
 }
 
 .hero__frase-cilios {

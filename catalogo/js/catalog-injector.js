@@ -202,22 +202,24 @@
     // 2. Frases da Capa (Impacto & Apresentação)
     const heroFraseEl = document.querySelector('.hero__frase, .capa__frase');
     if (heroFraseEl) {
-      if (heroPhrase) {
+      if (heroPhrase && heroPhrase.trim()) {
         heroFraseEl.textContent = heroPhrase;
         heroFraseEl.style.display = '';
-      } else {
+      } else if (order.hero_phrase === '') {
         heroFraseEl.style.display = 'none';
       }
     }
 
     const heroSubFraseEl = document.querySelector('.hero__frase-cilios, .capa__frase-cilios');
     if (heroSubFraseEl) {
-      const subPhrase = order.hero_sub_phrase || order.sub_phrase || '';
-      if (subPhrase) {
-        heroSubFraseEl.innerHTML = subPhrase;
-        heroSubFraseEl.style.display = '';
-      } else {
-        heroSubFraseEl.style.display = 'none';
+      const rawSub = order.hero_sub_phrase !== undefined ? order.hero_sub_phrase : order.sub_phrase;
+      if (rawSub !== undefined && rawSub !== null) {
+        if (rawSub.trim()) {
+          heroSubFraseEl.innerHTML = rawSub;
+          heroSubFraseEl.style.display = '';
+        } else {
+          heroSubFraseEl.style.display = 'none';
+        }
       }
     }
 
