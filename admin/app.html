@@ -1159,13 +1159,26 @@
                 <span style="font-size:0.78rem; color:var(--text-muted);">📅 ${dateStr} às ${timeStr} · 📱 ${p.whatsapp_cliente}</span>
               </div>
               <div style="display:flex; gap:6px;">
-                <button type="button" class="btn-confirm-mini" onclick="updateStatus('${p.id}', 'confirmado')">Confirmar</button>
-                <button type="button" class="btn-reject-mini" onclick="updateStatus('${p.id}', 'cancelado')">Recusar</button>
+                <button type="button" class="btn-confirm-mini btn-action-status-change" data-id="${p.id}" data-status="confirmado">Confirmar</button>
+                <button type="button" class="btn-reject-mini btn-action-status-change" data-id="${p.id}" data-status="cancelado">Recusar</button>
               </div>
             </div>
           `;
         });
         pendingContainer.innerHTML = phtml;
+
+        // Binda Event Listeners diretos
+        pendingContainer.querySelectorAll('.btn-action-status-change').forEach(btn => {
+          btn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const id = btn.getAttribute('data-id');
+            const newStatus = btn.getAttribute('data-status');
+            btn.disabled = true;
+            btn.textContent = '...';
+            await window.updateStatus(id, newStatus);
+          });
+        });
       }
 
       // Renderiza Grade de Horários (08:00 às 20:00 em slots de 30 min)
@@ -1227,12 +1240,32 @@
 
     // Auxiliares
     window.updateStatus = async function(id, status) {
-      await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?id=eq.${id}`, {
-        method: 'PATCH',
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status })
-      });
-      loadAgendamentos();
+      try {
+        const appt = allAgendamentos.find(a => a.id === id);
+        if (appt && appt.data_hora) {
+          const apptDateStr = appt.data_hora.substring(0, 10);
+          const [yy, mm, dd] = apptDateStr.split('-').map(Number);
+          selectedDate = new Date(yy, mm - 1, dd, 12, 0, 0, 0);
+          updateDateUI();
+        }
+
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?id=eq.${id}`, {
+          method: 'PATCH',
+          headers: { 
+            'apikey': SUPABASE_ANON_KEY, 
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 
+            'Content-Type': 'application/json',
+            'Prefer': 'return=representation'
+          },
+          body: JSON.stringify({ status })
+        });
+
+        if (!res.ok) throw new Error('Erro ao atualizar status');
+        await loadAgendamentos();
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao atualizar status: ' + err.message);
+      }
     };
 
     window.changeBookingStatus = function(id, currentStatus) {
