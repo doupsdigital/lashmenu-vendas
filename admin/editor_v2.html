@@ -1061,6 +1061,31 @@
     </div>
   </div>
 
+  <!-- MODAL DE SUCESSO ELEGANTE -->
+  <div class="success-modal-overlay" id="v2-success-modal" style="display: none;">
+    <div class="success-modal-card">
+      <div class="success-icon-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c04b6b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h2 class="success-modal-title">Alterações Salvas! ✨</h2>
+      <p class="success-modal-text" id="v2-success-modal-desc">
+        Seu catálogo digital foi atualizado com sucesso e as alterações já estão ativas no seu site oficial.
+      </p>
+      <div class="success-modal-actions">
+        <a href="#" target="_blank" id="v2-btn-view-live-catalog" class="btn-modal-view">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>Ver Catálogo Atualizado</span>
+        </a>
+        <button type="button" class="btn-modal-close" onclick="closeV2SuccessModal()">
+          <span>Continuar Editando</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Supabase Config & SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../vendas/form/js/supabase-config.js?v=4.0"></script>
@@ -1470,6 +1495,12 @@
     }
 
     async function saveAllV2Data() {
+      const btnSave = document.querySelector('.v2-btn-save-all');
+      if (btnSave) {
+        btnSave.disabled = true;
+        btnSave.innerHTML = `<span>⏳ SALVANDO ALTERAÇÕES...</span>`;
+      }
+
       try {
         // 1. Grava Dados Gerais da Ordem
         const orderPayload = {
@@ -1483,15 +1514,17 @@
           cover_media_url: document.getElementById('v2-client-cover-url').value.trim()
         };
 
-        await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
-          method: 'PATCH',
-          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify(orderPayload)
-        });
+        if (orderId) {
+          await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
+            method: 'PATCH',
+            headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify(orderPayload)
+          });
+        }
 
         // 2. Grava Serviços na tabela order_services
         for (let i = 0; i < allServices.length; i++) {
-          const item = allServices[i];
+          const item = { ...allServices[i] };
           item.order_index = i;
 
           if (item.id) {
@@ -1502,17 +1535,28 @@
             });
           } else {
             item.order_id = orderId;
-            await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
+            const insertRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
               method: 'POST',
-              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=representation' },
               body: JSON.stringify(item)
             });
+            if (insertRes.ok) {
+              const insertedItems = await insertRes.json();
+              if (insertedItems && insertedItems.length > 0) {
+                allServices[i].id = insertedItems[0].id;
+              }
+            }
           }
         }
 
         openV2SuccessModal(clientSlug || (window.currentOrderSlug));
       } catch (err) {
         alert('Erro ao salvar no Supabase: ' + err.message);
+      } finally {
+        if (btnSave) {
+          btnSave.disabled = false;
+          btnSave.innerHTML = `<span>💾 SALVAR TODAS AS ALTERAÇÕES ✨</span>`;
+        }
       }
     }
 
