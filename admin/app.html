@@ -712,87 +712,233 @@
     </div>
 
 
-    <!-- ==================== ABA 2: CATÁLOGO & SERVIÇOS (ESTRUTURA DO EDITOR.HTML) ==================== -->
+    <!-- ==================== ABA 2: CATÁLOGO & SERVIÇOS (RÉPLICA IDÊNTICA DO EDITOR.HTML) ==================== -->
     <div id="tab-view-catalogo" class="tab-view">
 
-      <!-- BLOCO 1: PERSONALIZAÇÃO & DADOS DO CATÁLOGO -->
-      <div class="section-card-pwa">
-        <div class="section-card-title">
-          <span>👤 Meus Dados & Apresentação</span>
-        </div>
-
-        <form id="form-pwa-branding">
-          <div class="form-group-pwa">
-            <label class="form-label-pwa">Nome do Estúdio / Lash Designer</label>
-            <input type="text" id="pwa-input-name" class="form-input-pwa" placeholder="Ex: Mariana Alves Lash" required>
-          </div>
-
-          <div class="form-group-pwa">
-            <label class="form-label-pwa">WhatsApp (Com DDD)</label>
-            <input type="tel" id="pwa-input-whatsapp" class="form-input-pwa" placeholder="Ex: 62982244466" required>
-          </div>
-
-          <div class="form-group-pwa">
-            <label class="form-label-pwa">Frase de Apresentação (Hero)</label>
-            <input type="text" id="pwa-input-hero" class="form-input-pwa" placeholder="Ex: Olhar sofisticado e marcante no seu dia a dia.">
-          </div>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-            <div class="form-group-pwa">
-              <label class="form-label-pwa">Modelo Layout</label>
-              <select id="pwa-select-model" class="form-select-pwa">
-                <option value="glamour">Glamour</option>
-                <option value="harmonia">Harmonia</option>
-                <option value="classico">Clássico</option>
-              </select>
-            </div>
-            <div class="form-group-pwa">
-              <label class="form-label-pwa">Tema de Cores</label>
-              <select id="pwa-select-color" class="form-select-pwa">
-                <option value="midnight">Midnight (Dark)</option>
-                <option value="rose">Rosé (Light)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- MÍDIA DE CAPA (FOTO OU VÍDEO) -->
-          <div class="form-group-pwa" style="margin-top: 10px;">
-            <label class="form-label-pwa">Foto ou Vídeo da Capa</label>
-            <div style="display: flex; gap: 12px; align-items: center; background: var(--bg); padding: 10px; border-radius: 12px; border: 1px solid var(--border);">
-              <div id="pwa-cover-preview-box" style="width: 54px; height: 54px; border-radius: 10px; background: #fff; border: 1px dashed var(--border); overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <img id="pwa-cover-preview-img" src="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
-                <span id="pwa-cover-placeholder" style="font-size: 0.65rem; color: var(--text-muted); text-align: center;">Sem Mídia</span>
-              </div>
-              <div style="flex: 1;">
-                <label style="background: var(--primary-subtle); color: var(--primary); border: 1px dashed var(--border); padding: 8px 12px; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; display: inline-block;">
-                  <span>Escolher Foto/Vídeo</span>
-                  <input type="file" id="pwa-cover-file-input" accept="image/*,video/*" style="display: none;">
-                </label>
-                <input type="url" id="pwa-input-cover-url" class="form-input-pwa" placeholder="Ou URL da mídia..." style="margin-top: 6px; font-size: 0.78rem;">
-              </div>
-            </div>
-          </div>
-
-          <button type="submit" class="btn-submit-pwa">Salvar Dados do Estúdio</button>
-        </form>
+      <!-- GREETING TITLE BANNER -->
+      <div style="margin-bottom: 16px;">
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #16110e;" id="pwa-greeting-name">✨ Olá, Estúdio!</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">Altere seus preços, fotos e dados a qualquer momento de forma fácil.</p>
       </div>
 
-      <!-- BLOCO 2: MEUS PROCEDIMENTOS & TABELA DE PREÇOS (DESIGN EDITOR.HTML) -->
-      <div class="section-card-pwa">
-        <div class="section-card-title">
-          <span>✨ Meus Procedimentos</span>
-          <button type="button" id="btn-open-modal-servico" style="background: var(--primary-subtle); color: var(--primary); border: none; padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; cursor: pointer;">+ Adicionar</button>
+      <!-- CARD 1: SEUS SERVIÇOS -->
+      <div class="v2-card" style="margin-bottom: 18px;">
+        <div class="v2-card-header-banner" style="background: linear-gradient(135deg, #c04b6b 0%, #d96583 100%);">
+          <div class="v2-card-header-title">
+            <span>✨ Seus Serviços</span>
+          </div>
+          <span class="v2-pill-count" id="v2-service-count">0 cadastrados</span>
         </div>
+        <div class="v2-card-body">
+          
+          <!-- BUSCA DE SERVIÇOS -->
+          <div class="v2-search-box" style="position: relative; margin-bottom: 14px;">
+            <input type="text" id="v2-search-input" class="v2-input" placeholder="🔍 Buscar serviço por nome..." oninput="filterV2Services(this.value)">
+          </div>
 
-        <!-- BUSCA -->
-        <div class="form-group-pwa">
-          <input type="text" id="pwa-search-services" class="form-input-pwa" placeholder="🔍 Buscar procedimento por nome..." oninput="filterPwaServices(this.value)">
-        </div>
+          <!-- LISTA DE CARDS COMPACTOS -->
+          <div id="v2-services-list" style="border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #fff;">
+            <!-- Inserido dinamicamente via JS -->
+          </div>
 
-        <!-- LISTA DE PROCEDIMENTOS -->
-        <div id="pwa-services-list">
-          <p style="text-align: center; color: var(--text-muted); padding: 20px;">Carregando procedimentos...</p>
         </div>
+      </div>
+
+      <!-- CARD 2: NOVO SERVIÇO -->
+      <div class="v2-card" id="v2-service-form-card" style="margin-bottom: 18px;">
+        <div class="v2-card-header-banner" style="background: linear-gradient(135deg, #a33854 0%, #c04b6b 100%);">
+          <div class="v2-card-header-title" id="v2-form-title">
+            <span>✨ Novo Serviço</span>
+          </div>
+        </div>
+        <div class="v2-card-body">
+          
+          <form id="v2-service-form" onsubmit="handleSaveServiceForm(event)">
+            <div class="v2-form-grid">
+
+              <div class="v2-form-group">
+                <label class="v2-label">NOME DO SERVIÇO <span class="v2-label-req">*</span></label>
+                <input type="text" id="v2-svc-name" class="v2-input" placeholder="Ex: Volume Russo, Efeito Boneca..." required>
+              </div>
+
+              <div class="v2-form-row">
+                <div class="v2-form-group">
+                  <label class="v2-label">PREÇO (R$) <span class="v2-label-req">*</span></label>
+                  <input type="text" id="v2-svc-price" class="v2-input" placeholder="Ex: 100,00" required>
+                </div>
+                <div class="v2-form-group">
+                  <label class="v2-label">DURAÇÃO (MIN) <span class="v2-label-req">*</span></label>
+                  <input type="text" id="v2-svc-duration" class="v2-input" placeholder="Ex: 60 min ou 1h30" required>
+                </div>
+              </div>
+
+              <!-- TOGGLE DADOS OPCIONAIS -->
+              <div>
+                <button type="button" class="v2-btn-toggle-details" onclick="toggleV2OptionalFields()">
+                  <span id="v2-toggle-arrow">∨</span>
+                  <span id="v2-toggle-text">Adicionar mais detalhes (opcional)</span>
+                </button>
+              </div>
+
+              <!-- BLOCO DE CAMPOS OPCIONAIS -->
+              <div id="v2-optional-fields" style="display: none;" class="v2-form-grid">
+
+                <div class="v2-form-group">
+                  <div class="v2-label">
+                    <span>CATEGORIA (SUBTÍTULO)</span>
+                    <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-category')">✕ Remover</button>
+                  </div>
+                  <input type="text" id="v2-svc-category" class="v2-input" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
+                </div>
+
+                <div class="v2-form-row">
+                  <div class="v2-form-group">
+                    <div class="v2-label">
+                      <span>MANUTENÇÃO</span>
+                      <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-maintenance')">✕ Remover</button>
+                    </div>
+                    <input type="text" id="v2-svc-maintenance" class="v2-input" placeholder="Ex: 60,00 (até 20 dias)">
+                  </div>
+                  <div class="v2-form-group">
+                    <div class="v2-label">
+                      <span>EFEITO VISUAL</span>
+                      <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-effect')">✕ Remover</button>
+                    </div>
+                    <input type="text" id="v2-svc-effect" class="v2-input" placeholder="Ex: Marcante e Alongado">
+                  </div>
+                </div>
+
+                <div class="v2-form-group">
+                  <label class="v2-label">FOTO DO SERVIÇO</label>
+                  <div class="media-upload-picker-sm">
+                    <div class="media-preview-box-sm">
+                      <img id="v2-svc-preview-img" class="media-preview-el-sm" src="" alt="Prévia" style="display:none;">
+                      <span id="v2-svc-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+                    </div>
+                    <div class="media-upload-controls-sm">
+                      <label class="btn-file-select-sm">
+                        <span>Escolher Foto</span>
+                        <input type="file" id="v2-svc-file-input" accept="image/*" style="display: none;" onchange="handleV2ServicePhotoSelect(this)">
+                      </label>
+                      <input type="url" id="v2-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." style="font-size: 0.85rem;">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="v2-form-group">
+                  <label class="v2-label">DESCRIÇÃO</label>
+                  <textarea id="v2-svc-desc" class="v2-textarea" placeholder="Ex: Aplicação minuciosa com fios sintéticos de alta qualidade..."></textarea>
+                </div>
+
+              </div>
+
+              <!-- BARRAS DE AÇÃO DO FORMULÁRIO -->
+              <div style="display: flex; gap: 10px; margin-top: 8px;">
+                <button type="submit" id="v2-btn-submit-svc" class="v2-btn-primary">
+                  <span>+ Adicionar Serviço à Lista</span>
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- CARD 3: MEUS DADOS -->
+      <div class="v2-card v2-accordion-card" id="v2-card-general-info" style="margin-bottom: 24px;">
+        <div class="v2-card-header-banner v2-accordion-header" onclick="toggleV2Accordion('v2-card-general-info')">
+          <div class="v2-card-header-title">
+            <span>👤 Meus Dados</span>
+          </div>
+          <span style="font-size: 0.9rem;">▼</span>
+        </div>
+        <div class="v2-card-body v2-accordion-body">
+          <div class="v2-form-grid">
+
+            <!-- FOTO DA CAPA -->
+            <div class="v2-form-group">
+              <label class="v2-label">FOTO DA CAPA</label>
+              <div class="media-upload-picker-sm">
+                <div class="media-preview-box-sm" style="width: 72px; height: 72px;">
+                  <img id="v2-cover-preview-img" class="media-preview-el-sm" src="" alt="Prévia da Capa" style="display:none;">
+                  <span id="v2-cover-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+                </div>
+                <div class="media-upload-controls-sm">
+                  <label class="btn-file-select-sm">
+                    <span>⬆ Escolher Foto</span>
+                    <input type="file" id="v2-cover-file-input" accept="image/*,video/*" style="display: none;" onchange="handleV2CoverPhotoSelect(this)">
+                  </label>
+                  <input type="url" id="v2-client-cover-url" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto/vídeo..." style="font-size: 0.85rem;">
+                </div>
+              </div>
+            </div>
+
+            <div class="v2-form-row">
+              <div class="v2-form-group">
+                <label class="v2-label">NOME DA LASH DESIGNER</label>
+                <input type="text" id="v2-client-name" class="v2-input" placeholder="Ex: Gabriele Buginski">
+              </div>
+              <div class="v2-form-group">
+                <label class="v2-label">WHATSAPP (COM DDD)</label>
+                <input type="text" id="v2-client-whatsapp" class="v2-input" placeholder="Ex: (41) 98865-1722">
+              </div>
+            </div>
+
+            <div class="v2-form-row">
+              <div class="v2-form-group">
+                <label class="v2-label">INSTAGRAM (@USUARIO)</label>
+                <input type="text" id="v2-client-instagram" class="v2-input" placeholder="Ex: _bygabibuginski">
+              </div>
+              <div class="v2-form-group">
+                <label class="v2-label">LOCALIZAÇÃO / ENDEREÇO</label>
+                <input type="text" id="v2-client-location" class="v2-input" placeholder="Ex: Guaratuba - Paraná">
+              </div>
+            </div>
+
+            <div class="v2-form-group">
+              <div class="v2-label">
+                <span>FRASE DE IMPACTO (BOAS-VINDAS)</span>
+                <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-client-phrase')">✕ Remover</button>
+              </div>
+              <input type="text" id="v2-client-phrase" class="v2-input" placeholder="Ex: ✨ Seu olhar, minha Arte!">
+            </div>
+
+            <div class="v2-form-group">
+              <div class="v2-label">
+                <span>MENSAGEM DE APRESENTAÇÃO (DETALHADA)</span>
+                <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-client-subphrase')">✕ Remover</button>
+              </div>
+              <textarea id="v2-client-subphrase" class="v2-textarea" placeholder="Ex: Cílios pensados para o seu olhar — técnica segura, desenho personalizado."></textarea>
+            </div>
+
+            <div class="v2-form-row">
+              <div class="v2-form-group">
+                <label class="v2-label">MODELO DE LAYOUT</label>
+                <select id="v2-client-model" class="v2-select">
+                  <option value="glamour">Glamour</option>
+                  <option value="harmonia">Harmonia</option>
+                  <option value="classico">Clássico</option>
+                </select>
+              </div>
+              <div class="v2-form-group">
+                <label class="v2-label">TEMA DE CORES</label>
+                <select id="v2-client-color" class="v2-select">
+                  <option value="rose">Rosé (Light)</option>
+                  <option value="midnight">Midnight (Dark)</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTÃO SALVAR TODAS AS ALTERAÇÕES FIXO NO RODAPÉ -->
+      <div style="margin-bottom: 24px;">
+        <button type="button" class="v2-btn-save-all" onclick="saveAllV2Data()">
+          <span>💾 SALVAR TODAS AS ALTERAÇÕES ✨</span>
+        </button>
       </div>
 
     </div>
@@ -1114,19 +1260,26 @@
         const order = orders[0];
         currentOrderId = order.id;
 
-        // Branding
-        document.getElementById('pwa-input-name').value = order.client_name || '';
-        document.getElementById('pwa-input-whatsapp').value = order.whatsapp || '';
-        document.getElementById('pwa-input-hero').value = order.hero_phrase || '';
-        document.getElementById('pwa-select-model').value = order.model_id || 'glamour';
-        document.getElementById('pwa-select-color').value = order.color_id || 'midnight';
-        document.getElementById('btn-view-live-pwa').href = `/catalogo/?slug=${order.slug}`;
+        // Branding V2 (Réplica do editor.html)
+        const name = order.client_name || 'Estúdio';
+        const greetingEl = document.getElementById('pwa-greeting-name');
+        if (greetingEl) greetingEl.textContent = `✨ Olá, ${name}!`;
+
+        if (document.getElementById('v2-client-name')) document.getElementById('v2-client-name').value = order.client_name || '';
+        if (document.getElementById('v2-client-whatsapp')) document.getElementById('v2-client-whatsapp').value = order.whatsapp || '';
+        if (document.getElementById('v2-client-instagram')) document.getElementById('v2-client-instagram').value = order.instagram || '';
+        if (document.getElementById('v2-client-location')) document.getElementById('v2-client-location').value = order.location || '';
+        if (document.getElementById('v2-client-phrase')) document.getElementById('v2-client-phrase').value = order.hero_phrase || '';
+        if (document.getElementById('v2-client-subphrase')) document.getElementById('v2-client-subphrase').value = order.sub_phrase || '';
+        if (document.getElementById('v2-client-model')) document.getElementById('v2-client-model').value = order.model_id || 'glamour';
+        if (document.getElementById('v2-client-color')) document.getElementById('v2-client-color').value = order.color_id || 'rose';
+        if (document.getElementById('btn-view-live-pwa')) document.getElementById('btn-view-live-pwa').href = `/catalogo/?slug=${order.slug}`;
 
         const coverMedia = order.cover_media_url || order.cover_url || '';
         if (coverMedia) {
-          document.getElementById('pwa-input-cover-url').value = coverMedia;
-          const coverImg = document.getElementById('pwa-cover-preview-img');
-          const coverPlaceholder = document.getElementById('pwa-cover-placeholder');
+          if (document.getElementById('v2-client-cover-url')) document.getElementById('v2-client-cover-url').value = coverMedia;
+          const coverImg = document.getElementById('v2-cover-preview-img');
+          const coverPlaceholder = document.getElementById('v2-cover-preview-placeholder');
           if (coverImg) {
             coverImg.src = coverMedia;
             coverImg.style.display = 'block';
@@ -1135,9 +1288,9 @@
         }
 
         // Configurações
-        document.getElementById('pwa-chk-agendamento-ativo').checked = !!order.agendamento_ativo;
-        document.getElementById('pwa-input-antecedencia').value = order.antecedencia_cancelamento_horas || 24;
-        document.getElementById('pwa-textarea-mensagem-pos').value = order.mensagem_pos_agendamento || '';
+        if (document.getElementById('pwa-chk-agendamento-ativo')) document.getElementById('pwa-chk-agendamento-ativo').checked = !!order.agendamento_ativo;
+        if (document.getElementById('pwa-input-antecedencia')) document.getElementById('pwa-input-antecedencia').value = order.antecedencia_cancelamento_horas || 24;
+        if (document.getElementById('pwa-textarea-mensagem-pos')) document.getElementById('pwa-textarea-mensagem-pos').value = order.mensagem_pos_agendamento || '';
 
         await Promise.all([
           loadServices(),
@@ -1150,6 +1303,63 @@
         console.error(err);
       }
     }
+
+    // Utilitários V2 (idênticos ao editor.html)
+    window.toggleV2OptionalFields = function() {
+      const el = document.getElementById('v2-optional-fields');
+      const arrow = document.getElementById('v2-toggle-arrow');
+      if (!el) return;
+      const isHidden = el.style.display === 'none';
+      el.style.display = isHidden ? 'flex' : 'none';
+      if (arrow) arrow.textContent = isHidden ? '∧' : '∨';
+    };
+
+    window.clearV2Field = function(id) {
+      const field = document.getElementById(id);
+      if (field) field.value = '';
+    };
+
+    window.toggleV2Accordion = function(id) {
+      const card = document.getElementById(id);
+      if (card) card.classList.toggle('is-closed');
+    };
+
+    window.filterV2Services = function(query) {
+      window.filterPwaServices(query);
+    };
+
+    // Função de Salvamento Geral (SALVAR TODAS AS ALTERAÇÕES ✨)
+    window.saveAllV2Data = async function() {
+      try {
+        const payload = {
+          client_name: document.getElementById('v2-client-name').value.trim(),
+          whatsapp: document.getElementById('v2-client-whatsapp').value.trim(),
+          instagram: document.getElementById('v2-client-instagram').value.trim(),
+          location: document.getElementById('v2-client-location').value.trim(),
+          hero_phrase: document.getElementById('v2-client-phrase').value.trim(),
+          sub_phrase: document.getElementById('v2-client-subphrase').value.trim(),
+          cover_media_url: document.getElementById('v2-client-cover-url').value.trim(),
+          model_id: document.getElementById('v2-client-model').value,
+          color_id: document.getElementById('v2-client-color').value
+        };
+
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
+          method: 'PATCH',
+          headers: adminHeaders,
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error('Erro ao salvar alterações do catálogo.');
+        
+        const greetingEl = document.getElementById('pwa-greeting-name');
+        if (greetingEl && payload.client_name) greetingEl.textContent = `✨ Olá, ${payload.client_name}!`;
+
+        alert('Todas as alterações do catálogo foram salvas com sucesso! ✨');
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao salvar alterações: ' + err.message);
+      }
+    };
 
     // Chave de autorização administrativa do App
     const API_KEY = (typeof SUPABASE_SERVICE_ROLE_KEY !== 'undefined' && SUPABASE_SERVICE_ROLE_KEY) ? SUPABASE_SERVICE_ROLE_KEY : SUPABASE_ANON_KEY;
@@ -1173,7 +1383,10 @@
 
     // Renderiza a lista de procedimentos no estilo LashAgenda / editor.html
     function renderServicesList(servicesToRender) {
-      const container = document.getElementById('pwa-services-list');
+      const container = document.getElementById('v2-services-list');
+      const countEl = document.getElementById('v2-service-count');
+      
+      if (countEl) countEl.textContent = `${servicesToRender ? servicesToRender.length : 0} cadastrados`;
       if (!container) return;
 
       if (!servicesToRender || servicesToRender.length === 0) {
@@ -1184,28 +1397,27 @@
       let html = '';
       servicesToRender.forEach(s => {
         const thumb = s.photo_url || '';
-        const dur = s.duracao_minutos || 90;
-        const catLabel = s.category ? `<span style="background:var(--primary-subtle); color:var(--primary); font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:100px; margin-left:6px;">${s.category}</span>` : '';
+        const durStr = s.duration || (s.duracao_minutos ? `${s.duracao_minutos} min` : '1h30');
 
         html += `
-          <div class="service-item-pwa" style="display:flex; align-items:center; justify-content:space-between; padding:12px; border-bottom:1px solid var(--border); background:#fff; border-radius:12px; margin-bottom:8px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid var(--border); background:#fff;">
             <div style="display:flex; align-items:center; gap:12px; flex:1; min-width:0;">
               ${thumb 
-                ? `<img src="${thumb}" style="width:44px; height:44px; border-radius:10px; object-fit:cover; border:1px solid var(--border); flex-shrink:0;">` 
-                : `<div style="width:44px; height:44px; border-radius:10px; background:var(--primary-subtle); border:1px dashed var(--border); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">✨</div>`
+                ? `<img src="${thumb}" style="width:48px; height:48px; border-radius:12px; object-fit:cover; border:1px solid var(--border); flex-shrink:0;">` 
+                : `<div style="width:48px; height:48px; border-radius:12px; background:var(--rose-light-bg); border:1px solid var(--rose-light-border); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">✨</div>`
               }
               <div style="min-width:0; flex:1;">
-                <div style="font-weight:700; font-size:0.92rem; color:#16110e; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-                  ${s.name} ${catLabel}
+                <div style="font-weight:700; font-size:0.98rem; color:#16110e; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                  ${s.name}
                 </div>
-                <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
-                  R$ ${s.price} · ${dur} min
+                <div style="font-size:0.82rem; color:var(--text-secondary); margin-top:2px;">
+                  🕒 ${durStr} &nbsp; 💰 R$ ${s.price}
                 </div>
               </div>
             </div>
-            <div style="display:flex; align-items:center; gap:6px; flex-shrink:0; margin-left:8px;">
-              <button type="button" class="btn-edit-svc-item" data-id="${s.id}" title="Editar Procedimento" style="width:34px; height:34px; border-radius:8px; background:#dcfce7; color:#15803d; border:1px solid #86efac; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.9rem;">✏️</button>
-              <button type="button" class="btn-delete-svc-item" data-id="${s.id}" title="Excluir Procedimento" style="width:34px; height:34px; border-radius:8px; background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.9rem;">🗑️</button>
+            <div style="display:flex; align-items:center; gap:8px; flex-shrink:0; margin-left:8px;">
+              <button type="button" class="btn-edit-svc-item" data-id="${s.id}" title="Editar Procedimento" style="width:36px; height:36px; border-radius:10px; background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.9rem;">✏️</button>
+              <button type="button" class="btn-delete-svc-item" data-id="${s.id}" title="Excluir Procedimento" style="width:36px; height:36px; border-radius:10px; background:#fef2f2; color:#dc2626; border:1px solid #fecaca; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.9rem;">🗑️</button>
             </div>
           </div>
         `;
@@ -1310,10 +1522,69 @@
       }
     }
 
-    // Listener do Botão "+ Adicionar" Procedimento
-    document.getElementById('btn-open-modal-servico')?.addEventListener('click', () => {
-      openNewServiceModal();
-    });
+    // Form Submissão de Procedimento V2 (Criar a partir do Card 2)
+    window.handleSaveServiceForm = async function(e) {
+      if (e) e.preventDefault();
+      const name = document.getElementById('v2-svc-name').value.trim();
+      const price = document.getElementById('v2-svc-price').value.trim();
+      const durationStr = document.getElementById('v2-svc-duration').value.trim();
+      const category = document.getElementById('v2-svc-category')?.value.trim() || '';
+      const maintenance = document.getElementById('v2-svc-maintenance')?.value.trim() || '';
+      const effect = document.getElementById('v2-svc-effect')?.value.trim() || '';
+      const photoUrl = document.getElementById('v2-svc-photo')?.value.trim() || '';
+      const desc = document.getElementById('v2-svc-desc')?.value.trim() || '';
+
+      let durationMin = 90;
+      if (durationStr.includes('min')) {
+        durationMin = parseInt(durationStr.replace(/\D/g, ''), 10) || 90;
+      } else if (durationStr.includes('h')) {
+        const parts = durationStr.split('h');
+        const h = parseInt(parts[0], 10) || 0;
+        const m = parseInt(parts[1], 10) || 0;
+        durationMin = (h * 60) + m;
+      } else {
+        durationMin = parseInt(durationStr, 10) || 90;
+      }
+
+      const payload = {
+        order_id: currentOrderId,
+        name,
+        price,
+        duration: durationStr,
+        duracao_minutos: durationMin,
+        category,
+        maintenance_price: maintenance,
+        effect,
+        photo_url: photoUrl,
+        description: desc,
+        order_index: allServices.length
+      };
+
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
+          method: 'POST',
+          headers: adminHeaders,
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error('Erro ao cadastrar novo procedimento.');
+
+        // Limpa campos
+        document.getElementById('v2-svc-name').value = '';
+        document.getElementById('v2-svc-price').value = '';
+        document.getElementById('v2-svc-duration').value = '';
+        if (document.getElementById('v2-svc-category')) document.getElementById('v2-svc-category').value = '';
+        if (document.getElementById('v2-svc-maintenance')) document.getElementById('v2-svc-maintenance').value = '';
+        if (document.getElementById('v2-svc-effect')) document.getElementById('v2-svc-effect').value = '';
+        if (document.getElementById('v2-svc-photo')) document.getElementById('v2-svc-photo').value = '';
+        if (document.getElementById('v2-svc-desc')) document.getElementById('v2-svc-desc').value = '';
+
+        await loadServices();
+        alert('Serviço adicionado com sucesso à lista! ✨');
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao salvar serviço: ' + err.message);
+      }
+    };
 
     // Form Submissão de Procedimento (Criar ou Editar)
     document.getElementById('form-servico-pwa')?.addEventListener('submit', async (e) => {
@@ -1369,36 +1640,9 @@
       }
     });
 
-    // Upload de Foto do Serviço no Modal
-    document.getElementById('svc-file-input')?.addEventListener('change', async (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-
-      try {
-        let uploadBlob = file;
-        if (typeof window.compressImage === 'function' && file.type.startsWith('image/')) {
-          uploadBlob = await window.compressImage(file, 0.8, 1200);
-        }
-
-        const path = `services/svc_${Date.now()}_${Math.random().toString(36).substring(2, 6)}.jpg`;
-        const pubUrl = await window.lashSupabase.uploadFile('catalogo-midias', path, uploadBlob);
-
-        if (pubUrl) {
-          document.getElementById('svc-input-photo-url').value = pubUrl;
-          const previewImg = document.getElementById('svc-preview-img');
-          previewImg.src = pubUrl;
-          previewImg.style.display = 'block';
-          document.getElementById('svc-preview-placeholder').style.display = 'none';
-        }
-      } catch (err) {
-        console.error(err);
-        alert('Erro ao enviar imagem: ' + err.message);
-      }
-    });
-
-    // Upload de Mídia de Capa do Estúdio
-    document.getElementById('pwa-cover-file-input')?.addEventListener('change', async (e) => {
-      const file = e.target.files[0];
+    // Upload de Foto de Capa (inline V2)
+    window.handleV2CoverPhotoSelect = async function(input) {
+      const file = input.files[0];
       if (!file) return;
 
       try {
@@ -1412,17 +1656,50 @@
         const pubUrl = await window.lashSupabase.uploadFile('catalogo-midias', path, uploadBlob);
 
         if (pubUrl) {
-          document.getElementById('pwa-input-cover-url').value = pubUrl;
-          const img = document.getElementById('pwa-cover-preview-img');
-          img.src = pubUrl;
-          img.style.display = 'block';
-          document.getElementById('pwa-cover-placeholder').style.display = 'none';
+          if (document.getElementById('v2-client-cover-url')) document.getElementById('v2-client-cover-url').value = pubUrl;
+          const img = document.getElementById('v2-cover-preview-img');
+          const placeholder = document.getElementById('v2-cover-preview-placeholder');
+          if (img) {
+            img.src = pubUrl;
+            img.style.display = 'block';
+          }
+          if (placeholder) placeholder.style.display = 'none';
         }
       } catch (err) {
         console.error(err);
-        alert('Erro ao enviar capa: ' + err.message);
+        alert('Erro ao enviar foto de capa: ' + err.message);
       }
-    });
+    };
+
+    // Upload de Foto do Serviço (inline V2)
+    window.handleV2ServicePhotoSelect = async function(input) {
+      const file = input.files[0];
+      if (!file) return;
+
+      try {
+        let uploadBlob = file;
+        if (typeof window.compressImage === 'function' && file.type.startsWith('image/')) {
+          uploadBlob = await window.compressImage(file, 0.8, 1200);
+        }
+
+        const path = `services/svc_${Date.now()}_${Math.random().toString(36).substring(2, 6)}.jpg`;
+        const pubUrl = await window.lashSupabase.uploadFile('catalogo-midias', path, uploadBlob);
+
+        if (pubUrl) {
+          if (document.getElementById('v2-svc-photo')) document.getElementById('v2-svc-photo').value = pubUrl;
+          const previewImg = document.getElementById('v2-svc-preview-img');
+          const placeholder = document.getElementById('v2-svc-preview-placeholder');
+          if (previewImg) {
+            previewImg.src = pubUrl;
+            previewImg.style.display = 'block';
+          }
+          if (placeholder) placeholder.style.display = 'none';
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Erro ao enviar imagem do serviço: ' + err.message);
+      }
+    };
 
     // 2. Carrega Horários Semanais
     async function loadWeeklyHours() {
