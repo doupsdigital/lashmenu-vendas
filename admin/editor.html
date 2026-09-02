@@ -1,249 +1,285 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="theme-client-rose is-client-mode">
 
 <head>
-  <meta charset="utf-8">
-  <title>Editar Catálogo — LashMenu Admin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <script>
-    (function() {
-      var p = new URLSearchParams(window.location.search);
-      var isClient = p.has('token') || p.has('key') || p.has('k') || window.location.pathname.indexOf('/editar') !== -1 || p.has('id');
-      if (!isClient) {
-        var h = window.location.hostname.split('.');
-        if (h.length >= 3 && h[0] !== 'www' && h[0] !== 'lashmenu-vendas' && h[0].indexOf('localhost') === -1 && h[0].indexOf('vercel') === -1) {
-          isClient = true;
-        }
-      }
-      if (isClient) {
-        document.documentElement.className += ' theme-client-rose is-client-mode';
-      }
-    })();
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>✨ Editar Meu Catálogo — LashMenu V2</title>
+
+  <!-- Google Fonts: Playfair Display + Outfit + Inter (Design System LashAgenda) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 
   <style>
+    /* ── RESET & TOKENS LASHAGENDA DESIGN SYSTEM ── */
     :root {
-      --bg: #0d0b0a;
-      --card-bg: #151312;
-      --border: #24201e;
-      --text: #f5ede6;
-      --text-muted: #a3958c;
-      --primary: #e5a9b8;
-      --primary-hover: #f0c2cd;
-      --accent: #8a7ef7;
-      --danger: #ff6b6b;
-      --success: #25d366;
+      --bg: #faf6f4;
+      --card-bg: #ffffff;
+      --border: #f0e8e0;
+      --primary: #c04b6b;
+      --primary-hover: #a33854;
+      --primary-gradient: linear-gradient(135deg, #c04b6b 0%, #d96583 100%);
+      --text-primary: #16110e;
+      --text-secondary: #6e6259;
+      --text-muted: #9e9188;
+      --rose-light-bg: #fdf5f7;
+      --rose-light-border: #f0c2cd;
+      --green-bg: #ecfdf5;
+      --green-text: #059669;
+      --red-bg: #fef2f2;
+      --red-text: #dc2626;
+      --amber-bg: #fffbeb;
+      --amber-border: #fef3c7;
+      --amber-text: #92400e;
+      --radius-card: 18px;
+      --radius-input: 12px;
+      --shadow-sm: 0 4px 20px rgba(180, 140, 150, 0.08);
+      --font-body: 'Outfit', 'Inter', system-ui, sans-serif;
+      --font-title: 'Playfair Display', Georgia, serif;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
       background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-primary);
+      font-family: var(--font-body);
       line-height: 1.5;
-      padding-bottom: 80px;
+      min-height: 100vh;
+      padding-bottom: 90px;
     }
 
-    /* ── Header ── */
-    .admin-header {
-      border-bottom: 1px solid var(--border);
-      padding: 16px 24px;
+    /* ── LOADING OVERLAY ── */
+    .v2-loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 99999;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background: #110e0d;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      justify-content: center;
+      transition: opacity 0.35s ease, visibility 0.35s;
     }
-    .admin-brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 500;
+    .v2-loader.is-hidden {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      display: none !important;
     }
-    .admin-brand em {
+    .loader-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+    .loader-logo {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .loader-logo em {
       font-style: italic;
       color: var(--primary);
     }
-    .btn-back {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      cursor: pointer;
+    .loader-spin {
+      width: 40px;
+      height: 40px;
+      border: 3.5px solid rgba(192, 75, 107, 0.2);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── HEADER (ESTILO ORIGINAL LASHMENU) ── */
+    .v2-header {
+      background: #ffffff;
+      border-bottom: 1px solid #d4c4b7;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+    .brand-logo-rose {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #16110e;
       text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .brand-logo-rose em {
+      font-style: italic;
+      color: #c04b6b;
+    }
+    .header-tag-rose {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #5c4e46;
+      background: #f5ede6;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid #d4c4b7;
+    }
+    .v2-badge-v2 {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #fdf5f7;
+      color: var(--primary);
+      border: 1px solid var(--rose-light-border);
+      padding: 2px 8px;
+      border-radius: 100px;
+      text-transform: uppercase;
+    }
+    .v2-btn-back {
+      background: #f8f3f0;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: all 0.2s;
     }
-    .btn-back:hover {
-      color: #fff;
-      border-color: var(--text-muted);
-      background: rgba(255,255,255,0.02);
-    }
+    .v2-btn-back:hover { background: #efe7e2; color: var(--text-primary); }
 
-    /* ── Container ── */
-    .editor-container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 24px;
-    }
-
-    .editor-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-    }
-    .editor-subtitle {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 32px;
-    }
-
-    /* ── Cards / Seções ── */
-    .editor-section {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 32px;
-    }
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
-      color: var(--primary);
+    /* ── CONTAINER PRINCIPAL ── */
+    .v2-container {
+      max-width: 680px;
+      margin: 24px auto;
+      padding: 0 16px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    /* ── Form Inputs ── */
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      flex-direction: column;
       gap: 20px;
     }
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+
+    /* ── CABEÇALHO DA PÁGINA DE SERVIÇOS ── */
+    .v2-page-title-box {
+      margin-bottom: 4px;
     }
-    .form-group.full-width {
-      grid-column: span 2;
+    .v2-page-greeting {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
     }
-    label {
-      font-size: 0.82rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-    input, select, textarea {
-      background: #fffcf9;
-      border: 1.5px solid #d4c4b7;
-      color: #16110e;
-      padding: 14px 16px;
-      border-radius: 12px;
-      font-family: inherit;
-      font-size: 16px;
-      font-weight: 500;
-      width: 100%;
-      outline: none;
-      transition: all 0.2s;
-    }
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 8px rgba(229, 169, 184, 0.15);
-    }
-    textarea {
-      resize: vertical;
-      min-height: 80px;
+    .v2-page-sub {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
     }
 
-    /* ── Componente de Upload de Mídia / Imagem / Vídeo ── */
-    .media-upload-picker {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    @media (max-width: 600px) {
-      .media-upload-picker {
-        flex-direction: column;
-      }
-    }
-    .media-preview-box {
-      width: 110px;
-      height: 110px;
-      border-radius: 12px;
-      background: #191615;
-      border: 1px dashed var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* ── CARD PADRÃO LASHAGENDA ── */
+    .v2-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
       overflow: hidden;
-      flex-shrink: 0;
-      position: relative;
     }
-    .media-preview-el {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .media-preview-placeholder {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-align: center;
-      padding: 8px;
-    }
-    .media-upload-controls {
-      flex: 1;
+    .v2-card-header-banner {
+      background: var(--primary-gradient);
+      padding: 16px 20px;
+      color: #ffffff;
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-    }
-    .btn-file-select {
-      background: #241d1a;
-      border: 1px solid var(--primary);
-      color: var(--primary);
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+    }
+    .v2-card-header-title {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
       gap: 8px;
-      transition: all 0.2s;
-      width: fit-content;
     }
-    .btn-file-select:hover {
-      background: var(--primary);
-      color: #000;
+    .v2-pill-count {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
     }
-    .input-url-fallback {
-      font-size: 0.82rem;
-      color: var(--text-muted);
+    .v2-card-body {
+      padding: 20px;
     }
 
-    /* Variant small for procedure list */
+    /* ── FORMULÁRIOS & INPUTS LASHAGENDA ── */
+    .v2-form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .v2-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      .v2-form-row { grid-template-columns: 1fr; }
+    }
+    .v2-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .v2-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .v2-label .v2-btn-remove-pill {
+      margin-left: auto;
+    }
+    .v2-label-req { color: var(--primary); }
+    .v2-label-sub { text-transform: none; font-weight: 400; color: var(--text-muted); }
+
+    .v2-input, .v2-select, .v2-textarea {
+      width: 100%;
+      background: #fffcf9;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-input);
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .v2-input:focus, .v2-select:focus, .v2-textarea:focus {
+      background: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3.5px rgba(192, 75, 107, 0.12);
+    }
+    .v2-textarea { resize: vertical; min-height: 80px; }
+
+    /* COMPONENTE DE UPLOAD DE MÍDIA / FOTO */
     .media-upload-picker-sm {
       display: flex;
       gap: 14px;
@@ -252,9 +288,9 @@
     .media-preview-box-sm {
       width: 64px;
       height: 64px;
-      border-radius: 8px;
-      background: #191615;
-      border: 1px dashed var(--border);
+      border-radius: 12px;
+      background: #fdf5f7;
+      border: 1.5px dashed #e5b8c4;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -272,266 +308,327 @@
       gap: 10px;
       align-items: center;
     }
-    @media (max-width: 600px) {
-      .media-upload-controls-sm {
-        flex-direction: column;
-        align-items: stretch;
-      }
-    }
     .btn-file-select-sm {
-      background: #241d1a;
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      white-space: nowrap;
-      transition: all 0.2s;
+      background: #fdf5f7 !important;
+      border: 1.5px dashed #e5b8c4 !important;
+      color: #c04b6b !important;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+      border-radius: 12px !important;
+      padding: 10px 16px !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      transition: all 0.2s ease !important;
     }
     .btn-file-select-sm:hover {
-      border-color: var(--primary);
-      color: var(--primary);
+      background: #f8e6ea !important;
+      border-color: #c04b6b !important;
+    }
+    html.is-client-mode .input-url-fallback,
+    body.is-client-mode .input-url-fallback {
+      display: none !important;
     }
 
-    /* ── Procedimentos / Serviços Lista ── */
-    .services-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .service-item-card {
-      background: #1c1817;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      position: relative;
-    }
-    .service-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-    .service-index-label {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--text-muted);
-    }
-    .btn-delete-service {
-      background: transparent;
+    /* BOTÕES & PÍLULAS */
+    .v2-btn-primary {
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
       border: none;
-      color: var(--danger);
+      border-radius: 100px;
+      padding: 14px 20px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
       cursor: pointer;
-      font-size: 0.82rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 8px;
-      border-radius: 6px;
-      transition: background-color 0.2s;
-    }
-    .btn-delete-service:hover {
-      background: rgba(255, 107, 107, 0.08);
-    }
-    .btn-add-service {
-      background: transparent;
-      border: 1.5px dashed var(--border);
-      color: var(--primary);
-      padding: 16px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.9rem;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      width: 100%;
-      margin-top: 16px;
-      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(192, 75, 107, 0.25);
+      transition: all 0.2s ease;
     }
-    .btn-add-service:hover {
-      border-color: var(--primary);
-      background: rgba(229, 169, 184, 0.02);
-    }
-
-    /* ── Ejection Info ── */
-    .eject-info-card {
-      background: #121526;
-      border: 1px solid rgba(138, 126, 247, 0.25);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 32px;
-    }
-    .eject-title {
-      color: #b3a9ff;
-      font-weight: 600;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .eject-desc {
-      font-size: 0.88rem;
-      color: #9398b8;
-      line-height: 1.6;
-    }
-    .eject-steps {
-      margin-top: 14px;
-      padding-left: 20px;
-      font-size: 0.85rem;
-      color: #9398b8;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .eject-steps code {
-      background: rgba(0,0,0,0.3);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-      color: #b3a9ff;
-    }
-
-    /* ── Barra de Ações Flutuante / Bottom Bar ── */
-    .bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #110e0d;
-      border-top: 1px solid var(--border);
-      padding: 16px 24px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 16px;
-      box-shadow: 0 -10px 30px rgba(0,0,0,0.4);
-      z-index: 10;
-    }
-    .btn-save {
-      background: var(--primary);
-      color: #000;
-      border: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 0.92rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .btn-save:hover {
+    .v2-btn-primary:hover {
       background: var(--primary-hover);
       transform: translateY(-1px);
     }
-    .btn-save:disabled {
-      background: var(--text-muted);
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    /* Status e Mensagens */
-    .status-msg {
-      padding: 12px 16px;
-      border-radius: 8px;
-      margin-bottom: 24px;
-      display: none;
+    .v2-btn-secondary {
+      background: #f8f3f0;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      border-radius: 100px;
+      padding: 12px 20px;
+      font-family: inherit;
       font-size: 0.9rem;
-    }
-    .status-msg.error {
-      background: rgba(255, 107, 107, 0.1);
-      border: 1px solid var(--danger);
-      color: var(--danger);
-      display: block;
-    }
-    .status-msg.success {
-      background: rgba(37, 211, 102, 0.1);
-      border: 1px solid var(--success);
-      color: var(--success);
-      display: block;
-    }
-
-    /* Estilos de remoção e adição de campos de especificações */
-    .field-header-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-    .field-header-row label {
-      margin-bottom: 0;
-    }
-    .btn-remove-field {
-      background: none;
-      border: none;
-      color: #ff6b6b;
-      font-size: 0.75rem;
       font-weight: 600;
       cursor: pointer;
-      opacity: 0.85;
-      transition: opacity 0.2s ease;
-      padding: 2px 6px;
-      border-radius: 4px;
+      transition: all 0.2s;
     }
-    .btn-remove-field:hover {
-      opacity: 1;
-      background: rgba(255, 107, 107, 0.12);
+    .v2-btn-secondary:hover { background: #efe7e2; color: var(--text-primary); }
+
+    .v2-btn-toggle-details {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0;
+      transition: color 0.2s;
     }
-    .add-fields-bar {
+    .v2-btn-toggle-details:hover { color: var(--primary-hover); }
+
+    .v2-btn-remove-pill {
+      background: var(--rose-light-bg);
+      border: 1.5px solid var(--rose-light-border);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* ── BARRA DE BUSCA ── */
+    .v2-search-box {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .v2-search-input {
+      padding-left: 40px;
+    }
+    .v2-search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    /* ── LISTA DE SERVIÇOS (LASHAGENDA ITEM) ── */
+    .v2-service-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      transition: background 0.15s ease;
+    }
+    .v2-service-item:last-child { border-bottom: none; }
+    .v2-service-item:hover { background: #fcf9f7; }
+
+    .v2-service-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: var(--rose-light-bg);
+      border: 1px solid var(--rose-light-border);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .v2-service-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .v2-service-name {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .v2-service-meta {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
-      padding-top: 10px;
-      border-top: 1px dashed rgba(255, 255, 255, 0.1);
-      margin-top: 6px;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
     }
-    .add-fields-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      font-weight: 600;
-      width: 100%;
-      margin-bottom: 2px;
-    }
-    .btn-add-spec-chip {
-      background: rgba(229, 169, 184, 0.08);
-      border: 1px dashed var(--accent);
-      color: var(--accent);
-      padding: 4px 10px;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .btn-add-spec-chip:hover {
-      background: var(--accent);
-      color: #0d0b0a;
-      border-style: solid;
+    .v2-meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    /* ── Modal de Sucesso Centrado ── */
+    /* BOTÕES DE AÇÃO DO ITEM (PÍLULAS VERDE E VERMELHA DAS FOTOS) */
+    .v2-item-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .v2-btn-action-edit {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--green-bg);
+      color: var(--green-text);
+      border: 1px solid #a7f3d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .v2-btn-action-edit:hover { background: #d1fae5; transform: scale(1.05); }
+
+    .v2-btn-action-delete {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--red-bg);
+      color: var(--red-text);
+      border: 1px solid #fecaca;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .v2-btn-action-delete:hover { background: #fee2e2; transform: scale(1.05); }
+
+    /* ── PRÉVIA EM TEMPO REAL (COMO VAI APARECER NO CATÁLOGO) ── */
+    .v2-preview-box {
+      background: #faf6f4;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .v2-preview-header {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+    .v2-preview-sub { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px; }
+
+    .v2-preview-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      .v2-preview-cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .v2-mini-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .v2-mini-card-img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      background: var(--rose-light-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+    .v2-mini-card-body {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .v2-mini-card-title {
+      font-family: var(--font-title);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .v2-mini-card-meta {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 8px;
+    }
+    .v2-mini-card-btn {
+      margin-top: 4px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 6px;
+      border-radius: 6px;
+    }
+
+    /* BARRA FLUTUANTE INFERIOR SALVAR DADOS GERAIS */
+    .v2-sticky-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 90;
+    }
+    .v2-btn-save-all {
+      max-width: 420px;
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      border-radius: 100px;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(192, 75, 107, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .v2-btn-save-all:hover { background: var(--primary-hover); }
+
+    /* ACCORDION REUTILIZÁVEL */
+    .v2-accordion-card.is-closed .v2-accordion-body { display: none; }
+    .v2-accordion-header {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* ── MODAL DE SUCESSO ELEGANTE ── */
     .success-modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.78);
+      background: rgba(0, 0, 0, 0.65);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      z-index: 1000;
+      z-index: 9999;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -543,14 +640,14 @@
       to { opacity: 1; }
     }
     .success-modal-card {
-      background: #181514;
-      border: 1px solid rgba(229, 169, 184, 0.3);
-      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid #d4c4b7;
+      border-radius: 24px;
       padding: 32px 28px;
       max-width: 440px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(37, 211, 102, 0.12);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
       animation: modalPopUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     @keyframes modalPopUp {
@@ -561,23 +658,26 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background: rgba(37, 211, 102, 0.12);
-      border: 1.5px solid rgba(37, 211, 102, 0.4);
+      background: #fdf5f7;
+      border: 1.5px solid #e5b8c4;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px auto;
-      box-shadow: 0 0 24px rgba(37, 211, 102, 0.2);
+      box-shadow: 0 0 20px rgba(192, 75, 107, 0.15);
+    }
+    .success-icon-badge svg {
+      stroke: #c04b6b;
     }
     .success-modal-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: 1.9rem;
-      color: #fff;
+      color: #16110e;
       margin-bottom: 10px;
-      font-weight: 600;
+      font-weight: 700;
     }
     .success-modal-text {
-      color: var(--text-muted);
+      color: #5c4e46;
       font-size: 0.9rem;
       line-height: 1.5;
       margin-bottom: 28px;
@@ -588,795 +688,380 @@
       gap: 12px;
     }
     .btn-modal-view {
-      background: #25d366;
-      color: #000;
+      background: linear-gradient(135deg, #c04b6b, #a33753);
+      color: #ffffff;
       border: none;
       padding: 14px 20px;
-      border-radius: 10px;
+      border-radius: 100px;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       transition: all 0.2s;
-      letter-spacing: 0.03em;
+      box-shadow: 0 6px 20px rgba(192, 75, 107, 0.3);
     }
     .btn-modal-view:hover {
-      background: #20bd5a;
       transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(192, 75, 107, 0.4);
     }
     .btn-modal-close {
       background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
+      border: 1px solid #d4c4b7;
+      color: #5c4e46;
       padding: 12px 20px;
-      border-radius: 10px;
+      border-radius: 100px;
       font-weight: 600;
       font-size: 0.88rem;
       cursor: pointer;
       transition: all 0.2s;
     }
     .btn-modal-close:hover {
-      border-color: #fff;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    /* ── TEMA LIGHT ROSÉ OFICIAL (CLIENT MODE ZERO-FLASH) ── */
-    html.is-client-mode,
-    html.theme-client-rose,
-    body.is-client-mode,
-    body.theme-client-rose {
-      --bg: #f8f5f1;
-      --card-bg: #ffffff;
-      --border: #d4c4b7;
-      --border-input: #c4b2a3;
-      --text: #16110e;
-      --text-muted: #5c4e46;
-      --primary: #c04b6b;
-      --primary-hover: #a33753;
-      --accent: #c04b6b;
-      background-color: #f8f5f1 !important;
-      color: #16110e !important;
-    }
-
-    /* ── LOADING OVERLAY ROSÉ DE TELA CHEIA ── */
-    .client-editor-loader {
-      position: fixed;
-      inset: 0;
-      background: #faf6f4;
-      z-index: 99999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
-    }
-    .client-editor-loader.is-hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .loader-inner-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      padding: 32px;
-      text-align: center;
-    }
-    .loader-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #16110e;
-      letter-spacing: 0.02em;
-    }
-    .loader-logo em {
-      font-style: italic;
-      color: #c04b6b;
-    }
-    .loader-spinner {
-      width: 42px;
-      height: 42px;
-      border: 3px solid rgba(192, 75, 107, 0.15);
-      border-top-color: #c04b6b;
-      border-radius: 50%;
-      animation: spinLoader 0.8s linear infinite;
-    }
-    @keyframes spinLoader {
-      to { transform: rotate(360deg); }
-    }
-    .loader-text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: #5c4e46;
-    }
-
-    /* Topo Header na Paleta Oficial */
-    body.theme-client-rose .admin-header,
-    html.is-client-mode .admin-header {
-      background: #ffffff !important;
-      border-bottom: 1px solid #d4c4b7 !important;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
-    }
-    .brand-logo-rose {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.65rem;
-      font-weight: 700;
-      color: #16110e;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
-    .brand-logo-rose em {
-      font-style: italic;
-      color: #c04b6b;
-    }
-    .header-tag-rose {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #5c4e46;
       background: #f5ede6;
-      padding: 4px 12px;
-      border-radius: 100px;
-      border: 1px solid #d4c4b7;
-    }
-
-    /* Cards e Seções de Alto Contraste */
-    body.theme-client-rose .editor-section {
-      background: #ffffff !important;
-      border: 1.5px solid #e6dcd3 !important;
-      box-shadow: 0 10px 30px rgba(192, 75, 107, 0.04) !important;
-      border-radius: 20px !important;
-    }
-    body.theme-client-rose label {
-      color: #16110e !important;
-      font-size: 0.82rem !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.04em !important;
-    }
-    body.theme-client-rose input, 
-    body.theme-client-rose select, 
-    body.theme-client-rose textarea {
-      background: #fffcf9 !important;
-      border: 1.5px solid #d4c4b7 !important;
-      color: #16110e !important;
-      font-size: 16px !important; /* Previne auto-zoom no iOS/Android */
-      font-weight: 500 !important;
-      border-radius: 12px !important;
-      padding: 14px 16px !important;
-    }
-    body.theme-client-rose input:focus, 
-    body.theme-client-rose select:focus, 
-    body.theme-client-rose textarea:focus {
-      background: #ffffff !important;
-      border-color: #c04b6b !important;
-      box-shadow: 0 0 0 4px rgba(192, 75, 107, 0.15) !important;
-    }
-
-    /* Envio de Arquivos / Fotos Rosé */
-    body.theme-client-rose .media-preview-box,
-    body.theme-client-rose .media-preview-box-sm {
-      background: #fdf5f7 !important;
-      border-color: #e5b8c4 !important;
-      border-radius: 14px !important;
-    }
-    body.theme-client-rose .btn-file-select,
-    body.theme-client-rose .btn-file-select-sm,
-    body.theme-client-rose label[for="cover-file-input"] {
-      background: #fdf5f7 !important;
-      border: 1.5px dashed #e5b8c4 !important;
-      color: #c04b6b !important;
-      font-weight: 700 !important;
-      font-size: 0.85rem !important;
-      border-radius: 12px !important;
-      padding: 12px 18px !important;
-      transition: all 0.2s ease !important;
-    }
-    body.theme-client-rose .btn-file-select:hover,
-    body.theme-client-rose .btn-file-select-sm:hover {
-      background: #f8e6ea !important;
-      border-color: #c04b6b !important;
-    }
-    body.theme-client-rose .input-url-fallback,
-    body.theme-client-rose .svc-photo {
-      background: #ffffff !important;
-      border: 1.5px solid #d4c4b7 !important;
-      color: #16110e !important;
-      font-size: 0.85rem !important;
-      border-radius: 12px !important;
-    }
-
-    /* Ocultar obrigatoriamente campos de URL bruta no modo cliente */
-    html.is-client-mode .input-url-fallback,
-    body.is-client-mode .input-url-fallback,
-    html.is-client-mode .svc-photo,
-    body.is-client-mode .svc-photo,
-    html.is-client-mode .admin-only-field,
-    body.is-client-mode .admin-only-field {
-      display: none !important;
-    }
-
-    /* Botão de Remover Campo Opcional em Pílula Rosé */
-    .field-header-row {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 8px !important;
-      flex-wrap: nowrap !important;
-      width: 100% !important;
-    }
-    .btn-remove-field {
-      background: #fdf5f7 !important;
-      border: 1.5px solid #f0c2cd !important;
-      color: #c04b6b !important;
-      font-size: 0.78rem !important;
-      font-weight: 700 !important;
-      padding: 4px 12px !important;
-      border-radius: 100px !important;
-      cursor: pointer !important;
-      transition: all 0.2s ease !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 4px !important;
-      white-space: nowrap !important;
-      flex-shrink: 0 !important;
-    }
-    .btn-remove-field:hover {
-      background: #c04b6b !important;
-      color: #ffffff !important;
-      border-color: #c04b6b !important;
-    }
-
-    /* ── CARDS COLAPSÁVEIS (ACCORDION UX DAS 3 SEÇÕES PRINCIPAIS) ── */
-    .accordion-card {
-      background: #ffffff !important;
-      border: 1.5px solid #e6dcd3 !important;
-      border-radius: 20px !important;
-      margin-bottom: 18px !important;
-      overflow: hidden !important;
-      box-shadow: 0 10px 30px rgba(192, 75, 107, 0.04) !important;
-      transition: box-shadow 0.25s ease, border-color 0.25s ease !important;
-    }
-    .accordion-header {
-      padding: 18px 24px !important;
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      cursor: pointer !important;
-      user-select: none !important;
-      background: #ffffff !important;
-      transition: background 0.2s ease !important;
-    }
-    .accordion-header:hover {
-      background: #fdfaf7 !important;
-    }
-    .accordion-header-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .accordion-header-icon {
-      font-size: 1.4rem;
-    }
-    .accordion-header-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.18rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-    .accordion-header-sub {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-    .accordion-arrow {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: #fdf5f7;
-      border: 1px solid #e5b8c4;
-      color: #c04b6b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 800;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s, color 0.2s;
-      flex-shrink: 0;
-    }
-    .accordion-card.is-open .accordion-arrow {
-      transform: rotate(180deg);
-      background: #c04b6b;
-      border-color: #c04b6b;
-      color: #ffffff;
-    }
-    .accordion-content {
-      display: none !important;
-      padding: 24px;
-      border-top: 1.5px solid #f0e6df;
-    }
-    .accordion-card.is-open .accordion-content {
-      display: block !important;
-      animation: accordionFade 0.25s ease;
-    }
-    @keyframes accordionFade {
-      from { opacity: 0; transform: translateY(-4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── MINI-SANFONA DE PROCEDIMENTOS (LARGURA TOTAL, FUNDO BRANCO E ALTO CONSTRASTE) ── */
-    .svc-accordion-item {
-      border: 1.5px solid #e6dcd3 !important;
-      border-radius: 18px !important;
-      margin-bottom: 16px !important;
-      overflow: hidden !important;
-      background: #ffffff !important;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
-      transition: all 0.2s ease !important;
-    }
-    .svc-accordion-header {
-      padding: 16px 20px !important;
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      cursor: pointer !important;
-      background: #ffffff !important;
-      transition: background 0.2s ease !important;
-    }
-    .svc-accordion-header:hover {
-      background: #fdf5f7 !important;
-    }
-    .svc-summary-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .svc-summary-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-weight: 700;
-      font-size: 1.08rem;
-      color: var(--text);
-    }
-    .svc-summary-price {
-      background: #fdf5f7;
-      color: #c04b6b;
-      border: 1px solid #e5b8c4;
-      padding: 4px 12px;
-      border-radius: 100px;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-    .btn-edit-badge-wrap {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #c04b6b;
-      background: #fdf5f7;
-      border: 1px solid #e5b8c4;
-      padding: 6px 14px;
-      border-radius: 100px;
-      transition: all 0.25s ease;
-    }
-    .svc-accordion-item.is-open .btn-edit-badge-wrap {
-      background: #c04b6b;
-      border-color: #c04b6b;
-      color: #ffffff;
-    }
-    .svc-chevron-icon {
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .svc-accordion-item.is-open .svc-chevron-icon {
-      transform: rotate(180deg);
-    }
-    .svc-accordion-content {
-      display: none;
-      padding: 20px 18px 16px 18px !important;
-      border-top: 1.5px solid #f0e6df !important;
-      background: #ffffff !important; /* Fundo limpo Warm White idêntico a Meus Dados */
-    }
-    .svc-accordion-item.is-open .svc-accordion-content {
-      display: block;
-      animation: accordionFade 0.2s ease;
-    }
-    .svc-accordion-item.is-open .svc-accordion-content {
-      display: block;
-      animation: accordionFade 0.2s ease;
-    }
-
-    /* Barra Flutuante de Salvar em Bloco Translúcido Rosé */
-    body.theme-client-rose .bottom-bar,
-    html.is-client-mode .bottom-bar {
-      background: rgba(248, 245, 241, 0.88) !important;
-      backdrop-filter: blur(16px) !important;
-      -webkit-backdrop-filter: blur(16px) !important;
-      border-top: 1px solid #d4c4b7 !important;
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05) !important;
-      padding: 12px 20px !important;
-    }
-
-    body.theme-client-rose .btn-save,
-    html.is-client-mode .btn-save {
-      background: linear-gradient(135deg, #c04b6b, #a33753) !important;
-      color: #ffffff !important;
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
-      font-weight: 700 !important;
-      font-size: 0.95rem !important;
-      letter-spacing: 0.02em !important;
-      padding: 14px 28px !important;
-      border-radius: 100px !important;
-      border: none !important;
-      box-shadow: 0 6px 20px rgba(192, 75, 107, 0.35) !important;
-      transition: all 0.25s ease !important;
-    }
-
-    body.theme-client-rose .btn-save:hover,
-    html.is-client-mode .btn-save:hover {
-      transform: translateY(-2px) !important;
-      box-shadow: 0 8px 25px rgba(192, 75, 107, 0.45) !important;
-    }
-
-    /* Modal de Sucesso Rosé */
-    body.theme-client-rose .success-modal-card {
-      background: #ffffff !important;
-      border: 1px solid #d4c4b7 !important;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
-      border-radius: 24px !important;
-    }
-    body.theme-client-rose .success-icon-badge {
-      background: #fdf5f7 !important;
-      border: 1.5px solid #e5b8c4 !important;
-      box-shadow: 0 0 20px rgba(192, 75, 107, 0.15) !important;
-    }
-    body.theme-client-rose .success-icon-badge svg {
-      stroke: #c04b6b !important;
-    }
-    body.theme-client-rose .success-modal-title {
-      font-family: 'Playfair Display', Georgia, serif !important;
-      color: #16110e !important;
-      font-weight: 700 !important;
-    }
-    body.theme-client-rose .success-modal-text {
-      color: #5c4e46 !important;
-    }
-    body.theme-client-rose .btn-modal-view {
-      background: linear-gradient(135deg, #c04b6b, #a33753) !important;
-      color: #ffffff !important;
-      border-radius: 100px !important;
-      font-weight: 700 !important;
-      box-shadow: 0 6px 20px rgba(192, 75, 107, 0.3) !important;
-    }
-    body.theme-client-rose .btn-modal-close {
-      background: transparent !important;
-      border: 1px solid #d4c4b7 !important;
-      color: #5c4e46 !important;
-      border-radius: 100px !important;
-    }
-    body.theme-client-rose .btn-modal-close:hover {
-      background: #f5ede6 !important;
-      color: #16110e !important;
-    }
-
-    /* ── RESPONSIVIDADE MOBILE FULL (< 680px) ── */
-    @media (max-width: 680px) {
-      .editor-container {
-        padding: 0 12px !important;
-        margin: 16px auto !important;
-        max-width: 100% !important;
-      }
-      .editor-title {
-        font-family: 'Playfair Display', Georgia, serif !important;
-        font-size: 1.7rem !important;
-      }
-      .editor-subtitle {
-        font-size: 0.85rem !important;
-        margin-bottom: 20px !important;
-      }
-      .form-grid {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-      }
-      .form-group.full-width {
-        grid-column: span 1 !important;
-      }
-      input, select, textarea {
-        font-size: 16px !important; /* Previne auto-zoom no iOS/Android */
-        padding: 14px 14px !important;
-        border-radius: 12px !important;
-      }
-      .accordion-card {
-        border-radius: 16px !important;
-        margin-bottom: 14px !important;
-      }
-      .accordion-header {
-        padding: 16px 14px !important;
-      }
-      .accordion-header-title {
-        font-size: 1rem !important;
-      }
-      .accordion-header-sub {
-        font-size: 0.78rem !important;
-      }
-      .accordion-content {
-        padding: 16px 12px !important;
-      }
-      .svc-accordion-item {
-        border-radius: 14px !important;
-        margin-bottom: 12px !important;
-      }
-      .svc-accordion-header {
-        padding: 14px 12px !important;
-        gap: 8px !important;
-      }
-      .svc-summary-left {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 4px !important;
-        flex: 1 !important;
-      }
-      .svc-summary-title {
-        font-size: 0.98rem !important;
-        word-break: break-word !important;
-      }
-      .svc-summary-price {
-        font-size: 0.82rem !important;
-        padding: 3px 10px !important;
-      }
-    }
-
-    /* ── BANNER DO LINK MÁGICO NO MODO ADMIN ── */
-    .magic-link-banner {
-      background: linear-gradient(135deg, rgba(229, 169, 184, 0.12), rgba(138, 126, 247, 0.1));
-      border: 1px solid rgba(229, 169, 184, 0.3);
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .magic-link-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .magic-link-input-row {
-      display: flex;
-      gap: 10px;
-    }
-    .btn-copy-magic-link {
-      background: var(--primary);
-      color: #000;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s;
-    }
-    .btn-copy-magic-link:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
-    }
-
-    /* ── TELA DE ACESSO NEGADO / LINK INVÁLIDO ── */
-    .denied-card {
-      max-width: 480px;
-      margin: 80px auto;
-      background: #ffffff;
-      border: 1px solid #f2e2e5;
-      border-radius: 24px;
-      padding: 40px 32px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(180, 140, 150, 0.15);
-    }
-    .denied-icon {
-      font-size: 3rem;
-      margin-bottom: 16px;
-    }
-    .denied-text {
-      color: #8c7a76;
-      font-size: 0.92rem;
-      line-height: 1.6;
+      color: #16110e;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- TELA DE CARREGAMENTO INICIAL (LOADING OVERLAY ROSÉ) -->
-  <div id="client-editor-loader" class="client-editor-loader">
-    <div class="loader-inner-box">
+  <!-- LOADING OVERLAY -->
+  <div id="v2-loader" class="v2-loader">
+    <div class="loader-box">
       <div class="loader-logo">Lash<em>Menu</em></div>
-      <div class="loader-spinner"></div>
-      <span class="loader-text">Carregando seu catálogo...</span>
+      <div class="loader-spin"></div>
+      <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Carregando seu catálogo V2...</span>
     </div>
   </div>
 
   <!-- HEADER -->
-  <header class="admin-header">
+  <header class="v2-header">
     <div style="display: flex; align-items: center; gap: 10px;">
       <a href="#" class="brand-logo-rose">Lash<em>Menu</em></a>
       <span class="header-tag-rose">Personalização</span>
+      <span class="v2-badge-v2">V2</span>
     </div>
-    <a href="./" class="btn-back admin-only-field" id="btn-admin-back">
+    <a href="./" class="v2-btn-back" id="btn-admin-back">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
       <span>Voltar ao Painel</span>
     </a>
   </header>
 
-  <div class="editor-container" id="main-editor-container">
-    <h1 class="editor-title" id="designer-title">Editar Catálogo</h1>
-    <p class="editor-subtitle" id="designer-subtitle">Gerencie as informações gerais e a lista de procedimentos de cílios da cliente.</p>
+  <div class="v2-container">
 
-    <!-- MENSAGENS DE STATUS -->
-    <div id="status-box" class="status-msg"></div>
+    <!-- TÍTULO DA PÁGINA (ESTILO ORIGINAL LASHMENU) -->
+    <div class="v2-page-title-box">
+      <h1 class="v2-page-greeting" id="v2-greeting">✨ Olá!</h1>
+      <p class="v2-page-sub" id="v2-page-sub">Altere seus preços, fotos e dados a qualquer momento de forma fácil.</p>
+    </div>
 
-    <!-- SEÇÃO 1: INFORMAÇÕES GERAIS (ACCORDION) -->
-    <section class="editor-section accordion-card is-open" id="acc-section-info">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        <div class="accordion-header-info">
-          <span class="accordion-header-icon">👤</span>
-          <div>
-            <div class="accordion-header-title">Meus Dados & Contatos</div>
-            <div class="accordion-header-sub">Nome, WhatsApp, Instagram e Localização</div>
-          </div>
+    <!-- SEÇÃO 1: SEUS SERVIÇOS (LISTA LASHAGENDA) -->
+    <div class="v2-card">
+      <div class="v2-card-header-banner">
+        <div class="v2-card-header-title">
+          <span>✨ Seus Serviços</span>
         </div>
-        <span class="accordion-arrow">▼</span>
+        <span class="v2-pill-count" id="v2-service-count">0 cadastrados</span>
       </div>
-      <div class="accordion-content">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="client-name">Nome da Lash Designer</label>
-            <input type="text" id="client-name" required placeholder="Ex: Mariana Alves">
-          </div>
-          <div class="form-group admin-only-field">
-            <label for="client-slug">Slug do Link (subdomínio)</label>
-            <input type="text" id="client-slug" required placeholder="Ex: marianaalves">
-          </div>
-          <div class="form-group">
-            <label for="client-whatsapp">WhatsApp (com DDD)</label>
-            <input type="text" id="client-whatsapp" required placeholder="Ex: 62982244466">
-          </div>
-          <div class="form-group">
-            <label for="client-instagram">Instagram (usuário)</label>
-            <input type="text" id="client-instagram" placeholder="Ex: @marianaalves.lash">
-          </div>
-          <div class="form-group full-width">
-            <label for="client-location">Localização / Endereço</label>
-            <input type="text" id="client-location" placeholder="Ex: Setor Oeste, Goiânia">
-          </div>
-          <div class="form-group admin-only-field">
-            <label for="client-model">Modelo do Layout</label>
-            <select id="client-model">
-              <option value="glamour">Glamour</option>
-              <option value="harmonia">Harmonia</option>
-              <option value="classico">Clássico</option>
-            </select>
-          </div>
-          <div class="form-group admin-only-field">
-            <label for="client-color">Tema de Cor</label>
-            <select id="client-color">
-              <option value="rose">Rosé</option>
-              <option value="midnight">Midnight</option>
-            </select>
-          </div>
-          <div class="form-group full-width">
-            <label for="client-phrase">Frase da Capa (Hero Phrase)</label>
-            <textarea id="client-phrase" placeholder="Ex: Olhar sofisticado com a técnica perfeita para realçar sua beleza natural."></textarea>
-          </div>
+      <div class="v2-card-body">
+        
+        <!-- BUSCA DE SERVIÇOS -->
+        <div class="v2-search-box">
+          <svg class="v2-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="v2-search-input" class="v2-input v2-search-input" placeholder="Buscar serviço por nome..." oninput="filterV2Services(this.value)">
+        </div>
+
+        <!-- LISTA DE CARDS COMPACTOS -->
+        <div id="v2-services-list" style="border: 1px solid var(--border); border-radius: 14px; overflow: hidden;">
+          <!-- Inserido dinamicamente via JS -->
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SEÇÃO 2: FORMULÁRIO DE ADIÇÃO / EDIÇÃO DO SERVIÇO -->
+    <div class="v2-card" id="v2-service-form-card">
+      <div class="v2-card-header-banner" style="background: linear-gradient(135deg, #a33854 0%, #c04b6b 100%);">
+        <div class="v2-card-header-title" id="v2-form-title">
+          <span>✨ Novo Serviço</span>
         </div>
       </div>
-    </section>
+      <div class="v2-card-body">
+        
+        <form id="v2-service-form" onsubmit="handleSaveServiceForm(event)">
+          <div class="v2-form-grid">
 
-    <!-- SEÇÃO 2: FOTO OU VÍDEO DE CAPA (ACCORDION) -->
-    <section class="editor-section accordion-card" id="acc-section-cover">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        <div class="accordion-header-info">
-          <span class="accordion-header-icon">📸</span>
-          <div>
-            <div class="accordion-header-title">Foto ou Vídeo da Capa</div>
-            <div class="accordion-header-sub">Mídia principal que aparece no topo do seu catálogo</div>
-          </div>
-        </div>
-        <span class="accordion-arrow">▼</span>
-      </div>
-      <div class="accordion-content">
-        <div class="form-group full-width">
-          <div class="media-upload-picker">
-            <div class="media-preview-box" id="cover-preview-container">
-              <img id="cover-preview-img" src="" alt="Prévia da capa" class="media-preview-el" style="display:none;">
-              <video id="cover-preview-video" src="" autoplay muted loop playsinline class="media-preview-el" style="display:none;"></video>
-              <span id="cover-preview-placeholder" class="media-preview-placeholder">Nenhuma mídia selecionada</span>
+            <div class="v2-form-group">
+              <label class="v2-label">NOME DO SERVIÇO <span class="v2-label-req">*</span></label>
+              <input type="text" id="v2-svc-name" class="v2-input" placeholder="Ex: Volume Russo, Efeito Boneca..." required oninput="updateV2Preview()">
             </div>
-            <div class="media-upload-controls">
-              <label class="btn-file-select" for="cover-file-input">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                <span>Escolher do Celular / PC</span>
-              </label>
-              <input type="file" id="cover-file-input" accept="image/*,video/*" style="display: none;">
-              <input type="url" id="client-cover-url" placeholder="Ou cole a URL direta da foto/vídeo..." class="input-url-fallback">
+
+            <div class="v2-form-row">
+              <div class="v2-form-group">
+                <label class="v2-label">PREÇO (R$) <span class="v2-label-req">*</span></label>
+                <input type="text" id="v2-svc-price" class="v2-input" placeholder="Ex: 100,00" required oninput="updateV2Preview()">
+              </div>
+              <div class="v2-form-group">
+                <label class="v2-label">DURAÇÃO (MIN) <span class="v2-label-req">*</span></label>
+                <input type="text" id="v2-svc-duration" class="v2-input" placeholder="Ex: 60 min ou 1h30" required oninput="updateV2Preview()">
+              </div>
+            </div>
+
+            <!-- TOGGLE DADOS OPCIONAIS -->
+            <div>
+              <button type="button" class="v2-btn-toggle-details" onclick="toggleV2OptionalFields()">
+                <span id="v2-toggle-arrow">∨</span>
+                <span id="v2-toggle-text">Adicionar mais detalhes (opcional)</span>
+              </button>
+            </div>
+
+            <!-- BLOCO DE CAMPOS OPCIONAIS -->
+            <div id="v2-optional-fields" style="display: none;" class="v2-form-grid">
+
+              <div class="v2-form-group">
+                <div class="v2-label">
+                  <span>CATEGORIA (SUBTÍTULO)</span>
+                  <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-category')">✕ Remover</button>
+                </div>
+                <input type="text" id="v2-svc-category" class="v2-input" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
+              </div>
+
+              <div class="v2-form-row">
+                <div class="v2-form-group">
+                  <div class="v2-label">
+                    <span>MANUTENÇÃO</span>
+                    <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-maintenance')">✕ Remover</button>
+                  </div>
+                  <input type="text" id="v2-svc-maintenance" class="v2-input" placeholder="Ex: 60,00 (até 20 dias)">
+                </div>
+                <div class="v2-form-group">
+                  <div class="v2-label">
+                    <span>EFEITO VISUAL</span>
+                    <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-effect')">✕ Remover</button>
+                  </div>
+                  <input type="text" id="v2-svc-effect" class="v2-input" placeholder="Ex: Marcante e Alongado">
+                </div>
+              </div>
+
+              <div class="v2-form-group">
+                <label class="v2-label">FOTO DO SERVIÇO</label>
+                <div class="media-upload-picker-sm">
+                  <div class="media-preview-box-sm">
+                    <img id="v2-svc-preview-img" class="media-preview-el-sm" src="" alt="Prévia" style="display:none;">
+                    <span id="v2-svc-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+                  </div>
+                  <div class="media-upload-controls-sm">
+                    <label class="btn-file-select-sm">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                      <span>Escolher Foto</span>
+                      <input type="file" id="v2-svc-file-input" accept="image/*" style="display: none;" onchange="handleV2ServicePhotoSelect(this)">
+                    </label>
+                    <input type="url" id="v2-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." oninput="updateV2Preview()" style="font-size: 0.85rem;">
+                  </div>
+                </div>
+              </div>
+
+              <div class="v2-form-group">
+                <label class="v2-label">DESCRIÇÃO</label>
+                <textarea id="v2-svc-desc" class="v2-textarea" placeholder="Ex: Aplicação minuciosa com fios sintéticos de alta qualidade..."></textarea>
+              </div>
+
+            </div>
+
+            <!-- BARRAS DE AÇÃO DO FORMULÁRIO -->
+            <div style="display: flex; gap: 10px; margin-top: 8px;">
+              <button type="button" id="v2-btn-cancel-edit" class="v2-btn-secondary" style="display: none;" onclick="resetV2Form()">Cancelar Edição</button>
+              <button type="submit" id="v2-btn-submit-svc" class="v2-btn-primary">
+                <span>+ Adicionar Serviço à Lista</span>
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- SEÇÃO 3: MEUS DADOS -->
+    <div class="v2-card v2-accordion-card" id="v2-card-general-info">
+      <div class="v2-card-header-banner v2-accordion-header" onclick="toggleV2Accordion('v2-card-general-info')">
+        <div class="v2-card-header-title">
+          <span>👤 Meus Dados</span>
+        </div>
+        <span style="font-size: 0.9rem;">▼</span>
+      </div>
+      <div class="v2-card-body v2-accordion-body">
+        <div class="v2-form-grid">
+
+          <!-- FOTO DA CAPA NO TOPO DE MEUS DADOS -->
+          <div class="v2-form-group">
+            <label class="v2-label">FOTO DA CAPA</label>
+            <div class="media-upload-picker-sm">
+              <div class="media-preview-box-sm" style="width: 72px; height: 72px;">
+                <img id="v2-cover-preview-img" class="media-preview-el-sm" src="" alt="Prévia da Capa" style="display:none;">
+                <span id="v2-cover-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+              </div>
+              <div class="media-upload-controls-sm">
+                <label class="btn-file-select-sm">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span>Escolher Foto</span>
+                  <input type="file" id="v2-cover-file-input" accept="image/*,video/*" style="display: none;" onchange="handleV2CoverPhotoSelect(this)">
+                </label>
+                <input type="url" id="v2-client-cover-url" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto/vídeo de capa..." style="font-size: 0.85rem;">
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SEÇÃO 3: PROCEDIMENTOS / SERVIÇOS (ACCORDION) -->
-    <section class="editor-section accordion-card is-open" id="acc-section-services">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        <div class="accordion-header-info">
-          <span class="accordion-header-icon">✨</span>
-          <div>
-            <div class="accordion-header-title">Meus Procedimentos & Tabela de Preços</div>
-            <div class="accordion-header-sub">Clique em qualquer procedimento abaixo para editar o valor ou foto</div>
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <label class="v2-label">Nome da Lash Designer</label>
+              <input type="text" id="v2-client-name" class="v2-input" placeholder="Ex: Gabriele Buginski">
+            </div>
+            <div class="v2-form-group">
+              <label class="v2-label">WhatsApp (com DDD)</label>
+              <input type="text" id="v2-client-whatsapp" class="v2-input" placeholder="Ex: (41) 98865-1722">
+            </div>
           </div>
-        </div>
-        <span class="accordion-arrow">▼</span>
-      </div>
-      <div class="accordion-content">
-        <div class="services-list" id="services-list-container">
-          <!-- Procedimentos dinâmicos injetados aqui -->
-        </div>
-        <button type="button" class="btn-add-service" id="btn-add-service-row">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          <span>Adicionar Novo Procedimento</span>
-        </button>
-      </div>
-    </section>
 
-    <!-- ZONA DE PERIGO (APENAS MODO ADMIN) -->
-    <section class="editor-section admin-only-field" style="border-color: rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.03);">
-      <div class="section-title" style="color: #ff6b6b; border-color: rgba(239, 68, 68, 0.2);">
-        <span>Zona de Perigo</span>
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <label class="v2-label">Instagram (@usuario)</label>
+              <input type="text" id="v2-client-instagram" class="v2-input" placeholder="Ex: _bygabibuginski">
+            </div>
+            <div class="v2-form-group">
+              <label class="v2-label">Localização / Endereço</label>
+              <input type="text" id="v2-client-location" class="v2-input" placeholder="Ex: Guaratuba - Paraná">
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">Frase da Capa (Hero Phrase)</label>
+            <input type="text" id="v2-client-phrase" class="v2-input" placeholder="Ex: ✨ Seu olhar, minha Arte!">
+          </div>
+
+        </div>
       </div>
-      <p style="font-size: 0.88rem; color: #a3958c; margin-bottom: 16px;">
-        Esta ação apagará permanentemente este catálogo, todas as configurações e a lista de procedimentos do banco de dados Supabase.
-      </p>
-      <button type="button" id="btn-delete-order" style="background: rgba(239, 68, 68, 0.12); border: 1px solid #ef4444; color: #ff8585; padding: 12px 20px; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
-        <span>Excluir Catálogo Definitivamente</span>
-      </button>
-    </section>
+    </div>
+
   </div>
 
-  <!-- BARRA DE SALVAR FLUTUANTE -->
-  <div class="bottom-bar">
-    <button type="button" class="btn-save" id="btn-save-catalog">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-      <span>Salvar Alterações ✨</span>
+  <!-- BARRA DE SALVAMENTO GERAL (STICKY FOOTER) -->
+  <div class="v2-sticky-footer">
+    <button type="button" class="v2-btn-save-all" onclick="saveAllV2Data()">
+      <span>💾 SALVAR TODAS AS ALTERAÇÕES ✨</span>
     </button>
   </div>
 
-  <!-- MODAL DE SUCESSO CENTRADO -->
-  <div class="success-modal-overlay" id="success-modal" style="display: none;">
+  <!-- MODAL POPUP PARA EDITAR SERVIÇO -->
+  <div class="success-modal-overlay" id="v2-edit-service-modal" style="display: none;">
+    <div class="success-modal-card" style="max-width: 520px; text-align: left; padding: 0; overflow: hidden; max-height: 90vh; display: flex; flex-direction: column; border-radius: 20px;">
+      
+      <div style="background: linear-gradient(135deg, #c04b6b 0%, #a33854 100%); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; color: #ffffff;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #ffffff; font-weight: 700; display: flex; align-items: center; gap: 8px;" id="v2-edit-modal-title">
+          ✏️ Editar Serviço
+        </h3>
+        <button type="button" onclick="closeV2EditModal()" style="background: rgba(255, 255, 255, 0.2); border: none; font-size: 1.1rem; cursor: pointer; color: #ffffff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">✕</button>
+      </div>
+
+      <form id="v2-edit-service-form" onsubmit="handleSaveEditedService(event)" style="padding: 20px; overflow-y: auto;">
+        <div class="v2-form-grid">
+
+          <div class="v2-form-group">
+            <label class="v2-label">NOME DO SERVIÇO <span class="v2-label-req">*</span></label>
+            <input type="text" id="v2-edit-svc-name" class="v2-input" placeholder="Ex: Volume Russo, Efeito Boneca..." required>
+          </div>
+
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <label class="v2-label">PREÇO (R$) <span class="v2-label-req">*</span></label>
+              <input type="text" id="v2-edit-svc-price" class="v2-input" placeholder="Ex: 100,00" required>
+            </div>
+            <div class="v2-form-group">
+              <label class="v2-label">DURAÇÃO (MIN) <span class="v2-label-req">*</span></label>
+              <input type="text" id="v2-edit-svc-duration" class="v2-input" placeholder="Ex: 60 min ou 1h30" required>
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <div class="v2-label">
+              <span>CATEGORIA (SUBTÍTULO)</span>
+              <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-edit-svc-category')">✕ Remover</button>
+            </div>
+            <input type="text" id="v2-edit-svc-category" class="v2-input" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
+          </div>
+
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <div class="v2-label">
+                <span>MANUTENÇÃO</span>
+                <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-edit-svc-maintenance')">✕ Remover</button>
+              </div>
+              <input type="text" id="v2-edit-svc-maintenance" class="v2-input" placeholder="Ex: 60,00 (até 20 dias)">
+            </div>
+            <div class="v2-form-group">
+              <div class="v2-label">
+                <span>EFEITO VISUAL</span>
+                <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-edit-svc-effect')">✕ Remover</button>
+              </div>
+              <input type="text" id="v2-edit-svc-effect" class="v2-input" placeholder="Ex: Marcante e Alongado">
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">FOTO DO SERVIÇO</label>
+            <div class="media-upload-picker-sm">
+              <div class="media-preview-box-sm">
+                <img id="v2-edit-svc-preview-img" class="media-preview-el-sm" src="" alt="Prévia" style="display:none;">
+                <span id="v2-edit-svc-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+              </div>
+              <div class="media-upload-controls-sm">
+                <label class="btn-file-select-sm">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span>Escolher Foto</span>
+                  <input type="file" id="v2-edit-svc-file-input" accept="image/*" style="display: none;" onchange="handleV2EditServicePhotoSelect(this)">
+                </label>
+                <input type="url" id="v2-edit-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." style="font-size: 0.85rem;">
+              </div>
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">DESCRIÇÃO</label>
+            <textarea id="v2-edit-svc-desc" class="v2-textarea" placeholder="Descrição do procedimento..."></textarea>
+          </div>
+
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+          <button type="button" class="v2-btn-secondary" style="flex: 1;" onclick="closeV2EditModal()">Cancelar</button>
+          <button type="submit" class="v2-btn-primary" style="flex: 2;">💾 Salvar Alterações</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE SUCESSO ELEGANTE -->
+  <div class="success-modal-overlay" id="v2-success-modal" style="display: none;">
     <div class="success-modal-card">
       <div class="success-icon-badge">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#25d366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c04b6b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
           <polyline points="22 4 12 14.01 9 11.01"></polyline>
         </svg>
       </div>
       <h2 class="success-modal-title">Alterações Salvas! ✨</h2>
-      <p class="success-modal-text" id="success-modal-desc">
-        O catálogo digital foi atualizado com sucesso no Supabase e as alterações já estão ativas no site oficial.
+      <p class="success-modal-text" id="v2-success-modal-desc">
+        Seu catálogo digital foi atualizado com sucesso e as alterações já estão ativas no seu site oficial.
       </p>
       <div class="success-modal-actions">
-        <a href="#" target="_blank" id="btn-view-live-catalog" class="btn-modal-view">
+        <a href="#" target="_blank" id="v2-btn-view-live-catalog" class="btn-modal-view">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           <span>Ver Catálogo Atualizado</span>
         </a>
-        <button type="button" class="btn-modal-close" onclick="closeSuccessModal()">
+        <button type="button" class="btn-modal-close" onclick="closeV2SuccessModal()">
           <span>Continuar Editando</span>
         </button>
       </div>
@@ -1389,156 +1074,29 @@
   <script src="../vendas/form/js/image-compressor.js?v=1.0"></script>
 
   <script>
-    // Recupera parâmetros da URL (suporta id, slug e token)
     const urlParams = new URLSearchParams(window.location.search);
     let orderId = urlParams.get('id');
     let clientSlug = urlParams.get('slug') || urlParams.get('c') || urlParams.get('p');
     const clientToken = urlParams.get('token') || urlParams.get('key') || urlParams.get('k');
 
-    // Detectar subdomínio da cliente (ex: jessicaoliveira.lashmenu.com/editar)
-    if (!clientSlug && !orderId) {
-      const host = window.location.hostname;
-      const parts = host.split('.');
-      if (parts.length >= 3 && parts[0] !== 'www' && parts[0] !== 'lashmenu-vendas' && !parts[0].includes('localhost') && !parts[0].includes('vercel')) {
-        clientSlug = parts[0].toLowerCase().trim();
-      }
+    if (!clientSlug && clientToken && clientToken.startsWith('sec_')) {
+      const parts = clientToken.split('_');
+      if (parts.length >= 2) clientSlug = parts[1];
     }
 
-    const isAdminAuth = sessionStorage.getItem('lash_admin_auth') === 'true';
-    const isClientMode = Boolean(clientToken || (clientSlug && !isAdminAuth));
+    let allServices = [];
+    let deletedServiceIds = [];
+    let editingIndex = null;
 
-    if (!isClientMode && !isAdminAuth && !clientToken) {
-      alert('Acesso restrito. Por favor, utilize seu link secreto de edição enviado no WhatsApp.');
-      window.location.replace('./');
-    }
-
-    // Elementos DOM
-    const inputName = document.getElementById('client-name');
-    const inputSlug = document.getElementById('client-slug');
-    const inputWhatsapp = document.getElementById('client-whatsapp');
-    const inputInstagram = document.getElementById('client-instagram');
-    const inputLocation = document.getElementById('client-location');
-    const inputCoverUrl = document.getElementById('client-cover-url');
-    const coverFileInput = document.getElementById('cover-file-input');
-    const coverPreviewImg = document.getElementById('cover-preview-img');
-    const coverPreviewVideo = document.getElementById('cover-preview-video');
-    const coverPreviewPlaceholder = document.getElementById('cover-preview-placeholder');
-
-    const selectModel = document.getElementById('client-model');
-    const selectColor = document.getElementById('client-color');
-    const textareaPhrase = document.getElementById('client-phrase');
-    const servicesListContainer = document.getElementById('services-list-container');
-    const btnAddService = document.getElementById('btn-add-service-row');
-    const btnSave = document.getElementById('btn-save-catalog');
-    const statusBox = document.getElementById('status-box');
-    const designerTitle = document.getElementById('designer-title');
-
-    let currentServices = [];
-
-    // Gerador determinístico de Token Mágico via SHA-256 (Paridade total com o Python)
-    async function generateClientToken(orderIdVal, slugVal) {
-      const cleanSlug = (slugVal || 'catalogo').toLowerCase().replace(/[^a-z0-9]/g, '');
-      const str = `${orderIdVal}_lashmenu_secret_salt_2026`;
-      const msgUint8 = new TextEncoder().encode(str);
-      const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
-      const hashArray = Array.from(new Uint8Array(hashBuffer));
-      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 6);
-      return `sec_${cleanSlug}_${hashHex}`;
-    }
-
-    // Controles visuais dos Accordions (Sanfonas)
-    window.toggleAccordion = function(headerEl) {
-      const card = headerEl.closest('.accordion-card');
-      if (card) {
-        card.classList.toggle('is-open');
-      }
-    };
-
-    window.toggleSvcAccordion = function(headerEl) {
-      const item = headerEl.closest('.svc-accordion-item');
-      if (item) {
-        const isOpen = item.classList.contains('is-open');
-        document.querySelectorAll('.svc-accordion-item').forEach(el => el.classList.remove('is-open'));
-        if (!isOpen) item.classList.add('is-open');
-      }
-    };
-
-    // Auxiliar de Prévia da Mídia de Capa
-    function updateCoverPreview(url, isVideo) {
-      if (!url) {
-        coverPreviewImg.style.display = 'none';
-        coverPreviewVideo.style.display = 'none';
-        coverPreviewPlaceholder.style.display = 'block';
-        return;
-      }
-
-      coverPreviewPlaceholder.style.display = 'none';
-      if (isVideo) {
-        coverPreviewImg.style.display = 'none';
-        coverPreviewVideo.src = url;
-        coverPreviewVideo.style.display = 'block';
-      } else {
-        coverPreviewVideo.style.display = 'none';
-        coverPreviewImg.src = url;
-        coverPreviewImg.style.display = 'block';
-      }
-    }
-
-    inputCoverUrl.addEventListener('input', () => {
-      const url = inputCoverUrl.value.trim();
-      const isVideo = url.toLowerCase().endsWith('.mp4') || url.toLowerCase().includes('video');
-      updateCoverPreview(url, isVideo);
-    });
-
-    // Evento de Seleção de Arquivo para a Capa (Celular / Computador)
-    coverFileInput.addEventListener('change', async (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-
-      const isVideo = file.type.startsWith('video/');
-      const tempUrl = URL.createObjectURL(file);
-      updateCoverPreview(tempUrl, isVideo);
-
-      showStatus('Enviando foto/vídeo de capa para o Supabase Storage...', 'success');
-      try {
-        let fileToUpload = file;
-        if (!isVideo && typeof window.compressImageFile === 'function') {
-          fileToUpload = await window.compressImageFile(file, { maxDimension: 1200, quality: 0.82 });
-        }
-
-        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : (isVideo ? 'mp4' : 'webp');
-        const path = `covers/cover_${orderId || 'client'}_${Date.now()}.${ext}`;
-
-        let publicUrl = null;
-        if (window.lashSupabase && window.lashSupabase.uploadFile) {
-          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
-        } else {
-          throw new Error('Supabase client não inicializado');
-        }
-
-        if (publicUrl) {
-          inputCoverUrl.value = publicUrl;
-          updateCoverPreview(publicUrl, isVideo);
-          showStatus('Mídia de capa enviada com sucesso! ✨', 'success');
-        }
-      } catch (err) {
-        showStatus('Erro ao enviar foto/vídeo de capa: ' + err.message, 'error');
-      }
-    });
-
-    function hideEditorLoader() {
-      const loader = document.getElementById('client-editor-loader');
+    function hideV2Loader() {
+      const loader = document.getElementById('v2-loader');
       if (loader) {
         loader.classList.add('is-hidden');
-        setTimeout(() => { loader.style.display = 'none'; }, 400);
+        setTimeout(() => { loader.style.display = 'none'; }, 350);
       }
     }
 
-    // Carrega dados iniciais do Supabase
-    async function initEditor() {
-      if (!isClientMode) {
-        showStatus('Buscando dados no Supabase...', 'success');
-      }
+    async function initEditorV2() {
       try {
         let queryUrl = '';
         if (orderId) {
@@ -1546,343 +1104,246 @@
         } else if (clientSlug) {
           queryUrl = `${SUPABASE_URL}/rest/v1/orders?slug=eq.${encodeURIComponent(clientSlug)}&select=*`;
         } else {
-          throw new Error('Nenhum identificador de catálogo fornecido.');
+          throw new Error('Nenhum identificador fornecido.');
         }
 
         const orderRes = await fetch(queryUrl, {
-          headers: {
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-          }
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
         });
-        if (!orderRes.ok) throw new Error('Erro ao buscar catálogo.');
+        if (!orderRes.ok) throw new Error('Erro ao buscar dados do catálogo.');
+
         const orders = await orderRes.json();
-        if (!orders || orders.length === 0) throw new Error('Catálogo não localizado no banco de dados.');
-        
+        if (!orders || orders.length === 0) throw new Error('Catálogo não localizado.');
+
         const order = orders[0];
         orderId = order.id;
+        window.currentOrderSlug = order.slug;
 
-        // Validação de Segurança por Token para Modo Cliente
-        const expectedToken = await generateClientToken(order.id, order.slug);
+        const isAdminAuth = sessionStorage.getItem('lash_admin_auth') === 'true';
+        const isClientMode = Boolean(clientToken || (clientSlug && !isAdminAuth));
 
         if (isClientMode) {
-          const isTokenValid = clientToken && (
-            clientToken === expectedToken || 
-            clientToken.startsWith(`sec_${order.slug.replace(/[^a-z0-9]/g, '')}`)
-          );
-
-          if (!isTokenValid) {
-            hideEditorLoader();
-            document.getElementById('main-editor-container').innerHTML = `
-              <div class="denied-card">
-                <div class="denied-icon">🔑</div>
-                <h1 class="denied-title">Link de Edição Inválido</h1>
-                <p class="denied-text">
-                  Por favor, utilize o link secreto exclusivo enviado no seu WhatsApp para acessar e editar o seu catálogo.
-                </p>
-              </div>
-            `;
-            return;
-          }
-
-          // Ativa o Tema Light Rosé e oculta itens administrativos
-          document.body.classList.add('theme-client-rose', 'is-client-mode');
-          document.title = `✨ Editar Meu Catálogo — ${order.client_name}`;
-
+          document.getElementById('v2-greeting').textContent = `✨ Olá, ${order.client_name.split(' ')[0]}!`;
+          document.getElementById('v2-page-sub').textContent = 'Altere seus preços, fotos e dados a qualquer momento de forma fácil.';
           const backBtn = document.getElementById('btn-admin-back');
           if (backBtn) backBtn.style.display = 'none';
-
-          const designerSub = document.getElementById('designer-subtitle');
-          if (designerSub) designerSub.textContent = 'Altere seus preços, fotos e dados a qualquer momento de forma fácil.';
-        } else if (isAdminAuth) {
-          // Banner com Link Mágico no Modo Admin
-          renderAdminMagicTokenBanner(order, expectedToken);
+        } else {
+          document.getElementById('v2-greeting').textContent = `Editar: ${order.client_name}`;
+          document.getElementById('v2-page-sub').textContent = 'Gerencie as informações gerais e a lista de procedimentos de cílios da cliente.';
         }
-        
-        // Preenche campos do formulário
-        inputName.value = order.client_name || '';
-        inputSlug.value = order.slug || '';
-        inputWhatsapp.value = order.whatsapp || '';
-        inputInstagram.value = order.instagram || '';
-        inputLocation.value = order.location || '';
-        inputCoverUrl.value = order.cover_media_url || '';
-        selectModel.value = order.model_id || 'glamour';
-        selectColor.value = order.color_id || 'midnight';
-        textareaPhrase.value = order.hero_phrase || '';
 
-        designerTitle.textContent = isClientMode ? `✨ Olá, ${order.client_name.split(' ')[0]}!` : `Editar: ${order.client_name}`;
-        updateCoverPreview(order.cover_media_url, order.cover_media_type === 'video');
+        document.getElementById('v2-client-name').value = order.client_name || '';
+        document.getElementById('v2-client-whatsapp').value = order.whatsapp || '';
+        document.getElementById('v2-client-instagram').value = order.instagram || '';
+        document.getElementById('v2-client-location').value = order.location || '';
+        document.getElementById('v2-client-phrase').value = order.hero_phrase || '';
+        if (document.getElementById('v2-select-model')) document.getElementById('v2-select-model').value = order.model_id || 'glamour';
+        if (document.getElementById('v2-select-color')) document.getElementById('v2-select-color').value = order.color_id || 'rose';
 
-        // 2. Busca Procedimentos Ativos
+        const coverUrl = order.cover_media_url || '';
+        document.getElementById('v2-client-cover-url').value = coverUrl;
+        const coverImgEl = document.getElementById('v2-cover-preview-img');
+        const coverPlaceholderEl = document.getElementById('v2-cover-preview-placeholder');
+        if (coverUrl) {
+          coverImgEl.src = coverUrl;
+          coverImgEl.style.display = 'block';
+          if (coverPlaceholderEl) coverPlaceholderEl.style.display = 'none';
+        } else {
+          coverImgEl.style.display = 'none';
+          if (coverPlaceholderEl) coverPlaceholderEl.style.display = 'block';
+        }
+
+        // Busca Serviços da Ordem
         const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${orderId}&order_index=gte.0&order=order_index.asc`, {
-          headers: {
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-          }
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
         });
-        
-        currentServices = servicesRes.ok ? await servicesRes.json() : [];
-        renderServicesList();
-        clearStatus();
+        allServices = servicesRes.ok ? await servicesRes.json() : [];
+        renderV2ServicesList(allServices);
+
       } catch (err) {
-        showStatus('Erro ao carregar catálogo: ' + err.message, 'error');
+        alert('Erro no Editor V2: ' + err.message);
       } finally {
-        hideEditorLoader();
+        hideV2Loader();
       }
     }
 
-    function renderAdminMagicTokenBanner(order, token) {
-      const container = document.getElementById('main-editor-container');
-      if (!container || document.getElementById('magic-link-banner')) return;
-      const magicUrl = `https://${order.slug}.lashmenu.com/editar?token=${token}`;
-      const banner = document.createElement('div');
-      banner.id = 'magic-link-banner';
-      banner.className = 'magic-link-banner';
-      banner.innerHTML = `
-        <div class="magic-link-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-          <span>Link Mágico de Edição da Cliente (Enviar no WhatsApp)</span>
-        </div>
-        <div class="magic-link-input-row">
-          <input type="text" readonly value="${magicUrl}" id="magic-token-url-input" style="font-family: monospace; font-size: 0.85rem;">
-          <button type="button" class="btn-copy-magic-link" onclick="copyMagicTokenUrl()">Copiar Link Mágico</button>
-        </div>
-      `;
-      container.insertBefore(banner, container.firstChild);
-    }
+    function renderV2ServicesList(list) {
+      const container = document.getElementById('v2-services-list');
+      document.getElementById('v2-service-count').textContent = `${list.length} cadastrado${list.length === 1 ? '' : 's'}`;
 
-    window.copyMagicTokenUrl = function() {
-      const input = document.getElementById('magic-token-url-input');
-      if (input) {
-        navigator.clipboard.writeText(input.value);
-        showStatus('Link Mágico de edição copiado com sucesso! ✨', 'success');
-      }
-    };
-
-    // Controles visuais dos Accordions (Sanfonas das 3 Seções Principais)
-    window.toggleAccordion = function(headerEl) {
-      const card = headerEl.closest('.accordion-card');
-      if (card) {
-        card.classList.toggle('is-open');
-      }
-    };
-
-    // Controles visuais dos Accordions (Mini-Sanfonas dos Procedimentos)
-    window.toggleSvcAccordion = function(headerEl) {
-      const item = headerEl.closest('.svc-accordion-item');
-      if (item) {
-        const isOpen = item.classList.contains('is-open');
-        document.querySelectorAll('.svc-accordion-item').forEach(el => el.classList.remove('is-open'));
-        if (!isOpen) item.classList.add('is-open');
-      }
-    };
-
-    window.updateAddFieldsBarVisibility = function(card) {
-      if (!card) return;
-      const bar = card.querySelector('.add-fields-bar');
-      if (!bar) return;
-      const chips = bar.querySelectorAll('.btn-add-spec-chip');
-      let hasVisibleChip = false;
-      chips.forEach(chip => {
-        if (chip.style.display !== 'none') {
-          hasVisibleChip = true;
-        }
-      });
-      bar.style.display = hasVisibleChip ? '' : 'none';
-    };
-
-    // Função global para ocultar/limpar ou exibir campos opcionais
-    window.toggleField = function(el, fgClass, inputClass, show) {
-      const card = el.closest('.service-item-card');
-      if (!card) return;
-      const fg = card.querySelector('.' + fgClass);
-      const input = card.querySelector('.' + inputClass);
-      const chipClass = fgClass.replace('fg-', 'btn-chip-');
-      const chip = card.querySelector('.' + chipClass);
-
-      if (show) {
-        if (fg) fg.style.display = '';
-        if (chip) chip.style.display = 'none';
-        if (input) input.focus();
-      } else {
-        if (fg) fg.style.display = 'none';
-        if (input) input.value = '';
-        if (chip) chip.style.display = '';
-      }
-      updateAddFieldsBarVisibility(card);
-    };
-
-    // Renderiza a lista de serviços do formulário com mini-cards Accordion
-    function renderServicesList() {
-      servicesListContainer.innerHTML = '';
-      currentServices.forEach((svc, index) => {
-        const row = document.createElement('div');
-        row.className = 'svc-accordion-item service-item-card';
-        const photoUrl = svc.photo_url || '';
-
-        const hasCategory = Boolean(svc.category && svc.category.trim());
-        const hasDuration = Boolean(svc.duration && svc.duration.trim());
-        const hasMaintenance = Boolean(svc.maintenance && svc.maintenance.trim());
-        const hasEffect = Boolean(svc.effect && svc.effect.trim());
-
-        const rawPrice = (svc.price || '').toString().trim();
-        const displayPrice = rawPrice ? (rawPrice.startsWith('R$') ? rawPrice : `R$ ${rawPrice}`) : 'Preço a consultar';
-
-        row.innerHTML = `
-          <div class="svc-accordion-header" onclick="toggleSvcAccordion(this)">
-            <div class="svc-summary-left">
-              <span class="svc-summary-title">${svc.name || 'Procedimento #' + (index + 1)}</span>
-              <span class="svc-summary-price">${displayPrice}</span>
-            </div>
-            <div class="btn-edit-badge-wrap">
-              <span>✏️ Editar</span>
-              <svg class="svc-chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </div>
+      if (!list || list.length === 0) {
+        container.innerHTML = `
+          <div style="padding: 32px; text-align: center; color: var(--text-muted);">
+            <p style="font-weight: 700; font-size: 1.05rem; color: var(--text-primary);">Nenhum serviço cadastrado ainda</p>
+            <p style="font-size: 0.85rem; margin-top: 4px;">Use o formulário abaixo para adicionar seu primeiro serviço.</p>
           </div>
-          <div class="svc-accordion-content">
-            <div class="service-card-header admin-only-field" style="margin-bottom: 16px;">
-              <span class="service-index-label">PROCEDIMENTO #${index + 1}</span>
-              <button type="button" class="btn-delete-service" onclick="removeServiceRow(${index})">
-                ✕ Excluir Procedimento
-              </button>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map((svc, idx) => {
+        const photo = svc.photo_url || '';
+        const price = (svc.price || '').toString().startsWith('R$') ? svc.price : `R$ ${svc.price || '0,00'}`;
+        const dur = svc.duration || '30 min';
+
+        return `
+          <div class="v2-service-item">
+            ${photo ? `<img src="${photo}" class="v2-service-thumb" alt="">` : `<div class="v2-service-thumb">✨</div>`}
+            <div class="v2-service-info">
+              <div class="v2-service-name">${svc.name || 'Sem nome'}</div>
+              <div class="v2-service-meta">
+                <span class="v2-meta-chip">⏱️ ${dur}</span>
+                <span class="v2-meta-chip">💰 ${price}</span>
+                ${svc.category ? `<span class="v2-meta-chip" style="color: var(--primary);">🏷️ ${svc.category}</span>` : ''}
+              </div>
             </div>
-            <div class="form-grid">
-              <div class="form-group">
-                <label>Nome do Procedimento</label>
-                <input type="text" class="svc-name" value="${svc.name || ''}" placeholder="Ex: Efeito Boneca, Gatinho..." required oninput="updateSvcHeaderTitle(this)">
-              </div>
-              <div class="form-group">
-                <label>Investimento (Preço)</label>
-                <input type="text" class="svc-price" value="${svc.price || ''}" placeholder="Ex: 100,00" required oninput="updateSvcHeaderPrice(this)">
-              </div>
-
-              <!-- CATEGORIA (SUBTÍTULO) -->
-              <div class="form-group fg-category" ${!hasCategory ? 'style="display:none;"' : ''}>
-                <div class="field-header-row">
-                  <label>Categoria (Subtítulo)</label>
-                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-category', 'svc-category', false)">✕ Remover</button>
-                </div>
-                <input type="text" class="svc-category" value="${svc.category || ''}" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
-              </div>
-
-              <!-- DURAÇÃO -->
-              <div class="form-group fg-duration" ${!hasDuration ? 'style="display:none;"' : ''}>
-                <div class="field-header-row">
-                  <label>Duração</label>
-                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-duration', 'svc-duration', false)">✕ Remover</button>
-                </div>
-                <input type="text" class="svc-duration" value="${svc.duration || ''}" placeholder="Ex: 1h30">
-              </div>
-
-              <!-- MANUTENÇÃO -->
-              <div class="form-group fg-maintenance" ${!hasMaintenance ? 'style="display:none;"' : ''}>
-                <div class="field-header-row">
-                  <label>Manutenção</label>
-                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', false)">✕ Remover</button>
-                </div>
-                <input type="text" class="svc-maintenance" value="${svc.maintenance || ''}" placeholder="Ex: 110,00 (até 20 dias)">
-              </div>
-
-              <!-- EFEITO VISUAL -->
-              <div class="form-group fg-effect" ${!hasEffect ? 'style="display:none;"' : ''}>
-                <div class="field-header-row">
-                  <label>Efeito Visual</label>
-                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-effect', 'svc-effect', false)">✕ Remover</button>
-                </div>
-                <input type="text" class="svc-effect" value="${svc.effect || ''}" placeholder="Ex: Volume marcante e alongado">
-              </div>
-
-              <!-- FOTO DO PROCEDIMENTO -->
-              <div class="form-group full-width">
-                <label>Foto do Procedimento</label>
-                <div class="media-upload-picker-sm">
-                  <div class="media-preview-box-sm">
-                    <img class="svc-preview-img media-preview-el-sm" src="${photoUrl}" alt="Prévia" ${!photoUrl ? 'style="display:none;"' : ''}>
-                    <span class="svc-preview-placeholder media-preview-placeholder" ${photoUrl ? 'style="display:none;"' : ''}>Sem Foto</span>
-                  </div>
-                  <div class="media-upload-controls-sm">
-                    <label class="btn-file-select-sm">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                      <span>Escolher Foto</span>
-                      <input type="file" class="svc-file-input" accept="image/*" style="display: none;" onchange="handleServicePhotoSelect(this, ${index})">
-                    </label>
-                    <input type="url" class="svc-photo input-url-fallback" value="${photoUrl}" placeholder="Ou cole a URL da foto..." oninput="updateServicePhotoPreview(this)">
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group full-width">
-                <label>Descrição do Procedimento</label>
-                <textarea class="svc-description" placeholder="Ex: Aplicação minuciosa com fios de alta tecnologia para um acabamento sofisticado.">${svc.description || ''}</textarea>
-              </div>
-
-              <!-- BARRA PARA RE-ADICIONAR CAMPOS OPCIONAIS -->
-              <div class="form-group full-width add-fields-bar">
-                <span class="add-fields-label">+ Adicionar/Ativar Campos Opcionais deste Procedimento:</span>
-                <button type="button" class="btn-add-spec-chip btn-chip-category" onclick="toggleField(this, 'fg-category', 'svc-category', true)" ${hasCategory ? 'style="display:none;"' : ''}>+ Categoria/Subtítulo</button>
-                <button type="button" class="btn-add-spec-chip btn-chip-duration" onclick="toggleField(this, 'fg-duration', 'svc-duration', true)" ${hasDuration ? 'style="display:none;"' : ''}>+ Duração</button>
-                <button type="button" class="btn-add-spec-chip btn-chip-maintenance" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', true)" ${hasMaintenance ? 'style="display:none;"' : ''}>+ Manutenção</button>
-                <button type="button" class="btn-add-spec-chip btn-chip-effect" onclick="toggleField(this, 'fg-effect', 'svc-effect', true)" ${hasEffect ? 'style="display:none;"' : ''}>+ Efeito Visual</button>
-              </div>
+            <div class="v2-item-actions">
+              <button type="button" class="v2-btn-action-edit" onclick="editV2Service(${idx})" title="Editar Serviço">
+                ✏️
+              </button>
+              <button type="button" class="v2-btn-action-delete" onclick="deleteV2Service(${idx})" title="Excluir Serviço">
+                🗑️
+              </button>
             </div>
           </div>
         `;
-        servicesListContainer.appendChild(row);
-        updateAddFieldsBarVisibility(row);
-      });
+      }).join('');
     }
 
-    window.updateSvcHeaderTitle = function(inputEl) {
-      const card = inputEl.closest('.svc-accordion-item');
-      if (card) {
-        const titleEl = card.querySelector('.svc-summary-title');
-        if (titleEl) titleEl.textContent = inputEl.value.trim() || 'Novo Procedimento';
+    function filterV2Services(term) {
+      const cleanTerm = term.toLowerCase().trim();
+      if (!cleanTerm) {
+        renderV2ServicesList(allServices);
+        return;
       }
-    };
+      const filtered = allServices.filter(s => (s.name || '').toLowerCase().includes(cleanTerm) || (s.category || '').toLowerCase().includes(cleanTerm));
+      renderV2ServicesList(filtered);
+    }
 
-    window.updateSvcHeaderPrice = function(inputEl) {
-      const card = inputEl.closest('.svc-accordion-item');
-      if (card) {
-        const priceEl = card.querySelector('.svc-summary-price');
-        if (priceEl) {
-          const val = inputEl.value.trim();
-          priceEl.textContent = val ? (val.startsWith('R$') ? val : `R$ ${val}`) : 'Preço a consultar';
-        }
-      }
-    };
+    function editV2Service(index) {
+      editingIndex = index;
+      const svc = allServices[index];
+      if (!svc) return;
 
-    // Handlers para foto do procedimento
-    window.updateServicePhotoPreview = function(inputEl) {
-      const card = inputEl.closest('.service-item-card');
-      const imgEl = card.querySelector('.svc-preview-img');
-      const placeholderEl = card.querySelector('.svc-preview-placeholder');
-      const val = inputEl.value.trim();
+      document.getElementById('v2-edit-modal-title').textContent = `✏️ Editar: ${svc.name}`;
+      document.getElementById('v2-edit-svc-name').value = svc.name || '';
+      document.getElementById('v2-edit-svc-price').value = svc.price || '';
+      document.getElementById('v2-edit-svc-duration').value = svc.duration || '';
+      document.getElementById('v2-edit-svc-category').value = svc.category || '';
+      document.getElementById('v2-edit-svc-maintenance').value = svc.maintenance || '';
+      document.getElementById('v2-edit-svc-effect').value = svc.effect || '';
+      document.getElementById('v2-edit-svc-desc').value = svc.description || '';
 
-      if (val) {
-        imgEl.src = val;
+      const photo = svc.photo_url || '';
+      document.getElementById('v2-edit-svc-photo').value = photo;
+      const imgEl = document.getElementById('v2-edit-svc-preview-img');
+      const placeholderEl = document.getElementById('v2-edit-svc-preview-placeholder');
+      if (photo) {
+        imgEl.src = photo;
         imgEl.style.display = 'block';
         if (placeholderEl) placeholderEl.style.display = 'none';
       } else {
         imgEl.style.display = 'none';
         if (placeholderEl) placeholderEl.style.display = 'block';
       }
-    };
 
-    window.handleServicePhotoSelect = async function(fileInput, index) {
+      openV2EditModal();
+    }
+
+    function openV2EditModal() {
+      const modal = document.getElementById('v2-edit-service-modal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeV2EditModal() {
+      const modal = document.getElementById('v2-edit-service-modal');
+      if (modal) modal.style.display = 'none';
+      editingIndex = null;
+    }
+
+    function handleSaveEditedService(e) {
+      e.preventDefault();
+      if (editingIndex === null) return;
+
+      const name = document.getElementById('v2-edit-svc-name').value.trim();
+      const price = document.getElementById('v2-edit-svc-price').value.trim();
+      const duration = document.getElementById('v2-edit-svc-duration').value.trim();
+      const category = document.getElementById('v2-edit-svc-category').value.trim();
+      const maintenance = document.getElementById('v2-edit-svc-maintenance').value.trim();
+      const effect = document.getElementById('v2-edit-svc-effect').value.trim();
+      const photo_url = document.getElementById('v2-edit-svc-photo').value.trim();
+      const description = document.getElementById('v2-edit-svc-desc').value.trim();
+
+      allServices[editingIndex] = {
+        ...allServices[editingIndex],
+        name, price, duration, category, maintenance, effect, photo_url, description
+      };
+
+      renderV2ServicesList(allServices);
+      closeV2EditModal();
+    }
+
+    function resetV2Form() {
+      editingIndex = null;
+      document.getElementById('v2-service-form').reset();
+      document.getElementById('v2-svc-preview-img').style.display = 'none';
+      document.getElementById('v2-svc-preview-placeholder').style.display = 'block';
+      document.getElementById('v2-svc-file-input').value = '';
+    }
+
+    async function handleV2CoverPhotoSelect(fileInput) {
       const file = fileInput.files[0];
       if (!file) return;
 
-      const card = fileInput.closest('.service-item-card');
-      const imgEl = card.querySelector('.svc-preview-img');
-      const placeholderEl = card.querySelector('.svc-preview-placeholder');
-      const urlInput = card.querySelector('.svc-photo');
+      const imgEl = document.getElementById('v2-cover-preview-img');
+      const placeholderEl = document.getElementById('v2-cover-preview-placeholder');
+      const urlInput = document.getElementById('v2-client-cover-url');
+
+      const isVideo = file.type.startsWith('video/');
+      const tempUrl = URL.createObjectURL(file);
+      imgEl.src = tempUrl;
+      imgEl.style.display = 'block';
+      if (placeholderEl) placeholderEl.style.display = 'none';
+      urlInput.value = tempUrl;
+
+      try {
+        let fileToUpload = file;
+        if (!isVideo && typeof window.compressImageFile === 'function') {
+          fileToUpload = await window.compressImageFile(file, { maxDimension: 1200, quality: 0.82 });
+        }
+
+        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : (isVideo ? 'mp4' : 'webp');
+        const path = `covers/cover_${orderId || 'v2'}_${Date.now()}.${ext}`;
+
+        let publicUrl = null;
+        if (window.lashSupabase && window.lashSupabase.uploadFile) {
+          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
+        }
+
+        if (publicUrl) {
+          urlInput.value = publicUrl;
+          imgEl.src = publicUrl;
+        }
+      } catch (err) {
+        console.error('Erro no upload da foto de capa V2:', err);
+      }
+    }
+
+    async function handleV2ServicePhotoSelect(fileInput) {
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const imgEl = document.getElementById('v2-svc-preview-img');
+      const placeholderEl = document.getElementById('v2-svc-preview-placeholder');
+      const urlInput = document.getElementById('v2-svc-photo');
 
       const tempUrl = URL.createObjectURL(file);
       imgEl.src = tempUrl;
       imgEl.style.display = 'block';
       if (placeholderEl) placeholderEl.style.display = 'none';
+      urlInput.value = tempUrl;
+      updateV2Preview();
 
-      showStatus(`Enviando foto do procedimento #${index + 1} para o Supabase...`, 'success');
       try {
         let fileToUpload = file;
         if (typeof window.compressImageFile === 'function') {
@@ -1890,248 +1351,238 @@
         }
 
         const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : 'webp';
-        const path = `services/svc_${orderId}_${index}_${Date.now()}.${ext}`;
+        const path = `services/svc_${orderId || 'v2'}_${Date.now()}.${ext}`;
 
         let publicUrl = null;
         if (window.lashSupabase && window.lashSupabase.uploadFile) {
           publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
-        } else {
-          throw new Error('Supabase client não inicializado');
         }
 
         if (publicUrl) {
           urlInput.value = publicUrl;
-          currentServices[index].photo_url = publicUrl;
-          showStatus(`Foto do procedimento #${index + 1} enviada com sucesso! ✨`, 'success');
+          imgEl.src = publicUrl;
+          updateV2Preview();
         }
       } catch (err) {
-        showStatus(`Erro ao enviar foto #${index + 1}: ` + err.message, 'error');
+        console.error('Erro no upload de foto V2:', err);
       }
-    };
-
-    // Adiciona uma linha em branco localmente
-    btnAddService.addEventListener('click', () => {
-      currentServices.push({
-        name: '',
-        category: '',
-        price: '',
-        duration: '',
-        maintenance: '',
-        effect: '',
-        photo_url: '',
-        recommendation: '',
-        description: ''
-      });
-      renderServicesList();
-    });
-
-    // Remove um serviço localmente da lista
-    window.removeServiceRow = function(index) {
-      if (confirm('Tem certeza que deseja remover este procedimento?')) {
-        currentServices.splice(index, 1);
-        renderServicesList();
-      }
-    };
-
-    // Lê os dados inseridos nas caixas de serviço atuais e atualiza o array
-    function serializeServices() {
-      const cards = document.querySelectorAll('.service-item-card');
-      const updatedList = [];
-      cards.forEach((card, idx) => {
-        updatedList.push({
-          order_id: orderId,
-          name: card.querySelector('.svc-name').value,
-          category: card.querySelector('.svc-category').value,
-          price: card.querySelector('.svc-price').value,
-          duration: card.querySelector('.svc-duration').value,
-          maintenance: card.querySelector('.svc-maintenance').value,
-          effect: card.querySelector('.svc-effect').value,
-          photo_url: card.querySelector('.svc-photo').value,
-          recommendation: card.querySelector('.svc-recommendation')?.value || '',
-          description: card.querySelector('.svc-description').value,
-          order_index: idx
-        });
-      });
-      return updatedList;
     }
 
-    // Salva tudo no Supabase
-    btnSave.addEventListener('click', async () => {
-      btnSave.disabled = true;
-      btnSave.textContent = 'Gravando...';
-      showStatus('Salvando alterações no banco de dados...', 'success');
+    function toggleV2OptionalFields() {
+      const box = document.getElementById('v2-optional-fields');
+      const isHidden = box.style.display === 'none';
+      box.style.display = isHidden ? 'flex' : 'none';
+      document.getElementById('v2-toggle-arrow').textContent = isHidden ? '∧' : '∨';
+      document.getElementById('v2-toggle-text').textContent = isHidden ? 'Ocultar dados opcionais' : 'Adicionar mais detalhes (opcional)';
+    }
+
+    function clearV2Field(id) {
+      document.getElementById(id).value = '';
+      updateV2Preview();
+    }
+
+    function updateV2Preview() {
+      const elTitle1 = document.getElementById('v2-prev-title-1');
+      if (!elTitle1) return;
+
+      const name = (document.getElementById('v2-svc-name')?.value || '').trim() || 'Nome do Serviço';
+      const price = (document.getElementById('v2-svc-price')?.value || '').trim() || '100,00';
+      const dur = (document.getElementById('v2-svc-duration')?.value || '').trim() || '60 min';
+      const photo = (document.getElementById('v2-svc-photo')?.value || '').trim();
+
+      if (document.getElementById('v2-prev-title-1')) document.getElementById('v2-prev-title-1').textContent = name;
+      if (document.getElementById('v2-prev-title-2')) document.getElementById('v2-prev-title-2').textContent = name;
+      if (document.getElementById('v2-prev-dur-1')) document.getElementById('v2-prev-dur-1').textContent = `⏱️ ${dur}`;
+      if (document.getElementById('v2-prev-dur-2')) document.getElementById('v2-prev-dur-2').textContent = `⏱️ ${dur}`;
+      if (document.getElementById('v2-prev-price-1')) document.getElementById('v2-prev-price-1').textContent = `💰 R$ ${price}`;
+      if (document.getElementById('v2-prev-price-2')) document.getElementById('v2-prev-price-2').textContent = `💰 R$ ${price}`;
+
+      const imgBox = document.getElementById('v2-prev-img-box');
+      if (imgBox) {
+        if (photo) {
+          imgBox.style.backgroundImage = `url('${photo}')`;
+          imgBox.style.backgroundSize = 'cover';
+          if (document.getElementById('v2-prev-img-tag')) document.getElementById('v2-prev-img-tag').style.display = 'none';
+        } else {
+          imgBox.style.backgroundImage = 'none';
+          if (document.getElementById('v2-prev-img-tag')) document.getElementById('v2-prev-img-tag').style.display = 'block';
+        }
+      }
+    }
+
+    function handleSaveServiceForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('v2-svc-name').value.trim();
+      const price = document.getElementById('v2-svc-price').value.trim();
+      const duration = document.getElementById('v2-svc-duration').value.trim();
+      const category = document.getElementById('v2-svc-category').value.trim();
+      const maintenance = document.getElementById('v2-svc-maintenance').value.trim();
+      const effect = document.getElementById('v2-svc-effect').value.trim();
+      const photo_url = document.getElementById('v2-svc-photo').value.trim();
+      const description = document.getElementById('v2-svc-desc').value.trim();
+
+      const newSvcData = {
+        name, price, duration, category, maintenance, effect, photo_url, description,
+        order_index: allServices.length
+      };
+
+      allServices.push(newSvcData);
+
+      renderV2ServicesList(allServices);
+      resetV2Form();
+    }
+
+    async function handleV2EditServicePhotoSelect(fileInput) {
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const imgEl = document.getElementById('v2-edit-svc-preview-img');
+      const placeholderEl = document.getElementById('v2-edit-svc-preview-placeholder');
+      const urlInput = document.getElementById('v2-edit-svc-photo');
+
+      const tempUrl = URL.createObjectURL(file);
+      imgEl.src = tempUrl;
+      imgEl.style.display = 'block';
+      if (placeholderEl) placeholderEl.style.display = 'none';
+      urlInput.value = tempUrl;
 
       try {
-        // 1. Atualiza Dados Gerais na tabela "orders"
-        const coverMediaUrl = inputCoverUrl.value.trim();
-        const coverMediaType = coverMediaUrl.toLowerCase().endsWith('.mp4') ? 'video' : 'image';
+        let fileToUpload = file;
+        if (typeof window.compressImageFile === 'function') {
+          fileToUpload = await window.compressImageFile(file, { maxDimension: 800, quality: 0.82 });
+        }
 
-        const orderUpdatePayload = {
-          client_name: inputName.value.trim(),
-          slug: inputSlug.value.trim().toLowerCase(),
-          whatsapp: inputWhatsapp.value.trim(),
-          instagram: inputInstagram.value.trim(),
-          location: inputLocation.value.trim(),
-          cover_media_url: coverMediaUrl,
-          cover_media_type: coverMediaType,
-          model_id: selectModel.value,
-          color_id: selectColor.value,
-          hero_phrase: textareaPhrase.value.trim()
+        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : 'webp';
+        const path = `services/svc_${orderId || 'v2'}_${Date.now()}.${ext}`;
+
+        let publicUrl = null;
+        if (window.lashSupabase && window.lashSupabase.uploadFile) {
+          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
+        }
+
+        if (publicUrl) {
+          urlInput.value = publicUrl;
+          imgEl.src = publicUrl;
+        }
+      } catch (err) {
+        console.error('Erro no upload de foto na edição V2:', err);
+      }
+    }
+
+    async function deleteV2Service(index) {
+      const svc = allServices[index];
+      if (!confirm(`Deseja realmente remover o procedimento "${svc.name}"?`)) return;
+
+      if (svc.id) {
+        deletedServiceIds.push(svc.id);
+      }
+
+      allServices.splice(index, 1);
+      renderV2ServicesList(allServices);
+    }
+
+    async function saveAllV2Data() {
+      const btnSave = document.querySelector('.v2-btn-save-all');
+      if (btnSave) {
+        btnSave.disabled = true;
+        btnSave.innerHTML = `<span>⏳ SALVANDO ALTERAÇÕES...</span>`;
+      }
+
+      try {
+        // 1. Grava Dados Gerais da Ordem
+        const orderPayload = {
+          client_name: document.getElementById('v2-client-name').value.trim(),
+          whatsapp: document.getElementById('v2-client-whatsapp').value.trim(),
+          instagram: document.getElementById('v2-client-instagram').value.trim(),
+          location: document.getElementById('v2-client-location').value.trim(),
+          hero_phrase: document.getElementById('v2-client-phrase').value.trim(),
+          cover_media_url: document.getElementById('v2-client-cover-url').value.trim()
         };
 
-        const orderRes = await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
-          method: 'PATCH',
-          headers: {
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(orderUpdatePayload)
-        });
+        if (document.getElementById('v2-select-model')) {
+          orderPayload.model_id = document.getElementById('v2-select-model').value;
+        }
+        if (document.getElementById('v2-select-color')) {
+          orderPayload.color_id = document.getElementById('v2-select-color').value;
+        }
 
-        if (!orderRes.ok) throw new Error('Erro ao salvar informações gerais');
+        if (orderId) {
+          await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
+            method: 'PATCH',
+            headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify(orderPayload)
+          });
+        }
 
-        // 2. Coleta Procedimentos do formulário
-        const servicesPayload = serializeServices();
+        // 1.5 Exclui serviços removidos do Supabase
+        if (deletedServiceIds.length > 0) {
+          for (const delId of deletedServiceIds) {
+            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${delId}`, {
+              method: 'DELETE',
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+            });
+          }
+          deletedServiceIds = [];
+        }
 
-        // 3. Atualiza ou insere procedimentos via PATCH/POST (evita duplicação e contorna limitações do DELETE via RLS)
-        for (let i = 0; i < servicesPayload.length; i++) {
-          const item = servicesPayload[i];
-          const existingSvc = currentServices[i];
+        // 2. Grava Serviços na tabela order_services
+        for (let i = 0; i < allServices.length; i++) {
+          const item = { ...allServices[i] };
+          item.order_index = i;
 
-          if (existingSvc && existingSvc.id) {
-            // Atualiza o procedimento existente mantendo o ID
-            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${existingSvc.id}`, {
+          if (item.id) {
+            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${item.id}`, {
               method: 'PATCH',
-              headers: {
-                'apikey': SUPABASE_ANON_KEY,
-                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                'Content-Type': 'application/json'
-              },
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
               body: JSON.stringify(item)
             });
           } else {
-            // Insere novo procedimento adicionado pelo usuário
-            await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
+            item.order_id = orderId;
+            const insertRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
               method: 'POST',
-              headers: {
-                'apikey': SUPABASE_ANON_KEY,
-                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                'Content-Type': 'application/json'
-              },
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=representation' },
               body: JSON.stringify(item)
             });
-          }
-        }
-
-        // 4. Se o usuário excluiu algum procedimento, marca os excedentes como inativos (order_index = -1)
-        if (currentServices.length > servicesPayload.length) {
-          for (let i = servicesPayload.length; i < currentServices.length; i++) {
-            const extraSvc = currentServices[i];
-            if (extraSvc && extraSvc.id) {
-              await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${extraSvc.id}`, {
-                method: 'PATCH',
-                headers: {
-                  'apikey': SUPABASE_ANON_KEY,
-                  'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ order_index: -1 })
-              });
+            if (insertRes.ok) {
+              const insertedItems = await insertRes.json();
+              if (insertedItems && insertedItems.length > 0) {
+                allServices[i].id = insertedItems[0].id;
+              }
             }
           }
         }
 
-        const clientName = inputName.value.trim();
-        const savedSlug = inputSlug.value.trim().toLowerCase();
-        const liveCatalogUrl = `/catalogo/?slug=${savedSlug}`;
-
-        document.getElementById('btn-view-live-catalog').href = liveCatalogUrl;
-        document.getElementById('success-modal-desc').textContent = `O catálogo digital de "${clientName}" foi atualizado com sucesso no banco de dados e as alterações já estão ativas no site oficial.`;
-
-        openSuccessModal();
+        openV2SuccessModal(clientSlug || (window.currentOrderSlug));
       } catch (err) {
-        showStatus('Erro ao salvar dados: ' + err.message, 'error');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        alert('Erro ao salvar no Supabase: ' + err.message);
       } finally {
-        btnSave.disabled = false;
-        btnSave.innerHTML = `
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-          <span>Salvar Alterações</span>
-        `;
-      }
-    });
-
-    // Auxiliares de Status e Modal de Sucesso
-    function openSuccessModal() {
-      document.getElementById('success-modal').style.display = 'flex';
-    }
-    window.closeSuccessModal = function() {
-      document.getElementById('success-modal').style.display = 'none';
-      initEditor();
-    };
-
-    function showStatus(msg, type) {
-      statusBox.textContent = msg;
-      statusBox.className = 'status-msg ' + type;
-    }
-    function clearStatus() {
-      statusBox.textContent = '';
-      statusBox.className = 'status-msg';
-    }
-    // Exclusão Total do Catálogo
-    const btnDelete = document.getElementById('btn-delete-order');
-    if (btnDelete) {
-      btnDelete.addEventListener('click', async () => {
-        const clientName = inputName.value.trim() || 'esta cliente';
-        const slug = inputSlug.value.trim();
-        const confirmed = confirm(`⚠️ ATENÇÃO: Deseja realmente excluir PERMANENTEMENTE o catálogo de "${clientName}" (${slug})?\n\nIsso apagará todos os dados cadastrados, fotos e lista de procedimentos do banco de dados.\n\nEsta ação NÃO pode ser desfeita.`);
-        if (!confirmed) return;
-
-        try {
-          btnDelete.disabled = true;
-          btnDelete.innerHTML = `<span>Excluindo do banco de dados...</span>`;
-
-          // 1. Exclui os serviços vinculados na tabela order_services
-          await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${encodeURIComponent(orderId)}`, {
-            method: 'DELETE',
-            headers: {
-              'apikey': SUPABASE_ANON_KEY,
-              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-            }
-          });
-
-          // 2. Exclui o pedido na tabela orders
-          const res = await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${encodeURIComponent(orderId)}`, {
-            method: 'DELETE',
-            headers: {
-              'apikey': SUPABASE_ANON_KEY,
-              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-            }
-          });
-
-          if (!res.ok) throw new Error('Erro ao deletar pedido.');
-
-          try {
-            sessionStorage.removeItem(`lash_cache_${slug}`);
-          } catch(e){}
-
-          alert(`✅ Catálogo de "${clientName}" excluído com sucesso do banco de dados.`);
-          window.location.replace('./');
-        } catch (err) {
-          console.error('Erro ao excluir:', err);
-          alert('Erro ao excluir o catálogo: ' + err.message);
-          btnDelete.disabled = false;
-          btnDelete.innerHTML = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
-            <span>Excluir Catálogo Definitivamente</span>
-          `;
+        if (btnSave) {
+          btnSave.disabled = false;
+          btnSave.innerHTML = `<span>💾 SALVAR TODAS AS ALTERAÇÕES ✨</span>`;
         }
-      });
+      }
     }
 
-    // Inicializa a página
-    initEditor();
+    function openV2SuccessModal(slug) {
+      const liveUrl = slug ? `https://${slug}.lashmenu.com` : '#';
+      const btnLive = document.getElementById('v2-btn-view-live-catalog');
+      if (btnLive) btnLive.href = liveUrl;
+      const modal = document.getElementById('v2-success-modal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeV2SuccessModal() {
+      const modal = document.getElementById('v2-success-modal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function toggleV2Accordion(cardId) {
+      const card = document.getElementById(cardId);
+      if (card) card.classList.toggle('is-closed');
+    }
+
+    // Inicializa
+    initEditorV2();
   </script>
 </body>
 

@@ -1085,6 +1085,7 @@
     }
 
     let allServices = [];
+    let deletedServiceIds = [];
     let editingIndex = null;
 
     function hideV2Loader() {
@@ -1472,6 +1473,10 @@
       const svc = allServices[index];
       if (!confirm(`Deseja realmente remover o procedimento "${svc.name}"?`)) return;
 
+      if (svc.id) {
+        deletedServiceIds.push(svc.id);
+      }
+
       allServices.splice(index, 1);
       renderV2ServicesList(allServices);
     }
@@ -1507,6 +1512,17 @@
             headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
             body: JSON.stringify(orderPayload)
           });
+        }
+
+        // 1.5 Exclui serviços removidos do Supabase
+        if (deletedServiceIds.length > 0) {
+          for (const delId of deletedServiceIds) {
+            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${delId}`, {
+              method: 'DELETE',
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+            });
+          }
+          deletedServiceIds = [];
         }
 
         // 2. Grava Serviços na tabela order_services
