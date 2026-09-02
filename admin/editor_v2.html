@@ -100,10 +100,10 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── HEADER ── */
+    /* ── HEADER (ESTILO ORIGINAL LASHMENU) ── */
     .v2-header {
       background: #ffffff;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #d4c4b7;
       padding: 14px 20px;
       display: flex;
       align-items: center;
@@ -111,18 +111,30 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
-    .v2-brand {
-      font-family: var(--font-title);
-      font-size: 1.5rem;
+    .brand-logo-rose {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.65rem;
       font-weight: 700;
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      color: #16110e;
+      text-decoration: none;
+      letter-spacing: 0.02em;
     }
-    .v2-brand em { color: var(--primary); font-style: italic; }
+    .brand-logo-rose em {
+      font-style: italic;
+      color: #c04b6b;
+    }
+    .header-tag-rose {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #5c4e46;
+      background: #f5ede6;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid #d4c4b7;
+    }
     .v2-badge-v2 {
       font-family: var(--font-body);
       font-size: 0.68rem;
@@ -144,6 +156,9 @@
       border-radius: 100px;
       text-decoration: none;
       transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
     .v2-btn-back:hover { background: #efe7e2; color: var(--text-primary); }
 
@@ -162,8 +177,8 @@
       margin-bottom: 4px;
     }
     .v2-page-greeting {
-      font-family: var(--font-title);
-      font-size: 1.75rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1rem;
       font-weight: 700;
       color: var(--text-primary);
     }
@@ -562,21 +577,23 @@
 
   <!-- HEADER -->
   <header class="v2-header">
-    <div class="v2-brand">
-      Lash<em>Menu</em>
-      <span class="v2-badge-v2">V2 Experimental</span>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="#" class="brand-logo-rose">Lash<em>Menu</em></a>
+      <span class="header-tag-rose">Personalização</span>
+      <span class="v2-badge-v2">V2</span>
     </div>
     <a href="./" class="v2-btn-back" id="btn-admin-back">
-      <span>← Voltar ao Painel</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      <span>Voltar ao Painel</span>
     </a>
   </header>
 
   <div class="v2-container">
 
-    <!-- TÍTULO DA PÁGINA (ESTILO LASHAGENDA) -->
+    <!-- TÍTULO DA PÁGINA (ESTILO ORIGINAL LASHMENU) -->
     <div class="v2-page-title-box">
       <h1 class="v2-page-greeting" id="v2-greeting">✨ Olá!</h1>
-      <p class="v2-page-sub">Gerencie seus preços, fotos e serviços no novo painel estilo LashAgenda.</p>
+      <p class="v2-page-sub" id="v2-page-sub">Altere seus preços, fotos e dados a qualquer momento de forma fácil.</p>
     </div>
 
     <!-- SEÇÃO 1: SEUS SERVIÇOS (LISTA LASHAGENDA) -->
@@ -848,7 +865,19 @@
         const order = orders[0];
         orderId = order.id;
 
-        document.getElementById('v2-greeting').textContent = `✨ Olá, ${order.client_name.split(' ')[0]}!`;
+        const isAdminAuth = sessionStorage.getItem('lash_admin_auth') === 'true';
+        const isClientMode = Boolean(clientToken || (clientSlug && !isAdminAuth));
+
+        if (isClientMode) {
+          document.getElementById('v2-greeting').textContent = `✨ Olá, ${order.client_name.split(' ')[0]}!`;
+          document.getElementById('v2-page-sub').textContent = 'Altere seus preços, fotos e dados a qualquer momento de forma fácil.';
+          const backBtn = document.getElementById('btn-admin-back');
+          if (backBtn) backBtn.style.display = 'none';
+        } else {
+          document.getElementById('v2-greeting').textContent = `Editar: ${order.client_name}`;
+          document.getElementById('v2-page-sub').textContent = 'Gerencie as informações gerais e a lista de procedimentos de cílios da cliente.';
+        }
+
         document.getElementById('v2-client-name').value = order.client_name || '';
         document.getElementById('v2-client-whatsapp').value = order.whatsapp || '';
         document.getElementById('v2-client-instagram').value = order.instagram || '';
