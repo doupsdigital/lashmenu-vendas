@@ -35,6 +35,8 @@ const server = http.createServer((req, res) => {
     targetFilePath = '/admin/index.html';
   } else if (reqPath.startsWith('/admin/')) {
     targetFilePath = reqPath;
+  } else if (reqPath === '/app' || reqPath === '/app/' || reqPath.startsWith('/app/')) {
+    targetFilePath = '/admin/app.html';
   } else if (reqPath.startsWith('/c/')) {
     const slug = reqPath.substring('/c/'.length).replace(/\/$/, '');
     const staticModelPath = path.join(ROOT, 'modelos', slug, 'index.html');
