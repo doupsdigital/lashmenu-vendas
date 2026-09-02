@@ -1100,10 +1100,11 @@
                 </div>
                 <div class="media-upload-controls-sm">
                   <label class="btn-file-select-sm">
-                    <span>⬆ Escolher Foto</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span>Escolher Foto</span>
                     <input type="file" id="v2-cover-file-input" accept="image/*,video/*" style="display: none;" onchange="handleV2CoverPhotoSelect(this)">
                   </label>
-                  <input type="url" id="v2-client-cover-url" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto/vídeo..." style="font-size: 0.85rem;">
+                  <input type="hidden" id="v2-client-cover-url">
                 </div>
               </div>
             </div>
@@ -1144,24 +1145,6 @@
                 <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-client-subphrase')">✕ Remover</button>
               </div>
               <textarea id="v2-client-subphrase" class="v2-textarea" placeholder="Ex: Cílios pensados para o seu olhar — técnica segura, desenho personalizado."></textarea>
-            </div>
-
-            <div class="v2-form-row">
-              <div class="v2-form-group">
-                <label class="v2-label">MODELO DE LAYOUT</label>
-                <select id="v2-client-model" class="v2-select">
-                  <option value="glamour">Glamour</option>
-                  <option value="harmonia">Harmonia</option>
-                  <option value="classico">Clássico</option>
-                </select>
-              </div>
-              <div class="v2-form-group">
-                <label class="v2-label">TEMA DE CORES</label>
-                <select id="v2-client-color" class="v2-select">
-                  <option value="rose">Rosé (Light)</option>
-                  <option value="midnight">Midnight (Dark)</option>
-                </select>
-              </div>
             </div>
 
           </div>
@@ -1572,10 +1555,11 @@
           location: document.getElementById('v2-client-location').value.trim(),
           hero_phrase: document.getElementById('v2-client-phrase').value.trim(),
           sub_phrase: document.getElementById('v2-client-subphrase').value.trim(),
-          cover_media_url: document.getElementById('v2-client-cover-url').value.trim(),
-          model_id: document.getElementById('v2-client-model').value,
-          color_id: document.getElementById('v2-client-color').value
+          cover_media_url: document.getElementById('v2-client-cover-url').value.trim()
         };
+
+        if (document.getElementById('v2-client-model')) payload.model_id = document.getElementById('v2-client-model').value;
+        if (document.getElementById('v2-client-color')) payload.color_id = document.getElementById('v2-client-color').value;
 
         const res = await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
           method: 'PATCH',
