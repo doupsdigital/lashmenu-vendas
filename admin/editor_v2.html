@@ -251,7 +251,10 @@
       color: var(--text-secondary);
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 4px;
+    }
+    .v2-label .v2-btn-remove-pill {
+      margin-left: auto;
     }
     .v2-label-req { color: var(--primary); }
     .v2-label-sub { text-transform: none; font-weight: 400; color: var(--text-muted); }
@@ -843,7 +846,7 @@
               </div>
 
               <div class="v2-form-group">
-                <label class="v2-label">FOTO DO SERVIÇO <span class="v2-label-sub">(opcional)</span></label>
+                <label class="v2-label">FOTO DO SERVIÇO</label>
                 <div class="media-upload-picker-sm">
                   <div class="media-preview-box-sm">
                     <img id="v2-svc-preview-img" class="media-preview-el-sm" src="" alt="Prévia" style="display:none;">
@@ -971,16 +974,16 @@
 
   <!-- MODAL POPUP PARA EDITAR SERVIÇO -->
   <div class="success-modal-overlay" id="v2-edit-service-modal" style="display: none;">
-    <div class="success-modal-card" style="max-width: 520px; text-align: left; padding: 24px; max-height: 90vh; overflow-y: auto;">
+    <div class="success-modal-card" style="max-width: 520px; text-align: left; padding: 0; overflow: hidden; max-height: 90vh; display: flex; flex-direction: column; border-radius: 20px;">
       
-      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 16px;">
-        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--text-primary); font-weight: 700;" id="v2-edit-modal-title">
+      <div style="background: linear-gradient(135deg, #c04b6b 0%, #a33854 100%); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; color: #ffffff;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #ffffff; font-weight: 700; display: flex; align-items: center; gap: 8px;" id="v2-edit-modal-title">
           ✏️ Editar Serviço
         </h3>
-        <button type="button" onclick="closeV2EditModal()" style="background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text-secondary); padding: 4px 8px;">✕</button>
+        <button type="button" onclick="closeV2EditModal()" style="background: rgba(255, 255, 255, 0.2); border: none; font-size: 1.1rem; cursor: pointer; color: #ffffff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">✕</button>
       </div>
 
-      <form id="v2-edit-service-form" onsubmit="handleSaveEditedService(event)">
+      <form id="v2-edit-service-form" onsubmit="handleSaveEditedService(event)" style="padding: 20px; overflow-y: auto;">
         <div class="v2-form-grid">
 
           <div class="v2-form-group">
@@ -1025,7 +1028,7 @@
           </div>
 
           <div class="v2-form-group">
-            <label class="v2-label">FOTO DO SERVIÇO <span class="v2-label-sub">(opcional)</span></label>
+            <label class="v2-label">FOTO DO SERVIÇO</label>
             <div class="media-upload-picker-sm">
               <div class="media-preview-box-sm">
                 <img id="v2-edit-svc-preview-img" class="media-preview-el-sm" src="" alt="Prévia" style="display:none;">
