@@ -3977,3 +3977,31 @@ body.testdrive-open {
   color: #c84b72;
   flex-shrink: 0;
 }
+
+/* Floating Sticky WhatsApp Button for Mobile Conversions */
+.sticky-wa-bar {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: calc(100% - 32px);
+  max-width: 440px;
+}
+
+.sticky-wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 14px 20px;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: pulseButton 3s ease-in-out infinite;
+}
