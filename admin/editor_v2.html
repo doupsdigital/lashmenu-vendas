@@ -276,6 +276,59 @@
     }
     .v2-textarea { resize: vertical; min-height: 80px; }
 
+    /* COMPONENTE DE UPLOAD DE MÍDIA / FOTO */
+    .media-upload-picker-sm {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .media-preview-box-sm {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: #fdf5f7;
+      border: 1.5px dashed #e5b8c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .media-preview-el-sm {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .media-upload-controls-sm {
+      flex: 1;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-file-select-sm {
+      background: #fdf5f7 !important;
+      border: 1.5px dashed #e5b8c4 !important;
+      color: #c04b6b !important;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+      border-radius: 12px !important;
+      padding: 10px 16px !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      transition: all 0.2s ease !important;
+    }
+    .btn-file-select-sm:hover {
+      background: #f8e6ea !important;
+      border-color: #c04b6b !important;
+    }
+    html.is-client-mode .input-url-fallback,
+    body.is-client-mode .input-url-fallback {
+      display: none !important;
+    }
+
     /* BOTÕES & PÍLULAS */
     .v2-btn-primary {
       width: 100%;
@@ -686,7 +739,20 @@
 
               <div class="v2-form-group">
                 <label class="v2-label">FOTO DO SERVIÇO <span class="v2-label-sub">(opcional)</span></label>
-                <input type="url" id="v2-svc-photo" class="v2-input" placeholder="Cole a URL da foto ou selecione o arquivo..." oninput="updateV2Preview()">
+                <div class="media-upload-picker-sm">
+                  <div class="media-preview-box-sm">
+                    <img id="v2-svc-preview-img" class="media-preview-el-sm" src="" alt="Prévia" style="display:none;">
+                    <span id="v2-svc-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+                  </div>
+                  <div class="media-upload-controls-sm">
+                    <label class="btn-file-select-sm">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                      <span>Escolher Foto</span>
+                      <input type="file" id="v2-svc-file-input" accept="image/*" style="display: none;" onchange="handleV2ServicePhotoSelect(this)">
+                    </label>
+                    <input type="url" id="v2-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." oninput="updateV2Preview()" style="font-size: 0.85rem;">
+                  </div>
+                </div>
               </div>
 
               <div class="v2-form-group">
@@ -820,6 +886,7 @@
   <!-- Supabase Config & SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../vendas/form/js/supabase-config.js?v=4.0"></script>
+  <script src="../vendas/form/js/image-compressor.js?v=1.0"></script>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -966,8 +1033,20 @@
       document.getElementById('v2-svc-category').value = svc.category || '';
       document.getElementById('v2-svc-maintenance').value = svc.maintenance || '';
       document.getElementById('v2-svc-effect').value = svc.effect || '';
-      document.getElementById('v2-svc-photo').value = svc.photo_url || '';
       document.getElementById('v2-svc-desc').value = svc.description || '';
+
+      const photo = svc.photo_url || '';
+      document.getElementById('v2-svc-photo').value = photo;
+      const imgEl = document.getElementById('v2-svc-preview-img');
+      const placeholderEl = document.getElementById('v2-svc-preview-placeholder');
+      if (photo) {
+        imgEl.src = photo;
+        imgEl.style.display = 'block';
+        if (placeholderEl) placeholderEl.style.display = 'none';
+      } else {
+        imgEl.style.display = 'none';
+        if (placeholderEl) placeholderEl.style.display = 'block';
+      }
 
       document.getElementById('v2-btn-cancel-edit').style.display = 'block';
       document.getElementById('v2-btn-submit-svc').innerHTML = `<span>💾 Atualizar Serviço</span>`;
@@ -983,9 +1062,51 @@
       editingIndex = null;
       document.getElementById('v2-form-title').innerHTML = `<span>✨ Novo Serviço</span>`;
       document.getElementById('v2-service-form').reset();
+      document.getElementById('v2-svc-preview-img').style.display = 'none';
+      document.getElementById('v2-svc-preview-placeholder').style.display = 'block';
+      document.getElementById('v2-svc-file-input').value = '';
       document.getElementById('v2-btn-cancel-edit').style.display = 'none';
       document.getElementById('v2-btn-submit-svc').innerHTML = `<span>+ Adicionar Serviço à Lista</span>`;
       updateV2Preview();
+    }
+
+    async function handleV2ServicePhotoSelect(fileInput) {
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const imgEl = document.getElementById('v2-svc-preview-img');
+      const placeholderEl = document.getElementById('v2-svc-preview-placeholder');
+      const urlInput = document.getElementById('v2-svc-photo');
+
+      const tempUrl = URL.createObjectURL(file);
+      imgEl.src = tempUrl;
+      imgEl.style.display = 'block';
+      if (placeholderEl) placeholderEl.style.display = 'none';
+      urlInput.value = tempUrl;
+      updateV2Preview();
+
+      try {
+        let fileToUpload = file;
+        if (typeof window.compressImageFile === 'function') {
+          fileToUpload = await window.compressImageFile(file, { maxDimension: 800, quality: 0.82 });
+        }
+
+        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : 'webp';
+        const path = `services/svc_${orderId || 'v2'}_${Date.now()}.${ext}`;
+
+        let publicUrl = null;
+        if (window.lashSupabase && window.lashSupabase.uploadFile) {
+          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
+        }
+
+        if (publicUrl) {
+          urlInput.value = publicUrl;
+          imgEl.src = publicUrl;
+          updateV2Preview();
+        }
+      } catch (err) {
+        console.error('Erro no upload de foto V2:', err);
+      }
     }
 
     function toggleV2OptionalFields() {
