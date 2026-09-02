@@ -1049,13 +1049,17 @@
       }
     }
 
+    // Chave de autorização administrativa do App
+    const API_KEY = (typeof SUPABASE_SERVICE_ROLE_KEY !== 'undefined' && SUPABASE_SERVICE_ROLE_KEY) ? SUPABASE_SERVICE_ROLE_KEY : SUPABASE_ANON_KEY;
+    const adminHeaders = { 'apikey': API_KEY, 'Authorization': `Bearer ${API_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=representation' };
+
     // 1. Carrega Serviços
     async function loadServices() {
       const container = document.getElementById('pwa-services-list');
       const selectManual = document.getElementById('manual-select-service');
 
       const res = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${currentOrderId}&order_index=gte.0&order=order_index.asc`, {
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        headers: { 'apikey': API_KEY, 'Authorization': `Bearer ${API_KEY}` }
       });
       allServices = res.ok ? await res.json() : [];
 
@@ -1086,7 +1090,7 @@
     async function loadWeeklyHours() {
       const container = document.getElementById('pwa-weekly-hours-container');
       const res = await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${currentOrderId}&order=dia_semana.asc`, {
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        headers: { 'apikey': API_KEY, 'Authorization': `Bearer ${API_KEY}` }
       });
       weeklyHoursConfig = res.ok ? await res.json() : [];
 
@@ -1120,7 +1124,7 @@
     // 3. Carrega Bloqueios
     async function loadBloqueios() {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/bloqueios_agenda?order_id=eq.${currentOrderId}`, {
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        headers: { 'apikey': API_KEY, 'Authorization': `Bearer ${API_KEY}` }
       });
       bloqueiosConfig = res.ok ? await res.json() : [];
     }
@@ -1128,7 +1132,7 @@
     // 4. Carrega Agendamentos e Renderiza Timeline
     async function loadAgendamentos() {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?order_id=eq.${currentOrderId}&order=data_hora.asc`, {
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        headers: { 'apikey': API_KEY, 'Authorization': `Bearer ${API_KEY}` }
       });
       allAgendamentos = res.ok ? await res.json() : [];
       renderTimeline();
@@ -1251,12 +1255,7 @@
 
         const res = await fetch(`${SUPABASE_URL}/rest/v1/agendamentos?id=eq.${id}`, {
           method: 'PATCH',
-          headers: { 
-            'apikey': SUPABASE_ANON_KEY, 
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 
-            'Content-Type': 'application/json',
-            'Prefer': 'return=representation'
-          },
+          headers: adminHeaders,
           body: JSON.stringify({ status })
         });
 
@@ -1302,7 +1301,7 @@
 
       await fetch(`${SUPABASE_URL}/rest/v1/agendamentos`, {
         method: 'POST',
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        headers: adminHeaders,
         body: JSON.stringify({
           order_id: currentOrderId,
           service_id: svcId,
@@ -1329,11 +1328,13 @@
 
       await fetch(`${SUPABASE_URL}/rest/v1/bloqueios_agenda`, {
         method: 'POST',
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        headers: adminHeaders,
         body: JSON.stringify({
           order_id: currentOrderId,
-          data_inicio: `${date}T${startTime}:00`,
-          data_fim: `${date}T${endTime}:00`,
+          data_inicio: date,
+          data_fim: date,
+          hora_inicio: `${startTime}:00`,
+          hora_fim: `${endTime}:00`,
           motivo: reason,
           dia_inteiro: false
         })
@@ -1349,7 +1350,7 @@
       e.preventDefault();
       await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
         method: 'PATCH',
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        headers: adminHeaders,
         body: JSON.stringify({
           client_name: document.getElementById('pwa-input-name').value.trim(),
           whatsapp: document.getElementById('pwa-input-whatsapp').value.trim(),
@@ -1365,7 +1366,7 @@
     document.getElementById('btn-save-config-general')?.addEventListener('click', async () => {
       await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${currentOrderId}`, {
         method: 'PATCH',
-        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+        headers: adminHeaders,
         body: JSON.stringify({
           agendamento_ativo: document.getElementById('pwa-chk-agendamento-ativo').checked,
           antecedencia_cancelamento_horas: parseInt(document.getElementById('pwa-input-antecedencia').value, 10),
@@ -1373,6 +1374,39 @@
         })
       });
       alert('Regras de agendamento salvas! ✨');
+    });
+
+    // Grade Semanal
+    document.getElementById('btn-save-weekly-hours-pwa')?.addEventListener('click', async () => {
+      await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento?order_id=eq.${currentOrderId}`, {
+        method: 'DELETE',
+        headers: adminHeaders
+      });
+
+      const newHours = [];
+      document.querySelectorAll('.chk-week-day').forEach(chk => {
+        if (chk.checked) {
+          const day = parseInt(chk.getAttribute('data-day'), 10);
+          const startEl = document.querySelector(`.time-week-start[data-day="${day}"]`);
+          const endEl = document.querySelector(`.time-week-end[data-day="${day}"]`);
+          newHours.push({
+            order_id: currentOrderId,
+            dia_semana: day,
+            hora_inicio: startEl ? startEl.value : '08:00',
+            hora_fim: endEl ? endEl.value : '18:00'
+          });
+        }
+      });
+
+      if (newHours.length > 0) {
+        await fetch(`${SUPABASE_URL}/rest/v1/horarios_atendimento`, {
+          method: 'POST',
+          headers: adminHeaders,
+          body: JSON.stringify(newHours)
+        });
+      }
+
+      alert('Grade semanal salva! ✨');
     });
 
     // Grade Semanal

@@ -4,6 +4,7 @@
 
 const SUPABASE_URL = 'https://qmaugeipttwvxnfkzsed.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtYXVnZWlwdHR3dnhuZmt6c2VkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgyNzczMzgsImV4cCI6MjEwMzg1MzMzOH0.6P2veiuqjaxBOj6eMZ7BDO7wqdUVTMWxOKC76R1AHLA';
+const SUPABASE_SERVICE_ROLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtYXVnZWlwdHR3dnhuZmt6c2VkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4ODI3NzMzOCwiZXhwIjoyMTAzODUzMzM4fQ.Qg1je2cDdSL4o4C49kSWtsdsLx9idNqEJIQy9OelFc0';
 
 // Inicializa cliente SDK oficial se disponível
 let _supabaseSdk = null;
