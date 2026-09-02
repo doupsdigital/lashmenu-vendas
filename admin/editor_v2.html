@@ -969,28 +969,92 @@
     </button>
   </div>
 
-  <!-- MODAL DE SUCESSO ELEGANTE -->
-  <div class="success-modal-overlay" id="v2-success-modal" style="display: none;">
-    <div class="success-modal-card">
-      <div class="success-icon-badge">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c04b6b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-          <polyline points="22 4 12 14.01 9 11.01"></polyline>
-        </svg>
+  <!-- MODAL POPUP PARA EDITAR SERVIÇO -->
+  <div class="success-modal-overlay" id="v2-edit-service-modal" style="display: none;">
+    <div class="success-modal-card" style="max-width: 520px; text-align: left; padding: 24px; max-height: 90vh; overflow-y: auto;">
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 16px;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--text-primary); font-weight: 700;" id="v2-edit-modal-title">
+          ✏️ Editar Serviço
+        </h3>
+        <button type="button" onclick="closeV2EditModal()" style="background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text-secondary); padding: 4px 8px;">✕</button>
       </div>
-      <h2 class="success-modal-title">Alterações Salvas! ✨</h2>
-      <p class="success-modal-text" id="v2-success-modal-desc">
-        Seu catálogo digital foi atualizado com sucesso e as alterações já estão ativas no seu site oficial.
-      </p>
-      <div class="success-modal-actions">
-        <a href="#" target="_blank" id="v2-btn-view-live-catalog" class="btn-modal-view">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-          <span>Ver Catálogo Atualizado</span>
-        </a>
-        <button type="button" class="btn-modal-close" onclick="closeV2SuccessModal()">
-          <span>Continuar Editando</span>
-        </button>
-      </div>
+
+      <form id="v2-edit-service-form" onsubmit="handleSaveEditedService(event)">
+        <div class="v2-form-grid">
+
+          <div class="v2-form-group">
+            <label class="v2-label">NOME DO SERVIÇO <span class="v2-label-req">*</span></label>
+            <input type="text" id="v2-edit-svc-name" class="v2-input" placeholder="Ex: Volume Russo, Efeito Boneca..." required>
+          </div>
+
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <label class="v2-label">PREÇO (R$) <span class="v2-label-req">*</span></label>
+              <input type="text" id="v2-edit-svc-price" class="v2-input" placeholder="Ex: 100,00" required>
+            </div>
+            <div class="v2-form-group">
+              <label class="v2-label">DURAÇÃO (MIN) <span class="v2-label-req">*</span></label>
+              <input type="text" id="v2-edit-svc-duration" class="v2-input" placeholder="Ex: 60 min ou 1h30" required>
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <div class="v2-label">
+              <span>CATEGORIA (SUBTÍTULO)</span>
+              <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-edit-svc-category')">✕ Remover</button>
+            </div>
+            <input type="text" id="v2-edit-svc-category" class="v2-input" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
+          </div>
+
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <div class="v2-label">
+                <span>MANUTENÇÃO</span>
+                <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-edit-svc-maintenance')">✕ Remover</button>
+              </div>
+              <input type="text" id="v2-edit-svc-maintenance" class="v2-input" placeholder="Ex: 60,00 (até 20 dias)">
+            </div>
+            <div class="v2-form-group">
+              <div class="v2-label">
+                <span>EFEITO VISUAL</span>
+                <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-edit-svc-effect')">✕ Remover</button>
+              </div>
+              <input type="text" id="v2-edit-svc-effect" class="v2-input" placeholder="Ex: Marcante e Alongado">
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">FOTO DO SERVIÇO <span class="v2-label-sub">(opcional)</span></label>
+            <div class="media-upload-picker-sm">
+              <div class="media-preview-box-sm">
+                <img id="v2-edit-svc-preview-img" class="media-preview-el-sm" src="" alt="Prévia" style="display:none;">
+                <span id="v2-edit-svc-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+              </div>
+              <div class="media-upload-controls-sm">
+                <label class="btn-file-select-sm">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span>Escolher Foto</span>
+                  <input type="file" id="v2-edit-svc-file-input" accept="image/*" style="display: none;" onchange="handleV2EditServicePhotoSelect(this)">
+                </label>
+                <input type="url" id="v2-edit-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." style="font-size: 0.85rem;">
+              </div>
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">DESCRIÇÃO</label>
+            <textarea id="v2-edit-svc-desc" class="v2-textarea" placeholder="Descrição do procedimento..."></textarea>
+          </div>
+
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+          <button type="button" class="v2-btn-secondary" style="flex: 1;" onclick="closeV2EditModal()">Cancelar</button>
+          <button type="submit" class="v2-btn-primary" style="flex: 2;">💾 Salvar Alterações</button>
+        </div>
+      </form>
+
     </div>
   </div>
 
@@ -1150,19 +1214,19 @@
       const svc = allServices[index];
       if (!svc) return;
 
-      document.getElementById('v2-form-title').innerHTML = `<span>✏️ Editar Serviço: ${svc.name}</span>`;
-      document.getElementById('v2-svc-name').value = svc.name || '';
-      document.getElementById('v2-svc-price').value = svc.price || '';
-      document.getElementById('v2-svc-duration').value = svc.duration || '';
-      document.getElementById('v2-svc-category').value = svc.category || '';
-      document.getElementById('v2-svc-maintenance').value = svc.maintenance || '';
-      document.getElementById('v2-svc-effect').value = svc.effect || '';
-      document.getElementById('v2-svc-desc').value = svc.description || '';
+      document.getElementById('v2-edit-modal-title').textContent = `✏️ Editar: ${svc.name}`;
+      document.getElementById('v2-edit-svc-name').value = svc.name || '';
+      document.getElementById('v2-edit-svc-price').value = svc.price || '';
+      document.getElementById('v2-edit-svc-duration').value = svc.duration || '';
+      document.getElementById('v2-edit-svc-category').value = svc.category || '';
+      document.getElementById('v2-edit-svc-maintenance').value = svc.maintenance || '';
+      document.getElementById('v2-edit-svc-effect').value = svc.effect || '';
+      document.getElementById('v2-edit-svc-desc').value = svc.description || '';
 
       const photo = svc.photo_url || '';
-      document.getElementById('v2-svc-photo').value = photo;
-      const imgEl = document.getElementById('v2-svc-preview-img');
-      const placeholderEl = document.getElementById('v2-svc-preview-placeholder');
+      document.getElementById('v2-edit-svc-photo').value = photo;
+      const imgEl = document.getElementById('v2-edit-svc-preview-img');
+      const placeholderEl = document.getElementById('v2-edit-svc-preview-placeholder');
       if (photo) {
         imgEl.src = photo;
         imgEl.style.display = 'block';
@@ -1172,26 +1236,48 @@
         if (placeholderEl) placeholderEl.style.display = 'block';
       }
 
-      document.getElementById('v2-btn-cancel-edit').style.display = 'block';
-      document.getElementById('v2-btn-submit-svc').innerHTML = `<span>💾 Atualizar Serviço</span>`;
+      openV2EditModal();
+    }
 
-      // Mostra campos opcionais automaticamente na edição
-      document.getElementById('v2-optional-fields').style.display = 'flex';
-      updateV2Preview();
+    function openV2EditModal() {
+      const modal = document.getElementById('v2-edit-service-modal');
+      if (modal) modal.style.display = 'flex';
+    }
 
-      document.getElementById('v2-service-form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    function closeV2EditModal() {
+      const modal = document.getElementById('v2-edit-service-modal');
+      if (modal) modal.style.display = 'none';
+      editingIndex = null;
+    }
+
+    function handleSaveEditedService(e) {
+      e.preventDefault();
+      if (editingIndex === null) return;
+
+      const name = document.getElementById('v2-edit-svc-name').value.trim();
+      const price = document.getElementById('v2-edit-svc-price').value.trim();
+      const duration = document.getElementById('v2-edit-svc-duration').value.trim();
+      const category = document.getElementById('v2-edit-svc-category').value.trim();
+      const maintenance = document.getElementById('v2-edit-svc-maintenance').value.trim();
+      const effect = document.getElementById('v2-edit-svc-effect').value.trim();
+      const photo_url = document.getElementById('v2-edit-svc-photo').value.trim();
+      const description = document.getElementById('v2-edit-svc-desc').value.trim();
+
+      allServices[editingIndex] = {
+        ...allServices[editingIndex],
+        name, price, duration, category, maintenance, effect, photo_url, description
+      };
+
+      renderV2ServicesList(allServices);
+      closeV2EditModal();
     }
 
     function resetV2Form() {
       editingIndex = null;
-      document.getElementById('v2-form-title').innerHTML = `<span>✨ Novo Serviço</span>`;
       document.getElementById('v2-service-form').reset();
       document.getElementById('v2-svc-preview-img').style.display = 'none';
       document.getElementById('v2-svc-preview-placeholder').style.display = 'block';
       document.getElementById('v2-svc-file-input').value = '';
-      document.getElementById('v2-btn-cancel-edit').style.display = 'none';
-      document.getElementById('v2-btn-submit-svc').innerHTML = `<span>+ Adicionar Serviço à Lista</span>`;
-      updateV2Preview();
     }
 
     async function handleV2CoverPhotoSelect(fileInput) {
@@ -1321,18 +1407,50 @@
 
       const newSvcData = {
         name, price, duration, category, maintenance, effect, photo_url, description,
-        order_index: editingIndex !== null ? allServices[editingIndex].order_index : allServices.length
+        order_index: allServices.length
       };
 
-      if (editingIndex !== null) {
-        allServices[editingIndex] = { ...allServices[editingIndex], ...newSvcData };
-      } else {
-        allServices.push(newSvcData);
-      }
+      allServices.push(newSvcData);
 
       renderV2ServicesList(allServices);
       resetV2Form();
-      alert('✨ Serviço ' + (editingIndex !== null ? 'atualizado' : 'adicionado') + ' na lista local. Clique no botão de Salvar no rodapé para gravar no banco de dados!');
+    }
+
+    async function handleV2EditServicePhotoSelect(fileInput) {
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const imgEl = document.getElementById('v2-edit-svc-preview-img');
+      const placeholderEl = document.getElementById('v2-edit-svc-preview-placeholder');
+      const urlInput = document.getElementById('v2-edit-svc-photo');
+
+      const tempUrl = URL.createObjectURL(file);
+      imgEl.src = tempUrl;
+      imgEl.style.display = 'block';
+      if (placeholderEl) placeholderEl.style.display = 'none';
+      urlInput.value = tempUrl;
+
+      try {
+        let fileToUpload = file;
+        if (typeof window.compressImageFile === 'function') {
+          fileToUpload = await window.compressImageFile(file, { maxDimension: 800, quality: 0.82 });
+        }
+
+        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : 'webp';
+        const path = `services/svc_${orderId || 'v2'}_${Date.now()}.${ext}`;
+
+        let publicUrl = null;
+        if (window.lashSupabase && window.lashSupabase.uploadFile) {
+          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
+        }
+
+        if (publicUrl) {
+          urlInput.value = publicUrl;
+          imgEl.src = publicUrl;
+        }
+      } catch (err) {
+        console.error('Erro no upload de foto na edição V2:', err);
+      }
     }
 
     async function deleteV2Service(index) {
