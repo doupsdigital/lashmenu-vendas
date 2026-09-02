@@ -339,7 +339,7 @@ function renderGrid() {
       <img src="${item.img}" alt="${item.title}" class="tile__foto" loading="lazy">
       <div class="tile__scrim"></div>
       <div class="tile__conteudo">
-        <span class="tile__cat">${item.catLabel}</span>
+        ${item.catLabel ? `<span class="tile__cat">${item.catLabel}</span>` : ''}
         <h3 class="tile__titulo">${item.title}</h3>
         <div class="tile__meta">
           <span class="tile__preco">${item.preco}</span>

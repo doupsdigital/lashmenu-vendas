@@ -15,9 +15,9 @@
           isClient = true;
         }
       }
-      if (isClient) {
-        document.documentElement.className += ' theme-client-rose is-client-mode';
-      }
+      var cls = ' theme-client-rose';
+      if (isClient) cls += ' is-client-mode';
+      document.documentElement.className += cls;
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1574,8 +1574,11 @@
             return;
           }
 
-          // Ativa o Tema Light Rosé e oculta itens administrativos
-          document.body.classList.add('theme-client-rose', 'is-client-mode');
+        // Ativa o Tema Light Rosé oficial para máxima clareza visual
+        document.body.classList.add('theme-client-rose');
+
+        if (isClient) {
+          document.body.classList.add('is-client-mode');
           document.title = `✨ Editar Meu Catálogo — ${order.client_name}`;
 
           const backBtn = document.getElementById('btn-admin-back');
@@ -1709,6 +1712,7 @@
         row.className = 'svc-accordion-item service-item-card';
         const photoUrl = svc.photo_url || '';
 
+        const hasCategory = Boolean(svc.category && svc.category.trim());
         const hasDuration = Boolean(svc.duration && svc.duration.trim());
         const hasMaintenance = Boolean(svc.maintenance && svc.maintenance.trim());
         const hasEffect = Boolean(svc.effect && svc.effect.trim());
@@ -1737,15 +1741,20 @@
             <div class="form-grid">
               <div class="form-group">
                 <label>Nome do Procedimento</label>
-                <input type="text" class="svc-name" value="${svc.name || ''}" placeholder="Ex: Volume Russo" required oninput="updateSvcHeaderTitle(this)">
-              </div>
-              <div class="form-group">
-                <label>Categoria (Subtítulo)</label>
-                <input type="text" class="svc-category" value="${svc.category || ''}" placeholder="Ex: Fio a Fio ou Design de Sobrancelhas" required>
+                <input type="text" class="svc-name" value="${svc.name || ''}" placeholder="Ex: Efeito Boneca, Gatinho..." required oninput="updateSvcHeaderTitle(this)">
               </div>
               <div class="form-group">
                 <label>Investimento (Preço)</label>
-                <input type="text" class="svc-price" value="${svc.price || ''}" placeholder="Ex: 190,00" required oninput="updateSvcHeaderPrice(this)">
+                <input type="text" class="svc-price" value="${svc.price || ''}" placeholder="Ex: 100,00" required oninput="updateSvcHeaderPrice(this)">
+              </div>
+
+              <!-- CATEGORIA (SUBTÍTULO) -->
+              <div class="form-group fg-category" ${!hasCategory ? 'style="display:none;"' : ''}>
+                <div class="field-header-row">
+                  <label>Categoria (Subtítulo)</label>
+                  <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-category', 'svc-category', false)">✕ Remover</button>
+                </div>
+                <input type="text" class="svc-category" value="${svc.category || ''}" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
               </div>
 
               <!-- DURAÇÃO -->
@@ -1754,7 +1763,7 @@
                   <label>Duração</label>
                   <button type="button" class="btn-remove-field" onclick="toggleField(this, 'fg-duration', 'svc-duration', false)">✕ Remover</button>
                 </div>
-                <input type="text" class="svc-duration" value="${svc.duration || ''}" placeholder="Ex: 1h45">
+                <input type="text" class="svc-duration" value="${svc.duration || ''}" placeholder="Ex: 1h30">
               </div>
 
               <!-- MANUTENÇÃO -->
@@ -1802,6 +1811,7 @@
               <!-- BARRA PARA RE-ADICIONAR CAMPOS OPCIONAIS -->
               <div class="form-group full-width add-fields-bar">
                 <span class="add-fields-label">+ Adicionar/Ativar Campos Opcionais deste Procedimento:</span>
+                <button type="button" class="btn-add-spec-chip btn-chip-category" onclick="toggleField(this, 'fg-category', 'svc-category', true)" ${hasCategory ? 'style="display:none;"' : ''}>+ Categoria/Subtítulo</button>
                 <button type="button" class="btn-add-spec-chip btn-chip-duration" onclick="toggleField(this, 'fg-duration', 'svc-duration', true)" ${hasDuration ? 'style="display:none;"' : ''}>+ Duração</button>
                 <button type="button" class="btn-add-spec-chip btn-chip-maintenance" onclick="toggleField(this, 'fg-maintenance', 'svc-maintenance', true)" ${hasMaintenance ? 'style="display:none;"' : ''}>+ Manutenção</button>
                 <button type="button" class="btn-add-spec-chip btn-chip-effect" onclick="toggleField(this, 'fg-effect', 'svc-effect', true)" ${hasEffect ? 'style="display:none;"' : ''}>+ Efeito Visual</button>

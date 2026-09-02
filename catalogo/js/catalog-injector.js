@@ -294,7 +294,7 @@
             img: svc.photo_url || 'assets/img/hero.jpg',
             alt: svc.name,
             cat: catSlug,
-            catLabel: svc.category || (catSlug === 'sobrancelhas' ? 'Design de Sobrancelhas' : 'Extensão de Cílios'),
+            catLabel: (svc.category && svc.category.trim()) ? svc.category.trim() : '',
             nome: svc.name,
             title: svc.name,
             preco: formattedPrice,
