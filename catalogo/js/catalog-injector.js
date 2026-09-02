@@ -122,15 +122,8 @@
     }
   } catch(e){}
 
-  const DEV_SUPABASE_URL = 'https://qmaugeipttwvxnfkzsed.supabase.co';
-  const DEV_SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtYXVnZWlwdHR3dnhuZmt6c2VkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgyNzczMzgsImV4cCI6MjEwMzg1MzMzOH0.6P2veiuqjaxBOj6eMZ7BDO7wqdUVTMWxOKC76R1AHLA';
-
-  const SUPABASE_URL = (typeof window !== 'undefined' && window.LASHMENU_SUPABASE_URL)
-    ? window.LASHMENU_SUPABASE_URL
-    : DEV_SUPABASE_URL;
-  const SUPABASE_ANON_KEY = (typeof window !== 'undefined' && window.LASHMENU_SUPABASE_ANON_KEY)
-    ? window.LASHMENU_SUPABASE_ANON_KEY
-    : DEV_SUPABASE_ANON_KEY;
+  const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmZmhwdHBzYWZsbHNtY3NvaWloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcyODkyMTYsImV4cCI6MjEwMjg2NTIxNn0.nwpvIwl8V6_KGIp5e5oeraAcGyt3oo8Kdam2hp6ajSQ';
 
   try {
     if (!order) {
@@ -196,24 +189,6 @@
     // Salva globalmente para os modais dinâmicos do catálogo
     window.LASHMENU_CLIENT_PHONE = cleanPhone;
     window.LASHMENU_DESIGNER_NAME = designerName;
-    window.LASHMENU_ORDER = order;
-    window.LASHMENU_SERVICES = services;
-
-    // Se agendamento estiver ativo para a cliente, carrega os scripts do motor de agendamento com caminho absoluto seguro
-    if (order.agendamento_ativo) {
-      if (!document.getElementById('lm-script-sched-engine')) {
-        const s1 = document.createElement('script');
-        s1.id = 'lm-script-sched-engine';
-        s1.src = '/catalogo/js/scheduling-engine.js?v=1.2';
-        document.head.appendChild(s1);
-      }
-      if (!document.getElementById('lm-script-sched-modal')) {
-        const s2 = document.createElement('script');
-        s2.id = 'lm-script-sched-modal';
-        s2.src = '/catalogo/js/scheduling-modal.js?v=1.2';
-        document.head.appendChild(s2);
-      }
-    }
 
     // Título da página
     document.title = `${designerName} — Catálogo Digital Oficial`;
@@ -224,10 +199,28 @@
       heroTitle.innerHTML = `${designerName}<br><em>Lash Designer</em>`;
     }
 
-    // 2. Frase da Capa
-    if (heroPhrase) {
-      const heroFraseEl = document.querySelector('.hero__frase, .capa__frase');
-      if (heroFraseEl) heroFraseEl.textContent = heroPhrase;
+    // 2. Frases da Capa (Impacto & Apresentação)
+    const heroFraseEl = document.querySelector('.hero__frase, .capa__frase');
+    if (heroFraseEl) {
+      if (heroPhrase && heroPhrase.trim()) {
+        heroFraseEl.textContent = heroPhrase;
+        heroFraseEl.style.display = '';
+      } else if (order.hero_phrase === '') {
+        heroFraseEl.style.display = 'none';
+      }
+    }
+
+    const heroSubFraseEl = document.querySelector('.hero__frase-cilios, .capa__frase-cilios');
+    if (heroSubFraseEl) {
+      const rawSub = order.hero_sub_phrase !== undefined ? order.hero_sub_phrase : order.sub_phrase;
+      if (rawSub !== undefined && rawSub !== null) {
+        if (rawSub.trim()) {
+          heroSubFraseEl.innerHTML = rawSub;
+          heroSubFraseEl.style.display = '';
+        } else {
+          heroSubFraseEl.style.display = 'none';
+        }
+      }
     }
 
     // 3. Foto / Vídeo da Capa
@@ -319,7 +312,7 @@
             img: svc.photo_url || 'assets/img/hero.jpg',
             alt: svc.name,
             cat: catSlug,
-            catLabel: svc.category || (catSlug === 'sobrancelhas' ? 'Design de Sobrancelhas' : 'Extensão de Cílios'),
+            catLabel: (svc.category && svc.category.trim()) ? svc.category.trim() : '',
             nome: svc.name,
             title: svc.name,
             preco: formattedPrice,
@@ -427,27 +420,22 @@
             cardMeta.textContent = `${svc.duration || '1h30'} · ${svc.category || 'fios selecionados'}`;
           }
 
-          // Atribui novo evento de clique para abrir agendamento em tempo real (ou modal de detalhes)
-          newCard.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-
-            if (order.agendamento_ativo && window.SchedulingModal) {
-              window.SchedulingModal.openModal(order, svc, SUPABASE_URL, SUPABASE_ANON_KEY);
-            } else if (typeof window.abrirModal === 'function') {
+          // Atribui manipulador universal de clique e toque para abrir o modal com o procedimento correto
+          const openProcModal = (e) => {
+            if (e && e.cancelable) e.preventDefault();
+            if (typeof window.abrirModal === 'function') {
               window.abrirModal(`proc_${idx}`);
+            } else if (typeof abrirModal === 'function') {
+              abrirModal(`proc_${idx}`);
             }
-          });
+          };
 
-          // Suporte a navegação por teclado
+          newCard.style.cursor = 'pointer';
+          newCard.onclick = openProcModal;
+          newCard.addEventListener('click', openProcModal);
           newCard.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              if (order.agendamento_ativo && window.SchedulingModal) {
-                window.SchedulingModal.openModal(order, svc, SUPABASE_URL, SUPABASE_ANON_KEY);
-              } else if (typeof window.abrirModal === 'function') {
-                window.abrirModal(`proc_${idx}`);
-              }
+              openProcModal(e);
             }
           });
         });
@@ -529,50 +517,10 @@
     }
   }
 
-  // Interceptador global de cliques para garantir número do WhatsApp cadastrado e mensagem por procedimento (ou abrir agendamento em tempo real)
+  // Interceptador global de cliques para garantir número do WhatsApp cadastrado e mensagem por procedimento
   document.addEventListener('click', function(e) {
     const link = e.target.closest('a.btn-whatsapp, a.btn-whatsapp-flutuante, a.contato__btn-whatsapp, a.detalhe-procedimento__cta, a.modal__cta, a[href*="wa.me"], a[href*="whatsapp.com"], a[href*="api.whatsapp.com"]');
     if (!link) return;
-
-    // Se o agendamento em tempo real estiver ATIVO para este catálogo
-    if (window.LASHMENU_ORDER && window.LASHMENU_ORDER.agendamento_ativo && window.SchedulingModal) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      let procName = '';
-      const modalContainer = link.closest('.detalhe-procedimento, [data-detalhe], #modal-procedimento, .modal, .modal__corpo, .detalhe-procedimento__corpo');
-      if (modalContainer) {
-        const titleEl = modalContainer.querySelector('.detalhe-procedimento__titulo, .modal__titulo, .detalhe-procedimento__nome, h2, h3');
-        if (titleEl) {
-          procName = titleEl.textContent.trim();
-        }
-      }
-
-      const services = window.LASHMENU_SERVICES || [];
-      let targetService = services.find(s => s.name && procName && s.name.toLowerCase() === procName.toLowerCase());
-
-      if (!targetService && services.length > 0) {
-        targetService = services[0];
-      }
-
-      if (!targetService) {
-        targetService = {
-          id: null,
-          name: procName || 'Procedimento Selecionado',
-          price: null,
-          duration: '1h30',
-          duracao_minutos: 90
-        };
-      }
-
-      window.SchedulingModal.openModal(
-        window.LASHMENU_ORDER,
-        targetService,
-        SUPABASE_URL,
-        SUPABASE_ANON_KEY
-      );
-      return;
-    }
 
     const phone = (typeof window !== 'undefined' && window.LASHMENU_CLIENT_PHONE) ? window.LASHMENU_CLIENT_PHONE : null;
     if (!phone) return;

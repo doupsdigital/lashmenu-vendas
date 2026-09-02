@@ -74,6 +74,14 @@
       "destination": "/catalogo/css/:path*"
     },
     {
+      "source": "/editar_v2",
+      "destination": "/admin/editor_v2.html"
+    },
+    {
+      "source": "/editar_v2/:path*",
+      "destination": "/admin/editor_v2.html"
+    },
+    {
       "source": "/c/:slug",
       "destination": "/catalogo/index.html?slug=:slug"
     },

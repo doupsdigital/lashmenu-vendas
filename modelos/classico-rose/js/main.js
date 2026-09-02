@@ -319,7 +319,7 @@ function renderLista() {
         <img src="${item.img}" alt="${item.title}" class="servico-card__foto" loading="lazy">
       </div>
       <div class="servico-card__conteudo">
-        <span class="servico-card__cat">${item.catLabel}</span>
+        ${item.catLabel ? `<span class="servico-card__cat">${item.catLabel}</span>` : ''}
         <h3 class="servico-card__titulo">${item.title}</h3>
         <p class="servico-card__desc">${item.desc}</p>
       </div>

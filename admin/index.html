@@ -585,6 +585,24 @@
       }
     }
 
+    async function copyMagicEditLinkV2(orderId, slug) {
+      try {
+        const cleanSlug = (slug || 'catalogo').toLowerCase().replace(/[^a-z0-9]/g, '');
+        const str = `${orderId}_lashmenu_secret_salt_2026`;
+        const msgUint8 = new TextEncoder().encode(str);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 6);
+        const token = `sec_${cleanSlug}_${hashHex}`;
+        const magicUrl = `https://${slug}.lashmenu.com/editar_v2?token=${token}`;
+
+        await navigator.clipboard.writeText(magicUrl);
+        showToast('✨ Link V2 (Novo) da cliente copiado com sucesso!');
+      } catch (err) {
+        showToast('Erro ao copiar link V2: ' + err.message);
+      }
+    }
+
     async function markAsApproved(orderId) {
       try {
         const SUPABASE_URL = 'https://wffhptpsafllsmcsoiih.supabase.co';

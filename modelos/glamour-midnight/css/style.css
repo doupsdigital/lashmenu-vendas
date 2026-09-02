@@ -178,10 +178,10 @@ img, video { display: block; max-width: 100%; }
 .hero__filete { width: 38px; height: 1px; background: #c9a389; }
 .hero__frase {
   margin: 0;
-  font-size: 15px;
+  font-size: 19.5px;
   line-height: 1.55;
   opacity: .88;
-  max-width: 300px;
+  max-width: 340px;
 }
 .hero__frase em { font-style: italic; }
 .hero__frase-cilios {
