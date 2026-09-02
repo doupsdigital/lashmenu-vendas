@@ -776,16 +776,36 @@
       </div>
     </div>
 
-    <!-- SEÇÃO 3: MEUS DADOS & CONTATOS -->
+    <!-- SEÇÃO 3: MEUS DADOS -->
     <div class="v2-card v2-accordion-card" id="v2-card-general-info">
       <div class="v2-card-header-banner v2-accordion-header" onclick="toggleV2Accordion('v2-card-general-info')">
         <div class="v2-card-header-title">
-          <span>👤 Meus Dados & Contatos da Lash</span>
+          <span>👤 Meus Dados</span>
         </div>
         <span style="font-size: 0.9rem;">▼</span>
       </div>
       <div class="v2-card-body v2-accordion-body">
         <div class="v2-form-grid">
+
+          <!-- FOTO DA CAPA NO TOPO DE MEUS DADOS -->
+          <div class="v2-form-group">
+            <label class="v2-label">FOTO DA CAPA</label>
+            <div class="media-upload-picker-sm">
+              <div class="media-preview-box-sm" style="width: 72px; height: 72px;">
+                <img id="v2-cover-preview-img" class="media-preview-el-sm" src="" alt="Prévia da Capa" style="display:none;">
+                <span id="v2-cover-preview-placeholder" class="media-preview-placeholder" style="font-size: 0.72rem; color: var(--text-muted);">Sem Foto</span>
+              </div>
+              <div class="media-upload-controls-sm">
+                <label class="btn-file-select-sm">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span>Escolher Foto</span>
+                  <input type="file" id="v2-cover-file-input" accept="image/*,video/*" style="display: none;" onchange="handleV2CoverPhotoSelect(this)">
+                </label>
+                <input type="url" id="v2-client-cover-url" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto/vídeo de capa..." style="font-size: 0.85rem;">
+              </div>
+            </div>
+          </div>
+
           <div class="v2-form-row">
             <div class="v2-form-group">
               <label class="v2-label">Nome da Lash Designer</label>
@@ -831,10 +851,6 @@
             </div>
           </div>
 
-          <div class="v2-form-group">
-            <label class="v2-label">URL da Foto / Vídeo da Capa</label>
-            <input type="url" id="v2-client-cover-url" class="v2-input" placeholder="URL da foto ou vídeo principal de capa...">
-          </div>
         </div>
       </div>
     </div>
@@ -917,7 +933,19 @@
         document.getElementById('v2-client-phrase').value = order.hero_phrase || '';
         document.getElementById('v2-select-model').value = order.model_id || 'glamour';
         document.getElementById('v2-select-color').value = order.color_id || 'rose';
-        document.getElementById('v2-client-cover-url').value = order.cover_media_url || '';
+
+        const coverUrl = order.cover_media_url || '';
+        document.getElementById('v2-client-cover-url').value = coverUrl;
+        const coverImgEl = document.getElementById('v2-cover-preview-img');
+        const coverPlaceholderEl = document.getElementById('v2-cover-preview-placeholder');
+        if (coverUrl) {
+          coverImgEl.src = coverUrl;
+          coverImgEl.style.display = 'block';
+          if (coverPlaceholderEl) coverPlaceholderEl.style.display = 'none';
+        } else {
+          coverImgEl.style.display = 'none';
+          if (coverPlaceholderEl) coverPlaceholderEl.style.display = 'block';
+        }
 
         // Busca Serviços da Ordem
         const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${orderId}&order_index=gte.0&order=order_index.asc`, {
@@ -1033,6 +1061,44 @@
       document.getElementById('v2-btn-cancel-edit').style.display = 'none';
       document.getElementById('v2-btn-submit-svc').innerHTML = `<span>+ Adicionar Serviço à Lista</span>`;
       updateV2Preview();
+    }
+
+    async function handleV2CoverPhotoSelect(fileInput) {
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const imgEl = document.getElementById('v2-cover-preview-img');
+      const placeholderEl = document.getElementById('v2-cover-preview-placeholder');
+      const urlInput = document.getElementById('v2-client-cover-url');
+
+      const isVideo = file.type.startsWith('video/');
+      const tempUrl = URL.createObjectURL(file);
+      imgEl.src = tempUrl;
+      imgEl.style.display = 'block';
+      if (placeholderEl) placeholderEl.style.display = 'none';
+      urlInput.value = tempUrl;
+
+      try {
+        let fileToUpload = file;
+        if (!isVideo && typeof window.compressImageFile === 'function') {
+          fileToUpload = await window.compressImageFile(file, { maxDimension: 1200, quality: 0.82 });
+        }
+
+        const ext = fileToUpload.name ? fileToUpload.name.split('.').pop() : (isVideo ? 'mp4' : 'webp');
+        const path = `covers/cover_${orderId || 'v2'}_${Date.now()}.${ext}`;
+
+        let publicUrl = null;
+        if (window.lashSupabase && window.lashSupabase.uploadFile) {
+          publicUrl = await window.lashSupabase.uploadFile('catalog-assets', path, fileToUpload);
+        }
+
+        if (publicUrl) {
+          urlInput.value = publicUrl;
+          imgEl.src = publicUrl;
+        }
+      } catch (err) {
+        console.error('Erro no upload da foto de capa V2:', err);
+      }
     }
 
     async function handleV2ServicePhotoSelect(fileInput) {
