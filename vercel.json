@@ -50,6 +50,14 @@
       "destination": "/admin/:path*"
     },
     {
+      "source": "/app",
+      "destination": "/admin/app.html"
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "/admin/app.html"
+    },
+    {
       "source": "/editar",
       "destination": "/admin/editor.html"
     },
