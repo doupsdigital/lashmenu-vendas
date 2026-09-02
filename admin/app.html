@@ -32,6 +32,240 @@
       --warning: #d97706;
       --danger: #dc2626;
       --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+      --card-bg: #ffffff;
+      --primary-v2: #c04b6b;
+      --primary-hover-v2: #a33854;
+      --primary-gradient: linear-gradient(135deg, #c04b6b 0%, #d96583 100%);
+      --text-primary: #16110e;
+      --text-secondary: #6e6259;
+      --rose-light-bg: #fdf5f7;
+      --rose-light-border: #f0c2cd;
+      --green-bg: #ecfdf5;
+      --green-text: #059669;
+      --red-bg: #fef2f2;
+      --red-text: #dc2626;
+      --radius-card: 18px;
+      --radius-input: 12px;
+      --shadow-sm: 0 4px 20px rgba(180, 140, 150, 0.08);
+      --font-title: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* ── CARD PADRÃO LASHAGENDA (V2) ── */
+    .v2-card {
+      background: #ffffff;
+      border: 1px solid #f0e8e0;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px rgba(180, 140, 150, 0.08);
+      overflow: hidden;
+    }
+    .v2-card-header-banner {
+      background: linear-gradient(135deg, #c04b6b 0%, #d96583 100%);
+      padding: 16px 20px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .v2-card-header-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffffff;
+    }
+    .v2-pill-count {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .v2-card-body {
+      padding: 20px;
+    }
+
+    /* ── FORMULÁRIOS & INPUTS LASHAGENDA (V2) ── */
+    .v2-form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .v2-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      .v2-form-row { grid-template-columns: 1fr; }
+    }
+    .v2-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .v2-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6e6259;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .v2-label .v2-btn-remove-pill {
+      margin-left: auto;
+    }
+    .v2-label-req { color: #c04b6b; }
+
+    .v2-input, .v2-select, .v2-textarea {
+      width: 100%;
+      background: #fffcf9;
+      border: 1.5px solid #f0e8e0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #16110e;
+      outline: none;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+    .v2-input:focus, .v2-select:focus, .v2-textarea:focus {
+      background: #ffffff;
+      border-color: #c04b6b;
+      box-shadow: 0 0 0 3.5px rgba(192, 75, 107, 0.12);
+    }
+    .v2-textarea { resize: vertical; min-height: 80px; }
+
+    /* COMPONENTE DE UPLOAD DE MÍDIA / FOTO */
+    .media-upload-picker-sm {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .media-preview-box-sm {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: #fdf5f7;
+      border: 1.5px dashed #e5b8c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .media-preview-el-sm {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .media-upload-controls-sm {
+      flex: 1;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-file-select-sm {
+      background: #fdf5f7 !important;
+      border: 1.5px dashed #e5b8c4 !important;
+      color: #c04b6b !important;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+      border-radius: 12px !important;
+      padding: 10px 16px !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      transition: all 0.2s ease !important;
+    }
+    .btn-file-select-sm:hover {
+      background: #f8e6ea !important;
+      border-color: #c04b6b !important;
+    }
+
+    /* BOTÕES & PÍLULAS */
+    .v2-btn-primary {
+      width: 100%;
+      background: #c04b6b;
+      color: #ffffff;
+      border: none;
+      border-radius: 100px;
+      padding: 14px 20px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(192, 75, 107, 0.25);
+      transition: all 0.2s ease;
+    }
+    .v2-btn-primary:hover {
+      background: #a33854;
+      transform: translateY(-1px);
+    }
+
+    .v2-btn-toggle-details {
+      background: none;
+      border: none;
+      color: #c04b6b;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0;
+      transition: color 0.2s;
+    }
+    .v2-btn-toggle-details:hover { color: #a33854; }
+
+    .v2-btn-remove-pill {
+      background: #fdf5f7;
+      border: 1.5px solid #f0c2cd;
+      color: #c04b6b;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .v2-btn-save-all {
+      width: 100%;
+      background: linear-gradient(135deg, #c04b6b 0%, #a33854 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: 100px;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(192, 75, 107, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* ACCORDION REUTILIZÁVEL */
+    .v2-accordion-card.is-closed .v2-accordion-body { display: none; }
+    .v2-accordion-header {
+      cursor: pointer;
+      user-select: none;
     }
 
     * {
