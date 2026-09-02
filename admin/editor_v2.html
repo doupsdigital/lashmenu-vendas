@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-client-rose is-client-mode">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>✨ Editar Meu Catálogo — LashMenu V2</title>
+
+  <!-- Google Fonts: Playfair Display + Outfit + Inter (Design System LashAgenda) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── RESET & TOKENS LASHAGENDA DESIGN SYSTEM ── */
+    :root {
+      --bg: #faf6f4;
+      --card-bg: #ffffff;
+      --border: #f0e8e0;
+      --primary: #c04b6b;
+      --primary-hover: #a33854;
+      --primary-gradient: linear-gradient(135deg, #c04b6b 0%, #d96583 100%);
+      --text-primary: #16110e;
+      --text-secondary: #6e6259;
+      --text-muted: #9e9188;
+      --rose-light-bg: #fdf5f7;
+      --rose-light-border: #f0c2cd;
+      --green-bg: #ecfdf5;
+      --green-text: #059669;
+      --red-bg: #fef2f2;
+      --red-text: #dc2626;
+      --amber-bg: #fffbeb;
+      --amber-border: #fef3c7;
+      --amber-text: #92400e;
+      --radius-card: 18px;
+      --radius-input: 12px;
+      --shadow-sm: 0 4px 20px rgba(180, 140, 150, 0.08);
+      --font-body: 'Outfit', 'Inter', system-ui, sans-serif;
+      --font-title: 'Playfair Display', Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding-bottom: 90px;
+    }
+
+    /* ── LOADING OVERLAY ── */
+    .v2-loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.35s ease, visibility 0.35s;
+    }
+    .v2-loader.is-hidden {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      display: none !important;
+    }
+    .loader-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+    .loader-logo {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .loader-logo em {
+      font-style: italic;
+      color: var(--primary);
+    }
+    .loader-spin {
+      width: 40px;
+      height: 40px;
+      border: 3.5px solid rgba(192, 75, 107, 0.2);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── HEADER ── */
+    .v2-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .v2-brand {
+      font-family: var(--font-title);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .v2-brand em { color: var(--primary); font-style: italic; }
+    .v2-badge-v2 {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #fdf5f7;
+      color: var(--primary);
+      border: 1px solid var(--rose-light-border);
+      padding: 2px 8px;
+      border-radius: 100px;
+      text-transform: uppercase;
+    }
+    .v2-btn-back {
+      background: #f8f3f0;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .v2-btn-back:hover { background: #efe7e2; color: var(--text-primary); }
+
+    /* ── CONTAINER PRINCIPAL ── */
+    .v2-container {
+      max-width: 680px;
+      margin: 24px auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ── CABEÇALHO DA PÁGINA DE SERVIÇOS ── */
+    .v2-page-title-box {
+      margin-bottom: 4px;
+    }
+    .v2-page-greeting {
+      font-family: var(--font-title);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .v2-page-sub {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* ── CARD PADRÃO LASHAGENDA ── */
+    .v2-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .v2-card-header-banner {
+      background: var(--primary-gradient);
+      padding: 16px 20px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .v2-card-header-title {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .v2-pill-count {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .v2-card-body {
+      padding: 20px;
+    }
+
+    /* ── FORMULÁRIOS & INPUTS LASHAGENDA ── */
+    .v2-form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .v2-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      .v2-form-row { grid-template-columns: 1fr; }
+    }
+    .v2-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .v2-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .v2-label-req { color: var(--primary); }
+    .v2-label-sub { text-transform: none; font-weight: 400; color: var(--text-muted); }
+
+    .v2-input, .v2-select, .v2-textarea {
+      width: 100%;
+      background: #fffcf9;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-input);
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .v2-input:focus, .v2-select:focus, .v2-textarea:focus {
+      background: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3.5px rgba(192, 75, 107, 0.12);
+    }
+    .v2-textarea { resize: vertical; min-height: 80px; }
+
+    /* BOTÕES & PÍLULAS */
+    .v2-btn-primary {
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      border-radius: 100px;
+      padding: 14px 20px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(192, 75, 107, 0.25);
+      transition: all 0.2s ease;
+    }
+    .v2-btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+    .v2-btn-secondary {
+      background: #f8f3f0;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      border-radius: 100px;
+      padding: 12px 20px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .v2-btn-secondary:hover { background: #efe7e2; color: var(--text-primary); }
+
+    .v2-btn-toggle-details {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0;
+      transition: color 0.2s;
+    }
+    .v2-btn-toggle-details:hover { color: var(--primary-hover); }
+
+    .v2-btn-remove-pill {
+      background: var(--rose-light-bg);
+      border: 1.5px solid var(--rose-light-border);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 100px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* ── BARRA DE BUSCA ── */
+    .v2-search-box {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .v2-search-input {
+      padding-left: 40px;
+    }
+    .v2-search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    /* ── LISTA DE SERVIÇOS (LASHAGENDA ITEM) ── */
+    .v2-service-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      transition: background 0.15s ease;
+    }
+    .v2-service-item:last-child { border-bottom: none; }
+    .v2-service-item:hover { background: #fcf9f7; }
+
+    .v2-service-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: var(--rose-light-bg);
+      border: 1px solid var(--rose-light-border);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .v2-service-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .v2-service-name {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .v2-service-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .v2-meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* BOTÕES DE AÇÃO DO ITEM (PÍLULAS VERDE E VERMELHA DAS FOTOS) */
+    .v2-item-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .v2-btn-action-edit {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--green-bg);
+      color: var(--green-text);
+      border: 1px solid #a7f3d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .v2-btn-action-edit:hover { background: #d1fae5; transform: scale(1.05); }
+
+    .v2-btn-action-delete {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--red-bg);
+      color: var(--red-text);
+      border: 1px solid #fecaca;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .v2-btn-action-delete:hover { background: #fee2e2; transform: scale(1.05); }
+
+    /* ── PRÉVIA EM TEMPO REAL (COMO VAI APARECER NO CATÁLOGO) ── */
+    .v2-preview-box {
+      background: #faf6f4;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .v2-preview-header {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+    .v2-preview-sub { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px; }
+
+    .v2-preview-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      .v2-preview-cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .v2-mini-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .v2-mini-card-img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      background: var(--rose-light-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+    .v2-mini-card-body {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .v2-mini-card-title {
+      font-family: var(--font-title);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .v2-mini-card-meta {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 8px;
+    }
+    .v2-mini-card-btn {
+      margin-top: 4px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 6px;
+      border-radius: 6px;
+    }
+
+    /* BARRA FLUTUANTE INFERIOR SALVAR DADOS GERAIS */
+    .v2-sticky-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 90;
+    }
+    .v2-btn-save-all {
+      max-width: 420px;
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      border-radius: 100px;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(192, 75, 107, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .v2-btn-save-all:hover { background: var(--primary-hover); }
+
+    /* ACCORDION REUTILIZÁVEL */
+    .v2-accordion-card.is-closed .v2-accordion-body { display: none; }
+    .v2-accordion-header {
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOADING OVERLAY -->
+  <div id="v2-loader" class="v2-loader">
+    <div class="loader-box">
+      <div class="loader-logo">Lash<em>Menu</em></div>
+      <div class="loader-spin"></div>
+      <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Carregando seu catálogo V2...</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="v2-header">
+    <div class="v2-brand">
+      Lash<em>Menu</em>
+      <span class="v2-badge-v2">V2 Experimental</span>
+    </div>
+    <a href="./" class="v2-btn-back" id="btn-admin-back">
+      <span>← Voltar ao Painel</span>
+    </a>
+  </header>
+
+  <div class="v2-container">
+
+    <!-- TÍTULO DA PÁGINA (ESTILO LASHAGENDA) -->
+    <div class="v2-page-title-box">
+      <h1 class="v2-page-greeting" id="v2-greeting">✨ Olá!</h1>
+      <p class="v2-page-sub">Gerencie seus preços, fotos e serviços no novo painel estilo LashAgenda.</p>
+    </div>
+
+    <!-- SEÇÃO 1: SEUS SERVIÇOS (LISTA LASHAGENDA) -->
+    <div class="v2-card">
+      <div class="v2-card-header-banner">
+        <div class="v2-card-header-title">
+          <span>✨ Seus Serviços</span>
+        </div>
+        <span class="v2-pill-count" id="v2-service-count">0 cadastrados</span>
+      </div>
+      <div class="v2-card-body">
+        
+        <!-- BUSCA DE SERVIÇOS -->
+        <div class="v2-search-box">
+          <svg class="v2-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="v2-search-input" class="v2-input v2-search-input" placeholder="Buscar serviço por nome..." oninput="filterV2Services(this.value)">
+        </div>
+
+        <!-- LISTA DE CARDS COMPACTOS -->
+        <div id="v2-services-list" style="border: 1px solid var(--border); border-radius: 14px; overflow: hidden;">
+          <!-- Inserido dinamicamente via JS -->
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SEÇÃO 2: FORMULÁRIO DE ADIÇÃO / EDIÇÃO DO SERVIÇO -->
+    <div class="v2-card" id="v2-service-form-card">
+      <div class="v2-card-header-banner" style="background: linear-gradient(135deg, #a33854 0%, #c04b6b 100%);">
+        <div class="v2-card-header-title" id="v2-form-title">
+          <span>✨ Novo Serviço</span>
+        </div>
+      </div>
+      <div class="v2-card-body">
+        
+        <form id="v2-service-form" onsubmit="handleSaveServiceForm(event)">
+          <div class="v2-form-grid">
+
+            <div class="v2-form-group">
+              <label class="v2-label">NOME DO SERVIÇO <span class="v2-label-req">*</span></label>
+              <input type="text" id="v2-svc-name" class="v2-input" placeholder="Ex: Volume Russo, Efeito Boneca..." required oninput="updateV2Preview()">
+            </div>
+
+            <div class="v2-form-row">
+              <div class="v2-form-group">
+                <label class="v2-label">PREÇO (R$) <span class="v2-label-req">*</span></label>
+                <input type="text" id="v2-svc-price" class="v2-input" placeholder="Ex: 100,00" required oninput="updateV2Preview()">
+              </div>
+              <div class="v2-form-group">
+                <label class="v2-label">DURAÇÃO (MIN) <span class="v2-label-req">*</span></label>
+                <input type="text" id="v2-svc-duration" class="v2-input" placeholder="Ex: 60 min ou 1h30" required oninput="updateV2Preview()">
+              </div>
+            </div>
+
+            <!-- TOGGLE DADOS OPCIONAIS -->
+            <div>
+              <button type="button" class="v2-btn-toggle-details" onclick="toggleV2OptionalFields()">
+                <span id="v2-toggle-arrow">∨</span>
+                <span id="v2-toggle-text">Adicionar mais detalhes (opcional)</span>
+              </button>
+            </div>
+
+            <!-- BLOCO DE CAMPOS OPCIONAIS -->
+            <div id="v2-optional-fields" style="display: none;" class="v2-form-grid">
+
+              <div class="v2-form-group">
+                <div class="v2-label">
+                  <span>CATEGORIA (SUBTÍTULO)</span>
+                  <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-category')">✕ Limpar</button>
+                </div>
+                <input type="text" id="v2-svc-category" class="v2-input" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
+              </div>
+
+              <div class="v2-form-row">
+                <div class="v2-form-group">
+                  <div class="v2-label">
+                    <span>MANUTENÇÃO</span>
+                    <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-maintenance')">✕ Limpar</button>
+                  </div>
+                  <input type="text" id="v2-svc-maintenance" class="v2-input" placeholder="Ex: 60,00 (até 20 dias)">
+                </div>
+                <div class="v2-form-group">
+                  <div class="v2-label">
+                    <span>EFEITO VISUAL</span>
+                    <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-svc-effect')">✕ Limpar</button>
+                  </div>
+                  <input type="text" id="v2-svc-effect" class="v2-input" placeholder="Ex: Marcante e Alongado">
+                </div>
+              </div>
+
+              <div class="v2-form-group">
+                <label class="v2-label">FOTO DO SERVIÇO <span class="v2-label-sub">(opcional)</span></label>
+                <input type="url" id="v2-svc-photo" class="v2-input" placeholder="Cole a URL da foto ou selecione o arquivo..." oninput="updateV2Preview()">
+              </div>
+
+              <div class="v2-form-group">
+                <label class="v2-label">DESCRIÇÃO <span class="v2-label-sub">(aparece no portal da cliente)</span></label>
+                <textarea id="v2-svc-desc" class="v2-textarea" placeholder="Ex: Aplicação minuciosa com fios sintéticos de alta qualidade..." oninput="updateV2Preview()"></textarea>
+              </div>
+
+              <!-- PRÉVIA EM TEMPO REAL LASHAGENDA -->
+              <div class="v2-preview-box">
+                <div class="v2-preview-header">Como vai aparecer no portal</div>
+                <div class="v2-preview-sub">Atualiza em tempo real enquanto você digita</div>
+
+                <div class="v2-preview-cards-grid">
+                  <!-- PREVIEW COM FOTO -->
+                  <div class="v2-mini-card">
+                    <div class="v2-mini-card-img" id="v2-prev-img-box">
+                      <span id="v2-prev-img-tag">📸 Com foto</span>
+                    </div>
+                    <div class="v2-mini-card-body">
+                      <div class="v2-mini-card-title" id="v2-prev-title-1">Efeito Boneca</div>
+                      <div class="v2-mini-card-meta">
+                        <span id="v2-prev-dur-1">⏱️ 60 min</span>
+                        <span id="v2-prev-price-1">💰 R$ 100,00</span>
+                      </div>
+                      <div class="v2-mini-card-btn">Ver Catálogo</div>
+                    </div>
+                  </div>
+
+                  <!-- PREVIEW SEM FOTO -->
+                  <div class="v2-mini-card">
+                    <div class="v2-mini-card-body" style="padding-top: 14px;">
+                      <div class="v2-mini-card-title" id="v2-prev-title-2">Efeito Boneca</div>
+                      <div class="v2-mini-card-meta">
+                        <span id="v2-prev-dur-2">⏱️ 60 min</span>
+                        <span id="v2-prev-price-2">💰 R$ 100,00</span>
+                      </div>
+                      <div class="v2-mini-card-btn" style="background: #9e3651;">Ver Catálogo</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- BARRAS DE AÇÃO DO FORMULÁRIO -->
+            <div style="display: flex; gap: 10px; margin-top: 8px;">
+              <button type="button" id="v2-btn-cancel-edit" class="v2-btn-secondary" style="display: none;" onclick="resetV2Form()">Cancelar Edição</button>
+              <button type="submit" id="v2-btn-submit-svc" class="v2-btn-primary">
+                <span>+ Adicionar Serviço à Lista</span>
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- SEÇÃO 3: MEUS DADOS & CONTATOS -->
+    <div class="v2-card v2-accordion-card" id="v2-card-general-info">
+      <div class="v2-card-header-banner v2-accordion-header" onclick="toggleV2Accordion('v2-card-general-info')">
+        <div class="v2-card-header-title">
+          <span>👤 Meus Dados & Contatos da Lash</span>
+        </div>
+        <span style="font-size: 0.9rem;">▼</span>
+      </div>
+      <div class="v2-card-body v2-accordion-body">
+        <div class="v2-form-grid">
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <label class="v2-label">Nome da Lash Designer</label>
+              <input type="text" id="v2-client-name" class="v2-input" placeholder="Ex: Gabriele Buginski">
+            </div>
+            <div class="v2-form-group">
+              <label class="v2-label">WhatsApp (com DDD)</label>
+              <input type="text" id="v2-client-whatsapp" class="v2-input" placeholder="Ex: (41) 98865-1722">
+            </div>
+          </div>
+
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <label class="v2-label">Instagram (@usuario)</label>
+              <input type="text" id="v2-client-instagram" class="v2-input" placeholder="Ex: _bygabibuginski">
+            </div>
+            <div class="v2-form-group">
+              <label class="v2-label">Localização / Endereço</label>
+              <input type="text" id="v2-client-location" class="v2-input" placeholder="Ex: Guaratuba - Paraná">
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">Frase da Capa (Hero Phrase)</label>
+            <input type="text" id="v2-client-phrase" class="v2-input" placeholder="Ex: ✨ Seu olhar, minha Arte!">
+          </div>
+
+          <div class="v2-form-row">
+            <div class="v2-form-group">
+              <label class="v2-label">Modelo de Catálogo</label>
+              <select id="v2-select-model" class="v2-select">
+                <option value="glamour">Glamour (Destaque Visual)</option>
+                <option value="harmonia">Harmonia (Cards Elegantes)</option>
+                <option value="classico">Clássico (Lista Clean)</option>
+              </select>
+            </div>
+            <div class="v2-form-group">
+              <label class="v2-label">Tema de Cores</label>
+              <select id="v2-select-color" class="v2-select">
+                <option value="rose">Rosé Nude Soft</option>
+                <option value="midnight">Midnight Dark Premium</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">URL da Foto / Vídeo da Capa</label>
+            <input type="url" id="v2-client-cover-url" class="v2-input" placeholder="URL da foto ou vídeo principal de capa...">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BARRA DE SALVAMENTO GERAL (STICKY FOOTER) -->
+  <div class="v2-sticky-footer">
+    <button type="button" class="v2-btn-save-all" onclick="saveAllV2Data()">
+      <span>💾 SALVAR TODAS AS ALTERAÇÕES ✨</span>
+    </button>
+  </div>
+
+  <!-- Supabase Config & SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../vendas/form/js/supabase-config.js?v=4.0"></script>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    let orderId = urlParams.get('id');
+    let clientSlug = urlParams.get('slug') || urlParams.get('c') || urlParams.get('p');
+    const clientToken = urlParams.get('token') || urlParams.get('key') || urlParams.get('k');
+
+    if (!clientSlug && clientToken && clientToken.startsWith('sec_')) {
+      const parts = clientToken.split('_');
+      if (parts.length >= 2) clientSlug = parts[1];
+    }
+
+    let allServices = [];
+    let editingIndex = null;
+
+    function hideV2Loader() {
+      const loader = document.getElementById('v2-loader');
+      if (loader) {
+        loader.classList.add('is-hidden');
+        setTimeout(() => { loader.style.display = 'none'; }, 350);
+      }
+    }
+
+    async function initEditorV2() {
+      try {
+        let queryUrl = '';
+        if (orderId) {
+          queryUrl = `${SUPABASE_URL}/rest/v1/orders?id=eq.${encodeURIComponent(orderId)}&select=*`;
+        } else if (clientSlug) {
+          queryUrl = `${SUPABASE_URL}/rest/v1/orders?slug=eq.${encodeURIComponent(clientSlug)}&select=*`;
+        } else {
+          throw new Error('Nenhum identificador fornecido.');
+        }
+
+        const orderRes = await fetch(queryUrl, {
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        });
+        if (!orderRes.ok) throw new Error('Erro ao buscar dados do catálogo.');
+
+        const orders = await orderRes.json();
+        if (!orders || orders.length === 0) throw new Error('Catálogo não localizado.');
+
+        const order = orders[0];
+        orderId = order.id;
+
+        document.getElementById('v2-greeting').textContent = `✨ Olá, ${order.client_name.split(' ')[0]}!`;
+        document.getElementById('v2-client-name').value = order.client_name || '';
+        document.getElementById('v2-client-whatsapp').value = order.whatsapp || '';
+        document.getElementById('v2-client-instagram').value = order.instagram || '';
+        document.getElementById('v2-client-location').value = order.location || '';
+        document.getElementById('v2-client-phrase').value = order.hero_phrase || '';
+        document.getElementById('v2-select-model').value = order.model_id || 'glamour';
+        document.getElementById('v2-select-color').value = order.color_id || 'rose';
+        document.getElementById('v2-client-cover-url').value = order.cover_media_url || '';
+
+        // Busca Serviços da Ordem
+        const servicesRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services?order_id=eq.${orderId}&order_index=gte.0&order=order_index.asc`, {
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+        });
+        allServices = servicesRes.ok ? await servicesRes.json() : [];
+        renderV2ServicesList(allServices);
+
+      } catch (err) {
+        alert('Erro no Editor V2: ' + err.message);
+      } finally {
+        hideV2Loader();
+      }
+    }
+
+    function renderV2ServicesList(list) {
+      const container = document.getElementById('v2-services-list');
+      document.getElementById('v2-service-count').textContent = `${list.length} cadastrado${list.length === 1 ? '' : 's'}`;
+
+      if (!list || list.length === 0) {
+        container.innerHTML = `
+          <div style="padding: 32px; text-align: center; color: var(--text-muted);">
+            <p style="font-weight: 700; font-size: 1.05rem; color: var(--text-primary);">Nenhum serviço cadastrado ainda</p>
+            <p style="font-size: 0.85rem; margin-top: 4px;">Use o formulário abaixo para adicionar seu primeiro serviço.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map((svc, idx) => {
+        const photo = svc.photo_url || '';
+        const price = (svc.price || '').toString().startsWith('R$') ? svc.price : `R$ ${svc.price || '0,00'}`;
+        const dur = svc.duration || '30 min';
+
+        return `
+          <div class="v2-service-item">
+            ${photo ? `<img src="${photo}" class="v2-service-thumb" alt="">` : `<div class="v2-service-thumb">✨</div>`}
+            <div class="v2-service-info">
+              <div class="v2-service-name">${svc.name || 'Sem nome'}</div>
+              <div class="v2-service-meta">
+                <span class="v2-meta-chip">⏱️ ${dur}</span>
+                <span class="v2-meta-chip">💰 ${price}</span>
+                ${svc.category ? `<span class="v2-meta-chip" style="color: var(--primary);">🏷️ ${svc.category}</span>` : ''}
+              </div>
+            </div>
+            <div class="v2-item-actions">
+              <button type="button" class="v2-btn-action-edit" onclick="editV2Service(${idx})" title="Editar Serviço">
+                ✏️
+              </button>
+              <button type="button" class="v2-btn-action-delete" onclick="deleteV2Service(${idx})" title="Excluir Serviço">
+                🗑️
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterV2Services(term) {
+      const cleanTerm = term.toLowerCase().trim();
+      if (!cleanTerm) {
+        renderV2ServicesList(allServices);
+        return;
+      }
+      const filtered = allServices.filter(s => (s.name || '').toLowerCase().includes(cleanTerm) || (s.category || '').toLowerCase().includes(cleanTerm));
+      renderV2ServicesList(filtered);
+    }
+
+    function editV2Service(index) {
+      editingIndex = index;
+      const svc = allServices[index];
+      if (!svc) return;
+
+      document.getElementById('v2-form-title').innerHTML = `<span>✏️ Editar Serviço: ${svc.name}</span>`;
+      document.getElementById('v2-svc-name').value = svc.name || '';
+      document.getElementById('v2-svc-price').value = svc.price || '';
+      document.getElementById('v2-svc-duration').value = svc.duration || '';
+      document.getElementById('v2-svc-category').value = svc.category || '';
+      document.getElementById('v2-svc-maintenance').value = svc.maintenance || '';
+      document.getElementById('v2-svc-effect').value = svc.effect || '';
+      document.getElementById('v2-svc-photo').value = svc.photo_url || '';
+      document.getElementById('v2-svc-desc').value = svc.description || '';
+
+      document.getElementById('v2-btn-cancel-edit').style.display = 'block';
+      document.getElementById('v2-btn-submit-svc').innerHTML = `<span>💾 Atualizar Serviço</span>`;
+
+      // Mostra campos opcionais automaticamente na edição
+      document.getElementById('v2-optional-fields').style.display = 'flex';
+      updateV2Preview();
+
+      document.getElementById('v2-service-form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function resetV2Form() {
+      editingIndex = null;
+      document.getElementById('v2-form-title').innerHTML = `<span>✨ Novo Serviço</span>`;
+      document.getElementById('v2-service-form').reset();
+      document.getElementById('v2-btn-cancel-edit').style.display = 'none';
+      document.getElementById('v2-btn-submit-svc').innerHTML = `<span>+ Adicionar Serviço à Lista</span>`;
+      updateV2Preview();
+    }
+
+    function toggleV2OptionalFields() {
+      const box = document.getElementById('v2-optional-fields');
+      const isHidden = box.style.display === 'none';
+      box.style.display = isHidden ? 'flex' : 'none';
+      document.getElementById('v2-toggle-arrow').textContent = isHidden ? '∧' : '∨';
+      document.getElementById('v2-toggle-text').textContent = isHidden ? 'Ocultar dados opcionais' : 'Adicionar mais detalhes (opcional)';
+    }
+
+    function clearV2Field(id) {
+      document.getElementById(id).value = '';
+      updateV2Preview();
+    }
+
+    function updateV2Preview() {
+      const name = document.getElementById('v2-svc-name').value.trim() || 'Nome do Serviço';
+      const price = document.getElementById('v2-svc-price').value.trim() || '100,00';
+      const dur = document.getElementById('v2-svc-duration').value.trim() || '60 min';
+      const photo = document.getElementById('v2-svc-photo').value.trim();
+
+      document.getElementById('v2-prev-title-1').textContent = name;
+      document.getElementById('v2-prev-title-2').textContent = name;
+      document.getElementById('v2-prev-dur-1').textContent = `⏱️ ${dur}`;
+      document.getElementById('v2-prev-dur-2').textContent = `⏱️ ${dur}`;
+      document.getElementById('v2-prev-price-1').textContent = `💰 R$ ${price}`;
+      document.getElementById('v2-prev-price-2').textContent = `💰 R$ ${price}`;
+
+      const imgBox = document.getElementById('v2-prev-img-box');
+      if (photo) {
+        imgBox.style.backgroundImage = `url('${photo}')`;
+        imgBox.style.backgroundSize = 'cover';
+        document.getElementById('v2-prev-img-tag').style.display = 'none';
+      } else {
+        imgBox.style.backgroundImage = 'none';
+        document.getElementById('v2-prev-img-tag').style.display = 'block';
+      }
+    }
+
+    function handleSaveServiceForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('v2-svc-name').value.trim();
+      const price = document.getElementById('v2-svc-price').value.trim();
+      const duration = document.getElementById('v2-svc-duration').value.trim();
+      const category = document.getElementById('v2-svc-category').value.trim();
+      const maintenance = document.getElementById('v2-svc-maintenance').value.trim();
+      const effect = document.getElementById('v2-svc-effect').value.trim();
+      const photo_url = document.getElementById('v2-svc-photo').value.trim();
+      const description = document.getElementById('v2-svc-desc').value.trim();
+
+      const newSvcData = {
+        name, price, duration, category, maintenance, effect, photo_url, description,
+        order_index: editingIndex !== null ? allServices[editingIndex].order_index : allServices.length
+      };
+
+      if (editingIndex !== null) {
+        allServices[editingIndex] = { ...allServices[editingIndex], ...newSvcData };
+      } else {
+        allServices.push(newSvcData);
+      }
+
+      renderV2ServicesList(allServices);
+      resetV2Form();
+      alert('✨ Serviço ' + (editingIndex !== null ? 'atualizado' : 'adicionado') + ' na lista local. Clique no botão de Salvar no rodapé para gravar no banco de dados!');
+    }
+
+    async function deleteV2Service(index) {
+      const svc = allServices[index];
+      if (!confirm(`Deseja realmente remover o procedimento "${svc.name}"?`)) return;
+
+      allServices.splice(index, 1);
+      renderV2ServicesList(allServices);
+    }
+
+    async function saveAllV2Data() {
+      try {
+        // 1. Grava Dados Gerais da Ordem
+        const orderPayload = {
+          client_name: document.getElementById('v2-client-name').value.trim(),
+          whatsapp: document.getElementById('v2-client-whatsapp').value.trim(),
+          instagram: document.getElementById('v2-client-instagram').value.trim(),
+          location: document.getElementById('v2-client-location').value.trim(),
+          hero_phrase: document.getElementById('v2-client-phrase').value.trim(),
+          model_id: document.getElementById('v2-select-model').value,
+          color_id: document.getElementById('v2-select-color').value,
+          cover_media_url: document.getElementById('v2-client-cover-url').value.trim()
+        };
+
+        await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
+          method: 'PATCH',
+          headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify(orderPayload)
+        });
+
+        // 2. Grava Serviços na tabela order_services
+        for (let i = 0; i < allServices.length; i++) {
+          const item = allServices[i];
+          item.order_index = i;
+
+          if (item.id) {
+            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${item.id}`, {
+              method: 'PATCH',
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+              body: JSON.stringify(item)
+            });
+          } else {
+            item.order_id = orderId;
+            await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
+              method: 'POST',
+              headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+              body: JSON.stringify(item)
+            });
+          }
+        }
+
+        alert('✅ Sucesso! Todas as alterações do V2 foram salvas no Supabase!');
+      } catch (err) {
+        alert('Erro ao salvar no Supabase: ' + err.message);
+      }
+    }
+
+    function toggleV2Accordion(cardId) {
+      const card = document.getElementById(cardId);
+      if (card) card.classList.toggle('is-closed');
+    }
+
+    // Inicializa
+    initEditorV2();
+  </script>
+</body>
+
+</html>

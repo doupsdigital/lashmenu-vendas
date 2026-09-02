@@ -33,6 +33,8 @@ const server = http.createServer((req, res) => {
     targetFilePath = '/vendas/lpb/index.html';
   } else if (reqPath === '/admin' || reqPath === '/admin/') {
     targetFilePath = '/admin/index.html';
+  } else if (reqPath === '/editar_v2' || reqPath.startsWith('/editar_v2/')) {
+    targetFilePath = '/admin/editor_v2.html';
   } else if (reqPath.startsWith('/admin/')) {
     targetFilePath = reqPath;
   } else if (reqPath.startsWith('/c/')) {
