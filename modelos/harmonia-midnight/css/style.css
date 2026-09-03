@@ -871,11 +871,21 @@ button {
   flex-direction: column;
   gap: 4px;
   font-size: 10.5px;
-  letter-spacing: .12em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: rgba(243, 239, 233, 0.5);
   padding-top: 16px;
   border-top: 1px solid rgba(201, 163, 137, 0.15);
+}
+
+.secao-contato__copy,
+.secao-contato__endereco,
+.secao-contato__info span {
+  margin: 0;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: inherit;
 }
 
 /* ==========================================================================
