@@ -1509,7 +1509,6 @@
           instagram: document.getElementById('v2-client-instagram').value.trim(),
           location: document.getElementById('v2-client-location').value.trim(),
           hero_phrase: document.getElementById('v2-client-phrase').value.trim(),
-          hero_sub_phrase: document.getElementById('v2-client-subphrase').value.trim(),
           cover_media_url: document.getElementById('v2-client-cover-url').value.trim()
         };
 
@@ -1521,20 +1520,28 @@
         }
 
         if (orderId) {
-          await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
+          const resOrder = await fetch(`${SUPABASE_URL}/rest/v1/orders?id=eq.${orderId}`, {
             method: 'PATCH',
             headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
             body: JSON.stringify(orderPayload)
           });
+          if (!resOrder.ok) {
+            const errJson = await resOrder.json().catch(() => ({}));
+            throw new Error(errJson.message || 'Erro ao atualizar dados principais no Supabase.');
+          }
         }
 
         // 1.5 Exclui serviços removidos do Supabase
         if (deletedServiceIds.length > 0) {
           for (const delId of deletedServiceIds) {
-            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${delId}`, {
+            const resDel = await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${delId}`, {
               method: 'DELETE',
               headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
             });
+            if (!resDel.ok) {
+              const errJson = await resDel.json().catch(() => ({}));
+              throw new Error(errJson.message || `Erro ao excluir procedimento ${delId}.`);
+            }
           }
           deletedServiceIds = [];
         }
@@ -1545,11 +1552,16 @@
           item.order_index = i;
 
           if (item.id) {
-            await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${item.id}`, {
+            delete item.created_at;
+            const resSvc = await fetch(`${SUPABASE_URL}/rest/v1/order_services?id=eq.${item.id}`, {
               method: 'PATCH',
               headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
               body: JSON.stringify(item)
             });
+            if (!resSvc.ok) {
+              const errJson = await resSvc.json().catch(() => ({}));
+              throw new Error(errJson.message || `Erro ao atualizar procedimento "${item.name}".`);
+            }
           } else {
             item.order_id = orderId;
             const insertRes = await fetch(`${SUPABASE_URL}/rest/v1/order_services`, {
@@ -1557,11 +1569,13 @@
               headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=representation' },
               body: JSON.stringify(item)
             });
-            if (insertRes.ok) {
-              const insertedItems = await insertRes.json();
-              if (insertedItems && insertedItems.length > 0) {
-                allServices[i].id = insertedItems[0].id;
-              }
+            if (!insertRes.ok) {
+              const errJson = await insertRes.json().catch(() => ({}));
+              throw new Error(errJson.message || `Erro ao criar procedimento "${item.name}".`);
+            }
+            const insertedItems = await insertRes.json();
+            if (insertedItems && insertedItems.length > 0) {
+              allServices[i].id = insertedItems[0].id;
             }
           }
         }
