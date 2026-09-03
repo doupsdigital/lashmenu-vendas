@@ -292,7 +292,7 @@ def build_catalog(client_data):
         "cover_media_url": cover_media_url,
         "cover_media_type": "image",
         "status": "pendente_revisao",
-        "published_url": f"https://lashmenu-vendas.vercel.app/catalogo/?slug={slug}",
+        "published_url": f"https://{slug}.lashmenu.com",
         "admin_notes": f"Criado via Agente Automatizado LashMenu em {datetime.now().strftime('%d/%m/%Y %H:%M')}"
     }
 
@@ -366,14 +366,16 @@ def build_catalog(client_data):
 
     # 5. Formatar Resumo e Links Finais
     first_name = client_name.split()[0]
-    preview_url = f"https://lashmenu-vendas.vercel.app/catalogo/?slug={slug}"
-    admin_editor_url = f"/admin/editor.html?id={order_id}"
+    preview_url = f"https://lashmenu.com/catalogo/?slug={slug}"
+    subdomain_url = f"https://{slug}.lashmenu.com"
+    admin_editor_url = f"https://lashmenu.com/admin/editor.html?id={order_id}"
+    admin_panel_url = "https://lashmenu.com/admin/"
 
     delivery_message = (
         f"Olá, {first_name}! ✨👑\n\n"
         f"Seu catálogo digital oficial LashMenu está pronto, calibrado e no ar! 🚀\n\n"
         f"🔗 *Seu Link Exclusivo:*\n"
-        f"👉 https://{slug}.lashmenu.com\n\n"
+        f"👉 {subdomain_url}\n\n"
         f"📌 *O que fazer agora:*\n"
         f"1. Abra o link no seu celular e confira seu catálogo completo.\n"
         f"2. Coloque este link na bio do seu Instagram e no seu perfil do WhatsApp Business.\n"
@@ -389,9 +391,10 @@ def build_catalog(client_data):
         "client_name": client_name,
         "model": f"{model_id}-{color_id}",
         "services_count": len(services_to_insert),
+        "subdomain_url": subdomain_url,
         "preview_url": preview_url,
         "admin_editor_url": admin_editor_url,
-        "admin_panel_url": "/admin/",
+        "admin_panel_url": admin_panel_url,
         "delivery_message": delivery_message
     }
 
