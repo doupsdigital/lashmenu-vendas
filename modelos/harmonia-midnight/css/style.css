@@ -19,6 +19,8 @@ html, body {
 
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
 }
@@ -522,6 +524,7 @@ button {
 }
 
 .tile__titulo {
+  margin: 0;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 18px;
   font-weight: 500;
