@@ -557,6 +557,10 @@ button {
   letter-spacing: .06em;
 }
 
+.tile__toque-cue {
+  display: none;
+}
+
 /* ==========================================================================
    3. SEÇÃO ORIENTAÇÕES (SNAP SCREEN 3 - TELA CHEIA PADRÃO VITRINE DARK)
    ========================================================================== */
