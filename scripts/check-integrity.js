@@ -52,7 +52,7 @@ htmlFiles.forEach(file => {
 });
 
 // 2. Verificar integridade das animações nos modelos de catálogo
-const catalogModels = ['harmonia-rose', 'harmonia-midnight', 'glamour-rose', 'glamour-midnight', 'classico-rose', 'classico-midnight'];
+const catalogModels = ['mosaico-rose', 'mosaico-luxury', 'glamour-rose', 'glamour-midnight', 'classico-rose', 'classico-midnight'];
 catalogModels.forEach(model => {
   const cssPath = path.join(ROOT, 'modelos', model, 'css', 'style.css');
   if (fs.existsSync(cssPath)) {
@@ -66,7 +66,7 @@ catalogModels.forEach(model => {
     }
 
     // Trava de animação de zoom da capa
-    if (model.startsWith('harmonia') || model.startsWith('classico')) {
+    if (model.startsWith('mosaico') || model.startsWith('harmonia') || model.startsWith('classico')) {
       if (!css.includes('heroKenBurns')) {
         logErr(`modelos/${model}/css/style.css não possui a animação 'heroKenBurns', o que quebra o zoom suave contínuo da Capa!`);
       } else {

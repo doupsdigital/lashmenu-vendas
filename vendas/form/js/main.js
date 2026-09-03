@@ -301,7 +301,8 @@ function initModelCardsSelection() {
 
   const modelButtonLabels = {
     glamour: 'Escolher Glamour',
-    harmonia: 'Escolher Harmonia',
+    mosaico: 'Escolher Mosaico',
+    harmonia: 'Escolher Mosaico',
     classico: 'Escolher Clássico'
   };
 
@@ -687,7 +688,8 @@ function openProcedureModal(row) {
 
   const modelLabels = {
     glamour: '✨ Glamour',
-    harmonia: '🌸 Harmonia',
+    mosaico: '🌸 Mosaico',
+    harmonia: '🌸 Mosaico',
     classico: '👑 Clássico'
   };
 
@@ -872,7 +874,7 @@ function initCoverPreviewModal() {
         }
         if (modalImg) {
           modalImg.src = currentColor === 'rose'
-            ? '/modelos/harmonia-rose/assets/img/hero-video-poster.jpg'
+            ? '/modelos/mosaico-rose/assets/img/hero-video-poster.jpg'
             : '/modelos/glamour-midnight/assets/img/hero-video-poster.jpg';
           modalImg.classList.remove('is-hidden');
         }
@@ -972,8 +974,8 @@ function updateSummaryTags() {
   const selectedColor = document.getElementById('input-selected-color')?.value || selectedColorId;
   const servicesCount = document.querySelectorAll('.service-row-card').length;
 
-  const modelMap = { glamour: '✨ Modelo Glamour', harmonia: '🌸 Modelo Harmonia', classico: '👑 Modelo Clássico' };
-  const colorMap = { midnight: '🖤 Midnight', rose: '🎀 Rosé' };
+  const modelMap = { glamour: '✨ Modelo Glamour', mosaico: '🌸 Modelo Mosaico', harmonia: '🌸 Modelo Mosaico', classico: '👑 Modelo Clássico' };
+  const colorMap = { midnight: '🖤 Midnight', luxury: '🖤 Luxury', rose: '🎀 Rosé' };
 
   const sumName = document.getElementById('sum-name');
   const sumModel = document.getElementById('sum-model');

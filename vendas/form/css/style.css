@@ -1328,12 +1328,14 @@ body {
   letter-spacing: .08em;
 }
 
-.proc-preview-sheet[data-theme-model="harmonia"] .proc-preview-title {
+.proc-preview-sheet[data-theme-model="harmonia"] .proc-preview-title,
+.proc-preview-sheet[data-theme-model="mosaico"] .proc-preview-title {
   font-family: var(--font-serif);
   font-style: normal;
   font-weight: 600;
 }
-.proc-preview-sheet[data-theme-model="harmonia"] .btn-demo-cta {
+.proc-preview-sheet[data-theme-model="harmonia"] .btn-demo-cta,
+.proc-preview-sheet[data-theme-model="mosaico"] .btn-demo-cta {
   border-radius: var(--radius-pill);
   letter-spacing: .04em;
 }
