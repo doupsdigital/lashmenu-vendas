@@ -85,13 +85,8 @@
     const services = servicesRes.ok ? await servicesRes.json() : [];
 
     // 3. Aplica o Tema Escolhido (Modelo + Paleta)
-    let model = (order.model_id || 'glamour').toLowerCase().trim();
-    let color = (order.color_id || 'rose').toLowerCase().trim();
-
-    if (model === 'harmonia') model = 'mosaico';
-    if (model === 'mosaico' && (color === 'midnight' || color === 'dark')) color = 'luxury';
-    if (model !== 'mosaico' && color === 'luxury') color = 'midnight';
-
+    const model = order.model_id || 'glamour';
+    const color = order.color_id || 'midnight';
     const themePath = `../${model}-${color}/css/style.css?v=2026`;
     if (themeStylesheet) {
       themeStylesheet.href = themePath;
