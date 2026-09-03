@@ -32,7 +32,7 @@ export default async function middleware(request) {
           const order = orders[0];
           const designerName = (order.client_name || slug).trim();
           const heroPhrase = (order.hero_phrase || 'Catálogo Exclusivo de Cílios & Sobrancelhas').trim();
-          const coverMedia = order.cover_media_url || 'https://lashmenu.com/modelos/harmonia-rose/assets/img/Hero.png';
+          const coverMedia = order.cover_media_url || 'https://lashmenu.com/modelos/mosaico-rose/assets/img/Hero.png';
 
           const html = `<!DOCTYPE html>
 <html lang="pt-BR">

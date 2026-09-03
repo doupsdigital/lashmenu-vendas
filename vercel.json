@@ -1,6 +1,26 @@
 {
   "redirects": [
     {
+      "source": "/modelos/harmonia-rose",
+      "destination": "/modelos/mosaico-rose/",
+      "permanent": true
+    },
+    {
+      "source": "/modelos/harmonia-rose/",
+      "destination": "/modelos/mosaico-rose/",
+      "permanent": true
+    },
+    {
+      "source": "/modelos/harmonia-midnight",
+      "destination": "/modelos/mosaico-luxury/",
+      "permanent": true
+    },
+    {
+      "source": "/modelos/harmonia-midnight/",
+      "destination": "/modelos/mosaico-luxury/",
+      "permanent": true
+    },
+    {
       "source": "/c/mosaico-rose",
       "destination": "/modelos/mosaico-rose/index.html",
       "permanent": true
@@ -54,7 +74,6 @@
       "source": "/admin",
       "destination": "/admin/index.html"
     },
-
     {
       "source": "/admin/:path*",
       "destination": "/admin/:path*"
@@ -87,7 +106,6 @@
       "source": "/c/:slug",
       "destination": "/catalogo/index.html?slug=:slug"
     },
-
     {
       "source": "/catalogo/:slug",
       "destination": "/catalogo/index.html?slug=:slug"
@@ -158,6 +176,22 @@
     },
     {
       "source": "/harmonia-midnight",
+      "destination": "/modelos/mosaico-luxury/index.html"
+    },
+    {
+      "source": "/modelos/mosaico-rose/",
+      "destination": "/modelos/mosaico-rose/index.html"
+    },
+    {
+      "source": "/modelos/mosaico-luxury/",
+      "destination": "/modelos/mosaico-luxury/index.html"
+    },
+    {
+      "source": "/modelos/harmonia-rose/",
+      "destination": "/modelos/mosaico-rose/index.html"
+    },
+    {
+      "source": "/modelos/harmonia-midnight/",
       "destination": "/modelos/mosaico-luxury/index.html"
     },
     {
