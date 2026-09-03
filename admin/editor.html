@@ -859,7 +859,7 @@
                       <span>Escolher Foto</span>
                       <input type="file" id="v2-svc-file-input" accept="image/*" style="display: none;" onchange="handleV2ServicePhotoSelect(this)">
                     </label>
-                    <input type="url" id="v2-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." oninput="updateV2Preview()" style="font-size: 0.85rem;">
+                    <input type="text" id="v2-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." oninput="updateV2Preview()" style="font-size: 0.85rem;">
                   </div>
                 </div>
               </div>
@@ -910,7 +910,7 @@
                   <span>Escolher Foto</span>
                   <input type="file" id="v2-cover-file-input" accept="image/*,video/*" style="display: none;" onchange="handleV2CoverPhotoSelect(this)">
                 </label>
-                <input type="url" id="v2-client-cover-url" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto/vídeo de capa..." style="font-size: 0.85rem;">
+                <input type="text" id="v2-client-cover-url" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto/vídeo de capa..." style="font-size: 0.85rem;">
               </div>
             </div>
           </div>
@@ -1034,7 +1034,7 @@
                   <span>Escolher Foto</span>
                   <input type="file" id="v2-edit-svc-file-input" accept="image/*" style="display: none;" onchange="handleV2EditServicePhotoSelect(this)">
                 </label>
-                <input type="url" id="v2-edit-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." style="font-size: 0.85rem;">
+                <input type="text" id="v2-edit-svc-photo" class="v2-input input-url-fallback" placeholder="Ou cole a URL da foto..." style="font-size: 0.85rem;">
               </div>
             </div>
           </div>
@@ -1274,7 +1274,7 @@
       editingIndex = null;
     }
 
-    function handleSaveEditedService(e) {
+    async function handleSaveEditedService(e) {
       e.preventDefault();
       if (editingIndex === null) return;
 
@@ -1294,6 +1294,8 @@
 
       renderV2ServicesList(allServices);
       closeV2EditModal();
+
+      await saveAllV2Data();
     }
 
     function resetV2Form() {
@@ -1423,7 +1425,7 @@
       }
     }
 
-    function handleSaveServiceForm(e) {
+    async function handleSaveServiceForm(e) {
       e.preventDefault();
       const name = document.getElementById('v2-svc-name').value.trim();
       const price = document.getElementById('v2-svc-price').value.trim();
@@ -1443,6 +1445,8 @@
 
       renderV2ServicesList(allServices);
       resetV2Form();
+
+      await saveAllV2Data();
     }
 
     async function handleV2EditServicePhotoSelect(fileInput) {
@@ -1492,6 +1496,8 @@
 
       allServices.splice(index, 1);
       renderV2ServicesList(allServices);
+
+      await saveAllV2Data();
     }
 
     async function saveAllV2Data() {
