@@ -318,6 +318,7 @@
             preco: formattedPrice,
             duracao: svc.duration || '1h30',
             desc: svc.description || 'Aplicação minuciosa com fios de alta tecnologia para um acabamento marcante e duradouro.',
+            destaque: (typeof svc.destaque !== 'undefined') ? svc.destaque : (i % 5 === 0),
             specs: specs
           });
         });
