@@ -304,9 +304,10 @@ function initTileObserver() {
 
 // Filtragem
 function getItensVisiveis() {
+  const list = (typeof window.PROCEDIMENTOS !== 'undefined' && Array.isArray(window.PROCEDIMENTOS) && window.PROCEDIMENTOS.length > 0) ? window.PROCEDIMENTOS : PROCEDIMENTOS;
   const f = (typeof window.filtroAtivo !== 'undefined') ? window.filtroAtivo : filtroAtivo;
-  if (!f || f === 'todos') return PROCEDIMENTOS;
-  return PROCEDIMENTOS.filter(item => item.cat === f);
+  if (!f || f === 'todos') return list;
+  return list.filter(item => item.cat === f);
 }
 
 function atualizarContador() {
