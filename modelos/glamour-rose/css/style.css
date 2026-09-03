@@ -207,7 +207,7 @@ img, video {
 .hero__titulo {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   margin-top: auto;
 }
 
@@ -215,7 +215,7 @@ img, video {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 400;
-  font-size: 46px;
+  font-size: clamp(28px, 7.2vw, 38px);
   line-height: 1.06;
   letter-spacing: -.02em;
   color: #24141a;
@@ -235,10 +235,10 @@ img, video {
 
 .hero__frase {
   margin: 0;
-  font-size: 19px;
-  line-height: 1.55;
+  font-size: 14.5px;
+  line-height: 1.45;
   color: #4f333e;
-  max-width: 340px;
+  max-width: 320px;
   font-weight: 500;
 }
 
@@ -249,8 +249,8 @@ img, video {
 .hero__frase-cilios {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 32px;
-  line-height: 1.16;
+  font-size: clamp(18px, 5.2vw, 24px);
+  line-height: 1.22;
   font-weight: 400;
   color: #24141a;
   text-wrap: pretty;
