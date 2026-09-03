@@ -495,9 +495,10 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg,
-    transparent 35%,
+    rgba(15, 12, 11, 0.30) 0%,
+    transparent 28%,
     rgba(15, 12, 11, 0.65) 65%,
-    rgba(15, 12, 11, 0.95) 100%
+    rgba(15, 12, 11, 0.96) 100%
   );
   pointer-events: none;
 }
@@ -517,6 +518,7 @@ button {
   letter-spacing: .25em;
   text-transform: uppercase;
   color: #c9a389;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .tile__titulo {
@@ -532,7 +534,7 @@ button {
   font-size: 24px;
 }
 
-.tile__rodape-info {
+.tile__meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -547,7 +549,7 @@ button {
 
 .tile__duracao {
   font-size: 10px;
-  color: rgba(243, 239, 233, 0.6);
+  color: rgba(243, 239, 233, 0.75);
   text-transform: uppercase;
   letter-spacing: .06em;
 }
