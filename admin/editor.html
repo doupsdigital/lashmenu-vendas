@@ -1566,6 +1566,14 @@
           }
         }
 
+        // Limpa cache da sessão para refletir imediatamente as alterações no catálogo
+        try {
+          const targetSlug = clientSlug || (window.currentOrderSlug);
+          if (targetSlug) {
+            sessionStorage.removeItem(`lash_cache_${targetSlug}`);
+          }
+        } catch(e){}
+
         openV2SuccessModal(clientSlug || (window.currentOrderSlug));
       } catch (err) {
         alert('Erro ao salvar no Supabase: ' + err.message);
