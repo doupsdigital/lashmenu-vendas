@@ -5,7 +5,8 @@
 const SCRIPTS_DATA = [
   // -------------------------------------------------------------------------
   // 1. FUNIL PASSO A PASSO (LEAD DO ANÚNCIO / WHATSAPP X1)
-  // -----------------------------------------------------------------------  {
+  // -------------------------------------------------------------------------
+  {
     id: "funnel-step-1",
     category: "funnel",
     categoryName: "Funil Passo a Passo",
@@ -73,9 +74,6 @@ Me envia o comprovante aqui que já te libero o link do gerador no celular! 🚀
 👤 **Nome:** Donizete / LashMenu
 
 Me envia o comprovante aqui que nossa equipe já coloca seu catálogo na produção expressa de 24h! 🚀✨`
-  },ete / LashMenu
-
-Me envia o comprovante aqui assim que fizer que eu já coloco seu catálogo na produção expressa de 24h! 🚀✨`
   },
 
   // -------------------------------------------------------------------------

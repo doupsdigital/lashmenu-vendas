@@ -242,6 +242,7 @@
             heroImg.onload = revealImg;
             if (heroImg.complete) revealImg();
             setTimeout(revealImg, 800);
+          }
         }
       }
     }
