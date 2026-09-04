@@ -839,68 +839,6 @@ button {
 .secao-contato__desc {
   margin: 0;
   font-size: 14px;
-  color: #553d46;
-  max-width: 320px;
-  line-height: 1.45;
-}
-
-.secao-contato__acoes {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 4px;
-}
-
-.btn-whatsapp,
-.btn-instagram {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 52px;
-  padding: 0 22px;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  border-radius: 10px;
-  transition: all 0.25s ease;
-}
-
-.btn-whatsapp {
-  background: #24141a;
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(36, 20, 26, 0.25);
-}
-
-.btn-whatsapp:hover {
-  background: #381f28;
-  transform: translateY(-2px);
-}
-
-.btn-instagram {
-  background: #ffffff;
-  color: #24141a;
-  border: 1px solid rgba(169, 50, 89, 0.25);
-  box-shadow: 0 4px 14px rgba(70, 25, 40, 0.08);
-}
-
-.btn-instagram:hover {
-  border-color: #a93259;
-  color: #a93259;
-  transform: translateY(-2px);
-}
-
-.btn__left {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11.5px;
-  letter-spacing: .18em;
-}
-
-.btn__left span {
-  font-size: 11.5px;
-}
 
 .btn__icon {
   width: 17px;
@@ -1274,6 +1212,8 @@ button {
     box-shadow: 0 12px 32px rgba(37, 211, 102, 0.75), 0 0 0 8px rgba(37, 211, 102, 0.18);
   }
 }
+}
+
 
 /* ---------- 2. OVERRIDES 100% COMPLETO MODELO MOSAICO LUXURY ---------- */
 /* ==========================================================================
@@ -2112,34 +2052,36 @@ body[data-theme="luxury"] .btn-whatsapp, body[data-theme="luxury"] .btn-instagra
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: all 0.25s ease;
 }
 
 body[data-theme="luxury"] .btn-whatsapp {
-  background: #f3efe9;
-  color: #12100e;
-  box-shadow: 0 4px 14px rgba(243, 239, 233, 0.15);
+  background: linear-gradient(135deg, #1fa855 0%, #075e54 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 6px 20px rgba(7, 94, 84, 0.35) !important;
 }
 
 body[data-theme="luxury"] .btn-whatsapp:hover {
-  background: #c9a389;
-  color: #12100e;
+  background: linear-gradient(135deg, #25D366 0%, #097568 100%) !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.42) !important;
 }
 
 body[data-theme="luxury"] .btn-instagram {
-  background: rgba(25, 20, 17, 0.85);
-  border: 1px solid rgba(243, 239, 233, 0.3);
-  color: #f3efe9;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 6px 20px rgba(193, 53, 132, 0.35) !important;
 }
 
 body[data-theme="luxury"] .btn-instagram:hover {
-  border-color: #c9a389;
-  color: #c9a389;
+  background: linear-gradient(135deg, #9b42d3 0%, #ff2e2e 50%, #ffbe53 100%) !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(225, 48, 108, 0.45) !important;
 }
 
 body[data-theme="luxury"] .btn__left {
