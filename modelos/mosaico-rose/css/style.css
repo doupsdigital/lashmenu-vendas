@@ -1230,14 +1230,13 @@ button {
    BOTÃO FLUTUANTE DE WHATSAPP
    ========================================================================== */
 .wsp-float-btn {
-  position: fixed;
+  position: absolute;
   bottom: 24px;
   right: 20px;
   z-index: 9999;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -1258,14 +1257,7 @@ button {
   animation: wspPulse 2.4s infinite ease-in-out;
 }
 
-.wsp-float-btn__label {
-  font-family: 'Jost', sans-serif, system-ui;
-  font-size: 11px;
-  font-weight: 600;
-  color: #24141a;
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 255, 255, 0.8);
-  letter-spacing: .02em;
-}
+.wsp-float-btn__label { display: none !important; }
 
 @keyframes wspPulse {
   0%, 100% {

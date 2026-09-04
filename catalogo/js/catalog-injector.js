@@ -247,9 +247,11 @@
       }
     }
 
-    // 3.5. Botão Flutuante de WhatsApp (Canto Inferior Direito) + Texto "Falar comigo."
+    // 3.5. Botão Flutuante de WhatsApp (Apenas na Primeira Tela / Hero)
     const wspPhone = cleanPhone || '5562991083435';
     let wspFloatBtn = document.getElementById('wsp-float-btn');
+    const heroEl = document.querySelector('.hero, .secao-hero, .capa, .hero__conteudo');
+
     if (!wspFloatBtn) {
       wspFloatBtn = document.createElement('a');
       wspFloatBtn.id = 'wsp-float-btn';
@@ -264,23 +266,26 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 2.15.68 4.14 1.839 5.776L2.5 21.5l3.876-1.309A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 01-4.298-1.246l-.308-.184-2.296.775.775-2.253-.2-.317A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z" fill="#FFFFFF"/>
           </svg>
         </div>
-        <span class="wsp-float-btn__label">Falar comigo.</span>
       `;
-      document.body.appendChild(wspFloatBtn);
+      if (heroEl) {
+        heroEl.style.position = 'relative';
+        heroEl.appendChild(wspFloatBtn);
+      } else {
+        document.body.appendChild(wspFloatBtn);
+      }
 
       if (!document.getElementById('wsp-float-styles')) {
         const style = document.createElement('style');
         style.id = 'wsp-float-styles';
         style.innerHTML = `
           .wsp-float-btn {
-            position: fixed;
+            position: absolute;
             bottom: 24px;
             right: 20px;
-            z-index: 9999;
+            z-index: 999;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 4px;
+            justify-content: center;
             text-decoration: none;
             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           }
@@ -298,14 +303,6 @@
             box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
             animation: wspPulse 2.4s infinite ease-in-out;
           }
-          .wsp-float-btn__label {
-            font-family: 'Jost', sans-serif, system-ui;
-            font-size: 11px;
-            font-weight: 600;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0,0,0,0.5);
-            letter-spacing: .02em;
-          }
           @keyframes wspPulse {
             0%, 100% {
               box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
@@ -317,7 +314,14 @@
         `;
         document.head.appendChild(style);
       }
+    } else {
+      if (heroEl && wspFloatBtn.parentElement !== heroEl) {
+        heroEl.style.position = 'relative';
+        heroEl.appendChild(wspFloatBtn);
+      }
     }
+    const labelEl = wspFloatBtn.querySelector('.wsp-float-btn__label');
+    if (labelEl) labelEl.remove();
     const wspTextMsg = encodeURIComponent(`Olá ${designerName}! Vim pelo seu catálogo digital e gostaria de tirar uma dúvida.`);
     wspFloatBtn.href = `https://wa.me/55${wspPhone}?text=${wspTextMsg}`;
 
