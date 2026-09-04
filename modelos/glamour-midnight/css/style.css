@@ -162,10 +162,9 @@ img, video { display: block; max-width: 100%; }
   opacity: .85;
 }
 .hero__titulo {
-  margin-bottom: 56px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 12px;
   margin-top: auto;
 }
 .hero__titulo h1 {
@@ -195,14 +194,8 @@ img, video { display: block; max-width: 100%; }
   text-wrap: pretty;
 }
 .hero__frase-cilios em { font-weight: 400; font-style: italic; color: #c9a389; }
-.hero .hero__scroll-cue { margin-top: 0; }
+.hero .hero__scroll-cue { margin-top: 20px; }
 .hero__scroll-cue {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1027,5 +1020,3 @@ body.is-testdrive .btn-whatsapp:active {
     box-shadow: 0 12px 32px rgba(37, 211, 102, 0.75), 0 0 0 8px rgba(37, 211, 102, 0.18);
   }
 }
-
-.hero__subtitulo { display: block; margin-top: 8px; }

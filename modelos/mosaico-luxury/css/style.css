@@ -215,9 +215,9 @@ button {
 .hero__titulo {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
   margin-top: auto;
-  margin-bottom: 56px;
+  margin-bottom: 24px;
 }
 
 .hero__titulo h1 {
@@ -266,12 +266,6 @@ button {
 }
 
 .hero__scroll-cue {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1257,5 +1251,3 @@ button {
     box-shadow: 0 12px 32px rgba(37, 211, 102, 0.75), 0 0 0 8px rgba(37, 211, 102, 0.18);
   }
 }
-
-.hero__subtitulo { display: block; margin-top: 8px; }
