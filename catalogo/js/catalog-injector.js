@@ -190,6 +190,10 @@
     window.LASHMENU_CLIENT_PHONE = cleanPhone;
     window.LASHMENU_DESIGNER_NAME = designerName;
 
+    // Aplica o tema unificado (rose vs luxury/midnight) no body
+    const activeTheme = order.color_id || order.tema || 'rose';
+    document.body.setAttribute('data-theme', activeTheme);
+
     // Título da página
     document.title = `${designerName} — Catálogo Digital Oficial`;
 
