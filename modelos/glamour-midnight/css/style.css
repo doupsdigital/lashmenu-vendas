@@ -162,7 +162,7 @@ img, video { display: block; max-width: 100%; }
   opacity: .85;
 }
 .hero__titulo {
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   display: flex;
   flex-direction: column;
   gap: 12px;

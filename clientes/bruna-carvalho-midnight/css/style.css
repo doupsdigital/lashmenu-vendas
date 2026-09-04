@@ -207,7 +207,7 @@ button {
 }
 
 .hero__titulo {
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   display: flex;
   flex-direction: column;
   gap: 16px;
