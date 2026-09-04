@@ -840,6 +840,7 @@ button {
   letter-spacing: .18em;
   text-transform: uppercase;
   border-radius: 12px;
+  text-decoration: none !important;
   transition: all 0.25s ease;
 }
 
