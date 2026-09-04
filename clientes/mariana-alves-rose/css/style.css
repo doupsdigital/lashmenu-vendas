@@ -161,7 +161,7 @@ img, video {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 44px 26px 36px;
+  padding: 44px 26px 16px;
 }
 
 .hero__selo {
