@@ -716,8 +716,8 @@ button {
 }
 
 .orientacao__icon-box svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   stroke: #a93259;
 }
 
@@ -1967,8 +1967,8 @@ body[data-theme="luxury"] .orientacao__icon-box {
 }
 
 body[data-theme="luxury"] .orientacao__icon-box svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   stroke: #c9a389;
 }
 
