@@ -195,14 +195,14 @@
     document.body.setAttribute('data-theme', activeTheme);
     document.documentElement.setAttribute('data-theme', activeTheme);
 
-    // Oculta o seletor flutuante de temas em catálogos de produção oficiais
+    // Remove fisicamente o seletor flutuante de temas em catálogos de produção oficiais
     // (Mantém visível apenas se estiver no editor do admin)
     const urlParams = new URLSearchParams(window.location.search);
     const isEditor = urlParams.has('editor') || urlParams.get('mode') === 'editor' || window.location.pathname.includes('/editor') || window.location.pathname.includes('/admin');
     const switcherWidget = document.getElementById('theme-switcher-widget') || document.querySelector('.theme-switcher-widget');
     if (switcherWidget) {
       if (!isEditor) {
-        switcherWidget.style.display = 'none';
+        try { switcherWidget.remove(); } catch(e) { switcherWidget.style.setProperty('display', 'none', 'important'); }
       } else {
         switcherWidget.style.display = '';
       }
