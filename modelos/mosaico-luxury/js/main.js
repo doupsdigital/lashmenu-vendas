@@ -3,10 +3,10 @@
    ========================================================================== */
 
 var PROCEDIMENTOS = [
-  // --- 1. EXTENSÕES & VOLUMES ---
+  // --- 1. EXTENSÃO DE CÍLIOS & VOLUMES ---
   {
     id: 'brasileiro',
-    cat: 'volumes',
+    cat: 'cilios',
     catLabel: 'Extensão em Y',
     title: 'Volume Brasileiro',
     preco: 'R$ 150',
@@ -23,7 +23,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'classico',
-    cat: 'volumes',
+    cat: 'cilios',
     catLabel: 'Fio a Fio Clássico',
     title: 'Clássico Fio a Fio',
     preco: 'R$ 120',
@@ -39,7 +39,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'egipcio',
-    cat: 'volumes',
+    cat: 'cilios',
     catLabel: 'Extensão em W',
     title: 'Volume Egípcio',
     preco: 'R$ 160',
@@ -55,7 +55,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'hibrido',
-    cat: 'volumes',
+    cat: 'cilios',
     catLabel: 'Clássico + Volume',
     title: 'Volume Híbrido',
     preco: 'R$ 160',
@@ -71,7 +71,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'russo',
-    cat: 'volumes',
+    cat: 'cilios',
     catLabel: 'Fans Artesanais 3D–6D',
     title: 'Volume Russo',
     preco: 'R$ 190',
@@ -87,7 +87,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'mega',
-    cat: 'volumes',
+    cat: 'cilios',
     catLabel: 'Densidade Máxima 8D–12D',
     title: 'Mega Volume',
     preco: 'R$ 240',
@@ -103,10 +103,10 @@ var PROCEDIMENTOS = [
     ]
   },
 
-  // --- 2. MAPPINGS DE OLHAR (DESIGNS PERSONALIZADOS) ---
+  // --- 2. MAPPINGS DE OLHAR (INCORPORADOS EM EXTENSÃO DE CÍLIOS) ---
   {
     id: 'gatinho',
-    cat: 'mapping',
+    cat: 'cilios',
     catLabel: 'Mapping de Olhar',
     title: 'Mapping Gatinho',
     preco: 'Incluso',
@@ -122,7 +122,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'boneca',
-    cat: 'mapping',
+    cat: 'cilios',
     catLabel: 'Mapping de Olhar',
     title: 'Mapping Boneca',
     preco: 'Incluso',
@@ -138,7 +138,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'esquilo',
-    cat: 'mapping',
+    cat: 'cilios',
     catLabel: 'Mapping de Olhar',
     title: 'Mapping Esquilo',
     preco: 'Incluso',
@@ -154,7 +154,7 @@ var PROCEDIMENTOS = [
   },
   {
     id: 'fox',
-    cat: 'mapping',
+    cat: 'cilios',
     catLabel: 'Design Assinatura',
     title: 'Fox Eyes Signature',
     preco: 'R$ 170',
@@ -169,7 +169,42 @@ var PROCEDIMENTOS = [
     ]
   },
 
-  // --- 3. ESPECIAIS & CUIDADOS ---
+  // --- 3. SOBRANCELHAS ---
+  {
+    id: 'design-sobrancelha',
+    cat: 'sobrancelhas',
+    catLabel: 'Visagismo Facial',
+    title: 'Design de Sobrancelha',
+    preco: 'R$ 60',
+    duracao: '45min',
+    img: 'assets/img/design-sobrancelha.jpg',
+    destaque: true,
+    desc: 'Mapeamento facial minucioso baseado nas proporções únicas do seu rosto, seguido de epilação precisa para realçar sua beleza natural com simetria e elegância.',
+    specs: [
+      ['Investimento', 'R$ 60'],
+      ['Manutenção', 'Recomendado a cada 15 a 20 dias'],
+      ['Duração', '45 minutos'],
+      ['Técnica', 'Visagismo Facial & Design com Pinça']
+    ]
+  },
+  {
+    id: 'sobrancelha-henna',
+    cat: 'sobrancelhas',
+    catLabel: 'Pigmentação Natural',
+    title: 'Sobrancelha com Henna',
+    preco: 'R$ 80',
+    duracao: '50min',
+    img: 'assets/img/sobrancelha-henna.jpg',
+    desc: 'Design personalizado acompanhado de aplicação de Henna orgânica de altíssima fixação. Preenche falhas, define o contorno com efeito ombré natural e destaca o olhar.',
+    specs: [
+      ['Investimento', 'R$ 80'],
+      ['Durabilidade', '7 a 14 dias na pele (até 30 dias nos fios)'],
+      ['Duração', '50 minutos'],
+      ['Efeito', 'Preenchimento, Definição & Efeito Ombré']
+    ]
+  },
+
+  // --- 4. ESPECIAIS & CUIDADOS ---
   {
     id: 'lifting',
     cat: 'especiais',
@@ -178,7 +213,6 @@ var PROCEDIMENTOS = [
     preco: 'R$ 130',
     duracao: '1h00',
     img: 'assets/img/lash-lifting.png',
-    destaque: true,
     desc: 'Tratamento de curvatura, nutrição profunda com queratina e tintura preta nos seus próprios cílios naturais. Zero manutenção e durabilidade de 6 a 8 semanas.',
     specs: [
       ['Investimento', 'R$ 130'],
@@ -224,10 +258,10 @@ var PROCEDIMENTOS = [
 
 // Mapeamento de Rótulos de Categoria
 const CATEGORIA_LABELS = {
-  'volumes': 'Extensões & Volumes',
-  'mapping': 'Mappings de Olhar',
+  'cilios': 'Extensão de Cílios',
+  'volumes': 'Extensão de Cílios',
+  'sobrancelhas': 'Sobrancelhas',
   'especiais': 'Especiais & Cuidados',
-  'sobrancelhas': 'Design de Sobrancelhas',
   'labios': 'Pigmentação Labial',
   'combos': 'Combos Exclusivos'
 };
