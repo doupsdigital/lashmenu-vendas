@@ -227,7 +227,7 @@ button {
   flex-direction: column;
   gap: 16px;
   margin-top: auto;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 .hero__titulo h1 {
