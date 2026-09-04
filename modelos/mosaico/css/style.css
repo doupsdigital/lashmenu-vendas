@@ -1087,7 +1087,7 @@ button {
   align-items: center;
   justify-content: center;
   height: 48px;
-  background: #24141a;
+  background: #a93259;
   color: #ffffff;
   font-size: 11.5px;
   font-weight: 700;
@@ -1098,7 +1098,7 @@ button {
 }
 
 .modal__cta:hover {
-  background: #381f28;
+  background: #8b2848;
 }
 
 .modal__proximo {

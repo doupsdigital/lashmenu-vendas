@@ -16,9 +16,8 @@ var PROCEDIMENTOS = [
     desc: 'Fios tecnológicos com formato Y que preenchem as falhas naturais com leveza incomparável, alta durabilidade e acabamento marcante.',
     specs: [
       ['Investimento', 'R$ 150'],
-      ['Manutenção', 'R$ 90 (até 20 dias)'],
       ['Duração', '1h30'],
-      ['Efeito', 'Preenchimento, Textura & Leveza'],
+      ['Manutenção', 'R$ 90 (até 20 dias)']
     ]
   },
   {
@@ -32,9 +31,8 @@ var PROCEDIMENTOS = [
     desc: 'Um fio sintético ultrafino acoplado a cada cílio natural saudável. O resultado mais elegante e discreto: olhar iluminado com efeito de rímel perfeito.',
     specs: [
       ['Investimento', 'R$ 120'],
-      ['Manutenção', 'R$ 70 (até 18 dias)'],
       ['Duração', '1h30'],
-      ['Efeito', 'Natural, Discreto & Elegante'],
+      ['Manutenção', 'R$ 70 (até 18 dias)']
     ]
   },
   {
@@ -48,9 +46,8 @@ var PROCEDIMENTOS = [
     desc: 'Fios especiais em formato W (3D tecnológico) que proporcionam densidade homogênea, efeito aveludado e volume equilibrado sem pesar nos olhos.',
     specs: [
       ['Investimento', 'R$ 160'],
-      ['Manutenção', 'R$ 95 (até 20 dias)'],
       ['Duração', '1h30'],
-      ['Efeito', 'Densidade Aveludada & Uniforme'],
+      ['Manutenção', 'R$ 95 (até 20 dias)']
     ]
   },
   {
@@ -64,9 +61,8 @@ var PROCEDIMENTOS = [
     desc: 'A combinação artesanal entre a delicadeza do fio a fio clássico e leques de volume, criando textura multidimensional, profundidade e brilho no olhar.',
     specs: [
       ['Investimento', 'R$ 160'],
-      ['Manutenção', 'R$ 95 (até 20 dias)'],
       ['Duração', '1h45'],
-      ['Efeito', 'Textura Desconstruída & Volume Sob Medida'],
+      ['Manutenção', 'R$ 95 (até 20 dias)']
     ]
   },
   {
@@ -80,9 +76,8 @@ var PROCEDIMENTOS = [
     desc: 'Técnica de alta precisão com fans ultrafinos (3 a 6 fios de seda) montados à mão na hora. Cria um volume expressivo, extremamente macio, denso e sofisticado.',
     specs: [
       ['Investimento', 'R$ 190'],
-      ['Manutenção', 'R$ 110 (até 20 dias)'],
       ['Duração', '2h00'],
-      ['Efeito', 'Glamour, Densidade & Toque de Pluma'],
+      ['Manutenção', 'R$ 110 (até 20 dias)']
     ]
   },
   {
@@ -97,9 +92,8 @@ var PROCEDIMENTOS = [
     desc: 'O ápice da densidade e do impacto visual: leques artesanais com fios ultrafinos de 0.03mm. Proporciona um olhar super pretinho, aveludado e hipnotizante.',
     specs: [
       ['Investimento', 'R$ 240'],
-      ['Manutenção', 'R$ 140 (até 18 dias)'],
       ['Duração', '2h30'],
-      ['Efeito', 'Impacto Máximo, Densidade Total & Preto Profundo'],
+      ['Manutenção', 'R$ 140 (até 18 dias)']
     ]
   },
 
@@ -115,6 +109,7 @@ var PROCEDIMENTOS = [
     desc: 'Crescimento milimétrico dos fios em direção ao canto externo. Alonga o olhar, cria um efeito felino refinado e valoriza o contorno dos olhos.',
     specs: [
       ['Investimento', 'Incluso na técnica escolhida'],
+      ['Duração', 'Design'],
       ['Estilo de Design', 'Alongado / Felino'],
       ['Indicação', 'Olhos amendoados, redondos ou juntos'],
       ['Combinações', 'Brasileiro, Russo, Híbrido e Clássico']
@@ -131,6 +126,7 @@ var PROCEDIMENTOS = [
     desc: 'Fios com maior comprimento posicionados estrategicamente no centro da íris. Abre e ilumina o olhar, proporcionando aspecto doce, expressivo e jovial.',
     specs: [
       ['Investimento', 'Incluso na técnica escolhida'],
+      ['Duração', 'Design'],
       ['Estilo de Design', 'Olhar Aberto / Centralizado'],
       ['Indicação', 'Olhos caídos, fundos ou orientais'],
       ['Combinações', 'Clássico, Brasileiro e Egípcio']
@@ -147,6 +143,7 @@ var PROCEDIMENTOS = [
     desc: 'Pico de comprimento posicionado exatamente no arco da sobrancelha (ponto alto). Disfarça pálpebra caída e cria um efeito de lifting imediato.',
     specs: [
       ['Investimento', 'Incluso na técnica escolhida'],
+      ['Duração', 'Design'],
       ['Estilo de Design', 'Efeito Lifting da Pálpebra'],
       ['Indicação', 'Pálpebras gordinhas, caídas ou maduras'],
       ['Combinações', 'Híbrido, Russo e Egípcio']
@@ -163,9 +160,8 @@ var PROCEDIMENTOS = [
     desc: 'O desenho de maior sucesso do estúdio: extremidade externa esticada e alinhada com mapping milimétrico para um visual sensual, moderno e marcante.',
     specs: [
       ['Investimento', 'R$ 170'],
-      ['Manutenção', 'R$ 100 (até 20 dias)'],
       ['Duração', '1h45'],
-      ['Efeito', 'Lifting, Puxado & Olhar Felino Marcante'],
+      ['Manutenção', 'R$ 100 (até 20 dias)']
     ]
   },
 
@@ -182,8 +178,8 @@ var PROCEDIMENTOS = [
     desc: 'Mapeamento facial minucioso baseado nas proporções únicas do seu rosto, seguido de epilação precisa para realçar sua beleza natural com simetria e elegância.',
     specs: [
       ['Investimento', 'R$ 60'],
-      ['Manutenção', 'Recomendado a cada 15 a 20 dias'],
       ['Duração', '45 minutos'],
+      ['Manutenção', 'Recomendado a cada 15 a 20 dias'],
       ['Técnica', 'Visagismo Facial & Design com Pinça']
     ]
   },
@@ -198,9 +194,8 @@ var PROCEDIMENTOS = [
     desc: 'Design personalizado acompanhado de aplicação de Henna orgânica de altíssima fixação. Preenche falhas, define o contorno com efeito ombré natural e destaca o olhar.',
     specs: [
       ['Investimento', 'R$ 80'],
-      ['Durabilidade', '7 a 14 dias na pele (até 30 dias nos fios)'],
       ['Duração', '50 minutos'],
-      ['Efeito', 'Preenchimento, Definição & Efeito Ombré']
+      ['Durabilidade', '7 a 14 dias na pele (até 30 dias nos fios)']
     ]
   },
 
