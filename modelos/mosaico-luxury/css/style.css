@@ -306,6 +306,8 @@ button {
    2. SEÇÃO CATÁLOGO MOSAICO (SNAP SCREEN 2 - ROLAGEM LIVRE DENTRO DA SEÇÃO)
    ========================================================================== */
 .secao-catalogo {
+  min-height: 100vh;
+  box-sizing: border-box;
   padding: 50px 0 60px;
   background: #0f0c0b;
   color: #f3efe9;
