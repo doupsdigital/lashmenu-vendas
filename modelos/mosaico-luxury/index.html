@@ -19,26 +19,48 @@
     })();
   </script>
   <meta charset="utf-8">
-  <title>Amanda Carvalho — Catálogo Mosaico Luxury</title>
+  <title>Amanda Carvalho — Catálogo Mosaico (Rosé / Luxury)</title>
   <meta name="description"
-    content="Catálogo no Modelo Mosaico Luxury de Amanda Carvalho — Extensão de cílios, visagismo, valores e agendamento.">
+    content="Catálogo no Modelo Mosaico Rosé de Amanda Carvalho — Extensão de cílios, visagismo, valores e agendamento.">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="preload" href="assets/img/Hero.png" as="image" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css?v=20260827_4">
 </head>
 
-<body>
+<body data-theme="luxury">
+
+  <!-- SELETOR FLUTUANTE DUAL DE TEMA ULTRA PREMIUM (ROSÉ 🌸 / LUXURY 👑) -->
+  <nav class="theme-switcher-widget" id="theme-switcher-widget" aria-label="Alternar Tema do Catálogo">
+    <div class="theme-switcher-label">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+      </svg>
+      <span>Clique para mudar o tema</span>
+    </div>
+    <div class="theme-switcher-options">
+      <button type="button" class="theme-switcher-btn is-active" data-theme-target="rose" aria-label="Modo Rosé">
+        <span class="theme-switcher-icon">🌸</span>
+        <span class="theme-switcher-title">Modo Rosé</span>
+      </button>
+      <button type="button" class="theme-switcher-btn" data-theme-target="luxury" aria-label="Modo Luxury">
+        <span class="theme-switcher-icon">👑</span>
+        <span class="theme-switcher-title">Modo Luxury</span>
+      </button>
+    </div>
+  </nav>
+
 
   <div class="mosaico-app">
 
-    <!-- 1. HERO SECTION (PADRÃO VITRINE-DARK) -->
+    <!-- 1. HERO SECTION (PADRÃO UNIFICADO) -->
     <section class="hero" id="hero" data-screen-label="Capa">
       <div class="hero__foto-wrap">
-        <img src="assets/img/Hero.png" alt="Amanda Carvalho Lash Designer" class="hero__foto">
+        <img src="assets/img/Hero.png" alt="Amanda Carvalho Lash Designer" class="hero__foto" fetchpriority="high" loading="eager">
       </div>
       <div class="hero__scrim"></div>
       <div class="hero__conteudo">

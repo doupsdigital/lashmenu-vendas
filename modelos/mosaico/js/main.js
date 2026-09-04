@@ -688,7 +688,9 @@ if (document.readyState === 'loading') {
     const buttons = document.querySelectorAll('[data-theme-target]');
     if (buttons.length === 0) return;
 
-    let savedTheme = localStorage.getItem('lash_mosaico_theme') || 'rose';
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlTheme = urlParams.get('theme') || urlParams.get('color') || urlParams.get('modo');
+    let savedTheme = urlTheme || localStorage.getItem('lash_mosaico_theme') || 'rose';
 
     function setTheme(theme) {
       document.body.setAttribute('data-theme', theme);

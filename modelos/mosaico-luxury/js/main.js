@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LASHMENU — MODELO MOSAICO DARK (JS COM GRID, ANIMAÇÕES E MODAL)
+   LASHMENU — MODELO MOSAICO ROSE (JS COM GRID, ANIMAÇÕES E MODAL)
    ========================================================================== */
 
 var PROCEDIMENTOS = [
@@ -528,9 +528,9 @@ document.addEventListener('DOMContentLoaded', () => {
           width: 52px;
           height: 52px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(212, 163, 115, 0.55) 45%, rgba(255, 255, 255, 0) 75%);
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(229, 152, 173, 0.60) 45%, rgba(255, 255, 255, 0) 75%);
           border: 2px solid rgba(255, 255, 255, 0.95);
-          box-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 32px rgba(212, 163, 115, 0.7);
+          box-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 32px rgba(229, 152, 173, 0.7);
           transform: translate(-50%, -50%) scale(0.3);
           animation: virtualTapAnim 0.38s cubic-bezier(0.1, 0.7, 0.3, 1) forwards;
           pointer-events: none;
@@ -688,7 +688,9 @@ if (document.readyState === 'loading') {
     const buttons = document.querySelectorAll('[data-theme-target]');
     if (buttons.length === 0) return;
 
-    let savedTheme = localStorage.getItem('lash_mosaico_theme') || 'rose';
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlTheme = urlParams.get('theme') || urlParams.get('color') || urlParams.get('modo');
+    let savedTheme = urlTheme || localStorage.getItem('lash_mosaico_theme') || 'rose';
 
     function setTheme(theme) {
       document.body.setAttribute('data-theme', theme);
