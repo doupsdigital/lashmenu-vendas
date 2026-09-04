@@ -689,3 +689,48 @@ document.addEventListener('DOMContentLoaded', () => {
     createParticles();
   }
 })();
+
+
+/* ---------- LASHMENU UNIFIED THEME SWITCHER (ROSÉ 🌸 / LUXURY 👑) ---------- */
+(function initThemeSwitcher() {
+  function setupSwitcher() {
+    const buttons = document.querySelectorAll('[data-theme-target]');
+    if (buttons.length === 0) return;
+
+    let savedTheme = localStorage.getItem('lash_mosaico_theme') || 'rose';
+
+    function setTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('lash_mosaico_theme', theme);
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-theme-target') === theme) {
+          btn.classList.add('is-active');
+        } else {
+          btn.classList.remove('is-active');
+        }
+      });
+
+      if (typeof window.initHeroParticles === 'function') {
+        window.initHeroParticles();
+      }
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const theme = btn.getAttribute('data-theme-target');
+        setTheme(theme);
+      });
+    });
+
+    setTheme(savedTheme);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupSwitcher);
+  } else {
+    setupSwitcher();
+  }
+})();
