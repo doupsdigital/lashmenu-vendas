@@ -2613,7 +2613,8 @@ body[data-theme="rose"] .theme-switcher-widget {
   box-shadow: 0 3px 12px rgba(201, 163, 137, 0.5) !important;
 }
 
+/* Espaçamento exclusivo do modelo showroom (com seletor de tema) */
 .hero__conteudo {
-  padding-top: 92px !important;
+  padding-top: 118px !important;
 }
 
