@@ -865,31 +865,31 @@ button {
 }
 
 .btn-whatsapp {
-  background: linear-gradient(135deg, rgba(31, 168, 85, 0.16) 0%, rgba(7, 94, 84, 0.22) 100%) !important;
-  color: #125936 !important;
-  border: 1px solid rgba(31, 168, 85, 0.35) !important;
-  box-shadow: 0 4px 16px rgba(7, 94, 84, 0.10) !important;
+  background: linear-gradient(135deg, rgba(24, 125, 65, 0.68) 0%, rgba(6, 78, 68, 0.78) 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 18px rgba(6, 78, 68, 0.25) !important;
 }
 
 .btn-whatsapp:hover {
-  background: linear-gradient(135deg, rgba(31, 168, 85, 0.25) 0%, rgba(7, 94, 84, 0.32) 100%) !important;
-  color: #0b4528 !important;
+  background: linear-gradient(135deg, rgba(28, 145, 76, 0.82) 0%, rgba(7, 92, 80, 0.90) 100%) !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(7, 94, 84, 0.18) !important;
+  box-shadow: 0 6px 22px rgba(6, 78, 68, 0.35) !important;
 }
 
 .btn-instagram {
-  background: linear-gradient(135deg, rgba(131, 58, 180, 0.14) 0%, rgba(253, 29, 29, 0.14) 50%, rgba(252, 176, 69, 0.14) 100%) !important;
-  color: #6d2358 !important;
-  border: 1px solid rgba(193, 53, 132, 0.35) !important;
-  box-shadow: 0 4px 16px rgba(193, 53, 132, 0.10) !important;
+  background: linear-gradient(135deg, rgba(120, 40, 165, 0.65) 0%, rgba(215, 30, 30, 0.60) 50%, rgba(220, 145, 45, 0.60) 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 18px rgba(165, 40, 115, 0.25) !important;
 }
 
 .btn-instagram:hover {
-  background: linear-gradient(135deg, rgba(131, 58, 180, 0.22) 0%, rgba(253, 29, 29, 0.22) 50%, rgba(252, 176, 69, 0.22) 100%) !important;
-  color: #541943 !important;
+  background: linear-gradient(135deg, rgba(135, 45, 185, 0.78) 0%, rgba(235, 35, 35, 0.72) 50%, rgba(235, 160, 50, 0.72) 100%) !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(193, 53, 132, 0.18) !important;
+  box-shadow: 0 6px 22px rgba(165, 40, 115, 0.35) !important;
 }
 
 .btn__left {
