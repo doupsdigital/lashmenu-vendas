@@ -200,17 +200,21 @@ img, video { display: block; max-width: 100%; }
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  color: #c9a389;
+  text-decoration: none;
 }
 .hero__scroll-cue span {
-  font-size: 9.5px;
-  letter-spacing: .34em;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .28em;
   text-transform: uppercase;
-  opacity: .6;
+  color: #c9a389;
+  opacity: 1;
 }
 .hero__scroll-linha {
-  width: 1px;
-  height: 34px;
-  background: linear-gradient(180deg, #f3efe9, transparent);
+  width: 2px;
+  height: 38px;
+  background: linear-gradient(180deg, #c9a389, transparent);
   animation: cue 2.6s ease-in-out infinite;
 }
 

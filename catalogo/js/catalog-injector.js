@@ -242,10 +242,83 @@
             heroImg.onload = revealImg;
             if (heroImg.complete) revealImg();
             setTimeout(revealImg, 800);
-          }
         }
       }
     }
+
+    // 3.5. Botão Flutuante de WhatsApp (Canto Inferior Direito) + Texto "Falar comigo."
+    const wspPhone = cleanPhone || '5562991083435';
+    let wspFloatBtn = document.getElementById('wsp-float-btn');
+    if (!wspFloatBtn) {
+      wspFloatBtn = document.createElement('a');
+      wspFloatBtn.id = 'wsp-float-btn';
+      wspFloatBtn.className = 'wsp-float-btn';
+      wspFloatBtn.target = '_blank';
+      wspFloatBtn.rel = 'noopener noreferrer';
+      wspFloatBtn.setAttribute('aria-label', 'Falar comigo no WhatsApp');
+      wspFloatBtn.innerHTML = `
+        <div class="wsp-float-btn__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" fill="#FFFFFF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 2.15.68 4.14 1.839 5.776L2.5 21.5l3.876-1.309A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 01-4.298-1.246l-.308-.184-2.296.775.775-2.253-.2-.317A7.957 7.957 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <span class="wsp-float-btn__label">Falar comigo.</span>
+      `;
+      document.body.appendChild(wspFloatBtn);
+
+      if (!document.getElementById('wsp-float-styles')) {
+        const style = document.createElement('style');
+        style.id = 'wsp-float-styles';
+        style.innerHTML = `
+          .wsp-float-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            text-decoration: none;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .wsp-float-btn:hover {
+            transform: translateY(-4px) scale(1.06);
+          }
+          .wsp-float-btn__icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+            animation: wspPulse 2.4s infinite ease-in-out;
+          }
+          .wsp-float-btn__label {
+            font-family: 'Jost', sans-serif, system-ui;
+            font-size: 11px;
+            font-weight: 600;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0,0,0,0.5);
+            letter-spacing: .02em;
+          }
+          @keyframes wspPulse {
+            0%, 100% {
+              box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+            }
+            50% {
+              box-shadow: 0 12px 32px rgba(37, 211, 102, 0.75), 0 0 0 8px rgba(37, 211, 102, 0.18);
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+    const wspTextMsg = encodeURIComponent(`Olá ${designerName}! Vim pelo seu catálogo digital e gostaria de tirar uma dúvida.`);
+    wspFloatBtn.href = `https://wa.me/55${wspPhone}?text=${wspTextMsg}`;
 
     // 4. Injeta Procedimentos nos Cards Oficiais e Atualiza Array de Modais
     if (services.length > 0) {
