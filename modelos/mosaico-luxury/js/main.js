@@ -109,10 +109,8 @@ var PROCEDIMENTOS = [
     desc: 'Crescimento milimétrico dos fios em direção ao canto externo. Alonga o olhar, cria um efeito felino refinado e valoriza o contorno dos olhos.',
     specs: [
       ['Investimento', 'Incluso na técnica escolhida'],
-      ['Duração', 'Design'],
-      ['Estilo de Design', 'Alongado / Felino'],
-      ['Indicação', 'Olhos amendoados, redondos ou juntos'],
-      ['Combinações', 'Brasileiro, Russo, Híbrido e Clássico']
+      ['Duração', 'Incluso no procedimento'],
+      ['Outras Informações', 'Design felino alongado ideal para valorizar o olhar']
     ]
   },
   {
@@ -126,10 +124,8 @@ var PROCEDIMENTOS = [
     desc: 'Fios com maior comprimento posicionados estrategicamente no centro da íris. Abre e ilumina o olhar, proporcionando aspecto doce, expressivo e jovial.',
     specs: [
       ['Investimento', 'Incluso na técnica escolhida'],
-      ['Duração', 'Design'],
-      ['Estilo de Design', 'Olhar Aberto / Centralizado'],
-      ['Indicação', 'Olhos caídos, fundos ou orientais'],
-      ['Combinações', 'Clássico, Brasileiro e Egípcio']
+      ['Duração', 'Incluso no procedimento'],
+      ['Outras Informações', 'Olhar aberto e centralizado para aspecto jovial']
     ]
   },
   {
@@ -143,10 +139,8 @@ var PROCEDIMENTOS = [
     desc: 'Pico de comprimento posicionado exatamente no arco da sobrancelha (ponto alto). Disfarça pálpebra caída e cria um efeito de lifting imediato.',
     specs: [
       ['Investimento', 'Incluso na técnica escolhida'],
-      ['Duração', 'Design'],
-      ['Estilo de Design', 'Efeito Lifting da Pálpebra'],
-      ['Indicação', 'Pálpebras gordinhas, caídas ou maduras'],
-      ['Combinações', 'Híbrido, Russo e Egípcio']
+      ['Duração', 'Incluso no procedimento'],
+      ['Outras Informações', 'Pico no arco da sobrancelha com efeito lifting imediato']
     ]
   },
   {
@@ -161,7 +155,8 @@ var PROCEDIMENTOS = [
     specs: [
       ['Investimento', 'R$ 170'],
       ['Duração', '1h45'],
-      ['Manutenção', 'R$ 100 (até 20 dias)']
+      ['Manutenção', 'R$ 100 (até 20 dias)'],
+      ['Outras Informações', 'Efeito lifting puxado felino marcante']
     ]
   },
 
@@ -180,7 +175,7 @@ var PROCEDIMENTOS = [
       ['Investimento', 'R$ 60'],
       ['Duração', '45 minutos'],
       ['Manutenção', 'Recomendado a cada 15 a 20 dias'],
-      ['Técnica', 'Visagismo Facial & Design com Pinça']
+      ['Outras Informações', 'Visagismo facial e alinhamento com pinça']
     ]
   },
   {
@@ -195,7 +190,7 @@ var PROCEDIMENTOS = [
     specs: [
       ['Investimento', 'R$ 80'],
       ['Duração', '50 minutos'],
-      ['Durabilidade', '7 a 14 dias na pele (até 30 dias nos fios)']
+      ['Outras Informações', 'Durabilidade de 7 a 14 dias na pele com efeito ombré']
     ]
   },
 
@@ -212,8 +207,7 @@ var PROCEDIMENTOS = [
     specs: [
       ['Investimento', 'R$ 130'],
       ['Duração', '1h00'],
-      ['Durabilidade do Efeito', '6 a 8 semanas (acompanha o ciclo natural)'],
-      ['Manutenção Diária', 'Zero manutenção — livre para usar rímel']
+      ['Outras Informações', 'Durabilidade de 6 a 8 semanas com zero manutenção diária']
     ]
   },
   {
@@ -228,8 +222,7 @@ var PROCEDIMENTOS = [
     specs: [
       ['Investimento', 'R$ 50'],
       ['Duração', '30 minutos'],
-      ['Segurança', 'Preservação de 100% da integridade dos fios naturais'],
-      ['Indicação', 'Remoção de extensões anteriores ou pausa']
+      ['Outras Informações', 'Preservação de 100% da integridade dos fios naturais']
     ]
   },
   {
@@ -242,10 +235,9 @@ var PROCEDIMENTOS = [
     img: 'assets/img/cuidados.jpg',
     desc: 'Orientações práticas para prolongar a retenção dos seus cílios: evitar água nas primeiras 24h, higienizar com shampoo neutro e escovar diariamente.',
     specs: [
-      ['Primeiras 24 Horas', 'Não molhar e evitar vapor/sauna'],
-      ['Higienização Diária', 'Shampoo neutro para cílios com água fria'],
-      ['Rotina Diária', 'Escovação suave 1 a 2 vezes ao dia'],
-      ['Produtos', 'Evitar rímel e demaquilantes à base de óleo']
+      ['Investimento', 'Guia Informativo Gratuito'],
+      ['Duração', 'Rotina Diária'],
+      ['Outras Informações', 'Higienizar com shampoo neutro e escovar suavemente']
     ]
   }
 ];
