@@ -193,33 +193,21 @@
     // Título da página
     document.title = `${designerName} — Catálogo Digital Oficial`;
 
-    // 1. Nome na Capa (Hero)
+    // 1. Nome e Subtítulo/Especialidade na Capa (Hero)
+    const designerTitleText = order.lash_title || order.subtitulo || order.hero_subtitle || 'Lash Designer';
     const heroTitle = document.querySelector('.hero__titulo h1, .hero h1, .capa__titulo h1');
     if (heroTitle) {
-      heroTitle.innerHTML = `${designerName}<br><em>Lash Designer</em>`;
+      heroTitle.innerHTML = `${designerName}<br><em class="hero__subtitulo">${designerTitleText}</em>`;
     }
 
-    // 2. Frases da Capa (Impacto & Apresentação)
-    const heroFraseEl = document.querySelector('.hero__frase, .capa__frase');
+    // 2. Frase Única da Capa
+    const heroFraseEl = document.querySelector('.hero__frase-cilios, .capa__frase-cilios, .hero__frase, .capa__frase');
     if (heroFraseEl) {
       if (heroPhrase && heroPhrase.trim()) {
-        heroFraseEl.textContent = heroPhrase;
+        heroFraseEl.innerHTML = heroPhrase;
         heroFraseEl.style.display = '';
       } else if (order.hero_phrase === '') {
         heroFraseEl.style.display = 'none';
-      }
-    }
-
-    const heroSubFraseEl = document.querySelector('.hero__frase-cilios, .capa__frase-cilios');
-    if (heroSubFraseEl) {
-      const rawSub = order.hero_sub_phrase !== undefined ? order.hero_sub_phrase : order.sub_phrase;
-      if (rawSub !== undefined && rawSub !== null) {
-        if (rawSub.trim()) {
-          heroSubFraseEl.innerHTML = rawSub;
-          heroSubFraseEl.style.display = '';
-        } else {
-          heroSubFraseEl.style.display = 'none';
-        }
       }
     }
 

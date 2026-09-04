@@ -921,36 +921,33 @@
               <input type="text" id="v2-client-name" class="v2-input" placeholder="Ex: Gabriele Buginski">
             </div>
             <div class="v2-form-group">
-              <label class="v2-label">WhatsApp (com DDD)</label>
-              <input type="text" id="v2-client-whatsapp" class="v2-input" placeholder="Ex: (41) 98865-1722">
+              <label class="v2-label">Especialidade / Subtítulo da Capa</label>
+              <input type="text" id="v2-client-subtitle" class="v2-input" placeholder="Ex: Lash Designer">
             </div>
           </div>
 
           <div class="v2-form-row">
             <div class="v2-form-group">
+              <label class="v2-label">WhatsApp (com DDD)</label>
+              <input type="text" id="v2-client-whatsapp" class="v2-input" placeholder="Ex: (41) 98865-1722">
+            </div>
+            <div class="v2-form-group">
               <label class="v2-label">Instagram (@usuario)</label>
               <input type="text" id="v2-client-instagram" class="v2-input" placeholder="Ex: _bygabibuginski">
             </div>
-            <div class="v2-form-group">
-              <label class="v2-label">Localização / Endereço</label>
-              <input type="text" id="v2-client-location" class="v2-input" placeholder="Ex: Guaratuba - Paraná">
-            </div>
+          </div>
+
+          <div class="v2-form-group">
+            <label class="v2-label">Localização / Endereço</label>
+            <input type="text" id="v2-client-location" class="v2-input" placeholder="Ex: Guaratuba - Paraná">
           </div>
 
           <div class="v2-form-group">
             <div class="v2-label">
-              <span>FRASE DE IMPACTO (BOAS-VINDAS)</span>
+              <span>FRASE DA CAPA</span>
               <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-client-phrase')">✕ Remover</button>
             </div>
-            <input type="text" id="v2-client-phrase" class="v2-input" placeholder="Ex: Especialista em extensão de cílios. Cada aplicação começa por ouvir você.">
-          </div>
-
-          <div class="v2-form-group">
-            <div class="v2-label">
-              <span>MENSAGEM DE APRESENTAÇÃO (DETALHADA)</span>
-              <button type="button" class="v2-btn-remove-pill" onclick="clearV2Field('v2-client-subphrase')">✕ Remover</button>
-            </div>
-            <textarea id="v2-client-subphrase" class="v2-textarea" placeholder="Ex: Cílios pensados para o seu olhar — técnica segura, desenho personalizado."></textarea>
+            <textarea id="v2-client-phrase" class="v2-textarea" placeholder="Ex: A arte de transformar o seu olhar — leveza incomparável, precisão e elegância."></textarea>
           </div>
 
         </div>
@@ -1145,11 +1142,13 @@
         }
 
         document.getElementById('v2-client-name').value = order.client_name || '';
+        if (document.getElementById('v2-client-subtitle')) {
+          document.getElementById('v2-client-subtitle').value = order.lash_title || order.subtitulo || order.hero_subtitle || 'Lash Designer';
+        }
         document.getElementById('v2-client-whatsapp').value = order.whatsapp || '';
         document.getElementById('v2-client-instagram').value = order.instagram || '';
         document.getElementById('v2-client-location').value = order.location || '';
         document.getElementById('v2-client-phrase').value = order.hero_phrase || '';
-        document.getElementById('v2-client-subphrase').value = order.hero_sub_phrase || order.sub_phrase || '';
         if (document.getElementById('v2-select-model')) document.getElementById('v2-select-model').value = order.model_id || 'glamour';
         if (document.getElementById('v2-select-color')) document.getElementById('v2-select-color').value = order.color_id || 'rose';
 
@@ -1509,8 +1508,11 @@
 
       try {
         // 1. Grava Dados Gerais da Ordem
+        const subtitleVal = document.getElementById('v2-client-subtitle') ? document.getElementById('v2-client-subtitle').value.trim() : '';
         const orderPayload = {
           client_name: document.getElementById('v2-client-name').value.trim(),
+          subtitulo: subtitleVal,
+          lash_title: subtitleVal,
           whatsapp: document.getElementById('v2-client-whatsapp').value.trim(),
           instagram: document.getElementById('v2-client-instagram').value.trim(),
           location: document.getElementById('v2-client-location').value.trim(),
