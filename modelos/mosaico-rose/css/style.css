@@ -183,13 +183,15 @@ button {
 .hero__scrim {
   position: absolute;
   inset: 0;
-  /* Camada esfumaçada em tom rosa claro real (rgb: 242, 202, 213) */
+  /* Efeito de fumaça rosa translúcida estilo vidro fosco (Frosted Rose Glass) */
   background: linear-gradient(180deg,
-      rgba(242, 202, 213, 0.45) 0%,
-      rgba(242, 202, 213, 0.15) 28%,
-      rgba(242, 202, 213, 0.75) 58%,
-      rgba(242, 202, 213, 0.96) 84%,
-      #f2cad5 100%);
+      rgba(242, 202, 213, 0.35) 0%,
+      rgba(242, 202, 213, 0.10) 25%,
+      rgba(242, 202, 213, 0.42) 58%,
+      rgba(242, 202, 213, 0.68) 84%,
+      rgba(242, 202, 213, 0.82) 100%);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .hero__conteudo {
