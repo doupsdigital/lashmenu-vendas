@@ -193,6 +193,20 @@
     // Aplica o tema unificado (rose vs luxury/midnight) no body
     const activeTheme = order.color_id || order.tema || 'rose';
     document.body.setAttribute('data-theme', activeTheme);
+    document.documentElement.setAttribute('data-theme', activeTheme);
+
+    // Oculta o seletor flutuante de temas em catálogos de produção oficiais
+    // (Mantém visível apenas se estiver no editor do admin)
+    const urlParams = new URLSearchParams(window.location.search);
+    const isEditor = urlParams.has('editor') || urlParams.get('mode') === 'editor' || window.location.pathname.includes('/editor') || window.location.pathname.includes('/admin');
+    const switcherWidget = document.getElementById('theme-switcher-widget') || document.querySelector('.theme-switcher-widget');
+    if (switcherWidget) {
+      if (!isEditor) {
+        switcherWidget.style.display = 'none';
+      } else {
+        switcherWidget.style.display = '';
+      }
+    }
 
     // Título da página
     document.title = `${designerName} — Catálogo Digital Oficial`;
