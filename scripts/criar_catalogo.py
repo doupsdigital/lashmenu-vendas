@@ -136,6 +136,26 @@ CANONICAL_SERVICES = {
         "description": "Remoção com produto profissional dermatologicamente testado em creme/gel, preservando 100% da integridade e saúde dos cílios naturais.",
         "effect": "Desacoplamento Suave Sem Danos",
         "photo_url": "/modelos/glamour-midnight/assets/img/remocao.png"
+    },
+    "design_sobrancelha": {
+        "keywords": ["design de sobrancelha", "design sobrancelha", "sobrancelha", "design simples", "sobrancelhas"],
+        "name": "Design de Sobrancelha",
+        "category": "Design & Visagismo",
+        "duration": "40min",
+        "maintenance": "15 a 20 dias",
+        "description": "Mapeamento facial e visagismo personalizado para valorizar os traços únicos do seu rosto. Remoção precisa dos pelos para um desenho limpo, harmônico e natural.",
+        "effect": "Alinhamento, Simetria & Expressividade Natural",
+        "photo_url": "/modelos/glamour-midnight/assets/img/volume-brasileiro.png"
+    },
+    "design_sobrancelha_henna": {
+        "keywords": ["henna", "sobrancelha com henna", "design com henna", "sobrancelhas com henna", "design de sobrancelha com henna"],
+        "name": "Design de Sobrancelha com Henna",
+        "category": "Design Facial + Henna",
+        "duration": "50min",
+        "maintenance": "7 a 15 dias",
+        "description": "Design visagista completo combinado com aplicação de henna de alta fixação para preencher falhas, realçar o contorno e destacar o olhar com acabamento impecável.",
+        "effect": "Preenchimento de Falhas & Olhar Marcante",
+        "photo_url": "/modelos/glamour-midnight/assets/img/volume-brasileiro.png"
     }
 }
 
@@ -155,7 +175,7 @@ def api_request(url, method="GET", data=None, headers=None):
     body_bytes = None
     if data is not None:
         if isinstance(data, (dict, list)):
-            body_bytes = json.dumps(data).encode("utf-8")
+            body_bytes = json.dumps(data, ensure_ascii=False).encode("utf-8")
         elif isinstance(data, bytes):
             body_bytes = data
         else:
@@ -213,6 +233,41 @@ def upload_cover_image(local_filepath, slug):
         return None
 
 
+def upload_service_image(local_filepath, slug, svc_index):
+    """Faz upload da foto de serviço local para o bucket catalog-assets do Supabase."""
+    if not local_filepath or not os.path.exists(local_filepath):
+        print(f"⚠️ Aviso: Arquivo de serviço não encontrado em {local_filepath}.")
+        return None
+
+    filename = os.path.basename(local_filepath)
+    ext = os.path.splitext(filename)[1].lower() or ".jpg"
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    target_path = f"services/{slug}_svc{svc_index}_{timestamp}{ext}"
+
+    mime_type, _ = mimetypes.guess_type(local_filepath)
+    if not mime_type:
+        mime_type = "image/jpeg" if ext in [".jpg", ".jpeg"] else "image/png"
+
+    with open(local_filepath, "rb") as f:
+        file_bytes = f.read()
+
+    upload_url = f"{SUPABASE_URL}/storage/v1/object/{STORAGE_BUCKET}/{target_path}"
+    headers = {
+        "Content-Type": mime_type,
+        "x-upsert": "true",
+        "cache-control": "max-age=31536000"
+    }
+
+    try:
+        api_request(upload_url, method="POST", data=file_bytes, headers=headers)
+        public_url = f"{SUPABASE_URL}/storage/v1/object/public/{STORAGE_BUCKET}/{target_path}"
+        print(f"✅ Foto de serviço [{svc_index}] enviada com sucesso para o Supabase Storage: {public_url}")
+        return public_url
+    except Exception as e:
+        print(f"⚠️ Erro ao fazer upload da foto de serviço para o Supabase: {e}")
+        return None
+
+
 def ensure_unique_slug(base_name):
     """Gera um slug limpo e único consultando a tabela orders."""
     clean = re.sub(r"[^a-z0-9]", "", base_name.lower().strip()) or "catalogo"
@@ -234,13 +289,21 @@ def match_canonical_service(raw_service_name):
     """Localiza o serviço canônico oficial a partir do nome ou palavra-chave."""
     raw_lower = raw_service_name.lower().strip()
 
-    # Match exato ou de palavra-chave
+    # 1. Match exato de nome
     for key, item in CANONICAL_SERVICES.items():
         if item["name"].lower() == raw_lower:
             return item
+
+    # 2. Match de palavra-chave ordenado por especificidade (maior comprimento primeiro)
+    candidates = []
+    for key, item in CANONICAL_SERVICES.items():
         for kw in item["keywords"]:
             if kw in raw_lower or raw_lower in kw:
-                return item
+                candidates.append((len(kw), item))
+
+    if candidates:
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        return candidates[0][1]
 
     return None
 
@@ -330,9 +393,17 @@ def build_catalog(client_data):
         final_description = svc.get("description") or (canonical["description"] if canonical else f"Aplicação profissional e cuidadosa de {svc_name} com acabamento impecável.")
         final_effect = svc.get("effect") or (canonical["effect"] if canonical else "Realce do Olhar e Definição")
 
-        # Foto oficial ou fallback
+        # Foto oficial, personalizada enviada ou fallback
         final_photo = svc.get("photo_url")
+        local_svc_photo = svc.get("photo_path") or svc.get("local_image_path")
         is_custom = False
+
+        if not final_photo and local_svc_photo:
+            uploaded_url = upload_service_image(local_svc_photo, slug, idx + 1)
+            if uploaded_url:
+                final_photo = uploaded_url
+                is_custom = True
+
         if not final_photo:
             if canonical:
                 final_photo = canonical["photo_url"]
@@ -408,8 +479,8 @@ def main():
 
     input_arg = sys.argv[1]
     if os.path.exists(input_arg):
-        with open(input_arg, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        with open(input_arg, "rb") as f:
+            data = json.loads(f.read().decode("utf-8", errors="replace"))
     else:
         try:
             data = json.loads(input_arg)
