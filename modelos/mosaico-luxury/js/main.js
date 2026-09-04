@@ -221,6 +221,22 @@ var PROCEDIMENTOS = [
   }
 ];
 
+
+// Mapeamento de Rótulos de Categoria
+const CATEGORIA_LABELS = {
+  'volumes': 'Extensões & Volumes',
+  'mapping': 'Mappings de Olhar',
+  'especiais': 'Especiais & Cuidados',
+  'sobrancelhas': 'Design de Sobrancelhas',
+  'labios': 'Pigmentação Labial',
+  'combos': 'Combos Exclusivos'
+};
+
+function getCatLabel(item) {
+  if (!item) return '';
+  return item.catName || CATEGORIA_LABELS[item.cat] || item.catLabel || (item.cat ? item.cat.toUpperCase() : '');
+}
+
 // Elementos DOM
 const mosaicoApp = document.querySelector('.mosaico-app');
 const sections = document.querySelectorAll('.mosaico-app > section');
@@ -340,7 +356,7 @@ function renderGrid() {
       <img src="${item.img}" alt="${item.title}" class="tile__foto" loading="lazy">
       <div class="tile__scrim"></div>
       <div class="tile__conteudo">
-        ${item.catLabel ? `<span class="tile__cat">${item.catLabel}</span>` : ''}
+        <span class="tile__cat">${getCatLabel(item)}</span>
         <h3 class="tile__titulo">${item.title}</h3>
         <div class="tile__meta">
           <span class="tile__preco">${item.preco}</span>
@@ -399,7 +415,7 @@ function abrirModal(id) {
       <button type="button" class="modal__fechar" aria-label="Fechar" onclick="fecharModal()">✕</button>
     </div>
     <div class="modal__corpo">
-      <span class="modal__cat">${item.catLabel}</span>
+      <span class="modal__cat">${getCatLabel(item)}</span>
       <h3 class="modal__titulo">${item.title}</h3>
       <p class="modal__desc">${item.desc}</p>
       

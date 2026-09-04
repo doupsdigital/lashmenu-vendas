@@ -221,6 +221,22 @@ var PROCEDIMENTOS = [
   }
 ];
 
+
+// Mapeamento de Rótulos de Categoria
+const CATEGORIA_LABELS = {
+  'volumes': 'Extensões & Volumes',
+  'mapping': 'Mappings de Olhar',
+  'especiais': 'Especiais & Cuidados',
+  'sobrancelhas': 'Design de Sobrancelhas',
+  'labios': 'Pigmentação Labial',
+  'combos': 'Combos Exclusivos'
+};
+
+function getCatLabel(item) {
+  if (!item) return '';
+  return item.catName || CATEGORIA_LABELS[item.cat] || item.catLabel || (item.cat ? item.cat.toUpperCase() : '');
+}
+
 // Elementos DOM
 const mosaicoApp = document.querySelector('.mosaico-app');
 const sections = document.querySelectorAll('.mosaico-app > section');
@@ -340,7 +356,7 @@ function renderGrid() {
       <img src="${item.img}" alt="${item.title}" class="tile__foto" loading="lazy">
       <div class="tile__scrim"></div>
       <div class="tile__conteudo">
-        ${item.catLabel ? `<span class="tile__cat">${item.catLabel}</span>` : ''}
+        <span class="tile__cat">${getCatLabel(item)}</span>
         <h3 class="tile__titulo">${item.title}</h3>
         <div class="tile__meta">
           <span class="tile__preco">${item.preco}</span>
@@ -399,7 +415,7 @@ function abrirModal(id) {
       <button type="button" class="modal__fechar" aria-label="Fechar" onclick="fecharModal()">✕</button>
     </div>
     <div class="modal__corpo">
-      <span class="modal__cat">${item.catLabel}</span>
+      <span class="modal__cat">${getCatLabel(item)}</span>
       <h3 class="modal__titulo">${item.title}</h3>
       <p class="modal__desc">${item.desc}</p>
       
@@ -586,108 +602,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* ---------- Efeito de Partículas Flutuantes Iluminadas (Hero Ambient Glow Particles) ---------- */
-window.initHeroParticles = function initHeroParticles() {
-  const heroEl = document.querySelector('.hero, .secao-hero, .capa');
-  if (!heroEl) return;
+(function initHeroParticles() {
+  function createParticles() {
+    const heroEl = document.querySelector('.hero, .secao-hero, .capa');
+    if (!heroEl || heroEl.querySelector('#hero-particles')) return;
 
-  const oldParticles = heroEl.querySelector('#hero-particles');
-  if (oldParticles) oldParticles.remove();
+    const container = document.createElement('div');
+    container.id = 'hero-particles';
+    container.className = 'hero__particles';
+    heroEl.appendChild(container);
 
-  const container = document.createElement('div');
-  container.id = 'hero-particles';
-  container.className = 'hero__particles';
-  heroEl.appendChild(container);
+    const isRose = (document.body.className || '').includes('rose') || 
+                   (window.location.href || '').includes('rose') || 
+                   (document.title || '').includes('Rose');
 
-  const activeTheme = document.body.getAttribute('data-theme') || 
-                      document.documentElement.getAttribute('data-theme') || 
-                      'rose';
+    const particleColor = isRose ? 'rgba(229, 169, 184, 0.9)' : 'rgba(226, 194, 170, 0.9)';
+    const particleGlow = isRose ? 'rgba(169, 50, 89, 0.45)' : 'rgba(201, 163, 137, 0.45)';
+    const particleBoxGlow = isRose ? 'rgba(229, 169, 184, 0.65)' : 'rgba(201, 163, 137, 0.65)';
 
-  const isLuxury = (activeTheme === 'luxury');
+    let html = '';
+    for (let i = 0; i < 14; i++) {
+      const size = Math.floor(Math.random() * 8) + 6;
+      const left = Math.floor(Math.random() * 90) + 5;
+      const duration = (Math.random() * 4 + 4.5).toFixed(1);
+      const delay = (Math.random() * 5).toFixed(1);
+      const maxOpacity = (Math.random() * 0.4 + 0.4).toFixed(2);
 
-  // Cores dinâmicas por tema (Rosa Berry para Rosé, Dourado Nobre para Luxury)
-  const particleColor = isLuxury ? 'rgba(235, 205, 180, 0.95)' : 'rgba(235, 180, 195, 0.95)';
-  const particleGlow = isLuxury ? 'rgba(201, 163, 137, 0.65)' : 'rgba(169, 50, 89, 0.55)';
-  const particleBoxGlow = isLuxury ? 'rgba(226, 194, 170, 0.8)' : 'rgba(229, 169, 184, 0.8)';
-
-  let html = '';
-  for (let i = 0; i < 18; i++) {
-    const size = Math.floor(Math.random() * 10) + 6;
-    const left = Math.floor(Math.random() * 90) + 5;
-    const duration = (Math.random() * 4 + 4.5).toFixed(1);
-    const delay = (Math.random() * 5).toFixed(1);
-    const maxOpacity = (Math.random() * 0.45 + 0.45).toFixed(2);
-
-    html += `<span class="hero__particle" style="left: ${left}%; width: ${size}px; height: ${size}px; --duration: ${duration}s; --delay: ${delay}s; --max-opacity: ${maxOpacity}; background: radial-gradient(circle, ${particleColor} 0%, ${particleGlow} 70%, transparent 100%); box-shadow: 0 0 12px ${particleBoxGlow};"></span>`;
-  }
-  container.innerHTML = html;
-
-  if (!document.getElementById('hero-particles-styles')) {
-    const pStyle = document.createElement('style');
-    pStyle.id = 'hero-particles-styles';
-    pStyle.innerHTML = `
-      .hero__particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
-      .hero__particle { position: absolute; bottom: -20px; border-radius: 50%; opacity: 0; pointer-events: none; will-change: transform, opacity; animation: floatHeroParticle var(--duration, 6s) infinite ease-in-out var(--delay, 0s); }
-      @keyframes floatHeroParticle {
-        0% { transform: translateY(0) scale(0.6); opacity: 0; }
-        25% { opacity: var(--max-opacity, 0.8); }
-        70% { opacity: var(--max-opacity, 0.8); }
-        100% { transform: translateY(-48vh) scale(1.2); opacity: 0; }
-      }
-    `;
-    document.head.appendChild(pStyle);
-  }
-};
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => window.initHeroParticles());
-} else {
-  window.initHeroParticles();
-}
-
-
-/* ---------- LASHMENU UNIFIED THEME SWITCHER (ROSÉ 🌸 / LUXURY 👑) ---------- */
-(function initThemeSwitcher() {
-  function setupSwitcher() {
-    const buttons = document.querySelectorAll('[data-theme-target]');
-    if (buttons.length === 0) return;
-
-    let savedTheme = localStorage.getItem('lash_mosaico_theme') || 'rose';
-
-    function setTheme(theme) {
-      document.body.setAttribute('data-theme', theme);
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('lash_mosaico_theme', theme);
-
-      buttons.forEach(btn => {
-        if (btn.getAttribute('data-theme-target') === theme) {
-          btn.classList.add('is-active');
-        } else {
-          btn.classList.remove('is-active');
-        }
-      });
-
-      // Recria partículas para combinar com a cor do tema ativo
-      const p = document.getElementById('hero-particles');
-      if (p) p.remove();
-      if (typeof window.initHeroParticles === 'function') {
-        window.initHeroParticles();
-      }
+      html += `<span class="hero__particle" style="left: ${left}%; width: ${size}px; height: ${size}px; --duration: ${duration}s; --delay: ${delay}s; --max-opacity: ${maxOpacity}; background: radial-gradient(circle, ${particleColor} 0%, ${particleGlow} 70%, transparent 100%); box-shadow: 0 0 10px ${particleBoxGlow};"></span>`;
     }
+    container.innerHTML = html;
 
-    setTheme(savedTheme);
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetTheme = btn.getAttribute('data-theme-target');
-        setTheme(targetTheme);
-      });
-    });
+    if (!document.getElementById('hero-particles-styles')) {
+      const pStyle = document.createElement('style');
+      pStyle.id = 'hero-particles-styles';
+      pStyle.innerHTML = `
+        .hero__particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
+        .hero__particle { position: absolute; bottom: -20px; border-radius: 50%; opacity: 0; pointer-events: none; will-change: transform, opacity; animation: floatHeroParticle var(--duration, 6s) infinite ease-in-out var(--delay, 0s); }
+        @keyframes floatHeroParticle {
+          0% { transform: translateY(0) scale(0.6); opacity: 0; }
+          20% { opacity: var(--max-opacity, 0.7); }
+          75% { opacity: var(--max-opacity, 0.7); }
+          100% { transform: translateY(-52vh) scale(1.15); opacity: 0; }
+        }
+      `;
+      document.head.appendChild(pStyle);
+    }
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupSwitcher);
+    document.addEventListener('DOMContentLoaded', createParticles);
   } else {
-    setupSwitcher();
+    createParticles();
   }
 })();
