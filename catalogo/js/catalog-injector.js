@@ -325,6 +325,79 @@
     const wspTextMsg = encodeURIComponent(`Olá ${designerName}! Vim pelo seu catálogo digital e gostaria de tirar uma dúvida.`);
     wspFloatBtn.href = `https://wa.me/55${wspPhone}?text=${wspTextMsg}`;
 
+    // 3.6. Partículas Flutuantes Ambientais Iluminadas na Capa (Hero Floating Particles)
+    if (heroEl) {
+      let particlesContainer = heroEl.querySelector('#hero-particles');
+      if (!particlesContainer) {
+        particlesContainer = document.createElement('div');
+        particlesContainer.id = 'hero-particles';
+        particlesContainer.className = 'hero__particles';
+        heroEl.appendChild(particlesContainer);
+
+        const isRose = (document.body.className || '').includes('rose') || 
+                       (window.location.href || '').includes('rose') || 
+                       (document.title || '').includes('Rose') || 
+                       (order.slug || '').includes('rose');
+        
+        const particleColor = isRose ? 'rgba(229, 169, 184, 0.9)' : 'rgba(226, 194, 170, 0.9)';
+        const particleGlow = isRose ? 'rgba(169, 50, 89, 0.45)' : 'rgba(201, 163, 137, 0.45)';
+        const particleBoxGlow = isRose ? 'rgba(229, 169, 184, 0.65)' : 'rgba(201, 163, 137, 0.65)';
+
+        let particlesHTML = '';
+        const particleCount = 14;
+        for (let i = 0; i < particleCount; i++) {
+          const size = Math.floor(Math.random() * 8) + 6;
+          const left = Math.floor(Math.random() * 90) + 5;
+          const duration = (Math.random() * 4 + 4.5).toFixed(1);
+          const delay = (Math.random() * 5).toFixed(1);
+          const maxOpacity = (Math.random() * 0.4 + 0.4).toFixed(2);
+
+          particlesHTML += `<span class="hero__particle" style="left: ${left}%; width: ${size}px; height: ${size}px; --duration: ${duration}s; --delay: ${delay}s; --max-opacity: ${maxOpacity}; background: radial-gradient(circle, ${particleColor} 0%, ${particleGlow} 70%, transparent 100%); box-shadow: 0 0 10px ${particleBoxGlow};"></span>`;
+        }
+        particlesContainer.innerHTML = particlesHTML;
+
+        if (!document.getElementById('hero-particles-styles')) {
+          const pStyle = document.createElement('style');
+          pStyle.id = 'hero-particles-styles';
+          pStyle.innerHTML = `
+            .hero__particles {
+              position: absolute;
+              inset: 0;
+              overflow: hidden;
+              pointer-events: none;
+              z-index: 2;
+            }
+            .hero__particle {
+              position: absolute;
+              bottom: -20px;
+              border-radius: 50%;
+              opacity: 0;
+              pointer-events: none;
+              will-change: transform, opacity;
+              animation: floatHeroParticle var(--duration, 6s) infinite ease-in-out var(--delay, 0s);
+            }
+            @keyframes floatHeroParticle {
+              0% {
+                transform: translateY(0) scale(0.6);
+                opacity: 0;
+              }
+              20% {
+                opacity: var(--max-opacity, 0.7);
+              }
+              75% {
+                opacity: var(--max-opacity, 0.7);
+              }
+              100% {
+                transform: translateY(-52vh) scale(1.15);
+                opacity: 0;
+              }
+            }
+          `;
+          document.head.appendChild(pStyle);
+        }
+      }
+    }
+
     // 4. Injeta Procedimentos nos Cards Oficiais e Atualiza Array de Modais
     if (services.length > 0) {
       // Tenta localizar a variável de procedimentos no escopo global
