@@ -334,7 +334,8 @@ def build_catalog(client_data):
     if local_cover and not cover_media_url:
         cover_media_url = upload_cover_image(local_cover, slug)
 
-    model_id = client_data.get("model_id", "harmonia")
+    raw_model = client_data.get("model_id", "mosaico")
+    model_id = "mosaico" if raw_model in ["harmonia", "mosaico-rose", "mosaico-luxury", "harmonia-rose", "harmonia-midnight"] else raw_model
     color_id = client_data.get("color_id", "rose")
 
     hero_phrase = client_data.get(
