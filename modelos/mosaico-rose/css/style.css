@@ -2629,8 +2629,11 @@ body[data-theme="rose"] .theme-switcher-widget {
   box-shadow: 0 3px 12px rgba(201, 163, 137, 0.5) !important;
 }
 
-/* Espaçamento exclusivo do modelo showroom (com seletor de tema) */
-.hero__conteudo {
+/* Espaçamento exclusivo do modelo showroom (apenas quando o seletor de tema estiver presente no DOM) */
+body.has-theme-switcher .hero__conteudo,
+body:has(#theme-switcher-widget) .hero__conteudo,
+body:has(.theme-switcher-widget) .hero__conteudo {
   padding-top: 118px !important;
 }
+
 

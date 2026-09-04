@@ -203,9 +203,13 @@
     if (switcherWidget) {
       if (!isEditor) {
         try { switcherWidget.remove(); } catch(e) { switcherWidget.style.setProperty('display', 'none', 'important'); }
+        document.body.classList.remove('has-theme-switcher');
       } else {
         switcherWidget.style.display = '';
+        document.body.classList.add('has-theme-switcher');
       }
+    } else {
+      document.body.classList.remove('has-theme-switcher');
     }
 
     // Título da página
