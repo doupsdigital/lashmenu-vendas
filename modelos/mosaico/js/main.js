@@ -651,6 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setTheme(theme) {
       document.body.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('lash_mosaico_theme', theme);
 
       buttons.forEach(btn => {

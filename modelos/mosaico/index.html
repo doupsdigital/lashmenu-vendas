@@ -34,16 +34,24 @@
 
 <body>
 
-  <!-- SELETOR FLUTUANTE DUAL DE TEMA (ROSÉ 🌸 / LUXURY 👑) -->
+  <!-- SELETOR FLUTUANTE DUAL DE TEMA ULTRA PREMIUM (ROSÉ 🌸 / LUXURY 👑) -->
   <nav class="theme-switcher-widget" id="theme-switcher-widget" aria-label="Alternar Tema do Catálogo">
-    <button type="button" class="theme-switcher-btn is-active" data-theme-target="rose" aria-label="Modo Rosé">
-      <span>🌸</span>
-      <span>Rosé</span>
-    </button>
-    <button type="button" class="theme-switcher-btn" data-theme-target="luxury" aria-label="Modo Luxury">
-      <span>👑</span>
-      <span>Luxury</span>
-    </button>
+    <div class="theme-switcher-label">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+      </svg>
+      <span>Clique para mudar o tema</span>
+    </div>
+    <div class="theme-switcher-options">
+      <button type="button" class="theme-switcher-btn is-active" data-theme-target="rose" aria-label="Modo Rosé">
+        <span class="theme-switcher-icon">🌸</span>
+        <span class="theme-switcher-title">Modo Rosé</span>
+      </button>
+      <button type="button" class="theme-switcher-btn" data-theme-target="luxury" aria-label="Modo Luxury">
+        <span class="theme-switcher-icon">👑</span>
+        <span class="theme-switcher-title">Modo Luxury</span>
+      </button>
+    </div>
   </nav>
 
 
