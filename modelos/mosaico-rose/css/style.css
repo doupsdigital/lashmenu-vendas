@@ -767,6 +767,205 @@ button {
   position: relative;
   overflow: hidden;
   background: #f2cad5;
+  color: #24141a;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.secao-contato__foto-wrap {
+  position: absolute;
+  inset: -6%;
+  overflow: hidden;
+}
+
+.secao-contato__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: saturate(1.08) contrast(1.06) brightness(0.97);
+}
+
+.secao-contato__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(242, 202, 213, 0.40) 0%,
+      rgba(242, 202, 213, 0.15) 25%,
+      rgba(242, 202, 213, 0.90) 58%,
+      #f2cad5 92%);
+}
+
+.secao-contato__conteudo {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px 24px 34px;
+}
+
+.secao-contato__topo {
+  display: flex;
+  justify-content: center;
+}
+
+.secao-contato__corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.secao-contato__titulo {
+  margin: 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 38px;
+  line-height: 1.08;
+  font-weight: 400;
+  color: #24141a;
+}
+
+.secao-contato__titulo em {
+  font-style: italic;
+  color: #a93259;
+}
+
+.secao-contato__desc {
+  margin: 0;
+  font-size: 14px;
+  color: #553d46;
+  max-width: 320px;
+  line-height: 1.45;
+}
+
+.secao-contato__acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn-whatsapp,
+.btn-instagram {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0 22px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #1fa855 0%, #075e54 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 6px 20px rgba(7, 94, 84, 0.35) !important;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #25D366 0%, #097568 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.42) !important;
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 6px 20px rgba(193, 53, 132, 0.35) !important;
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(135deg, #9b42d3 0%, #ff2e2e 50%, #ffbe53 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(225, 48, 108, 0.45) !important;
+}
+
+.btn__left {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+  letter-spacing: .18em;
+}
+
+.btn__left span {
+  font-size: 11.5px;
+}
+
+.btn__icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.btn__arrow {
+  font-size: 16px;
+  line-height: 1;
+  opacity: .85;
+}
+
+.secao-contato__info {
+  border-top: 1px solid rgba(169, 50, 89, 0.20);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #7a5c67;
+}
+
+.secao-contato__copy,
+.secao-contato__endereco,
+.secao-contato__info span {
+  margin: 0;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #7a5c67;
+}
+
+/* ==========================================================================
+   5. MODAL DE DETALHES DO PROCEDIMENTO
+   ========================================================================== */
+.modal-detalhe {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.modal-detalhe[hidden] {
+  display: none;
+}
+
+.modal-detalhe__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 20, 26, 0.60);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modal-detalhe__sheet {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 100%;
   max-height: 88vh;
