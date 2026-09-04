@@ -207,9 +207,10 @@ button {
 }
 
 .hero__titulo {
+  margin-bottom: 56px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 22px;
   margin-top: auto;
 }
 
@@ -260,6 +261,12 @@ button {
 }
 
 .hero__scroll-cue {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  margin-top: 0;
   margin-top: 24px;
   display: flex;
   flex-direction: column;
@@ -1200,3 +1207,5 @@ button {
     box-shadow: 0 12px 32px rgba(37, 211, 102, 0.75), 0 0 0 8px rgba(37, 211, 102, 0.18);
   }
 }
+
+.hero__subtitulo { display: block; margin-top: 8px; }
