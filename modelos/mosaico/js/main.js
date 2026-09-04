@@ -586,59 +586,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* ---------- Efeito de Partículas Flutuantes Iluminadas (Hero Ambient Glow Particles) ---------- */
-(function initHeroParticles() {
-  function createParticles() {
-    const heroEl = document.querySelector('.hero, .secao-hero, .capa');
-    if (!heroEl || heroEl.querySelector('#hero-particles')) return;
+window.initHeroParticles = function initHeroParticles() {
+  const heroEl = document.querySelector('.hero, .secao-hero, .capa');
+  if (!heroEl) return;
 
-    const container = document.createElement('div');
-    container.id = 'hero-particles';
-    container.className = 'hero__particles';
-    heroEl.appendChild(container);
+  const oldParticles = heroEl.querySelector('#hero-particles');
+  if (oldParticles) oldParticles.remove();
 
-    const isRose = (document.body.className || '').includes('rose') || 
-                   (window.location.href || '').includes('rose') || 
-                   (document.title || '').includes('Rose');
+  const container = document.createElement('div');
+  container.id = 'hero-particles';
+  container.className = 'hero__particles';
+  heroEl.appendChild(container);
 
-    const particleColor = isRose ? 'rgba(229, 169, 184, 0.9)' : 'rgba(226, 194, 170, 0.9)';
-    const particleGlow = isRose ? 'rgba(169, 50, 89, 0.45)' : 'rgba(201, 163, 137, 0.45)';
-    const particleBoxGlow = isRose ? 'rgba(229, 169, 184, 0.65)' : 'rgba(201, 163, 137, 0.65)';
+  const activeTheme = document.body.getAttribute('data-theme') || 
+                      document.documentElement.getAttribute('data-theme') || 
+                      'rose';
 
-    let html = '';
-    for (let i = 0; i < 14; i++) {
-      const size = Math.floor(Math.random() * 8) + 6;
-      const left = Math.floor(Math.random() * 90) + 5;
-      const duration = (Math.random() * 4 + 4.5).toFixed(1);
-      const delay = (Math.random() * 5).toFixed(1);
-      const maxOpacity = (Math.random() * 0.4 + 0.4).toFixed(2);
+  const isLuxury = (activeTheme === 'luxury');
 
-      html += `<span class="hero__particle" style="left: ${left}%; width: ${size}px; height: ${size}px; --duration: ${duration}s; --delay: ${delay}s; --max-opacity: ${maxOpacity}; background: radial-gradient(circle, ${particleColor} 0%, ${particleGlow} 70%, transparent 100%); box-shadow: 0 0 10px ${particleBoxGlow};"></span>`;
-    }
-    container.innerHTML = html;
+  // Cores dinâmicas por tema (Rosa Berry para Rosé, Dourado Nobre para Luxury)
+  const particleColor = isLuxury ? 'rgba(235, 205, 180, 0.95)' : 'rgba(235, 180, 195, 0.95)';
+  const particleGlow = isLuxury ? 'rgba(201, 163, 137, 0.65)' : 'rgba(169, 50, 89, 0.55)';
+  const particleBoxGlow = isLuxury ? 'rgba(226, 194, 170, 0.8)' : 'rgba(229, 169, 184, 0.8)';
 
-    if (!document.getElementById('hero-particles-styles')) {
-      const pStyle = document.createElement('style');
-      pStyle.id = 'hero-particles-styles';
-      pStyle.innerHTML = `
-        .hero__particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
-        .hero__particle { position: absolute; bottom: -20px; border-radius: 50%; opacity: 0; pointer-events: none; will-change: transform, opacity; animation: floatHeroParticle var(--duration, 6s) infinite ease-in-out var(--delay, 0s); }
-        @keyframes floatHeroParticle {
-          0% { transform: translateY(0) scale(0.6); opacity: 0; }
-          20% { opacity: var(--max-opacity, 0.7); }
-          75% { opacity: var(--max-opacity, 0.7); }
-          100% { transform: translateY(-52vh) scale(1.15); opacity: 0; }
-        }
-      `;
-      document.head.appendChild(pStyle);
-    }
+  let html = '';
+  for (let i = 0; i < 18; i++) {
+    const size = Math.floor(Math.random() * 10) + 6;
+    const left = Math.floor(Math.random() * 90) + 5;
+    const duration = (Math.random() * 4 + 4.5).toFixed(1);
+    const delay = (Math.random() * 5).toFixed(1);
+    const maxOpacity = (Math.random() * 0.45 + 0.45).toFixed(2);
+
+    html += `<span class="hero__particle" style="left: ${left}%; width: ${size}px; height: ${size}px; --duration: ${duration}s; --delay: ${delay}s; --max-opacity: ${maxOpacity}; background: radial-gradient(circle, ${particleColor} 0%, ${particleGlow} 70%, transparent 100%); box-shadow: 0 0 12px ${particleBoxGlow};"></span>`;
   }
+  container.innerHTML = html;
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', createParticles);
-  } else {
-    createParticles();
+  if (!document.getElementById('hero-particles-styles')) {
+    const pStyle = document.createElement('style');
+    pStyle.id = 'hero-particles-styles';
+    pStyle.innerHTML = `
+      .hero__particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 2; }
+      .hero__particle { position: absolute; bottom: -20px; border-radius: 50%; opacity: 0; pointer-events: none; will-change: transform, opacity; animation: floatHeroParticle var(--duration, 6s) infinite ease-in-out var(--delay, 0s); }
+      @keyframes floatHeroParticle {
+        0% { transform: translateY(0) scale(0.6); opacity: 0; }
+        25% { opacity: var(--max-opacity, 0.8); }
+        70% { opacity: var(--max-opacity, 0.8); }
+        100% { transform: translateY(-48vh) scale(1.2); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(pStyle);
   }
-})();
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => window.initHeroParticles());
+} else {
+  window.initHeroParticles();
+}
 
 
 /* ---------- LASHMENU UNIFIED THEME SWITCHER (ROSÉ 🌸 / LUXURY 👑) ---------- */
