@@ -116,13 +116,8 @@
       const topStatus = document.createElement('div');
       topStatus.id = 'lm-editor-top-status';
       topStatus.innerHTML = `
-        <div class="lm-top-status-badge">
-          <span class="lm-status-dot" id="lm-status-dot"></span>
-          <span id="lm-status-text">Edição Ativa</span>
-        </div>
-        <a id="lm-btn-view-catalog" href="${this.getCatalogUrl()}" target="_blank" class="lm-top-status-link" title="Ver meu catálogo oficial">
-          👁️ Ver Catálogo ↗
-        </a>
+        <span class="lm-status-dot" id="lm-status-dot"></span>
+        <span id="lm-status-text">Edição Ativa</span>
       `;
       document.body.appendChild(topStatus);
 
@@ -134,6 +129,7 @@
           <button class="lm-mb-btn" id="lm-btn-redo" title="Refazer" disabled>↪️</button>
           <button class="lm-mb-btn" id="lm-btn-theme" title="Alternar Tema">🌸</button>
           <button class="lm-mb-btn" id="lm-btn-discard" title="Descartar">🗑️</button>
+          <a class="lm-mb-btn" id="lm-btn-view-catalog" href="${this.getCatalogUrl()}" target="_blank" title="Ver Meu Catálogo">👁️</a>
         </div>
 
         <button class="lm-mb-btn-save" id="lm-btn-save">

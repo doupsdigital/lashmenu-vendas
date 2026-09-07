@@ -27,7 +27,7 @@ body.has-lm-editor {
   padding-bottom: 80px !important;
 }
 
-/* Indicador Discreto de Status no Topo Direito + Botão Ver Catálogo */
+/* Indicador Discreto de Status no Topo Direito */
 #lm-editor-top-status {
   position: fixed !important;
   top: 12px !important;
@@ -37,46 +37,16 @@ body.has-lm-editor {
   border: 1px solid rgba(229, 169, 184, 0.35) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
-  padding: 4px 6px 4px 12px !important;
+  padding: 6px 14px !important;
   border-radius: 100px !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
-  pointer-events: auto !important;
-}
-
-.lm-top-status-badge {
   display: flex !important;
   align-items: center !important;
   gap: 6px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
   font-size: 0.72rem !important;
   font-weight: 600 !important;
   color: #f5ede6 !important;
-}
-
-.lm-top-status-link {
-  background: rgba(229, 169, 184, 0.18) !important;
-  border: 1px solid rgba(229, 169, 184, 0.4) !important;
-  color: #ffffff !important;
-  font-size: 0.72rem !important;
-  font-weight: 600 !important;
-  padding: 4px 10px !important;
-  border-radius: 100px !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-  transition: all 0.2s ease !important;
-  white-space: nowrap !important;
-  touch-action: manipulation !important;
-}
-
-.lm-top-status-link:hover,
-.lm-top-status-link:active {
-  background: rgba(229, 169, 184, 0.35) !important;
-  color: #ffffff !important;
-  transform: scale(1.03) !important;
+  pointer-events: none !important;
 }
 
 .lm-status-dot {
