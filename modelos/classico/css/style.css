@@ -294,16 +294,17 @@ button {
 .hero__frase-cilios {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 21px;
+  line-height: 1.25;
   font-weight: 400;
+  font-style: italic;
   color: #24141a;
   text-wrap: pretty;
 }
 
 .hero__frase-cilios em {
   font-style: italic;
-  color: #a93259;
+  color: inherit;
 }
 
 .hero__chips {
@@ -1760,10 +1761,11 @@ body[data-theme="luxury"] .hero__filete {
 
 body[data-theme="luxury"] .hero__frase-cilios {
   color: #f3efe9;
+  font-style: italic;
 }
 
 body[data-theme="luxury"] .hero__frase-cilios em {
-  color: #c9a389;
+  color: inherit;
 }
 
 body[data-theme="luxury"] .hero__scroll-cue {
