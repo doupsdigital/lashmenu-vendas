@@ -255,9 +255,9 @@ button {
 .hero__titulo {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   margin-top: auto;
-  margin-bottom: 72px;
+  margin-bottom: 12px;
 }
 
 .hero__titulo h1 {
@@ -280,6 +280,7 @@ button {
   width: 44px;
   height: 2px;
   background: #a93259;
+  margin: 2px 0;
 }
 
 .hero__frase {
@@ -310,23 +311,23 @@ button {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-start;
-  margin: 16px 0 22px;
+  margin: 12px 0 18px;
   width: 100%;
 }
 
 .hero__chip {
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(169, 50, 89, 0.38);
   border-radius: 999px;
   padding: 7px 15px;
   font-size: 10.5px;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #721935;
+  background: rgba(255, 240, 245, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(169, 50, 89, 0.12);
   transition: all 0.22s ease;
 }
 
@@ -1710,55 +1711,27 @@ body[data-theme="luxury"] .hero__chip {
 }
 
 body[data-theme="luxury"] .hero__titulo {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: auto;
-  margin-bottom: 72px;
+  margin-bottom: 12px;
 }
 
 body[data-theme="luxury"] .hero__titulo h1 {
-  margin: 0;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 40px;
-  line-height: 1.05;
-  font-weight: 400;
   color: #f3efe9;
-  letter-spacing: -.02em;
 }
 
-body[data-theme="luxury"] .hero__titulo h1 em {
-  font-style: italic;
-  font-weight: 400;
+body[data-theme="luxury"] .hero__titulo h1 em,
+body[data-theme="luxury"] .hero__subtitulo {
   color: #c9a389;
 }
 
 body[data-theme="luxury"] .hero__filete {
-  width: 44px;
-  height: 2px;
   background: #c9a389;
 }
 
-body[data-theme="luxury"] .hero__frase {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.45;
-  color: rgba(243, 239, 233, 0.85);
-  max-width: 340px;
-}
-
 body[data-theme="luxury"] .hero__frase-cilios {
-  margin: 0;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
-  line-height: 1.2;
-  font-weight: 400;
   color: #f3efe9;
-  text-wrap: pretty;
 }
 
 body[data-theme="luxury"] .hero__frase-cilios em {
-  font-style: italic;
   color: #c9a389;
 }
 
