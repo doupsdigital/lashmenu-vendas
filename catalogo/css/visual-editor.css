@@ -381,7 +381,7 @@ body[data-theme="luxury"] .lm-svc-photo-preview-wrap img {
   inset: 0 !important;
   background: rgba(14, 10, 11, 0.85) !important;
   z-index: 999999 !important;
-  display: flex !important;
+  display: none !important;
   align-items: flex-end !important;
   justify-content: center !important;
   padding: 0 !important;
@@ -397,6 +397,7 @@ body[data-theme="luxury"] .lm-svc-photo-preview-wrap img {
 }
 
 .lm-modal-overlay.is-open {
+  display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
