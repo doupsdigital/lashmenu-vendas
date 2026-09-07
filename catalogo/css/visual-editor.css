@@ -390,12 +390,16 @@ body[data-theme="luxury"] .lm-svc-photo-preview-wrap img {
   margin: 0 !important;
   opacity: 0 !important;
   visibility: hidden !important;
+  pointer-events: none !important;
+  will-change: opacity, visibility !important;
+  transform: translateZ(0) !important;
   transition: opacity 0.25s ease, visibility 0.25s ease !important;
 }
 
 .lm-modal-overlay.is-open {
   opacity: 1 !important;
   visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .lm-modal-card {
