@@ -136,9 +136,9 @@
         <div class="lm-modal-overlay" id="lm-modal-save" style="display: none !important;">
           <div class="lm-modal-card">
             <h3 class="lm-modal-title">✨ Publicar Alterações</h3>
-            <p class="lm-modal-desc">Deseja aplicar as mudanças no seu catálogo publicado?</p>
+            <p class="lm-modal-desc">Confira o resumo das alterações antes de publicar no seu catálogo:</p>
             <div class="lm-modal-body">
-              <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 12px; font-size: 0.82rem;" id="lm-save-summary-list"></div>
+              <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 12px 14px; border-radius: 12px; font-size: 0.84rem; text-align: left; max-height: 240px; overflow-y: auto;" id="lm-save-summary-list"></div>
             </div>
             <div class="lm-modal-actions">
               <button class="lm-modal-btn lm-modal-btn-cancel" id="lm-modal-save-cancel">Cancelar</button>
@@ -988,30 +988,106 @@
       }, '🔄');
     }
 
+    escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
     openSaveConfirmationModal() {
       const summaryList = document.getElementById('lm-save-summary-list');
       if (!summaryList) return;
 
-      summaryList.innerHTML = `
-        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-          <span>Cliente:</span> <strong>${this.order.client_name || 'Original'}</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-          <span>WhatsApp:</span> <strong>${this.order.whatsapp || 'Mantido'}</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-          <span>Instagram:</span> <strong>@${this.order.instagram || 'Mantido'}</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-          <span>Tema:</span> <strong>${(this.order.color_id || 'rose').toUpperCase()}</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-          <span>Foto Capa:</span> <strong>${this.pendingCoverFile ? 'Nova imagem 📷' : 'Original'}</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between;">
-          <span>Procedimentos:</span> <strong>${this.services.length} cadastrados</strong>
-        </div>
-      `;
+      const initial = (this.historyStack && this.historyStack.length > 0) ? this.historyStack[0] : null;
+      const initialOrder = initial ? initial.order : {};
+      const initialServices = initial ? (initial.services || []) : [];
+
+      const changes = [];
+
+      // 1. Nome do Catálogo / Designer
+      if (initialOrder.client_name !== this.order.client_name) {
+        changes.push(`<div><strong>✏️ Nome do Catálogo:</strong> ${this.escapeHtml(this.order.client_name || '')}</div>`);
+      }
+
+      // 2. Frase de Destaque
+      if (initialOrder.hero_phrase !== this.order.hero_phrase) {
+        changes.push(`<div><strong>💬 Frase de Destaque:</strong> Alterada</div>`);
+      }
+
+      // 3. Contatos
+      if (initialOrder.whatsapp !== this.order.whatsapp) {
+        changes.push(`<div><strong>📱 WhatsApp:</strong> ${this.escapeHtml(this.order.whatsapp || '')}</div>`);
+      }
+      if (initialOrder.instagram !== this.order.instagram) {
+        changes.push(`<div><strong>📸 Instagram:</strong> @${this.escapeHtml((this.order.instagram || '').replace(/^@/, ''))}</div>`);
+      }
+      if (initialOrder.location !== this.order.location) {
+        changes.push(`<div><strong>📍 Localização:</strong> ${this.escapeHtml(this.order.location || '')}</div>`);
+      }
+
+      // 4. Tema Visual
+      if ((initialOrder.color_id || 'rose') !== (this.order.color_id || 'rose')) {
+        changes.push(`<div><strong>🎨 Tema Visual:</strong> ${this.escapeHtml((this.order.color_id || 'rose').toUpperCase())}</div>`);
+      }
+
+      // 5. Foto de Capa
+      if (this.pendingCoverFile) {
+        changes.push(`<div><strong>📷 Foto de Capa:</strong> Nova imagem selecionada</div>`);
+      }
+
+      // 6. Procedimentos
+      const currentServices = this.services || [];
+
+      // Checar se houve exclusões de procedimentos
+      if (this.deletedServiceIds && this.deletedServiceIds.length > 0) {
+        changes.push(`<div><strong>🗑️ Procedimentos removidos:</strong> ${this.deletedServiceIds.length} item(ns)</div>`);
+      } else if (currentServices.length < initialServices.length) {
+        const diffCount = initialServices.length - currentServices.length;
+        changes.push(`<div><strong>🗑️ Procedimentos removidos:</strong> ${diffCount} item(ns)</div>`);
+      }
+
+      // Checar adição e edição de procedimentos
+      currentServices.forEach((svc, idx) => {
+        const orig = initialServices[idx];
+        const priceFormatted = svc.price ? (svc.price.includes('R$') ? svc.price : `R$ ${svc.price}`) : '';
+
+        if (!orig || !orig.name) {
+          changes.push(`<div><strong>✨ Novo procedimento:</strong> ${this.escapeHtml(svc.name || 'Serviço')} (${this.escapeHtml(priceFormatted)})</div>`);
+        } else {
+          const origPriceFormatted = orig.price ? (orig.price.includes('R$') ? orig.price : `R$ ${orig.price}`) : '';
+
+          const isChanged = svc.name !== orig.name ||
+                            priceFormatted !== origPriceFormatted ||
+                            svc.duration !== orig.duration ||
+                            svc.category !== orig.category ||
+                            svc.maintenance !== orig.maintenance ||
+                            svc.effect !== orig.effect ||
+                            svc.description !== orig.description ||
+                            !!svc.pendingPhotoFile;
+
+          if (isChanged) {
+            changes.push(`<div><strong>✏️ Procedimento alterado:</strong> ${this.escapeHtml(svc.name)} (${this.escapeHtml(priceFormatted)})</div>`);
+          }
+        }
+      });
+
+      if (changes.length === 0) {
+        summaryList.innerHTML = `
+          <div style="text-align: center; color: rgba(255,255,255,0.6); padding: 8px 0;">
+            ℹ️ Nenhuma alteração pendente detectada.
+          </div>
+        `;
+      } else {
+        summaryList.innerHTML = `
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: #ffffff;">
+            ${changes.join('')}
+          </div>
+        `;
+      }
 
       this.openModal('lm-modal-save');
     }
