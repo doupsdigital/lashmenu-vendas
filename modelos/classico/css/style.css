@@ -311,19 +311,19 @@ button {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-start;
-  margin: 6px 0 14px;
+  margin: 8px 0 16px;
   width: 100%;
 }
 
 .hero__chip {
   border: 1px solid rgba(169, 50, 89, 0.38);
   border-radius: 999px;
-  padding: 7px 15px;
-  font-size: 10.5px;
+  padding: 6px 13px;
+  font-size: 10px;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: #721935;
-  background: rgba(255, 240, 245, 0.65);
+  background: rgba(255, 240, 245, 0.75);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-weight: 600;
@@ -1703,11 +1703,25 @@ body[data-theme="luxury"] .hero__studio-divider {
   background: linear-gradient(to right, rgba(201, 163, 137, 0.85), rgba(201, 163, 137, 0));
 }
 
+body[data-theme="luxury"] .hero__chips {
+  margin: 10px 0 20px;
+}
+
 body[data-theme="luxury"] .hero__chip {
-  border-color: rgba(201, 163, 137, 0.35);
-  color: #f3efe9;
-  background: rgba(25, 20, 17, 0.45);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(232, 198, 168, 0.55);
+  color: #E8C6A8;
+  background: linear-gradient(135deg, rgba(201, 163, 137, 0.22) 0%, rgba(20, 16, 14, 0.75) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+}
+
+body[data-theme="luxury"] .hero__chip:hover {
+  background: linear-gradient(135deg, rgba(201, 163, 137, 0.35) 0%, rgba(20, 16, 14, 0.85) 100%);
+  border-color: rgba(232, 198, 168, 0.8);
+  color: #ffffff;
 }
 
 body[data-theme="luxury"] .hero__titulo {
