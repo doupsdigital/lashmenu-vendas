@@ -107,6 +107,22 @@
       "destination": "/formulario/index.html"
     },
     {
+      "source": "/modelos/mosaico-rose/assets/:path*",
+      "destination": "/modelos/mosaico/assets/:path*"
+    },
+    {
+      "source": "/modelos/mosaico-luxury/assets/:path*",
+      "destination": "/modelos/mosaico/assets/:path*"
+    },
+    {
+      "source": "/modelos/harmonia-rose/assets/:path*",
+      "destination": "/modelos/mosaico/assets/:path*"
+    },
+    {
+      "source": "/modelos/harmonia-midnight/assets/:path*",
+      "destination": "/modelos/mosaico/assets/:path*"
+    },
+    {
       "source": "/mosaico/:path*",
       "destination": "/modelos/mosaico/:path*"
     },

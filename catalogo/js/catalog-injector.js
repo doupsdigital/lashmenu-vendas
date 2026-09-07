@@ -559,7 +559,12 @@
           // Foto do Card com Lazy Loading
           const cardImg = newCard.querySelector('.card-procedimento__foto, .mosaico__foto, img');
           if (cardImg && svc.photo_url) {
-            cardImg.src = svc.photo_url;
+            let sanitizedUrl = svc.photo_url
+              .replace('/modelos/mosaico-rose/', '/modelos/mosaico/')
+              .replace('/modelos/mosaico-luxury/', '/modelos/mosaico/')
+              .replace('/modelos/harmonia-rose/', '/modelos/mosaico/')
+              .replace('/modelos/harmonia-midnight/', '/modelos/mosaico/');
+            cardImg.src = sanitizedUrl;
             cardImg.setAttribute('loading', 'lazy');
             cardImg.setAttribute('decoding', 'async');
           }

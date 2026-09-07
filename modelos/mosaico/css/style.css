@@ -1287,7 +1287,7 @@ button {
    LASHMENU — MODELO MOSAICO MIDNIGHT (LUXURY DARK & SNAP SCROLL ANIMATIONS)
    ========================================================================== */
 /* ---------- Reset & Box-Sizing ---------- */
-*, body[data-theme="luxury"] *::before, body[data-theme="luxury"] *::after {
+body[data-theme="luxury"] *, body[data-theme="luxury"] *::before, body[data-theme="luxury"] *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1332,7 +1332,7 @@ body[data-theme="luxury"] ::-webkit-scrollbar {
 }
 
 /* ---------- Container Mobile App Container (Snap Wrapper) ---------- */
-.mosaico-app {
+body[data-theme="luxury"] .mosaico-app {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
@@ -1362,7 +1362,7 @@ body[data-theme="luxury"] .etiqueta {
 }
 
 /* ---------- Entrance Animations & Stagger (Lento, Fluido & Sofisticado) ---------- */
-.anim-fade-up {
+body[data-theme="luxury"] .anim-fade-up {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 1.35s cubic-bezier(0.16, 1, 0.3, 1), transform 1.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1427,7 +1427,7 @@ body[data-theme="luxury"] .secao-contato__foto {
 /* ==========================================================================
    1. HERO SECTION (SNAP SCREEN 1)
    ========================================================================== */
-.hero {
+body[data-theme="luxury"] .hero {
   min-height: 100%;
   height: 100%;
   width: 100%;
@@ -1587,7 +1587,7 @@ body[data-theme="luxury"] @keyframes heroPulseLinha {
 /* ==========================================================================
    2. SEÇÃO CATÁLOGO MOSAICO (SNAP SCREEN 2 - ROLAGEM LIVRE DENTRO DA SEÇÃO)
    ========================================================================== */
-.secao-catalogo {
+body[data-theme="luxury"] .secao-catalogo {
   min-height: 100vh;
   box-sizing: border-box;
   padding: 50px 0 60px;
@@ -1628,7 +1628,7 @@ body[data-theme="luxury"] .secao-catalogo__sub {
 }
 
 /* ---------- Filtros em Chips Horizontais ---------- */
-.mosaico__filtros {
+body[data-theme="luxury"] .mosaico__filtros {
   display: flex;
   gap: 8px;
   overflow-x: auto;
@@ -1680,7 +1680,7 @@ body[data-theme="luxury"] .mosaico__contador {
 }
 
 /* ---------- Grid Mosaico Midnight ---------- */
-.mosaico__grid {
+body[data-theme="luxury"] .mosaico__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
@@ -1864,7 +1864,7 @@ body[data-theme="luxury"] .tile__toque-cue {
 /* ==========================================================================
    3. SEÇÃO ORIENTAÇÕES (SNAP SCREEN 3 - TELA CHEIA PADRÃO VITRINE)
    ========================================================================== */
-.secao-orientacoes {
+body[data-theme="luxury"] .secao-orientacoes {
   min-height: 100%;
   height: 100%;
   width: 100%;
@@ -2023,7 +2023,7 @@ body[data-theme="luxury"] .secao-orientacoes__scroll-cue span {
 /* ==========================================================================
    4. SEÇÃO CONTATO & RODAPÉ (SNAP SCREEN 4 - TELA CHEIA 100DVH)
    ========================================================================== */
-.secao-contato {
+body[data-theme="luxury"] .secao-contato {
   min-height: 100%;
   height: 100%;
   width: 100%;
@@ -2203,7 +2203,7 @@ body[data-theme="luxury"] .secao-contato__copy, body[data-theme="luxury"] .secao
 /* ==========================================================================
    5. MODAL DE DETALHES DO PROCEDIMENTO
    ========================================================================== */
-.modal-detalhe {
+body[data-theme="luxury"] .modal-detalhe {
   position: fixed;
   inset: 0;
   z-index: 100;
@@ -2486,7 +2486,7 @@ body[data-theme="luxury"] .hero__foto, body[data-theme="luxury"] .secao-orientac
 /* ==========================================================================
    BOTÃO FLUTUANTE DE WHATSAPP
    ========================================================================== */
-.wsp-float-btn {
+body[data-theme="luxury"] .wsp-float-btn {
   position: absolute;
   bottom: 24px;
   right: 20px;
@@ -2636,7 +2636,9 @@ body[data-theme="rose"] .theme-switcher-widget {
 }
 
 /* Espaçamento exclusivo do modelo showroom (apenas quando o seletor de tema estiver presente no DOM) */
-body.has-theme-switcher .hero__conteudo {
+body.has-theme-switcher .hero__conteudo,
+body:has(#theme-switcher-widget) .hero__conteudo,
+body:has(.theme-switcher-widget) .hero__conteudo {
   padding-top: 118px !important;
 }
 
