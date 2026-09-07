@@ -94,6 +94,17 @@
       return urlParams.get('slug') || urlParams.get('c') || urlParams.get('p') || urlParams.get('id');
     }
 
+    getCatalogUrl() {
+      if (this.order && this.order.slug && window.location.hostname.includes('lashmenu.com')) {
+        return `https://${this.order.slug}.lashmenu.com`;
+      }
+      const url = new URL(window.location.href);
+      url.searchParams.delete('mode');
+      url.searchParams.delete('edit');
+      url.searchParams.delete('token');
+      return url.toString();
+    }
+
     renderMobileBar() {
       const oldTb = document.getElementById('lm-editor-toolbar');
       if (oldTb) oldTb.remove();
@@ -103,8 +114,13 @@
       const topStatus = document.createElement('div');
       topStatus.id = 'lm-editor-top-status';
       topStatus.innerHTML = `
-        <span class="lm-status-dot" id="lm-status-dot"></span>
-        <span id="lm-status-text">Edição Ativa</span>
+        <div class="lm-top-status-badge">
+          <span class="lm-status-dot" id="lm-status-dot"></span>
+          <span id="lm-status-text">Edição Ativa</span>
+        </div>
+        <a id="lm-btn-view-catalog" href="${this.getCatalogUrl()}" target="_blank" class="lm-top-status-link" title="Ver meu catálogo oficial">
+          👁️ Ver Catálogo ↗
+        </a>
       `;
       document.body.appendChild(topStatus);
 
@@ -383,23 +399,7 @@
 
       const viewBtn = document.getElementById('lm-modal-success-view');
       if (viewBtn) {
-        let catalogUrl = '#';
-        if (this.order && this.order.slug) {
-          if (window.location.hostname.includes('lashmenu.com')) {
-            catalogUrl = `https://${this.order.slug}.lashmenu.com`;
-          } else {
-            const url = new URL(window.location.href);
-            url.searchParams.delete('mode');
-            url.searchParams.delete('token');
-            catalogUrl = url.toString();
-          }
-        } else {
-          const url = new URL(window.location.href);
-          url.searchParams.delete('mode');
-          url.searchParams.delete('token');
-          catalogUrl = url.toString();
-        }
-        viewBtn.href = catalogUrl;
+        viewBtn.href = this.getCatalogUrl();
       }
 
       this.openModal('lm-modal-success');
@@ -925,6 +925,11 @@
       locEls.forEach(el => {
         if (this.order.location) el.textContent = this.order.location;
       });
+
+      const viewCatalogBtn = document.getElementById('lm-btn-view-catalog');
+      if (viewCatalogBtn) {
+        viewCatalogBtn.href = this.getCatalogUrl();
+      }
 
       this.reRenderServicesUI();
       this.attachServiceControls();
