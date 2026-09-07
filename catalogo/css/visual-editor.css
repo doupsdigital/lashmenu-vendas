@@ -405,6 +405,17 @@ body[data-theme="luxury"] .lm-svc-photo-preview-wrap img {
   -webkit-backdrop-filter: blur(10px) !important;
 }
 
+/* ── EM MODO EDIÇÃO, ANULA TOTALMENTE OS MODAIS NATIVOS DE CLIENTE ── */
+body.has-lm-editor .modal-detalhe,
+body.has-lm-editor [data-modal]:not(.lm-modal-overlay),
+body.has-lm-editor #modal-procedimento,
+body.has-lm-editor .detalhe-procedimento {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .lm-modal-card {
   width: 100% !important;
   max-width: 500px !important;
