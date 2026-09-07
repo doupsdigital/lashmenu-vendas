@@ -200,9 +200,9 @@ html[data-theme="luxury"] .lm-mb-btn-save {
 }
 
 .lm-cover-edit-btn {
-  background: rgba(20, 16, 15, 0.88) !important;
-  border: 1px solid rgba(229, 169, 184, 0.5) !important;
-  color: #ffffff !important;
+  background: rgba(255, 243, 246, 0.92) !important;
+  border: 1px solid rgba(229, 169, 184, 0.6) !important;
+  color: #8c2b45 !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   padding: 8px 18px !important;
@@ -213,7 +213,7 @@ html[data-theme="luxury"] .lm-mb-btn-save {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 6px 20px rgba(192, 75, 107, 0.25) !important;
   transition: all 0.22s ease !important;
   white-space: nowrap !important;
   touch-action: manipulation !important;
@@ -221,8 +221,42 @@ html[data-theme="luxury"] .lm-mb-btn-save {
 
 .lm-cover-edit-btn:hover,
 .lm-cover-edit-btn:active {
-  background: rgba(192, 75, 107, 0.95) !important;
+  background: linear-gradient(135deg, #c04b6b 0%, #d96583 100%) !important;
   border-color: #ffffff !important;
+  color: #ffffff !important;
+  transform: scale(1.04) !important;
+  box-shadow: 0 8px 24px rgba(192, 75, 107, 0.45) !important;
+}
+
+/* Tema Rosé Específico */
+html[data-theme="rose"] .lm-cover-edit-btn,
+body[data-theme="rose"] .lm-cover-edit-btn,
+.theme-rose .lm-cover-edit-btn {
+  background: rgba(255, 243, 246, 0.92) !important;
+  border: 1px solid rgba(229, 169, 184, 0.6) !important;
+  color: #8c2b45 !important;
+  box-shadow: 0 6px 20px rgba(192, 75, 107, 0.25) !important;
+}
+
+/* Tema Luxury (Escuro) Específico */
+html[data-theme="luxury"] .lm-cover-edit-btn,
+body[data-theme="luxury"] .lm-cover-edit-btn,
+.theme-luxury .lm-cover-edit-btn {
+  background: rgba(20, 16, 15, 0.88) !important;
+  border: 1px solid rgba(229, 169, 184, 0.45) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+html[data-theme="luxury"] .lm-cover-edit-btn:hover,
+html[data-theme="luxury"] .lm-cover-edit-btn:active,
+body[data-theme="luxury"] .lm-cover-edit-btn:hover,
+body[data-theme="luxury"] .lm-cover-edit-btn:active,
+.theme-luxury .lm-cover-edit-btn:hover,
+.theme-luxury .lm-cover-edit-btn:active {
+  background: linear-gradient(135deg, #c04b6b 0%, #d96583 100%) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
   transform: scale(1.04) !important;
   box-shadow: 0 8px 24px rgba(192, 75, 107, 0.5) !important;
 }
