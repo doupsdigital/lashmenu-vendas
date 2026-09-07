@@ -318,6 +318,48 @@
         const previewUrl = URL.createObjectURL(file);
         document.getElementById('lm-svc-photo-img').src = previewUrl;
       });
+
+      // 🎭 MÁSCARAS DE ENTRADA (DINHEIRO E WHATSAPP)
+      const priceInput = document.getElementById('lm-svc-field-price');
+      if (priceInput) {
+        priceInput.addEventListener('input', (e) => {
+          e.target.value = this.formatCurrencyMask(e.target.value);
+        });
+      }
+
+      const wspInput = document.getElementById('lm-social-field-whatsapp');
+      if (wspInput) {
+        wspInput.addEventListener('input', (e) => {
+          e.target.value = this.formatPhoneMask(e.target.value);
+        });
+      }
+    }
+
+    formatCurrencyMask(val) {
+      if (!val) return '';
+      let clean = String(val).replace(/\D/g, '');
+      if (!clean) return '';
+      let numberVal = (parseInt(clean, 10) / 100).toFixed(2);
+      let parts = numberVal.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      return parts.join(',');
+    }
+
+    formatPhoneMask(val) {
+      if (!val) return '';
+      let clean = String(val).replace(/\D/g, '');
+      if (!clean) return '';
+      if (clean.length > 11) clean = clean.substring(0, 11);
+
+      if (clean.length > 10) {
+        return clean.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      } else if (clean.length > 6) {
+        return clean.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
+      } else if (clean.length > 2) {
+        return clean.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
+      } else {
+        return clean.replace(/^(\d*)$/, '($1');
+      }
     }
 
     showToast(msg) {
@@ -600,7 +642,7 @@
     }
 
     openSocialModal(focusType = 'whatsapp') {
-      document.getElementById('lm-social-field-whatsapp').value = this.order.whatsapp || '';
+      document.getElementById('lm-social-field-whatsapp').value = this.formatPhoneMask(this.order.whatsapp || '');
       document.getElementById('lm-social-field-instagram').value = this.order.instagram || '';
       document.getElementById('lm-social-field-location').value = this.order.location || '';
 
@@ -779,7 +821,7 @@
       }
 
       document.getElementById('lm-svc-field-name').value = svc.name || '';
-      document.getElementById('lm-svc-field-price').value = svc.price || '';
+      document.getElementById('lm-svc-field-price').value = this.formatCurrencyMask(svc.price || '');
       document.getElementById('lm-svc-field-duration').value = svc.duration || '';
       document.getElementById('lm-svc-field-category').value = svc.category || '';
       document.getElementById('lm-svc-field-maintenance').value = svc.maintenance || '';
