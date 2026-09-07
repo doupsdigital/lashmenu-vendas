@@ -227,6 +227,29 @@ button {
   box-shadow: 0 2px 8px rgba(70, 25, 40, 0.08);
 }
 
+.hero__studio-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.hero__studio-label {
+  font-family: 'Italiana', 'Fraunces', Georgia, serif;
+  font-size: 20px;
+  letter-spacing: 0.4em;
+  color: #a93259;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hero__studio-divider {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(169, 50, 89, 0.65), rgba(169, 50, 89, 0));
+}
+
 .hero__titulo {
   display: flex;
   flex-direction: column;
@@ -1622,6 +1645,14 @@ body[data-theme="luxury"] .hero__selo span {
   border-radius: 999px;
   border: 1px solid rgba(201, 163, 137, 0.35);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+body[data-theme="luxury"] .hero__studio-label {
+  color: #c9a389;
+}
+
+body[data-theme="luxury"] .hero__studio-divider {
+  background: linear-gradient(to right, rgba(201, 163, 137, 0.65), rgba(201, 163, 137, 0));
 }
 
 body[data-theme="luxury"] .hero__titulo {
