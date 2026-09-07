@@ -653,7 +653,6 @@
           card.appendChild(bar);
 
           const stopEv = (ev) => {
-            ev.preventDefault();
             ev.stopPropagation();
           };
 
@@ -668,7 +667,7 @@
           });
 
           bar.addEventListener('mousedown', stopEv);
-          bar.addEventListener('touchstart', stopEv, { passive: false });
+          bar.addEventListener('touchstart', stopEv, { passive: true });
           bar.addEventListener('pointerdown', stopEv);
         }
       });
@@ -718,8 +717,31 @@
     }
 
     openEditServiceModal(index) {
-      const svc = this.services[index];
-      if (!svc) return;
+      let svc = this.services[index];
+      if (!svc) {
+        const serviceCards = document.querySelectorAll('.card-procedimento, .vitrine__card, .servico-item, .mosaico__card, [data-procedimento-id], [data-grid] > div, [data-grid] > article');
+        const card = serviceCards[index];
+        const procGlobal = (window.PROCEDIMENTOS && window.PROCEDIMENTOS[index]) ? window.PROCEDIMENTOS[index] : null;
+
+        const titleEl = card ? card.querySelector('.procedimento__titulo, .card__title, .tile__titulo, h3, .card-procedimento__titulo') : null;
+        const priceEl = card ? card.querySelector('.procedimento__preco, .card__price, .tile__preco, .price, .card-procedimento__preco') : null;
+        const durEl = card ? card.querySelector('.procedimento__duracao, .card__duration, .tile__duracao, .card-procedimento__duracao') : null;
+        const catEl = card ? card.querySelector('.procedimento__cat, .tile__cat, .modal__cat') : null;
+        const imgEl = card ? card.querySelector('img') : null;
+
+        svc = {
+          name: titleEl ? titleEl.textContent.trim() : (procGlobal ? procGlobal.title : `Procedimento ${index + 1}`),
+          price: priceEl ? priceEl.textContent.replace(/^R\$\s*/i, '').trim() : (procGlobal ? procGlobal.preco.replace(/^R\$\s*/i, '') : '0,00'),
+          duration: durEl ? durEl.textContent.replace(/^(⏱️|⌚)\s*/i, '').trim() : (procGlobal ? procGlobal.duracao : ''),
+          category: catEl ? catEl.textContent.trim() : (procGlobal ? procGlobal.cat : ''),
+          maintenance: procGlobal && procGlobal.specs ? (procGlobal.specs.find(s => s[0] && s[0].includes('Manutenção')) || [])[1] || '' : '',
+          effect: procGlobal && procGlobal.specs ? (procGlobal.specs.find(s => s[0] && s[0].includes('Efeito')) || [])[1] || '' : '',
+          description: procGlobal ? procGlobal.desc || '' : '',
+          photo_url: imgEl ? imgEl.src : (procGlobal ? procGlobal.img : ''),
+          order_index: index
+        };
+        this.services[index] = svc;
+      }
 
       this.currentModalSvcPendingFile = null;
       document.getElementById('lm-svc-modal-title').textContent = `✏️ Editar: ${svc.name}`;
