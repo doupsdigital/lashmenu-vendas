@@ -132,7 +132,6 @@
         <div class="lm-mb-btn-group">
           <button class="lm-mb-btn" id="lm-btn-undo" title="Desfazer" disabled>↩️</button>
           <button class="lm-mb-btn" id="lm-btn-redo" title="Refazer" disabled>↪️</button>
-          <button class="lm-mb-btn" id="lm-btn-cover" title="Alterar Foto de Capa">📷 Capa</button>
           <button class="lm-mb-btn" id="lm-btn-theme" title="Alternar Tema">🌸</button>
           <button class="lm-mb-btn" id="lm-btn-discard" title="Descartar">🗑️</button>
         </div>
@@ -145,10 +144,6 @@
 
       document.getElementById('lm-btn-undo').addEventListener('click', () => this.undo());
       document.getElementById('lm-btn-redo').addEventListener('click', () => this.redo());
-      document.getElementById('lm-btn-cover').addEventListener('click', () => {
-        const fileInput = document.getElementById('lm-cover-file-input');
-        if (fileInput) fileInput.click();
-      });
       document.getElementById('lm-btn-theme').addEventListener('click', () => this.toggleTheme());
       document.getElementById('lm-btn-discard').addEventListener('click', () => this.discardChanges());
       document.getElementById('lm-btn-save').addEventListener('click', () => this.openSaveConfirmationModal());

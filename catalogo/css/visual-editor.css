@@ -186,13 +186,15 @@ html[data-theme="luxury"] .lm-mb-btn-save {
   border-radius: 6px;
 }
 
-/* Botão Flutuante de Alterar Foto de Capa (Centralizado na Parte Inferior da Capa) */
+/* Botão Flutuante de Alterar Foto de Capa (Topo Direito, abaixo do status bar) */
 .lm-cover-edit-overlay {
   position: absolute !important;
-  bottom: 24px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  z-index: 99 !important;
+  top: 60px !important;
+  right: 16px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: 99995 !important;
   margin: 0 !important;
   pointer-events: auto !important;
 }
