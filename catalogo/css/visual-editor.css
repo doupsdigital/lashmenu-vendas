@@ -186,28 +186,43 @@ html[data-theme="luxury"] .lm-mb-btn-save {
   border-radius: 6px;
 }
 
-/* Botão Único para Alterar Foto de Capa (Mobile) */
+/* Botão Flutuante de Alterar Foto de Capa (Centralizado na Parte Inferior da Capa) */
 .lm-cover-edit-overlay {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 99;
+  position: absolute !important;
+  bottom: 24px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 99 !important;
+  margin: 0 !important;
+  pointer-events: auto !important;
 }
 
 .lm-cover-edit-btn {
-  background: rgba(18, 14, 13, 0.88);
-  border: 1px solid rgba(229, 169, 184, 0.4);
-  color: #ffffff;
-  backdrop-filter: blur(10px);
-  padding: 6px 12px;
-  border-radius: 100px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: rgba(20, 16, 15, 0.88) !important;
+  border: 1px solid rgba(229, 169, 184, 0.5) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  padding: 8px 18px !important;
+  border-radius: 100px !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+  transition: all 0.22s ease !important;
+  white-space: nowrap !important;
+  touch-action: manipulation !important;
+}
+
+.lm-cover-edit-btn:hover,
+.lm-cover-edit-btn:active {
+  background: rgba(192, 75, 107, 0.95) !important;
+  border-color: #ffffff !important;
+  transform: scale(1.04) !important;
+  box-shadow: 0 8px 24px rgba(192, 75, 107, 0.5) !important;
 }
 
 /* Botão Lápis de Edição para WhatsApp e Instagram da Seção de Contatos */

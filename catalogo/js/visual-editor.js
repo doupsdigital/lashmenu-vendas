@@ -528,21 +528,34 @@
     }
 
     setupInlineEditing() {
-      const coverContainer = document.querySelector('.hero__foto-wrap') || document.querySelector('.capa__foto-wrap') || document.querySelector('.hero-cover');
+      const coverContainer = document.querySelector('.hero__foto-wrap') || document.querySelector('.capa__foto-wrap') || document.querySelector('.hero-cover') || document.querySelector('.hero');
       if (coverContainer) {
         coverContainer.style.position = 'relative';
         if (!coverContainer.querySelector('.lm-cover-edit-overlay')) {
           const overlay = document.createElement('div');
           overlay.className = 'lm-cover-edit-overlay';
           overlay.innerHTML = `
-            <label class="lm-cover-edit-btn">
-              📷 Mudar Foto
-              <input type="file" accept="image/*" style="display:none;" id="lm-cover-file-input">
+            <label class="lm-cover-edit-btn" title="Clique para alterar a foto de capa">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Alterar Foto de Capa</span>
+              <input type="file" accept="image/*" style="display:none !important;" id="lm-cover-file-input">
             </label>
           `;
           coverContainer.appendChild(overlay);
 
-          overlay.querySelector('#lm-cover-file-input').addEventListener('change', (e) => this.handleCoverFileSelect(e));
+          const fileInput = overlay.querySelector('#lm-cover-file-input');
+          fileInput.addEventListener('change', (e) => this.handleCoverFileSelect(e));
+
+          const imgEl = coverContainer.querySelector('img, video');
+          if (imgEl) {
+            imgEl.style.cursor = 'pointer';
+            imgEl.title = 'Clique para alterar a foto de capa';
+            imgEl.addEventListener('click', (ev) => {
+              if (ev.target === imgEl) {
+                fileInput.click();
+              }
+            });
+          }
         }
       }
 
