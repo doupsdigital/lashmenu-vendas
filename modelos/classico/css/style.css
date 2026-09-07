@@ -311,7 +311,7 @@ button {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-start;
-  margin: 12px 0 18px;
+  margin: 6px 0 14px;
   width: 100%;
 }
 
@@ -1711,7 +1711,8 @@ body[data-theme="luxury"] .hero__chip {
 }
 
 body[data-theme="luxury"] .hero__titulo {
-  margin-bottom: 12px;
+  margin-top: auto;
+  margin-bottom: 6px;
 }
 
 body[data-theme="luxury"] .hero__titulo h1 {
@@ -2777,7 +2778,7 @@ body[data-theme="luxury"] @-webkit-keyframes heroKenBurns {
   }
 }
 
-body[data-theme="luxury"] .hero__foto-wrap, body[data-theme="luxury"] .secao-orientacoes__foto-wrap, body[data-theme="luxury"] .secao-contato__foto-wrap, body[data-theme="luxury"] .procedimentos__foto-wrap, body[data-theme="luxury"] .agendamento__foto-wrap, body[data-theme="luxury"] .cuidados__foto-wrap, body[data-theme="luxury"] .contato__foto-wrap {
+body[data-theme="luxury"] .secao-orientacoes__foto-wrap, body[data-theme="luxury"] .secao-contato__foto-wrap, body[data-theme="luxury"] .procedimentos__foto-wrap, body[data-theme="luxury"] .agendamento__foto-wrap, body[data-theme="luxury"] .cuidados__foto-wrap, body[data-theme="luxury"] .contato__foto-wrap {
   position: absolute !important;
   inset: -8% !important;
   overflow: hidden !important;
@@ -2786,7 +2787,7 @@ body[data-theme="luxury"] .hero__foto-wrap, body[data-theme="luxury"] .secao-ori
   -webkit-transform: translate3d(0, 0, 0) !important;
 }
 
-body[data-theme="luxury"] .hero__foto, body[data-theme="luxury"] .secao-orientacoes__foto, body[data-theme="luxury"] .secao-contato__foto, body[data-theme="luxury"] .procedimentos__foto, body[data-theme="luxury"] .agendamento__foto, body[data-theme="luxury"] .cuidados__foto, body[data-theme="luxury"] .contato__foto {
+body[data-theme="luxury"] .secao-orientacoes__foto, body[data-theme="luxury"] .secao-contato__foto, body[data-theme="luxury"] .procedimentos__foto, body[data-theme="luxury"] .agendamento__foto, body[data-theme="luxury"] .cuidados__foto, body[data-theme="luxury"] .contato__foto {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
@@ -2956,7 +2957,7 @@ body[data-theme="rose"] .theme-switcher-widget {
 body.has-theme-switcher .hero__conteudo,
 body:has(#theme-switcher-widget) .hero__conteudo,
 body:has(.theme-switcher-widget) .hero__conteudo {
-  padding-top: 118px !important;
+  padding-top: 85px !important;
 }
 
 
