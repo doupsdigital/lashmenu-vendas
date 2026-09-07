@@ -1286,7 +1286,7 @@ button {
 /* ==========================================================================
    LASHMENU — MODELO MOSAICO MIDNIGHT (LUXURY DARK & SNAP SCROLL ANIMATIONS)
    ========================================================================== */
-body[data-theme="luxury"] /* ---------- Reset & Box-Sizing ---------- */
+/* ---------- Reset & Box-Sizing ---------- */
 *, body[data-theme="luxury"] *::before, body[data-theme="luxury"] *::after {
   box-sizing: border-box;
   margin: 0;
@@ -1331,7 +1331,7 @@ body[data-theme="luxury"] ::-webkit-scrollbar {
   height: 0 !important;
 }
 
-body[data-theme="luxury"] /* ---------- Container Mobile App Container (Snap Wrapper) ---------- */
+/* ---------- Container Mobile App Container (Snap Wrapper) ---------- */
 .mosaico-app {
   width: 100%;
   max-width: 480px;
@@ -1361,7 +1361,7 @@ body[data-theme="luxury"] .etiqueta {
   color: #c9a389;
 }
 
-body[data-theme="luxury"] /* ---------- Entrance Animations & Stagger (Lento, body[data-theme="luxury"] Fluido & Sofisticado) ---------- */
+/* ---------- Entrance Animations & Stagger (Lento, Fluido & Sofisticado) ---------- */
 .anim-fade-up {
   opacity: 0;
   transform: translateY(26px);
@@ -1386,7 +1386,7 @@ body[data-theme="luxury"] .delay-5 { transition-delay: 0.58s; }
 
 body[data-theme="luxury"] .delay-6 { transition-delay: 0.70s; }
 
-body[data-theme="luxury"] /* Background Photo Subtle Zoom Effect (Todas as Telas com Foto) */
+/* Background Photo Subtle Zoom Effect (Todas as Telas com Foto) */
 @keyframes heroKenBurns {
   0% {
     transform: scale(1);
@@ -1424,7 +1424,7 @@ body[data-theme="luxury"] .secao-contato__foto {
   object-position: center 20%;
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    1. HERO SECTION (SNAP SCREEN 1)
    ========================================================================== */
 .hero {
@@ -1584,7 +1584,7 @@ body[data-theme="luxury"] @keyframes heroPulseLinha {
   }
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    2. SEÇÃO CATÁLOGO MOSAICO (SNAP SCREEN 2 - ROLAGEM LIVRE DENTRO DA SEÇÃO)
    ========================================================================== */
 .secao-catalogo {
@@ -1627,7 +1627,7 @@ body[data-theme="luxury"] .secao-catalogo__sub {
   line-height: 1.45;
 }
 
-body[data-theme="luxury"] /* ---------- Filtros em Chips Horizontais ---------- */
+/* ---------- Filtros em Chips Horizontais ---------- */
 .mosaico__filtros {
   display: flex;
   gap: 8px;
@@ -1679,7 +1679,7 @@ body[data-theme="luxury"] .mosaico__contador {
   font-weight: 600;
 }
 
-body[data-theme="luxury"] /* ---------- Grid Mosaico Midnight ---------- */
+/* ---------- Grid Mosaico Midnight ---------- */
 .mosaico__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1687,7 +1687,7 @@ body[data-theme="luxury"] /* ---------- Grid Mosaico Midnight ---------- */
   grid-auto-flow: dense;
 }
 
-body[data-theme="luxury"] /* Card do Mosaico (Tile) com efeito de surgimento fluido em profundidade */
+/* Card do Mosaico (Tile) com efeito de surgimento fluido em profundidade */
 @keyframes tileRevealLuxury {
   0% {
     opacity: 0;
@@ -1705,7 +1705,7 @@ body[data-theme="luxury"] /* Card do Mosaico (Tile) com efeito de surgimento flu
   }
 }
 
-body[data-theme="luxury"] /* Shimmer shine effect overlay on entrance */
+/* Shimmer shine effect overlay on entrance */
 @keyframes tileShine {
   0% {
     transform: translateX(-100%) rotate(25deg);
@@ -1861,7 +1861,7 @@ body[data-theme="luxury"] .tile__toque-cue {
   display: none;
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    3. SEÇÃO ORIENTAÇÕES (SNAP SCREEN 3 - TELA CHEIA PADRÃO VITRINE)
    ========================================================================== */
 .secao-orientacoes {
@@ -2020,7 +2020,7 @@ body[data-theme="luxury"] .secao-orientacoes__scroll-cue span {
   text-transform: uppercase;
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    4. SEÇÃO CONTATO & RODAPÉ (SNAP SCREEN 4 - TELA CHEIA 100DVH)
    ========================================================================== */
 .secao-contato {
@@ -2200,7 +2200,7 @@ body[data-theme="luxury"] .secao-contato__copy, body[data-theme="luxury"] .secao
   color: inherit;
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    5. MODAL DE DETALHES DO PROCEDIMENTO
    ========================================================================== */
 .modal-detalhe {
@@ -2382,7 +2382,7 @@ body[data-theme="luxury"] .modal__proximo:hover {
   background: rgba(201, 163, 137, 0.15);
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    RESPONSIVIDADE DO MODAL DE DETALHES (EVITAR ROLAGEM NO MOBILE)
    ========================================================================== */
 @media (max-width: 480px) {
@@ -2435,7 +2435,7 @@ body[data-theme="luxury"] /* ===================================================
   }
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    EFEITO KEN BURNS — ZOOM SUAVE, body[data-theme="luxury"] CONTÍNUO E PERCEPTÍVEL (TODAS AS TELAS COM FOTO)
    ========================================================================== */
 @keyframes heroKenBurns {
@@ -2483,7 +2483,7 @@ body[data-theme="luxury"] .hero__foto, body[data-theme="luxury"] .secao-orientac
   -webkit-backface-visibility: hidden !important;
 }
 
-body[data-theme="luxury"] /* ==========================================================================
+/* ==========================================================================
    BOTÃO FLUTUANTE DE WHATSAPP
    ========================================================================== */
 .wsp-float-btn {
@@ -2636,9 +2636,7 @@ body[data-theme="rose"] .theme-switcher-widget {
 }
 
 /* Espaçamento exclusivo do modelo showroom (apenas quando o seletor de tema estiver presente no DOM) */
-body.has-theme-switcher .hero__conteudo,
-body:has(#theme-switcher-widget) .hero__conteudo,
-body:has(.theme-switcher-widget) .hero__conteudo {
+body.has-theme-switcher .hero__conteudo {
   padding-top: 118px !important;
 }
 
