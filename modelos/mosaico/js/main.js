@@ -321,15 +321,14 @@ function initTileObserver() {
     entries.forEach((entry) => {
       const tile = entry.target;
       if (entry.isIntersecting) {
-        const delay = (batchCount % 4) * 0.16;
+        const delay = (batchCount % 4) * 0.12;
         tile.style.animationDelay = `${delay}s`;
         tile.classList.add('is-revealed');
+        tileObserver.unobserve(tile);
 
         batchCount++;
         clearTimeout(batchTimer);
         batchTimer = setTimeout(() => { batchCount = 0; }, 250);
-      } else {
-        tile.classList.remove('is-revealed');
       }
     });
   }, observerOptions);
