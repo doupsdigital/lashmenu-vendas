@@ -186,11 +186,11 @@
               </div>
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                 <div class="lm-form-group">
-                  <label>MANUTENÇÃO</label>
+                  <label>MANUTENÇÃO (OPCIONAL)</label>
                   <input type="text" id="lm-svc-field-maintenance" placeholder="Ex: 60,00 (até 20 dias)">
                 </div>
                 <div class="lm-form-group">
-                  <label>EFEITO VISUAL</label>
+                  <label>EFEITO VISUAL (OPCIONAL)</label>
                   <input type="text" id="lm-svc-field-effect" placeholder="Ex: Alinhamento, Simetria...">
                 </div>
               </div>
@@ -970,12 +970,25 @@
           card.style.display = '';
 
           if (window.PROCEDIMENTOS && window.PROCEDIMENTOS[idx]) {
-            window.PROCEDIMENTOS[idx].title = svc.name;
-            window.PROCEDIMENTOS[idx].preco = formattedPrice;
-            window.PROCEDIMENTOS[idx].duracao = svc.duration || '';
-            if (svc.category) window.PROCEDIMENTOS[idx].cat = svc.category;
-            if (svc.photo_url) window.PROCEDIMENTOS[idx].img = svc.photo_url;
-            if (svc.description) window.PROCEDIMENTOS[idx].desc = svc.description;
+            const targetProc = window.PROCEDIMENTOS[idx];
+            targetProc.title = svc.name;
+            targetProc.preco = formattedPrice;
+            targetProc.duracao = svc.duration || '';
+            if (svc.category) targetProc.cat = svc.category;
+            if (svc.photo_url) targetProc.img = svc.photo_url;
+            targetProc.desc = svc.description || '';
+
+            const newSpecs = [];
+            if (svc.maintenance && svc.maintenance.trim()) {
+              newSpecs.push(["Manutenção", svc.maintenance.trim()]);
+            }
+            if (svc.effect && svc.effect.trim()) {
+              newSpecs.push(["Efeito", svc.effect.trim()]);
+            }
+            if (svc.duration && svc.duration.trim()) {
+              newSpecs.push(["Duração", svc.duration.trim()]);
+            }
+            targetProc.specs = newSpecs;
           }
         } else {
           card.style.display = 'none';
