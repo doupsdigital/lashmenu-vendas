@@ -623,11 +623,37 @@ body[data-theme="luxury"] .lm-form-group textarea::placeholder {
 
 html[data-theme="luxury"] .lm-form-group input:focus,
 html[data-theme="luxury"] .lm-form-group textarea:focus,
+html[data-theme="luxury"] .lm-form-select:focus,
 body[data-theme="luxury"] .lm-form-group input:focus,
-body[data-theme="luxury"] .lm-form-group textarea:focus {
+body[data-theme="luxury"] .lm-form-group textarea:focus,
+body[data-theme="luxury"] .lm-form-select:focus {
   border-color: #e5a9b8 !important;
   background: rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 0 10px rgba(229, 169, 184, 0.25) !important;
+}
+
+html[data-theme="luxury"] .lm-form-select,
+body[data-theme="luxury"] .lm-form-select {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e5a9b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+}
+
+html[data-theme="luxury"] .lm-form-select option,
+body[data-theme="luxury"] .lm-form-select option {
+  background: #14100f !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="luxury"] .lm-btn-add-cat-inline {
+  color: #e5a9b8 !important;
+}
+
+html[data-theme="luxury"] .lm-btn-add-category-chip {
+  background: rgba(229, 169, 184, 0.12) !important;
+  border: 1.5px dashed #e5a9b8 !important;
+  color: #e5a9b8 !important;
 }
 
 html[data-theme="luxury"] .lm-svc-photo-upload-btn,
@@ -789,6 +815,73 @@ html[data-theme="rose"] .lm-save-summary-container strong,
 body[data-theme="rose"] .lm-save-summary-container strong,
 .theme-rose .lm-save-summary-container strong {
   color: #b03e5e !important;
+}
+
+/* Select de Categoria Base & Tema Rosé */
+.lm-form-select {
+  width: 100% !important;
+  padding: 10px 14px !important;
+  border-radius: 12px !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 16px !important;
+  padding-right: 36px !important;
+}
+
+.lm-btn-add-cat-inline {
+  background: none !important;
+  border: none !important;
+  color: #c04b6b !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  text-decoration: underline !important;
+  padding: 0 !important;
+}
+
+.lm-btn-add-category-chip {
+  background: rgba(192, 75, 107, 0.12) !important;
+  border: 1.5px dashed #c04b6b !important;
+  color: #c04b6b !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  padding: 6px 14px !important;
+  border-radius: 100px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.lm-btn-add-category-chip:hover,
+.lm-btn-add-category-chip:active {
+  background: rgba(192, 75, 107, 0.25) !important;
+  transform: scale(1.03) !important;
+}
+
+.lm-form-select,
+html[data-theme="rose"] .lm-form-select,
+body[data-theme="rose"] .lm-form-select {
+  background-color: #fcf0f3 !important;
+  border: 1.5px solid #f2bdc9 !important;
+  color: #2b141b !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c04b6b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+}
+
+.lm-form-select option,
+html[data-theme="rose"] .lm-form-select option,
+body[data-theme="rose"] .lm-form-select option {
+  background: #fff8f9 !important;
+  color: #2b141b !important;
 }
 
 .lm-editor-toast {

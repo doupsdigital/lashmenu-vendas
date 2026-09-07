@@ -83,6 +83,8 @@
 
           const activeTheme = urlTheme || this.order.color_id || document.body.getAttribute('data-theme') || document.documentElement.getAttribute('data-theme') || 'rose';
           this.applyTheme(activeTheme);
+          this.initCategories();
+          this.renderCategoryFilterChips();
         }
       } catch (err) {
         console.error('Erro ao carregar estado do Supabase:', err);
@@ -183,8 +185,11 @@
                 </div>
               </div>
               <div class="lm-form-group">
-                <label>CATEGORIA (SUBTÍTULO)</label>
-                <input type="text" id="lm-svc-field-category" placeholder="Ex: Extensão em Y, Fio a Fio Clássico...">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <label style="margin-bottom: 0 !important;">CATEGORIA *</label>
+                  <button type="button" class="lm-btn-add-cat-inline" id="lm-btn-open-add-cat-inline" title="Criar nova categoria">+ Nova Categoria</button>
+                </div>
+                <select id="lm-svc-field-category" class="lm-form-select"></select>
               </div>
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                 <div class="lm-form-group">
@@ -217,6 +222,24 @@
             <div class="lm-modal-actions">
               <button class="lm-modal-btn lm-modal-btn-cancel" id="lm-modal-svc-cancel">Cancelar</button>
               <button class="lm-modal-btn lm-modal-btn-confirm" id="lm-modal-svc-save">💾 Salvar Alterações</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Criar Categoria -->
+        <div class="lm-modal-overlay" id="lm-modal-category" style="display: none !important;">
+          <div class="lm-modal-card">
+            <h3 class="lm-modal-title">➕ Criar Nova Categoria</h3>
+            <p class="lm-modal-desc">Digite o nome da nova categoria para organizar seus procedimentos:</p>
+            <div class="lm-modal-body">
+              <div class="lm-form-group">
+                <label>NOME DA CATEGORIA *</label>
+                <input type="text" id="lm-cat-field-name" placeholder="Ex: Lash Lifting, Micropigmentação, Cursos...">
+              </div>
+            </div>
+            <div class="lm-modal-actions">
+              <button class="lm-modal-btn lm-modal-btn-cancel" id="lm-modal-cat-cancel">Cancelar</button>
+              <button class="lm-modal-btn lm-modal-btn-confirm" id="lm-modal-cat-save">✨ Criar Categoria</button>
             </div>
           </div>
         </div>
@@ -294,6 +317,7 @@
       document.getElementById('lm-modal-save-cancel').addEventListener('click', () => this.closeModal('lm-modal-save'));
       document.getElementById('lm-modal-save-confirm').addEventListener('click', () => this.publishToSupabase());
       document.getElementById('lm-modal-svc-cancel').addEventListener('click', () => this.closeModal('lm-modal-service'));
+      document.getElementById('lm-modal-cat-cancel').addEventListener('click', () => this.closeModal('lm-modal-category'));
       document.getElementById('lm-modal-social-cancel').addEventListener('click', () => this.closeModal('lm-modal-social'));
       document.getElementById('lm-modal-success-edit').addEventListener('click', () => this.closeModal('lm-modal-success'));
       document.getElementById('lm-modal-alert-ok').addEventListener('click', () => this.closeModal('lm-modal-alert'));
@@ -714,6 +738,140 @@
       });
     }
 
+    initCategories() {
+      const catSet = new Set();
+      ['Extensão de Cílios', 'Sobrancelhas', 'Especiais & Cuidados', 'Combos Exclusivos'].forEach(c => catSet.add(c));
+
+      if (this.services && Array.isArray(this.services)) {
+        this.services.forEach(s => {
+          if (s.category && s.category.trim()) {
+            catSet.add(s.category.trim());
+          }
+        });
+      }
+
+      const chips = document.querySelectorAll('.filtro-chip, [data-filter]');
+      chips.forEach(chip => {
+        const text = chip.textContent.replace(/\(\d+\)/g, '').trim();
+        if (text && !text.toLowerCase().includes('todos') && !text.includes('+ Nova')) {
+          catSet.add(text);
+        }
+      });
+
+      this.categories = Array.from(catSet);
+    }
+
+    populateCategoryDropdown(selectedCategory = '') {
+      const selectEl = document.getElementById('lm-svc-field-category');
+      if (!selectEl) return;
+
+      selectEl.innerHTML = '';
+
+      const defaultOpt = document.createElement('option');
+      defaultOpt.value = '';
+      defaultOpt.textContent = '-- Selecione uma categoria --';
+      selectEl.appendChild(defaultOpt);
+
+      if (!this.categories || this.categories.length === 0) {
+        this.initCategories();
+      }
+
+      this.categories.forEach(catName => {
+        const opt = document.createElement('option');
+        opt.value = catName;
+        opt.textContent = catName;
+        if (selectedCategory && selectedCategory.trim().toLowerCase() === catName.trim().toLowerCase()) {
+          opt.selected = true;
+        }
+        selectEl.appendChild(opt);
+      });
+
+      const createOpt = document.createElement('option');
+      createOpt.value = '__NEW__';
+      createOpt.textContent = '➕ Criar nova categoria...';
+      selectEl.appendChild(createOpt);
+    }
+
+    openAddCategoryModal(onCreated = null) {
+      const input = document.getElementById('lm-cat-field-name');
+      if (input) input.value = '';
+
+      const saveBtn = document.getElementById('lm-modal-cat-save');
+      saveBtn.onclick = () => {
+        const name = input ? input.value.trim() : '';
+        if (!name) {
+          this.showToast('⚠️ Digite o nome da categoria.');
+          return;
+        }
+
+        if (!this.categories.includes(name)) {
+          this.categories.push(name);
+        }
+
+        this.pushHistoryState(`Nova Categoria (${name})`);
+        this.renderCategoryFilterChips();
+        this.populateCategoryDropdown(name);
+        this.closeModal('lm-modal-category');
+        this.showToast(`✨ Categoria "${name}" criada!`);
+
+        if (typeof onCreated === 'function') {
+          onCreated(name);
+        }
+      };
+
+      this.openModal('lm-modal-category');
+    }
+
+    renderCategoryFilterChips() {
+      const filterNav = document.querySelector('.mosaico__filtros, .studio__filtros, .vitrine__filtros, nav[aria-label*="Filtrar"]');
+      if (!filterNav) return;
+
+      if (!this.categories || this.categories.length === 0) {
+        this.initCategories();
+      }
+
+      const currentFilter = window.filtroAtivo || 'todos';
+      let html = '';
+      const totalServices = (this.services || []).length;
+      const isTodosActive = (currentFilter === 'todos') ? 'is-ativo' : '';
+      html += `<button type="button" class="filtro-chip ${isTodosActive}" data-filter="todos">Todos (${totalServices})</button>`;
+
+      this.categories.forEach(catName => {
+        const count = (this.services || []).filter(s => s.category && s.category.trim().toLowerCase() === catName.trim().toLowerCase()).length;
+        const isActive = (currentFilter.trim().toLowerCase() === catName.trim().toLowerCase()) ? 'is-ativo' : '';
+        html += `<button type="button" class="filtro-chip ${isActive}" data-filter="${this.escapeHtml(catName)}">${this.escapeHtml(catName)} (${count})</button>`;
+      });
+
+      html += `<button type="button" class="lm-btn-add-category-chip" id="lm-btn-add-cat-filter" title="Criar nova categoria">➕ Nova Categoria</button>`;
+
+      filterNav.innerHTML = html;
+
+      const chips = filterNav.querySelectorAll('.filtro-chip');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('is-ativo'));
+          chip.classList.add('is-ativo');
+          const filterValue = chip.getAttribute('data-filter');
+          window.filtroAtivo = filterValue;
+
+          if (typeof window.renderGrid === 'function') {
+            try { window.renderGrid(); } catch(e) {}
+          }
+          this.reRenderServicesUI();
+          this.attachServiceControls();
+        });
+      });
+
+      const addCatBtn = document.getElementById('lm-btn-add-cat-filter');
+      if (addCatBtn) {
+        addCatBtn.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          ev.stopPropagation();
+          this.openAddCategoryModal();
+        });
+      }
+    }
+
     openAddServiceModal() {
       this.currentModalSvcPendingFile = null;
       document.getElementById('lm-svc-modal-title').textContent = '➕ Adicionar Serviço';
@@ -724,7 +882,30 @@
       document.getElementById('lm-svc-field-name').value = '';
       document.getElementById('lm-svc-field-price').value = '';
       document.getElementById('lm-svc-field-duration').value = '';
-      document.getElementById('lm-svc-field-category').value = '';
+
+      this.populateCategoryDropdown('');
+
+      const catSelect = document.getElementById('lm-svc-field-category');
+      if (catSelect) {
+        catSelect.onchange = (e) => {
+          if (e.target.value === '__NEW__') {
+            this.openAddCategoryModal((newCatName) => {
+              this.populateCategoryDropdown(newCatName);
+            });
+          }
+        };
+      }
+
+      const inlineCatBtn = document.getElementById('lm-btn-open-add-cat-inline');
+      if (inlineCatBtn) {
+        inlineCatBtn.onclick = (e) => {
+          e.preventDefault();
+          this.openAddCategoryModal((newCatName) => {
+            this.populateCategoryDropdown(newCatName);
+          });
+        };
+      }
+
       document.getElementById('lm-svc-field-maintenance').value = '';
       document.getElementById('lm-svc-field-effect').value = '';
       document.getElementById('lm-svc-field-desc').value = '';
@@ -734,7 +915,8 @@
         const name = document.getElementById('lm-svc-field-name').value.trim() || 'Novo Serviço';
         const price = document.getElementById('lm-svc-field-price').value.trim() || '0,00';
         const duration = document.getElementById('lm-svc-field-duration').value.trim() || '60min';
-        const category = document.getElementById('lm-svc-field-category').value.trim();
+        const selectedCat = catSelect ? catSelect.value : '';
+        const category = (selectedCat === '__NEW__') ? '' : selectedCat;
         const maintenance = document.getElementById('lm-svc-field-maintenance').value.trim();
         const effect = document.getElementById('lm-svc-field-effect').value.trim();
         const description = document.getElementById('lm-svc-field-desc').value.trim();
@@ -809,7 +991,30 @@
       document.getElementById('lm-svc-field-name').value = svc.name || '';
       document.getElementById('lm-svc-field-price').value = this.formatCurrencyMask(svc.price || '');
       document.getElementById('lm-svc-field-duration').value = svc.duration || '';
-      document.getElementById('lm-svc-field-category').value = svc.category || '';
+
+      this.populateCategoryDropdown(svc.category || '');
+
+      const catSelect = document.getElementById('lm-svc-field-category');
+      if (catSelect) {
+        catSelect.onchange = (e) => {
+          if (e.target.value === '__NEW__') {
+            this.openAddCategoryModal((newCatName) => {
+              this.populateCategoryDropdown(newCatName);
+            });
+          }
+        };
+      }
+
+      const inlineCatBtn = document.getElementById('lm-btn-open-add-cat-inline');
+      if (inlineCatBtn) {
+        inlineCatBtn.onclick = (e) => {
+          e.preventDefault();
+          this.openAddCategoryModal((newCatName) => {
+            this.populateCategoryDropdown(newCatName);
+          });
+        };
+      }
+
       document.getElementById('lm-svc-field-maintenance').value = svc.maintenance || '';
       document.getElementById('lm-svc-field-effect').value = svc.effect || '';
       document.getElementById('lm-svc-field-desc').value = svc.description || '';
@@ -819,7 +1024,8 @@
         svc.name = document.getElementById('lm-svc-field-name').value.trim();
         svc.price = document.getElementById('lm-svc-field-price').value.trim();
         svc.duration = document.getElementById('lm-svc-field-duration').value.trim();
-        svc.category = document.getElementById('lm-svc-field-category').value.trim();
+        const selectedCat = catSelect ? catSelect.value : '';
+        svc.category = (selectedCat === '__NEW__') ? '' : selectedCat;
         svc.maintenance = document.getElementById('lm-svc-field-maintenance').value.trim();
         svc.effect = document.getElementById('lm-svc-field-effect').value.trim();
         svc.description = document.getElementById('lm-svc-field-desc').value.trim();
