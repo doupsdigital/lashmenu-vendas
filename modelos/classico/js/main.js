@@ -367,7 +367,6 @@ function renderGrid() {
   lista.forEach((item, index) => {
     const card = document.createElement('article');
     card.className = 'servico-card';
-    card.style.animationDelay = `${(index % 8) * 0.10}s`;
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
     card.setAttribute('aria-label', `Ver detalhes de ${item.title}`);
