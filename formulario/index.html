@@ -25,6 +25,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1042165951490026');
     fbq('track', 'PageView');
+    fbq('track', 'Purchase', { currency: 'BRL', value: 89.00 });
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1042165951490026&ev=PageView&noscript=1"
@@ -33,7 +34,7 @@
   <script src="/vendas/js/posthog-init.js"></script>
 </head>
 
-<body class="direct-form">
+<body>
 
   <!-- TOP BRAND HEADER -->
   <header class="form-header">
@@ -54,7 +55,7 @@
     <div class="container container--form">
 
       <!-- PROGRESS BAR MULTI-STEP -->
-      <div class="steps-progress" id="steps-progress">
+      <div class="steps-progress is-hidden" id="steps-progress">
         <div class="progress-track">
           <div class="progress-bar-fill" id="progress-bar-fill" style="width: 25%;"></div>
         </div>
@@ -82,9 +83,9 @@
       <div class="form-card">
 
         <!-- ===================================================================
-             TELA DE BOAS-VINDAS / ONBOARDING (ETAPA 0) - OCULTA NO MODO DIRETO
+             TELA DE BOAS-VINDAS / ONBOARDING (ETAPA 0)
              =================================================================== -->
-        <div class="welcome-screen" id="welcome-screen" style="display: none;">
+        <div class="welcome-screen is-active" id="welcome-screen">
           <div class="welcome-badge">
             <span class="welcome-dot"></span>
             <span>✨ Boas-vindas ao LashMenu</span>
@@ -207,76 +208,25 @@
               <p class="step-subtitle">Veja a demonstração de cada modelo em tempo real, teste as cores e selecione o design oficial para o seu estúdio.</p>
             </div>
 
-            <!-- Grid com os 3 Cards de Modelos -->
+            <!-- Grid com os 2 Modelos Oficiais (Mosaico & Clássico) -->
             <div class="opt2-cards-grid">
               
-              <!-- Card 1: Modelo Glamour -->
-              <article class="opt2-card is-selected" data-model="glamour">
+              <!-- Card 1: Modelo Mosaico -->
+              <article class="opt2-card is-selected" data-model="mosaico">
                 <div class="opt2-card-media">
                   
                   <!-- Seletor de Cor no Topo do Celular -->
                   <div class="opt2-color-selector opt2-color-selector--top">
                     <span class="opt2-color-title">Coleção:</span>
                     <div class="opt2-color-pills">
-                      <button type="button" class="opt2-pill is-active" data-color="midnight" data-label="Glamour Midnight" data-url="/modelos/glamour-midnight/index.html">
-                        <span class="color-dot color-dot--midnight"></span>
-                        <span>Midnight</span>
-                      </button>
-                      <button type="button" class="opt2-pill" data-color="rose" data-label="Glamour Rosé" data-url="/modelos/glamour-rose/index.html">
-                        <span class="color-dot color-dot--rose"></span>
-                        <span>Rosé</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="card-mini-phone">
-                    <div class="phone-notch"></div>
-                    <div class="phone-screen">
-                      <div class="phone-screen-scaler">
-                        <iframe class="opt2-iframe" src="/modelos/glamour-midnight/index.html?preview=catalog" data-src-midnight="/modelos/glamour-midnight/index.html?preview=catalog" data-src-rose="/modelos/glamour-rose/index.html?preview=catalog" title="Prévia Modelo Glamour" loading="eager" allow="autoplay"></iframe>
-                      </div>
-                      <div class="phone-overlay-badge">
-                        <span class="dot-pulse"></span>
-                        <span class="opt2-phone-badge">Glamour Midnight</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="opt2-card-body">
-                  <div class="opt2-model-header">
-                    <h3 class="opt2-model-title">✨ Modelo 01 · Glamour</h3>
-                  </div>
-                  <p class="opt2-model-desc">Capa com vídeo e carrossel de fotos em&nbsp;tela&nbsp;cheia.</p>
-                  
-                  <!-- Link para Testar em Tempo Real -->
-                  <a href="/modelos/glamour-midnight/index.html" target="_blank" rel="noopener" class="opt2-test-link">
-                    <span class="opt2-test-text">Testar em tela cheia</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
-                  </a>
-
-                  <button type="button" class="btn-select-model-card">
-                    <span class="btn-select-text">✓ Modelo Selecionado</span>
-                  </button>
-                </div>
-              </article>
-
-              <!-- Card 2: Modelo Mosaico -->
-              <article class="opt2-card" data-model="mosaico">
-                <div class="opt2-card-media">
-                  
-                  <!-- Seletor de Cor no Topo do Celular -->
-                  <div class="opt2-color-selector opt2-color-selector--top">
-                    <span class="opt2-color-title">Coleção:</span>
-                    <div class="opt2-color-pills">
-                      <button type="button" class="opt2-pill" data-color="midnight" data-label="Mosaico Luxury" data-url="/modelos/mosaico/index.html?theme=luxury">
-                        <span class="color-dot color-dot--midnight"></span>
-                        <span>Luxury</span>
-                      </button>
                       <button type="button" class="opt2-pill is-active" data-color="rose" data-label="Mosaico Rosé" data-url="/modelos/mosaico/index.html?theme=rose">
                         <span class="color-dot color-dot--rose"></span>
                         <span>Rosé</span>
                       </button>
+                      <button type="button" class="opt2-pill" data-color="midnight" data-label="Mosaico Luxury" data-url="/modelos/mosaico/index.html?theme=luxury">
+                        <span class="color-dot color-dot--midnight"></span>
+                        <span>Luxury</span>
+                      </button>
                     </div>
                   </div>
 
@@ -284,7 +234,7 @@
                     <div class="phone-notch"></div>
                     <div class="phone-screen">
                       <div class="phone-screen-scaler">
-                        <iframe class="opt2-iframe" src="/modelos/mosaico/index.html?theme=rose&preview=catalog" data-src-midnight="/modelos/mosaico/index.html?theme=luxury&preview=catalog" data-src-rose="/modelos/mosaico/index.html?theme=rose&preview=catalog" title="Prévia Modelo Mosaico" loading="lazy"></iframe>
+                        <iframe class="opt2-iframe" src="/modelos/mosaico/index.html?theme=rose&preview=catalog" data-src-midnight="/modelos/mosaico/index.html?theme=luxury&preview=catalog" data-src-rose="/modelos/mosaico/index.html?theme=rose&preview=catalog" title="Prévia Modelo Mosaico" loading="eager"></iframe>
                       </div>
                       <div class="phone-overlay-badge">
                         <span class="dot-pulse"></span>
@@ -296,23 +246,23 @@
 
                 <div class="opt2-card-body">
                   <div class="opt2-model-header">
-                    <h3 class="opt2-model-title">🌸 Modelo 02 · Mosaico</h3>
+                    <h3 class="opt2-model-title">🌸 Modelo 01 · Mosaico</h3>
                   </div>
-                  <p class="opt2-model-desc">Mosaico com filtros visuais e destaque&nbsp;ao&nbsp;olhar.</p>
+                  <p class="opt2-model-desc">Mosaico com filtros visuais e destaque ao olhar.</p>
                   
                   <!-- Link para Testar em Tempo Real -->
-                  <a href="/modelos/mosaico/index.html?theme=rose" target="_blank" rel="noopener" class="opt2-test-link">
+                  <a href="/modelos/mosaico/index.html" target="_blank" rel="noopener" class="opt2-test-link">
                     <span class="opt2-test-text">Testar em tela cheia</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
                   </a>
 
                   <button type="button" class="btn-select-model-card">
-                    <span class="btn-select-text">Escolher Mosaico</span>
+                    <span class="btn-select-text">✓ Modelo Selecionado</span>
                   </button>
                 </div>
               </article>
 
-              <!-- Card 3: Modelo Clássico -->
+              <!-- Card 2: Modelo Clássico -->
               <article class="opt2-card" data-model="classico">
                 <div class="opt2-card-media">
                   
@@ -320,13 +270,13 @@
                   <div class="opt2-color-selector opt2-color-selector--top">
                     <span class="opt2-color-title">Coleção:</span>
                     <div class="opt2-color-pills">
-                      <button type="button" class="opt2-pill is-active" data-color="midnight" data-label="Clássico Midnight" data-url="/modelos/classico/index.html?theme=luxury">
-                        <span class="color-dot color-dot--midnight"></span>
-                        <span>Midnight</span>
-                      </button>
-                      <button type="button" class="opt2-pill" data-color="rose" data-label="Clássico Rosé" data-url="/modelos/classico/index.html?theme=rose">
+                      <button type="button" class="opt2-pill is-active" data-color="rose" data-label="Clássico Rosé" data-url="/modelos/classico/index.html?theme=rose">
                         <span class="color-dot color-dot--rose"></span>
                         <span>Rosé</span>
+                      </button>
+                      <button type="button" class="opt2-pill" data-color="midnight" data-label="Clássico Luxury" data-url="/modelos/classico/index.html?theme=luxury">
+                        <span class="color-dot color-dot--midnight"></span>
+                        <span>Luxury</span>
                       </button>
                     </div>
                   </div>
@@ -335,11 +285,11 @@
                     <div class="phone-notch"></div>
                     <div class="phone-screen">
                       <div class="phone-screen-scaler">
-                        <iframe class="opt2-iframe" src="/modelos/classico/index.html?theme=luxury&preview=catalog" data-src-midnight="/modelos/classico/index.html?theme=luxury&preview=catalog" data-src-rose="/modelos/classico/index.html?theme=rose&preview=catalog" title="Prévia Modelo Clássico" loading="lazy"></iframe>
+                        <iframe class="opt2-iframe" src="/modelos/classico/index.html?theme=rose&preview=catalog" data-src-midnight="/modelos/classico/index.html?theme=luxury&preview=catalog" data-src-rose="/modelos/classico/index.html?theme=rose&preview=catalog" title="Prévia Modelo Clássico" loading="lazy"></iframe>
                       </div>
                       <div class="phone-overlay-badge">
                         <span class="dot-pulse"></span>
-                        <span class="opt2-phone-badge">Clássico Midnight</span>
+                        <span class="opt2-phone-badge">Clássico Rosé</span>
                       </div>
                     </div>
                   </div>
@@ -347,12 +297,12 @@
 
                 <div class="opt2-card-body">
                   <div class="opt2-model-header">
-                    <h3 class="opt2-model-title">👑 Modelo 03 · Clássico</h3>
+                    <h3 class="opt2-model-title">👑 Modelo 02 · Clássico</h3>
                   </div>
-                  <p class="opt2-model-desc">Cardápio editorial categorizado para leitura&nbsp;rápida.</p>
+                  <p class="opt2-model-desc">Cardápio editorial categorizado para leitura rápida.</p>
                   
                   <!-- Link para Testar em Tempo Real -->
-                  <a href="/modelos/classico/index.html?theme=luxury" target="_blank" rel="noopener" class="opt2-test-link">
+                  <a href="/modelos/classico/index.html" target="_blank" rel="noopener" class="opt2-test-link">
                     <span class="opt2-test-text">Testar em tela cheia</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
                   </a>
@@ -366,8 +316,8 @@
             </div>
 
             <!-- Inputs ocultos sincronizados com a escolha -->
-            <input type="hidden" name="selected_model" id="input-selected-model" value="glamour">
-            <input type="hidden" name="selected_color" id="input-selected-color" value="midnight">
+            <input type="hidden" name="selected_model" id="input-selected-model" value="mosaico">
+            <input type="hidden" name="selected_color" id="input-selected-color" value="rose">
 
             <div class="step-footer">
               <button type="button" class="btn btn--outline btn-prev-step" data-prev="1">
@@ -503,8 +453,8 @@
               <h4 class="summary-box-title">Resumo do seu Pedido:</h4>
               <div class="summary-tags" id="summary-tags">
                 <span class="sum-tag" id="sum-name">Mariana Alves</span>
-                <span class="sum-tag" id="sum-model">Modelo Glamour</span>
-                <span class="sum-tag" id="sum-color">Coleção Midnight</span>
+                <span class="sum-tag" id="sum-model">Modelo Mosaico</span>
+                <span class="sum-tag" id="sum-color">Coleção Rosé</span>
                 <span class="sum-tag" id="sum-services">10 Procedimentos</span>
               </div>
             </div>
@@ -643,7 +593,7 @@
           <div class="cover-preview-phone" id="cover-preview-phone">
             <button type="button" class="cover-preview-close" id="cover-preview-close" aria-label="Fechar prévia da capa">✕</button>
             <div class="cover-preview-media-wrap">
-              <img id="cover-modal-img" src="/modelos/glamour-midnight/assets/img/hero-video-poster.jpg" alt="Foto de capa" class="cover-preview-media">
+              <img id="cover-modal-img" src="/modelos/mosaico/assets/img/Hero.png" alt="Foto de capa" class="cover-preview-media">
               <video id="cover-modal-video" src="" autoplay muted loop playsinline class="cover-preview-media is-hidden"></video>
               <div class="cover-preview-scrim"></div>
             </div>

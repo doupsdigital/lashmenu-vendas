@@ -232,8 +232,8 @@ function validateStep(step) {
 }
 
 /* ── 2. Seleção dos 3 Cards de Modelos & Cores (Opção 2) ─────────────────── */
-let selectedModelId = 'glamour';
-let selectedColorId = 'midnight';
+let selectedModelId = 'mosaico';
+let selectedColorId = 'rose';
 
 function initModelCardsSelection() {
   const cards = document.querySelectorAll('.opt2-card');
@@ -339,7 +339,7 @@ const defaultServices = [
     cat: 'Extensão em Y',
     desc: 'Fios tecnológicos com formato Y que preenchem as falhas naturais com leveza incomparável, alta durabilidade e acabamento marcante.',
     effect: 'Preenchimento, Textura & Leveza',
-    photo: '/modelos/glamour-midnight/assets/img/volume-brasileiro.png'
+    photo: '/modelos/mosaico/assets/img/volume-brasileiro.png'
   },
   {
     name: 'Clássico Fio a Fio',
@@ -349,7 +349,7 @@ const defaultServices = [
     cat: 'Fio a Fio Clássico',
     desc: 'Um fio sintético ultrafino acoplado a cada cílio natural saudável. O resultado mais elegante e discreto: olhar iluminado com efeito de rímel perfeito.',
     effect: 'Natural, Discreto & Elegante',
-    photo: '/modelos/glamour-midnight/assets/img/classico-fio-a-fio.png'
+    photo: '/modelos/mosaico/assets/img/classico-fio-a-fio.png'
   },
   {
     name: 'Volume Egípcio',
@@ -359,7 +359,7 @@ const defaultServices = [
     cat: 'Extensão em W',
     desc: 'Fios especiais em formato W (3D tecnológico) que proporcionam densidade homogênea, efeito aveludado e volume equilibrado sem pesar nos olhos.',
     effect: 'Densidade Aveludada & Uniforme',
-    photo: '/modelos/glamour-midnight/assets/img/volume-egipcio.png'
+    photo: '/modelos/mosaico/assets/img/volume-egipcio.png'
   },
   {
     name: 'Volume Híbrido',
@@ -369,7 +369,7 @@ const defaultServices = [
     cat: 'Clássico + Volume',
     desc: 'A combinação artesanal entre a delicadeza do fio a fio clássico e leques de volume, criando textura multidimensional, profundidade e brilho no olhar.',
     effect: 'Textura Desconstruída & Volume Sob Medida',
-    photo: '/modelos/glamour-midnight/assets/img/volume-hibrido.png'
+    photo: '/modelos/mosaico/assets/img/volume-hibrido.png'
   },
   {
     name: 'Volume Russo',
@@ -379,7 +379,7 @@ const defaultServices = [
     cat: 'Fans Artesanais 3D–6D',
     desc: 'Técnica de alta precisão com fans ultrafinos (3 a 6 fios de seda) montados à mão na hora. Cria um volume expressivo, extremamente macio, denso e sofisticado.',
     effect: 'Glamour, Densidade & Toque de Pluma',
-    photo: '/modelos/glamour-midnight/assets/img/volume-russo.png'
+    photo: '/modelos/mosaico/assets/img/volume-russo.png'
   },
   {
     name: 'Mega Volume',
@@ -389,7 +389,7 @@ const defaultServices = [
     cat: 'Densidade Máxima 8D–12D',
     desc: 'O ápice da densidade e do impacto visual: leques artesanais com fios ultrafinos de 0.03mm. Proporciona um olhar super pretinho, aveludado e hipnotizante.',
     effect: 'Impacto Máximo, Densidade Total & Preto Profundo',
-    photo: '/modelos/glamour-midnight/assets/img/mega-volume.png'
+    photo: '/modelos/mosaico/assets/img/mega-volume.png'
   },
   {
     name: 'Fox Eyes',
@@ -399,7 +399,7 @@ const defaultServices = [
     cat: 'Mapping Estilizado',
     desc: 'Alongamento estratégico com curvaturas graduais no canto externo. Cria um efeito delineado sofisticado que eleva o olhar sem necessidade de maquiagem.',
     effect: 'Olhar Delineado, Marcante & Elevação',
-    photo: '/modelos/glamour-midnight/assets/img/fox-eyes.png'
+    photo: '/modelos/mosaico/assets/img/fox-eyes.png'
   },
   {
     name: 'Lash Lifting',
@@ -409,7 +409,7 @@ const defaultServices = [
     cat: 'Tratamento Natural',
     desc: 'Curvatura e hidratação profunda dos próprios cílios naturais com tintura e queratina botox. Sem fios artificiais, durabilidade de até 6 a 8 semanas.',
     effect: 'Cílios Curvados, Pretos e Nutridos',
-    photo: '/modelos/glamour-midnight/assets/img/lash-lifting.png'
+    photo: '/modelos/mosaico/assets/img/lash-lifting.png'
   },
   {
     name: 'Mapping Boneca / Gatinho',
@@ -419,7 +419,7 @@ const defaultServices = [
     cat: 'Personalização de Olhar',
     desc: 'Consultoria de visagismo personalizada para definir o desenho ideal dos fios de acordo com o formato e proporção única dos olhos da cliente.',
     effect: 'Harmonização do Olhar',
-    photo: '/modelos/glamour-midnight/assets/img/mapping-boneca.png'
+    photo: '/modelos/mosaico/assets/img/mapping-boneca.png'
   },
   {
     name: 'Remoção dos Fios',
@@ -429,7 +429,7 @@ const defaultServices = [
     cat: 'Remoção Segura',
     desc: 'Remoção com produto profissional dermatologicamente testado em creme/gel, preservando 100% da integridade e saúde dos cílios naturais.',
     effect: 'Desacoplamento Suave Sem Danos',
-    photo: '/modelos/glamour-midnight/assets/img/remocao.png'
+    photo: '/modelos/mosaico/assets/img/remocao.png'
   }
 ];
 
@@ -460,7 +460,7 @@ function initServicesBuilder() {
       cat: 'Procedimento Personalizado',
       desc: '',
       effect: '',
-      photo: '/modelos/glamour-midnight/assets/img/volume-brasileiro.png'
+      photo: '/modelos/mosaico/assets/img/volume-brasileiro.png'
     });
   });
 }
@@ -469,7 +469,7 @@ function renderServiceRow(container, data) {
   const row = document.createElement('div');
   row.className = 'service-row-card';
 
-  const defaultPhoto = data.photo || '/modelos/glamour-midnight/assets/img/volume-brasileiro.png';
+  const defaultPhoto = data.photo || '/modelos/mosaico/assets/img/volume-brasileiro.png';
 
   row.innerHTML = `
     <!-- Topo: Nome do Procedimento + Botão Lixeira -->
@@ -874,8 +874,8 @@ function initCoverPreviewModal() {
         }
         if (modalImg) {
           modalImg.src = currentColor === 'rose'
-            ? '/modelos/mosaico/assets/img/hero.jpg'
-            : '/modelos/glamour-midnight/assets/img/hero-video-poster.jpg';
+            ? '/modelos/mosaico/assets/img/Hero.png'
+            : '/modelos/mosaico/assets/img/Hero.png';
           modalImg.classList.remove('is-hidden');
         }
       }

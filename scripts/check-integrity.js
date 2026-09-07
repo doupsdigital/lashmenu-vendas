@@ -144,7 +144,7 @@ htmlFiles.forEach(file => {
 
 // 5. Verificar integridade das animações nos modelos de catálogo
 console.log('\n--- [4/4] Verificando integridade dos modelos de catálogo ---');
-const catalogModels = ['mosaico', 'classico', 'glamour-rose', 'glamour-midnight'];
+const catalogModels = ['mosaico', 'classico'];
 catalogModels.forEach(model => {
   const cssPath = path.join(ROOT, 'modelos', model, 'css', 'style.css');
   if (fs.existsSync(cssPath)) {

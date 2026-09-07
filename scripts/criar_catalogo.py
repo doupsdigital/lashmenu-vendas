@@ -45,7 +45,7 @@ CANONICAL_SERVICES = {
         "maintenance": "90,00 (até 20 dias)",
         "description": "Fios tecnológicos em formato Y que proporcionam volume delicado com acabamento uniforme, alta retenção e extrema leveza para o dia a dia.",
         "effect": "Preenchimento, Textura & Leveza",
-        "photo_url": "/modelos/glamour-midnight/assets/img/volume-brasileiro.png"
+        "photo_url": "/modelos/mosaico/assets/img/volume-brasileiro.png"
     },
     "classico_fio_a_fio": {
         "keywords": ["classico", "fio a fio", "clássico", "fio-a-fio", "natural", "efeito rímel", "efeito rimel"],
@@ -55,7 +55,7 @@ CANONICAL_SERVICES = {
         "maintenance": "70,00 (até 18 dias)",
         "description": "Um fio sintético ultrafino acoplado a cada cílio natural saudável. O resultado mais elegante e discreto: olhar iluminado com efeito de rímel perfeito.",
         "effect": "Natural, Discreto & Elegante",
-        "photo_url": "/modelos/glamour-midnight/assets/img/classico-fio-a-fio.png"
+        "photo_url": "/modelos/mosaico/assets/img/classico-fio-a-fio.png"
     },
     "volume_egipcio": {
         "keywords": ["egipcio", "egípcio", "volume egipcio", "volume egípcio", "fio w", "fios em w", "3d w"],
@@ -65,7 +65,7 @@ CANONICAL_SERVICES = {
         "maintenance": "95,00 (até 20 dias)",
         "description": "Fios especiais em formato W (3D tecnológico) que proporcionam densidade homogênea, efeito aveludado e volume equilibrado sem pesar nos olhos.",
         "effect": "Densidade Aveludada & Uniforme",
-        "photo_url": "/modelos/glamour-midnight/assets/img/volume-egipcio.png"
+        "photo_url": "/modelos/mosaico/assets/img/volume-egipcio.png"
     },
     "volume_hibrido": {
         "keywords": ["hibrido", "híbrido", "volume hibrido", "volume híbrido", "mix", "fio a fio com volume"],
@@ -75,7 +75,7 @@ CANONICAL_SERVICES = {
         "maintenance": "95,00 (até 20 dias)",
         "description": "A combinação artesanal entre a delicadeza do fio a fio clássico e leques de volume, criando textura multidimensional, profundidade e brilho no olhar.",
         "effect": "Textura Desconstruída & Volume Sob Medida",
-        "photo_url": "/modelos/glamour-midnight/assets/img/volume-hibrido.png"
+        "photo_url": "/modelos/mosaico/assets/img/volume-hibrido.png"
     },
     "volume_russo": {
         "keywords": ["russo", "volume russo", "fans", "fan", "leques artesanais", "3d a 6d", "3d-6d"],
@@ -85,7 +85,7 @@ CANONICAL_SERVICES = {
         "maintenance": "110,00 (até 20 dias)",
         "description": "Técnica de alta precisão com fans ultrafinos (3 a 6 fios de seda) montados à mão na hora. Cria um volume expressivo, extremamente macio, denso e sofisticado.",
         "effect": "Glamour, Densidade & Toque de Pluma",
-        "photo_url": "/modelos/glamour-midnight/assets/img/volume-russo.png"
+        "photo_url": "/modelos/mosaico/assets/img/volume-russo.png"
     },
     "mega_volume": {
         "keywords": ["mega", "mega volume", "megavolume", "8d", "10d", "12d", "0.03"],
@@ -95,7 +95,7 @@ CANONICAL_SERVICES = {
         "maintenance": "140,00 (até 18 dias)",
         "description": "O ápice da densidade e do impacto visual: leques artesanais com fios ultrafinos de 0.03mm. Proporciona um olhar super pretinho, aveludado e hipnotizante.",
         "effect": "Impacto Máximo, Densidade Total & Preto Profundo",
-        "photo_url": "/modelos/glamour-midnight/assets/img/mega-volume.png"
+        "photo_url": "/modelos/mosaico/assets/img/mega-volume.png"
     },
     "fox_eyes": {
         "keywords": ["fox", "fox eyes", "foxy", "foxy eyes", "efeito raposa", "delineado", "canto externo"],
@@ -105,7 +105,7 @@ CANONICAL_SERVICES = {
         "maintenance": "100,00 (até 20 dias)",
         "description": "Alongamento estratégico com curvaturas graduais no canto externo. Cria um efeito delineado sofisticado que eleva o olhar sem necessidade de maquiagem.",
         "effect": "Olhar Delineado, Marcante & Elevação",
-        "photo_url": "/modelos/glamour-midnight/assets/img/fox-eyes.png"
+        "photo_url": "/modelos/mosaico/assets/img/fox-eyes.png"
     },
     "lash_lifting": {
         "keywords": ["lifting", "lash lifting", "lash lift", "curvatura natural", "botox de cilios", "botox"],
@@ -115,7 +115,7 @@ CANONICAL_SERVICES = {
         "maintenance": "Incluso",
         "description": "Curvatura e hidratação profunda dos próprios cílios naturais com tintura e queratina botox. Sem fios artificiais, durabilidade de até 6 a 8 semanas.",
         "effect": "Cílios Curvados, Pretos e Nutridos",
-        "photo_url": "/modelos/glamour-midnight/assets/img/lash-lifting.png"
+        "photo_url": "/modelos/mosaico/assets/img/lash-lifting.png"
     },
     "mapping_boneca": {
         "keywords": ["mapping", "boneca", "gatinho", "esquilo", "visagismo"],
@@ -125,7 +125,7 @@ CANONICAL_SERVICES = {
         "maintenance": "-",
         "description": "Consultoria de visagismo personalizada para definir o desenho ideal dos fios de acordo com o formato e proporção única dos olhos da cliente.",
         "effect": "Harmonização do Olhar",
-        "photo_url": "/modelos/glamour-midnight/assets/img/mapping-boneca.png"
+        "photo_url": "/modelos/mosaico/assets/img/mapping-boneca.png"
     },
     "remocao": {
         "keywords": ["remocao", "remoção", "retirada", "remover cilios", "remover fios"],
@@ -135,7 +135,7 @@ CANONICAL_SERVICES = {
         "maintenance": "-",
         "description": "Remoção com produto profissional dermatologicamente testado em creme/gel, preservando 100% da integridade e saúde dos cílios naturais.",
         "effect": "Desacoplamento Suave Sem Danos",
-        "photo_url": "/modelos/glamour-midnight/assets/img/remocao.png"
+        "photo_url": "/modelos/mosaico/assets/img/remocao.png"
     },
     "design_sobrancelha": {
         "keywords": ["design de sobrancelha", "design sobrancelha", "sobrancelha", "design simples", "sobrancelhas"],
@@ -145,7 +145,7 @@ CANONICAL_SERVICES = {
         "maintenance": "15 a 20 dias",
         "description": "Mapeamento facial e visagismo personalizado para valorizar os traços únicos do seu rosto. Remoção precisa dos pelos para um desenho limpo, harmônico e natural.",
         "effect": "Alinhamento, Simetria & Expressividade Natural",
-        "photo_url": "/modelos/glamour-midnight/assets/img/volume-brasileiro.png"
+        "photo_url": "/modelos/mosaico/assets/img/volume-brasileiro.png"
     },
     "design_sobrancelha_henna": {
         "keywords": ["henna", "sobrancelha com henna", "design com henna", "sobrancelhas com henna", "design de sobrancelha com henna"],
@@ -155,11 +155,11 @@ CANONICAL_SERVICES = {
         "maintenance": "7 a 15 dias",
         "description": "Design visagista completo combinado com aplicação de henna de alta fixação para preencher falhas, realçar o contorno e destacar o olhar com acabamento impecável.",
         "effect": "Preenchimento de Falhas & Olhar Marcante",
-        "photo_url": "/modelos/glamour-midnight/assets/img/volume-brasileiro.png"
+        "photo_url": "/modelos/mosaico/assets/img/volume-brasileiro.png"
     }
 }
 
-DEFAULT_PLACEHOLDER_PHOTO = "/modelos/glamour-midnight/assets/img/volume-brasileiro.png"
+DEFAULT_PLACEHOLDER_PHOTO = "/modelos/mosaico/assets/img/volume-brasileiro.png"
 
 
 def api_request(url, method="GET", data=None, headers=None):

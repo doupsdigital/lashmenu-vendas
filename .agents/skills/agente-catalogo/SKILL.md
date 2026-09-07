@@ -29,8 +29,8 @@ Ao receber um print, imagem ou texto com a lista de procedimentos:
    - Instagram (se mencionado)
    - Cidade / Bairro (se mencionado)
 2. **Identifique o Modelo e Cor Solicitados:**
-   - Modelos: `glamour`, `harmonia`, `classico`, `mosaico` (Padrão: `harmonia` ou `glamour`)
-   - Paletas: `rose`, `midnight` (Padrão: `rose` ou `midnight`)
+   - Modelos: `mosaico`, `classico` (Padrão: `mosaico`)
+   - Temas: `rose`, `luxury` (Padrão: `rose`)
 3. **Extraia a Lista de Procedimentos:**
    - Nome do procedimento
    - Preço de aplicação (ex: `130,00` ou `R$ 130`)
@@ -44,20 +44,20 @@ Conecte o serviço enviado ao procedimento oficial do LashMenu para aproveitar a
 
 | Termo enviado no Print / Texto | Procedimento Oficial Associado | Foto Oficial Vinculada |
 | :--- | :--- | :--- |
-| "Brasileiro", "Vol. Brasileiro", "Fios em Y" | **Volume Brasileiro** | `/modelos/glamour-midnight/assets/img/volume-brasileiro.png` |
-| "Fio a Fio", "Clássico", "Efeito Rímel" | **Clássico Fio a Fio** | `/modelos/glamour-midnight/assets/img/classico-fio-a-fio.png` |
-| "Egípcio", "Fios W", "Volume 3D W" | **Volume Egípcio** | `/modelos/glamour-midnight/assets/img/volume-egipcio.png` |
-| "Híbrido", "Misturado", "Mix" | **Volume Híbrido** | `/modelos/glamour-midnight/assets/img/volume-hibrido.png` |
-| "Russo", "Volume Russo", "Fans" | **Volume Russo** | `/modelos/glamour-midnight/assets/img/volume-russo.png` |
-| "Mega", "Mega Volume" | **Mega Volume** | `/modelos/glamour-midnight/assets/img/mega-volume.png` |
-| "Fox", "Foxy", "Fox Eyes", "Efeito Raposa" | **Fox Eyes** | `/modelos/glamour-midnight/assets/img/fox-eyes.png` |
-| "Lifting", "Lash Lift", "Curvatura" | **Lash Lifting** | `/modelos/glamour-midnight/assets/img/lash-lifting.png` |
-| "Boneca", "Gatinho", "Mapping" | **Mapping Personalizado** | `/modelos/glamour-midnight/assets/img/mapping-boneca.png` |
-| "Remoção", "Retirada" | **Remoção Segura** | `/modelos/glamour-midnight/assets/img/remocao.png` |
+| "Brasileiro", "Vol. Brasileiro", "Fios em Y" | **Volume Brasileiro** | `/modelos/mosaico/assets/img/volume-brasileiro.png` |
+| "Fio a Fio", "Clássico", "Efeito Rímel" | **Clássico Fio a Fio** | `/modelos/mosaico/assets/img/classico-fio-a-fio.png` |
+| "Egípcio", "Fios W", "Volume 3D W" | **Volume Egípcio** | `/modelos/mosaico/assets/img/volume-egipcio.png` |
+| "Híbrido", "Misturado", "Mix" | **Volume Híbrido** | `/modelos/mosaico/assets/img/volume-hibrido.png` |
+| "Russo", "Volume Russo", "Fans" | **Volume Russo** | `/modelos/mosaico/assets/img/volume-russo.png` |
+| "Mega", "Mega Volume" | **Mega Volume** | `/modelos/mosaico/assets/img/mega-volume.png` |
+| "Fox", "Foxy", "Fox Eyes", "Efeito Raposa" | **Fox Eyes** | `/modelos/mosaico/assets/img/fox-eyes.png` |
+| "Lifting", "Lash Lift", "Curvatura" | **Lash Lifting** | `/modelos/mosaico/assets/img/lash-lifting.png` |
+| "Boneca", "Gatinho", "Mapping" | **Mapping Personalizado** | `/modelos/mosaico/assets/img/mapping-boneca.png` |
+| "Remoção", "Retirada" | **Remoção Segura** | `/modelos/mosaico/assets/img/remocao.png` |
 
 > [!IMPORTANT]
 > **Serviço Novo / Desconhecido:**
-> Se a cliente enviar um serviço que não existe na biblioteca padrão (ex: *"Hydra Gloss"*, *"Design com Henna"*, *"Spa Labial"*), mantenha o nome exato enviado por ela e aplique a imagem placeholder amigável `/modelos/glamour-midnight/assets/img/volume-brasileiro.png`, marcando `is_custom_photo: true`.
+> Se a cliente enviar um serviço que não existe na biblioteca padrão (ex: *"Hydra Gloss"*, *"Design com Henna"*, *"Spa Labial"*), mantenha o nome exato enviado por ela e aplique a imagem placeholder amigável `/modelos/mosaico/assets/img/volume-brasileiro.png`, marcando `is_custom_photo: true`.
 
 ---
 

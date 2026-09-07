@@ -432,7 +432,7 @@ function initTestDriveModal() {
 
   if (!modal || !iframe) return;
 
-  const DEMO_URL = '../../modelos/glamour-midnight/index.html?interactive=1&v=2026';
+  const DEMO_URL = '../../modelos/mosaico/index.html?interactive=1&v=2026';
 
   function updateIframeScale() {
     const phone = modal.querySelector('.testdrive-phone');
@@ -454,7 +454,7 @@ function initTestDriveModal() {
   }
 
   function openModal() {
-    if (iframe.src === 'about:blank' || !iframe.src.includes('glamour-midnight')) {
+    if (iframe.src === 'about:blank' || !iframe.src.includes('mosaico')) {
       iframe.src = DEMO_URL;
     }
     modal.classList.add('is-active');

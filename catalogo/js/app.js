@@ -40,9 +40,7 @@
 
   // Redireciona modelos estáticos oficiais diretamente para /modelos/:slug/index.html
   const staticModels = [
-    'harmonia-rose', 'harmonia-midnight',
-    'classico-rose', 'classico-midnight',
-    'glamour-rose', 'glamour-midnight'
+    'mosaico', 'classico'
   ];
 
   if (staticModels.includes(slug)) {
@@ -85,9 +83,9 @@
     const services = servicesRes.ok ? await servicesRes.json() : [];
 
     // 3. Aplica o Tema Escolhido (Modelo + Paleta)
-    const model = order.model_id || 'glamour';
-    const color = order.color_id || 'midnight';
-    const themePath = `../${model}-${color}/css/style.css?v=2026`;
+    const model = order.model_id || 'mosaico';
+    const color = order.color_id || 'rose';
+    const themePath = (model === 'mosaico' || model === 'classico') ? `../${model}/css/style.css?v=2026` : `../${model}-${color}/css/style.css?v=2026`;
     if (themeStylesheet) {
       themeStylesheet.href = themePath;
     }
@@ -119,19 +117,19 @@
     const isVideo = order.cover_media_type === 'video' && order.cover_media_url;
     const coverMediaHtml = isVideo
       ? `<video class="hero__foto hero__video" src="${order.cover_media_url}" autoplay muted loop playsinline preload="auto"></video>`
-      : `<img src="${order.cover_media_url || `../${model}-${color}/assets/img/Hero.png`}" alt="${designerName}" class="hero__foto" onerror="this.src='../glamour-midnight/assets/img/hero.jpg'">`;
+      : `<img src="${order.cover_media_url || `../${model}/assets/img/Hero.png`}" alt="${designerName}" class="hero__foto" onerror="this.src='../mosaico/assets/img/Hero.png'">`;
 
     // Renderiza os Cards de Procedimentos
     const servicesCardsHtml = services.map((svc, idx) => {
       const priceText = svc.price ? `R$ ${svc.price}` : 'Sob Consulta';
       const durationText = svc.duration ? `${svc.duration}` : '1h30';
       const categoryText = svc.category || 'fios selecionados';
-      const photoUrl = svc.photo_url || `../glamour-midnight/assets/img/hero.jpg`;
+      const photoUrl = svc.photo_url || `../mosaico/assets/img/Hero.png`;
 
       return `
         <article class="card-procedimento" data-idx="${idx}" tabindex="0" role="button" aria-label="Ver detalhes de ${svc.name}">
           <div class="card-procedimento__foto-box">
-            <img src="${photoUrl}" alt="${svc.name}" class="card-procedimento__foto" loading="lazy" onerror="this.src='../glamour-midnight/assets/img/hero.jpg'">
+            <img src="${photoUrl}" alt="${svc.name}" class="card-procedimento__foto" loading="lazy" onerror="this.src='../mosaico/assets/img/Hero.png'">
             <h3 class="card-procedimento__nome">${svc.name}</h3>
           </div>
           <div class="card-procedimento__info">
@@ -172,7 +170,7 @@
         <!-- SEÇÃO 2: PROCEDIMENTOS -->
         <section class="procedimentos" id="screen-procedimentos" data-screen-label="Procedimentos">
           <div class="procedimentos__foto-wrap">
-            <img src="${order.cover_media_url || `../${model}-${color}/assets/img/Hero.png`}" alt="${designerName}" class="procedimentos__foto" onerror="this.src='../glamour-midnight/assets/img/hero.jpg'">
+            <img src="${order.cover_media_url || `../${model}/assets/img/Hero.png`}" alt="${designerName}" class="procedimentos__foto" onerror="this.src='../mosaico/assets/img/Hero.png'">
           </div>
           <div class="procedimentos__scrim"></div>
           <div class="procedimentos__conteudo">
@@ -194,7 +192,7 @@
         <!-- SEÇÃO 3: ORIENTAÇÕES / ANTES DE VIR -->
         <section class="agendamento" id="screen-orientacoes" data-screen-label="Orientações">
           <div class="agendamento__foto-wrap">
-            <img src="${order.cover_media_url || `../${model}-${color}/assets/img/Hero.png`}" alt="Orientações" class="agendamento__foto" onerror="this.src='../glamour-midnight/assets/img/hero.jpg'">
+            <img src="${order.cover_media_url || `../${model}/assets/img/Hero.png`}" alt="Orientações" class="agendamento__foto" onerror="this.src='../mosaico/assets/img/Hero.png'">
           </div>
           <div class="agendamento__scrim"></div>
           <div class="agendamento__conteudo">
@@ -242,7 +240,7 @@
         <!-- SEÇÃO 4: CONTATO & AGENDAMENTO -->
         <section class="contato" id="screen-contato" data-screen-label="Contato">
           <div class="contato__foto-wrap">
-            <img src="${order.cover_media_url || `../${model}-${color}/assets/img/Hero.png`}" alt="Contato" class="contato__foto" onerror="this.src='../glamour-midnight/assets/img/hero.jpg'">
+            <img src="${order.cover_media_url || `../${model}/assets/img/Hero.png`}" alt="Contato" class="contato__foto" onerror="this.src='../mosaico/assets/img/Hero.png'">
           </div>
           <div class="contato__scrim"></div>
           <div class="contato__conteudo">
@@ -306,7 +304,7 @@
         const svc = services[idx];
         if (!svc || !modalSheet) return;
 
-        const photoUrl = svc.photo_url || '../glamour-midnight/assets/img/hero.jpg';
+        const photoUrl = svc.photo_url || '../mosaico/assets/img/Hero.png';
         const price = svc.price ? `R$ ${svc.price}` : 'Consulte';
         const duration = svc.duration || '1h30';
         const maintenance = svc.maintenance ? `R$ ${svc.maintenance}` : 'Sob consulta';

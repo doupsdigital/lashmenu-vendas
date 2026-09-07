@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       clientEmail = 'Não informado',
       whatsapp = 'Não informado',
       instagram = 'Não informado',
-      selectedModel = 'GLAMOUR',
+      selectedModel = 'MOSAICO',
       selectedColor = 'ROSE',
       slug = 'catalogo',
       orderId = null
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
       ? `https://lashmenu.com/admin/editor.html?id=${orderId}`
       : `https://lashmenu.com/admin/`;
 
-    const safeModel = (selectedModel || 'glamour').toString().toUpperCase();
+    const safeModel = (selectedModel || 'mosaico').toString().toUpperCase();
     const safeColor = (selectedColor || 'rose').toString().toUpperCase();
     const cleanInsta = instagram ? instagram.toString().replace(/^@/, '').trim() : 'Não informado';
 

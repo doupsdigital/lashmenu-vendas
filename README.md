@@ -14,13 +14,9 @@
 │   ├── 📁 marketing/          # Planos comerciais, automação de anúncios e funis
 │   └── 📁 estrategia/         # Visão geral de produto e carreira
 │
-├── 📁 modelos/                # Modelos Oficiais de Catálogo (Classico, Harmonia, Glamour)
-│   ├── 📁 classico-rose/
-│   ├── 📁 classico-midnight/
-│   ├── 📁 harmonia-rose/
-│   ├── 📁 harmonia-midnight/
-│   ├── 📁 glamour-rose/
-│   └── 📁 glamour-midnight/
+├── 📁 modelos/                # Modelos Oficiais de Catálogo (Mosaico e Clássico com Suporte Dual Rosé/Luxury)
+│   ├── 📁 mosaico/            # Modelo Mosaico (Dual Theme Rosé 🌸 / Luxury 👑)
+│   └── 📁 classico/           # Modelo Clássico (Dual Theme Rosé 🌸 / Luxury 👑)
 │
 ├── 📁 catalogo/               # Motor de roteamento por subdomínio e catalog-injector.js
 ├── 📁 clientes/               # Catálogos estáticos / Ejeção VIP Concierge
