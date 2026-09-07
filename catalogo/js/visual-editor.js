@@ -133,7 +133,7 @@
 
     renderModals() {
       const saveModalHtml = `
-        <div class="lm-modal-overlay" id="lm-modal-save">
+        <div class="lm-modal-overlay" id="lm-modal-save" style="display: none !important;">
           <div class="lm-modal-card">
             <h3 class="lm-modal-title">✨ Publicar Alterações</h3>
             <p class="lm-modal-desc">Deseja aplicar as mudanças no seu catálogo publicado?</p>
@@ -148,7 +148,7 @@
         </div>
 
         <!-- Modal Formulário Completo de Serviço -->
-        <div class="lm-modal-overlay" id="lm-modal-service">
+        <div class="lm-modal-overlay" id="lm-modal-service" style="display: none !important;">
           <div class="lm-modal-card">
             <h3 class="lm-modal-title" id="lm-svc-modal-title">✏️ Editar Serviço</h3>
             <div class="lm-modal-body">
@@ -206,7 +206,7 @@
         </div>
 
         <!-- Modal Editar Contato (WhatsApp e Instagram - APENAS EDITAR) -->
-        <div class="lm-modal-overlay" id="lm-modal-social">
+        <div class="lm-modal-overlay" id="lm-modal-social" style="display: none !important;">
           <div class="lm-modal-card">
             <h3 class="lm-modal-title" id="lm-social-modal-title">✏️ Editar Contatos</h3>
             <div class="lm-modal-body">
@@ -231,7 +231,7 @@
         </div>
 
         <!-- Modal Sucesso (Salvar/Publicar) -->
-        <div class="lm-modal-overlay" id="lm-modal-success">
+        <div class="lm-modal-overlay" id="lm-modal-success" style="display: none !important;">
           <div class="lm-modal-card" style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 8px;">✨</div>
             <h3 class="lm-modal-title" style="font-size: 1.35rem;" id="lm-success-title">Catálogo Publicado!</h3>
@@ -244,7 +244,7 @@
         </div>
 
         <!-- Modal de Confirmação Genérica (Descartar, Excluir, etc) -->
-        <div class="lm-modal-overlay" id="lm-modal-confirm">
+        <div class="lm-modal-overlay" id="lm-modal-confirm" style="display: none !important;">
           <div class="lm-modal-card" style="text-align: center;">
             <div style="font-size: 2.8rem; margin-bottom: 8px;" id="lm-confirm-icon">⚠️</div>
             <h3 class="lm-modal-title" id="lm-confirm-title">Confirmar Ação</h3>
@@ -257,7 +257,7 @@
         </div>
 
         <!-- Modal Alerta Genérico -->
-        <div class="lm-modal-overlay" id="lm-modal-alert">
+        <div class="lm-modal-overlay" id="lm-modal-alert" style="display: none !important;">
           <div class="lm-modal-card" style="text-align: center;">
             <div style="font-size: 2.8rem; margin-bottom: 8px;" id="lm-alert-icon">⚠️</div>
             <h3 class="lm-modal-title" id="lm-alert-title">Atenção</h3>
@@ -317,7 +317,10 @@
     openModal(id) {
       const modal = document.getElementById(id);
       if (modal) {
-        modal.classList.add('is-open');
+        modal.style.display = 'flex';
+        requestAnimationFrame(() => {
+          modal.classList.add('is-open');
+        });
       }
     }
 
@@ -325,6 +328,11 @@
       const modal = document.getElementById(id);
       if (modal) {
         modal.classList.remove('is-open');
+        setTimeout(() => {
+          if (!modal.classList.contains('is-open')) {
+            modal.style.display = 'none';
+          }
+        }, 260);
       }
     }
 
@@ -644,6 +652,11 @@
 
           card.appendChild(bar);
 
+          const stopEv = (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+          };
+
           bar.addEventListener('click', (ev) => {
             ev.preventDefault();
             ev.stopPropagation();
@@ -654,10 +667,9 @@
             if (act === 'delete') this.deleteService(idx);
           });
 
-          bar.addEventListener('mousedown', (ev) => {
-            ev.preventDefault();
-            ev.stopPropagation();
-          });
+          bar.addEventListener('mousedown', stopEv);
+          bar.addEventListener('touchstart', stopEv, { passive: false });
+          bar.addEventListener('pointerdown', stopEv);
         }
       });
     }
@@ -713,7 +725,7 @@
       document.getElementById('lm-svc-modal-title').textContent = `✏️ Editar: ${svc.name}`;
 
       function cardImgSrc(idx) {
-        const card = document.querySelectorAll('.card-procedimento, .vitrine__card, .servico-item, .mosaico__card, [data-grid] > div')[idx];
+        const card = document.querySelectorAll('.card-procedimento, .vitrine__card, .servico-item, .mosaico__card, [data-grid] > div, [data-grid] > article')[idx];
         if (card) {
           const img = card.querySelector('img');
           if (img && img.src) return img.src;
@@ -723,11 +735,18 @@
 
       const imgEl = document.getElementById('lm-svc-photo-img');
       const currentImgSrc = cardImgSrc(index) || svc.photo_url || '/modelos/mosaico/assets/img/volume-brasileiro.png';
-      if (imgEl && imgEl.getAttribute('src') !== currentImgSrc) {
-        imgEl.src = currentImgSrc;
-        imgEl.onerror = () => {
-          imgEl.src = '/modelos/mosaico/assets/img/volume-brasileiro.png';
-        };
+      if (imgEl && currentImgSrc) {
+        let resolvedCurrent = currentImgSrc;
+        try {
+          resolvedCurrent = new URL(currentImgSrc, window.location.href).href;
+        } catch (e) {}
+
+        if (imgEl.src !== resolvedCurrent) {
+          imgEl.src = currentImgSrc;
+          imgEl.onerror = () => {
+            imgEl.src = '/modelos/mosaico/assets/img/volume-brasileiro.png';
+          };
+        }
       }
 
       document.getElementById('lm-svc-field-name').value = svc.name || '';

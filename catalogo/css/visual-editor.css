@@ -380,10 +380,8 @@ body[data-theme="luxury"] .lm-svc-photo-preview-wrap img {
   position: fixed !important;
   inset: 0 !important;
   background: rgba(0, 0, 0, 0.75) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
   z-index: 999999 !important;
-  display: flex !important;
+  display: none;
   align-items: flex-end !important;
   justify-content: center !important;
   padding: 0 !important;
@@ -393,13 +391,18 @@ body[data-theme="luxury"] .lm-svc-photo-preview-wrap img {
   pointer-events: none !important;
   will-change: opacity, visibility !important;
   transform: translateZ(0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
   transition: opacity 0.25s ease, visibility 0.25s ease !important;
 }
 
 .lm-modal-overlay.is-open {
+  display: flex !important;
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
 .lm-modal-card {
