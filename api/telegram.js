@@ -30,8 +30,8 @@ export default async function handler(req, res) {
     const TELEGRAM_CHAT_ID = '1874074109';
     const nowStr = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 
-    const adminEditorUrl = orderId 
-      ? `https://lashmenu.com/admin/editor.html?id=${orderId}`
+    const adminEditorUrl = slug 
+      ? `https://lashmenu.com/catalogo/?slug=${slug}&mode=edit`
       : `https://lashmenu.com/admin/`;
 
     const safeModel = (selectedModel || 'mosaico').toString().toUpperCase();

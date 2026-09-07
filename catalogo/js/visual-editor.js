@@ -25,7 +25,7 @@
 
     async init() {
       const urlParams = new URLSearchParams(window.location.search);
-      const isEditMode = urlParams.get('mode') === 'edit' || urlParams.get('edit') === 'true' || window.LM_LIVE_EDITOR_ACTIVE;
+      const isEditMode = urlParams.get('mode') === 'edit' || urlParams.get('edit') === 'true' || window.location.pathname.includes('/editar') || window.LM_LIVE_EDITOR_ACTIVE;
       if (!isEditMode) return;
 
       console.log('📱 [LashMenu Mobile Editor] Inicializando editor visual mobile...');

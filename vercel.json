@@ -48,19 +48,19 @@
     },
     {
       "source": "/editar",
-      "destination": "/admin/editor.html"
+      "destination": "/catalogo/index.html?mode=edit"
     },
     {
       "source": "/editar/:path*",
-      "destination": "/admin/editor.html"
+      "destination": "/catalogo/index.html?mode=edit"
     },
     {
       "source": "/editar_v2",
-      "destination": "/admin/editor_v2.html"
+      "destination": "/catalogo/index.html?mode=edit"
     },
     {
       "source": "/editar_v2/:path*",
-      "destination": "/admin/editor_v2.html"
+      "destination": "/catalogo/index.html?mode=edit"
     },
     {
       "source": "/c/:slug",

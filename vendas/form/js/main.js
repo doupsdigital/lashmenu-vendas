@@ -1083,8 +1083,8 @@ function initFormSubmission() {
         const TELEGRAM_CHAT_ID = '1874074109';
         const nowStr = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 
-        const adminEditorUrl = orderId 
-          ? `https://lashmenu.com/admin/editor.html?id=${orderId}`
+        const adminEditorUrl = finalSlug 
+          ? `https://lashmenu.com/catalogo/?slug=${finalSlug}&mode=edit`
           : `https://lashmenu.com/admin/`;
 
         const safeModel = (selectedModel || 'glamour').toString().toUpperCase();
