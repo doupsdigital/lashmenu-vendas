@@ -2538,7 +2538,7 @@ body[data-theme="luxury"] @keyframes wspPulse {
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index: 999999 !important;
-  display: flex !important;
+  display: none !important;
   flex-direction: column !important;
   align-items: center !important;
   width: calc(100% - 24px) !important;
@@ -2551,6 +2551,12 @@ body[data-theme="luxury"] @keyframes wspPulse {
   padding: 8px 10px 10px !important;
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+body.has-theme-switcher .theme-switcher-widget,
+html.has-theme-switcher .theme-switcher-widget,
+body.is-editor .theme-switcher-widget {
+  display: flex !important;
 }
 
 body[data-theme="luxury"] .theme-switcher-widget {
