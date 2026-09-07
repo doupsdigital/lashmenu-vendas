@@ -832,6 +832,8 @@
 
       const currentFilter = window.filtroAtivo || 'todos';
       let html = '';
+      html += `<button type="button" class="lm-btn-add-category-chip" id="lm-btn-add-cat-filter" title="Criar nova categoria">➕ Nova Categoria</button>`;
+
       const totalServices = (this.services || []).length;
       const isTodosActive = (currentFilter === 'todos') ? 'is-ativo' : '';
       html += `<button type="button" class="filtro-chip ${isTodosActive}" data-filter="todos">Todos (${totalServices})</button>`;
@@ -841,8 +843,6 @@
         const isActive = (currentFilter.trim().toLowerCase() === catName.trim().toLowerCase()) ? 'is-ativo' : '';
         html += `<button type="button" class="filtro-chip ${isActive}" data-filter="${this.escapeHtml(catName)}">${this.escapeHtml(catName)} (${count})</button>`;
       });
-
-      html += `<button type="button" class="lm-btn-add-category-chip" id="lm-btn-add-cat-filter" title="Criar nova categoria">➕ Nova Categoria</button>`;
 
       filterNav.innerHTML = html;
 
