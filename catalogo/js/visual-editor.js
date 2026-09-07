@@ -318,7 +318,7 @@
       const modal = document.getElementById(id);
       if (modal) {
         modal.style.display = 'flex';
-        requestAnimationFrame(() => modal.classList.add('is-open'));
+        modal.classList.add('is-open');
       }
     }
 
