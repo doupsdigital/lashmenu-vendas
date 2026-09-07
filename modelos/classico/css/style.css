@@ -240,16 +240,16 @@ button {
   font-size: 21px;
   font-weight: 700;
   letter-spacing: 0.38em;
-  color: #8c2545;
+  color: #E8C6A8;
   line-height: 1;
   text-transform: uppercase;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7), 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .hero__studio-divider {
   flex: 1;
   height: 1.5px;
-  background: linear-gradient(to right, rgba(140, 37, 69, 0.85), rgba(140, 37, 69, 0));
+  background: linear-gradient(to right, rgba(232, 198, 168, 0.85), rgba(232, 198, 168, 0));
 }
 
 .hero__titulo {
