@@ -904,24 +904,37 @@
     }
 
     reRenderServicesUI() {
-      const serviceCards = document.querySelectorAll('.card-procedimento, .vitrine__card, .servico-item, .mosaico__card, [data-procedimento-id], [data-grid] > div, [data-grid] > article');
+      const serviceCards = document.querySelectorAll('.card-procedimento, .vitrine__card, .servico-item, .mosaico__card, [data-grid] > div, [data-grid] > article');
       serviceCards.forEach((card, idx) => {
         if (card.id === 'lm-btn-add-svc-wrap' || card.classList.contains('lm-add-service-container')) return;
 
         const svc = this.services[idx];
         if (svc) {
-          const titleEl = card.querySelector('.procedimento__titulo, .card__title, h3, .card-procedimento__titulo');
-          const priceEl = card.querySelector('.procedimento__preco, .card__price, .price, .card-procedimento__preco');
-          const durEl = card.querySelector('.procedimento__duracao, .card__duration, .card-procedimento__duracao');
+          const titleEl = card.querySelector('.procedimento__titulo, .card__title, .tile__titulo, h3, .card-procedimento__titulo');
+          const priceEl = card.querySelector('.procedimento__preco, .card__price, .tile__preco, .price, .card-procedimento__preco');
+          const durEl = card.querySelector('.procedimento__duracao, .card__duration, .tile__duracao, .card-procedimento__duracao');
           const maintEl = card.querySelector('.procedimento__manutencao, .card__maintenance, .card-procedimento__manutencao');
+          const catEl = card.querySelector('.procedimento__cat, .tile__cat, .card__cat');
           const imgEl = card.querySelector('img');
 
+          const formattedPrice = svc.price ? (svc.price.includes('R$') ? svc.price : `R$ ${svc.price}`) : '';
+
           if (titleEl) titleEl.textContent = svc.name;
-          if (priceEl) priceEl.textContent = `R$ ${svc.price}`;
-          if (durEl) durEl.textContent = svc.duration ? `⏱️ ${svc.duration}` : '';
+          if (priceEl) priceEl.textContent = formattedPrice;
+          if (durEl) durEl.textContent = svc.duration ? (svc.duration.includes('⏱') || svc.duration.includes('⌚') ? svc.duration : `⏱️ ${svc.duration}`) : '';
           if (maintEl) maintEl.textContent = svc.maintenance || '';
+          if (catEl && svc.category) catEl.textContent = svc.category;
           if (imgEl && svc.photo_url) imgEl.src = svc.photo_url;
           card.style.display = '';
+
+          if (window.PROCEDIMENTOS && window.PROCEDIMENTOS[idx]) {
+            window.PROCEDIMENTOS[idx].title = svc.name;
+            window.PROCEDIMENTOS[idx].preco = formattedPrice;
+            window.PROCEDIMENTOS[idx].duracao = svc.duration || '';
+            if (svc.category) window.PROCEDIMENTOS[idx].cat = svc.category;
+            if (svc.photo_url) window.PROCEDIMENTOS[idx].img = svc.photo_url;
+            if (svc.description) window.PROCEDIMENTOS[idx].desc = svc.description;
+          }
         } else {
           card.style.display = 'none';
         }
