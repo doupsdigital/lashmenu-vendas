@@ -230,6 +230,43 @@
           </div>
         </div>
 
+        <!-- Modal Sucesso (Salvar/Publicar) -->
+        <div class="lm-modal-overlay" id="lm-modal-success">
+          <div class="lm-modal-card" style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 8px;">✨</div>
+            <h3 class="lm-modal-title" style="font-size: 1.35rem;" id="lm-success-title">Catálogo Publicado!</h3>
+            <p class="lm-modal-desc" style="margin-bottom: 20px;" id="lm-success-msg">Suas alterações foram salvas com sucesso e já estão ao vivo para seus clientes.</p>
+            <div class="lm-modal-actions">
+              <button class="lm-modal-btn lm-modal-btn-confirm" id="lm-modal-success-ok">💖 Perfeito!</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal de Confirmação Genérica (Descartar, Excluir, etc) -->
+        <div class="lm-modal-overlay" id="lm-modal-confirm">
+          <div class="lm-modal-card" style="text-align: center;">
+            <div style="font-size: 2.8rem; margin-bottom: 8px;" id="lm-confirm-icon">⚠️</div>
+            <h3 class="lm-modal-title" id="lm-confirm-title">Confirmar Ação</h3>
+            <p class="lm-modal-desc" id="lm-confirm-msg" style="margin-bottom: 20px;"></p>
+            <div class="lm-modal-actions">
+              <button class="lm-modal-btn lm-modal-btn-cancel" id="lm-confirm-btn-cancel">Cancelar</button>
+              <button class="lm-modal-btn lm-modal-btn-confirm" id="lm-confirm-btn-ok">Confirmar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Alerta Genérico -->
+        <div class="lm-modal-overlay" id="lm-modal-alert">
+          <div class="lm-modal-card" style="text-align: center;">
+            <div style="font-size: 2.8rem; margin-bottom: 8px;" id="lm-alert-icon">⚠️</div>
+            <h3 class="lm-modal-title" id="lm-alert-title">Atenção</h3>
+            <p class="lm-modal-desc" id="lm-alert-msg" style="margin-bottom: 20px;"></p>
+            <div class="lm-modal-actions">
+              <button class="lm-modal-btn lm-modal-btn-confirm" id="lm-modal-alert-ok">Entendido</button>
+            </div>
+          </div>
+        </div>
+
         <div class="lm-editor-toast" id="lm-editor-toast"></div>
       `;
 
@@ -241,6 +278,17 @@
       document.getElementById('lm-modal-save-confirm').addEventListener('click', () => this.publishToSupabase());
       document.getElementById('lm-modal-svc-cancel').addEventListener('click', () => this.closeModal('lm-modal-service'));
       document.getElementById('lm-modal-social-cancel').addEventListener('click', () => this.closeModal('lm-modal-social'));
+      document.getElementById('lm-modal-success-ok').addEventListener('click', () => this.closeModal('lm-modal-success'));
+      document.getElementById('lm-modal-alert-ok').addEventListener('click', () => this.closeModal('lm-modal-alert'));
+
+      // Fechar modal ao clicar no fundo escuro
+      document.querySelectorAll('.lm-modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) {
+            overlay.classList.remove('is-open');
+          }
+        });
+      });
 
       const photoInput = document.getElementById('lm-svc-photo-input');
       const triggerWrap = document.getElementById('lm-svc-photo-trigger-wrap');
@@ -273,6 +321,46 @@
     closeModal(id) {
       const modal = document.getElementById(id);
       if (modal) modal.classList.remove('is-open');
+    }
+
+    openSuccessModal(title = 'Catálogo Publicado!', msg = 'Suas alterações foram salvas com sucesso e já estão ao vivo para seus clientes.') {
+      document.getElementById('lm-success-title').textContent = title;
+      document.getElementById('lm-success-msg').textContent = msg;
+      this.openModal('lm-modal-success');
+    }
+
+    openAlertModal(title, msg, icon = '⚠️') {
+      document.getElementById('lm-alert-icon').textContent = icon;
+      document.getElementById('lm-alert-title').textContent = title;
+      document.getElementById('lm-alert-msg').textContent = msg;
+      this.openModal('lm-modal-alert');
+    }
+
+    openConfirmModal(title, msg, onConfirm, icon = '⚠️') {
+      document.getElementById('lm-confirm-icon').textContent = icon;
+      document.getElementById('lm-confirm-title').textContent = title;
+      document.getElementById('lm-confirm-msg').textContent = msg;
+
+      const confirmBtn = document.getElementById('lm-confirm-btn-ok');
+      const cancelBtn = document.getElementById('lm-confirm-btn-cancel');
+
+      const handleConfirm = () => {
+        confirmBtn.removeEventListener('click', handleConfirm);
+        cancelBtn.removeEventListener('click', handleCancel);
+        this.closeModal('lm-modal-confirm');
+        if (typeof onConfirm === 'function') onConfirm();
+      };
+
+      const handleCancel = () => {
+        confirmBtn.removeEventListener('click', handleConfirm);
+        cancelBtn.removeEventListener('click', handleCancel);
+        this.closeModal('lm-modal-confirm');
+      };
+
+      confirmBtn.onclick = handleConfirm;
+      cancelBtn.onclick = handleCancel;
+
+      this.openModal('lm-modal-confirm');
     }
 
     pushHistoryState(description = '') {
@@ -642,7 +730,7 @@
       const svc = this.services[index];
       if (!svc) return;
 
-      if (confirm(`Remover "${svc.name}" do rascunho?`)) {
+      this.openConfirmModal('Excluir Procedimento', `Deseja remover "${svc.name}" do rascunho?`, () => {
         if (svc.id) {
           this.deletedServiceIds.push(svc.id);
         }
@@ -650,7 +738,7 @@
         this.pushHistoryState('Excluir Procedimento');
         this.applyStateToDom();
         this.showToast('🗑️ Procedimento removido.');
-      }
+      }, '🗑️');
     }
 
     toggleTheme() {
@@ -757,9 +845,9 @@
     }
 
     discardChanges() {
-      if (confirm('Descartar alterações e restaurar catálogo original?')) {
+      this.openConfirmModal('Descartar Alterações', 'Deseja descartar todas as alterações não salvas e restaurar o catálogo original?', () => {
         location.reload();
-      }
+      }, '🔄');
     }
 
     openSaveConfirmationModal() {
@@ -895,11 +983,11 @@
         this.isDirty = false;
         this.updateToolbarState();
 
-        alert('✨ Catálogo publicado com sucesso!');
+        this.openSuccessModal('✨ Catálogo Publicado!', 'Suas alterações foram salvas com sucesso no Supabase e já estão ao vivo.');
 
       } catch (err) {
         console.error('Erro na publicação:', err);
-        alert('Erro ao salvar: ' + err.message);
+        this.openAlertModal('Erro ao Salvar', err.message || 'Ocorreu um problema ao publicar as alterações.');
       } finally {
         btnConfirm.disabled = false;
         btnConfirm.textContent = '🚀 Confirmar';
