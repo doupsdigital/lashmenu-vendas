@@ -315,11 +315,28 @@ button {
 }
 
 .hero__scroll-cue span {
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: .28em;
+  letter-spacing: .32em;
   text-transform: uppercase;
-  color: #a93259;
+  color: #8c2545;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(169, 50, 89, 0.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 9px 24px;
+  border-radius: 999px;
+  box-shadow: 0 4px 18px rgba(169, 50, 89, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.hero__scroll-cue:hover span,
+.hero__scroll-cue:active span {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(169, 50, 89, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(169, 50, 89, 0.2);
 }
 
 .hero__scroll-linha {
@@ -1723,11 +1740,28 @@ body[data-theme="luxury"] .hero__scroll-cue {
 }
 
 body[data-theme="luxury"] .hero__scroll-cue span {
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: .28em;
+  letter-spacing: .32em;
   text-transform: uppercase;
-  color: #c9a389;
+  color: #f3efe9;
+  background: rgba(25, 20, 17, 0.45);
+  border: 1px solid rgba(201, 163, 137, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 9px 24px;
+  border-radius: 999px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+body[data-theme="luxury"] .hero__scroll-cue:hover span,
+body[data-theme="luxury"] .hero__scroll-cue:active span {
+  background: rgba(25, 20, 17, 0.7);
+  border-color: rgba(201, 163, 137, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
 }
 
 body[data-theme="luxury"] .hero__scroll-linha {
