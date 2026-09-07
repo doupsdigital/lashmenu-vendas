@@ -17,7 +17,7 @@ const SCRIPTS_DATA = [
 Dá uma olhadinha nesses 2 modelos ao vivo no celular:
 
 👑 **Modelo Glamour:** https://lashmenu.com/modelos/glamour-midnight/index.html
-🌸 **Modelo Mosaico:** https://lashmenu.com/modelos/mosaico-rose/index.html
+🌸 **Modelo Mosaico:** https://lashmenu.com/modelos/mosaico/index.html
 
 Qual desses 2 estilos combina mais com a identidade do seu estúdio? 🥰`
   },
@@ -277,7 +277,7 @@ Qualquer dúvida que tiver durante o preenchimento me chama aqui! 💖`
 Para não atrapalhar seu atendimento na maca, te mandei aqui 2 modelos rápidos pra você dar uma olhada quando der uma pausinha:
 
 👑 **Glamour:** https://lashmenu.com/modelos/glamour-midnight/index.html
-🌸 **Mosaico:** https://lashmenu.com/modelos/mosaico-rose/index.html
+🌸 **Mosaico:** https://lashmenu.com/modelos/mosaico/index.html
 
 Dá uma olhadinha depois! 🥰`
   }

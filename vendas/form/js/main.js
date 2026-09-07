@@ -874,7 +874,7 @@ function initCoverPreviewModal() {
         }
         if (modalImg) {
           modalImg.src = currentColor === 'rose'
-            ? '/modelos/mosaico-rose/assets/img/hero-video-poster.jpg'
+            ? '/modelos/mosaico/assets/img/hero.jpg'
             : '/modelos/glamour-midnight/assets/img/hero-video-poster.jpg';
           modalImg.classList.remove('is-hidden');
         }

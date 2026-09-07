@@ -2,42 +2,42 @@
   "redirects": [
     {
       "source": "/modelos/harmonia-rose",
-      "destination": "/modelos/mosaico-rose/",
+      "destination": "/modelos/mosaico/index.html?theme=rose",
       "permanent": true
     },
     {
       "source": "/modelos/harmonia-rose/",
-      "destination": "/modelos/mosaico-rose/",
+      "destination": "/modelos/mosaico/index.html?theme=rose",
       "permanent": true
     },
     {
       "source": "/modelos/harmonia-midnight",
-      "destination": "/modelos/mosaico-luxury/",
+      "destination": "/modelos/mosaico/index.html?theme=luxury",
       "permanent": true
     },
     {
       "source": "/modelos/harmonia-midnight/",
-      "destination": "/modelos/mosaico-luxury/",
+      "destination": "/modelos/mosaico/index.html?theme=luxury",
       "permanent": true
     },
     {
       "source": "/c/mosaico-rose",
-      "destination": "/modelos/mosaico-rose/index.html",
+      "destination": "/modelos/mosaico/index.html?theme=rose",
       "permanent": true
     },
     {
       "source": "/c/mosaico-luxury",
-      "destination": "/modelos/mosaico-luxury/index.html",
+      "destination": "/modelos/mosaico/index.html?theme=luxury",
       "permanent": true
     },
     {
       "source": "/c/harmonia-rose",
-      "destination": "/modelos/mosaico-rose/index.html",
+      "destination": "/modelos/mosaico/index.html?theme=rose",
       "permanent": true
     },
     {
       "source": "/c/harmonia-midnight",
-      "destination": "/modelos/mosaico-luxury/index.html",
+      "destination": "/modelos/mosaico/index.html?theme=luxury",
       "permanent": true
     },
     {
@@ -179,11 +179,27 @@
       "destination": "/modelos/mosaico/index.html?theme=luxury"
     },
     {
+      "source": "/modelos/mosaico-rose/:path*",
+      "destination": "/modelos/mosaico/:path*"
+    },
+    {
       "source": "/modelos/mosaico-rose/",
       "destination": "/modelos/mosaico/index.html?theme=rose"
     },
     {
+      "source": "/modelos/mosaico-rose",
+      "destination": "/modelos/mosaico/index.html?theme=rose"
+    },
+    {
+      "source": "/modelos/mosaico-luxury/:path*",
+      "destination": "/modelos/mosaico/:path*"
+    },
+    {
       "source": "/modelos/mosaico-luxury/",
+      "destination": "/modelos/mosaico/index.html?theme=luxury"
+    },
+    {
+      "source": "/modelos/mosaico-luxury",
       "destination": "/modelos/mosaico/index.html?theme=luxury"
     },
     {
