@@ -32,20 +32,6 @@
       document.body.classList.add('has-lm-editor');
 
       window.LashEditorInstance = this;
-      window.abrirModal = (id) => {
-        let idx = 0;
-        if (typeof id === 'number') {
-          idx = id;
-        } else if (typeof id === 'string') {
-          if (id.startsWith('proc_')) {
-            idx = parseInt(id.replace('proc_', ''), 10) || 0;
-          } else if (window.PROCEDIMENTOS && Array.isArray(window.PROCEDIMENTOS)) {
-            const foundIdx = window.PROCEDIMENTOS.findIndex(p => p.id === id);
-            if (foundIdx >= 0) idx = foundIdx;
-          }
-        }
-        this.openEditServiceModal(idx);
-      };
 
       this.injectCss();
       this.renderMobileBar();

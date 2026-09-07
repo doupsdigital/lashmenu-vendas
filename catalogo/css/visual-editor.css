@@ -227,13 +227,13 @@ body.has-lm-editor .wsp-float-btn {
   z-index: 90 !important;
   display: flex !important;
   align-items: center !important;
-  gap: 4px !important;
+  gap: 6px !important;
   background: rgba(20, 16, 15, 0.92) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(229, 169, 184, 0.35) !important;
   border-radius: 100px !important;
-  padding: 3px 6px !important;
+  padding: 4px 8px !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
   margin: 0 !important;
   width: auto !important;
@@ -243,24 +243,27 @@ body.has-lm-editor .wsp-float-btn {
   background: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
   color: #ffffff !important;
-  font-size: 0.72rem !important;
+  font-size: 0.82rem !important;
   font-weight: 600 !important;
-  padding: 4px 10px !important;
+  padding: 6px 14px !important;
+  min-height: 34px !important;
   border-radius: 100px !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 3px !important;
+  gap: 4px !important;
   white-space: nowrap !important;
+  touch-action: manipulation !important;
 }
 
 .lm-svc-btn-danger {
   background: rgba(220, 38, 38, 0.35) !important;
   color: #fca5a5 !important;
   border-color: rgba(239, 68, 68, 0.5) !important;
-  width: 28px !important;
-  height: 28px !important;
+  width: 34px !important;
+  height: 34px !important;
+  font-size: 0.9rem !important;
   padding: 0 !important;
 }
 
@@ -419,15 +422,11 @@ body[data-theme="luxury"] .lm-svc-photo-preview-wrap img {
   pointer-events: auto !important;
 }
 
-/* ── EM MODO EDIÇÃO, ANULA TOTALMENTE OS MODAIS NATIVOS DE CLIENTE ── */
+/* ── EM MODO EDIÇÃO, GARANTE Z-INDEX DO MODAL NATIVO DE CLIENTE ── */
 body.has-lm-editor .modal-detalhe,
-body.has-lm-editor [data-modal]:not(.lm-modal-overlay),
 body.has-lm-editor #modal-procedimento,
 body.has-lm-editor .detalhe-procedimento {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
+  z-index: 99990 !important;
 }
 
 .lm-modal-card {
