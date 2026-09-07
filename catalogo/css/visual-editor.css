@@ -189,7 +189,7 @@ html[data-theme="luxury"] .lm-mb-btn-save {
 /* Botão Flutuante de Alterar Foto de Capa (Topo Direito, abaixo do status bar) */
 .lm-cover-edit-overlay {
   position: absolute !important;
-  top: 60px !important;
+  top: 110px !important;
   right: 16px !important;
   left: auto !important;
   bottom: auto !important;
