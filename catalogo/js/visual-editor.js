@@ -132,6 +132,7 @@
         <div class="lm-mb-btn-group">
           <button class="lm-mb-btn" id="lm-btn-undo" title="Desfazer" disabled>↩️</button>
           <button class="lm-mb-btn" id="lm-btn-redo" title="Refazer" disabled>↪️</button>
+          <button class="lm-mb-btn" id="lm-btn-cover" title="Alterar Foto de Capa">📷 Capa</button>
           <button class="lm-mb-btn" id="lm-btn-theme" title="Alternar Tema">🌸</button>
           <button class="lm-mb-btn" id="lm-btn-discard" title="Descartar">🗑️</button>
         </div>
@@ -144,6 +145,10 @@
 
       document.getElementById('lm-btn-undo').addEventListener('click', () => this.undo());
       document.getElementById('lm-btn-redo').addEventListener('click', () => this.redo());
+      document.getElementById('lm-btn-cover').addEventListener('click', () => {
+        const fileInput = document.getElementById('lm-cover-file-input');
+        if (fileInput) fileInput.click();
+      });
       document.getElementById('lm-btn-theme').addEventListener('click', () => this.toggleTheme());
       document.getElementById('lm-btn-discard').addEventListener('click', () => this.discardChanges());
       document.getElementById('lm-btn-save').addEventListener('click', () => this.openSaveConfirmationModal());
@@ -528,10 +533,12 @@
     }
 
     setupInlineEditing() {
-      const coverContainer = document.querySelector('.hero__foto-wrap') || document.querySelector('.capa__foto-wrap') || document.querySelector('.hero-cover') || document.querySelector('.hero');
-      if (coverContainer) {
-        coverContainer.style.position = 'relative';
-        if (!coverContainer.querySelector('.lm-cover-edit-overlay')) {
+      const heroSection = document.querySelector('.hero') || document.querySelector('.secao-capa') || document.querySelector('.capa') || document.body;
+      if (heroSection) {
+        if (heroSection !== document.body && getComputedStyle(heroSection).position === 'static') {
+          heroSection.style.position = 'relative';
+        }
+        if (!document.querySelector('.lm-cover-edit-overlay')) {
           const overlay = document.createElement('div');
           overlay.className = 'lm-cover-edit-overlay';
           overlay.innerHTML = `
@@ -541,19 +548,17 @@
               <input type="file" accept="image/*" style="display:none !important;" id="lm-cover-file-input">
             </label>
           `;
-          coverContainer.appendChild(overlay);
+          heroSection.appendChild(overlay);
 
           const fileInput = overlay.querySelector('#lm-cover-file-input');
           fileInput.addEventListener('change', (e) => this.handleCoverFileSelect(e));
 
-          const imgEl = coverContainer.querySelector('img, video');
-          if (imgEl) {
-            imgEl.style.cursor = 'pointer';
-            imgEl.title = 'Clique para alterar a foto de capa';
-            imgEl.addEventListener('click', (ev) => {
-              if (ev.target === imgEl) {
-                fileInput.click();
-              }
+          const coverImg = document.querySelector('.hero__foto-wrap img, .hero__foto-wrap video, .hero__foto, .capa__foto');
+          if (coverImg) {
+            coverImg.style.cursor = 'pointer';
+            coverImg.title = 'Clique para alterar a foto de capa';
+            coverImg.addEventListener('click', () => {
+              fileInput.click();
             });
           }
         }
