@@ -235,9 +235,10 @@
           <div class="lm-modal-card" style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 8px;">✨</div>
             <h3 class="lm-modal-title" style="font-size: 1.35rem;" id="lm-success-title">Catálogo Publicado!</h3>
-            <p class="lm-modal-desc" style="margin-bottom: 20px;" id="lm-success-msg">Suas alterações foram salvas com sucesso e já estão ao vivo para seus clientes.</p>
+            <p class="lm-modal-desc" style="margin-bottom: 20px;" id="lm-success-msg">Suas alterações foram salvas com sucesso e já estão ao vivo no seu catálogo!</p>
             <div class="lm-modal-actions">
-              <button class="lm-modal-btn lm-modal-btn-confirm" id="lm-modal-success-ok">💖 Perfeito!</button>
+              <button class="lm-modal-btn lm-modal-btn-cancel" id="lm-modal-success-edit">✏️ Continuar Editando</button>
+              <a class="lm-modal-btn lm-modal-btn-confirm" id="lm-modal-success-view" target="_blank" href="#" style="text-decoration:none;">👁️ Ver Catálogo</a>
             </div>
           </div>
         </div>
@@ -278,7 +279,7 @@
       document.getElementById('lm-modal-save-confirm').addEventListener('click', () => this.publishToSupabase());
       document.getElementById('lm-modal-svc-cancel').addEventListener('click', () => this.closeModal('lm-modal-service'));
       document.getElementById('lm-modal-social-cancel').addEventListener('click', () => this.closeModal('lm-modal-social'));
-      document.getElementById('lm-modal-success-ok').addEventListener('click', () => this.closeModal('lm-modal-success'));
+      document.getElementById('lm-modal-success-edit').addEventListener('click', () => this.closeModal('lm-modal-success'));
       document.getElementById('lm-modal-alert-ok').addEventListener('click', () => this.closeModal('lm-modal-alert'));
 
       // Fechar modal ao clicar no fundo escuro
@@ -323,9 +324,31 @@
       if (modal) modal.classList.remove('is-open');
     }
 
-    openSuccessModal(title = 'Catálogo Publicado!', msg = 'Suas alterações foram salvas com sucesso e já estão ao vivo para seus clientes.') {
+    openSuccessModal(title = '✨ Catálogo Publicado!', msg = 'Suas alterações foram salvas com sucesso e já estão ao vivo no seu catálogo!') {
       document.getElementById('lm-success-title').textContent = title;
       document.getElementById('lm-success-msg').textContent = msg;
+
+      const viewBtn = document.getElementById('lm-modal-success-view');
+      if (viewBtn) {
+        let catalogUrl = '#';
+        if (this.order && this.order.slug) {
+          if (window.location.hostname.includes('lashmenu.com')) {
+            catalogUrl = `https://${this.order.slug}.lashmenu.com`;
+          } else {
+            const url = new URL(window.location.href);
+            url.searchParams.delete('mode');
+            url.searchParams.delete('token');
+            catalogUrl = url.toString();
+          }
+        } else {
+          const url = new URL(window.location.href);
+          url.searchParams.delete('mode');
+          url.searchParams.delete('token');
+          catalogUrl = url.toString();
+        }
+        viewBtn.href = catalogUrl;
+      }
+
       this.openModal('lm-modal-success');
     }
 
@@ -983,7 +1006,7 @@
         this.isDirty = false;
         this.updateToolbarState();
 
-        this.openSuccessModal('✨ Catálogo Publicado!', 'Suas alterações foram salvas com sucesso no Supabase e já estão ao vivo.');
+        this.openSuccessModal('✨ Catálogo Publicado!', 'Suas alterações foram salvas com sucesso e já estão ao vivo no seu catálogo!');
 
       } catch (err) {
         console.error('Erro na publicação:', err);
