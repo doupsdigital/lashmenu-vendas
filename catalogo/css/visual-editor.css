@@ -132,6 +132,22 @@ html[data-theme="luxury"] .lm-mb-btn-save {
   transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
+[data-lm-editable]::after {
+  content: " ✏️";
+  font-size: 0.65em;
+  opacity: 0.75;
+  margin-left: 6px;
+  display: inline-block;
+  pointer-events: none;
+  vertical-align: middle;
+  font-weight: normal;
+  transition: opacity 0.2s ease;
+}
+
+[data-lm-editable]:focus::after {
+  opacity: 0.2;
+}
+
 [data-lm-editable]:focus,
 [data-lm-editable][contenteditable="true"]:focus {
   outline: 2px solid #e5a9b8 !important;
