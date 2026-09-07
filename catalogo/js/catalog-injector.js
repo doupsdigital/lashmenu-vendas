@@ -233,6 +233,14 @@
       }
     }
 
+    const heroChipsEl = document.getElementById('hero-chips');
+    if (heroChipsEl && services && services.length > 0) {
+      const categoryNames = Array.from(new Set(services.map(s => s.category || s.catLabel || s.cat).filter(Boolean)));
+      if (categoryNames.length > 0) {
+        heroChipsEl.innerHTML = categoryNames.slice(0, 4).map(cat => `<span class="hero__chip">${cat}</span>`).join('');
+      }
+    }
+
     // 3. Foto / Vídeo da Capa
     if (order.cover_media_url) {
       const heroWrap = document.querySelector('.hero__foto-wrap, .capa__foto-wrap');
