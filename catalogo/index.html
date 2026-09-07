@@ -201,6 +201,9 @@
         if (model === 'mosaico' || model.startsWith('mosaico-') || model.startsWith('harmonia')) {
           const themeName = (color === 'luxury' || color === 'midnight' || model.includes('midnight') || model.includes('luxury')) ? 'luxury' : 'rose';
           targetUrl = `../modelos/mosaico/?theme=${themeName}&slug=${encodeURIComponent(slug)}`;
+        } else if (model === 'classico' || model.startsWith('classico-')) {
+          const themeName = (color === 'luxury' || color === 'midnight' || model.includes('midnight') || model.includes('luxury')) ? 'luxury' : 'rose';
+          targetUrl = `../modelos/classico/?theme=${themeName}&slug=${encodeURIComponent(slug)}`;
         } else {
           const targetFolder = `${model}-${color}`;
           targetUrl = `../modelos/${targetFolder}/?slug=${encodeURIComponent(slug)}`;

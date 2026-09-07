@@ -563,7 +563,9 @@
               .replace('/modelos/mosaico-rose/', '/modelos/mosaico/')
               .replace('/modelos/mosaico-luxury/', '/modelos/mosaico/')
               .replace('/modelos/harmonia-rose/', '/modelos/mosaico/')
-              .replace('/modelos/harmonia-midnight/', '/modelos/mosaico/');
+              .replace('/modelos/harmonia-midnight/', '/modelos/mosaico/')
+              .replace('/modelos/classico-rose/', '/modelos/classico/')
+              .replace('/modelos/classico-midnight/', '/modelos/classico/');
             cardImg.src = sanitizedUrl;
             cardImg.setAttribute('loading', 'lazy');
             cardImg.setAttribute('decoding', 'async');
