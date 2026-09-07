@@ -146,7 +146,7 @@ button {
 }
 
 .hero__foto {
-  object-position: 6% 18%;
+  object-position: 65% 18%;
 }
 
 .secao-orientacoes__foto {
@@ -181,7 +181,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 6% 18%;
+  object-position: 65% 18%;
   filter: saturate(1.08) contrast(1.06) brightness(0.97);
 }
 
@@ -1413,7 +1413,7 @@ body[data-theme="luxury"] .hero__foto, body[data-theme="luxury"] .secao-orientac
 }
 
 body[data-theme="luxury"] .hero__foto {
-  object-position: 6% 18%;
+  object-position: 65% 18%;
 }
 
 body[data-theme="luxury"] .secao-orientacoes__foto {
@@ -1448,7 +1448,7 @@ body[data-theme="luxury"] .hero__foto {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 6% 18%;
+  object-position: 65% 18%;
   filter: saturate(1.02) contrast(1.08) brightness(0.96);
 }
 
