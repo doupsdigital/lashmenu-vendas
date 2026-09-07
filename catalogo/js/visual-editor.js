@@ -138,7 +138,7 @@
             <h3 class="lm-modal-title">✨ Publicar Alterações</h3>
             <p class="lm-modal-desc">Confira o resumo das alterações antes de publicar no seu catálogo:</p>
             <div class="lm-modal-body">
-              <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 12px 14px; border-radius: 12px; font-size: 0.84rem; text-align: left; max-height: 240px; overflow-y: auto;" id="lm-save-summary-list"></div>
+              <div class="lm-save-summary-container" id="lm-save-summary-list"></div>
             </div>
             <div class="lm-modal-actions">
               <button class="lm-modal-btn lm-modal-btn-cancel" id="lm-modal-save-cancel">Cancelar</button>
@@ -1077,13 +1077,13 @@
 
       if (changes.length === 0) {
         summaryList.innerHTML = `
-          <div style="text-align: center; color: rgba(255,255,255,0.6); padding: 8px 0;">
+          <div class="lm-save-summary-empty">
             ℹ️ Nenhuma alteração pendente detectada.
           </div>
         `;
       } else {
         summaryList.innerHTML = `
-          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: #ffffff;">
+          <div class="lm-save-summary-items">
             ${changes.join('')}
           </div>
         `;

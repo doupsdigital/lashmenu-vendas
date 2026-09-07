@@ -620,6 +620,20 @@ body[data-theme="luxury"] .lm-modal-btn-confirm {
   box-shadow: 0 4px 14px rgba(192, 75, 107, 0.4) !important;
 }
 
+html[data-theme="luxury"] .lm-save-summary-container,
+body[data-theme="luxury"] .lm-save-summary-container,
+.theme-luxury .lm-save-summary-container {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #f5ede6 !important;
+}
+
+html[data-theme="luxury"] .lm-save-summary-container strong,
+body[data-theme="luxury"] .lm-save-summary-container strong,
+.theme-luxury .lm-save-summary-container strong {
+  color: #e5a9b8 !important;
+}
+
 
 /* --- ESTILO TEMA ROSÉ (PADRÃO ROSADO, CLARO E HARMONIOSO) --- */
 /* Aplicado por padrão e especificamente quando data-theme="rose" */
@@ -705,6 +719,45 @@ body[data-theme="rose"] .lm-modal-btn-confirm {
   background: linear-gradient(135deg, #c04b6b 0%, #e06082 100%) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(192, 75, 107, 0.35) !important;
+}
+
+/* Estilo Base e Tema Rosé do Resumo de Alterações */
+.lm-save-summary-container {
+  padding: 12px 14px !important;
+  border-radius: 14px !important;
+  font-size: 0.84rem !important;
+  text-align: left !important;
+  max-height: 240px !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
+
+.lm-save-summary-items {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.lm-save-summary-empty {
+  text-align: center !important;
+  padding: 8px 0 !important;
+  opacity: 0.7 !important;
+}
+
+.lm-save-summary-container,
+html[data-theme="rose"] .lm-save-summary-container,
+body[data-theme="rose"] .lm-save-summary-container,
+.theme-rose .lm-save-summary-container {
+  background: #fcf0f3 !important;
+  border: 1px solid #f2bdc9 !important;
+  color: #3d1c25 !important;
+}
+
+.lm-save-summary-container strong,
+html[data-theme="rose"] .lm-save-summary-container strong,
+body[data-theme="rose"] .lm-save-summary-container strong,
+.theme-rose .lm-save-summary-container strong {
+  color: #b03e5e !important;
 }
 
 .lm-editor-toast {
