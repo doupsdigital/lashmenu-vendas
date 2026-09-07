@@ -129,7 +129,6 @@
           <button class="lm-mb-btn" id="lm-btn-undo" title="Desfazer" disabled>↩️</button>
           <button class="lm-mb-btn" id="lm-btn-redo" title="Refazer" disabled>↪️</button>
           <button class="lm-mb-btn" id="lm-btn-theme" title="Alternar Tema">🌸</button>
-          <button class="lm-mb-btn" id="lm-btn-contact" title="Editar Contatos">📱</button>
           <button class="lm-mb-btn" id="lm-btn-discard" title="Descartar">🗑️</button>
         </div>
 
@@ -142,7 +141,6 @@
       document.getElementById('lm-btn-undo').addEventListener('click', () => this.undo());
       document.getElementById('lm-btn-redo').addEventListener('click', () => this.redo());
       document.getElementById('lm-btn-theme').addEventListener('click', () => this.toggleTheme());
-      document.getElementById('lm-btn-contact').addEventListener('click', () => this.openSocialModal('whatsapp'));
       document.getElementById('lm-btn-discard').addEventListener('click', () => this.discardChanges());
       document.getElementById('lm-btn-save').addEventListener('click', () => this.openSaveConfirmationModal());
     }
