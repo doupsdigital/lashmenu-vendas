@@ -719,4 +719,16 @@
 
     link.href = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
   }, true);
+
+  // 🛡️ AUTO-CARREGAMENTO DO PROTÓTIPO DE EDIÇÃO VISUAL
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('mode') === 'edit' || urlParams.get('edit') === 'true') {
+      const script = document.createElement('script');
+      const isSubdir = window.location.pathname.includes('/modelos/');
+      script.src = isSubdir ? '../../catalogo/js/visual-editor.js' : '../catalogo/js/visual-editor.js';
+      document.head.appendChild(script);
+    }
+  } catch (err) {}
 })();
+

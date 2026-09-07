@@ -197,16 +197,25 @@
         let model = order.model_id || 'glamour';
         const color = order.color_id || 'rose';
 
+        const currentSearch = new URLSearchParams(window.location.search);
+        const extraParams = [];
+        currentSearch.forEach((val, key) => {
+          if (key !== 'slug' && key !== 'c' && key !== 'p' && key !== 'theme') {
+            extraParams.push(`${encodeURIComponent(key)}=${encodeURIComponent(val)}`);
+          }
+        });
+        const extraQueryStr = extraParams.length > 0 ? '&' + extraParams.join('&') : '';
+
         let targetUrl = '';
         if (model === 'mosaico' || model.startsWith('mosaico-') || model.startsWith('harmonia')) {
           const themeName = (color === 'luxury' || color === 'midnight' || model.includes('midnight') || model.includes('luxury')) ? 'luxury' : 'rose';
-          targetUrl = `../modelos/mosaico/?theme=${themeName}&slug=${encodeURIComponent(slug)}`;
+          targetUrl = `../modelos/mosaico/?theme=${themeName}&slug=${encodeURIComponent(slug)}${extraQueryStr}`;
         } else if (model === 'classico' || model.startsWith('classico-')) {
           const themeName = (color === 'luxury' || color === 'midnight' || model.includes('midnight') || model.includes('luxury')) ? 'luxury' : 'rose';
-          targetUrl = `../modelos/classico/?theme=${themeName}&slug=${encodeURIComponent(slug)}`;
+          targetUrl = `../modelos/classico/?theme=${themeName}&slug=${encodeURIComponent(slug)}${extraQueryStr}`;
         } else {
           const targetFolder = `${model}-${color}`;
-          targetUrl = `../modelos/${targetFolder}/?slug=${encodeURIComponent(slug)}`;
+          targetUrl = `../modelos/${targetFolder}/?slug=${encodeURIComponent(slug)}${extraQueryStr}`;
         }
 
         // Salva dados no cache da sessão para carregamento instantâneo no template
@@ -230,10 +239,16 @@
           });
         }
 
-        // Redireciona para o modelo oficial intacto passando o slug
+        // Redireciona para o modelo oficial intacto passando o slug e parâmetros
         window.location.replace(targetUrl);
 
       } catch (e) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('mode') === 'edit' || urlParams.get('edit') === 'true') {
+          window.location.replace(`../modelos/mosaico/?theme=rose&slug=${encodeURIComponent(slug)}&mode=edit`);
+          return;
+        }
+
         const foundManual = await checkManualClientAndRedirect(slug);
         if (foundManual) return;
 
