@@ -1,46 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/modelos/harmonia-rose",
-      "destination": "/modelos/mosaico/index.html?theme=rose",
-      "permanent": true
-    },
-    {
-      "source": "/modelos/harmonia-rose/",
-      "destination": "/modelos/mosaico/index.html?theme=rose",
-      "permanent": true
-    },
-    {
-      "source": "/modelos/harmonia-midnight",
-      "destination": "/modelos/mosaico/index.html?theme=luxury",
-      "permanent": true
-    },
-    {
-      "source": "/modelos/harmonia-midnight/",
-      "destination": "/modelos/mosaico/index.html?theme=luxury",
-      "permanent": true
-    },
-    {
-      "source": "/c/mosaico-rose",
-      "destination": "/modelos/mosaico/index.html?theme=rose",
-      "permanent": true
-    },
-    {
-      "source": "/c/mosaico-luxury",
-      "destination": "/modelos/mosaico/index.html?theme=luxury",
-      "permanent": true
-    },
-    {
-      "source": "/c/harmonia-rose",
-      "destination": "/modelos/mosaico/index.html?theme=rose",
-      "permanent": true
-    },
-    {
-      "source": "/c/harmonia-midnight",
-      "destination": "/modelos/mosaico/index.html?theme=luxury",
-      "permanent": true
-    },
-    {
       "source": "/c/classico-rose",
       "destination": "/modelos/classico-rose/index.html",
       "permanent": true
@@ -147,84 +107,12 @@
       "destination": "/formulario/index.html"
     },
     {
-      "source": "/mosaico-rose/:path*",
+      "source": "/mosaico/:path*",
       "destination": "/modelos/mosaico/:path*"
     },
     {
-      "source": "/mosaico-rose",
-      "destination": "/modelos/mosaico/index.html?theme=rose"
-    },
-    {
-      "source": "/mosaico-luxury/:path*",
-      "destination": "/modelos/mosaico/:path*"
-    },
-    {
-      "source": "/mosaico-luxury",
-      "destination": "/modelos/mosaico/index.html?theme=luxury"
-    },
-    {
-      "source": "/harmonia-rose/:path*",
-      "destination": "/modelos/mosaico/:path*"
-    },
-    {
-      "source": "/harmonia-rose",
-      "destination": "/modelos/mosaico/index.html?theme=rose"
-    },
-    {
-      "source": "/harmonia-midnight/:path*",
-      "destination": "/modelos/mosaico/:path*"
-    },
-    {
-      "source": "/harmonia-midnight",
-      "destination": "/modelos/mosaico/index.html?theme=luxury"
-    },
-    {
-      "source": "/modelos/mosaico-rose/:path*",
-      "destination": "/modelos/mosaico/:path*"
-    },
-    {
-      "source": "/modelos/mosaico-rose/",
-      "destination": "/modelos/mosaico/index.html?theme=rose"
-    },
-    {
-      "source": "/modelos/mosaico-rose",
-      "destination": "/modelos/mosaico/index.html?theme=rose"
-    },
-    {
-      "source": "/modelos/mosaico-luxury/:path*",
-      "destination": "/modelos/mosaico/:path*"
-    },
-    {
-      "source": "/modelos/mosaico-luxury/",
-      "destination": "/modelos/mosaico/index.html?theme=luxury"
-    },
-    {
-      "source": "/modelos/mosaico-luxury",
-      "destination": "/modelos/mosaico/index.html?theme=luxury"
-    },
-    {
-      "source": "/modelos/harmonia-rose/",
-      "destination": "/modelos/mosaico/index.html?theme=rose"
-    },
-    {
-      "source": "/modelos/harmonia-midnight/",
-      "destination": "/modelos/mosaico/index.html?theme=luxury"
-    },
-    {
-      "source": "/modelos/harmonia-rose/:path*",
-      "destination": "/modelos/mosaico/:path*"
-    },
-    {
-      "source": "/modelos/harmonia-rose",
-      "destination": "/modelos/mosaico/index.html?theme=rose"
-    },
-    {
-      "source": "/modelos/harmonia-midnight/:path*",
-      "destination": "/modelos/mosaico/:path*"
-    },
-    {
-      "source": "/modelos/harmonia-midnight",
-      "destination": "/modelos/mosaico/index.html?theme=luxury"
+      "source": "/mosaico",
+      "destination": "/modelos/mosaico/index.html"
     },
     {
       "source": "/glamour-rose/:path*",
