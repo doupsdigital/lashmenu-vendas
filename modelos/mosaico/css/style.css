@@ -240,7 +240,7 @@ button {
   font-size: 21px;
   font-weight: 700;
   letter-spacing: 0.38em;
-  color: #E8C6A8;
+  color: #ffffff;
   line-height: 1;
   text-transform: uppercase;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
@@ -249,7 +249,7 @@ button {
 .hero__studio-divider {
   flex: 1;
   height: 1.5px;
-  background: linear-gradient(to right, rgba(232, 198, 168, 0.85), rgba(232, 198, 168, 0));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
 }
 
 .hero__titulo {
@@ -265,8 +265,9 @@ button {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 40px;
   line-height: 1.05;
-  font-weight: 300;
-  color: #3d2630;
+  font-weight: 400;
+  font-style: italic;
+  color: #a93259;
   letter-spacing: -.01em;
 }
 
@@ -1557,14 +1558,14 @@ body[data-theme="luxury"] .hero__selo span {
 }
 
 body[data-theme="luxury"] .hero__studio-label {
-  color: #c9a389;
+  color: #ffffff;
   font-weight: 700;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 body[data-theme="luxury"] .hero__studio-divider {
   height: 1.5px;
-  background: linear-gradient(to right, rgba(201, 163, 137, 0.85), rgba(201, 163, 137, 0));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
 }
 
 body[data-theme="luxury"] .hero__chips {
@@ -1604,7 +1605,8 @@ body[data-theme="luxury"] .hero__titulo h1 {
   font-size: 40px;
   line-height: 1.05;
   font-weight: 400;
-  color: #f3efe9;
+  font-style: italic;
+  color: #c9a389;
   letter-spacing: -.02em;
 }
 

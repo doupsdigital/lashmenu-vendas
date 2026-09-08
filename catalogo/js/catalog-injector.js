@@ -219,7 +219,7 @@
     const designerTitleText = order.lash_title || order.subtitulo || order.hero_subtitle || 'Lash Designer';
     const heroTitle = document.querySelector('.hero__titulo h1, .hero h1, .capa__titulo h1');
     if (heroTitle) {
-      heroTitle.innerHTML = `${designerName}<br><em class="hero__subtitulo">${designerTitleText}</em>`;
+      heroTitle.innerHTML = designerName;
     }
 
     // 2. Frase Única da Capa
