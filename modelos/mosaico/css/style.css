@@ -1568,7 +1568,7 @@ body[data-theme="luxury"] .hero__studio-divider {
 }
 
 body[data-theme="luxury"] .hero__chips {
-  margin: 10px 0 20px;
+  margin: 12px 0 20px;
 }
 
 body[data-theme="luxury"] .hero__chip {
@@ -1595,7 +1595,7 @@ body[data-theme="luxury"] .hero__chip:hover {
 
 body[data-theme="luxury"] .hero__titulo {
   margin-top: auto;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 body[data-theme="luxury"] .hero__titulo h1 {
