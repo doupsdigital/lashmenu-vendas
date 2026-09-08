@@ -240,9 +240,9 @@ button {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 40px;
   line-height: 1.05;
-  font-weight: 400;
-  color: #24141a;
-  letter-spacing: -.02em;
+  font-weight: 300;
+  color: #3d2630;
+  letter-spacing: -.01em;
 }
 
 .hero__titulo h1 em {
@@ -268,16 +268,17 @@ button {
 .hero__frase-cilios {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 21px;
+  line-height: 1.25;
   font-weight: 400;
-  color: #24141a;
+  font-style: italic;
+  color: #4a0d20;
   text-wrap: pretty;
 }
 
 .hero__frase-cilios em {
   font-style: italic;
-  color: #a93259;
+  color: inherit;
 }
 
 .hero__scroll-cue {
@@ -1535,16 +1536,17 @@ body[data-theme="luxury"] .hero__frase {
 body[data-theme="luxury"] .hero__frase-cilios {
   margin: 0;
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 21px;
+  line-height: 1.25;
   font-weight: 400;
+  font-style: italic;
   color: #f3efe9;
   text-wrap: pretty;
 }
 
 body[data-theme="luxury"] .hero__frase-cilios em {
   font-style: italic;
-  color: #c9a389;
+  color: inherit;
 }
 
 body[data-theme="luxury"] .hero__scroll-cue {
