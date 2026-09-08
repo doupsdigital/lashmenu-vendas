@@ -227,12 +227,37 @@ button {
   box-shadow: 0 2px 8px rgba(70, 25, 40, 0.08);
 }
 
+.hero__studio-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.hero__studio-label {
+  font-family: 'Italiana', 'Fraunces', Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  color: #E8C6A8;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero__studio-divider {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(to right, rgba(232, 198, 168, 0.85), rgba(232, 198, 168, 0));
+}
+
 .hero__titulo {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   margin-top: auto;
-  margin-bottom: 72px;
+  margin-bottom: 12px;
 }
 
 .hero__titulo h1 {
@@ -279,6 +304,42 @@ button {
 .hero__frase-cilios em {
   font-style: italic;
   color: inherit;
+}
+
+.hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  margin: 10px 0 18px;
+  width: 100%;
+}
+
+.hero__chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(135deg, #a93259 0%, #c4426e 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(169, 50, 89, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: all 0.22s ease;
+}
+
+.hero__chip:hover {
+  background: linear-gradient(135deg, #b83a63 0%, #d8517c 100%);
+  border-color: rgba(255, 255, 255, 0.65);
+  transform: translateY(-1px);
 }
 
 .hero__scroll-cue {
@@ -1495,12 +1556,46 @@ body[data-theme="luxury"] .hero__selo span {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
+body[data-theme="luxury"] .hero__studio-label {
+  color: #c9a389;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+body[data-theme="luxury"] .hero__studio-divider {
+  height: 1.5px;
+  background: linear-gradient(to right, rgba(201, 163, 137, 0.85), rgba(201, 163, 137, 0));
+}
+
+body[data-theme="luxury"] .hero__chips {
+  margin: 10px 0 20px;
+}
+
+body[data-theme="luxury"] .hero__chip {
+  padding: 8px 16px;
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  line-height: 1.2;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #0f0c0b;
+  background: linear-gradient(135deg, #c9a389 0%, #dfa87a 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(201, 163, 137, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.50);
+  text-shadow: none;
+  font-weight: 700;
+}
+
+body[data-theme="luxury"] .hero__chip:hover {
+  background: linear-gradient(135deg, #d8b298 0%, #ebb98e 100%);
+  border-color: rgba(255, 255, 255, 0.70);
+  color: #000000;
+  transform: translateY(-1px);
+}
+
 body[data-theme="luxury"] .hero__titulo {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   margin-top: auto;
-  margin-bottom: 72px;
+  margin-bottom: 6px;
 }
 
 body[data-theme="luxury"] .hero__titulo h1 {
