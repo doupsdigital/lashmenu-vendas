@@ -266,8 +266,9 @@ button {
   font-size: 40px;
   line-height: 1.05;
   font-weight: 400;
-  color: #4a0d20;
+  color: #ffffff;
   letter-spacing: -.02em;
+  text-shadow: 0 2px 10px rgba(74, 13, 32, 0.25);
 }
 
 .hero__titulo h1 em {
